@@ -1,1 +1,3 @@
 # Olympia
+
+Adicionar observações importantes:
