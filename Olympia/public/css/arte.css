@@ -94,7 +94,7 @@ body{
 }
 .bg {
     /* The image used */
-    background-image: url("circles.png");
+    background-image: url("../images/circles.png");
     position: absolute;
     width: 100%;
     /* Full height */
