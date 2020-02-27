@@ -41,6 +41,20 @@
     box-sizing: border-box;
   }
 
+body{
+    background: linear-gradient(270deg, #5fe4c2, #22d7c1, #3ecfd7, #5ebee3, #29b0e3, #3a94ec, 
+    #5a77d2, #8745f5, #9b5ad9, #a162c5, #ad4abd, #dd52cb, #dd52b3, #e8ad67,
+    #cc9a44, #e3b25e, #dd52b3, #dd52cb);
+background-size: 3400% 3400%;
+margin: 0;
+height: 100%; 
+overflow-x: hidden;
+-webkit-animation: AnimationName 35s ease infinite;
+-moz-animation: AnimationName 35s ease infinite;
+-o-animation: AnimationName 35s ease infinite;
+animation: AnimationName 35s ease infinite;
+}
+
   /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -67,11 +81,6 @@ html, body {
     height:100%; 
     max-width: 100%;
 }
-body{
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    
-}
-
 
 #line-containers{
     padding: 0;
@@ -208,17 +217,6 @@ p{
     padding: 2px;
 }
 
-body{
-    background: linear-gradient(270deg, #5fe4c2, #22d7c1, #3ecfd7, #5ebee3, #29b0e3, #3a94ec, 
-    #5a77d2, #8745f5, #9b5ad9, #a162c5, #ad4abd, #dd52cb, #dd52b3, #e8ad67,
-    #cc9a44, #e3b25e, #dd52b3, #dd52cb);
-background-size: 3400% 3400%;
-
--webkit-animation: AnimationName 35s ease infinite;
--moz-animation: AnimationName 35s ease infinite;
--o-animation: AnimationName 35s ease infinite;
-animation: AnimationName 35s ease infinite;
-}
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
     25%{background-position:50% 50%}

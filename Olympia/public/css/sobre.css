@@ -1,18 +1,10 @@
 @font-face {
     font-family: 'Bruzh';
-    src: url('public/fonts/Bruzh.ttf');
+    src: url('../fonts/Bruzh.ttf');
 }
 
 html{
-    position: relative;
-    min-height: 100%;  
     overflow-x: hidden;
-}
-
-body{
-    margin: 0;
-    height: 100%;
-    background-color: #ffffff;   
 }
 
 #menu-bar{
@@ -147,6 +139,12 @@ body{
 #texto2{
     display: none;
     font-weight: bold;
+}
+
+#footer{
+    position: absolute !important;
+    top: 2000px !important;
+    height: 105px;
 }
 
 
