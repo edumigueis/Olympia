@@ -4,10 +4,13 @@ $(document).ready(function(){
     
     $('#nav-bars').click(function(){
       $("#menu-items").fadeIn("slow");
+      $('#footer').fadeOut();
     })
     $('.close').click(function(){
-        if($('#container-contatos').css('display') == 'none')
+        if($('#container-contatos').css('display') == 'none'){
             $("#menu-items").fadeOut("slow");
+            $('#footer').fadeIn();
+        }
         else{
             $('#container-contatos').fadeOut('slow');
             $('#container-menu').css({
@@ -22,7 +25,7 @@ $(document).ready(function(){
     $('#rightClick').click(function(){
 
         $('#menu-list').css({
-            'transform' : 'translateY(-340px)'
+            'transform' : 'translateY(-390px)'
         })
         $('#right').css({
             'transform' : 'translateX(100px)'
