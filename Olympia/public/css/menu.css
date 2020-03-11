@@ -68,11 +68,12 @@
     margin-top: 0%;
     padding-top: 5px;
     position: fixed;
-	height: 60px;
+	height: 60px !important;
 	top: 0px;
 	left: 0;
     right: 0;
     border-bottom-color:rgba(0,0,0,0.1);
+    padding-bottom: 2px !important;
 
 	-webkit-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
 	   -moz-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
@@ -178,7 +179,7 @@
 }
 
 #menu-list{
-    transform: translateY(140px);
+    transform: translateY(150px);
     transition: 0.4s all;
 }
 
@@ -285,7 +286,7 @@
 
 .close{
     position: absolute;
-    width: 10%;
+    width: 150px;
     z-index: 999;
     transition: 0.3s;
     will-change: transform;
@@ -296,14 +297,14 @@
 }
 
 .close-img{
-    width: 30%;
+    width: 50px;
     padding-top: 20px;
     padding-left: 30px;
 }
 
 .close-2{
     position: absolute;
-    width: 10%;
+    width: 150px;
     z-index: 999;
     transition: 0.3s;
     will-change: transform;
@@ -315,7 +316,7 @@
 }
 
 .close-2-img{
-    width: 30%;
+    width: 50px;
     padding-top: 20px;
     padding-left: 30px;
 }
@@ -464,7 +465,6 @@
     bottom:0; 
     left: 0;
     width: 102%;
-    height: 102px;
     background-color: white;
     overflow: hidden;
     margin-top: -102px;
@@ -492,6 +492,9 @@
     left: 0;
     bottom: 0;
     right: 0;
+    padding: 15px;
+    height: 120px;
+    margin: 0;
 }
 #copyright{
 	font-family: "Bruzh";
@@ -534,12 +537,11 @@
     margin: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    
+    width: 100%;   
 }
 
 .footer-link{
-    font-family: 'Bebas'
+    font-family: 'Bebas';
 }
 .footer-link:hover{
     cursor: pointer;

@@ -13,8 +13,10 @@ html{
 
 #fundo{
     position: absolute;
+    height: 100%;
     width: 100%;
     margin: 0;
+    left: 0;
     z-index: 50;
 }
 
@@ -26,6 +28,7 @@ html{
   margin: 0px;
   position: fixed;
   opacity: 0.5;
+  left: 0;
 }
 
 #exposicao{
@@ -144,7 +147,9 @@ html{
 #footer{
     position: absolute !important;
     top: 2000px !important;
-    height: 105px;
+    padding-bottom: 0 !important;
+    padding: 20px !important;
+    height: 110px !important;
 }
 
 

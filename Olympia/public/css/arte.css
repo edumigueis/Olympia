@@ -37,22 +37,19 @@
 	font-family: 'Bebas-Neue-Thin';
 	src: url('../fonts/BebasNeue-Thin.ttf');
 }
-* {
-    box-sizing: border-box;
-  }
 
 body{
     background: linear-gradient(270deg, #5fe4c2, #22d7c1, #3ecfd7, #5ebee3, #29b0e3, #3a94ec, 
     #5a77d2, #8745f5, #9b5ad9, #a162c5, #ad4abd, #dd52cb, #dd52b3, #e8ad67,
     #cc9a44, #e3b25e, #dd52b3, #dd52cb);
-background-size: 3400% 3400%;
-margin: 0;
-height: 100%; 
-overflow-x: hidden;
--webkit-animation: AnimationName 35s ease infinite;
--moz-animation: AnimationName 35s ease infinite;
--o-animation: AnimationName 35s ease infinite;
-animation: AnimationName 35s ease infinite;
+    background-size: 3400% 3400%;
+    margin: 0;
+    height: 100%; 
+    overflow-x: hidden;
+    -webkit-animation: AnimationName 35s ease infinite;
+    -moz-animation: AnimationName 35s ease infinite;
+    -o-animation: AnimationName 35s ease infinite;
+    animation: AnimationName 35s ease infinite;
 }
 
   /* width */
@@ -107,8 +104,9 @@ html, body {
     position: absolute;
     width: 100%;
     /* Full height */
-    height: 4750px; 
+    height: 4850px; 
     z-index: -10;
+    opacity: 0.6;
   
     /* Center and scale the image nicely */
   }
@@ -215,6 +213,10 @@ html, body {
 
 p{
     padding: 2px;
+}
+
+#container-contatos{
+    margin-top: -95px !important;
 }
 
 @-webkit-keyframes AnimationName {
