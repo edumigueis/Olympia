@@ -1,0 +1,8 @@
+circle {
+    display: none;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+}
