@@ -25,6 +25,7 @@
 	src: url('../fonts/CalibreWeb-Regular.eot?#iefix') format('embedded-opentype'), 
 	url('../fonts/fonts/CalibreWeb-Regular.woff') format('woff'); 
 }
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -53,7 +54,6 @@
   padding: 0px;
   margin: 0px;
   position: fixed;
-  opacity: 0.5;
 }
 
 #menu-bar{
@@ -67,11 +67,12 @@
     margin-top: 0%;
     padding-top: 5px;
     position: fixed;
-	height: 60px;
+	height: 60px !important;
 	top: 0px;
 	left: 0;
     right: 0;
     border-bottom-color:rgba(0,0,0,0.1);
+    padding-bottom: 2px !important;
 
 	-webkit-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
 	   -moz-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
@@ -137,6 +138,7 @@
 }
 #nav-bars:hover{
     transform: translateX(30px);
+    cursor: pointer;
 }
 .moving-up{
     will-change: transform;
@@ -177,7 +179,7 @@
 }
 
 #menu-list{
-    transform: translateY(130px);
+    transform: translateY(150px);
     transition: 0.4s all;
 }
 
@@ -284,7 +286,7 @@
 
 .close{
     position: absolute;
-    width: 10%;
+    width: 150px;
     z-index: 999;
     transition: 0.3s;
     will-change: transform;
@@ -295,14 +297,14 @@
 }
 
 .close-img{
-    width: 30%;
+    width: 50px;
     padding-top: 20px;
     padding-left: 30px;
 }
 
 .close-2{
     position: absolute;
-    width: 10%;
+    width: 150px;
     z-index: 999;
     transition: 0.3s;
     will-change: transform;
@@ -314,7 +316,7 @@
 }
 
 .close-2-img{
-    width: 30%;
+    width: 50px;
     padding-top: 20px;
     padding-left: 30px;
 }
@@ -464,7 +466,6 @@
     bottom:0; 
     left: 0;
     width: 102%;
-    height: 102px;
     background-color: white;
     overflow: hidden;
     margin-top: -102px;
@@ -474,7 +475,12 @@
 	   -moz-transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
 	     -o-transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
 	        transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
+<<<<<<< HEAD
     z-index: 1;
+=======
+    position: relative;
+    z-index: 999;
+>>>>>>> b70535933acf344c3417dc0e2fbaae56e2080a88
     border-top-color:rgba(0,0,0,0.1);
 
 	-webkit-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
@@ -484,16 +490,19 @@
 
 #footer{
     display: block;
-	font-family: "bruzh";
+	font-family: "Bruzh";
 	letter-spacing:0.15em;
     font-size:1.2em;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+    padding: 15px;
+    height: 120px;
+    margin: 0;
 }
 #copyright{
-	font-family: "bruzh";
+	font-family: "Bruzh";
 	letter-spacing:0.15em;
     font-size:1.2em;
     padding: 20px 0 30px;
@@ -533,12 +542,11 @@
     margin: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    
+    width: 100%;   
 }
 
 .footer-link{
-    font-family: 'bebas-neue-regular'
+    font-family: 'Bebas';
 }
 .footer-link:hover{
     cursor: pointer;

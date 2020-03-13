@@ -4,10 +4,13 @@ $(document).ready(function(){
     
     $('#nav-bars').click(function(){
       $("#menu-items").fadeIn("slow");
+      $('#footer').fadeOut();
     })
     $('.close').click(function(){
-        if($('#container-contatos').css('display') == 'none')
+        if($('#container-contatos').css('display') == 'none'){
             $("#menu-items").fadeOut("slow");
+            $('#footer').fadeIn();
+        }
         else{
             $('#container-contatos').fadeOut('slow');
             $('#container-menu').css({
@@ -22,7 +25,7 @@ $(document).ready(function(){
     $('#rightClick').click(function(){
 
         $('#menu-list').css({
-            'transform' : 'translateY(-340px)'
+            'transform' : 'translateY(-390px)'
         })
         $('#right').css({
             'transform' : 'translateX(100px)'
@@ -63,12 +66,12 @@ function boxTop(idBox) {
 }
 
 var colors = new Array(
-    [62, 35, 255],
-    [60, 255, 60],
-    [255, 35, 98],
-    [45, 175, 230],
-    [255, 0, 255],
-    [255, 128, 0]);
+    [92, 75, 255],
+    [100, 255, 100],
+    [255, 75, 138],
+    [85, 215, 255],
+    [255, 40, 255],
+    [255, 168, 40]);
 
 var step = 0;
 //color table indices for: 
