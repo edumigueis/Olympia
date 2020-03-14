@@ -73,10 +73,9 @@
     right: 0;
     border-bottom-color:rgba(0,0,0,0.1);
     padding-bottom: 2px !important;
-
 	-webkit-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
-	   -moz-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
-		    box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
+	-moz-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
+	box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
 }
 #logo{
 	text-align: center;
@@ -469,23 +468,18 @@
     background-color: white;
     overflow: hidden;
     margin-top: -102px;
-    /* position: absolute; */
-    /* bottom: 0; */
 	-webkit-transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
-	   -moz-transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
-	     -o-transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
-	        transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
-<<<<<<< HEAD
+	-moz-transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
+	-o-transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
+	transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
     z-index: 1;
-=======
     position: relative;
     z-index: 999;
->>>>>>> b70535933acf344c3417dc0e2fbaae56e2080a88
     border-top-color:rgba(0,0,0,0.1);
 
 	-webkit-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
-	   -moz-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
-		    box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
+	-moz-box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
+	box-shadow:rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
 }
 
 #footer{

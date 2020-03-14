@@ -1,35 +1,40 @@
 var i = -1;
 var y = 10;
 var x = 0;
-var aux = false;
 var passou = false;
+var tempo = 500; /* TEMPO DE APARIÇÃO DOS CÍRCULOS */
 var max = 84; /* NÚMERO TOTAL DE CÍRCULOS */
 
 setInterval(function () {
 
     if (i < max) {
+
         if (passou) {
             i--;
             if (i % 14 == 0 && i != 0) {
                 passou = false;
+                $("." + i).fadeIn(tempo);
                 i += 15;
+                $("." + (i-1)).fadeIn(tempo);
             }
         }
         else {
             i++;
         }
-        if (i % 14 == 0 && i != 0) {
+        if (i % 14 == 0 && i != 0 ) {
             i += 13;
             passou = true;
+            
         }
+
     }
-    $("." + i).fadeIn(500); /* TEMPO DE APARIÇÃO DOS CÍRCULOS */
-}, 50); /* INTERVALO ENTRE AS APARIÇÕES */
+    $("." + i).fadeIn(tempo); 
+}, 80); /* INTERVALO ENTRE AS APARIÇÕES */
 
 $().ready(function () {
 
     /* ATRIBUTOS DE ESTILO */
-    $('circle').attr("r", '0.7');
+    $('circle').attr("r", '1.5');
     $('circle').attr("fill", 'rgba(255,255,255,0.5)');
     $('circle').attr("stroke", 'black');
     $('circle').attr("stroke-width", '0.1');
