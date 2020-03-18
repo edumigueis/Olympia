@@ -547,4 +547,88 @@
     font-weight: bolder;
 }
 
+/*Responsividade do menu*/
+@media only screen and (min-width: 300px) and (max-width: 461px) {
+    #logo{
+        left:10.5%;
+        width: 280px;
+        letter-spacing: 0.2em;
+    }
+
+    #search-ico{
+        height: 30px;
+        position: absolute;
+        width: 75px;
+        background-size: 40%;
+        right: -25px;
+        top: 20px;
+    }
+    
+    #nav-bars{
+        height: 30px;
+        text-align: center;
+        float: left;
+        position: absolute;
+        width: 75px;
+        background-size: 40%;
+        left:2%;
+        top: 20px;
+    }
+   
+}
+@media only screen and (min-width: 462px) and (max-width: 615px) {
+    #logo{
+        left:20.5%;
+        width: 280px;
+        letter-spacing: 0.2em;
+    }
+
+    #search-ico{
+        height: 40px;
+        position: absolute;
+        width: 91px;
+        background-size: 40%;
+        right: -25px;
+        top: 15px;
+    }
+    
+    #nav-bars{
+        height: 40px;
+        text-align: center;
+        float: left;
+        position: absolute;
+        width: 91px;
+        background-size: 40%;
+        left:2%;
+        top: 15px;
+    }
+}
+@media only screen and (min-width: 616px) and (max-width: 950px) {
+    #logo{
+        left:30.5%;
+        width: 280px;
+        letter-spacing: 0.2em;
+    }
+
+    #search-ico{
+        height: 50px;
+        position: absolute;
+        width: 110px;
+        background-size: 40%;
+        right: -35px;
+        top: 15px;
+    }
+    
+    #nav-bars{
+        height: 50px;
+        text-align: center;
+        float: left;
+        position: absolute;
+        width: 110px;
+        background-size: 40%;
+        left:2%;
+        top: 12px;
+    }
+}
+
 
