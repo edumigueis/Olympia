@@ -93,7 +93,7 @@ li {
 	border-radius: 4px;
 	background: rgb(99, 99, 99);
 	animation-name: mouse;
-  animation-duration: .7s;
+    animation-duration: .7s;
     animation-iteration-count: infinite;
 }
 
