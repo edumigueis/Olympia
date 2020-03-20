@@ -157,6 +157,7 @@
 #menu {
   display: none;
   width: 40%;
+  transition: 0.3s all;
 }
 
 #container-menu {
@@ -226,31 +227,32 @@
 
 .seta {
   margin-top: -3%;
-  position: absolute;
+  position: fixed;
   height: 100%;
 }
 
 #left {
   position: fixed;
   width: 5%;
-  left: 1%;
+  left: 2%;
   vertical-align: middle;
   cursor: pointer;
   z-index: 999;
   transition: all 0.3s;
   will-change: transform;
-  transform: translateX(-120%);
+  z-index: 999;
 }
 
 #right {
   position: fixed;
   width: 5%;
-  right: 1%;
+  right: 3%;
   vertical-align: middle;
   cursor: pointer;
   z-index: 999;
   transition: all 0.3s;
   will-change: transform;
+  z-index: 999;
 }
 
 #right:hover {
@@ -584,6 +586,12 @@
   #menu-items {
     font-size: 130%;
   }
+  #left {
+    display: none;
+  }
+  #right {
+    display: none;
+  }
   .close-img {
     width: 10%;
     padding-left: 7%;
@@ -595,10 +603,10 @@
     padding-top: 7%;
   }
   .menu-item {
-    margin-top: 100%;
+    margin-top: 55%;
   }
   #menu-list {
-    transform: translateY(4.5em);
+    transform: translateY(-2em);
     background-color: #686868;
   }
 }
