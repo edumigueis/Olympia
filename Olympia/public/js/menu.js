@@ -2,17 +2,17 @@ $(document).ready(function () {
 
     setInterval(updateGradient, 10);
     setInterval(function () {
-        if ($('#menu-list').css('font-size') == '12px' && $('#menu-list').css('transform') == 'matrix(1, 0, 0, 1, 0, -400)') {
-            $('#menu-list').css('transform', 'translateY(140px)')
+        if ($('#menu-list').css('font-size') == '12px' && $('#menu-list').css('transform') == 'matrix(1, 0, 0, 1, 0, -228)') {
+            $('#menu-list').css('transform', 'translateY(5em)')
             $('#left').css({
-                'transform': 'translateX(-100px)'
+                'transform': 'translateX(-10em)'
             });
             $('#right').css({
-                'transform': 'translateX(-10px)'
+                'transform': 'translateX(-1em)'
             });
         }
        
-    }, 10)
+    }, 100)
 
     $('#nav-bars').click(function () {
         $("#menu-items").fadeIn("slow");
@@ -36,28 +36,37 @@ $(document).ready(function () {
     })
     $('#rightClick').click(function () {
 
-
+        if(screen.width < 1600)
         $('#menu-list').css({
-            'transform': 'translateY(-400px)'
+            'transform': 'translateY(-19em)'
+        })
+        else
+        $('#menu-list').css({
+            'transform': 'translateY(-22em)'
         })
         $('#right').css({
-            'transform': 'translateX(100px)'
+            'transform': 'translateX(5em)'
         })
         $('#left').css({
-            'transform': 'translateX(10px)'
+            'transform': 'translateX(1em)'
         });
 
     })
     $('#leftClick').click(function () {
         if ($('#menu-list').css('background-color') != '#1a1a1a') {
+            if(screen.width < 1600)
             $('#menu-list').css({
-                'transform': 'translateY(100px)'
+                'transform': 'translateY(5em)'
+            })
+            else
+            $('#menu-list').css({
+                'transform': 'translateY(8em)'
             })
             $('#left').css({
-                'transform': 'translateX(-100px)'
+                'transform': 'translateX(-5em)'
             });
             $('#right').css({
-                'transform': 'translateX(-10px)'
+                'transform': 'translateX(-1em)'
             });
         }
     })

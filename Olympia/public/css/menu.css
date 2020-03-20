@@ -224,11 +224,17 @@
   animation-iteration-count: 1;
 }
 
+.seta {
+  margin-top: -3%;
+  position: absolute;
+  height: 100%;
+}
+
 #left {
   position: fixed;
   width: 5%;
   left: 1%;
-  margin-top: 20%;
+  vertical-align: middle;
   cursor: pointer;
   z-index: 999;
   transition: all 0.3s;
@@ -240,7 +246,7 @@
   position: fixed;
   width: 5%;
   right: 1%;
-  margin-top: 20%;
+  vertical-align: middle;
   cursor: pointer;
   z-index: 999;
   transition: all 0.3s;
@@ -516,8 +522,8 @@
 }
 
 /*Responsividade do menu*/
-@media only screen and (max-width: 720px) {
-    #menu-items {
+@media only screen and (max-width: 1000px) {
+  #menu-items {
     font-size: 70%;
   }
   #left {
@@ -545,8 +551,8 @@
   }
 }
 
-@media only screen and (min-width: 721px) and (max-width: 950px) {
-    #menu-items {
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+  #menu-items {
     font-size: 100%;
   }
   #left {
@@ -566,7 +572,7 @@
     padding-top: 15px;
   }
   .menu-item {
-    margin-top: 60%;
+    margin-top: 80%;
   }
   #menu-list {
     font-size: 12px;
@@ -574,8 +580,8 @@
   }
 }
 
-@media only screen and (min-width: 951px) and (max-width: 1600px) {
-    #menu-items {
+@media only screen and (min-width: 1201px) and (max-width: 1599px) {
+  #menu-items {
     font-size: 130%;
   }
   .close-img {
@@ -593,6 +599,29 @@
   }
   #menu-list {
     transform: translateY(4.5em);
+    background-color: #686868;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #menu-items {
+    font-size: 130%;
+  }
+  .close-img {
+    width: 10%;
+    padding-left: 7%;
+    padding-top: 7%;
+  }
+  .close-2-img {
+    width: 10%;
+    padding-left: 7%;
+    padding-top: 7%;
+  }
+  .menu-item {
+    margin-top: 130%;
+  }
+  #menu-list {
+    transform: translateY(8em);
     background-color: #686868;
   }
 }
