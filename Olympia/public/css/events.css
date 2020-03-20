@@ -265,3 +265,39 @@ html, body {
       padding-top: 10px;
       width: 100%;
   }
+  #mouse {
+    display: block;
+    width: 22px;
+    height: 40px;
+    border-radius: 20px;
+    border: 4px solid rgb(255, 255, 255);
+    text-align: center;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 20px;
+      margin: 0 auto;
+    z-index: 1000000;
+  }
+  
+  #mouse::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 8px;
+    position: relative;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    animation-name: mouse;
+    animation-duration: .7s;
+      animation-iteration-count: infinite;
+  }
+  
+  @keyframes mouse {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 6px;
+    }
+  }
