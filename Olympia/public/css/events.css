@@ -1,0 +1,267 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans.ttf');
+}
+
+@font-face {
+	font-family: 'Bruzh';
+	src: url('../fonts/Bruzh.ttf');
+}
+@font-face {
+	font-family: 'Bebas';
+	src: url('../fonts/BebasNeue.ttf');
+}
+@font-face {
+	font-family: 'Calibre-Bold';
+	src: url('../fonts/calibri-bold-2.ttf');
+	src: url('../fonts/CalibreWeb-Bold.eot?#iefix') format('embedded-opentype'), 
+	url('../fonts/CalibreWeb-Bold.woff') format('woff'); 
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Calibre-Regular';
+    src: url('../fonts/calibri-7.ttf');
+}
+@font-face {
+	font-family: 'Bebas-Neue-Bold';
+	src: url('../fonts/BebasNeue-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+	font-family: 'Bebas-Neue-Regular';
+	src: url('../fonts/BebasNeue-Regular.ttf');
+}
+@font-face {
+	font-family: 'Bebas-Neue-Light';
+	src: url('../fonts/BebasNeue-Light.ttf');
+}
+@font-face {
+	font-family: 'Bebas-Neue-Book';
+	src: url('../fonts/BebasNeue-Book.ttf');
+}
+@font-face {
+	font-family: 'Bebas-Neue-Thin';
+	src: url('../fonts/BebasNeue-Thin.ttf');
+}
+#events-container{
+    height: auto;
+    width: 100%;
+}
+
+/*#events-container :hover{
+    background-color: darkgray;
+}*/
+.event-card-container{
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;;
+    margin-top: 20px;
+}
+.card-table{
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 265px;
+}
+ul li{
+    display: inline-flex;
+}
+.card-item{
+    width: 33%;
+    height: 100%;
+}
+.event-image .image-mask-event{
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.event-image{
+    max-width: 400px;
+    opacity: 0.8;
+}
+.image-mask-event{
+    background-color: #aaa;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+}
+.event-image-container{
+    height: 100%;
+    float: left;
+}
+.card-item{
+    float: left;
+}
+
+.btn-wrap{
+    position: relative;
+    left: -18.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 200px;
+    float: left;
+}
+.know-more-btn-inner{
+    background-color: transparent;
+}
+.know-more-btn{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.know-more-btn .know-more-btn-inner{
+  position: relative;
+  z-index: 2000;
+}
+.know-more-btn-inner{
+    background-color: transparent;
+}
+
+.know-more-btn:after{
+  position: absolute;
+  color: #373737;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  transition: all .35s;
+}
+.know-more-btn:hover{
+    color: #373737;
+    font-weight: bold;
+  }
+  
+.know-more-btn:hover:after{
+    width: 100%;
+}
+
+.event-date-container{
+    height: 100%;
+    bottom: 0;
+    width: 320px;
+}
+.date{
+    font-size: 1.5em;
+    text-align: center;
+    font: 300 50px/1.2 "Oswald", sans-serif;
+    margin: 0 auto;
+    max-width: 1000px;
+    font-size: 1.3em;
+    line-height: 1.4;
+}
+.expo-name{
+    margin-top: 30%;
+    text-align: center;
+    max-width: 1000px;
+    font: 300 50px/1.2 "Oswald", sans-serif;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+  }
+.expo-name {
+    max-width: 1000px;
+    font-size: 1.7em;
+    line-height: 1.4;
+  }
+.card-item-last{
+    float: right;
+}
+.card-item-2{
+    margin-left: -9%;
+    position: relative;
+    height: 100%;
+}
+#footer{
+    margin-top:10px;
+}
+html, body {
+    height: 100%;
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.4em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: rgb(24, 32, 39);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+  .radio-item{
+      margin-right: 30px;
+      font-family: "Bebas";
+  }
+  #radio-tab{
+      height: 50px;
+      padding-top: 10px;
+      width: 100%;
+  }
