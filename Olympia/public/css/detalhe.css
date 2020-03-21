@@ -407,12 +407,7 @@ p{
         height: 450px;
     }
 }
-@media only screen and (min-width: 1120px) and (max-width: 1450px) {
-    .info-item
-    {
-        height: 650px;
-    }
-}
+
 
 #mouse {
 	display: none;

@@ -48,6 +48,9 @@
     height: auto;
     width: 100%;
 }
+body{
+  overflow-x: hidden;
+}
 
 /*#events-container :hover{
     background-color: darkgray;
@@ -301,3 +304,20 @@ html, body {
       top: 6px;
     }
   }
+  #radio-tab{
+    width: 70%;
+  }
+  #footer{
+    width: 90%;
+  }
+  @media only screen and (min-width: 1590px) and (max-width: 1620px) {
+    main{
+        width: 1600px;
+    }
+    body{
+      overflow-x: hidden;
+    }
+    #menu-bar{
+      width: 1600px;
+    }
+}
