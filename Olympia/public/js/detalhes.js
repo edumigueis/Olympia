@@ -7,7 +7,7 @@ $(document).ready(function () {
     var altura2 = $(document).height()
 
     $('#bg').css('height', altura2);
-
+    altura2 =0;
 
   });
   $('.img-col').click(function () {

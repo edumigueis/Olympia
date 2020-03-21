@@ -493,6 +493,7 @@ p{
     color: #000;
     text-decoration: none;
     transition: background-size .2s;
+    font-size: 1.18em;
   }
   
   .link:hover {
@@ -515,4 +516,10 @@ p{
 }
 .art-icon{
     width: 100%;
+}
+b{
+    font-family: 'Open Sans Bold';
+}
+#simple-artist-info p{
+    font-family: 'Open Sans SemiBold';
 }
