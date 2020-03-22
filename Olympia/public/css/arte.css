@@ -413,25 +413,4 @@ p {
   padding-top: 4%;
 }
 
-.white{
-  background-color: #5c5c5c !important;
-}
 
-.white-2{
-  background-color: #555966 !important;
-  color: white !important;
-}
-
-.text-gray{
-  color: rgb(204, 203, 203) !important;
-}
-
-.text-gray-2{
-  color: rgb(173, 173, 173) !important;
-}
-
-.gray{
-  background-color: #393749 !important;
-  border-color: #393749 !important;
-  color: white !important;
-}

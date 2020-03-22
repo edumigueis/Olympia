@@ -1,0 +1,31 @@
+.white {
+  background-color: #494949 !important;
+}
+
+.white-2 {
+  background-color: #555966 !important;
+  color: white !important;
+}
+
+.white-3{
+    background-color: #4d4d4d !important;
+    color: rgb(218, 218, 218) !important;
+}
+
+.white-4{
+    background-color: #949494 !important;
+}
+
+.gray {
+  background-color: #393749 !important;
+  border-color: #393749 !important;
+  color: white !important;
+}
+
+.text-gray {
+  color: rgb(204, 203, 203) !important;
+}
+
+.text-gray-2 {
+  color: rgb(173, 173, 173) !important;
+}
