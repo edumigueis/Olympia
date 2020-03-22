@@ -195,6 +195,38 @@ body {
     font-size: 1.8em;
     height: 46px;
   }
+  .grid-item-last{
+    height: 650px;
+    width: 300px !important;
+    margin: 0;
+    float: left;
+  }
+  .inner-list{
+    width: 300px;
+    float: right;
+  }
+  #event-name{
+    font-size: 0.6em;
+    width: 100%;
+    float: right;
+    margin-right: -20px;
+  }
+  #title{
+    font-size: 0.6em;
+    width: 50%;
+    float: right;
+  }
+  #grid-item-1{
+    margin-top: 50px;
+    margin-left: 0;
+    width: 300px !important;
+  }
+  #event-info{
+    width: 20em !important;
+  }
+  .event-info-p{
+    padding: 0 !important;
+  }
 }
 @media only screen and (min-width: 462px) and (max-width: 615px) {
   #calendar-red {
