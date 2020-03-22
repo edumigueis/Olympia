@@ -53,13 +53,11 @@
   padding: 0px;
   margin: 0px;
   position: fixed;
+  max-width: 1600px;
 }
 
 #menu-bar {
-  background-color: rgb(255, 255, 255) !important;
-}
-
-#menu-bar {
+  max-width: 1600px;
   z-index: 900;
   width: 100%;
   background-color: #fff;
@@ -75,6 +73,7 @@
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
+  background-color: rgb(255, 255, 255) !important;
 }
 #logo {
   text-align: center;
@@ -108,8 +107,8 @@
   position: absolute;
   width: 150px;
   background-size: 30%;
-  right: -75px;
   top: 10px;
+  right: -1.5%;
   background-repeat: no-repeat;
   will-change: transform;
   transition: 0.3s;
@@ -174,6 +173,10 @@
   bottom: 0;
   height: 100%;
   display: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1600px;
+  max-height: 900px;
 }
 
 #menu-list {
@@ -185,6 +188,7 @@
   width: 60%;
   position: absolute;
 }
+
 .ico:hover {
   cursor: pointer;
   -webkit-animation: swing 1s ease;
@@ -192,6 +196,7 @@
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
 #buy {
   width: 48%;
   margin-top: 12%;
@@ -223,44 +228,6 @@
   animation: swing 1s ease;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-}
-
-.seta {
-  margin-top: -3%;
-  position: fixed;
-  height: 100%;
-}
-
-#left {
-  position: fixed;
-  width: 5%;
-  left: 2%;
-  vertical-align: middle;
-  cursor: pointer;
-  z-index: 999;
-  transition: all 0.3s;
-  will-change: transform;
-  z-index: 999;
-}
-
-#right {
-  position: fixed;
-  width: 5%;
-  right: 3%;
-  vertical-align: middle;
-  cursor: pointer;
-  z-index: 999;
-  transition: all 0.3s;
-  will-change: transform;
-  z-index: 999;
-}
-
-#right:hover {
-  transform: translateX(20%) !important;
-}
-
-#left:hover {
-  transform: translateX(-20%) !important;
 }
 
 .menu-item-1 {
@@ -524,15 +491,9 @@
 }
 
 /*Responsividade do menu*/
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 0) and (max-width: 1000px) {
   #menu-items {
     font-size: 70%;
-  }
-  #left {
-    display: none;
-  }
-  #right {
-    display: none;
   }
   .close-img {
     width: 20px;
@@ -545,10 +506,10 @@
     padding-top: 15px;
   }
   .menu-item {
-    margin-top: 90%;
+    margin-top: 60% !important;
   }
   #menu-list {
-    transform: translateY(6em);
+    transform: translateY(-80em) !important;
     font-size: 12px;
   }
 }
@@ -557,12 +518,6 @@
   #menu-items {
     font-size: 100%;
   }
-  #left {
-    display: none;
-  }
-  #right {
-    display: none;
-  }
   .close-img {
     width: 40px;
     padding-left: 15px;
@@ -573,12 +528,10 @@
     padding-left: 15px;
     padding-top: 15px;
   }
-  .menu-item {
-    margin-top: 80%;
-  }
+
   #menu-list {
     font-size: 12px;
-    transform: translateY(2em);
+    transform: translateY(-35em) !important;
   }
 }
 
@@ -586,12 +539,6 @@
   #menu-items {
     font-size: 130%;
   }
-  #left {
-    display: none;
-  }
-  #right {
-    display: none;
-  }
   .close-img {
     width: 10%;
     padding-left: 7%;
@@ -602,12 +549,13 @@
     padding-left: 7%;
     padding-top: 7%;
   }
-  .menu-item {
-    margin-top: 55%;
-  }
+
   #menu-list {
-    transform: translateY(-2em);
+    transform: translateY(-23em);
     background-color: #686868;
+  }
+  #search-ico {
+    right: -5%;
   }
 }
 
@@ -625,14 +573,46 @@
     padding-left: 7%;
     padding-top: 7%;
   }
-  .menu-item {
-    margin-top: 130%;
-  }
+
   #menu-list {
-    transform: translateY(8em);
+    transform: translateY(-26em);
     background-color: #686868;
   }
 }
+
+@media screen and (min-height: 0) and (max-height: 680px){
+  .menu-item {
+    margin-top: 60% !important;
+  }
+  #menu-list {
+    transform: translateY(-28em);
+    background-color: #686868;
+  }
+}
+
+@media screen and (min-height: 681px) and (max-height: 800px) {
+  .menu-item {
+    margin-top: 55% !important;
+  }
+  #menu-list {
+    transform: translateY(-26em);
+    background-color: #686868;
+  }
+}
+
+@media screen and (min-height: 801px) and (max-height: 900px) {
+  .menu-item {
+    margin-top: 70% !important;
+  }
+  #menu-list {
+    transform: translateY(-26em);
+    background-color: #686868;
+  }
+}
+
+  /*Respondividade da bar*/
+
+
 
 @media only screen and (min-width: 300px) and (max-width: 461px) {
   #logo {
