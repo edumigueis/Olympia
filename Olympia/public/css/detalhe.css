@@ -410,6 +410,34 @@ p {
     height: 450px;
   }
 }
+@media only screen and (min-width: 1201px) and (max-width: 1500px) {
+  #info-list {
+    height: 280px;
+  }
+  #info-2 {
+    margin-top: 30px;
+  }
+  #info-col-d {
+    width: 62%;
+  }
+  .info-item {
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 1121px) and (max-width: 1200px) {
+  #info-list {
+    height: 280px;
+  }
+  #info-2 {
+    margin-top: 30px;
+  }
+  #info-col-d {
+    width: 62%;
+  }
+  .info-item {
+    height: 658px;
+  }
+}
 
 #mouse {
   display: none;
