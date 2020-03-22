@@ -114,8 +114,16 @@
   transition: 0.3s;
 }
 
+#left{
+  visibility: hidden;
+}
+
+#right{
+  visibility: hidden;
+}
+
 #search-ico:hover {
-  transform: rotate(-10deg);
+  transform: rotate(-9deg);
   cursor: pointer;
 }
 
@@ -134,7 +142,7 @@
   transition: 0.3s;
 }
 #nav-bars:hover {
-  transform: translateX(30px);
+  transform: translateX(20px);
   cursor: pointer;
 }
 .moving-up {
@@ -280,12 +288,20 @@
 }
 
 #container-contatos {
-  display: none;
-  position: fixed;
-  z-index: 950;
+  margin: auto;
+  vertical-align: middle;
   width: 100%;
   height: 100%;
   padding-left: 8%;
+}
+
+.table-contato{
+  display: none;
+  position: fixed;
+  margin: 0;
+  z-index: 950;
+  width: 100%;
+  height: 100%;
 }
 
 #contato-1 {
@@ -695,3 +711,4 @@
     top: 12px;
   }
 }
+

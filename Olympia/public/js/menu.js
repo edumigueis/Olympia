@@ -8,12 +8,12 @@ $(document).ready(function () {
     })
 
     $('.close').click(function () {
-        if ($('#container-contatos').css('display') == 'none') {
+        if ($('.table-contato').css('display') == 'none') {
             $("#menu-items").fadeOut("slow");
             $('#footer').fadeIn();
         }
         else {
-            $('#container-contatos').fadeOut('slow');
+            $('.table-contato').fadeOut('slow');
             $('#container-menu').css({
                 "-webkit-filter": "blur(" + 0 + "px)",
                 "filter": "blur(" + 0 + "px)",
@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     $('.a-contact').click(function () {
 
-        $('#container-contatos').fadeIn("slow");
+        $('.table-contato').fadeIn("slow");
         $('#container-menu').css({
             "-webkit-filter": "blur(" + 10 + "px)",
             "filter": "blur(" + 10 + "px)",
