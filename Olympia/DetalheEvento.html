@@ -2,22 +2,25 @@
 <html lang="en">
 
 <head>
+    <title>E V E N T O</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E V E N T O</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="public/js/menu.js"></script>
+
     <link rel="stylesheet" href="public/dist/aos.css" />
-    <link rel="shortcut icon" href="public/images/page-ico.png">
     <link rel="stylesheet" href="public/css/menu.css">
-    </link>
     <link rel="stylesheet" href="public/css/event-detail.css">
-    </link>
+    <link rel="stylesheet" href="public/css/dark-mode.css">
+
+    <link rel="shortcut icon" href="public/images/page-ico.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="public/js/menu.js"></script>   
 </head>
 
 <body>
      <!--Área de menus-->
-     <div id="menu-bar">
+     <div id="menu-bar" class="white">
         <div id="bar">
             <div id="nav-bars"></div>
             <div id="logo"><a href="/" class="hover-line"><span><span class="moving-up">O</span> <span class="moving-up">L</span> <span class="moving-up">Y</span> <span class="moving-up">M</span> <span class="moving-up">P</span> <span class="moving-up">I</span> <span class="moving-left">A</span></span></a>
@@ -127,7 +130,7 @@
                 <p id="event-name">Mirrors by Fenjhki MoMA</p>
             </div>
         </div>
-        <div id="page-rol">
+        <div id="page-rol" class="white-5">
             <ul id="page-grid">
                 <li class="grid-item" id="grid-item-1">
                     <div id="event-info">
@@ -139,7 +142,7 @@
                             <p id="event-info-horarios" class="event-info-item">Horários: 9:00-16:00</p>
                             <p id="event-info-precominimo" class="event-info-item">Preço mínimo: USD $20</p>
                             <p id="event-info-website" class="event-info-item"><a href="wwww.moma.org"
-                                    class="tickets-link">Compre Ingressos</a></p>
+                                    class="tickets-link detail-link-0">Compre Ingressos</a></p>
                         </div>
                     </div>
                 </li>
@@ -197,20 +200,19 @@
                             esboços e outros objetos de arte, muitos dos quais estão em exposição na Galeria da Secessão
                             de Viena.
                         </div>
-                        <p id="artist-profile"><a href="/profile/klimt" class="link">Visitar o perfil</a></p>
+                        <p id="artist-profile"><a href="/profile/klimt" class="link detail-link-0">Visitar o perfil</a></p>
                     </div>
                 </li>
             </ul>
         </div>
 
     </main>
-    <!--
-<span id="mouse"></span>
-        <div id="footer" style="margin-top: -10px;">
-            <div id="copyright" class="wfont">© OLYMPIA INC. All Rights Reserved.</div>
-            <div id="lower-footer"><a class="footer-link">Back To Top</a><span class="span-bar">|</span><a class="footer-link">Modo Noturno</a><span class="span-bar">|</span><a class="footer-link">Termos De Uso</a></div>
-        </div>
-        Fim do footer-->
+
+    <div id="footer" class="white" style="margin-top: -10px;">
+        <div id="copyright" class="wfont">© OLYMPIA INC. All Rights Reserved.</div>
+        <div id="lower-footer"><a class="footer-link">Back To Top</a><span class="span-bar">|</span><a class="footer-link">Modo Noturno</a><span class="span-bar">|</span><a class="footer-link">Termos De Uso</a></div>
+    </div>
+    
     <script src="public/dist/aos.js"></script>
     <script>
         AOS.init({

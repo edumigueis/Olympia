@@ -7,13 +7,17 @@
   color: white !important;
 }
 
-.white-3{
-    background-color: #4d4d4d !important;
-    color: rgb(218, 218, 218) !important;
+.white-3 {
+  background-color: #4d4d4d !important;
+  color: rgb(218, 218, 218) !important;
 }
 
-.white-4{
-    background-color: #949494 !important;
+.white-4 {
+  background-color: #949494 !important;
+}
+
+.white-5 {
+  background-color: #8e8e94 !important;
 }
 
 .gray {
@@ -28,4 +32,39 @@
 
 .text-gray-2 {
   color: rgb(173, 173, 173) !important;
+}
+
+.img-header .img-wrap:before {
+  background-image: linear-gradient(
+    to top,
+    #8e8e94 ,
+    rgba(255, 0, 0, 0)
+  ) !important;
+}
+
+.detail-link-0 {
+  background: linear-gradient(to bottom, #a86500 0%, #b30000 100%) !important;
+  border-radius: 2px !important;
+  padding: 2px !important;
+  background-position: 0 100% !important;
+  background-repeat: repeat-x !important;
+  background-size: 4px 4px !important;
+}
+
+.detail-link-0:hover {
+  cursor: pointer !important;
+  background-size: 4px 50px !important;
+}
+
+#calendar-red {
+  box-shadow: 10px 5px 5px rgb(83, 83, 83) !important;
+  border-left: 1px solid rgb(83, 83, 83) !important;
+  border-right: 1px solid rgb(83, 83, 83) !important;
+  border-top: rgb(83, 83, 83) !important;
+}
+#calendar-white {
+  border-bottom: 1px solid rgb(83, 83, 83) !important;
+  border-left: 1px solid rgb(83, 83, 83) !important;
+  border-right: 1px solid rgb(83, 83, 83) !important;
+  box-shadow: 10px 5px 5px rgb(83, 83, 83) !important;
 }

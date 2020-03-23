@@ -227,9 +227,23 @@ p {
   float: left;
 }
 .link {
+  background: linear-gradient(to bottom, rgb(202, 173, 94) 0%, rgb(202, 173, 94) 100%);
+  opacity: 0.7;
+  border-radius: 2px;
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  transition: background-size 0.2s;
+  padding: 2px;
+  margin-left: 5px;
   text-decoration: none;
   color: black;
 }
+
+.link:hover {
+  background-size: 4px 50px;
+}
+
 .img-col:hover {
   opacity: 0.7;
   cursor: pointer;

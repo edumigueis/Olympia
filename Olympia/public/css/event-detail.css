@@ -113,7 +113,7 @@ body {
   background-image: linear-gradient(
     to top,
     rgba(239, 239, 239, 255),
-    rgba(239, 239, 239, 0)
+    rgba(255, 16, 16, 0)
   );
   position: absolute;
   height: 100px;
@@ -195,36 +195,36 @@ body {
     font-size: 1.8em;
     height: 46px;
   }
-  .grid-item-last{
+  .grid-item-last {
     height: 650px;
     width: 300px !important;
     margin: 0;
     float: left;
   }
-  .inner-list{
+  .inner-list {
     width: 300px;
     float: right;
   }
-  #event-name{
+  #event-name {
     font-size: 0.6em;
     width: 100%;
     float: right;
     margin-right: -20px;
   }
-  #title{
+  #title {
     font-size: 0.6em;
     width: 50%;
     float: right;
   }
-  #grid-item-1{
+  #grid-item-1 {
     margin-top: 50px;
     margin-left: 0;
     width: 300px !important;
   }
-  #event-info{
+  #event-info {
     width: 20em !important;
   }
-  .event-info-p{
+  .event-info-p {
     padding: 0 !important;
   }
 }
@@ -406,7 +406,9 @@ body {
   font-family: "Open Sans ExtraBold";
 }
 .tickets-link {
-  background: linear-gradient(to bottom, #ff9800 0%, #ff9800 100%);
+  background: linear-gradient(to bottom, #ff9800 0%, #ff0000 100%);
+  border-radius: 2px;
+  padding: 2px;
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 4px;
@@ -517,7 +519,9 @@ p {
   float: left;
 }
 .link {
-  background: linear-gradient(to bottom, #ff9800 0%, #ff9800 100%);
+  background: linear-gradient(to bottom, #ff9800 0%, #ff0000 100%);
+  border-radius: 2px;
+  padding: 2px;
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 4px;
