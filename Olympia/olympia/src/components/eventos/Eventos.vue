@@ -38,34 +38,34 @@
         </table>
         <div id="menu-list">
 
-            <div id="col-menu-1">
-                <div class="menu-item-1 row1">
-                    <a href="/"><img class="ico" src="/src/assets/images/home.png"></a>
-                    <a class="menu-link " href="/">H O M E</a>
+                <div id="col-menu-1">
+                    <div class="menu-item-1 row1">
+                        <a href="/"><img class="ico" src="/src/assets/images/home.png"></a>
+                        <a class="menu-link " href="/">H O M E</a>
+                    </div>
+                    <br><br><br><br><br><br><br><br><br><br>
+                    <div class="menu-item row2">
+                        <a href="/#/sobre"><img class="ico" src="/src/assets/images/users.png"></a>
+                        <a class="menu-link " href="/#/sobre">S O B R E N Ó S</a>
+                    </div>
                 </div>
-                <br><br><br><br><br><br><br><br><br><br>
-                <div class="menu-item row2">
-                    <a href="/"><img class="ico" src="/src/assets/images/users.png"></a>
-                    <a class="menu-link " href="/">S O B R E N Ó S</a>
+                <div id="col-menu-2">
+                    <div class="menu-item-1 row1">
+                        <a href="/#/artes"><img class="ico" src="/src/assets/images/art.png"></a>
+                        <a class="menu-link" href="/#/artes">A R T E S</a>
+                    </div>
+                    <br><br><br><br><br><br><br><br><br><br>
+                    <div class="menu-item row2">
+                        <a class='a-contact'><img class="ico" src="/src/assets/images/contact.png"></a>
+                        <a class="menu-link a-contact">C O N T A T O</a>
+                    </div>
                 </div>
-            </div>
-            <div id="col-menu-2">
-                <div class="menu-item-1 row1">
-                    <a href="/"><img class="ico" src="/src/assets/images/art.png"></a>
-                    <a class="menu-link" href="/">A R T E S</a>
+                <div id="col-menu-3">
+                    <div class="menu-item-1 row1">
+                        <a href="/#/eventos"><img class="ico" src="/src/assets/images/buy.png" id='buy'></a>
+                        <a class="menu-link " href="/#/eventos">E X P O</a>
+                    </div>
                 </div>
-                <br><br><br><br><br><br><br><br><br><br>
-                <div class="menu-item row2">
-                    <a class='a-contact'><img class="ico" src="/src/assets/images/contact.png"></a>
-                    <a class="menu-link a-contact">C O N T A T O</a>
-                </div>
-            </div>
-            <div id="col-menu-3">
-                <div class="menu-item-1 row1">
-                    <a href="/"><img class="ico" src="/src/assets/images/buy.png" id='buy'></a>
-                    <a class="menu-link " href="/">E X P O</a>
-                </div>
-            </div>
         </div>
     </div>
 </div>

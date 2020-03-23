@@ -9,6 +9,20 @@ import { routes } from './routes';
 // registrando o módulo/plugin no global view object
 Vue.use(VueResource);
 Vue.use(VueRouter);
+new Vue({
+// ...
+methods:{
+  getUnits: function() {
+    location.reload();
+    once++;
+  }
+},
+activated: function(){
+  var once;
+  if(once == 0 || once == 1)
+  this.getUnits()
+}
+});
 
 const router = new VueRouter({
   routes : routes
