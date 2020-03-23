@@ -1,11 +1,11 @@
-// alunopic/src/routes.js
+
 
 import Home from './components/home/Home.vue';
-import Artes from './components/cadastro/Artes.vue';
-import Obra from './components/home/Obra.vue';
-import Evento from './components/cadastro/Evento.vue';
-import Eventos from './components/home/Eventos.vue';
-import Sobre from './components/cadastro/Sobre.vue';
+import Artes from './components/artes/Artes.vue';
+import Obra from './components/obra/Obra.vue';
+import Evento from './components/evento/Evento.vue';
+import Eventos from './components/eventos/Eventos.vue';
+import Sobre from './components/sobre/Sobre.vue';
 
 export const routes = [
 

@@ -1,0 +1,564 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Open Sans ExtraBold";
+  src: url("../fonts/OpenSans-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("../fonts/OpenSans-Light.ttf");
+}
+@font-face {
+  font-family: "Open Sans Semibold";
+  src: url("../fonts/OpenSans-Semibold.ttf");
+}
+@font-face {
+  font-family: "Bruzh";
+  src: url("../fonts/Bruzh.ttf");
+}
+@font-face {
+  font-family: "Bebas";
+  src: url("../fonts/BebasNeue.ttf");
+}
+@font-face {
+  font-family: "Calibre-Bold";
+  src: url("../fonts/calibri-bold-2.ttf");
+  src: url("../fonts/CalibreWeb-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/CalibreWeb-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Calibre-Regular";
+  src: url("../fonts/calibri-7.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Bold";
+  src: url("../fonts/BebasNeue-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Bebas-Neue-Regular";
+  src: url("../fonts/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Light";
+  src: url("../fonts/BebasNeue-Light.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Book";
+  src: url("../fonts/BebasNeue-Book.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Thin";
+  src: url("../fonts/BebasNeue-Thin.ttf");
+}
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+#mouse {
+  display: block;
+  width: 22px;
+  height: 40px;
+  border-radius: 20px;
+  border: 4px solid rgb(255, 255, 255);
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 20px;
+  margin: 0 auto;
+}
+
+#mouse::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  position: relative;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  animation-name: mouse;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes mouse {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 6px;
+  }
+}
+body {
+  background: #efefef;
+}
+.img-header {
+  position: relative;
+  width: 100%;
+  max-height: 450px;
+  overflow: hidden;
+}
+.img-header .img-wrap:before {
+  content: "";
+  background-image: linear-gradient(
+    to top,
+    rgba(239, 239, 239, 255),
+    rgba(255, 16, 16, 0)
+  );
+  position: absolute;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.img-header .img-wrap:after {
+  content: "";
+  display: block;
+}
+.img-wrap img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  -ms-interpolation-mode: bicubic;
+}
+#calendar-red {
+  background-color: red;
+  height: 160px;
+  width: 151px;
+  position: absolute;
+  margin-top: -80px;
+  left: 15%;
+  border-radius: 16px;
+  box-shadow: 10px 5px 5px lightgray;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-top: lightgray;
+}
+#calendar-white {
+  background-color: white;
+  height: 110px;
+  width: 151px;
+  position: absolute;
+  margin-top: -4px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  box-shadow: 10px 5px 5px lightgray;
+  margin-left: -1px;
+}
+.month {
+  font-family: "Calibre-Bold";
+  font-size: 2.3em;
+  text-align: center;
+  width: inherit;
+  padding-bottom: 0;
+  height: 60px;
+  margin: 0;
+}
+.day {
+  font-family: "Calibre-Bold";
+  font-size: 4em;
+  text-align: center;
+  width: inherit;
+  padding-bottom: 0;
+  height: 60px;
+  margin: 0;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 499px) {
+  #calendar-red {
+    width: 101px;
+    height: 80px;
+  }
+  #calendar-white {
+    width: 101px;
+    height: 60px;
+  }
+  .day {
+    font-size: 2.1em;
+    height: 60px;
+  }
+  .month {
+    font-size: 1.8em;
+    height: 46px;
+  }
+  .grid-item-last {
+    height: 650px;
+    width: 300px !important;
+    margin: 0;
+    float: left;
+  }
+  .inner-list {
+    width: 300px;
+    float: right;
+  }
+  #event-name {
+    font-size: 0.6em;
+    width: 100%;
+    float: right;
+    margin-right: -20px;
+  }
+  #title {
+    font-size: 0.6em;
+    width: 50%;
+    float: right;
+  }
+  #grid-item-1 {
+    margin-top: 50px;
+    margin-left: 0;
+    width: 300px !important;
+  }
+  #event-info {
+    width: 20em !important;
+  }
+  .event-info-p {
+    padding: 0 !important;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 615px) {
+  #calendar-red {
+    width: 131px;
+    height: 100px;
+  }
+  #calendar-white {
+    width: 131px;
+    height: 80px;
+  }
+  .day {
+    font-size: 2.8em;
+    height: 90px;
+  }
+  .month {
+    font-size: 2.1em;
+    height: 70px;
+  }
+  #page-rol {
+    margin-top: 200px;
+  }
+  #event-name {
+    font-size: 1em;
+  }
+  #title {
+    font-size: 0.8em;
+    margin-right: -30px;
+  }
+}
+@media only screen and (min-width: 616px) and (max-width: 950px) {
+  #page-rol {
+    margin-top: 90px;
+  }
+  #event-name {
+    font-size: 1em;
+  }
+  #title {
+    font-size: 1em;
+    margin-left: 10px;
+  }
+}
+#event-name {
+  font-family: "Calibre-Bold";
+  font-size: 4em;
+}
+#title {
+  margin-left: 40%;
+  float: right;
+  z-index: 20;
+  position: absolute;
+  margin-top: -110px;
+}
+#page-grid {
+  margin-top: 10%;
+  list-style: none;
+  width: 100%;
+  display: inline-block;
+  padding: 0;
+}
+.grid-item {
+  min-width: 650px;
+  width: 48%;
+  min-height: 400px;
+  display: inline-block;
+}
+#grid-item-2 {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  position: relative;
+
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Light blue cover above the slide show*/
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(175, 130, 165, 0.2);
+}
+
+.card_part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  transform: translateX(700px);
+  background-image: url(https://media.timeout.com/images/105542652/image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
+}
+
+.card_part.card_part-two {
+  z-index: 6;
+  background-image: url(https://media.timeout.com/images/105548109/image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  animation-delay: 7s;
+}
+
+.card_part.card_part-three {
+  z-index: 5;
+  background-image: url(https://www.artnews.com/wp-content/uploads/2019/10/in24270801.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  animation-delay: 14s;
+}
+
+.card_part.card_part-four {
+  z-index: 4;
+  background-image: url(https://cdn.cms.prod.nypr.digital/images/moma-41.2e16d0ba.fill-661x496.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  animation-delay: 21s;
+}
+
+@keyframes opaqTransition {
+  3% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  28% {
+    transform: translateX(-700px);
+  }
+  100% {
+    transform: translateX(-700px);
+  }
+}
+
+.map {
+  width: 100%;
+}
+#map-container {
+  margin-top: 60px;
+}
+#event-info {
+  margin-left: 20px;
+}
+.event-info-p {
+  padding: 40px;
+}
+.event-info-item {
+  font-family: "Open Sans SemiBold";
+  font-size: 1.5em;
+  line-height: 1.4em;
+}
+#event-info-nome {
+  font-family: "Open Sans ExtraBold";
+}
+.tickets-link {
+  background: linear-gradient(to bottom, #ff9800 0%, #ff0000 100%);
+  border-radius: 2px;
+  padding: 2px;
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: #000;
+  text-decoration: none;
+  transition: background-size 0.2s;
+}
+
+.tickets-link:hover {
+  cursor: pointer;
+  background-size: 4px 50px;
+}
+iframe {
+  border-radius: 5px;
+}
+#artist-pic {
+  width: 40%;
+  float: right;
+  margin-top: -190px;
+  margin-right: 10px;
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+#artist-pic:after {
+  top: 0;
+  left: 0;
+  padding: 0;
+  box-shadow: 0 0 0 3px #fff;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+}
+/* Effect 9a */
+#artist-pic:hover:after {
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
+  opacity: 0.5;
+}
+#artist-pic:hover {
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
+  color: #fff;
+  cursor: pointer;
+}
+#artist-pic:hover i {
+  color: #fff;
+}
+
+#simple-artist-info {
+  width: 50%;
+  font-family: "Open-Sans";
+}
+.fine-line {
+  width: 100%;
+  height: 1.5px;
+  background-color: lightgray;
+  margin-top: 30px;
+}
+#artist-data {
+  margin-top: 20px;
+  font-family: "Open Sans";
+  text-indent: 40px;
+  text-align: justify;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+p {
+  font-family: "Open-Sans";
+}
+#user-link {
+  text-decoration: none;
+  color: black;
+}
+#user-link :hover {
+  cursor: pointer;
+  font-family: "Calibre-Bold";
+  text-decoration: line-through;
+}
+#art-pic {
+  background-color: #aaa;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+#artist-pic {
+  background-color: #aaa;
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+  overflow: hidden;
+  position: relative;
+}
+#artist-profile :hover {
+  text-decoration: none;
+  font-weight: bolder;
+}
+#artist-profile {
+  text-decoration: none;
+  font-family: "bebas";
+  letter-spacing: 0.1em;
+  font-size: 1.1em;
+  color: black;
+  margin-top: 23px;
+  float: left;
+}
+.link {
+  background: linear-gradient(to bottom, #ff9800 0%, #ff0000 100%);
+  border-radius: 2px;
+  padding: 2px;
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: #000;
+  text-decoration: none;
+  transition: background-size 0.2s;
+  font-size: 1.18em;
+}
+
+.link:hover {
+  background-size: 4px 50px;
+  cursor: pointer;
+}
+.inner-list {
+  font-family: "Open Sans";
+  margin-right: 20px;
+  height: 100%;
+}
+.grid-item-last {
+  min-width: 650px;
+  width: 48%;
+  min-height: 400px;
+  display: inline-block;
+  float: right;
+  margin-top: 55px;
+  margin-right: 20px;
+}
+.art-icon {
+  width: 100%;
+}
+b {
+  font-family: "Open Sans Bold";
+}
+#simple-artist-info p {
+  font-family: "Open Sans SemiBold";
+}
+
+#search-ico {
+  right: -4.2% !important;
+}

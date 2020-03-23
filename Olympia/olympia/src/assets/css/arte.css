@@ -1,0 +1,414 @@
+@font-face {
+  font-family: "Bruzh";
+  src: url("/src/assets/fonts/Bruzh.ttf");
+}
+@font-face {
+  font-family: "Calibre-Bold";
+  src: url("/src/assets/fonts/calibri-bold-2.ttf");
+  src: url("/src/assets/fonts/CalibreWeb-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/src/assets/fonts/CalibreWeb-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Calibre-Regular";
+  src: url("/src/assets/fonts/calibri-7.ttf");
+  src: url("/src/assets/fonts/CalibreWeb-Regular.eot?#iefix") format("embedded-opentype"),
+    url("/src/assets/fonts/CalibreWeb-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Bebas-Neue-Bold";
+  src: url("/src/assets/fonts/BebasNeue-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Bebas-Neue-Regular";
+  src: url("/src/assets/fonts/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Light";
+  src: url("/src/assets/fonts/BebasNeue-Light.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Book";
+  src: url("/src/assets/fonts/BebasNeue-Book.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Thin";
+  src: url("/src/assets/fonts/BebasNeue-Thin.ttf");
+}
+
+html {
+  height: 100%;
+  max-width: 1600px;
+}
+
+body {
+  margin: 0 !important;
+  height: fit-content !important;
+  overflow-x: hidden;
+  font-family: "Bebas-Neue-Regular";
+  padding: 0 !important;
+}
+
+.gradient {
+    max-width: 1600px;
+  position: fixed;
+  top: 0;
+  z-index: -10;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(143, 142, 142);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(92, 91, 91);
+}
+
+#line-containers {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.footer-link {
+  font-family: "bebas-neue-regular";
+}
+
+.footer-link:hover {
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.bg {
+  background-image: url("/src/assets/images/circles.png");
+  position: absolute;
+  width: 100%;
+  height: 4850px;
+  z-index: -10;
+  animation-name: bg-circles;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  filter: blur(5px);
+}
+
+@keyframes bg-circles {
+  0% {
+    opacity: 0.2;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  23% {
+    opacity: 0.65;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  26% {
+    opacity: 0.75;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  35% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  53% {
+    opacity: 0.85;
+  }
+  57% {
+    opacity: 0.8;
+  }
+  61% {
+    opacity: 0.76;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  73% {
+    opacity: 0.65;
+  }
+  76% {
+    opacity: 0.6;
+  }
+  78% {
+    opacity: 0.55;
+  }
+  81% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  92% {
+    opacity: 0.35;
+  }
+  95% {
+    opacity: 0.3;
+  }
+  96% {
+    opacity: 0.29;
+  }
+  969% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.line {
+  width: 100%;
+  position: relative;
+  z-index: -9;
+  height: 632px;
+}
+
+.line-img-left {
+  margin-left: 1.5%;
+  margin-top: 100px;
+  width: 30%;
+}
+
+.line-img-right {
+  float: right;
+  margin-top: 50px;
+  margin-right: 1.5%;
+  width: 30%;
+}
+
+.line-img {
+  border-radius: 5%;
+  width: 100%;
+}
+.card-center-1 {
+  float: left;
+  margin-left: 35%;
+  width: 32%;
+  margin-top: -35%;
+  background-color: rgb(230, 230, 230);
+  border: 20px solid rgb(230, 230, 230);
+  text-align: justify;
+  text-indent: 40px;
+  position: relative;
+  border-radius: 10px;
+}
+.card-right-1 {
+  background-color: rgb(230, 230, 230);
+  float: right;
+  width: 32%;
+  margin-top: -230px;
+  margin-right: 1.5%;
+  border: 20px solid rgb(230, 230, 230);
+  text-align: justify;
+  text-indent: 40px;
+  position: relative;
+  border-radius: 10px;
+}
+.card-center-2 {
+  float: left;
+  margin-left: 35%;
+  width: 32%;
+  margin-top: -250px;
+  background-color: rgb(230, 230, 230);
+  border: 20px solid rgb(230, 230, 230);
+  text-align: justify;
+  text-indent: 40px;
+  position: relative;
+  border-radius: 10px;
+}
+.card-right-2 {
+  background-color: rgb(230, 230, 230);
+  float: right;
+  width: 32%;
+  margin-top: -500px;
+  margin-right: 1.5%;
+  border: 20px solid rgb(230, 230, 230);
+  text-align: justify;
+  text-indent: 40px;
+  position: inherit;
+  border-radius: 10px;
+}
+.card-center {
+  float: left;
+  border-radius: 10px;
+  margin-left: 30%;
+  width: 32%;
+  margin-top: 330px;
+  background-color: rgb(230, 230, 230);
+  border: 20px solid rgb(230, 230, 230);
+  text-align: justify;
+  text-indent: 40px;
+  position: relative;
+}
+.card-right {
+  background-color: rgb(230, 230, 230);
+  float: right;
+  border-radius: 10px;
+  width: 32%;
+  margin-top: 180px;
+  margin-right: 1.5%;
+  border: 20px solid rgb(230, 230, 230);
+  text-align: justify;
+  text-indent: 40px;
+  position: inherit;
+}
+.card-left {
+  border-radius: 10px;
+  background-color: rgb(230, 230, 230);
+  float: left;
+  width: 32%;
+  margin-top: 95px;
+  margin-left: 1.5%;
+  border: 20px solid rgb(230, 230, 230);
+  text-align: justify;
+  text-indent: 40px;
+  position: absolute;
+}
+
+p {
+  padding: 2px;
+}
+
+#container-contatos {
+  margin-top: -95px !important;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#mouse {
+  display: block;
+  width: 22px;
+  height: 40px;
+  border-radius: 20px;
+  border: 4px solid rgb(255, 255, 255);
+  text-align: center;
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  bottom: 3em;
+  margin: 0 auto;
+}
+
+#mouse::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  position: relative;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  animation-name: mouse;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes mouse {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 6px;
+  }
+}
+
+.table-contato{
+  padding-top: 4%;
+}
+
+

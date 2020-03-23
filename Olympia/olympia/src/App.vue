@@ -1,14 +1,6 @@
 <template>
   <div class="corpo">
-    <nav>
-      <ul>
-        <li v-for="route in routes">
-          <router-link :to="route.path ? route.path : '/'">
-            {{ route.titulo }}
-          </router-link>
-        </li>
-      </ul>
-    </nav>
+    
     <router-view></router-view>
   </div>
 </template>
@@ -24,4 +16,14 @@ export default {
   }
 };
 </script>
-
+<style>
+  body{
+    margin:0 !important;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  .corpo{
+    width: 100%;
+  }
+</style>
+<script href="/src/assets/js/menu.js"></script>

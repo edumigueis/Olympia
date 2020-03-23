@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title>S O B R E</title>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="public/css/sobre.css">
-    <link rel="stylesheet" href="public/css/menu.css">
-    <link rel="shortcut icon" href="public/images/page-ico.png">
-
-
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="../../../js/sobre.js"></script>
-    <script type="text/javascript" src="../../../js/menu.js"></script>
-</head>
-
+<template>
 <body>
+        
+    <link rel="stylesheet" href="/src/assets/css/sobre.css">
+    <link rel="shortcut icon" href="/src/assets/images/page-ico.png">
 
     <div class="gradient"></div>
      <!--Área de menus-->
@@ -36,17 +22,17 @@
 
         <div id="container-menu">
             <div class="close-1 close">
-                <img class="close-img" src="public/images/x.png">
+                <img class="close-img" src="/src/assets/images/x.png">
             </div>
             <table class="seta">
                 <tr>
                     <td>
                         <a id="leftClick">
-                            <img src="public/images/left.png" id="left">
+                            <img src="/src/assets/images/left.png" id="left">
                         </a>
 
                         <a id="rightClick">
-                            <img src="public/images/right.png" id="right">
+                            <img src="/src/assets/images/right.png" id="right">
                         </a>
                     </td>
                 </tr>
@@ -55,29 +41,29 @@
 
                 <div id="col-menu-1">
                     <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="public/images/home.png"></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/home.png"></a>
                         <a class="menu-link " href="/">H O M E</a>
                     </div>
                     <br><br><br><br><br><br><br><br><br><br>
                     <div class="menu-item row2">
-                        <a href="/"><img class="ico" src="public/images/users.png"></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/users.png"></a>
                         <a class="menu-link " href="/">S O B R E N Ó S</a>
                     </div>
                 </div>
                 <div id="col-menu-2">
                     <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="public/images/art.png"></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/art.png"></a>
                         <a class="menu-link" href="/">A R T E S</a>
                     </div>
                     <br><br><br><br><br><br><br><br><br><br>
                     <div class="menu-item row2">
-                        <a class='a-contact'><img class="ico" src="public/images/contact.png"></a>
+                        <a class='a-contact'><img class="ico" src="/src/assets/images/contact.png"></a>
                         <a class="menu-link a-contact">C O N T A T O</a>
                     </div>
                 </div>
                 <div id="col-menu-3">
                     <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="public/images/buy.png" id='buy'></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/buy.png" id='buy'></a>
                         <a class="menu-link " href="/">E X P O</a>
                     </div>
                 </div>
@@ -93,7 +79,7 @@
             <td>
                 <div id='container-contatos'>
                     <div class="close-2 close">
-                        <img class="close-2-img" src="public/images/x.png">
+                        <img class="close-2-img" src="/src/assets/images/x.png">
                     </div>
                     <div id="contato-1">
                         <p id='titulo'>C O N T A T O S</p>
@@ -116,8 +102,8 @@
     <span id="fundo">
 
         <div id="imagens">
-            <img class="box" id="exposicao" src="public/images/sede.jpg">
-            <img class="box" id="museu" src="public/images/museu.jpg">
+            <img class="box" id="exposicao" src="/src/assets/images/sede.jpg">
+            <img class="box" id="museu" src="/src/assets/images/museu.jpg">
         </div>
 
         <span id="mouse"></span>
@@ -152,5 +138,4 @@
     <!--Fim do footer-->
 
 </body>
-
-</html>
+</template>

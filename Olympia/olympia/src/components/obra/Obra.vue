@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>D E T A L H E</title>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<template>
+<body>
 
     <link rel="stylesheet" href="public/css/detalhe.css">
-    <link rel="stylesheet" href="public/css/menu.css">
-    <link rel="stylesheet" href="public/dist/aos.css" />
-    <link rel="stylesheet" href="public/css/dark-mode.css">
 
-    <link rel="shortcut icon" href="public/images/page-ico.png">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../../../js/menu.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
-    <script type="text/javascript" src="../../../js/detalhes.js"></script>
-</head>
-
-<body>
      <!--Área de menus-->
      <div id="menu-bar" class="white">
         <div id="bar">
@@ -126,14 +108,14 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Gustav_Klimt_046.jpg" class="img-col"
                             data-aos="fade-right" data-aos-duration="1000">
                         <img src="https://www.neuegalerie.org/sites/default/files/work/2._gustav_klimt_detail_of_adele_bloch-bauer_i_1907._cneue_galerie_new_york.jpg"
-                            class="img-col" class="img-col" data-aos="fade-right" data-aos-duration="1000">
+                            class="img-col" data-aos="fade-right" data-aos-duration="1000">
                     </td>
                 </tr>
             </table>
         </div>
         <div id="info-col-d">
             <ul id="info-list">
-                <li class="info-item white-3" id="info-1" class="img-col" data-aos="fade-down" data-aos-duration="1000">
+                <li class="info-item white-3" id="info-1" data-aos="fade-down" data-aos-duration="1000">
                     <div class="inner-list">
                         <div id="simple-art-info">
                             <p id="art-name"><b>Nome:</b> Retrato de Adele Blocher Bauer I</p>
@@ -160,7 +142,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="info-item white-3" id="info-2" class="img-col" data-aos="fade-up" data-aos-duration="1000">
+                <li class="info-item white-3" id="info-2" data-aos="fade-up" data-aos-duration="1000">
                     <div class="inner-list">
 
                         <div id="simple-artist-info">
@@ -206,12 +188,5 @@
                 Uso</a></div>
     </div>
     <!--Fim do footer-->
-    <script src="public/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            easing: 'ease-in-out-sine'
-        });
-    </script>
 </body>
-
-</html>
+</template>

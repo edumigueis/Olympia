@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>E V E N T O</title>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="public/dist/aos.css" />
-    <link rel="stylesheet" href="public/css/menu.css">
-    <link rel="stylesheet" href="public/css/event-detail.css">
-    <link rel="stylesheet" href="public/css/dark-mode.css">
-
-    <link rel="shortcut icon" href="public/images/page-ico.png">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../../../js/menu.js"></script>   
-</head>
-
+<template>
 <body>
+    <link rel="stylesheet" href="/src/assets/css/event-detail.css">
+    <link rel="shortcut icon" href="/src/assets/images/page-ico.png">
+
      <!--Área de menus-->
      <div id="menu-bar" class="white">
         <div id="bar">
@@ -35,17 +19,17 @@
 
         <div id="container-menu">
             <div class="close-1 close">
-                <img class="close-img" src="public/images/x.png">
+                <img class="close-img" src="/src/assets/images/x.png">
             </div>
             <table class="seta">
                 <tr>
                     <td>
                         <a id="leftClick">
-                            <img src="public/images/left.png" id="left">
+                            <img src="/src/assets/images/left.png" id="left">
                         </a>
 
                         <a id="rightClick">
-                            <img src="public/images/right.png" id="right">
+                            <img src="/src/assets/images/right.png" id="right">
                         </a>
                     </td>
                 </tr>
@@ -54,29 +38,29 @@
 
                 <div id="col-menu-1">
                     <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="public/images/home.png"></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/home.png"></a>
                         <a class="menu-link " href="/">H O M E</a>
                     </div>
                     <br><br><br><br><br><br><br><br><br><br>
                     <div class="menu-item row2">
-                        <a href="/"><img class="ico" src="public/images/users.png"></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/users.png"></a>
                         <a class="menu-link " href="/">S O B R E N Ó S</a>
                     </div>
                 </div>
                 <div id="col-menu-2">
                     <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="public/images/art.png"></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/art.png"></a>
                         <a class="menu-link" href="/">A R T E S</a>
                     </div>
                     <br><br><br><br><br><br><br><br><br><br>
                     <div class="menu-item row2">
-                        <a class='a-contact'><img class="ico" src="public/images/contact.png"></a>
+                        <a class='a-contact'><img class="ico" src="/src/assets/images/contact.png"></a>
                         <a class="menu-link a-contact">C O N T A T O</a>
                     </div>
                 </div>
                 <div id="col-menu-3">
                     <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="public/images/buy.png" id='buy'></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/buy.png" id='buy'></a>
                         <a class="menu-link " href="/">E X P O</a>
                     </div>
                 </div>
@@ -92,7 +76,7 @@
             <td>
                 <div id='container-contatos'>
                     <div class="close-2 close">
-                        <img class="close-2-img" src="public/images/x.png">
+                        <img class="close-2-img" src="/src/assets/images/x.png">
                     </div>
                     <div id="contato-1">
                         <p id='titulo'>C O N T A T O S</p>
@@ -212,13 +196,11 @@
         <div id="copyright" class="wfont">© OLYMPIA INC. All Rights Reserved.</div>
         <div id="lower-footer"><a class="footer-link">Back To Top</a><span class="span-bar">|</span><a class="footer-link">Modo Noturno</a><span class="span-bar">|</span><a class="footer-link">Termos De Uso</a></div>
     </div>
-    
-    <script src="public/dist/aos.js"></script>
+</body>
+</template>
+<!--<script src="/src/assets/dist/aos.js"></script>
     <script>
         AOS.init({
             easing: 'ease-in-out-sine'
         });
-    </script>
-</body>
-
-</html>
+    </script>-->
