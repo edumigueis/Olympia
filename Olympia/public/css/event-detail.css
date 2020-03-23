@@ -178,7 +178,7 @@ body {
   margin: 0;
 }
 
-@media only screen and (min-width: 300px) and (max-width: 461px) {
+@media only screen and (min-width: 300px) and (max-width: 499px) {
   #calendar-red {
     width: 101px;
     height: 80px;
@@ -228,7 +228,7 @@ body {
     padding: 0 !important;
   }
 }
-@media only screen and (min-width: 462px) and (max-width: 615px) {
+@media only screen and (min-width: 500px) and (max-width: 615px) {
   #calendar-red {
     width: 131px;
     height: 100px;
@@ -252,8 +252,8 @@ body {
     font-size: 1em;
   }
   #title {
-    font-size: 1em;
-    margin-left: 10px;
+    font-size: 0.8em;
+    margin-right: -30px;
   }
 }
 @media only screen and (min-width: 616px) and (max-width: 950px) {
