@@ -1,0 +1,111 @@
+html{
+    overflow-x: hidden;
+}
+
+circle {
+    transition: 0.15s all;
+    display: none;
+    animation: swing 1.2s ease;
+    animation-iteration-count: 1;
+    opacity: 0.4;
+}
+
+circle:hover {
+    opacity: 1;
+    r: 2;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+#linha {
+    position: absolute;
+    background-color: #e7e7e7;
+    height: 1px;
+    margin-top: -53%;
+    left: 0;
+    width: 100%;
+    border: none;
+}
+
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(3px);
+        -moz-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-3px);
+        -moz-transform: translateX(-3px);
+        transform: translateY(-3px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(2px);
+        -moz-transform: translateX(2px);
+        transform: translateY(2px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-2px);
+        -moz-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(1px);
+        -moz-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+#mouse {
+	display: block;
+	width: 22px;
+	height: 40px;
+	border-radius: 20px;
+	border: 4px solid rgb(99, 99, 99);
+	text-align: center;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 20px;
+    margin: 0 auto;
+}
+
+#mouse::before {
+	content: '';
+	display: inline-block;
+	width: 4px;
+	height: 8px;
+	position: relative;
+	border-radius: 4px;
+	background: rgb(99, 99, 99);
+	animation-name: mouse;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mouse {
+	from {
+		top: 0px;
+	}
+  to {
+		top: 6px;
+	}
+}
+
+#search-ico{
+    right: -4.2% !important;
+}
