@@ -10,7 +10,7 @@ import { routes } from './routes';
 Vue.use(VueResource);
 Vue.use(VueRouter);
 new Vue({
-// ...
+  
 methods:{
   getUnits: function() {
     location.reload();
