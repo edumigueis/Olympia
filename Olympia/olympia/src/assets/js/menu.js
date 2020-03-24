@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     setInterval(updateGradient, 10);
 
-    $('#nav-bars').click(function () {
+    $(document.body).on('click','#nav-bars',function () {
         $("#menu-items").fadeIn("slow");
         $('#footer').fadeOut();
     })
