@@ -2,7 +2,7 @@
 
 <main>
     <link rel="stylesheet" href="/src/assets/css/arte.css">
-    <link rel="shortcut icon" href="/src/assets/images/page-ico.png">
+    <link rel="shortcut icon" href="../assets/images/page-ico.png">
     <div class="gradient"></div>
 
     <!--Dark Mode
