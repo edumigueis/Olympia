@@ -2,6 +2,7 @@
   <div class="corpo">
     
     <router-view></router-view>
+    <div id='forced-click'></div>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ export default {
       routes
     };
   }
+  
 };
 </script>
 <style>

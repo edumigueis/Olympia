@@ -261,6 +261,23 @@
     </div>
 </main>
 </template>
-    <style>
-    </style>
+
+    <script>
+    import Vue from 'vue'
+
+    var vm = new Vue({
+    el:"#app",
+    mounted:function(){
+        alert('ai');
+        method1() //method1 will execute at pageload
+  },
+  methods:{
+        method1:function(){
+
+              var clicka = document.getElementById("forced-click");
+              clicka.click();
+        }
+     }
+})
+    </script>
     

@@ -50,7 +50,7 @@
                 <div id="col-menu-2">
                     <div class="menu-item-1 row1">
                         <a href="/"><img class="ico" src="/src/assets/images/art.png"></a>
-                        <a class="menu-link" href="/">A R T E S</a>
+                        <a class="menu-link" href="/#/artes">A R T E S</a>
                     </div>
                     <br><br><br><br><br><br><br><br><br><br>
                     <div class="menu-item row2">

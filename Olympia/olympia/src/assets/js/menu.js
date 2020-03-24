@@ -1,6 +1,11 @@
+
 $(document).ready(function () {
 
     setInterval(updateGradient, 10);
+    $(document.body).on('click','#forced-click',function () {
+        alert('entrei');
+        window.location.reload();
+    })
 
     $(document.body).on('click','#nav-bars',function () {
         $("#menu-items").fadeIn("slow");
