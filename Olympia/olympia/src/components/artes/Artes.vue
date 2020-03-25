@@ -11,10 +11,14 @@
 
                 <div id="line-containers">
                 <div class="line">
+                    
                     <div class="line-img-left" data-aos="fade-left" data-aos-duration="1000">
+                        <a href="/#/pintura" class="image-link-to-art">
                         <img src="https://www.virtuosodancephotography.com/v/ui/8180004/p98067404_101.jpg?1539638288" alt=""
                             class="line-img">
+                            </a>
                     </div>
+                    
                     <div data-aos="fade-left" data-aos-duration="1000" class="card-center-1 gray">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                             interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
@@ -30,9 +34,13 @@
                 </div>
 
                 <div class="line">
+                    
                     <div class="line-img-right" data-aos="fade-left" data-aos-duration="1000">
+                        <a href="/#/pintura"class="image-link-to-art">
                         <img src="https://www.artmuseum.org/wp-content/uploads/6.jpg" alt="" class="line-img">
+                        </a>
                     </div>
+
                     <div data-aos="fade-right" data-aos-duration="1000" class="card-center gray">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                             interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
@@ -48,8 +56,10 @@
                 </div>
                 <div class="line">
                     <div class="line-img-left" data-aos="fade-right" data-aos-duration="1000">
+                        <a href="/#/pintura"class="image-link-to-art">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Victoire_de_Samothrace_-_vue_de_trois-quart_gauche%2C_gros_plan_de_la_statue_%282%29.JPG"
                             alt="" class="line-img">
+                            </a>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1000" class="card-center-2 gray">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
@@ -66,9 +76,12 @@
                 </div>
                 <div class="line">
                     <div class="line-img-right" data-aos="fade-left" data-aos-duration="1000">
+                     <a href="/#/pintura"class="image-link-to-art">
                         <img src="https://www.virtuosodancephotography.com/v/ui/8180004/p98067404_101.jpg?1539638288" alt=""
                             class="line-img">
+                            </a>
                     </div>
+                    
                     <div data-aos="fade-right" data-aos-duration="1000" class="card-center gray">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                             interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
@@ -83,10 +96,14 @@
                     </div>
                 </div>
                 <div class="line">
+                    
                     <div class="line-img-left" data-aos="fade-right" data-aos-duration="1000">
+                        <a href="/#/pintura"class="image-link-to-art">
                         <img src="https://www.virtuosodancephotography.com/v/ui/8180004/p98067404_101.jpg?1539638288" alt=""
                             class="line-img">
+                            </a>
                     </div>
+                    
                     <div data-aos="fade-left" data-aos-duration="1000" class="card-center-2 gray">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                             interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
@@ -101,9 +118,13 @@
                     </div>
                 </div>
                 <div class="line">
+                    
                     <div class="line-img-right" data-aos="fade-left" data-aos-duration="1000">
+                        <a href="/#/pintura"class="image-link-to-art">
                         <img src="/src/assets/images/music.jpg" alt="" class="line-img">
+                        </a>
                     </div>
+                    
                     <div data-aos="fade-right" data-aos-duration="1000" class="card-center gray">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                             interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
@@ -118,10 +139,14 @@
                     </div>
                 </div>
                 <div class="line">
+                    
                     <div class="line-img-left" data-aos="fade-right" data-aos-duration="1000">
+                        <a href="/#/pintura"class="image-link-to-art">
                         <img src="https://img.elo7.com.br/product/original/137BE5B/poster-cinema-retro-movie.jpg" alt=""
                             class="line-img"><br><br>
+                            </a>
                     </div>
+                    
                     <div data-aos="fade-left" data-aos-duration="1000" class="card-center-2 gray">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                             interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis

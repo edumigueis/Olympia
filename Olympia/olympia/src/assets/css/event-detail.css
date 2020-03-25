@@ -424,7 +424,7 @@ body {
 iframe {
   border-radius: 5px;
 }
-#artist-pic {
+#artist-pic-event {
   width: 40%;
   float: right;
   margin-top: -190px;
@@ -433,7 +433,7 @@ iframe {
   -moz-transition: box-shadow 0.2s;
   transition: box-shadow 0.2s;
 }
-#artist-pic:after {
+#artist-pic-event:after {
   top: 0;
   left: 0;
   padding: 0;
@@ -443,23 +443,23 @@ iframe {
   transition: transform 0.2s, opacity 0.2s;
 }
 /* Effect 9a */
-#artist-pic:hover:after {
+#artist-pic-event:hover:after {
   -webkit-transform: scale(0.85);
   -moz-transform: scale(0.85);
   -ms-transform: scale(0.85);
   transform: scale(0.85);
   opacity: 0.5;
 }
-#artist-pic:hover {
+#artist-pic-event:hover {
   box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
   color: #fff;
   cursor: pointer;
 }
-#artist-pic:hover i {
+#artist-pic-event:hover i {
   color: #fff;
 }
 
-#simple-artist-info {
+#simple-artist-info-event {
   width: 50%;
   font-family: "Open-Sans";
 }
@@ -497,7 +497,7 @@ p {
   overflow: hidden;
   position: relative;
 }
-#artist-pic {
+#artist-pic-event {
   background-color: #aaa;
   border-radius: 50%;
   width: 190px;

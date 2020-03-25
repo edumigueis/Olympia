@@ -162,14 +162,14 @@
                 <li class="grid-item-last">
                     <div class="inner-list">
 
-                        <div id="simple-artist-info">
+                        <div id="simple-artist-info-event">
                             <p id="artist-user"><b>User: <a id="user-link" href="/user/klimt">@MoMA</a></b></p>
                             <p id="artist-name"><b>Nome:</b> Gustav Klimt</p>
                             <p id="artist-nac"><b>Nacionalidade:</b> Austríaco </p>
                             <p id="artist-email"><b>E-mail:</b> gustavklint@team.br</p>
                             <p id="artist-tel"><b>Telefone:</b>+38 78 9817618191</p>
                         </div>
-                        <div id="artist-pic">
+                        <div id="artist-pic-event">
                             <img src="https://appseducacao.files.wordpress.com/2016/09/icon175x175-1.png?w=636" alt=""
                                 class="art-icon">
                         </div>

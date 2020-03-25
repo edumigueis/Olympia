@@ -191,7 +191,10 @@ body {
   z-index: -9;
   height: 632px;
 }
-
+.image-link-to-art{
+  width: 380px;
+  height: 100%;
+}
 .line-img-left {
   margin-left: 1.5%;
   margin-top: 100px;

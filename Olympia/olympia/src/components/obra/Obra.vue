@@ -1,7 +1,7 @@
 <template>
-<body>
+<main style="overflow:hidden;" class="white-4">
 
-    <link rel="stylesheet" href="public/css/detalhe.css">
+    <link rel="stylesheet" href="/src/assets/css/detalhe.css">
 
      <!--Área de menus-->
      <div id="menu-bar" class="white">
@@ -19,17 +19,17 @@
 
         <div id="container-menu">
             <div class="close-1 close">
-                <img class="close-img" src="public/images/x.png">
+                <img class="close-img" src="/src/assets/images/x.png">
             </div>
             <table class="seta">
                 <tr>
                     <td>
                         <a id="leftClick">
-                            <img src="public/images/left.png" id="left">
+                            <img src="/src/assets/images/left.png" id="left">
                         </a>
 
                         <a id="rightClick">
-                            <img src="public/images/right.png" id="right">
+                            <img src="/src/assets/images/right.png" id="right">
                         </a>
                     </td>
                 </tr>
@@ -38,29 +38,29 @@
 
                 <div id="col-menu-1">
                     <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="public/images/home.png"></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/home.png"></a>
                         <a class="menu-link " href="/">H O M E</a>
                     </div>
                     <br><br><br><br><br><br><br><br><br><br>
                     <div class="menu-item row2">
-                        <a href="/"><img class="ico" src="public/images/users.png"></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/users.png"></a>
                         <a class="menu-link " href="/">S O B R E N Ó S</a>
                     </div>
                 </div>
                 <div id="col-menu-2">
                     <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="public/images/art.png"></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/art.png"></a>
                         <a class="menu-link" href="/">A R T E S</a>
                     </div>
                     <br><br><br><br><br><br><br><br><br><br>
                     <div class="menu-item row2">
-                        <a class='a-contact'><img class="ico" src="public/images/contact.png"></a>
+                        <a class='a-contact'><img class="ico" src="/src/assets/images/contact.png"></a>
                         <a class="menu-link a-contact">C O N T A T O</a>
                     </div>
                 </div>
                 <div id="col-menu-3">
                     <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="public/images/buy.png" id='buy'></a>
+                        <a href="/"><img class="ico" src="/src/assets/images/buy.png" id='buy'></a>
                         <a class="menu-link " href="/">E X P O</a>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
         <td>
             <div id='container-contatos'>
                 <div class="close-2 close">
-                    <img class="close-2-img" src="public/images/x.png">
+                    <img class="close-2-img" src="/src/assets/images/x.png">
                 </div>
                 <div id="contato-1">
                     <p id='titulo'>C O N T A T O S</p>
@@ -96,39 +96,56 @@
 </table>
 <!--Fim dos contatos-->
 
-    <div id="bg"></div>
-
     <div id="col-container">
 
         <div id="img-col-d" class="white-4">
             <div class="bg"></div>
-            <table id="table-img">
-                <tr>
-                    <td>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Gustav_Klimt_046.jpg" class="img-col"
-                            data-aos="fade-right" data-aos-duration="1000">
-                        <img src="https://www.neuegalerie.org/sites/default/files/work/2._gustav_klimt_detail_of_adele_bloch-bauer_i_1907._cneue_galerie_new_york.jpg"
-                            class="img-col" data-aos="fade-right" data-aos-duration="1000">
+            <table id="table-img" width="100%" data-aos="fade-down" data-aos-duration="1000" class="white-4">
+                <colgroup>
+                <col width="33.3333333%">
+                <col width="33.3333333%">
+                <col width="33.3333333%">
+                </colgroup>
+                <tr class="line-img-container-detail" >
+                    <td class="detail-img-container" id="detail-img-1" colspan=2 >
+                        <div class="detail-mask">
+                        <img src="https://http2.mlstatic.com/pintura-abstrata-17a-pintor-jackson-pollock-em-tela-55cm-x-42cm-D_NQ_NP_892308-MLB31892097848_082019-F.webp" class="img-col white-4">
+                            </div>
+                    </td>
+                    <td class="detail-img-container" id="detail-img-2" >
+                        <div class="detail-mask">
+                        <img src="https://zoomoncontemporaryart.files.wordpress.com/2017/11/jackson-pollock-getty-56898334.jpg?w=840"class="img-col white-4" >
+                            </div>
+                    </td>
+                </tr>
+                <tr class="line-img-container-detail">
+                    <td class="detail-img-container" id="detail-img-3">
+                        <div class="detail-mask">
+                        <img src="https://s2.glbimg.com/XWhdTZNcD4q3aftXoFdt44vGobQ=/560x560/e.glbimg.com/og/ed/f/original/2018/04/05/73154573_sc---mostras-no-mam---jackson-pollock.jpg" class="img-col white-4" >
+                            </div>
+                    </td>
+                    <td class="detail-img-container" id="detail-img-4" colspan=2>
+                        <div class="detail-mask">
+                        <img src="https://ep00.epimg.net/cultura/imagenes/2016/02/18/actualidad/1455830675_596061_1455873497_noticia_fotograma.jpg" class="img-col white-4">
+                            </div>
                     </td>
                 </tr>
             </table>
         </div>
-        <div id="info-col-d">
+        <div id="info-col-d" class="white-4">
             <ul id="info-list">
-                <li class="info-item white-3" id="info-1" data-aos="fade-down" data-aos-duration="1000">
+                <li class="info-item white-4" id="info-1">
                     <div class="inner-list">
                         <div id="simple-art-info">
-                            <p id="art-name"><b>Nome:</b> Retrato de Adele Blocher Bauer I</p>
-                            <p id="art-local"><b>Local de Produção:</b> Viena </p>
-                            <p id="art-year"><b>Ano de produção:</b> 1907</p>
-                            <p id="art-dim"><b>Dimensões:</b> 1,38 m x 1,38 m</p>
-                            <p id="art-mat"><b>Materiais:</b> Ouro, Tinta a óleo</p>
+                            <p id="art-name">N. 17a</p>
+                            <p id="art-detail-p">
+                                <span id="art-local">Nova York,</span>
+                                <span id="art-year">1948.</span>
+                                <span id="art-dim">1,38 m x 1,38 m.</span>
+                                <span id="art-mat">Tela, Tinta a óleo.</span>
+                            </p>
                         </div>
-                        <div id="art-pic">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Gustav_Klimt_046.jpg" alt=""
-                                class="art-icon">
-                        </div>
-                        <div class="fine-line"></div>
+                        <div class="fine-line white"></div>
                         <div id="art-data">
                             O Retrato de Adele Bloch-Bauer I é uma pintura de Gustav Klimt completada em 1907. Foi
                             vendida em junho de 2006, a Ronald Lauder, proprietário da Neue Galerie em Nova Iorque, por
@@ -142,30 +159,17 @@
                         </div>
                     </div>
                 </li>
-                <li class="info-item white-3" id="info-2" data-aos="fade-up" data-aos-duration="1000">
+                <li class="info-item white-4" id="info-2">
                     <div class="inner-list">
 
                         <div id="simple-artist-info">
-                            <p id="artist-user"><b>User: <a id="user-link" href="/user/klimt">@klimt</a></b></p>
-                            <p id="artist-name"><b>Nome:</b> Gustav Klimt</p>
-                            <p id="artist-nac"><b>Nacionalidade:</b> Austríaco </p>
-                            <p id="artist-email"><b>E-mail:</b> gustavklint@team.br</p>
-                            <p id="artist-tel"><b>Telefone:</b>+38 78 9817618191</p>
+                            <p id="artist-user"><b>User: <a id="user-link" href="/user/pollock">@pollock</a></b></p>
+                            <p id="artist-name"><b>Nome:</b> Jakson Pollock</p>
+                            <p id="artist-nac"><b>Nacionalidade:</b> Americano </p>
                         </div>
                         <div id="artist-pic">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Egon_Schiele_-_Gustav_Klimt_im_blauen_Malerkittel_-_1913.jpeg/200px-Egon_Schiele_-_Gustav_Klimt_im_blauen_Malerkittel_-_1913.jpeg"
+                            <img src="https://static.todamateria.com.br/upload/po/ll/pollockarte-cke.jpg"
                                 alt="" class="art-icon">
-                        </div>
-                        <div class="fine-line"></div>
-                        <div id="artist-data">
-                            Gustav Klimt (Baumgarten, em Viena, 14 de julho de 1862 - Viena, 6 de fevereiro de 1918) foi
-                            um pintor simbolista austríaco. Em 1876, estudou desenho ornamental na Escola de Artes
-                            Decorativas. Associado ao simbolismo, destacou-se dentro do movimento art nouveau austríaco
-                            e foi um dos fundadores do movimento da Secessão de Viena, que recusava a tradição académica
-                            nas artes, e do seu jornal, Ver Sacrum. Klimt foi também membro honorário das universidades
-                            de Universidade de Munique e Viena. Os seus maiores trabalhos incluem pinturas, murais,
-                            esboços e outros objetos de arte, muitos dos quais estão em exposição na Galeria da Secessão
-                            de Viena.
                         </div>
                         <p id="artist-profile"><a href="/profile/klimt" class="link">Visitar o perfil</a></p>
                     </div>
@@ -188,5 +192,5 @@
                 Uso</a></div>
     </div>
     <!--Fim do footer-->
-</body>
+</main>
 </template>
