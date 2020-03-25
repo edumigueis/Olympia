@@ -7,27 +7,30 @@ $(document).ready(function () {
     var altura2 = $(document).height()
 
     $('#bg').css('height', altura2);
-    altura2 =0;
-
+    altura2 = 0;
   });
-  $('.img-col').click(function () {
+
+  $(document.body).on('click', '.img-col', function () {
     var src = $(this).attr("src");
     $('#myModal').css('display', 'block');
     $("#img01").attr("src", src);
     $(window).scrollTop(0);
     $('#mouse').css('display', 'block');
   });
-  $('.close-mod').click(function () {
+
+  $(document.body).on('click','.close-mod',function () {
     $('#myModal').css('display', 'none');
     $('#mouse').css('display', 'none');
   })
-  $('#myModal').click(function () {
+
+  $(document.body).on('click','#myModal',function () {
     $('#myModal').css('display', 'none');
     $('#mouse').css('display', 'none');
   })
+  
   var image = document.createElement('img');
   var color;
-  
+
   const colorThief = new ColorThief();
   const img = document.querySelector(".art-icon");
 

@@ -1,101 +1,13 @@
 <template>
 
-<body>
-    <link rel="stylesheet" href="/src/assets/css/home.css">
-    <link rel="shortcut icon" href="/src/assets/images/page-ico.png">
-    <!--Área de menus-->
-    <div id="menu-bar">
-        <div id="bar">
-            <div id="nav-bars"></div>
-            <div id="logo"><a href="/" class="hover-line"><span><span class="moving-up">O</span> <span class="moving-up">L</span> <span class="moving-up">Y</span> <span class="moving-up">M</span> <span class="moving-up">P</span> <span class="moving-up">I</span> <span class="moving-left">A</span></span></a>
-            </div>
-            <div id="search-ico"></div>
-        </div>
-    </div>
+    <main>
+        <meu-menu-bar></meu-menu-bar>
+        <meu-menu-items></meu-menu-items>
+        <meus-contatos></meus-contatos> 
+        <meu-mouse></meu-mouse>
+        <meu-dark-mode></meu-dark-mode>
 
-    <div id="menu-items">
-
-        <div class="gradient"></div>
-
-        <div id="container-menu">
-            <div class="close-1 close">
-                <img class="close-img" src="/src/assets/images/x.png">
-            </div>
-            <table class="seta">
-                <tr>
-                    <td>
-                        <a id="leftClick">
-                            <img src="/src/assets/images/left.png" id="left">
-                        </a>
-
-                        <a id="rightClick">
-                            <img src="/src/assets/images/right.png" id="right">
-                        </a>
-                    </td>
-                </tr>
-            </table>
-            <div id="menu-list">
-
-                <div id="col-menu-1">
-                    <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="/src/assets/images/home.png"></a>
-                        <a class="menu-link " href="/">H O M E</a>
-                    </div>
-                    <br><br><br><br><br><br><br><br><br><br>
-                    <div class="menu-item row2">
-                        <a href="/"><img class="ico" src="/src/assets/images/users.png"></a>
-                        <a class="menu-link " href="/">S O B R E N Ó S</a>
-                    </div>
-                </div>
-                <div id="col-menu-2">
-                    <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="/src/assets/images/art.png"></a>
-                        <a class="menu-link" href="/#/artes">A R T E S</a>
-                    </div>
-                    <br><br><br><br><br><br><br><br><br><br>
-                    <div class="menu-item row2">
-                        <a class='a-contact'><img class="ico" src="/src/assets/images/contact.png"></a>
-                        <a class="menu-link a-contact">C O N T A T O</a>
-                    </div>
-                </div>
-                <div id="col-menu-3">
-                    <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="/src/assets/images/buy.png" id='buy'></a>
-                        <a class="menu-link " href="/">E X P O</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Fim dos menus-->
-
-    <!--Contatos-->
-    <table class="table-contato">
-        <tr>
-            <td>
-                <div id='container-contatos'>
-                    <div class="close-2 close">
-                        <img class="close-2-img" src="/src/assets/images/x.png">
-                    </div>
-                    <div id="contato-1">
-                        <p id='titulo'>C O N T A T O S</p>
-                        <p class='subtitulo'>DEP. ARTES PLÁSTICAS</p>
-                        <p class='texto'>Email: seuemail@celio.com<br>
-                            Telefone: sempaciencia</p>
-                    </div>
-                    <div id="contato-2">Departamento artedc platicas emial:ddddddddddddddd tel :Dddddddddddd dpartamento
-                        teatro
-                        emaisl : teeeeeeeeeeeeeeeeeeeeeeeee tel sddsdsd</div>
-                    <div id='contato-3'>Departamento artedc platicas emial:ddddddddddddddd tel :Dddddddddddd dpartamento
-                        teatro
-                        emaisl : teeeeeeeeeeeeeeeeeeeeeeeee tel sddsdsd</div>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <!--Fim dos contatos-->
-        <svg viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 120 70" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <circle class="circle 0"></circle>
             <circle class="circle 1"></circle>
             <circle class="circle 2"></circle>
@@ -182,20 +94,26 @@
             <circle class="circle 83"></circle>
             <circle class="circle 84"></circle>
         </svg>
-
-        <span id="mouse"></span>
-    </body>
-
+        <meu-footer></meu-footer>
+    </main>
 </template>
 
-    <script>
-        export default {
-    head: {
-        script: [
-            { src: 'https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js',
-              src: 'https://localhost:8080/src/assets/js/menu.js'
-            }
-        ]
-    }
+<script>
+    import MenuBar from "../shared/menu-bar/Menu-bar.vue";
+    import MenuItems from "../shared/menu-items/Menu-items.vue";
+    import Contatos from "../shared/contatos/Contatos.vue";
+    import Mouse from "../shared/mouse/Mouse.vue";
+    import Footer from "../shared/footer/Footer.vue";
+    import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+
+    export default {
+        components: {
+            "meu-menu-bar": MenuBar,
+            "meu-menu-items": MenuItems,
+            "meus-contatos": Contatos,
+            "meu-mouse": Mouse,
+            "meu-footer": Footer,
+            "meu-dark-mode": DarkMode                   
         }
-    </script>
+    }
+</script>

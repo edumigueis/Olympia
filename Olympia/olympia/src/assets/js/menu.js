@@ -12,7 +12,7 @@ $(document).ready(function () {
         $('#footer').fadeOut();
     })
 
-    $('.close').click(function () {
+   $(document.body).on('click','.close',function () {
         if ($('.table-contato').css('display') == 'none') {
             $("#menu-items").fadeOut("slow");
             $('#footer').fadeIn();
@@ -29,7 +29,7 @@ $(document).ready(function () {
         }
     })
 
-    $('.a-contact').click(function () {
+    $(document.body).on('click','.a-contact',function () {
 
         $('.table-contato').fadeIn("slow");
         $('#container-menu').css({

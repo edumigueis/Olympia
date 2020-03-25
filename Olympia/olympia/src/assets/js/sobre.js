@@ -65,10 +65,10 @@ function updateGradient() {
 $(document).ready(function () {
 
     setInterval(updateGradient, 10);
-    
+
     $('#exposicao').addClass('animar');
 
-    $(window).on('scroll', function () {
+    $(document.body).on('scroll', 'window', function () {
 
         var documentTop = $(this).scrollTop();
 

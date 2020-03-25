@@ -2,7 +2,7 @@ var i = -1;
 var y = 10;
 var x = 0;
 var passou = false;
-var tempo = 500; /* TEMPO DE APARIÇÃO DOS CÍRCULOS */
+var tempo = 600; /* TEMPO DE APARIÇÃO DOS CÍRCULOS */
 var max = 84; /* NÚMERO TOTAL DE CÍRCULOS */
 
 setInterval(function () {
@@ -29,9 +29,10 @@ setInterval(function () {
 
     }
     $("." + i).fadeIn(tempo); 
-}, 80); /* INTERVALO ENTRE AS APARIÇÕES */
 
-$().ready(function () {
+}, 90); /* INTERVALO ENTRE AS APARIÇÕES */
+
+$(document).ready(function () {
 
     /* ATRIBUTOS DE ESTILO */
     $('circle').attr("r", '1.5');

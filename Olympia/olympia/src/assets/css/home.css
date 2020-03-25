@@ -3,9 +3,9 @@ html{
 }
 
 circle {
-    transition: 0.15s all;
+    transition: 0.4s all;
     display: none;
-    animation: swing 1.2s ease;
+    animation: swing 2s ease;
     animation-iteration-count: 1;
     opacity: 0.4;
 }
@@ -34,38 +34,26 @@ li {
 {
     15%
     {
-        -webkit-transform: translateX(3px);
-        -moz-transform: translateX(3px);
-        transform: translateX(3px);
+        transform: translateX(1px);
     }
     30%
     {
-        -webkit-transform: translateX(-3px);
-        -moz-transform: translateX(-3px);
-        transform: translateY(-3px);
+        transform: translateY(-1px);
     }
     50%
     {
-        -webkit-transform: translateX(2px);
-        -moz-transform: translateX(2px);
-        transform: translateY(2px);
+        transform: translateY(1px);
     }
     65%
     {
-        -webkit-transform: translateX(-2px);
-        -moz-transform: translateX(-2px);
-        transform: translateX(-2px);
+        transform: translateX(-1px);
     }
     80%
     {
-        -webkit-transform: translateX(1px);
-        -moz-transform: translateX(1px);
         transform: translateX(1px);
     }
     100%
     {
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
         transform: translateX(0);
     }
 }
