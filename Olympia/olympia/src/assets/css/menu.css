@@ -703,4 +703,16 @@
     top: 12px;
   }
 }
+/*Responsividade do Footer*/
+@media only screen and (min-width: 300px) and (max-width: 461px) {
+  #footer{
+    padding-left: 0;
+  }
+ 
+}
+@media only screen and (min-width: 462px) and (max-width: 615px) {
+  #footer{
+    padding-left: 0;
+  }
+}
 

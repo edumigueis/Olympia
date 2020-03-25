@@ -395,6 +395,9 @@ ul li {
   #info-1{
     width: 100%;
   }
+  #info-col-d{
+    margin-top: 70px;
+  }
  
 }
 @media only screen and (min-width: 462px) and (max-width: 615px) {
@@ -430,6 +433,9 @@ ul li {
     margin-left: 4%;
     margin-right: 4%;
     width: 92%;
+  }
+  #info-col-d{
+    margin-top: 60px;
   }
 }
 @media only screen and (min-width: 616px) and (max-width: 950px) {

@@ -197,7 +197,7 @@ body {
   }
   .grid-item-last {
     height: 650px;
-    width: 300px !important;
+    min-width: 100%;
     margin: 0;
     float: left;
   }
@@ -219,13 +219,32 @@ body {
   #grid-item-1 {
     margin-top: 50px;
     margin-left: 0;
-    width: 300px !important;
+  }
+  #grid-item-2 {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+  .grid-item-last {
+    margin: 0;
   }
   #event-info {
     width: 20em !important;
   }
-  .event-info-p {
-    padding: 0 !important;
+  #page-grid {
+    margin-top: 10%;
+    list-style: none;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+  }
+  .grid-item {
+    width: 100%;
+    min-height: 400px;
+    display: inline-block;
+  }
+  #grid-item-2 {
+    margin-right: 20px;
+    margin-top: 20px;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 615px) {
