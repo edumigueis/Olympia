@@ -1,5 +1,6 @@
 <template>
     <main>
+         <link rel="stylesheet" href="/src/assets/css/arte.css">
                 <div class="gradient"></div>
                 <div class="bg"></div>
 
