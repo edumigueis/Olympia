@@ -106,26 +106,26 @@
                 <col width="33.3333333%">
                 <col width="33.3333333%">
                 </colgroup>
-                <tr class="line-img-container-detail" >
+                <tr class="line-img-container-detail">
                     <td class="detail-img-container" id="detail-img-1" colspan=2 >
-                        <div class="detail-mask">
+                        <div class="detail-mask white-4">
                         <img src="https://http2.mlstatic.com/pintura-abstrata-17a-pintor-jackson-pollock-em-tela-55cm-x-42cm-D_NQ_NP_892308-MLB31892097848_082019-F.webp" class="img-col white-4">
                             </div>
                     </td>
                     <td class="detail-img-container" id="detail-img-2" >
-                        <div class="detail-mask">
+                        <div class="detail-mask  white-4" >
                         <img src="https://zoomoncontemporaryart.files.wordpress.com/2017/11/jackson-pollock-getty-56898334.jpg?w=840"class="img-col white-4" >
                             </div>
                     </td>
                 </tr>
                 <tr class="line-img-container-detail">
                     <td class="detail-img-container" id="detail-img-3">
-                        <div class="detail-mask">
+                        <div class="detail-mask  white-4">
                         <img src="https://s2.glbimg.com/XWhdTZNcD4q3aftXoFdt44vGobQ=/560x560/e.glbimg.com/og/ed/f/original/2018/04/05/73154573_sc---mostras-no-mam---jackson-pollock.jpg" class="img-col white-4" >
                             </div>
                     </td>
                     <td class="detail-img-container" id="detail-img-4" colspan=2>
-                        <div class="detail-mask">
+                        <div class="detail-mask  white-4">
                         <img src="https://ep00.epimg.net/cultura/imagenes/2016/02/18/actualidad/1455830675_596061_1455873497_noticia_fotograma.jpg" class="img-col white-4">
                             </div>
                     </td>
