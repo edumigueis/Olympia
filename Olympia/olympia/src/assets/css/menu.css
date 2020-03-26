@@ -50,11 +50,9 @@
   padding: 0px;
   margin: 0px;
   position: fixed;
-  max-width: 1600px;
 }
 
 #menu-bar {
-  max-width: 1800px;
   z-index: 900;
   width: 100%;
   margin-top: 0%;
@@ -708,7 +706,7 @@
     left: 40.5%;
     width: 320px;
     letter-spacing: 0.3em;
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   #search-ico {
@@ -731,6 +729,7 @@
     top: 12px;
   }
 }
+
 /*Responsividade do Footer*/
 @media only screen and (min-width: 300px) and (max-width: 461px) {
   #footer{

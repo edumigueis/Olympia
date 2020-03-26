@@ -1,6 +1,5 @@
 <template>
   <div class="corpo">
-    
     <router-view></router-view>
     <div id='forced-click'></div>
   </div>
@@ -19,13 +18,16 @@ export default {
 };
 </script>
 <style>
-  body{
-    margin:0 !important;
+  html,body{
+    margin: 0;
     overflow-x: hidden;
     width: 100%;
+    height: 100%;
   }
   .corpo{
     width: 100%;
+    height: 100%;
+    margin: 0;
   }
 </style>
 <script href="/src/assets/js/menu.js"></script>
