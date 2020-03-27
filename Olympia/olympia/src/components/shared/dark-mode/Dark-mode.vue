@@ -1,16 +1,26 @@
 <template>
-   <!-- <div id="bg-dark-mode">
-        <div class="wrapper">
-            <div class="toggle">
-                <input class="toggle-input" type="checkbox"/>
-                <div class="toggle-bg"></div>
-                <div class="toggle-switch">
-                    <div class="toggle-switch-figure"></div>
-                    <div class="toggle-switch-figureAlt"></div>
-                </div>  
+   <div id="fullpage">  
+        <div class="section">
+            <div class="time-circle">
+                <div class="sun"></div>
+                <div class="moon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="stars">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="water"></div>
             </div>
         </div>
-    </div>-->
+    </div>
 </template>
 
 <script>

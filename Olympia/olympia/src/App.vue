@@ -1,5 +1,5 @@
 <template>
-  <div class="corpo">
+  <div class="corpo" id="#app-corpo">
     <router-view></router-view>
     <div id='forced-click'></div>
   </div>
