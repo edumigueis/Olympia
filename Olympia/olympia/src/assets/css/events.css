@@ -372,6 +372,9 @@ html, body {
   .date{
     margin-top: -20px;
   }
+  #footer{
+    margin-top: 5% !important;
+  }
 }
 @media only screen and (min-width: 462px) and (max-width: 669px) {
   #radio-tab{
@@ -421,6 +424,9 @@ html, body {
   }
   .date{
     margin-top: -20px;
+  }
+  #footer{
+    margin-top: 4% !important;
   }
 }
 @media only screen and (min-width: 670px) and (max-width: 950px) {

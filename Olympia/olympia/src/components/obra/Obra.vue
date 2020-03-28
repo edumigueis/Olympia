@@ -3,15 +3,13 @@
 
     <link rel="stylesheet" href="/src/assets/css/detalhe.css">
 
-<<<<<<< HEAD
-=======
+
     <meu-menu-bar></meu-menu-bar>
     <meu-menu-items></meu-menu-items>
     <meus-contatos></meus-contatos> 
     <meu-dark-mode></meu-dark-mode>
     <meu-mouse></meu-mouse>
-
->>>>>>> 148c7d9c7f9b81d24f7fe9105aec7499c2486115
+    
     <div id="col-container">
 
         <div id="img-col-d" class="white-4">
@@ -49,9 +47,9 @@
             </table>
         </div>
         <div id="info-col-d" class="white-4">
-            <ul id="info-list">
+            <ul id="info-list" class=" white-4">
                 <li class="info-item white-4" id="info-1">
-                    <div class="inner-list">
+                    <div class="inner-list white-4">
                         <div id="simple-art-info">
                             <p id="art-name">N. 17a</p>
                             <p id="art-detail-p">
@@ -98,9 +96,6 @@
         <img class="modal-content" id="img01">
         <div id="caption"></div>
     </div>
-<<<<<<< HEAD
-    
-=======
 
     <!--Início do footer-->
     <div id="footer" class="white" style="margin-top: -10px;">
@@ -110,7 +105,6 @@
                 Uso</a></div>
     </div>
     <!--Fim do footer-->
->>>>>>> 148c7d9c7f9b81d24f7fe9105aec7499c2486115
 </main>
 </template>
 <script>
