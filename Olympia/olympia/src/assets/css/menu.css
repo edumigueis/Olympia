@@ -704,7 +704,7 @@
     top: 12px;
   }
 }
-@media only screen and (min-width: 1550px){
+@media only screen and (min-width: 1550px) and (max-width: 1850px){
   #logo {
     left: 40.5%;
     width: 320px;
@@ -730,6 +730,14 @@
     background-size: 40%;
     left: 2%;
     top: 12px;
+  }
+}
+@media only screen and (min-width: 1850px){
+  #logo {
+    left: 45.5%;
+    width: 350px;
+    letter-spacing: 0.4em;
+    font-size: 1.3em;
   }
 }
 
