@@ -3,7 +3,7 @@ var y = 10;
 var x = 0;
 var passou = false;
 var tempo = 600; /* TEMPO DE APARIÇÃO DOS CÍRCULOS */
-var max = 84; /* NÚMERO TOTAL DE CÍRCULOS */
+var max = 70; /* NÚMERO TOTAL DE CÍRCULOS */
 
 setInterval(function () {
 
@@ -34,6 +34,15 @@ setInterval(function () {
 
 $(document).ready(function () {
 
+        $('.intro').addClass('go');
+      
+        $('.reload').click(function() {
+          $('.intro').removeClass('go').delay(200).queue(function(next) {
+            $('.intro').addClass('go');
+            next();
+          });   
+        });
+
     /* ATRIBUTOS DE ESTILO */
     $('circle').attr("r", '1.5');
     $('circle').attr("fill", 'rgba(255,255,255,0.5)');
@@ -61,4 +70,5 @@ $(document).ready(function () {
     }
 
     $('.' + max).css('display', 'none');
+    $('.' + 70).css('visibility', 'hidden');
 })

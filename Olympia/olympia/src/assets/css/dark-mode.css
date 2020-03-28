@@ -1,36 +1,36 @@
-.white {
+.dark-mode.white {
   background-color: #494949 !important;
 }
 
-.white-2 {
+.dark-mode.white-2 {
   background-color: #555966 !important;
   color: white !important;
 }
 
-.white-3 {
+.dark-mode.white-3 {
   background-color: #4d4d4d !important;
   color: rgb(218, 218, 218) !important;
 }
 
-.white-4 {
+.dark-mode.white-4 {
   background-color: #949494 !important;
 }
 
-.white-5 {
+.dark-mode.white-5 {
   background-color: #8e8e94 !important;
 }
 
-.gray {
+.dark-mode.gray {
   background-color: #393749 !important;
   border-color: #393749 !important;
   color: white !important;
 }
 
-.text-gray {
+.dark-mode.text-gray {
   color: rgb(204, 203, 203) !important;
 }
 
-.text-gray-2 {
+.dark-mode.text-gray-2 {
   color: rgb(173, 173, 173) !important;
 }
 

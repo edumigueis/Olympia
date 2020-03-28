@@ -53,7 +53,7 @@
 }
 
 #menu-bar {
-  z-index: 900;
+  z-index: 1500;
   width: 100%;
   margin-top: 0%;
   padding-top: 5px;
@@ -68,6 +68,7 @@
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
   background-color: rgb(255, 255, 255);
+  transition: 0.3s background, color;
 }
 
 #logo {
@@ -173,7 +174,7 @@
 }
 
 #menu-items {
-  z-index: 900;
+  z-index: 1600;
   width: 100%;
   position: fixed;
   top: 0;
@@ -300,9 +301,10 @@
   display: none;
   position: fixed;
   margin: 0;
-  z-index: 950;
+  z-index: 1700;
   width: 100%;
   height: 100%;
+  margin-top: -4%;
 }
 
 #contato-1 {
@@ -356,6 +358,7 @@
 }
 
 #footer {
+  transition: 0.3s background, color;
   position: relative;
   bottom: 0;
   padding: 15px;

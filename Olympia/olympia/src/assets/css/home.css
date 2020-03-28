@@ -1,99 +1,583 @@
-html{
-    overflow-x: hidden;
+html {
+  overflow-x: hidden;
+}
+
+#colorful-mask {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(to right, #ee86fc, #91c6e5);
+  z-index: -10;
 }
 
 circle {
-    transition: 0.4s all;
-    display: none;
-    animation: swing 2s ease;
-    animation-iteration-count: 1;
-    opacity: 0.4;
+  transition: 0.4s all;
+  display: none;
+  animation: swing 2s ease;
+  animation-iteration-count: 1;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 circle:hover {
-    opacity: 1;
-    r: 2;
+  opacity: 1;
+  r: 2;
 }
 
 li {
-    display: inline-block;
-    text-decoration: none;
+  display: inline-block;
+  text-decoration: none;
 }
 
 #linha {
-    position: absolute;
-    background-color: #e7e7e7;
-    height: 1px;
-    margin-top: -53%;
-    left: 0;
-    width: 100%;
-    border: none;
+  position: absolute;
+  background-color: #e7e7e7;
+  height: 1px;
+  margin-top: -53%;
+  left: 0;
+  width: 100%;
+  border: none;
 }
 
-@keyframes swing
-{
-    15%
-    {
-        transform: translateX(1px);
-    }
-    30%
-    {
-        transform: translateY(-1px);
-    }
-    50%
-    {
-        transform: translateY(1px);
-    }
-    65%
-    {
-        transform: translateX(-1px);
-    }
-    80%
-    {
-        transform: translateX(1px);
-    }
-    100%
-    {
-        transform: translateX(0);
-    }
+@keyframes swing {
+  15% {
+    transform: translateX(1px);
+  }
+  30% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  65% {
+    transform: translateX(-1px);
+  }
+  80% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 #mouse {
-	display: block;
-	width: 22px;
-	height: 40px;
-	border-radius: 20px;
-	border: 4px solid rgb(99, 99, 99);
-	text-align: center;
-	position: fixed;
-	left: 0px;
-	right: 0px;
-	bottom: 20px;
-    margin: 0 auto;
+  display: block;
+  width: 22px;
+  height: 40px;
+  border-radius: 20px;
+  border: 4px solid rgb(99, 99, 99);
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 20px;
+  margin: 0 auto;
 }
 
 #mouse::before {
-	content: '';
-	display: inline-block;
-	width: 4px;
-	height: 8px;
-	position: relative;
-	border-radius: 4px;
-	background: rgb(99, 99, 99);
-	animation-name: mouse;
-    animation-duration: .7s;
-    animation-iteration-count: infinite;
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  position: relative;
+  border-radius: 4px;
+  background: rgb(99, 99, 99);
+  animation-name: mouse;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
 }
 
+#black-div{
+  margin-top: -1%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at top, #303030 0%, #000000 50%);
+}
+
+#palaces-img{
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  z-index: 999;
+}
+
+#search-ico {
+  right: -4.2% !important;
+}
+
+#pink-container {
+  background-color: black;
+  position: relative;
+  height: 40%;
+  padding-top: 7%;
+  padding-bottom: 3%;
+}
+
+#grid-container {
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  align-content: center;
+  -webkit-align-content: center;
+}
+
+.grid-big {
+    margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  align-content: center;
+  -webkit-align-content: center;
+  width: 70px;
+  height: 70px;
+}
+
+/****** LOADING GRID #1 ******/
+.cell-1 {
+  width: 10px;
+  height: 10px;
+  background: #5c002e;
+  border-radius: 50%;
+  margin: 2px;
+  animation: quick-glow 1.25s 0.3s infinite linear;
+  -webkit-animation: quick-glow 1.25s 0.3s infinite linear;
+}
+
+.cell-1:nth-child(7) {
+  animation: quick-glow 1.25s 0.15s infinite linear;
+  -webkit-animation: quick-glow 1.25s 0.15s infinite linear;
+}
+
+.cell-1:nth-child(8) {
+  animation: quick-glow 1.25s 0.15s infinite linear;
+  -webkit-animation: quick-glow 1.25s 0.15s infinite linear;
+}
+
+.cell-1:nth-child(9) {
+  animation: quick-glow 1.25s 0.15s infinite linear;
+  -webkit-animation: quick-glow 1.25s 0.15s infinite linear;
+}
+
+.cell-1:nth-child(12) {
+  animation: quick-glow 1.25s 0.15s infinite linear;
+  -webkit-animation: quick-glow 1.25s 0.15s infinite linear;
+}
+
+.cell-1:nth-child(14) {
+  animation: quick-glow 1.25s 0.15s infinite linear;
+  -webkit-animation: quick-glow 1.25s 0.15s infinite linear;
+}
+
+.cell-1:nth-child(17) {
+  animation: quick-glow 1.25s 0.15s infinite linear;
+  -webkit-animation: quick-glow 1.25s 0.15s infinite linear;
+}
+
+.cell-1:nth-child(18) {
+  animation: quick-glow 1.25s 0.15s infinite linear;
+  -webkit-animation: quick-glow 1.25s 0.15s infinite linear;
+}
+
+.cell-1:nth-child(19) {
+  animation: quick-glow 1.25s 0.15s infinite linear;
+  -webkit-animation: quick-glow 1.25s 0.15s infinite linear;
+}
+
+.cell-1:nth-child(13) {
+  animation: quick-glow 1.25s infinite linear;
+  -webkit-animation: quick-glow 1.25s infinite linear;
+}
+
+/****** LOADING GRID #2 ******/
+.cell-2 {
+  width: 10px;
+  height: 10px;
+  background: #5c002e;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.cell-2:nth-child(1) {
+  animation: quick-glow 2.5s 0s infinite linear;
+  -webkit-animation: quick-glow 2.5s 0s infinite linear;
+}
+
+.cell-2:nth-child(2) {
+  animation: quick-glow 2.5s 0.1s infinite linear;
+  -webkit-animation: quick-glow 2.5s 0.1s infinite linear;
+}
+
+.cell-2:nth-child(3) {
+  animation: quick-glow 2.5s 0.2s infinite linear;
+  -webkit-animation: quick-glow 2.5s 0.2s infinite linear;
+}
+
+.cell-2:nth-child(4) {
+  animation: quick-glow 2.5s 0.3s infinite linear;
+  -webkit-animation: quick-glow 2.5s 0.3s infinite linear;
+}
+
+.cell-2:nth-child(5) {
+  animation: quick-glow 2.5s 0.4s infinite linear;
+  -webkit-animation: quick-glow 2.5s 0.4s infinite linear;
+}
+
+.cell-2:nth-child(10) {
+  animation: quick-glow 2.5s 0.5s infinite linear;
+  -webkit-animation: quick-glow 2.5s 0.5s infinite linear;
+}
+
+.cell-2:nth-child(15) {
+  animation: quick-glow 2.5s 0.6s infinite linear;
+  -webkit-animation: quick-glow 2.5s 0.6s infinite linear;
+}
+
+.cell-2:nth-child(20) {
+  animation: quick-glow 2.5s 0.7s infinite linear;
+  -webkit-animation: quick-glow 2.5s 0.7s infinite linear;
+}
+
+.cell-2:nth-child(25) {
+  animation: quick-glow 2.5s 0.8s infinite linear;
+  -webkit-animation: quick-glow 2.5s 0.8s infinite linear;
+}
+
+.cell-2:nth-child(24) {
+  animation: quick-glow 2.5s 0.9s infinite linear;
+  -webkit-animation: quick-glow 2.5s 0.9s infinite linear;
+}
+
+.cell-2:nth-child(23) {
+  animation: quick-glow 2.5s 1s infinite linear;
+  -webkit-animation: quick-glow 2.5s 1s infinite linear;
+}
+
+.cell-2:nth-child(22) {
+  animation: quick-glow 2.5s 1.1s infinite linear;
+  -webkit-animation: quick-glow 2.5s 1.1s infinite linear;
+}
+
+.cell-2:nth-child(21) {
+  animation: quick-glow 2.5s 1.2s infinite linear;
+  -webkit-animation: quick-glow 2.5s 1.2s infinite linear;
+}
+
+.cell-2:nth-child(16) {
+  animation: quick-glow 2.5s 1.3s infinite linear;
+  -webkit-animation: quick-glow 2.5s 1.3s infinite linear;
+}
+
+.cell-2:nth-child(11) {
+  animation: quick-glow 2.5s 1.4s infinite linear;
+  -webkit-animation: quick-glow 2.5s 1.4s infinite linear;
+}
+
+.cell-2:nth-child(6) {
+  animation: quick-glow 2.5s 1.5s infinite linear;
+  -webkit-animation: quick-glow 2.5s 1.5s infinite linear;
+}
+
+.cell-2:nth-child(7) {
+  animation: quick-glow 2.5s 1.6s infinite linear;
+  -webkit-animation: quick-glow 2.5s 1.6s infinite linear;
+}
+
+.cell-2:nth-child(8) {
+  animation: quick-glow 2.5s 1.7s infinite linear;
+  -webkit-animation: quick-glow 2.5s 1.7s infinite linear;
+}
+
+.cell-2:nth-child(9) {
+  animation: quick-glow 2.5s 1.8s infinite linear;
+  -webkit-animation: quick-glow 2.5s 1.8s infinite linear;
+}
+
+.cell-2:nth-child(14) {
+  animation: quick-glow 2.5s 1.9s infinite linear;
+  -webkit-animation: quick-glow 2.5s 1.9s infinite linear;
+}
+
+.cell-2:nth-child(19) {
+  animation: quick-glow 2.5s 2s infinite linear;
+  -webkit-animation: quick-glow 2.5s 2s infinite linear;
+}
+
+.cell-2:nth-child(18) {
+  animation: quick-glow 2.5s 2.1s infinite linear;
+  -webkit-animation: quick-glow 2.5s 2.1s infinite linear;
+}
+
+.cell-2:nth-child(17) {
+  animation: quick-glow 2.5s 2.2s infinite linear;
+  -webkit-animation: quick-glow 2.5s 2.2s infinite linear;
+}
+
+.cell-2:nth-child(12) {
+  animation: quick-glow 2.5s 2.3s infinite linear;
+  -webkit-animation: quick-glow 2.5s 2.3s infinite linear;
+}
+
+.cell-2:nth-child(13) {
+  animation: quick-glow 2.5s 2.4s infinite linear;
+  -webkit-animation: quick-glow 2.5s 2.4s infinite linear;
+}
+
+/****** LOADING GRID #3 ******/
+.cell-3 {
+  width: 10px;
+  height: 10px;
+  background: #5c002e;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.cell-3:nth-child(2n + 1) {
+  animation: glow 1.2s infinite linear;
+  -webkit-animation: glow 1.2s infinite linear;
+}
+
+.cell-3:nth-child(2n) {
+  animation: glow 1.2s 0.6s infinite linear;
+  -webkit-animation: glow 1.2s 0.6s infinite linear;
+}
+
+/****** LOADING GRID #4 ******/
+.grid-big:nth-child(4) {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.cell-4 {
+  width: 10px;
+  height: 10px;
+  background: #5c002e;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.cell-4:nth-child(1) {
+  animation: quick-glow 1s 0.5s infinite linear;
+  -webkit-animation: quick-glow 1s 0.5s infinite linear;
+}
+
+.cell-4:nth-child(2) {
+  animation: quick-glow 1s 0.4s infinite linear;
+  -webkit-animation: quick-glow 1s 0.4s infinite linear;
+}
+
+.cell-4:nth-child(3) {
+  animation: quick-glow 1s 0.3s infinite linear;
+  -webkit-animation: quick-glow 1s 0.3s infinite linear;
+}
+
+.cell-4:nth-child(4) {
+  animation: quick-glow 1s 0.2s infinite linear;
+  -webkit-animation: quick-glow 1s 0.2s infinite linear;
+}
+
+.cell-4:nth-child(5) {
+  animation: quick-glow 1s 0.1s infinite linear;
+  -webkit-animation: quick-glow 1s 0.1s infinite linear;
+}
+
+.cell-4:nth-child(6) {
+  animation: quick-glow 1s 0s infinite linear;
+  -webkit-animation: quick-glow 1s 0s infinite linear;
+}
+
+.cell-4:nth-child(7) {
+  animation: quick-glow 1s -0.1s infinite linear;
+  -webkit-animation: quick-glow 1s -0.1s infinite linear;
+}
+
+.cell-4:nth-child(8) {
+  animation: quick-glow 1s -0.2s infinite linear;
+  -webkit-animation: quick-glow 1s -0.2s infinite linear;
+}
+
+.cell-4:nth-child(9) {
+  animation: quick-glow 1s -0.3s infinite linear;
+  -webkit-animation: quick-glow 1s -0.3s infinite linear;
+}
+
+.cell-4:nth-child(10) {
+  animation: quick-glow 1s -0.4s infinite linear;
+  -webkit-animation: quick-glow 1s -0.4s infinite linear;
+}
+
+.cell-4:nth-child(11) {
+  animation: quick-glow 1s -0.5s infinite linear;
+  -webkit-animation: quick-glow 1s -0.5s infinite linear;
+}
+
+.cell-4:nth-child(12) {
+  animation: quick-glow 1s -0.6s infinite linear;
+  -webkit-animation: quick-glow 1s -0.6s infinite linear;
+}
+
+.cell-4:nth-child(13) {
+  animation: quick-glow 1s -0.7s infinite linear;
+  -webkit-animation: quick-glow 1s -0.7s infinite linear;
+}
+
+.cell-4:nth-child(14) {
+  animation: quick-glow 1s -0.8s infinite linear;
+  -webkit-animation: quick-glow 1s -0.8s infinite linear;
+}
+
+.cell-4:nth-child(15) {
+  animation: quick-glow 1s -0.9s infinite linear;
+  -webkit-animation: quick-glow 1s -0.9s infinite linear;
+}
+
+.cell-4:nth-child(16) {
+  animation: quick-glow 1s -1s infinite linear;
+  -webkit-animation: quick-glow 1s -1s infinite linear;
+}
+
+.cell-4:nth-child(17) {
+  animation: quick-glow 1s -1.1s infinite linear;
+  -webkit-animation: quick-glow 1s -1.1s infinite linear;
+}
+
+.cell-4:nth-child(18) {
+  animation: quick-glow 1s -1.2s infinite linear;
+  -webkit-animation: quick-glow 1s -1.2s infinite linear;
+}
+
+.cell-4:nth-child(19) {
+  animation: quick-glow 1s -1.3s infinite linear;
+  -webkit-animation: quick-glow 1s -1.3s infinite linear;
+}
+
+.cell-4:nth-child(20) {
+  animation: quick-glow 1s -1.4s infinite linear;
+  -webkit-animation: quick-glow 1s -1.4s infinite linear;
+}
+
+.cell-4:nth-child(21) {
+  animation: quick-glow 1s -1.5s infinite linear;
+  -webkit-animation: quick-glow 1s -1.5s infinite linear;
+}
+
+.cell-4:nth-child(22) {
+  animation: quick-glow 1s -1.6s infinite linear;
+  -webkit-animation: quick-glow 1s -1.6s infinite linear;
+}
+
+.cell-4:nth-child(23) {
+  animation: quick-glow 1s -1.7s infinite linear;
+  -webkit-animation: quick-glow 1s -1.7s infinite linear;
+}
+
+.cell-4:nth-child(24) {
+  animation: quick-glow 1s -1.8s infinite linear;
+  -webkit-animation: quick-glow 1s -1.8s infinite linear;
+}
+
+.cell-4:nth-child(25) {
+  animation: quick-glow 1s -1.9s infinite linear;
+  -webkit-animation: quick-glow 1s -1.9s infinite linear;
+}
+
+.cell-4:nth-child(6) {
+  animation: quick-glow 1s 0s infinite linear;
+  -webkit-animation: quick-glow 1s 0s infinite linear;
+}
+
+.cell-4:nth-child(7) {
+  animation: quick-glow 1s 0.1s infinite linear;
+  -webkit-animation: quick-glow 1s 0.1s infinite linear;
+}
+
+.cell-4:nth-child(8) {
+  animation: quick-glow 1s 0.2s infinite linear;
+  -webkit-animation: quick-glow 1s 0.2s infinite linear;
+}
+
+.cell-4:nth-child(9) {
+  animation: quick-glow 1s 0.3s infinite linear;
+  -webkit-animation: quick-glow 1s 0.3s infinite linear;
+}
+
+.cell-4:nth-child(10) {
+  animation: quick-glow 1s 0.4s infinite linear;
+  -webkit-animation: quick-glow 1s 0.4s infinite linear;
+}
+
+.cell-4:nth-child(16) {
+  animation: quick-glow 1s 0s infinite linear;
+  -webkit-animation: quick-glow 1s 0s infinite linear;
+}
+
+.cell-4:nth-child(17) {
+  animation: quick-glow 1s 0.1s infinite linear;
+  -webkit-animation: quick-glow 1s 0.1s infinite linear;
+}
+
+.cell-4:nth-child(18) {
+  animation: quick-glow 1s 0.2s infinite linear;
+  -webkit-animation: quick-glow 1s 0.2s infinite linear;
+}
+
+.cell-4:nth-child(19) {
+  animation: quick-glow 1s 0.3s infinite linear;
+  -webkit-animation: quick-glow 1s 0.3s infinite linear;
+}
+
+.cell-4:nth-child(20) {
+  animation: quick-glow 1s 0.4s infinite linear;
+  -webkit-animation: quick-glow 1s 0.4s infinite linear;
+}
+
+@keyframes quick-glow {
+  15% {
+    z-index: 99;
+    background: #ff2995;
+    box-shadow: 0 0 10px 2px #ff2995;
+  }
+}
+@keyframes glow {
+  50% {
+    z-index: 99;
+    background: #ff2995;
+    box-shadow: 0 0 10px 2px #ff2995;
+  }
+}
+@-webkit-keyframes quick-glow {
+  15% {
+    z-index: 99;
+    background: #ff2995;
+    box-shadow: 0 0 10px 2px #ff2995;
+  }
+}
+@-webkit-keyframes glow {
+  50% {
+    z-index: 99;
+    background: #ff2995;
+    box-shadow: 0 0 10px 2px #ff2995;
+  }
+}
 @keyframes mouse {
-	from {
-		top: 0px;
-	}
+  from {
+    top: 0px;
+  }
   to {
-		top: 6px;
-	}
-}
-
-#search-ico{
-    right: -4.2% !important;
+    top: 6px;
+  }
 }

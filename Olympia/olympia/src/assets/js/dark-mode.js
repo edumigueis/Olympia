@@ -9,15 +9,19 @@ function sleep(milliseconds) {
 
 $(document).ready(function () {
     $(document.body).on("click","#dark-mode-link",function () {
-        if ($("#app-corpo").hasClass("night")) {
-            $("#app-corpo").removeClass("night");
-            $("#fullpage").fadeIn(100);
-            $("#fullpage").fadeOut(100);
+        if ($("#fullpage").hasClass("night")) {
+            $("#fullpage").fadeIn(1000)
+            $("#fullpage").removeClass("night");
+            $("#fullpage").fadeOut(1000)
+            $("#menu-bar").removeClass("dark-mode");
+            $("#footer").removeClass("dark-mode");
         }
         else {
-            $("#app-corpo").addClass("night");
-            $("#fullpage").fadeIn(500);
-            $("#fullpage").fadeOut(500);
+            $("#fullpage").fadeIn(1000)
+            $("#fullpage").addClass("night");
+            $("#fullpage").fadeOut(1000)
+            $("#menu-bar").addClass("dark-mode");
+            $("#footer").addClass("dark-mode");
         }
     });
 })
