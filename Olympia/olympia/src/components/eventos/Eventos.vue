@@ -1,105 +1,16 @@
 
 <template>
-<body>
+  <main class="main-content white-4">
   <link rel="stylesheet" type="text/css" href="/src/assets/css/events-slider.css">
   <link rel="shortcut icon" href="/src/assets/images/page-ico.png">
   <link rel="stylesheet" href="/src/assets/css/events.css">
 
-   <!--Área de menus-->
-   <div id="menu-bar">
-        <div id="bar">
-            <div id="nav-bars"></div>
-            <div id="logo"><a href="/" class="hover-line"><span><span class="moving-up">O</span> <span class="moving-up">L</span> <span class="moving-up">Y</span> <span class="moving-up">M</span> <span class="moving-up">P</span> <span class="moving-up">I</span> <span class="moving-left">A</span></span></a>
-            </div>
-            <div id="search-ico"></div>
-        </div>
-    </div>
-
-<div id="menu-items">
-
-    <div class="gradient"></div>
-
-    <div id="container-menu">
-        <div class="close-1 close">
-            <img class="close-img" src="/src/assets/images/x.png">
-        </div>
-        <table class="seta">
-            <tr>
-                <td>
-                    <a id="leftClick">
-                        <img src="/src/assets/images/left.png" id="left">
-                    </a>
-
-                    <a id="rightClick">
-                        <img src="/src/assets/images/right.png" id="right">
-                    </a>
-                </td>
-            </tr>
-        </table>
-        <div id="menu-list">
-
-                <div id="col-menu-1">
-                    <div class="menu-item-1 row1">
-                        <a href="/"><img class="ico" src="/src/assets/images/home.png"></a>
-                        <a class="menu-link " href="/">H O M E</a>
-                    </div>
-                    <br><br><br><br><br><br><br><br><br><br>
-                    <div class="menu-item row2">
-                        <a href="/#/sobre"><img class="ico" src="/src/assets/images/users.png"></a>
-                        <a class="menu-link " href="/#/sobre">S O B R E N Ó S</a>
-                    </div>
-                </div>
-                <div id="col-menu-2">
-                    <div class="menu-item-1 row1">
-                        <a href="/#/artes"><img class="ico" src="/src/assets/images/art.png"></a>
-                        <a class="menu-link" href="/#/artes">A R T E S</a>
-                    </div>
-                    <br><br><br><br><br><br><br><br><br><br>
-                    <div class="menu-item row2">
-                        <a class='a-contact'><img class="ico" src="/src/assets/images/contact.png"></a>
-                        <a class="menu-link a-contact">C O N T A T O</a>
-                    </div>
-                </div>
-                <div id="col-menu-3">
-                    <div class="menu-item-1 row1">
-                        <a href="/#/eventos"><img class="ico" src="/src/assets/images/buy.png" id='buy'></a>
-                        <a class="menu-link " href="/#/eventos">E X P O</a>
-                    </div>
-                </div>
-        </div>
-    </div>
-</div>
-
-<!--Fim dos menus-->
+  <meu-menu-bar></meu-menu-bar>
+    <meu-menu-items></meu-menu-items>
+    <meus-contatos></meus-contatos>
+    <meu-mouse></meu-mouse>
 
 
-  <!--Contatos-->
-  <table class="table-contato">
-    <tr>
-        <td>
-            <div id='container-contatos'>
-                <div class="close-2 close">
-                    <img class="close-2-img" src="/src/assets/images/x.png">
-                </div>
-                <div id="contato-1">
-                    <p id='titulo'>C O N T A T O S</p>
-                    <p class='subtitulo'>DEP. ARTES PLÁSTICAS</p>
-                    <p class='texto'>Email: seuemail@celio.com<br>
-                        Telefone: sempaciencia</p>
-                </div>
-                <div id="contato-2">Departamento artedc platicas emial:ddddddddddddddd tel :Dddddddddddd dpartamento
-                    teatro
-                    emaisl : teeeeeeeeeeeeeeeeeeeeeeeee tel sddsdsd</div>
-                <div id='contato-3'>Departamento artedc platicas emial:ddddddddddddddd tel :Dddddddddddd dpartamento
-                    teatro
-                    emaisl : teeeeeeeeeeeeeeeeeeeeeeeee tel sddsdsd</div>
-            </div>
-        </td>
-    </tr>
-</table>
-<!--Fim dos contatos-->
-
-  <main class="main-content">
     <section class="slideshow">
       <div class="slideshow-inner">
         <div class="slides">
@@ -212,8 +123,8 @@
       </div>
     </section>
 
-    <div id="filter-container" data-aos="fade-down" data-aos-duration="1000">
-      <ul id="radio-tab">
+    <div id="filter-container" class="white-4">
+      <ul id="radio-tab" class="white-4">
         <li class="radio-item">
           <label class="container">Todos
             <input type="radio" checked="checked" name="radio">
@@ -265,10 +176,10 @@
       </ul>
     </div>
 
-    <div id="events-container">
-      <div class="event-card-container" id="filter-container" data-aos="fade-left" data-aos-duration="1000">
-        <ul class="card-table">
-          <li class="card-item">
+    <div id="events-container" class="white-4">
+      <div class="event-card-container" id="filter-container">
+        <ul class="card-table  white" >
+          <li class="card-item white">
             <div class="event-image-container">
               <div class="image-mask-event">
                 <img class="event-image"
@@ -276,16 +187,16 @@
               </div>
             </div>
           </li>
-          <div class="btn-wrap">
+          <div class="btn-wrap ">
             <a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a>
           </div>
-          <li class="card-item-2">
+          <li class="card-item-2 white">
             <div class="event-date-container">
               <p class="expo-name">Tarsila no MASP</p>
               <p class="date">16/08/2020, DOM</p>
             </div>
           </li>
-          <li class="card-item-last">
+          <li class="card-item-last white" >
             <div class="event-location-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1958340837805!2d-46.65807058538399!3d-23.56140906747839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59ceb1eb771f%3A0xe904f6a669744da1!2sMuseu%20de%20Arte%20de%20S%C3%A3o%20Paulo%20Assis%20Chateaubriand!5e0!3m2!1spt-BR!2sbr!4v1584722338674!5m2!1spt-BR!2sbr"
@@ -295,9 +206,9 @@
           </li>
         </ul>
       </div>
-      <div class="event-card-container" data-aos="fade-left" data-aos-duration="1000">
-        <ul class="card-table">
-          <li class="card-item">
+      <div class="event-card-container" >
+        <ul class="card-table white">
+          <li class="card-item white">
             <div class="event-image-container">
               <div class="image-mask-event">
                 <img class="event-image"
@@ -308,13 +219,13 @@
           <div class="btn-wrap">
             <a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a>
           </div>
-          <li class="card-item-2">
+          <li class="card-item-2  white">
             <div class="event-date-container">
               <p class="expo-name">Picasso no MP</p>
               <p class="date">12/07/2020, SAB</p>
             </div>
           </li>
-          <li class="card-item-last">
+          <li class="card-item-last  white">
             <div class="event-location-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.48741836628!2d2.1787040149271406!3d41.38522000409329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2fe99bce26b%3A0x27011e710700cc63!2sMuseu%20Picasso!5e0!3m2!1spt-BR!2sbr!4v1584723142970!5m2!1spt-BR!2sbr"
@@ -324,8 +235,8 @@
           </li>
         </ul>
       </div>
-      <div class="event-card-container" data-aos="fade-left" data-aos-duration="1000">
-        <ul class="card-table">
+      <div class="event-card-container">
+        <ul class="card-table white">
           <li class="card-item">
             <div class="event-image-container">
               <div class="image-mask-event">
@@ -337,13 +248,13 @@
           <div class="btn-wrap">
             <a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a>
           </div>
-          <li class="card-item-2">
+          <li class="card-item-2 white">
             <div class="event-date-container">
               <p class="expo-name">Picasso no MP</p>
               <p class="date">12/07/2020, SAB</p>
             </div>
           </li>
-          <li class="card-item-last">
+          <li class="card-item-last white">
             <div class="event-location-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.661787563492!2d4.878886915343618!3d52.35841915594437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609ef96d35a5f%3A0xc22828aef97cc51a!2sMuseu%20Van%20Gogh!5e0!3m2!1spt-BR!2sbr!4v1584723696099!5m2!1spt-BR!2sbr"
@@ -354,7 +265,6 @@
         </ul>
       </div>
       </div>
-  </main>
   <!--Início do footer-->
 
   <div id="footer">
@@ -363,6 +273,31 @@
         class="footer-link">Modo Noturno</a><span class="span-bar">|</span><a class="footer-link">Termos De Uso</a>
     </div>
   </div>
-  </body>
+  </main>
   <!--Fim do footer-->
   </template>
+
+  <script>
+    import MenuBar from "../shared/menu-bar/Menu-bar.vue";
+    import MenuItems from "../shared/menu-items/Menu-items.vue";
+    import Contatos from "../shared/contatos/Contatos.vue";
+    import Mouse from "../shared/mouse/Mouse.vue";
+    import Footer from "../shared/footer/Footer.vue";
+    import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+
+    export default {
+        components: {
+            "meu-menu-bar": MenuBar,
+            "meu-menu-items": MenuItems,
+            "meus-contatos": Contatos,
+            "meu-mouse": Mouse,
+            "meu-footer": Footer,
+            "meu-dark-mode": DarkMode                   
+    },
+    mounted(){
+      let aos = document.createElement('script')
+      aos.setAttribute('src', '../../../assets/dist/aos.js')
+      document.head.appendChild(aos)
+    }
+  }
+</script>

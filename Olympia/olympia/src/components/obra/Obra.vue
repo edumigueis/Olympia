@@ -3,6 +3,15 @@
 
     <link rel="stylesheet" href="/src/assets/css/detalhe.css">
 
+<<<<<<< HEAD
+=======
+    <meu-menu-bar></meu-menu-bar>
+    <meu-menu-items></meu-menu-items>
+    <meus-contatos></meus-contatos> 
+    <meu-dark-mode></meu-dark-mode>
+    <meu-mouse></meu-mouse>
+
+>>>>>>> 148c7d9c7f9b81d24f7fe9105aec7499c2486115
     <div id="col-container">
 
         <div id="img-col-d" class="white-4">
@@ -89,6 +98,42 @@
         <img class="modal-content" id="img01">
         <div id="caption"></div>
     </div>
+<<<<<<< HEAD
     
+=======
+
+    <!--Início do footer-->
+    <div id="footer" class="white" style="margin-top: -10px;">
+        <div id="copyright" class="wfont">© OLYMPIA INC. All Rights Reserved.</div>
+        <div id="lower-footer"><a class="footer-link">Back To Top</a><span class="span-bar">|</span><a
+                class="footer-link">Modo Noturno</a><span class="span-bar">|</span><a class="footer-link">Termos De
+                Uso</a></div>
+    </div>
+    <!--Fim do footer-->
+>>>>>>> 148c7d9c7f9b81d24f7fe9105aec7499c2486115
 </main>
 </template>
+<script>
+    import MenuBar from "../shared/menu-bar/Menu-bar.vue";
+    import MenuItems from "../shared/menu-items/Menu-items.vue";
+    import Contatos from "../shared/contatos/Contatos.vue";
+    import Mouse from "../shared/mouse/Mouse.vue";
+    import Footer from "../shared/footer/Footer.vue";
+    import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+
+    export default {
+        components: {
+            "meu-menu-bar": MenuBar,
+            "meu-menu-items": MenuItems,
+            "meus-contatos": Contatos,
+            "meu-mouse": Mouse,
+            "meu-footer": Footer,
+            "meu-dark-mode": DarkMode                   
+    },
+    mounted(){
+      let aos = document.createElement('script')
+      aos.setAttribute('src', '../../../assets/dist/aos.js')
+      document.head.appendChild(aos)
+    }
+  }
+</script>
