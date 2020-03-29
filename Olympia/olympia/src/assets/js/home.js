@@ -15,60 +15,67 @@ setInterval(function () {
                 passou = false;
                 $("." + i).fadeIn(tempo);
                 i += 15;
-                $("." + (i-1)).fadeIn(tempo);
+                $("." + (i - 1)).fadeIn(tempo);
             }
         }
         else {
             i++;
         }
-        if (i % 14 == 0 && i != 0 ) {
+        if (i % 14 == 0 && i != 0) {
             i += 13;
             passou = true;
-            
+
         }
 
     }
-    $("." + i).fadeIn(tempo); 
+    $("." + i).fadeIn(tempo);
 
 }, 90); /* INTERVALO ENTRE AS APARIÇÕES */
 
-$(document).ready(function () {
+var jaFoi = false;
 
-        $('.intro').addClass('go');
-      
-        $('.reload').click(function() {
-          $('.intro').removeClass('go').delay(200).queue(function(next) {
+setInterval(() => {
+
+    if ($('#container-home').css('display') == 'block' && jaFoi == false) {
+        jaFoi = true;
+
+        $(function () {
             $('.intro').addClass('go');
-            next();
-          });   
-        });
 
-    /* ATRIBUTOS DE ESTILO */
-    $('circle').attr("r", '1.5');
-    $('circle').attr("fill", 'rgba(255,255,255,0.5)');
-    $('circle').attr("stroke", 'black');
-    $('circle').attr("stroke-width", '0.1');
-    /**/
+            /* ATRIBUTOS DE ESTILO */
+            $('circle').attr("r", '1.5');
+            $('circle').attr("fill", 'rgba(255,255,255,0.5)');
+            $('circle').attr("stroke", 'black');
+            $('circle').attr("stroke-width", '0.1');
+            /**/
 
-    for (var i2 = 0; i2 < max; i2++) {
+            for (var i2 = 0; i2 < max; i2++) {
 
-        x++;
+                x++;
 
-        /*       NÚMERO DE CÍRCULOS POR LINHA       */
-        /*       |                                  */
-        /*      \ /                                 */
-        if (i2 % 14 == 0 && i2 != 0) {
-            x = 1;
-            y += 8; /* DISTÂNCIA ENTRE OS CÍRCULOS (Y) */
-        }
+                /*       NÚMERO DE CÍRCULOS POR LINHA       */
+                /*       |                                  */
+                /*      \ /                                 */
+                if (i2 % 14 == 0 && i2 != 0) {
+                    x = 1;
+                    y += 8; /* DISTÂNCIA ENTRE OS CÍRCULOS (Y) */
+                }
 
-        /*         DISTÂNCIA ENTRE OS CÍRCULOS (X)      */
-        /*                         |                    */
-        /*                        \ /                   */
-        $('.' + i2).attr('cx', x * 8);
-        $('.' + i2).attr('cy', y);
+                /*         DISTÂNCIA ENTRE OS CÍRCULOS (X)      */
+                /*                         |                    */
+                /*                        \ /                   */
+                $('.' + i2).attr('cx', x * 8);
+                $('.' + i2).attr('cy', y);
+            }
+
+            $('.' + max).css('visibility', 'hidden');
+            $('.' + 70).css('visibility', 'hidden');
+        })
     }
-
-    $('.' + max).css('display', 'none');
-    $('.' + 70).css('visibility', 'hidden');
-})
+    else if (!$('#container-home').length){
+        jaFoi = false;
+        for(var i = 0; i <= 70; i++){
+            $('.' + i).fadeOut();
+        }
+    }
+}, 100);
