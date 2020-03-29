@@ -9,7 +9,7 @@ import Sobre from './components/sobre/Sobre.vue';
 
 export const routes = [
 
-    { path: '/', component: Home, titulo: 'H O M E' },
+    { path: '/home', component: Home, titulo: 'H O M E' },
     { path: '/artes', component: Artes, titulo: 'A R T E S' },
     { path: '/obra', component: Obra, titulo: 'O B R A' },
     { path: '/evento', component: Evento, titulo: 'E V E N T O' },

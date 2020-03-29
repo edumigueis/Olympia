@@ -2,6 +2,7 @@
 $(document).ready(function () {
 
     setInterval(updateGradient, 10);
+
     $(document.body).on('click','#forced-click',function () {
         alert('entrei');
         window.location.reload();
@@ -41,6 +42,7 @@ $(document).ready(function () {
         });
     })
 })
+
 function boxTop(idBox) {
     var boxOffset = $(idBox).offset();
     return boxOffset.top;

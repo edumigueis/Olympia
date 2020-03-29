@@ -8,6 +8,7 @@ function sleep(milliseconds) {
 }
 
 $(document).ready(function () {
+
     $(document.body).on("click","#dark-mode-link",function () {
         if ($("#fullpage").hasClass("night")) {
             $("#fullpage").fadeIn(1000)
@@ -15,6 +16,7 @@ $(document).ready(function () {
             $("#fullpage").fadeOut(1000)
             $("#menu-bar").removeClass("dark-mode");
             $("#footer").removeClass("dark-mode");
+            $(".gray").removeClass("dark-mode");
         }
         else {
             $("#fullpage").fadeIn(1000)
@@ -22,6 +24,7 @@ $(document).ready(function () {
             $("#fullpage").fadeOut(1000)
             $("#menu-bar").addClass("dark-mode");
             $("#footer").addClass("dark-mode");
+            $(".gray").removeClass("dark-mode");
         }
     });
 })

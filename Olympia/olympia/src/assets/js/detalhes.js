@@ -1,48 +1,43 @@
-$(document).ready(function () {
-  var altura = $(document).height()
+var jaFoi = false;
 
-  $('#bg').css('height', altura);
+setInterval(() => {
 
-  $(window).resize(function () {
-    var altura2 = $(document).height()
+  if ($('#container-obra').css('display') == 'block' && jaFoi == false) {
+    $(function () {
+      jaFoi = true;
 
-    $('#bg').css('height', altura2);
-    altura2 = 0;
-  });
+      var altura = $(document).height()
 
-  $(document.body).on('click', '.img-col', function () {
-    var src = $(this).attr("src");
-    $('#myModal').css('display', 'block');
-    $("#img01").attr("src", src);
-    $(window).scrollTop(0);
-    $('#mouse').css('display', 'block');
-  });
+      $('#bg').css('height', altura);
 
-  $(document.body).on('click','.close-mod',function () {
-    $('#myModal').css('display', 'none');
-    $('#mouse').css('display', 'none');
-  })
+      $(window).resize(function () {
+        var altura2 = $(document).height()
 
-  $(document.body).on('click','#myModal',function () {
-    $('#myModal').css('display', 'none');
-    $('#mouse').css('display', 'none');
-  })
-  
-  var image = document.createElement('img');
-  var color;
+        $('#bg').css('height', altura2);
+        altura2 = 0;
+      });
 
-  const colorThief = new ColorThief();
-  const img = document.querySelector(".art-icon");
+      $(document.body).on('click', '.img-col', function () {
+        var src = $(this).attr("src");
+        $('#myModal').css('display', 'block');
+        $("#img01").attr("src", src);
+        $(window).scrollTop(0);
+        $('#mouse').css('display', 'block');
+      });
 
-  if (img.complete) {
-    color = colorThief.getColor(img);
+      $(document.body).on('click', '.close-mod', function () {
+        $('#myModal').css('display', 'none');
+        $('#mouse').css('display', 'none');
+      })
+
+      $(document.body).on('click', '#myModal', function () {
+        $('#myModal').css('display', 'none');
+        $('#mouse').css('display', 'none');
+      })
+    })
   }
-  else {
-    image.addEventListener('load', function () {
-      color = colorThief.getColor(img);
-    });
+  else if (!$('#container-obra').length) {
+    jaFoi = false;
   }
-
-  $("body").css('color', "rgb(" + color + ")");
-})
+}, 100);
 
