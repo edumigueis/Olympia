@@ -39,12 +39,12 @@
                     </div>
                     </form>
             </div>
-            <div class="signup-image">
-                <figure class="default-prof-user"><img src="/src/assets/images/user-ico.png" alt="sing up image"></figure>
-                <div class="form-group">
-                    <label for="hexcolor"><i class="zmdi zmdi-palette"></i></label>
+            <div class="form-group hexcolor">
+                    <label for="hexcolor" style="margin-top:-13px"><i class="zmdi zmdi-palette"></i></label>
                     <input type="text" name="hexcolor" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" id="hexcolor" placeholder="Selecione a Cor ex. #bada56">
                 </div>
+            <div class="signup-image">
+                <figure class="default-prof-user"><img src="/src/assets/images/user-ico.png" alt="sing up image"></figure>
                 <div id='user-let-img'></div>
                 <p class="signup-image-link">Escolher Foto de Perfil</p>
             </div>
@@ -53,7 +53,7 @@
 </section>
 
     <div class="error-box">
-        
+
     </div>
     
     <div id="background-wrap">

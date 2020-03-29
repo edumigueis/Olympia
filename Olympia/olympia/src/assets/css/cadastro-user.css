@@ -6,7 +6,9 @@
 body{
     overflow-x: hidden;
 }
-
+.hexcolor{
+    display: none;
+}
 #background-wrap {
   bottom: 0;
   left: 0;
@@ -41,9 +43,6 @@ body{
     line-height: 150px;
     margin: 20px 0;
 }
-#hexcolor{
-    display:none;
-}
 #user-let-img:hover {
     opacity: 0.8;
     cursor: pointer;
@@ -65,8 +64,6 @@ body{
   animation: BubblesBackground 6s ease infinite;
     color: #fff;
     text-align: center;
-    line-height: 150px;
-    margin: 20px 0;
 }
 .prof-user-letter{
     margin-top: 0;
@@ -1146,6 +1143,9 @@ label.valid:after {
   margin-right: 20px;
   margin-top: 10px;
 }
+#user-let-img{
+    width: 100%;
+}
 @media screen and (max-width: 1200px) {
   .container {
     width: calc(100% - 30px);
@@ -1162,7 +1162,61 @@ label.valid:after {
         overflow-y: hidden;
     }
   }
+  @media screen and (min-width: 770px) and (max-width: 999px) {
+    #user-let-img{
+        width: 310px;
+        height: 310px;
+    }
+    .hexcolor{
+        margin-right: -400px;
+        height: 60px !important;
+        width: 50% !important;
+      }
+  }
+  @media screen and (min-width: 1000px) and (max-width: 1100px) {
+    #user-let-img:before{
+        padding-top: 40%;
+        padding-bottom: 40%;
+    }
+    #user-let-img{
+        max-width: 320px;
+    }
+  }
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+    #user-let-img:before{
+        padding-top: 42%;
+        padding-bottom: 42%;
+    }
+    #user-let-img{
+        max-width: 315px;
+    }
+  }
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .hexcolor{
+        margin-right: -400px;
+        height: 60px !important;
+        width: 50% !important;
+      }
+  }
+  @media screen and (min-width: 1401px){
+      #user-let-img:before{
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+    #user-let-img{
+        margin: 0;
+        max-width: 100%;
+    }
+  }
+  @media screen and (min-width: 1400px){
+    .hexcolor{
+        margin-right: -400px;
+        height: 60px !important;
+        width: 50% !important;
+      }
+  }
 @media screen and (max-width: 768px) {
+    
   .signup-content,
   .signin-content {
     flex-direction: column;
@@ -1221,7 +1275,30 @@ label.valid:after {
   .form-title {
     text-align: center;
   }
+  #user-let-img{
+      margin-left: 21%;
+  }
+  .hexcolor{
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #user-let-img{
+    width: 340px;
+    height:  340px;
 }
+}
+@media screen and (min-width: 551px) and (max-width: 590px) {
+    #user-let-img{
+        margin-left: 9%;
+    }
+  }
+  @media screen and (min-width: 450px) and (max-width: 550px) {
+    #user-let-img{
+        margin-left: 0;
+    }
+  }
 @media screen and (max-width: 400px) {
   .social-login {
     flex-direction: column;

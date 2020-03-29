@@ -17,21 +17,21 @@ setInterval(() => {
                 vzs++;
                 if(vzs == 1)
                 $("#user-let-img").css('display','block');
-                $("#hexcolor").css('display','block');
+                $(".hexcolor").css('display','block');
                 $("#user-let-img").html("<p class='prof-user-letter'>"+firstLet+"</p>");
                 $(".signup-image").css("margin-top",0);
                 $("#user-let-img").css('margin-bottom','60px');
                 firstLet =null;
               }else{
                 $("#user-let-img").css('display','none');
-                $("#hexcolor").css('display','none');
+                $(".hexcolor").css('display','none');
                 $('#name').css("border-radius","4px");
                 $('#name').css("border","1px solid red");
               }
           });
           $("#name").focusin(function(){
             $("#user-let-img").empty();
-            $(".signup-image").html("<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image'></figure><div class='form-group'><label for='hexcolor'><i class='zmdi zmdi-palette'></i></label><input type='text' name='hexcolor' pattern='^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$' id='hexcolor' placeholder='Selecione a Cor de Fundo'></div><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p>");
+            $(".signup-image").html("<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p>");
             $('#name').css("border-radius","0");
               $('#name').css("border-top",0);
               $('#name').css("border-left",0);
