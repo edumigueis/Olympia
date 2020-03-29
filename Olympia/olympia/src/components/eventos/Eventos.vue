@@ -123,7 +123,7 @@
       </div>
     </section>
 
-    <div id="filter-container" class="white-4">
+    <div id="filter-container" class="white-4" data-aos="fade-down" data-aos-duration="1000">
       <ul id="radio-tab" class="white-4">
         <li class="radio-item">
           <label class="container">Todos
@@ -179,7 +179,7 @@
     <div id="events-container" class="white-4">
       <div class="event-card-container" id="filter-container">
         <ul class="card-table  white" >
-          <li class="card-item white">
+          <li class="card-item white" data-aos="fade-up" data-aos-duration="1000">
             <div class="event-image-container">
               <div class="image-mask-event">
                 <img class="event-image"
@@ -196,7 +196,7 @@
               <p class="date">16/08/2020, DOM</p>
             </div>
           </li>
-          <li class="card-item-last white" >
+          <li class="card-item-last white" data-aos="fade-up" data-aos-duration="1000">
             <div class="event-location-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1958340837805!2d-46.65807058538399!3d-23.56140906747839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59ceb1eb771f%3A0xe904f6a669744da1!2sMuseu%20de%20Arte%20de%20S%C3%A3o%20Paulo%20Assis%20Chateaubriand!5e0!3m2!1spt-BR!2sbr!4v1584722338674!5m2!1spt-BR!2sbr"
@@ -219,7 +219,7 @@
           <div class="btn-wrap">
             <a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a>
           </div>
-          <li class="card-item-2  white">
+          <li class="card-item-2  white" data-aos="fade-up" data-aos-duration="1000">
             <div class="event-date-container">
               <p class="expo-name">Picasso no MP</p>
               <p class="date">12/07/2020, SAB</p>
@@ -237,7 +237,7 @@
       </div>
       <div class="event-card-container">
         <ul class="card-table white">
-          <li class="card-item">
+          <li class="card-item" data-aos="fade-up" data-aos-duration="1000">
             <div class="event-image-container">
               <div class="image-mask-event">
                 <img class="event-image"
@@ -265,19 +265,11 @@
         </ul>
       </div>
       </div>
-  <!--Início do footer-->
-
-  <div id="footer">
-    <div id="copyright" class="wfont" style="font-size: 1.6em;">© OLYMPIA INC. All Rights Reserved.</div>
-    <div id="lower-footer"><a class="footer-link">Back To Top</a><span class="span-bar">|</span><a
-        class="footer-link">Modo Noturno</a><span class="span-bar">|</span><a class="footer-link">Termos De Uso</a>
-    </div>
-  </div>
+  <meu-footer></meu-footer>
   </main>
-  <!--Fim do footer-->
   </template>
 
-  <script>
+<script>
     import MenuBar from "../shared/menu-bar/Menu-bar.vue";
     import MenuItems from "../shared/menu-items/Menu-items.vue";
     import Contatos from "../shared/contatos/Contatos.vue";
