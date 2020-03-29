@@ -246,8 +246,12 @@ body {
     margin-right: 20px;
     margin-top: 20px;
   }
+  #title {
+    font-size: 0.8em;
+    margin-left: 55%;
+  }
 }
-@media only screen and (min-width: 500px) and (max-width: 615px) {
+@media only screen and (min-width: 500px) and (max-width: 899px) {
   #calendar-red {
     width: 131px;
     height: 100px;
@@ -272,10 +276,11 @@ body {
   }
   #title {
     font-size: 0.8em;
-    margin-right: -30px;
+    margin-left: 55%;
+    width: 250px;
   }
 }
-@media only screen and (min-width: 616px) and (max-width: 950px) {
+@media only screen and (min-width: 900px) and (max-width: 1050px) {
   #page-rol {
     margin-top: 90px;
   }
@@ -284,7 +289,33 @@ body {
   }
   #title {
     font-size: 1em;
-    margin-left: 10px;
+  }
+  #title {
+    font-size: 0.8em;
+    margin-left: 45%;
+    width: 400px;
+  }
+  .event-info-p{
+    padding-top: 0;
+  }
+}
+@media only screen and (min-width: 1050px) and (max-width: 1185px) {
+  #page-rol {
+    margin-top: 90px;
+  }
+  #event-name {
+    font-size: 1em;
+  }
+  #title {
+    font-size: 1em;
+  }
+  #title {
+    font-size: 0.8em;
+    margin-left: 45%;
+    width: 450px;
+  }
+  .event-info-p{
+    padding-top: 0;
   }
 }
 #event-name {
