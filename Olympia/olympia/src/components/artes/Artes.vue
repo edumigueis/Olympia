@@ -9,7 +9,7 @@
                     <meu-menu-items></meu-menu-items>
                     <meus-contatos></meus-contatos> 
                     <meu-mouse></meu-mouse>
-                    <meu-></meu->
+                    <meu-dark-mode></meu-dark-mode>
 
                     <div id="line-containers">
                     <div class="line">
@@ -173,7 +173,7 @@
     import Contatos from "../shared/contatos/Contatos.vue";
     import Mouse from "../shared/mouse/Mouse.vue";
     import Footer from "../shared/footer/Footer.vue";
-    import DarkMode from "../shared//.vue";
+    import DarkMode from "../shared/dark-mode/Dark-mode.vue"
 
     export default {
         components: {
@@ -182,7 +182,7 @@
             "meus-contatos": Contatos,
             "meu-mouse": Mouse,
             "meu-footer": Footer,
-            "meu-": DarkMode                   
+            "meu-dark-mode": DarkMode                   
     }
   }
 </script>
