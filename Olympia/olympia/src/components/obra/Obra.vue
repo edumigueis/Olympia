@@ -28,7 +28,7 @@
                     </td>
                     <td class="detail-img-container" id="detail-img-2" >
                         <div class="detail-mask  white-4" >
-                        <img src="https://zoomoncontemporaryart.files.wordpress.com/2017/11/jackson-pollock-getty-56898334.jpg?w=840"class="img-col white-4" >
+                        <img src="https://zoomoncontemporaryart.files.wordpress.com/2017/11/jackson-pollock-getty-56898334.jpg?w=840" class="img-col white-4" >
                             </div>
                     </td>
                 </tr>
