@@ -6,6 +6,7 @@ import Obra from './components/obra/Obra.vue';
 import Evento from './components/evento/Evento.vue';
 import Eventos from './components/eventos/Eventos.vue';
 import Sobre from './components/sobre/Sobre.vue';
+import CadastroUser from './components/cadastro-user/CadastroUser.vue';
 
 export const routes = [
 
@@ -14,5 +15,6 @@ export const routes = [
     { path: '/obra', component: Obra, titulo: 'O B R A' },
     { path: '/evento', component: Evento, titulo: 'E V E N T O' },
     { path: '/eventos', component: Eventos, titulo: 'E V E N T O S' },
-    { path: '/sobre', component: Sobre, titulo: 'S O B R E' }
+    { path: '/sobre', component: Sobre, titulo: 'S O B R E' },
+    { path: '/cadastro/user', component: CadastroUser, titulo: 'C A D A S T R O' }
 ]

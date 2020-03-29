@@ -1,5 +1,12 @@
-$(document).ready(function () {
-    var altura = $(document).height()
+
+  var jaFoi = false;
+
+setInterval(() => {
+
+  if ($('#container-obra').css('display') == 'block' && jaFoi == false) {
+    $(function () {
+      jaFoi = true;
+      var altura = $(document).height()
   
     $('.main-content').css('height', altura - 100);
   
@@ -10,6 +17,10 @@ $(document).ready(function () {
       altura2 =0;
   
     });
-  })
-  
-  
+      
+    })
+  }
+  else if (!$('#container-obra').length) {
+    jaFoi = false;
+  }
+}, 100);
