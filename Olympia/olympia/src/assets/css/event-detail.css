@@ -112,8 +112,8 @@ body {
   content: "";
   background-image: linear-gradient(
     to top,
-    rgba(239, 239, 239, 255),
-    rgba(255, 16, 16, 0)
+    rgba(239, 239, 239, 239),
+    rgba(239, 239, 239, 0)
   );
   position: absolute;
   height: 100px;
@@ -136,7 +136,7 @@ body {
   background-color: red;
   height: 160px;
   width: 151px;
-  position: absolute;
+  position: relative;
   margin-top: -80px;
   left: 15%;
   border-radius: 16px;
@@ -292,11 +292,11 @@ body {
   font-size: 4em;
 }
 #title {
-  margin-left: 40%;
+  margin-right: 18%;
   float: right;
   z-index: 20;
-  position: absolute;
-  margin-top: -110px;
+  position: relative;
+  margin-top: -150px;
 }
 #page-grid {
   margin-top: 10%;
