@@ -59,8 +59,9 @@
 </section>
 
 
-    <div id="img-pick-modal">
-        <upload-image is="upload-image"
+    <!--<div id="img-pick-modal">
+        <upload-image 
+        is="upload-image"
         :url="forms.create.url"
         :max_files="5"
         name="files[]"
@@ -74,9 +75,10 @@
         v-on:upload-image-loaded="uploadImageLoaded"
         v-on:upload-image-submit="uploadImageSubmit"
         v-on:upload-image-clicked="uploadImageClicked"
-        v-on:upload-image-removed="uploadImageRemoved"
-        ></upload-image>
-    </div>
+        v-on:upload-image-removed="uploadImageRemoved">
+        </upload-image>
+
+    </div>-->
     
     <div id="background-wrap">
         <div class="bubble x1"></div>

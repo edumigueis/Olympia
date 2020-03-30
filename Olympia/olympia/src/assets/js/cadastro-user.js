@@ -44,11 +44,11 @@ setInterval(() => {
                 $(".color-holder").css('display','none');
               }
           });
-          $('body').click(function () {
+          $('body').on('click', function () {
             picker.fadeOut();
           });
       
-          $('.call-picker').click(function(event) {
+          $('.call-picker').on('click',function(event) {
             event.stopPropagation();
             picker.fadeIn();
             picker.children('li').hover(function() {
