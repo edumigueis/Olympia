@@ -1,5 +1,5 @@
 
-
+import Welcome from './components/welcome/Welcome.vue';
 import Home from './components/home/Home.vue';
 import Artes from './components/artes/Artes.vue';
 import Obra from './components/obra/Obra.vue';
@@ -10,6 +10,7 @@ import Cadastro from './components/cadastro-user/CadastroUser.vue';
 
 export const routes = [
 
+    { path: '/', component: Welcome, titulo: ' W E L C O M E' },
     { path: '/home', component: Home, titulo: 'H O M E' },
     { path: '/artes', component: Artes, titulo: 'A R T E S' },
     { path: '/obra', component: Obra, titulo: 'O B R A' },

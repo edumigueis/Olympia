@@ -62,35 +62,20 @@ function updateGradient() {
     }
 }
 
-$(document).ready(function () {
+setInterval(updateGradient(), 10);
 
-    setInterval(updateGradient, 10);
+var jaFoi = false;
 
-    $('#exposicao').addClass('animar');
+setInterval(() => {
 
-    $(document.body).on('scroll', 'window', function () {
+    if ($('#container-sobre').css('display') == 'block' && jaFoi == false) {
 
-        var documentTop = $(this).scrollTop();
+        $(function () {
 
-        if (documentTop < boxTop('#exposicao') + 50) {
-            $('#exposicao').addClass('animar');
-            $('#texto2').css('display', 'none');
-            $('#texto1').fadeIn(500);
-            $("#title").text('NOSSA HISTÓRIA');
-        } else {
-            $('#exposicao').removeClass('animar');
-        }
-
-        if (documentTop > boxTop('#museu') + 50) {
-            $('#museu').addClass('animar');
-            $('#texto1').css('display', 'none');
-            $('#texto2').fadeIn(500);
-            $("#title").text('NOSSA MISSÃO');
-
-        } else {
-
-            $('#museu').removeClass('animar');
-        }
-    });
-
-});
+            jaFoi = true;
+        })
+    }
+    else if (!$('#container-sobre').length) {
+        jaFoi = false;
+    }
+}, 100);

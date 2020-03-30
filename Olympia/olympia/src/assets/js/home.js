@@ -9,7 +9,7 @@ var jaFoi = false;
 
 setInterval(() => {
 
-    if ($('#container-home').css('display') == 'block' && jaFoi == false) {
+    if ($('#container-home').length && jaFoi == false) {
         $(function () {
             jaFoi = true;
             
