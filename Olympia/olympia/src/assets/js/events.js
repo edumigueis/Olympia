@@ -5,6 +5,7 @@ setInterval(() => {
 
   if ($('#container-obra').css('display') == 'block' && jaFoi == false) {
     $(function () {
+      
       jaFoi = true;
       var altura = $(document).height()
   
@@ -17,6 +18,7 @@ setInterval(() => {
       altura2 =0;
   
     });
+
       
     })
   }

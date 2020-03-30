@@ -10,7 +10,7 @@
       <meu-mouse></meu-mouse>
 
       <div id="col-container">
-        <div id="img-col-d" class="white-4">
+        <div id="img-col-d" class="white-4" >
           <div class="bg"></div>
           <table
             id="table-img"

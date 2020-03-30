@@ -44,8 +44,11 @@
             </div>
             <div class="form-group hexcolor">
                     <label for="hexcolor" style="margin-top:-13px"><i class=" zmdi dark-register-ico zmdi-palette"></i></label>
-                    <input class="dark-register-input"  type="text" name="hexcolor" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" id="hexcolor" placeholder="Selecione a Cor ex. #bada56">
-                </div>
+                    <input type="text" name="custom_color" placeholder="#FFFFFF" id="hexcolor" class="call-picker">
+            </div>
+                    <div class="color-holder call-picker" style="display: none"></div>
+                    <div class="color-picker" id="color-picker" style="display: none"></div>
+                
             <div class="signup-image">
                 <figure class="default-prof-user"><img src="/src/assets/images/user-ico.png" alt="sing up image"></figure>
                 <div id='user-let-img'></div>
@@ -55,8 +58,24 @@
     </div>
 </section>
 
-    <div class="error-box">
 
+    <div id="img-pick-modal">
+        <upload-image is="upload-image"
+        :url="forms.create.url"
+        :max_files="5"
+        name="files[]"
+        :resize_enabled="true"
+        :resize_max_width="640"
+        :button_html="forms.create.confirm"
+        :button_class="'button is-primary'"
+        v-on:upload-image-attemp="uploadImageAttempt"
+        v-on:upload-image-success="uploadImageSuccess"
+        v-on:upload-image-failure="uploadImageFailure"
+        v-on:upload-image-loaded="uploadImageLoaded"
+        v-on:upload-image-submit="uploadImageSubmit"
+        v-on:upload-image-clicked="uploadImageClicked"
+        v-on:upload-image-removed="uploadImageRemoved"
+        ></upload-image>
     </div>
     
     <div id="background-wrap">
@@ -89,10 +108,12 @@
 <script>
 
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+import UploadImage from '../shared/upload_image/UploadImage.vue';
 
 export default {
   components: {
-    "meu-dark-mode": DarkMode
+    "meu-dark-mode": DarkMode,
+    "upload-image": UploadImage
   }
 };
 </script>

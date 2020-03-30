@@ -34,6 +34,8 @@ setInterval(() => {
         $('#myModal').css('display', 'none');
         $('#mouse').css('display', 'none');
       })
+
+      
     })
   }
   else if (!$('#container-obra').length) {
