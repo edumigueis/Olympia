@@ -3,6 +3,11 @@
   src: url("../fonts/BebasNeue-Regular.ttf");
 }
 
+#img-pick-modal{
+  position: fixed;
+  margin: 0;
+}
+
 #dark-mode-link{
   position: absolute;
   right: 3%;
@@ -1093,7 +1098,8 @@ label {
 }
 label.error {
   position: relative;
-  background: url(../images/unchecked.gif) no-repeat;
+  background: url('../images/unchecked.gif');
+  background-repeat: no-repeat;
   background-position-y: 3px;
   padding-left: 20px;
   display: block;
