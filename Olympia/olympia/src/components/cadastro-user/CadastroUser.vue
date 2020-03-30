@@ -60,7 +60,22 @@
 
 
     <div id="img-pick-modal">
-        
+        <upload-image is="upload-image"
+        :url="forms.create.url"
+        :max_files="5"
+        name="files[]"
+        :resize_enabled="true"
+        :resize_max_width="640"
+        :button_html="forms.create.confirm"
+        :button_class="'button is-primary'"
+        v-on:upload-image-attemp="uploadImageAttempt"
+        v-on:upload-image-success="uploadImageSuccess"
+        v-on:upload-image-failure="uploadImageFailure"
+        v-on:upload-image-loaded="uploadImageLoaded"
+        v-on:upload-image-submit="uploadImageSubmit"
+        v-on:upload-image-clicked="uploadImageClicked"
+        v-on:upload-image-removed="uploadImageRemoved"
+        ></upload-image>
     </div>
     
     <div id="background-wrap">
@@ -93,10 +108,12 @@
 <script>
 
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+import UploadImage from '../shared/upload_image/UploadImage.vue';
 
 export default {
   components: {
-    "meu-dark-mode": DarkMode
+    "meu-dark-mode": DarkMode,
+    "upload-image": UploadImage
   }
 };
 </script>
