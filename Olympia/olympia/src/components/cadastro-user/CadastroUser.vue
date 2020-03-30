@@ -44,8 +44,11 @@
             </div>
             <div class="form-group hexcolor">
                     <label for="hexcolor" style="margin-top:-13px"><i class=" zmdi dark-register-ico zmdi-palette"></i></label>
-                    <input class="dark-register-input"  type="text" name="hexcolor" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" id="hexcolor" placeholder="Selecione a Cor ex. #bada56">
-                </div>
+                    <input type="text" name="custom_color" placeholder="#FFFFFF" id="hexcolor" class="call-picker">
+            </div>
+                    <div class="color-holder call-picker" style="display: none"></div>
+                    <div class="color-picker" id="color-picker" style="display: none"></div>
+                
             <div class="signup-image">
                 <figure class="default-prof-user"><img src="/src/assets/images/user-ico.png" alt="sing up image"></figure>
                 <div id='user-let-img'></div>
@@ -55,8 +58,9 @@
     </div>
 </section>
 
-    <div class="error-box">
 
+    <div id="img-pick-modal">
+        
     </div>
     
     <div id="background-wrap">

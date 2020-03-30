@@ -123,8 +123,8 @@
       </div>
     </section>
 
-    <div id="filter-container" class="white-4" data-aos="fade-up" data-aos-duration="1000">
-      <ul id="radio-tab" class="white-4">
+    <div id="filter-container" class="white-4">
+      <ul id="radio-tab" class="white-4" >
         <li class="radio-item">
           <label class="container">Todos
             <input type="radio" checked="checked" name="radio">
@@ -178,7 +178,7 @@
 
     <div id="events-container" class="white-4">
       <div class="event-card-container" id="filter-container">
-        <ul class="card-table  white" data-aos="fade-left" data-aos-duration="1000">
+        <ul class="card-table  white">
           <li class="card-item white" >
             <div class="event-image-container">
               <div class="image-mask-event">
@@ -207,7 +207,7 @@
         </ul>
       </div>
       <div class="event-card-container" >
-        <ul class="card-table white"  data-aos="fade-left" data-aos-duration="1000">
+        <ul class="card-table white">
           <li class="card-item white">
             <div class="event-image-container">
               <div class="image-mask-event">
@@ -236,7 +236,7 @@
         </ul>
       </div>
       <div class="event-card-container">
-        <ul class="card-table white"  data-aos="fade-left" data-aos-duration="1000">
+        <ul class="card-table white">
           <li class="card-item">
             <div class="event-image-container">
               <div class="image-mask-event">

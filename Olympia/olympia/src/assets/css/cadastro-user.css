@@ -902,8 +902,7 @@ figure {
 .form-submit {
   display: inline-block;
   border-radius: 5px;
-  transition: 0.2s all;
-  font-family: 'Bebas-Neue-Regular';
+  transition: 0.1s all;
   background: linear-gradient(
     136deg,
     #fc6c85,
@@ -928,6 +927,18 @@ figure {
 }
 .form-submit:hover {
   font-weight: bold;
+  color: #fff;
+  border-bottom: none;
+  width: auto;
+  padding: 15px 39px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  margin-top: 25px;
+  cursor: pointer;
+  font-size: 16px;
 }
 #signin {
   margin-top: 16px;
@@ -951,7 +962,6 @@ figure {
   color: white;
   display: block;
   text-align: center;
-  font-family: 'Bebas-Neue-Regular';
 }
 .signup-image-link:hover {
     cursor: pointer;
@@ -1219,6 +1229,29 @@ label.valid:after {
         width: 50% !important;
       }
   }
+  @media screen and (min-width: 1000px) and (max-width: 1070px) {
+    #user-let-img:before{
+        padding-top: 40%;
+        padding-bottom: 40%;
+    }
+    #user-let-img{
+        max-width: 320px;
+    }
+    .hexcolor{
+      margin-right: -490px;
+      height: 55px !important;
+      width: 50% !important;
+      margin-bottom: 10px;
+    }
+    .color-holder{
+      width: 30px !important;
+      height: 30px !important;
+      float: right;
+      right: 42%;
+      z-index: 3;
+      position: absolute;
+    }
+  }
   @media screen and (min-width: 1000px) and (max-width: 1100px) {
     #user-let-img:before{
         padding-top: 40%;
@@ -1226,6 +1259,37 @@ label.valid:after {
     }
     #user-let-img{
         max-width: 320px;
+    }
+    .hexcolor{
+      margin-right: -500px;
+      height: 55px !important;
+      width: 50% !important;
+      margin-bottom: 10px;
+    }
+    .color-holder{
+      width: 30px !important;
+      height: 30px !important;
+      float: left;
+      right: 43%;
+      z-index: 3;
+      position: absolute;
+    }
+    
+  }
+  @media screen and (min-width: 1100px) and (max-width: 1200px) {
+    .hexcolor{
+      margin-right: -650px;
+      height: 55px !important;
+      width: 50% !important;
+      margin-bottom: 10px;
+    }
+    .color-holder{
+      width: 30px !important;
+      height: 30px !important;
+      float: right;
+      right: 47%;
+      z-index: 3;
+      position: absolute;
     }
   }
   @media screen and (min-width: 1100px) and (max-width: 1400px) {
@@ -1236,22 +1300,25 @@ label.valid:after {
     #user-let-img{
         max-width: 315px;
     }
+    
   }
-  @media screen and (min-width: 1000px) and (max-width: 1400px) {
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
     .hexcolor{
         margin-right: -400px;
-        height: 60px !important;
+        height: 55px !important;
         width: 50% !important;
+        margin-bottom: 10px;
       }
   }
   @media screen and (min-width: 1401px){
       #user-let-img:before{
         padding-top: 50%;
-        padding-bottom: 50%;
     }
     #user-let-img{
         margin: 0;
+        z-index: -1;
         max-width: 100%;
+        max-height: 100%;
     }
   }
   @media screen and (min-width: 1400px){
@@ -1334,6 +1401,22 @@ label.valid:after {
     width: 340px;
     height:  340px;
 }
+.color-holder{
+  left: 0.5%;
+  margin-top: -8%;
+  margin-left: 2.5% !important;
+  z-index: 3;
+  width: 30px !important;
+  height: 30px !important;
+}
+.color-picker{
+  bottom: 30%;
+  left: 32%;
+}
+.zmdi-palette{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 }
 @media screen and (min-width: 551px) and (max-width: 590px) {
     #user-let-img{
@@ -1358,6 +1441,55 @@ label.valid:after {
     margin-bottom: 10px;
   }
 }
+/*Color Picker*/
+
+
+.color-picker {
+  width: 130px;
+  background: #f8f8f8;
+  height: 205px;
+  padding: 5px;
+  border: 1px solid #fff;
+  border-radius: 14px;
+  box-shadow: 0px 0px 3px 1px #DDD;
+  position: absolute;
+  top: 61px;
+  right: 30%;
+  z-index: 4;
+  float: right;
+}
+
+.color-holder {
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #AAA;
+  border-radius: 50%;
+  width: 41px;
+  height: 30px;
+  float: left;
+  margin-left: 45px;
+}
+
+.color-picker .color-item {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  list-style-type: none;
+  float: left;
+  margin: 2px;
+  border: 1px solid #DDD;
+}
+.color-item {
+  border-radius: 50%;
+}
+
+.color-picker .color-item:hover {
+  border: 1px solid #666;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter:alpha(opacity=8);
+}
+/*-----------------------------------------------*/
 @font-face {
   font-family: Material-Design-Iconic-Font;
   src: url(/src/assets/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0) format("woff2"),

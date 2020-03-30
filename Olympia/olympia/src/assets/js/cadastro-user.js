@@ -1,5 +1,13 @@
 var jaFoi = false;
+var colorList = [ 'f8b195', 'f67280', 'c06c84', '6c5b7b', '4480b0', '355c7d', '99b898', 'fecea8', 'ff847c', 'e84a5f', 
+'2a363b', 'FF6633', '97a2ff', 'ff9cee', '336666', 'FCC133', 'E12B38', '666666', 'Ef3366', 'FF9933', '99CC33', '669966', '66CCCC', '3366FF', '663366', 'DAF7A6', 'FFC300', 'FF5733', 'C70039', '900C3F', 'FBD1D3', 'F198AF', 'EBB2D6', '9F81CD', '766DC1', '298fca', '026aa7', 'AAEEAA', 'CCFF00', 'CC04FF' ];
+		var picker = $('#color-picker');
 
+		for (var i = 0; i < colorList.length; i++ ) {
+			picker.append('<li class="color-item" data-hex="' + '#' + colorList[i] + '" style="background-color:' + '#' + colorList[i] + ';"></li>');
+		}
+
+		
 setInterval(() => {
 
   if ($('#container-cad-user').css('display') == 'block' && jaFoi == false) {
@@ -25,6 +33,7 @@ setInterval(() => {
                 if(vzs == 1)
                 $("#user-let-img").css('display','block');
                 $(".hexcolor").css('display','block');
+                $(".color-holder").css('display','block');
                 $("#user-let-img").html("<p class='prof-user-letter'>"+firstLet+"</p>");
                 $(".signup-image").css("margin-top",0);
                 $("#user-let-img").css('margin-bottom','60px');
@@ -32,12 +41,29 @@ setInterval(() => {
               }else{
                 $("#user-let-img").css('display','none');
                 $(".hexcolor").css('display','none');
+                $(".color-holder").css('display','none');
               }
+          });
+          $('body').click(function () {
+            picker.fadeOut();
+          });
+      
+          $('.call-picker').click(function(event) {
+            event.stopPropagation();
+            picker.fadeIn();
+            picker.children('li').hover(function() {
+              var codeHex = $(this).data('hex');
+      
+              $('.color-holder').css('background-color', codeHex);
+              $('#user-let-img').css('background', codeHex);
+              $('#hexcolor').val(codeHex);
+            });
           });
           $("#name").focusin(function(){
             $("#user-let-img").empty();
             $(".signup-image").html("<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p>");
             $('#name').css("border-radius","0");
+            $(".color-holder").css('display','none');
               $('#name').css("border-top",0);
               $('#name').css("border-left",0);
               $('#name').css("border-right", 0);
@@ -76,7 +102,7 @@ setInterval(() => {
           $('#user-let-img').css('background',this.value);
         });
         $(".signup-image-link").on('click',function(){
-            alert("foi");
+            $("img-pick-modal").fadeIn();
         })
         $("#signup").on('click',function(){
             

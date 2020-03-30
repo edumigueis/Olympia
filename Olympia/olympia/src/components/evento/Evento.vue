@@ -10,7 +10,7 @@
     <meu-mouse></meu-mouse>
 
     <main id="page-container">
-        <div class="event-header">
+        <div class="event-header" >
             <div class="img-header">
                 <div class="img-wrap">
                     <img src="https://www.moma.org/d/assets/W1siZiIsIjIwMTkvMTAvMTAvaGxleXY0b2E4X2luMjQyN18wNzc5LmpwZyJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/in2427_0779.jpg?sha=2b029d673aa33a2e"
