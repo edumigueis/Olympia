@@ -7,7 +7,14 @@ setInterval(() => {
         var firstLet = null;
         $("#tel").mask('+00 (00) 00000-0000');
 
+        $("#name").focusin(function(){
+          $("#hexcolor").fadeOut();
+          $(".zmdi.zmdi-palette").fadeOut();
+        })
+
           $("#name").focusout(function(){
+            $(".zmdi.zmdi-palette").fadeIn();
+            $("#hexcolor").fadeIn();
               if($('#name').val() != "")
               {
                 $(".default-prof-user").empty();
@@ -25,8 +32,6 @@ setInterval(() => {
               }else{
                 $("#user-let-img").css('display','none');
                 $(".hexcolor").css('display','none');
-                $('#name').css("border-radius","4px");
-                $('#name').css("border","1px solid red");
               }
           });
           $("#name").focusin(function(){

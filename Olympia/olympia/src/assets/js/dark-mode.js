@@ -16,7 +16,12 @@ $(document).ready(function () {
             $("#fullpage").fadeOut(1000)
             $("#menu-bar").removeClass("dark-mode");
             $("#footer").removeClass("dark-mode");
+            $(".dark-register-div").removeClass("dark-mode");
+            $(".dark-register-input").removeClass("dark-mode");
+            $(".dark-register-ico").removeClass("dark-mode");
+            $(".black-to-white").removeClass("dark-mode");
             $(".gray").removeClass("dark-mode");
+            $('#dark-mode-link').text('MODO NOTURNO');
         }
         else {
             $("#fullpage").fadeIn(1000)
@@ -24,7 +29,12 @@ $(document).ready(function () {
             $("#fullpage").fadeOut(1000)
             $("#menu-bar").addClass("dark-mode");
             $("#footer").addClass("dark-mode");
-            $(".gray").removeClass("dark-mode");
+            $(".dark-register-div").addClass("dark-mode");
+            $(".dark-register-input").addClass("dark-mode");
+            $(".dark-register-ico").addClass("dark-mode");
+            $(".black-to-white").addClass("dark-mode");
+            $(".gray").addClass("dark-mode");
+            $('#dark-mode-link').text('MODO CLARO');
         }
     });
 })

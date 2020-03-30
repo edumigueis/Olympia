@@ -1,3 +1,7 @@
+.dark-mode.black-to-white {
+  color: rgb(221, 221, 221) !important;
+}
+
 .dark-mode.white {
   background-color: #494949 !important;
 }
@@ -32,6 +36,24 @@
 
 .dark-mode.text-gray-2 {
   color: rgb(173, 173, 173) !important;
+}
+
+.dark-mode.dark-register-div{
+  background-color: #46454b;
+  color: white;
+  box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.555);
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+
+.dark-mode.dark-register-input{
+  color: white;
+  border-color: rgb(216, 216, 216);
+  background-color: #46454b;
+}
+
+.dark-mode.dark-register-ico{
+  border-radius: 4px;
 }
 
 .img-header .img-wrap:before {
