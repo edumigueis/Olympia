@@ -1,84 +1,149 @@
 <template>
-
-<main id="page-container-cad-user">
+  <main id="page-container-cad-user">
     <div id="container-cad-user">
-    <link rel="stylesheet" href="/src/assets/css/cadastro-user.css">
-    <link rel="shortcut icon" href="/src/assets/images/page-ico.png">
+      <link rel="stylesheet" href="/src/assets/css/cadastro-user.css" />
+      <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
 
-    <meu-dark-mode></meu-dark-mode>
+      <meu-dark-mode></meu-dark-mode>
 
-    <section class="signup ">
+      <section class="signup ">
         <div class="container dark-register-div">
-            <div class="signup-content ">
-                <div class="signup-form">
-                    <h2 class="form-title black-to-white">Cadastre-se</h2>
-                    <form class="register-form" id="register-form">
-                    <div class="form-group">
-                    <label for="name"><i class=" zmdi dark-register-ico zmdi-account material-icons-name"></i></label>
-                    <input class="dark-register-input"  type="text" name="name" id="name" placeholder="Seu Nome" required>
-                    </div>
-                    <div class="form-group">
-                    <label for="email"><i class=" zmdi dark-register-ico zmdi-email"></i></label>
-                    <input class="dark-register-input"  type="email" name="email" id="email" placeholder="Seu Email" required> 
-                    </div>
-                    <div class="form-group">
-                    <label for="tel"><i class=" zmdi dark-register-ico zmdi-mail-send"></i></label>
-                    <input class="dark-register-input"  type="text"  name="tel" id="tel" placeholder="Seu Telefone" required>
-                    </div>
-                    <div class="form-group">
-                    <label for="pass"><i class=" zmdi dark-register-ico zmdi-lock"></i></label>
-                    <input class="dark-register-input"  type="password" name="pass" id="pass" placeholder="Sua senha" required>
-                    </div>
-                    <div class="form-group">
-                    <label for="re-pass"><i class=" zmdi dark-register-ico zmdi-lock-outline"></i></label>
-                    <input class="dark-register-input"  type="password" name="re_pass" id="re_pass" placeholder="Confirme sua senha" required>
-                    </div>
-                    <div class="form-group">
-                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term dark-register-input">
-                    <label for="agree-term" class="label-agree-term black-to-white"><span><span></span></span>Eu concordo com os <a href="#" class="term-service">Termos de Serviço</a></label>
-                    </div>
-                    <div class="form-group form-button">
-                    <input type="submit" name="signup" id="signup" class="form-submit" value="Registrar">
-                    </div>
-                    </form>
+          <div class="signup-content ">
+            <div class="signup-form">
+              <h2 class="form-title black-to-white">Cadastre-se</h2>
+              <form class="register-form" id="register-form">
+                <div class="form-group">
+                  <label for="name"
+                    ><i
+                      class=" zmdi dark-register-ico zmdi-account material-icons-name"
+                    ></i
+                  ></label>
+                  <input
+                    class="dark-register-input"
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Seu Nome"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email"
+                    ><i class=" zmdi dark-register-ico zmdi-email"></i
+                  ></label>
+                  <input
+                    class="dark-register-input"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Seu Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="tel"
+                    ><i class=" zmdi dark-register-ico zmdi-mail-send"></i
+                  ></label>
+                  <input
+                    class="dark-register-input"
+                    type="text"
+                    name="tel"
+                    id="tel"
+                    placeholder="Seu Telefone"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="pass"
+                    ><i class=" zmdi dark-register-ico zmdi-lock"></i
+                  ></label>
+                  <input
+                    class="dark-register-input"
+                    type="password"
+                    name="pass"
+                    id="pass"
+                    placeholder="Sua senha"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="re-pass"
+                    ><i class=" zmdi dark-register-ico zmdi-lock-outline"></i
+                  ></label>
+                  <input
+                    class="dark-register-input"
+                    type="password"
+                    name="re_pass"
+                    id="re_pass"
+                    placeholder="Confirme sua senha"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="checkbox"
+                    name="agree-term"
+                    id="agree-term"
+                    class="agree-term dark-register-input"
+                  />
+                  <label
+                    for="agree-term"
+                    class="label-agree-term black-to-white"
+                    ><span><span></span></span>Eu concordo com os
+                    <a href="#" class="term-service"
+                      >Termos de Serviço</a
+                    ></label
+                  >
+                </div>
+                <div class="form-group form-button">
+                  <input
+                    type="submit"
+                    name="signup"
+                    id="signup"
+                    class="form-submit"
+                    value="Registrar"
+                  />
+                </div>               
+              </form>
             </div>
             <div class="form-group hexcolor">
-                    <label for="hexcolor" style="margin-top:-13px"><i class=" zmdi dark-register-ico zmdi-palette"></i></label>
-                    <input type="text" name="custom_color" placeholder="#FFFFFF" id="hexcolor" class="call-picker">
+              <label for="hexcolor" style="margin-top:-13px"
+                ><i class=" zmdi dark-register-ico zmdi-palette"></i
+              ></label>
+              <input
+                type="text"
+                name="custom_color"
+                placeholder="#FFFFFF"
+                id="hexcolor"
+                class="call-picker"
+              />
             </div>
-                    <div class="color-holder call-picker" style="display: none"></div>
-                    <div class="color-picker" id="color-picker" style="display: none"></div>
-                
+            <div class="color-holder call-picker" style="display: none"></div>
+            <div
+              class="color-picker"
+              id="color-picker"
+              style="display: none"
+            ></div>
+
             <div class="signup-image">
-                <figure class="default-prof-user"><img src="/src/assets/images/user-ico.png" alt="sing up image"></figure>
-                <div id='user-let-img'></div>
-                <p class="signup-image-link">Escolher Foto de Perfil</p>
-            </div>
+              <figure class="default-prof-user">
+                <img
+                  src="/src/assets/images/user-ico.png"
+                  alt="sing up image"
+                />
+              </figure>
+              <div id="user-let-img"></div>
+              <form class="image-form">
+                <div class="form-group form-button">
+                <input class="signup-image-link" type="file" name="image" accept="image/png, image/jpeg" value="Escolher foto de perfil">
+                </div>
+            </form>
+            </div> 
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-
-    <div id="img-pick-modal">
-        <upload-image is="upload-image"
-        :url="forms.create.url"
-        :max_files="5"
-        name="files[]"
-        :resize_enabled="true"
-        :resize_max_width="640"
-        :button_html="forms.create.confirm"
-        :button_class="'button is-primary'"
-        v-on:upload-image-attemp="uploadImageAttempt"
-        v-on:upload-image-success="uploadImageSuccess"
-        v-on:upload-image-failure="uploadImageFailure"
-        v-on:upload-image-loaded="uploadImageLoaded"
-        v-on:upload-image-submit="uploadImageSubmit"
-        v-on:upload-image-clicked="uploadImageClicked"
-        v-on:upload-image-removed="uploadImageRemoved"
-        ></upload-image>
-    </div>
-    
-    <div id="background-wrap">
+      <div id="background-wrap">
         <div class="bubble x1"></div>
         <div class="bubble x2"></div>
         <div class="bubble x3"></div>
@@ -99,21 +164,19 @@
         <div class="bubble x18"></div>
         <div class="bubble x19"></div>
         <div class="bubble x20"></div>
+      </div>
+      <a id="dark-mode-link">Modo Noturno</a>
     </div>
-    <a id="dark-mode-link">Modo Noturno</a>
     </div>
-</main>
+  </main>
 </template>
 
 <script>
-
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
-import UploadImage from '../shared/upload_image/UploadImage.vue';
 
 export default {
   components: {
     "meu-dark-mode": DarkMode,
-    "upload-image": UploadImage
   }
 };
 </script>
