@@ -1,15 +1,24 @@
-<template>
-<body>
-    <link rel="stylesheet" href="/src/assets/css/event-detail.css">
-    <link rel="shortcut icon" href="/src/assets/images/page-ico.png">
+<!DOCTYPE html>
+<html>
 
-    <meu-menu-bar></meu-menu-bar>
-    <meu-menu-items></meu-menu-items>
-    <meus-contatos></meus-contatos> 
-    <meu-dark-mode></meu-dark-mode>
-    <meu-mouse></meu-mouse>
-    <main>
-<div id="container-literatura">
+<head>
+    <title>L I T E R A T U R A</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="public/css/sobre.css">
+    <link rel="stylesheet" href="public/css/menu.css">
+    <link rel="shortcut icon" href="public/images/page-ico.png">
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../../../js/sobre.js"></script>
+    <script type="text/javascript" src="../../../js/menu.js"></script>
+</head>
+
+<body>
+
     <!--Área de menus-->
     <div id="menu-bar">
         <div id="bar">
@@ -112,32 +121,7 @@
                 Uso</a></div>
     </div>
     <!--Fim do footer-->
-</div>
-</main>
+
 </body>
-</template>
 
-<script>
-    import MenuBar from "../shared/menu-bar/Menu-bar.vue";
-    import MenuItems from "../shared/menu-items/Menu-items.vue";
-    import Contatos from "../shared/contatos/Contatos.vue";
-    import Mouse from "../shared/mouse/Mouse.vue";
-    import Footer from "../shared/footer/Footer.vue";
-    import DarkMode from "../shared/dark-mode/Dark-mode.vue";
-
-    export default {
-        components: {
-            "meu-menu-bar": MenuBar,
-            "meu-menu-items": MenuItems,
-            "meus-contatos": Contatos,
-            "meu-mouse": Mouse,
-            "meu-footer": Footer,
-            "meu-dark-mode": DarkMode                   
-    },
-    mounted(){
-      let aos = document.createElement('script')
-      aos.setAttribute('src', '../../../assets/dist/aos.js')
-      document.head.appendChild(aos)
-    }
-  }
-</script>
+</html>
