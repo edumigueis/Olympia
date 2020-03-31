@@ -56,6 +56,15 @@
   border-radius: 4px;
 }
 
+.dark-mode.text-sobre{
+  background-color: #818181 !important;
+  color: rgb(230, 230, 230) !important;
+}
+
+.dark-mode.linha-sobre{
+  background-color: rgb(180, 180, 180) !important;
+}
+
 .img-header .img-wrap:before {
   background-image: linear-gradient(
     to top,

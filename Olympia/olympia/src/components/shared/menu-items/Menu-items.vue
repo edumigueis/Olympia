@@ -1,7 +1,7 @@
 <template>
 
    <div id="menu-items">
-        <div class="gradient"></div>
+        <div class="menu-container"></div>
             <div id="container-menu">
                 <div class="close-1 close">
                     <img class="close-img" src="/src/assets/images/x.png">
@@ -29,7 +29,7 @@
                         <br><br><br><br><br><br><br><br><br><br>
                         <div class="menu-item row2">
                             <a href="/#/sobre"><img class="ico" src="/src/assets/images/users.png"></a>
-                            <a class="menu-link " href="/#/sobre">S O B R E N Ó S</a>
+                            <a class="menu-link " href="/#/sobre">S O B R E   N Ó S</a>
                         </div>
                     </div>
                     <div id="col-menu-2">
@@ -47,6 +47,11 @@
                         <div class="menu-item-1 row1">
                             <a href="/#/eventos"><img class="ico" src="/src/assets/images/buy.png" id='buy'></a>
                             <a class="menu-link " href="/#/eventos">E X P O</a>
+                        </div>
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <div class="menu-item row2">
+                            <a href="/#/perfil"><img class="ico" src="/src/assets/images/user.png"></a>
+                            <a class="menu-link " href="/#/sobre">P E R F I L</a>
                         </div>
                     </div>
                 </div>

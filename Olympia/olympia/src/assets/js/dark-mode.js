@@ -20,6 +20,8 @@ $(document).ready(function () {
             $(".dark-register-input").removeClass("dark-mode");
             $(".dark-register-ico").removeClass("dark-mode");
             $(".black-to-white").removeClass("dark-mode");
+            $(".text-sobre").removeClass("dark-mode");
+            $(".linha-sobre").removeClass("dark-mode");
             $(".gray").removeClass("dark-mode");
             $('#dark-mode-link').text('MODO NOTURNO');
         }
@@ -33,6 +35,8 @@ $(document).ready(function () {
             $(".dark-register-input").addClass("dark-mode");
             $(".dark-register-ico").addClass("dark-mode");
             $(".black-to-white").addClass("dark-mode");
+            $(".text-sobre").addClass("dark-mode");
+            $(".linha-sobre").addClass("dark-mode");
             $(".gray").addClass("dark-mode");
             $('#dark-mode-link').text('MODO CLARO');
         }
