@@ -1,6 +1,7 @@
 <template>
   <main id="page-container-cad-user">
     <div id="container-cad-user">
+      <title>C A D A S T R O</title>
       <link rel="stylesheet" href="/src/assets/css/cadastro-user.css" />
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
 
@@ -14,7 +15,9 @@
               <form class="register-form" id="register-form">
                 <div class="form-group">
                   <label for="name">
-                    <i class="zmdi dark-register-ico zmdi-account material-icons-name"></i>
+                    <div class="gray">
+                    <i class="zmdi dark-register-ico zmdi-account material-icons-name" style="margin-top: 5.5px"></i>
+                    </div>
                   </label>
                   <input
                     class="dark-register-input"
@@ -27,7 +30,9 @@
                 </div>
                 <div class="form-group">
                   <label for="email">
-                    <i class="zmdi dark-register-ico zmdi-email"></i>
+                    <div class="gray">
+                    <i class="zmdi dark-register-ico zmdi-email" style="margin-top: 5.5px"></i>
+                    </div>
                   </label>
                   <input
                     class="dark-register-input"
@@ -40,7 +45,9 @@
                 </div>
                 <div class="form-group">
                   <label for="tel">
-                    <i class="zmdi dark-register-ico zmdi-mail-send"></i>
+                    <div class="gray">
+                    <i class="zmdi dark-register-ico zmdi-mail-send" style="margin-top: 5.5px"></i>
+                    </div>
                   </label>
                   <input
                     class="dark-register-input"
@@ -53,7 +60,9 @@
                 </div>
                 <div class="form-group">
                   <label for="pass">
-                    <i class="zmdi dark-register-ico zmdi-lock"></i>
+                    <div class="locker-cont gray">
+                    <i class="zmdi dark-register-ico zmdi-lock" style="margin-top: 5.5px"></i>
+                    </div>
                   </label>
                   <input
                     class="dark-register-input"
@@ -66,7 +75,9 @@
                 </div>
                 <div class="form-group">
                   <label for="re-pass">
-                    <i class="zmdi dark-register-ico zmdi-lock-outline"></i>
+                    <div class="is-same-cont gray">
+                    <i class="zmdi dark-register-ico zmdi-lock-outline" style="margin-top: 5.5px"></i>
+                    </div>
                   </label>
                   <input
                     class="dark-register-input"
@@ -129,12 +140,12 @@
         </div>
       </section>
       <div id="pick-image-modal">
-        <h3 class="file-input-title">Selecione uma Imagem</h3>
+        <h3 class="file-input-title black-to-white">Selecione uma Imagem</h3>
         <ul class="file-list">
           <li class="file-item file-item-1">
             <div class="input-file-cont">
               <input type="file" name="file" id="file" class="inputfile" accept=".jpg, .jpeg, .png" />
-              <label for="file" class="file-label">Choose a file</label>
+              <label for="file" class="file-label">Escolher Imagem</label>
             </div>
           </li>
           <li class="file-item">
@@ -145,7 +156,10 @@
         </ul>
       </div>
       <div class="ui-widget-overlay"></div>
-
+      <div class="error-modal">
+        <div class="warn-image"><img class="warning-pic" src="/src/assets/images/warn-ico.png" /></div>
+        <P class="warn"></P>
+      </div>
       <div id="background-wrap">
         <div class="bubble x1"></div>
         <div class="bubble x2"></div>
@@ -168,17 +182,18 @@
         <div class="bubble x19"></div>
         <div class="bubble x20"></div>
       </div>
-      <a id="dark-mode-link">Modo Noturno</a>
+      <meu-small-footer></meu-small-footer>
     </div>
   </main>
 </template>
 
 <script>
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
-
+import SmallFooter from "../shared/small-footer/SmallFooter.vue";
 export default {
   components: {
-    "meu-dark-mode": DarkMode
+    "meu-dark-mode": DarkMode,
+    "meu-small-footer": SmallFooter,
   }
 };
 </script>

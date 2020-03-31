@@ -3,12 +3,12 @@
   src: url("../fonts/BebasNeue-Regular.ttf");
 }
 
-#img-pick-modal{
+#img-pick-modal {
   position: fixed;
   margin: 0;
 }
 
-#dark-mode-link{
+#dark-mode-link {
   position: absolute;
   right: 3%;
   bottom: 3%;
@@ -16,7 +16,7 @@
   font-size: 22px;
 }
 
-#dark-mode-link:hover{
+#dark-mode-link:hover {
   font-weight: bold;
   cursor: pointer;
 }
@@ -26,13 +26,13 @@
   height: 100vh;
   z-index: -10;
 }
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
-.hexcolor{
-    display: none;
+.hexcolor {
+  display: none;
 }
-.bin{
+.bin {
   height: 40px;
   padding-right: 10px;
   float: right;
@@ -50,12 +50,12 @@ body{
   z-index: -1;
 }
 #user-let-img {
-    transition: 0.5s all ease-in-out;
-    display: none;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: linear-gradient(
+  transition: 0.5s all ease-in-out;
+  display: none;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(
     136deg,
     #fc6c85,
     #fc6c6d,
@@ -71,15 +71,15 @@ body{
   -moz-animation: BubblesBackground 15s ease infinite;
   -o-animation: BubblesBackground 15s ease infinite;
   animation: BubblesBackground 15s ease infinite;
-    color: #fff;
-    text-align: center;
-    line-height: 150px;
-    margin: 20px 0;
+  color: #fff;
+  text-align: center;
+  line-height: 150px;
+  margin: 20px 0;
 }
 #user-let-img:hover {
-    opacity: 0.8;
-    cursor: pointer;
-    background: linear-gradient(
+  opacity: 0.8;
+  cursor: pointer;
+  background: linear-gradient(
     136deg,
     #fc6c85,
     #fc6c6d,
@@ -95,16 +95,16 @@ body{
   -moz-animation: BubblesBackground 6s ease infinite;
   -o-animation: BubblesBackground 6s ease infinite;
   animation: BubblesBackground 6s ease infinite;
-    color: #fff;
-    text-align: center;
+  color: #fff;
+  text-align: center;
 }
-.prof-user-letter{
-    margin-top: 0;
-    padding-top: 25%;
-    position: relative;
-    font-size: 14em;
-    font-family: 'Verdana';
-    color: #f8f8f8 !important;
+.prof-user-letter {
+  margin-top: 0;
+  padding-top: 25%;
+  position: relative;
+  font-size: 14em;
+  font-family: "Verdana";
+  color: #f8f8f8 !important;
 }
 /* KEYFRAMES */
 
@@ -593,7 +593,7 @@ list-type-ulli,
   padding: 0;
 }
 
-#pick-image-modal{
+#pick-image-modal {
   display: none;
   border-radius: 20px;
   -moz-border-radius: 20px;
@@ -608,8 +608,39 @@ list-type-ulli,
   top: 20%;
   background-color: #fff;
 }
+.error-modal {
+  display: none;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  width: 50%;
+  height: 350px;
+  position: absolute;
+  z-index: 9;
+  left: 25%;
+  top: 20%;
+  background-color: #fff;
+}
+.warn-image{
+  margin-top: 10px;
+  margin-left: 35%;
+  width: 200px;
+  height: 200px;
+}
+.warning-pic{
+  width: 100%;
+  height: auto;
+}
+.warn{
+  font-family: 'poppins';
+  font-size: 1.7em;
+  width: 100%;
+  text-align: center;
+}
 .ui-widget-overlay {
-  opacity: .70 !important;
+  opacity: 0.7 !important;
   filter: Alpha(Opacity=60) !important;
   background-color: rgb(40, 40, 40) !important;
   display: none;
@@ -620,7 +651,7 @@ list-type-ulli,
   z-index: 7;
 }
 /* Esconde o input */
-input[type='file'] {
+input[type="file"] {
   display: none;
   position: relative;
 }
@@ -634,8 +665,8 @@ input[type='file'] {
   margin-left: 15%;
   padding: 12px 40px;
   position: relative;
-  font-family: 'poppins';
-  font-size: 2em;
+  font-family: "poppins";
+  font-size: 1.45em;
 }
 .profile-pic {
   max-width: 200px;
@@ -657,26 +688,46 @@ input[type='file'] {
   width: auto;
   height: 100%;
 }
-.file-input-title{
+.file-input-title {
   text-align: center;
   margin-bottom: 30px;
   font-size: 30px;
-  font-family: 'poppins';
+  font-family: "poppins";
 }
-.file-item{
+.file-item {
   list-style: none;
   width: 45%;
 }
-ul li{
+ul li {
   display: inline;
 }
-.file-list{
+.file-list {
   height: 80%;
 }
-.input-file-cont{
+.input-file-cont {
   width: 55%;
   margin-top: 12%;
   margin-left: 0 !important;
+}
+.locker-cont{
+  width: 25px;
+  border-radius: 50%;
+  height: 25px;
+  background-color: #fff;
+  transition: 0.08s all;
+}
+.gray{
+  width: 25px;
+  border-radius: 50%;
+  height: 25px;
+  transition: 0.08s all;
+}
+.is-same-cont{
+  width: 25px;
+  border-radius: 50%;
+  height: 25px;
+  background-color: #fff;
+  transition: 0.08s all;
 }
 @font-face {
   font-family: poppins;
@@ -1011,7 +1062,8 @@ figure {
     #fc9b6c,
     #fc6c9d,
     #fc6cb5,
-    #fc6ccd);
+    #fc6ccd
+  );
   color: #fff;
   border-bottom: none;
   width: auto;
@@ -1054,7 +1106,8 @@ figure {
     #fc9b6c,
     #fc6c9d,
     #fc6cb5,
-    #fc6ccd);
+    #fc6ccd
+  );
   margin-left: 2%;
   padding-top: 3%;
   padding-bottom: 3%;
@@ -1066,9 +1119,9 @@ figure {
   margin: 0;
 }
 .signup-image-link:hover {
-    cursor: pointer;
-    font-weight: bold;
-  }
+  cursor: pointer;
+  font-weight: bold;
+}
 .term-service {
   font-size: 13px;
   color: rgb(158, 228, 93);
@@ -1195,7 +1248,7 @@ label {
 }
 label.error {
   position: relative;
-  background: url('../images/unchecked.gif');
+  background: url("../images/unchecked.gif");
   background-repeat: no-repeat;
   background-position-y: 3px;
   padding-left: 20px;
@@ -1302,10 +1355,10 @@ label.valid:after {
   margin-right: 20px;
   margin-top: 10px;
 }
-#user-let-img{
-    width: 100%;
+#user-let-img {
+  width: 100%;
 }
-#user-prof-image{
+#user-prof-image {
   border-radius: 50%;
 }
 @media screen and (max-width: 1200px) {
@@ -1320,158 +1373,162 @@ label.valid:after {
   }
 }
 @media screen and (min-width: 840px) {
-    body{
-        overflow-y: hidden;
-    }
+  /*body {
+    overflow-y: hidden;
+  }*/
+}
+@media screen and (min-width: 770px) and (max-width: 999px) {
+  #user-let-img {
+    width: 310px;
+    height: 310px;
   }
-  @media screen and (min-width: 770px) and (max-width: 999px) {
-    #user-let-img{
-        width: 310px;
-        height: 310px;
-    }
-    .hexcolor{
-        margin-right: -400px;
-        height: 60px !important;
-        width: 50% !important;
-      }
-    .file-label{
-      padding: 10px !important;
-    }
-    .circle{
-      margin-right: 0 !important;
-    }
+  .hexcolor {
+    margin-right: -400px;
+    height: 60px !important;
+    width: 50% !important;
   }
-  @media screen and (min-width: 770px) and (max-width: 880px) {
-    #user-let-img{
-        width: 310px;
-        height: 310px;
-    }
-    .hexcolor{
-        margin-right: -400px;
-        height: 60px !important;
-        width: 50% !important;
-      }
-    .file-label{
-      padding: 10px !important;
-      margin: 0 !important;
-    }
-    .circle{
-      margin-right: 0 !important;
-    }
+  .file-label {
+    padding: 10px !important;
   }
-  @media screen and (min-width: 1000px) and (max-width: 1070px) {
-    #user-let-img:before{
-        padding-top: 40%;
-        padding-bottom: 40%;
-    }
-    #user-let-img{
-        max-width: 320px;
-    }
-    .hexcolor{
-      margin-right: -490px;
-      height: 55px !important;
-      width: 50% !important;
-      margin-bottom: 10px;
-    }
-    .color-holder{
-      width: 30px !important;
-      height: 30px !important;
-      float: right;
-      right: 42%;
-      z-index: 3;
-      position: absolute;
-    }
+  .circle {
+    margin-right: 0 !important;
   }
-  @media screen and (min-width: 1000px) and (max-width: 1100px) {
-    #user-let-img:before{
-        padding-top: 40%;
-        padding-bottom: 40%;
-    }
-    #user-let-img{
-        max-width: 320px;
-    }
-    .hexcolor{
-      margin-right: -500px;
-      height: 55px !important;
-      width: 50% !important;
-      margin-bottom: 10px;
-    }
-    .color-holder{
-      width: 30px !important;
-      height: 30px !important;
-      float: left;
-      right: 43%;
-      z-index: 3;
-      position: absolute;
-    }
+  .error-modal{
+    height: 420px;
   }
-  @media screen and (min-width: 1000px) and (max-width: 1150px) {
-    .file-label{
-      margin: 0;
-    }
-    .circle{
-      margin-right: 6.5% !important;
-    }
+}
+@media screen and (min-width: 770px) and (max-width: 880px) {
+  #user-let-img {
+    width: 310px;
+    height: 310px;
   }
-  @media screen and (min-width: 1100px) and (max-width: 1200px) {
-    .hexcolor{
-      margin-right: -650px;
-      height: 55px !important;
-      width: 50% !important;
-      margin-bottom: 10px;
-    }
-    .color-holder{
-      width: 30px !important;
-      height: 30px !important;
-      float: right;
-      right: 47%;
-      z-index: 3;
-      position: absolute;
-    }
+  .hexcolor {
+    margin-right: -400px;
+    height: 60px !important;
+    width: 50% !important;
   }
-  @media screen and (min-width: 1100px) and (max-width: 1400px) {
-    #user-let-img:before{
-        padding-top: 42%;
-        padding-bottom: 42%;
-    }
-    #user-let-img{
-        max-width: 315px;
-    }
-    
+  .file-label {
+    padding: 10px !important;
+    margin: 0 !important;
   }
-  @media screen and (min-width: 1100px) and (max-width: 1400px) {
-    .hexcolor{
-        margin-right: -400px;
-        height: 55px !important;
-        width: 50% !important;
-        margin-bottom: 10px;
-      }
+  .circle {
+    margin-right: 0 !important;
   }
-  @media screen and (min-width: 1401px){
-      #user-let-img:before{
-        padding-top: 50%;
-    }
-    #user-let-img{
-        margin: 0;
-        z-index: -1;
-        max-width: 100%;
-        max-height: 100%;
-    }
+  .error-modal{
+    height: 420px;
   }
-  @media screen and (min-width: 1400px){
-    .hexcolor{
-        margin-right: -400px;
-        height: 60px !important;
-        width: 50% !important;
-      }
+}
+@media screen and (min-width: 1000px) and (max-width: 1070px) {
+  #user-let-img:before {
+    padding-top: 40%;
+    padding-bottom: 40%;
   }
-  @media screen and (min-width: 768px) {
-    body{
-      overflow-y: hidden;
-    }
+  #user-let-img {
+    max-width: 320px;
   }
+  .hexcolor {
+    margin-right: -490px;
+    height: 55px !important;
+    width: 50% !important;
+    margin-bottom: 10px;
+  }
+  .color-holder {
+    width: 30px !important;
+    height: 30px !important;
+    float: right;
+    right: 42%;
+    z-index: 3;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1100px) {
+  #user-let-img:before {
+    padding-top: 40%;
+    padding-bottom: 40%;
+  }
+  #user-let-img {
+    max-width: 320px;
+  }
+  .hexcolor {
+    margin-right: -500px;
+    height: 55px !important;
+    width: 50% !important;
+    margin-bottom: 10px;
+  }
+  .color-holder {
+    width: 30px !important;
+    height: 30px !important;
+    float: left;
+    right: 43%;
+    z-index: 3;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1150px) {
+  .file-label {
+    margin: 0;
+  }
+  .circle {
+    margin-right: 6.5% !important;
+  }
+}
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
+  .hexcolor {
+    margin-right: -650px;
+    height: 55px !important;
+    width: 50% !important;
+    margin-bottom: 10px;
+  }
+  .color-holder {
+    width: 30px !important;
+    height: 30px !important;
+    float: right;
+    right: 47%;
+    z-index: 3;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  #user-let-img:before {
+    padding-top: 42%;
+    padding-bottom: 42%;
+  }
+  #user-let-img {
+    max-width: 315px;
+  }
+}
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .hexcolor {
+    margin-right: -400px;
+    height: 55px !important;
+    width: 50% !important;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1401px) {
+  #user-let-img:before {
+    padding-top: 50%;
+  }
+  #user-let-img {
+    margin: 0;
+    z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hexcolor {
+    margin-right: -400px;
+    height: 60px !important;
+    width: 50% !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  /*body {
+    overflow-y: hidden;
+  }*/
+}
 @media screen and (max-width: 768px) {
-    
   .signup-content,
   .signin-content {
     flex-direction: column;
@@ -1530,82 +1587,97 @@ label.valid:after {
   .form-title {
     text-align: center;
   }
-  #user-let-img{
-      margin-left: 21%;
+  #user-let-img {
+    margin-left: 21%;
   }
-  .hexcolor{
+  .hexcolor {
     margin-top: 50px;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
   }
-  #user-let-img{
+  #user-let-img {
     width: 340px;
-    height:  340px;
-}
-.color-holder{
-  left: 0.5%;
-  margin-top: -8%;
-  margin-left: 2.5% !important;
-  z-index: 3;
-  width: 30px !important;
-  height: 30px !important;
-}
-.color-picker{
-  bottom: 30%;
-  left: 32%;
-}
-.zmdi-palette{
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
+    height: 340px;
+  }
+  .color-holder {
+    left: 0.5%;
+    margin-top: -8%;
+    margin-left: 2.5% !important;
+    z-index: 3;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .color-picker {
+    bottom: 30%;
+    left: 32%;
+  }
+  .zmdi-palette {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 
 }
 @media screen and (min-width: 551px) and (max-width: 590px) {
-    #user-let-img{
-        margin-left: 9%;
-    }
+  #user-let-img {
+    margin-left: 9%;
   }
-  @media screen and (min-width: 551px) and (max-width: 769px) {
-    .file-label{
-      padding: 10px !important;
-      width: 100%;
-      font-size: 1.5em;
-      margin-left: 20%;
-    }
-    .input-file-cont{
-      width: 100%;
-      margin: 5px !important;
-    }
-    .circle{
-      margin-top: 10% !important;
-      margin-right: 20.5%;
-    }
-    #pick-image-modal{
-      height: 410px !important;
-    }
+  .warn-image{
+    margin-left: 15%;
   }
-  @media screen and (min-width: 450px) and (max-width: 550px) {
-    #user-let-img{
-        margin-left: 0;
-    }
-    .file-label{
-      padding: 10px !important;
-      width: 100%;
-      font-size: 1.5em;
-      margin: 0 !important;
-    }
-    .input-file-cont{
-      width: 100%;
-      margin: 5px !important;
-    }
-    .circle{
-      margin-top: 10% !important;
-    }
-    #pick-image-modal{
-      height: 400px !important;
-    }
+}
+@media screen and (min-width: 551px) and (max-width: 769px) {
+  .file-label {
+    padding: 10px !important;
+    width: 100%;
+    font-size: 1.5em;
+    margin-left: 20%;
   }
+  .input-file-cont {
+    width: 100%;
+    margin: 5px !important;
+  }
+  .circle {
+    margin-top: 10% !important;
+    margin-right: 20.5%;
+  }
+  #pick-image-modal {
+    height: 410px !important;
+  }
+  .error-modal {
+    height: 460px !important;
+  }
+  .warn-image{
+    margin-left: 10%;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 550px) {
+  #user-let-img {
+    margin-left: 0;
+  }
+  .file-label {
+    padding: 10px !important;
+    width: 100%;
+    font-size: 1.5em;
+    margin: 0 !important;
+  }
+  .input-file-cont {
+    width: 100%;
+    margin: 5px !important;
+  }
+  .circle {
+    margin-top: 10% !important;
+  }
+  #pick-image-modal {
+    height: 400px !important;
+  }
+  .error-modal {
+    height: 470px !important;
+  }
+  .warn-image{
+    margin-left: 8%;
+  }
+}
 @media screen and (max-width: 400px) {
   .social-login {
     flex-direction: column;
@@ -1618,25 +1690,30 @@ label.valid:after {
     margin-right: 0;
     margin-bottom: 10px;
   }
-  .file-label{
+  .file-label {
     padding: 10px !important;
     width: 100%;
     font-size: 1.5em;
     margin: 0 !important;
   }
-  .input-file-cont{
+  .input-file-cont {
     width: 100%;
     margin: 5px !important;
   }
-  .circle{
+  .circle {
     margin-top: 10% !important;
   }
-  #pick-image-modal{
+  #pick-image-modal {
     height: 400px !important;
+  }
+  .error-modal {
+    height: 400px !important;
+  }
+  .warn-image{
+    margin-left: 6%;
   }
 }
 /*Color Picker*/
-
 
 .color-picker {
   width: 130px;
@@ -1645,7 +1722,7 @@ label.valid:after {
   padding: 5px;
   border: 1px solid #fff;
   border-radius: 14px;
-  box-shadow: 0px 0px 3px 1px #DDD;
+  box-shadow: 0px 0px 3px 1px #ddd;
   position: absolute;
   top: 61px;
   right: 30%;
@@ -1656,7 +1733,7 @@ label.valid:after {
 .color-holder {
   background: #fff;
   cursor: pointer;
-  border: 1px solid #AAA;
+  border: 1px solid #aaa;
   border-radius: 50%;
   width: 41px;
   height: 30px;
@@ -1671,7 +1748,7 @@ label.valid:after {
   list-style-type: none;
   float: left;
   margin: 2px;
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
 }
 .color-item {
   border-radius: 50%;
@@ -1681,14 +1758,17 @@ label.valid:after {
   border: 1px solid #666;
   opacity: 0.8;
   -moz-opacity: 0.8;
-  filter:alpha(opacity=8);
+  filter: alpha(opacity=8);
 }
 /*-----------------------------------------------*/
 @font-face {
   font-family: Material-Design-Iconic-Font;
-  src: url(/src/assets/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0) format("woff2"),
-    url(/src/assets/fonts/Material-Design-Iconic-Font.woff?v=2.2.0) format("woff"),
-    url(/src/assets/fonts/Material-Design-Iconic-Font.ttf?v=2.2.0) format("truetype");
+  src: url(/src/assets/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0)
+      format("woff2"),
+    url(/src/assets/fonts/Material-Design-Iconic-Font.woff?v=2.2.0)
+      format("woff"),
+    url(/src/assets/fonts/Material-Design-Iconic-Font.ttf?v=2.2.0)
+      format("truetype");
 }
 .zmdi {
   margin: 8px;
