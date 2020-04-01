@@ -1,69 +1,19 @@
+
+/* INSIRA AQUI! (NOMES AUTOEXPLICATIVOS) */
+
 .dark-mode.black-to-white {
   color: rgb(221, 221, 221) !important;
 }
 
-.dark-mode.white {
-  background-color: #494949 !important;
+.dark-mode.background-white-to-darkgray {
+  background-color: #202020 !important;
 }
 
-.dark-mode.white-2 {
-  background-color: #555966 !important;
-  color: white !important;
-}
+/*  */
 
-.dark-mode.white-3 {
-  background-color: #4d4d4d !important;
-  color: rgb(218, 218, 218) !important;
-}
 
-.dark-mode.white-4 {
-  background-color: #949494 !important;
-}
 
-.dark-mode.white-5 {
-  background-color: #8e8e94 !important;
-}
-
-.dark-mode.gray {
-  background-color: #393749 !important;
-  border-color: #393749 !important;
-  color: white !important;
-}
-
-.dark-mode.text-gray {
-  color: rgb(204, 203, 203) !important;
-}
-
-.dark-mode.text-gray-2 {
-  color: rgb(173, 173, 173) !important;
-}
-
-.dark-mode.dark-register-div{
-  background-color: #46454b;
-  color: white;
-  box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.555);
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-
-.dark-mode.dark-register-input{
-  color: white;
-  border-color: rgb(216, 216, 216);
-  background-color: #46454b;
-}
-
-.dark-mode.dark-register-ico{
-  border-radius: 4px;
-}
-
-.dark-mode.text-sobre{
-  background-color: #818181 !important;
-  color: rgb(230, 230, 230) !important;
-}
-
-.dark-mode.linha-sobre{
-  background-color: rgb(180, 180, 180) !important;
-}
+/* feito antigamente */
 
 .img-header .img-wrap:before {
   background-image: linear-gradient(
@@ -102,4 +52,73 @@
   border-left: 1px solid rgb(83, 83, 83) !important;
   border-right: 1px solid rgb(83, 83, 83) !important;
   box-shadow: 10px 5px 5px rgb(83, 83, 83) !important;
+}
+
+.dark-mode.white {
+  background-color: #494949 !important;
+}
+
+/* ... */
+
+.dark-mode.white-2 {
+  background-color: #555966 !important;
+  color: white !important;
+}
+
+.dark-mode.white-3 {
+  background-color: #4d4d4d !important;
+  color: rgb(218, 218, 218) !important;
+}
+
+.dark-mode.white-4 {
+  background-color: #949494 !important;
+}
+
+.dark-mode.white-5 {
+  background-color: #8e8e94 !important;
+}
+
+.dark-mode.gray {
+  background-color: #393749 !important;
+  border-color: #393749 !important;
+  color: white !important;
+}
+
+.dark-mode.text-gray {
+  color: rgb(204, 203, 203) !important;
+}
+
+.dark-mode.text-gray-2 {
+  color: rgb(173, 173, 173) !important;
+}
+
+.dark-mode.white-4 {
+  background-color: #949494 !important;
+}
+
+.dark-mode.dark-register-div{
+  background-color: #46454b;
+  color: white;
+  box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.555);
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+
+.dark-mode.dark-register-input{
+  color: white;
+  border-color: rgb(216, 216, 216);
+  background-color: #46454b;
+}
+
+.dark-mode.dark-register-ico{
+  border-radius: 4px;
+}
+
+.dark-mode.text-sobre{
+  background-color: #818181 !important;
+  color: rgb(230, 230, 230) !important;
+}
+
+.dark-mode.linha-sobre{
+  background-color: rgb(180, 180, 180) !important;
 }

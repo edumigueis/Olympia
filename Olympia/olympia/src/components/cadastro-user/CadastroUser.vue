@@ -139,7 +139,7 @@
           </div>
         </div>
       </section>
-      <div id="pick-image-modal">
+      <div id="pick-image-modal" class="background-white-to-darkgray" >
         <h3 class="file-input-title black-to-white">Selecione uma Imagem</h3>
         <ul class="file-list">
           <li class="file-item file-item-1">

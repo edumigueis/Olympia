@@ -111,6 +111,7 @@ setInterval(() => {
           $(".ui-widget-overlay").fadeOut(350);
           $("#pick-image-modal").fadeOut(500);
           $(".error-modal").fadeOut(500);
+          $(".error-modal").css('opacity','0');
         } 
         else
         if(selectedImage == null && $("#name").val() != "")
@@ -121,6 +122,7 @@ setInterval(() => {
           $(".ui-widget-overlay").fadeOut(350);
           $("#pick-image-modal").fadeOut(500);
           $(".error-modal").fadeOut(500);
+          $(".error-modal").css('opacity','0');
         }
         else {
           $(".hexcolor").css("display", "none");
@@ -133,6 +135,7 @@ setInterval(() => {
           $(".ui-widget-overlay").fadeOut(350);
           $("#pick-image-modal").fadeOut(500);
           $(".error-modal").fadeOut(500);
+          $(".error-modal").css('opacity','0');
         }
       });
       $(".bin").on("click", function() {
@@ -256,8 +259,9 @@ setInterval(() => {
         }
         if (!user.match(/^[A-Za-z0-9 ]+$/)) {
           $(".error-modal").fadeIn(500);
+          $(".error-modal").css('opacity','1');
           $(".ui-widget-overlay").fadeIn(500);
-          $(".warn").html("O username não deve ter arroba no ínicio e não deve ter acentuação. Ex. olympia");
+          $(".warn").html("O username não deve ter @ no ínicio e não deve ter acentuação.");
           $('#user').val("");
         }                     
       })
@@ -270,8 +274,9 @@ setInterval(() => {
         }
         if (!regName.test(name)) {
           $(".error-modal").fadeIn(500);
+          $(".error-modal").css('opacity','1');
           $(".ui-widget-overlay").fadeIn(500);
-          $(".warn").html("O nome deve ter algúns caracteres ao menos e possuir apenas um sobrenome.");
+          $(".warn").html("Deve ser fornecido o nome e o sobrenome.");
           $('#name').val("");
         }                     
       })
@@ -283,8 +288,9 @@ setInterval(() => {
         }
         if (!validar(email)) {
           $(".error-modal").fadeIn(500);
+          $(".error-modal").css('opacity','1');
           $(".ui-widget-overlay").fadeIn(500);
-          $(".warn").html("O email deve ter um arroba(@) seguido pelo domínio");
+          $(".warn").html("O email deve ter um @ seguido pelo domínio.");
           $('#email').val("");
         }
       })
@@ -373,13 +379,15 @@ setInterval(() => {
       if(color == "rgb(237, 41, 57)"){
         $(".ui-widget-overlay").fadeIn(450);
         $(".error-modal").fadeIn(500);
+        $(".error-modal").css('opacity','0');
         $('#pass').val("");
         $('.is-same-cont').css("background-color","transparent");
-        $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições.");
+        $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições!");
       }
       if(color == "rgb(255, 165, 0)"){
         $(".ui-widget-overlay").fadeIn(450);
         $(".error-modal").fadeIn(500);
+        $(".error-modal").css('opacity','1');
         $('#pass').val("");
         $('.is-same-cont').css("background-color","transparent");
         $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições.");
@@ -401,8 +409,8 @@ setInterval(() => {
       }
     });
       $(".signup-image-link").on("click", function() {
-        $(".ui-widget-overlay").fadeIn();
-        $("#pick-image-modal").fadeIn();
+        $(".ui-widget-overlay").fadeIn(500);
+        $("#pick-image-modal").fadeIn(500);
       });
       $("#signup").on("click", function(e) {
         if ($("#name").val() == "") {
@@ -416,8 +424,9 @@ setInterval(() => {
         } else if ($("#re_pass").val() == "") {
           return;
         } else if ($("#pass").val() != $("#re_pass").val()) {
-          $(".warn").text("As senhas devem ser as mesmas ao confirmar.");
+          $(".warn").text("As senhas não correspondem!");
           $(".error-modal").fadein();
+          $(".error-modal").css('opacity','1');
           return;
         }
       });

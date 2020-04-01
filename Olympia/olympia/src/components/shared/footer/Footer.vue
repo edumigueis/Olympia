@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" class="white" style="margin-top: -10px;">
+  <div id="footer" class="white dark-mode-activators" style="margin-top: -10px;">
     <div id="copyright" class="wfont">© OLYMPIA INC. All Rights Reserved.</div>
 
     <div id="lower-footer">
