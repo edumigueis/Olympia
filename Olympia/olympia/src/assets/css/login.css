@@ -4,8 +4,8 @@
   }
   #small-footer{
     position: absolute !important;
-    right: 0;
-    bottom: 0;
+    right: 0 !important;
+    bottom: 0 !important;
     height: 45px !important;
     padding-top: 0 !important;
   }
@@ -20,7 +20,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: white;
     z-index: 3;
   }
   body{
@@ -781,7 +781,7 @@
       url(/src/assets/fonts/poppins-v5-latin-600.svg#Poppins) format("svg");
   }
   @font-face {
-    font-family: poppins;
+    font-family: poppins-bold;
     font-style: normal;
     font-weight: 700;
     src: url(/src/assets/fonts/poppins-v5-latin-700.eot);
@@ -1023,11 +1023,12 @@
     margin-top: 25px;
     cursor: pointer;
     font-size: 16px;
+    transition: 0.5s all;
   }
   .form-submit:hover {
-    padding: 15px 39px;
-    font-weight: bold;
+    font-family: 'poppins-bold';
     color: #fff;
+    opacity: 0.93;
   }
   #signin {
     margin-top: 16px;
@@ -1306,16 +1307,10 @@
       max-width: 900px;
     }
   }
-  @media screen and (min-width: 769px) and (min-width: 1023px) {
-    .signup{
-        margin-bottom: 3% !important;
-    }
-  }
-  
   @media screen and (min-width: 840px) {
-    /*body {
+    body {
       overflow-y: hidden;
-    }*/
+    }
   }
   @media screen and (min-width: 770px) and (max-width: 999px) {
    
@@ -1393,9 +1388,6 @@
     }
     .form-title {
       text-align: center;
-    }
-    .signup{
-        margin-bottom: 38% !important;
     }
   }
   @media screen and (min-width: 551px) and (max-width: 590px) {

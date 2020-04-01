@@ -1,3 +1,4 @@
+var jaFoi = false;
 var w = c.width = window.innerWidth,
     h = c.height = window.innerHeight,
     ctx = c.getContext( '2d' ),
@@ -41,7 +42,7 @@ function init() {
   for( var i = 0; i < initialLines; ++i )
     lines.push( new Line( starter ) );
   
-  ctx.fillStyle = '#222';
+  ctx.fillStyle = '#DDD';
   ctx.fillRect( 0, 0, w, h );
   
   // if you want a cookie ;)
@@ -60,7 +61,7 @@ function anim() {
   ++frame;
   
   ctx.shadowBlur = 0;
-  ctx.fillStyle = 'rgba(0,0,0,.02)';
+  ctx.fillStyle = 'rgba(255,255,255,.02)';
   ctx.fillRect( 0, 0, w, h );
   ctx.shadowBlur = .5;
   
