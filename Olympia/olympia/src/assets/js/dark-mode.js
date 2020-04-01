@@ -25,6 +25,7 @@ $(document).ready(function () {
             $(".text-sobre").removeClass("dark-mode");
             $(".linha-sobre").removeClass("dark-mode");
             $(".gray").removeClass("dark-mode");
+            $(".gray-n-imp").removeClass("dark-mode");
             $('#dark-mode-link').text('MODO NOTURNO');
         }
         else {
@@ -42,6 +43,7 @@ $(document).ready(function () {
             $(".text-sobre").addClass("dark-mode");
             $(".linha-sobre").addClass("dark-mode");
             $(".gray").addClass("dark-mode");
+            $(".gray-n-imp").addClass("dark-mode");
             $('#dark-mode-link').text('MODO CLARO');
             $('#dark-mode-link-smf').text('MODO CLARO');
         }
@@ -62,6 +64,7 @@ $(document).ready(function () {
             $(".text-sobre").removeClass("dark-mode");
             $(".linha-sobre").removeClass("dark-mode");
             $(".gray").removeClass("dark-mode");
+            $(".gray-n-imp").removeClass("dark-mode");
             $('#dark-mode-link').text('MODO NOTURNO');
             $('#dark-mode-link-smf').text('MODO NOTURNO');
         }
@@ -80,6 +83,7 @@ $(document).ready(function () {
             $(".text-sobre").addClass("dark-mode");
             $(".linha-sobre").addClass("dark-mode");
             $(".gray").addClass("dark-mode");
+            $(".gray-n-imp").addClass("dark-mode");
             $('#dark-mode-link').text('MODO CLARO');
             $('#dark-mode-link-smf').text('MODO CLARO');
         }

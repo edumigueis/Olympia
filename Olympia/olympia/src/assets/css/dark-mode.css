@@ -86,7 +86,11 @@
   cursor: pointer !important;
   background-size: 4px 50px !important;
 }
-
+.dark-mode.gray-n-imp{
+  background-color: #393749;
+  border-color: #393749;
+  color: white;
+}
 #calendar-red {
   box-shadow: 10px 5px 5px rgb(83, 83, 83) !important;
   border-left: 1px solid rgb(83, 83, 83) !important;
