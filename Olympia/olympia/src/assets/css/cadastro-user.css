@@ -7,7 +7,6 @@
   position: fixed;
   margin: 0;
 }
-
 #dark-mode-link {
   position: absolute;
   right: 3%;
@@ -40,6 +39,11 @@ body {
   z-index: 2;
   display: none;
   margin-top: 50px;
+  width: auto !important;
+}
+.bin:hover {
+  height: 42px;
+  
 }
 #background-wrap {
   bottom: 0;
@@ -75,6 +79,7 @@ body {
   text-align: center;
   line-height: 150px;
   margin: 20px 0;
+  transition: 1s all;
 }
 #user-let-img:hover {
   opacity: 0.8;
@@ -105,6 +110,7 @@ body {
   font-size: 14em;
   font-family: "Verdana";
   color: #f8f8f8 !important;
+  transition: 1s all;
 }
 /* KEYFRAMES */
 
@@ -607,6 +613,7 @@ list-type-ulli,
   left: 25%;
   top: 20%;
   background-color: #fff;
+  transition: 1s all;
 }
 .error-modal {
   display: none;
@@ -622,22 +629,26 @@ list-type-ulli,
   left: 25%;
   top: 20%;
   background-color: #fff;
+  transition: 1s all;
 }
 .warn-image{
   margin-top: 10px;
   margin-left: 35%;
   width: 200px;
   height: 200px;
+  transition: 1s all;
 }
 .warning-pic{
   width: 100%;
   height: auto;
+  transition: 1s all;
 }
 .warn{
   font-family: 'poppins';
   font-size: 1.7em;
   width: 100%;
   text-align: center;
+  transition: 1s all;
 }
 .ui-widget-overlay {
   opacity: 0.7 !important;
@@ -649,6 +660,7 @@ list-type-ulli,
   position: absolute;
   top: 0;
   z-index: 7;
+  transition: 1s all;
 }
 /* Esconde o input */
 input[type="file"] {
@@ -716,11 +728,12 @@ ul li {
   background-color: #fff;
   transition: 0.08s all;
 }
-.gray{
+.gray-n-imp{
   width: 25px;
   border-radius: 50%;
   height: 25px;
   transition: 0.08s all;
+  background-color: #fff;
 }
 .is-same-cont{
   width: 25px;
@@ -938,10 +951,6 @@ input[type="radio"] {
   -o-appearance: radio !important;
   -ms-appearance: radio !important;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
 figure {
   margin: 0;
 }
@@ -1053,7 +1062,7 @@ figure {
 .form-submit {
   display: inline-block;
   border-radius: 5px;
-  transition: 0.1s all;
+  transition: 1s all;
   background: linear-gradient(
     136deg,
     #fc6c85,
@@ -1078,19 +1087,9 @@ figure {
   font-size: 16px;
 }
 .form-submit:hover {
+  padding: 15px 39px;
   font-weight: bold;
   color: #fff;
-  border-bottom: none;
-  width: auto;
-  padding: 15px 39px;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  margin-top: 25px;
-  cursor: pointer;
-  font-size: 16px;
 }
 #signin {
   margin-top: 16px;
@@ -1311,6 +1310,10 @@ label.valid:after {
 .socials li a {
   text-decoration: none;
 }
+img{
+  width: 100%;
+  height: auto;
+}
 .socials li a i {
   width: 30px;
   height: 30px;
@@ -1357,9 +1360,13 @@ label.valid:after {
 }
 #user-let-img {
   width: 100%;
+  
 }
 #user-prof-image {
-  border-radius: 50%;
+  border-radius: 300px;
+  height: 300px;
+  width: 300px;
+  transition: 2s all;
 }
 @media screen and (max-width: 1200px) {
   .container {
@@ -1371,6 +1378,15 @@ label.valid:after {
   .container {
     max-width: 1200px;
   }
+  
+}
+@media screen and (min-width: 1400px){
+  #user-prof-image {
+    border-radius: 300px;
+    height: 300px;
+    width: 300px;
+  }
+  
 }
 @media screen and (min-width: 840px) {
   /*body {
@@ -1397,7 +1413,15 @@ label.valid:after {
     height: 420px;
   }
 }
-@media screen and (min-width: 770px) and (max-width: 880px) {
+@media screen and (min-width: 771px) and (max-width: 999px) {
+
+  #user-prof-image {
+    border-radius: 300px;
+    height: 300px;
+    width: 300px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 880px) {
   #user-let-img {
     width: 310px;
     height: 310px;
@@ -1416,6 +1440,11 @@ label.valid:after {
   }
   .error-modal{
     height: 420px;
+  }
+  #user-prof-image {
+    border-radius: 250px;
+    height: 250px;
+    width: 250px;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1070px) {
@@ -1439,6 +1468,16 @@ label.valid:after {
     right: 42%;
     z-index: 3;
     position: absolute;
+  }
+  #user-prof-image {
+    border-radius: 300px;
+    height: 300px;
+    width: 300px;
+  }
+  #user-prof-image {
+    border-radius: 290px;
+    height: 290px;
+    width: 290px;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1100px) {
@@ -1650,6 +1689,11 @@ label.valid:after {
   .warn-image{
     margin-left: 10%;
   }
+  #user-prof-image {
+    border-radius: 400px;
+    height: 400px;
+    width: 400px;
+  }
 }
 @media screen and (min-width: 450px) and (max-width: 550px) {
   #user-let-img {
@@ -1676,6 +1720,11 @@ label.valid:after {
   }
   .warn-image{
     margin-left: 8%;
+  }
+  #user-prof-image {
+    border-radius: 350px;
+    height: 350px;
+    width: 350px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -1711,6 +1760,11 @@ label.valid:after {
   }
   .warn-image{
     margin-left: 6%;
+  }
+  #user-prof-image {
+    border-radius: 210px;
+    height: 210px;
+    width: 210px;
   }
 }
 /*Color Picker*/

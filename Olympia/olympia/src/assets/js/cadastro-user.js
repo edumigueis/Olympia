@@ -63,11 +63,6 @@ setInterval(() => {
       var firstLet = null;
       $("#tel").mask("+00 (00) 00000-0000");
 
-      $("#name").focusin(function() {
-        $("#hexcolor").fadeOut();
-        $(".zmdi.zmdi-palette").fadeOut();
-      });
-
       $("#name").focusout(function() {
         $(".zmdi.zmdi-palette").fadeIn();
         $("#hexcolor").fadeIn();
@@ -106,7 +101,7 @@ setInterval(() => {
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
           $("#user-let-img").empty();
-          $('.is-same-cont').css("background-color","rgb(255, 255, 255)");
+          $('.is-same-cont').css("background-color","transparent");
           $(".signup-image").html(
             "<figure class='default-prof-user'><img src='" +
               selectedImage +
@@ -116,10 +111,21 @@ setInterval(() => {
           $(".ui-widget-overlay").fadeOut(350);
           $("#pick-image-modal").fadeOut(500);
           $(".error-modal").fadeOut(500);
-        } else {
+        } 
+        else
+        if(selectedImage == null && $("#name").val() != "")
+        {
+          $(".hexcolor").css("display", "block");
+          $(".color-holder").css("display", "block");
+          $('.is-same-cont').css("background-color","transparent");
+          $(".ui-widget-overlay").fadeOut(350);
+          $("#pick-image-modal").fadeOut(500);
+          $(".error-modal").fadeOut(500);
+        }
+        else {
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
-          $('.is-same-cont').css("background-color","rgb(255, 255, 255)");
+          $('.is-same-cont').css("background-color","transparent");
           $("#user-let-img").empty();
           $(".signup-image").html(
             "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
@@ -242,6 +248,50 @@ setInterval(() => {
       $('#pass').on("keyup",function (){
         forcaSenha($(this).val());                        
       })
+      $('#user').on("keyup",function (){
+        var user = $('#user').val();
+        if(user ==  "")
+        {
+          return;
+        }
+        if (!user.match(/^[A-Za-z0-9 ]+$/)) {
+          $(".error-modal").fadeIn(500);
+          $(".ui-widget-overlay").fadeIn(500);
+          $(".warn").html("O username não deve ter arroba no ínicio e não deve ter acentuação. Ex. olympia");
+          $('#user').val("");
+        }                     
+      })
+      $('#name').on("focusout",function (){
+        var name = $('#name').val();
+        var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+        if(name ==  "")
+        {
+          return;
+        }
+        if (!regName.test(name)) {
+          $(".error-modal").fadeIn(500);
+          $(".ui-widget-overlay").fadeIn(500);
+          $(".warn").html("O nome deve ter algúns caracteres ao menos e possuir apenas um sobrenome.");
+          $('#name').val("");
+        }                     
+      })
+      $('#email').on("focusout",function (){
+        var email = $('#email').val();
+        if(email ==  "")
+        {
+          return;
+        }
+        if (!validar(email)) {
+          $(".error-modal").fadeIn(500);
+          $(".ui-widget-overlay").fadeIn(500);
+          $(".warn").html("O email deve ter um arroba(@) seguido pelo domínio");
+          $('#email').val("");
+        }
+      })
+      function validar(emailp){
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(emailp);
+      }
       function forcaSenha(senha){
 
         var forca = 0;
@@ -317,22 +367,22 @@ setInterval(() => {
       var color = $('.locker-cont').css("background-color");
       if($('#pass').val() == "")
       {
-        $('.locker-cont').css("background-color","#FFF")
+        $('.locker-cont').css("background-color","transparent")
         color = "rgb(255, 255, 255)";
       }
       if(color == "rgb(237, 41, 57)"){
         $(".ui-widget-overlay").fadeIn(450);
         $(".error-modal").fadeIn(500);
         $('#pass').val("");
-        $('.is-same-cont').css("background-color","rgb(255, 255, 255)");
-        $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são recomendadas. Evite repetições.");
+        $('.is-same-cont').css("background-color","transparent");
+        $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições.");
       }
       if(color == "rgb(255, 165, 0)"){
         $(".ui-widget-overlay").fadeIn(450);
         $(".error-modal").fadeIn(500);
         $('#pass').val("");
-        $('.is-same-cont').css("background-color","rgb(255, 255, 255)");
-        $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são recomendadas. Evite repetições.");
+        $('.is-same-cont').css("background-color","transparent");
+        $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições.");
       }
     });
 
@@ -347,7 +397,7 @@ setInterval(() => {
       if ($('#pass').val() != $('#re_pass').val() && $('#pass').val() != "")
         $('.is-same-cont').css("background-color","rgb(237, 41, 57)");
       if($('#pass').val() == ""){
-        $('.is-same-cont').css("background-color","rgb(255, 255, 255)")
+        $('.is-same-cont').css("background-color","transparent")
       }
     });
       $(".signup-image-link").on("click", function() {
@@ -355,7 +405,7 @@ setInterval(() => {
         $("#pick-image-modal").fadeIn();
       });
       $("#signup").on("click", function(e) {
-        if ($("#nome").val() == "") {
+        if ($("#name").val() == "") {
           return;
         } else if ($("#email").val() == "") {
           return;

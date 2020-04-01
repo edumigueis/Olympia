@@ -15,7 +15,7 @@
               <form class="register-form" id="register-form">
                 <div class="form-group">
                   <label for="name">
-                    <div class="gray">
+                    <div class="gray-n-imp">
                     <i class="zmdi dark-register-ico zmdi-account material-icons-name" style="margin-top: 5.5px"></i>
                     </div>
                   </label>
@@ -29,8 +29,23 @@
                   />
                 </div>
                 <div class="form-group">
+                  <label for="user">
+                    <div class="gray-n-imp">
+                    <i class="zmdi dark-register-ico zmdi-sign-in" style="margin-top: 5.5px"></i>
+                    </div>
+                  </label>
+                  <input
+                    class="dark-register-input"
+                    type="text"
+                    name="user"
+                    id="user"
+                    placeholder="Seu Nome de Usuário"
+                    required
+                  />
+                </div>
+                <div class="form-group">
                   <label for="email">
-                    <div class="gray">
+                    <div class="gray-n-imp">
                     <i class="zmdi dark-register-ico zmdi-email" style="margin-top: 5.5px"></i>
                     </div>
                   </label>
@@ -44,23 +59,8 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="tel">
-                    <div class="gray">
-                    <i class="zmdi dark-register-ico zmdi-mail-send" style="margin-top: 5.5px"></i>
-                    </div>
-                  </label>
-                  <input
-                    class="dark-register-input"
-                    type="text"
-                    name="tel"
-                    id="tel"
-                    placeholder="Seu Telefone"
-                    required
-                  />
-                </div>
-                <div class="form-group">
                   <label for="pass">
-                    <div class="locker-cont gray">
+                    <div class="locker-cont gray-n-imp">
                     <i class="zmdi dark-register-ico zmdi-lock" style="margin-top: 5.5px"></i>
                     </div>
                   </label>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="form-group">
                   <label for="re-pass">
-                    <div class="is-same-cont gray">
+                    <div class="is-same-cont gray-n-imp">
                     <i class="zmdi dark-register-ico zmdi-lock-outline" style="margin-top: 5.5px"></i>
                     </div>
                   </label>
