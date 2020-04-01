@@ -6,12 +6,11 @@
                     <div class="close-2 close">
                         <img class="close-2-img" src="/src/assets/images/x.png">
                     </div>
-
-                    <svg class="svg-contact" viewBox="0 0 500 250" x='699' y='999' version="1.1" xmlns="http://www.w3.org/2000/svg">     
-                        <circle id="contato-1" class="white-2" cx="100" cy="150" r="90" fill="white"></circle>
-                        <circle id="contato-2" class="white-2" cx="210" cy="100" r="60" fill="white"></circle>
-                        <circle id='contato-3' class="white-2" cx="315" cy="160" r="75" fill="white"></circle>
-                    </svg>
+                        <svg class="svg-contact" viewBox="0 0 500 250" x='699' y='999' version="1.1" xmlns="http://www.w3.org/2000/svg">     
+                            <circle id="contato-1" class="white-2" cx="100" cy="150" r="90" fill="white"></circle>
+                            <circle id="contato-2" class="white-2" cx="210" cy="100" r="60" fill="white"></circle>
+                            <circle id='contato-3' class="white-2" cx="315" cy="160" r="75" fill="white"></circle>
+                        </svg>
                         <div class="div-text">
                             <div id="div-1">
                                 <div class="border-text">

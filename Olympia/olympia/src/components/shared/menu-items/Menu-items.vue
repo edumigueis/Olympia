@@ -21,6 +21,14 @@
                 </table>
 
                 <div id="menu-list">
+                    <div class="svg-detalhes-content">
+                        <svg class="svg-detalhes" viewBox="0 0 500 250" x='699' y='999' version="1.1" xmlns="http://www.w3.org/2000/svg"> 
+                            <circle id="detalhes-artes-back" class="white-2"></circle>    
+                            <circle id="detalhes-artes" class="white-2"></circle>
+                            <circle id="detalhes-artes-front" class="white-2"></circle>    
+                        </svg>
+                    </div>
+
                     <div id="col-menu-1">
                         <div class="menu-item-1 row1">
                             <a href="/"><img class="ico" src="/src/assets/images/home.png"></a>
