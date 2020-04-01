@@ -61,7 +61,6 @@ setInterval(() => {
   if ($("#container-cad-user").css("display") == "block" && jaFoi == false) {
     $(function() {
       var firstLet = null;
-      $("#tel").mask("+00 (00) 00000-0000");
 
       $("#name").focusout(function() {
         $(".zmdi.zmdi-palette").fadeIn();
@@ -278,6 +277,21 @@ setInterval(() => {
           $(".ui-widget-overlay").fadeIn(500);
           $(".warn").html("Deve ser fornecido o nome e o sobrenome.");
           $('#name').val("");
+        }                     
+      })
+      $('#tel').on("focusout",function (){
+        var tele = $('#tel').val();
+        var regName = /(([+][(]?[0-9]{1,3}[)]?)|([(]?[0-9]{4}[)]?))\s*[)]?[-\s\.]?[(]?[0-9]{1,3}[)]?([-\s\.]?[0-9]{3})([-\s\.]?[0-9]{3,4})/g;
+        if(tele ==  "")
+        {
+          return;
+        }
+        if (!regName.test(tele)) {
+          $(".error-modal").fadeIn(500);
+          $(".error-modal").css('opacity','1');
+          $(".ui-widget-overlay").fadeIn(500);
+          $(".warn").html("Deve ser fornecido telefone nos padrões: +55 00 000000000 (BR), +591 00000000, +1 000 000 0000, +(591) 0000000, +(591) (0) 0000000, 0000 00000000, 0001 0000000000 ou (0001) 0000000.");
+          $('#tel').val("");
         }                     
       })
       $('#email').on("focusout",function (){

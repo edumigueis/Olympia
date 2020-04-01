@@ -1144,9 +1144,8 @@
 
 /*Small Footer*/
 #small-footer {
-  transition: 0.3s background, color;
-  position: absolute;
-  bottom: 0;
+  transition: 0.3s all;
+  position: relative;
   padding: 15px;
   height: 60px;
   width: 102%;

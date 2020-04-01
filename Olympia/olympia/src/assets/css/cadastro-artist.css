@@ -878,6 +878,19 @@ ul li {
 }
 @font-face {
   font-family: poppins;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/src/assets/fonts/poppins-v5-latin-700.eot);
+  src: local("Poppins Bold"), local("Poppins-Bold"),
+    url(/src/assets/fonts/poppins-v5-latin-700.eot?#iefix)
+      format("embedded-opentype"),
+    url(/src/assets/fonts/poppins-v5-latin-700.woff2) format("woff2"),
+    url(/src/assets/fonts/poppins-v5-latin-700.woff) format("woff"),
+    url(/src/assets/fonts/poppins-v5-latin-700.ttf) format("truetype"),
+    url(/src/assets/fonts/poppins-v5-latin-700.svg#Poppins) format("svg");
+}
+@font-face {
+  font-family: poppins;
   font-style: italic;
   font-weight: 700;
   src: url(/src/assets/fonts/poppins-v5-latin-700italic.eot);
@@ -1081,6 +1094,7 @@ body {
 }
 .form-title {
   margin-bottom: 33px;
+  font-family: poppins;
 }
 .signup-image {
   margin-top: 45px;
