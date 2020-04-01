@@ -299,10 +299,6 @@ p {
   padding: 2px;
 }
 
-#container-contatos {
-  margin-top: -95px !important;
-}
-
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 50%;

@@ -8,6 +8,8 @@ import Eventos from './components/eventos/Eventos.vue';
 import Sobre from './components/sobre/Sobre.vue';
 import Cadastro from './components/cadastro-user/CadastroUser.vue';
 import Login from './components/login/Login.vue';
+import Literatura from './components/literatura/Literatura.vue';
+import Cinema from './components/cinema/Cinema.vue';
 
 export const routes = [
 
@@ -19,5 +21,7 @@ export const routes = [
     { path: '/eventos', component: Eventos, titulo: 'E V E N T O S' },
     { path: '/sobre', component: Sobre, titulo: 'S O B R E' },
     { path: '/cadastro/user', component: Cadastro, titulo: 'C A D A S T R O' },
-    { path: '/login', component: Login, titulo: 'L O G I N' }
+    { path: '/login', component: Login, titulo: 'L O G I N' },
+    { path: '/literatura', component: Literatura, titulo: 'L I T E R A T U R A'},
+    { path: '/cinema', component: Cinema, titulo: 'C I N E M A'}
 ]

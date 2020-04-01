@@ -1,7 +1,7 @@
 <template>
   <main>
-    <div id="container-literatura">
-      <title>L I T E R A T U R A</title>
+    <div id="container-cinema">
+      <title>C I N E M A</title>
       <link rel="stylesheet" href="/src/assets/css/event-detail.css" />
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
 
