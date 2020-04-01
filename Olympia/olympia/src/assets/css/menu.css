@@ -1145,7 +1145,7 @@
 /*Small Footer*/
 #small-footer {
   transition: 0.3s background, color;
-  position: relative;
+  position: absolute;
   bottom: 0;
   padding: 15px;
   height: 60px;
@@ -1157,8 +1157,8 @@
   border-top: 1px solid #bebebe8e;
   font-family: "Bruzh";
   letter-spacing: 0.15em;
-  font-size: 1.2em;
-  transition: 1s all;
+  font-size: 1.1em;
+  transition: 2s all;
   -webkit-transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
   -moz-transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
   -o-transition: height 0.5s ease-in-out 1s, margin-top 0.5s ease-in-out 1s;
@@ -1167,8 +1167,8 @@
 
 #dark-mode-link-smf {
   position: absolute;
-  right: 7%;
-  bottom: 6%;
+  right: 5.5%;
+  bottom: 20%;
   font-family: "Bebas-Neue-Regular";
   font-size: 1.5em;
   float: right;
@@ -1176,6 +1176,21 @@
 }
 
 #dark-mode-link-smf:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#use-terms-smf {
+  position: absolute;
+  left: 1%;
+  bottom: 20%;
+  font-family: "Bebas-Neue-Regular";
+  font-size: 1.5em;
+  float: left;
+  z-index: 1000;
+}
+
+#use-terms-smf:hover {
   font-weight: bold;
   cursor: pointer;
 }
