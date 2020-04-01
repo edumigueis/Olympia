@@ -295,10 +295,6 @@ body {
   position: absolute;
 }
 
-p {
-  padding: 2px;
-}
-
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 50%;
