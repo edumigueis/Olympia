@@ -208,6 +208,7 @@ setInterval(() => {
 
   if ($('#container-welcome').length && jaFoi == false) {
     $(function () {
+      $('.usuario').css('display','block')
       setTimeout(function () {
         if ($('.start').is(':hover')) {
           $('.svg1').css('transform','rotate(60deg)')
@@ -224,15 +225,14 @@ setInterval(() => {
       }, 100);
 
       $('.start').click(function(){
-        $('.title').text('O que você é?');
+        $('.title').text('Quem é você?');
         $('.sobre').css('opacity',0);
         $('.login').css('opacity',0);
         $('.start').removeClass('start').addClass('artista');
         $('.artista').text('Artista');
         $('.artista').css('margin-left','100%');
-        $('.usuario').fadeIn(500);
-        $('.usuario').css('margin-left','-100%');
-        $('.info').css('margin-left','-3.5%');
+        $('.usuario').css('opacity',1);
+        $('.usuario').css('margin-left','-2.8em');
         $('#more-arrows').css('transition','1s all');
         $('#more-arrows').css('opacity',1)
         $('#animation').css('animation','swing 1s ease')
@@ -247,10 +247,9 @@ setInterval(() => {
         $('.start').text('Começar');
         $('.start').css('margin-left','0');
         $('.usuario').css('margin-left','0');
-        $('.info').css('margin-left','0');
         $('#more-arrows').css('transition','1s all');
         $('#more-arrows').css('opacity',0);
-        $('.usuario').fadeOut(400);
+        $('.usuario').css('opacity',0);
         $('#animation').css('animation','swing 1s ease')
         $('#animation').css('animation-iteration-count','2')
       })

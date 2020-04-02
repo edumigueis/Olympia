@@ -48,7 +48,7 @@ svg {
   max-height: 90%;
   height: auto;
   position: absolute;
-  top: 90%;
+  top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 1s all;
@@ -91,7 +91,12 @@ text {
 
 .usuario {
   display: none;
-  position: sticky;
+  opacity: 0;
+  transition: 1.2s all;
+  position: absolute;
+  margin-top:-1.335em;
+  z-index: -10;
+  margin-bottom: 0;
 }
 
 .start:hover,
