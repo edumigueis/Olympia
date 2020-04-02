@@ -222,20 +222,38 @@ setInterval(() => {
           $('.svg1').css('transform','rotate(10deg)')
         }
       }, 100);
-      
-      setTimeout(function () {
-        if ($('.sobre').is(':hover')) {
-          $('.svg2').css('transform','rotate(60deg)')
-          $(".hand-2").css('opacity',0);
-          $(".hand-tapping-2").css('opacity',0);
-          $(".tap-target-2").css('opacity',0);
-        } else {
-          $(".hand-2").css('opacity',1);
-          $(".hand-tapping-2").css('opacity',1);
-          $(".tap-target-2").css('opacity',1);
-          $('.svg2').css('transform','rotate(10deg)')
-        }
-      }, 100);
+
+      $('.start').click(function(){
+        $('.title').text('O que você é?');
+        $('.sobre').css('opacity',0);
+        $('.login').css('opacity',0);
+        $('.start').removeClass('start').addClass('artista');
+        $('.artista').text('Artista');
+        $('.artista').css('margin-left','100%');
+        $('.usuario').fadeIn(500);
+        $('.usuario').css('margin-left','-100%');
+        $('.info').css('margin-left','-3.5%');
+        $('#more-arrows').css('transition','1s all');
+        $('#more-arrows').css('opacity',1)
+        $('#animation').css('animation','swing 1s ease')
+        $('#animation').css('animation-iteration-count','2')
+      })
+
+      $('#more-arrows').click(function(){
+        $('.title').text('Bem vindo!');
+        $('.sobre').css('opacity',1);
+        $('.login').css('opacity',1);
+        $('.artista').removeClass('artista').addClass('start');
+        $('.start').text('Começar');
+        $('.start').css('margin-left','0');
+        $('.usuario').css('margin-left','0');
+        $('.info').css('margin-left','0');
+        $('#more-arrows').css('transition','1s all');
+        $('#more-arrows').css('opacity',0);
+        $('.usuario').fadeOut(400);
+        $('#animation').css('animation','swing 1s ease')
+        $('#animation').css('animation-iteration-count','2')
+      })
     })
   }
   else if (!$('#container-welcome').length) {

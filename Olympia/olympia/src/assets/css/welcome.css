@@ -63,41 +63,61 @@ text {
 }
 
 .title {
-  font-size: 40px;
+  font-size: 45px;
   margin-bottom: 2%;
+  color: rgb(170, 170, 170, 0.8);
+  transition: 1s all;
 }
 
 .info {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.801);
   font-family: "Walkway";
   text-align: center;
   position: fixed;
   padding: 2%;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0);
   top: 20%;
   left: 33%;
   width: 30%;
-  transition: 1s all;
+  transition: all 1s;
 }
 
-.start {
+.start,
+.artista,
+.usuario {
   transition: 1s all;
-  font-size: 70px;
-}
-
-.start:hover {
   font-size: 80px;
+}
+
+.usuario {
+  display: none;
+  position: sticky;
+}
+
+.start:hover,
+.artista:hover,
+.usuario:hover {
+  font-size: 90px;
+  cursor: pointer;
+}
+
+.login {
+  transition: 1s all;
+  font-size: 45px;
+}
+
+.login:hover {
+  font-size: 50px;
   cursor: pointer;
 }
 
 .sobre {
   transition: 1s all;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .sobre:hover {
-  font-size: 45px;
+  font-size: 30px;
   cursor: pointer;
 }
 
@@ -119,24 +139,90 @@ text {
   overflow: visible;
 }
 
-.svg1{
+.svg1 {
   top: 40%;
   left: 37.5%;
 }
 
-.svg2{
+.svg2 {
   top: 50%;
   left: 44%;
 }
 
-.tap-target{
+.tap-target {
   transition: 0.5s all;
 }
 
-.hand{
+.hand {
   transition: 0.5s all;
 }
 
-.hand-tapping{
+.hand-tapping {
   transition: 0.5s all;
 }
+
+#more-arrows {
+  width: 5%;
+  height: 9%;
+  transform: rotate(180deg);
+  position: fixed;
+  top: 4%;
+  left: 47.5%;
+  opacity: 0;
+  transition: none;
+}
+#more-arrows:hover polygon {
+  fill: #fff;
+  transition: all 0.2s ease-out;
+}
+#more-arrows:hover polygon.arrow-bottom {
+  transform: translateY(-18px);
+}
+#more-arrows:hover polygon.arrow-top {
+  transform: translateY(18px);
+}
+
+polygon {
+  fill: #fff;
+  transition: all 0.2s ease-out;
+}
+polygon.arrow-middle {
+  opacity: 0.75;
+}
+polygon.arrow-top {
+  opacity: 0.5;
+}
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  30% {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    transform: translateY(-10px);
+  }
+  50% {
+    -webkit-transform: translateX(7px);
+    -moz-transform: translateX(7px);
+    transform: translateY(7px);
+  }
+  65% {
+    -webkit-transform: translateX(-7px);
+    -moz-transform: translateX(-7px);
+    transform: translateX(-7px);
+  }
+  80% {
+    -webkit-transform: translateX(4px);
+    -moz-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  100% {
+    -webkit-transform: translateX(2px);
+    -moz-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+}
+
