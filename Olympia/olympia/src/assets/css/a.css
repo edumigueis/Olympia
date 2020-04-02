@@ -1,0 +1,29 @@
+html {
+  background: #164B77; }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+svg {
+  max-width: 100px;
+  width: 100%; }
+  svg:not(:root) {
+    overflow: visible; }
+
+#tap-target {
+  opacity: 0; }
+
+.user-tip {
+  font-family: 'Open Sans', sans-serif;
+  color: #7F76BE; }
+
+/*# sourceMappingURL=a.css.map */
