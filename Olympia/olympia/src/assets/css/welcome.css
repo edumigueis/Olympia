@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Dezire Stacked";
-    src: url("../fonts/Dezire Stacked.ttf");
+    font-family: "Spare Parts";
+    src: url("../fonts/Spare Parts.ttf");
   }
 
   html,body{
@@ -42,7 +42,7 @@ svg {
   max-height: 90%;
   height: auto;
   position: absolute;
-  top: 85%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 1s all;
@@ -53,5 +53,5 @@ svg {
 }
 
 text{
-    font-family: "Dezire Stacked";
+    font-family: "Spare Parts";
 }
