@@ -114,9 +114,9 @@
         <div class="info">
             <p class="title">Bem vindo!</p>
             <a class="link start">Começar!</a><br><br>
-            <a class="link usuario">Usuário</a>
+            <a href='/#/cadastro/user' class="link usuario">Usuário</a>
             <div id="animation">
-                <a class="link login">Login</a><br><br>
+                <a href='/#/login' class="link login">Login</a><br><br>
                 <a class="link sobre">Sobre</a>
             </div>
         </div>

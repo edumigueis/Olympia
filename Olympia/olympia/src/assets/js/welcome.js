@@ -204,10 +204,13 @@ function fingerTap() {
   return tl;
 }
 
+var jaFoi = false;
+
 setInterval(() => {
 
   if ($('#container-welcome').length && jaFoi == false) {
     $(function () {
+
       $('.usuario').css('display','block')
       setTimeout(function () {
         if ($('.start').is(':hover')) {
@@ -236,8 +239,16 @@ setInterval(() => {
         $('#more-arrows').css('transition','1s all');
         $('#more-arrows').css('opacity',1)
         $('#animation').css('animation','swing 1s ease')
-        $('#animation').css('animation-iteration-count','2')
       })
+
+      setTimeout(function () {
+        if ($('.title').text() == 'Quem é você?') {
+          $('.artista').attr('href','/#/cadastro/artist');
+        } 
+        else {
+          $('.start').removeAttr('href');
+        }
+      }, 100);
 
       $('#more-arrows').click(function(){
         $('.title').text('Bem vindo!');
@@ -246,6 +257,7 @@ setInterval(() => {
         $('.artista').removeClass('artista').addClass('start');
         $('.start').text('Começar');
         $('.start').css('margin-left','0');
+        $('.artista').attr('href','');
         $('.usuario').css('margin-left','0');
         $('#more-arrows').css('transition','1s all');
         $('#more-arrows').css('opacity',0);
@@ -257,5 +269,6 @@ setInterval(() => {
   }
   else if (!$('#container-welcome').length) {
     jaFoi = false;
+    atualizou = !atualizou;
   }
-}, 100);
+}, 2000);

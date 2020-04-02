@@ -87,6 +87,7 @@ text {
 .usuario {
   transition: 1s all;
   font-size: 80px;
+  color: rgba(255, 255, 255, 0.801);
 }
 
 .usuario {
@@ -99,6 +100,10 @@ text {
   margin-bottom: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
 .start:hover,
 .artista:hover,
 .usuario:hover {
@@ -109,6 +114,7 @@ text {
 .login {
   transition: 1s all;
   font-size: 45px;
+  color: rgba(255, 255, 255, 0.801);
 }
 
 .login:hover {
@@ -119,6 +125,7 @@ text {
 .sobre {
   transition: 1s all;
   font-size: 25px;
+  color: rgba(255, 255, 255, 0.801);
 }
 
 .sobre:hover {
