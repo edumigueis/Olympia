@@ -5,11 +5,3 @@
     <a id="dark-mode-link-smf" class="black-to-white">Modo Noturno</a>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return;
-  }
-};
-</script>

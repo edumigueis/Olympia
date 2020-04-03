@@ -13,7 +13,7 @@ function toDataURL(url, callback) {
   xhr.responseType = 'blob';
   xhr.send();
 }
-var imagem = document.getElementById("image-1-det").src;
+var imagem = $("#3image-1-det").attr("src");
 
 toDataURL('https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0', function(dataUrl) {
   var image64 = dataUrl;
