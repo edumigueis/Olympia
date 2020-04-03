@@ -1,4 +1,4 @@
-<template>
+ <template>
   <main>
     <div id='container-home'>
       <link rel="stylesheet" href="/src/assets/css/home.css">

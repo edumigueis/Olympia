@@ -126,6 +126,14 @@
             <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
             <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
         </svg>
+
+        <svg id="bola-sobre" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="55" r="35" fill="lightgray"></circle>
+        </svg>
+
+        <div class="close-sobre close">
+            <img class="close-sobre-img" src="/src/assets/images/x.png">
+        </div>
       </div>
     </div>
   </main>

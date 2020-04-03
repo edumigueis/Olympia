@@ -95,12 +95,12 @@ text {
   opacity: 0;
   transition: 1.2s all;
   position: absolute;
-  margin-top:-1.335em;
+  margin-top: -1.335em;
   z-index: -10;
   margin-bottom: 0;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -183,13 +183,16 @@ a{
   opacity: 0;
   transition: none;
 }
+
 #more-arrows:hover polygon {
   fill: #fff;
   transition: all 0.2s ease-out;
 }
+
 #more-arrows:hover polygon.arrow-bottom {
   transform: translateY(-18px);
 }
+
 #more-arrows:hover polygon.arrow-top {
   transform: translateY(18px);
 }
@@ -198,11 +201,44 @@ polygon {
   fill: #fff;
   transition: all 0.2s ease-out;
 }
+
 polygon.arrow-middle {
   opacity: 0.75;
 }
+
 polygon.arrow-top {
   opacity: 0.5;
+}
+
+#bola-sobre {
+  transition: 1s all;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 150%;
+}
+
+.close-sobre {
+  transition: 1s all;
+  position: fixed;
+  z-index: 999;
+  will-change: transform;
+  margin-left: 0 !important;
+  left:30%;
+  top:10%;
+  height: 6%;
+  width: 6%;
+}
+
+.close-sobre-img {
+  height: 100%;
+  padding: 0;
+  opacity: 0;
+}
+
+.close-sobre-img:hover {
+  transform: translateY(5px);
 }
 
 @keyframes swing {
@@ -237,4 +273,61 @@ polygon.arrow-top {
     transform: translateX(2px);
   }
 }
+
+@media only screen and (min-width: 0) and (max-width: 800px) {
+  .close-sobre {
+    left: 8%;
+    top: 10%;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 900px) {
+  .close-sobre {
+    left: 12%;
+    top: 10%;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1150px) {
+  .close-sobre {
+    left: 22%;
+    top: 10%;
+  }
+}
+
+@media only screen and (min-width: 1151px) and (max-width: 1350px) {
+  .close-sobre {
+    left: 28%;
+    top: 10%;
+  }
+}
+
+@media only screen and (min-width: 1351px) and (max-width: 1599px) {
+  .close-sobre {
+    left: 32%;
+    top: 10%;
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1800px) {
+  .close-sobre {
+    left: 36%;
+    top: 10%;
+  }
+}
+
+@media screen and (min-width: 1801px) and (max-width: 2000px) {
+  .close-sobre {
+    left: 37%;
+    top: 10%;
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  .close-sobre {
+    left: 38%;
+    top: 10%;
+  }
+}
+
 
