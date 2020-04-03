@@ -134,8 +134,7 @@ var jaFoi = false;
 var iniciouAnimacao = false;
 
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
-alert($("#container-cad-user").length)
-alert(jaFoi)
+
   if ($("#container-cad-user").length && jaFoi == false) {
 
     jaFoi = true;
@@ -220,4 +219,4 @@ alert(jaFoi)
     jaFoi = false;
     iniciouAnimacao = false;
   }
-}, 2000);
+}, 100);
