@@ -1147,12 +1147,14 @@
   transition: 0.3s all;
   position: relative;
   padding: 15px;
-  height: 60px;
+  height: 45px;
+  padding-top: 0;
   width: 102%;
   background-color: white;
   z-index: 999;
   overflow: hidden;
-  margin-top: -65px;
+  margin-top: -45px;
+  margin-bottom: 0;
   border-top: 1px solid #bebebe8e;
   font-family: "Bruzh";
   letter-spacing: 0.15em;
@@ -1168,7 +1170,7 @@
   position: absolute;
   right: 5.5%;
   bottom: 20%;
-  font-family: "Bebas-Neue-Regular";
+  font-family: "Bebas";
   font-size: 1.5em;
   float: right;
   z-index: 1000;
@@ -1183,7 +1185,7 @@
   position: absolute;
   left: 1%;
   bottom: 20%;
-  font-family: "Bebas-Neue-Regular";
+  font-family: "Bebas";
   font-size: 1.5em;
   float: left;
   z-index: 1000;
