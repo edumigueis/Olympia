@@ -1,7 +1,7 @@
 <template>
-  <main id="page-container-cad-user">
-    <div id="container-cad-user">
-      <title>C A D A S T R O | A R T I S T A</title>
+  <main>
+    <div id="container-cad-artist">
+      <title>C A D A S T R O  A R T I S T A</title>
       <link rel="stylesheet" href="/src/assets/css/cadastro-artist.css" />
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
 

@@ -1,6 +1,6 @@
 <template>
-  <main id="page-container-cad-user">
-    <div id="container-cad-user">
+  <main>
+    <div id="container-login">
       <title>L O G I N</title>
       <link rel="stylesheet" href="/src/assets/css/login.css" />
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />

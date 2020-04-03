@@ -518,6 +518,7 @@
 
 .footer-link {
   font-family: "Bebas";
+  transition: none !important;
 }
 
 .footer-link:hover {

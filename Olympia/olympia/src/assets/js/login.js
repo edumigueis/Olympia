@@ -1,4 +1,4 @@
-var w, h, ctx,
+var c, w, h, ctx,
   minDist,
   maxDist,
   initialWidth,
@@ -134,9 +134,8 @@ var jaFoi = false;
 var iniciouAnimacao = false;
 
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
-alert($("#container-cad-user").length)
-alert(jaFoi)
-  if ($("#container-cad-user").length && jaFoi == false) {
+
+  if ($("#container-login").length && jaFoi == false) {
 
     jaFoi = true;
 
@@ -144,7 +143,7 @@ alert(jaFoi)
 
       if (!iniciouAnimacao) { //SE NÃO INICIOU A ANIMAÇÃO
 
-        var c = document.getElementById("c");
+        c = document.getElementById("c");
         w = c.width = window.innerWidth;
         h = c.height = window.innerHeight;
         ctx = c.getContext("2d");
@@ -191,7 +190,7 @@ alert(jaFoi)
           init();
         })
 
-        iniciouAnimacao = true
+        iniciouAnimacao = true;
       }
 
 
@@ -216,8 +215,8 @@ alert(jaFoi)
 
     });
 
-  } else if (!$("#container-cad-user").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
+  } else if (!$("#container-login").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
     jaFoi = false;
     iniciouAnimacao = false;
   }
-}, 2000);
+}, 100);
