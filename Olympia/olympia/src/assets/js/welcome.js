@@ -210,6 +210,7 @@ var left;
 setInterval(() => {
 
   if ($('#container-welcome').length && jaFoi == false) {
+    jaFoi = true;
     $(function () {
 
       left = $('.close-sobre').css('left');
@@ -288,6 +289,5 @@ setInterval(() => {
   }
   else if (!$('#container-welcome').length) {
     jaFoi = false;
-    atualizou = !atualizou;
   }
 }, 100);

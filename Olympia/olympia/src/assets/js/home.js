@@ -8,11 +8,10 @@ var max = 70; /* NÚMERO TOTAL DE CÍRCULOS */
 var jaFoi = false;
 
 setInterval(() => {
-
     if ($('#container-home').length && jaFoi == false) {
         $(function () {
             jaFoi = true;
-            
+
             $('.intro').addClass('go');
 
             /* ATRIBUTOS DE ESTILO */

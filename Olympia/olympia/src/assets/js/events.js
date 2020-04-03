@@ -4,6 +4,7 @@
 setInterval(() => {
 
   if ($('#container-obra').css('display') == 'block' && jaFoi == false) {
+    jaFoi = true;
     $(function () {
       
       jaFoi = true;
