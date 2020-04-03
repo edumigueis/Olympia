@@ -134,7 +134,7 @@ var jaFoi = false;
 var iniciouAnimacao = false;
 
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
-
+alert('dds')
   if ($("#container-cad-user").length && jaFoi == false) {
 
     jaFoi = true;
@@ -219,4 +219,4 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
     jaFoi = false;
     iniciouAnimacao = false;
   }
-}, 100);
+}, 2000);
