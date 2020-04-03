@@ -134,7 +134,8 @@ var jaFoi = false;
 var iniciouAnimacao = false;
 
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
-alert('dds')
+alert($("#container-cad-user").length)
+alert(jaFoi)
   if ($("#container-cad-user").length && jaFoi == false) {
 
     jaFoi = true;
