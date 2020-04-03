@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Poppins";
-  src: url("../fonts/poppins.woff2");
+  src: url("../fonts/poppins-light.otf");
 }
 
 @font-face {
@@ -12,10 +12,7 @@
   position: fixed;
   margin: 0;
 }
-#small-footer{
-  height: 45px !important;
-  padding-top: 0 !important;
-}
+
 #dark-mode-link {
   position: absolute;
   right: 3%;
@@ -29,11 +26,14 @@
   cursor: pointer;
 }
 
-#page-container-cad-user {
+#container-cad-user {
+  position: absolute;
+  width: 100%;
   font: 100% Lato, Arial, Sans Serif;
   height: 100vh;
-  z-index: -10;
+  z-index: 100;
 }
+
 body {
   overflow-x: hidden;
 }
@@ -957,7 +957,7 @@ figure {
   cursor: pointer;
   font-size: 16px;
   font-family: 'poppins';
-  transition: 0.5s all;
+  transition: 0.4s all;
 }
 .form-submit:hover {
   opacity: 0.7;
@@ -967,7 +967,7 @@ figure {
 }
 .signup-image-link {
   border-radius: 5px;
-  transition: 0.2s all;
+  transition: 0.4s all;
   background: linear-gradient(
     136deg,
     #fc6c85,
