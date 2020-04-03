@@ -29,7 +29,7 @@
                 <div class="detail-mask white-4">
                   <img
                     src="https://http2.mlstatic.com/pintura-abstrata-17a-pintor-jackson-pollock-em-tela-55cm-x-42cm-D_NQ_NP_892308-MLB31892097848_082019-F.webp"
-                    class="img-col white-4"
+                    class="img-col white-4" id="image-1-det"
                   />
                 </div>
               </td>
@@ -120,6 +120,10 @@
           </ul>
         </div>
       </div>
+      <div class="bg-det"></div>
+      <div class="bg-det bg-det2"></div>
+      <div class="bg-det bg-det3"></div>
+
       <div id="myModal" class="modal">
         <span class="close-mod">&times;</span>
         <img class="modal-content" id="img01" />
