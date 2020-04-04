@@ -1,7 +1,7 @@
 <template>
   <main style="overflow:hidden;" class="white-4">
     <div id="container-obra">
-      <link rel="stylesheet" href="/src/assets/css/detalhe.css">
+      <link rel="stylesheet" href="/src/assets/css/detalhe.css" />
 
       <meu-menu-bar></meu-menu-bar>
       <meu-menu-items></meu-menu-items>
@@ -10,7 +10,7 @@
       <meu-mouse></meu-mouse>
 
       <div id="col-container">
-        <div id="img-col-d" class="white-4" >
+        <div id="img-col-d" class="white-4">
           <div class="bg"></div>
           <table
             id="table-img"
@@ -29,12 +29,13 @@
                 <div class="detail-mask white-4">
                   <img
                     src="https://http2.mlstatic.com/pintura-abstrata-17a-pintor-jackson-pollock-em-tela-55cm-x-42cm-D_NQ_NP_892308-MLB31892097848_082019-F.webp"
-                    class="img-col white-4" id="image-1-det"
+                    class="img-col white-4"
+                    id="image-1-det"
                   />
                 </div>
               </td>
               <td class="detail-img-container" id="detail-img-2">
-                <div class="detail-mask  white-4">
+                <div class="detail-mask white-4">
                   <img
                     src="https://zoomoncontemporaryart.files.wordpress.com/2017/11/jackson-pollock-getty-56898334.jpg?w=840"
                     class="img-col white-4"
@@ -44,7 +45,7 @@
             </tr>
             <tr class="line-img-container-detail">
               <td class="detail-img-container" id="detail-img-3">
-                <div class="detail-mask  white-4">
+                <div class="detail-mask white-4">
                   <img
                     src="https://s2.glbimg.com/XWhdTZNcD4q3aftXoFdt44vGobQ=/560x560/e.glbimg.com/og/ed/f/original/2018/04/05/73154573_sc---mostras-no-mam---jackson-pollock.jpg"
                     class="img-col white-4"
@@ -52,7 +53,7 @@
                 </div>
               </td>
               <td class="detail-img-container" id="detail-img-4" colspan="2">
-                <div class="detail-mask  white-4">
+                <div class="detail-mask white-4">
                   <img
                     src="https://ep00.epimg.net/cultura/imagenes/2016/02/18/actualidad/1455830675_596061_1455873497_noticia_fotograma.jpg"
                     class="img-col white-4"
@@ -63,7 +64,7 @@
           </table>
         </div>
         <div id="info-col-d" class="white-4">
-          <ul id="info-list" class=" white-4">
+          <ul id="info-list" class="white-4">
             <li class="info-item white-4" id="info-1">
               <div class="inner-list white-4">
                 <div id="simple-art-info">
@@ -97,18 +98,22 @@
               <div class="inner-list">
                 <div id="simple-artist-info">
                   <p id="artist-user">
-                    <b
-                      >User:
-                      <a id="user-link" href="/user/pollock">@pollock</a></b
-                    >
+                    <b>
+                      User:
+                      <a id="user-link" href="/user/pollock">@pollock</a>
+                    </b>
                   </p>
-                  <p id="artist-name"><b>Nome:</b> Jakson Pollock</p>
-                  <p id="artist-nac"><b>Nacionalidade:</b> Americano</p>
+                  <p id="artist-name">
+                    <b>Nome:</b> Jakson Pollock
+                  </p>
+                  <p id="artist-nac">
+                    <b>Nacionalidade:</b> Americano
+                  </p>
                 </div>
                 <div id="artist-pic">
                   <img
                     src="https://static.todamateria.com.br/upload/po/ll/pollockarte-cke.jpg"
-                    alt=""
+                    alt
                     class="art-icon"
                   />
                 </div>
@@ -120,16 +125,76 @@
           </ul>
         </div>
       </div>
+        <div id="paginate-detail">
+          <div id="arrows-pag-det">
+              <svg id="more-arrows">
+                <polygon
+                  class="arrow-top"
+                  points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
+                />
+                <polygon
+                  class="arrow-middle"
+                  points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "
+                />
+                <polygon
+                  class="arrow-bottom"
+                  points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
+                />
+              </svg>
+          </div>
+          <div id="arrows-pag-det-2">
+              <svg id="more-arrows-2" class="more-arrows-2">
+                <polygon
+                  class="arrow-top-2"
+                  points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
+                />
+                <polygon
+                  class="arrow-middle-2"
+                  points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "
+                />
+                <polygon
+                  class="arrow-bottom-2"
+                  points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
+                />
+              </svg>
+          </div>
+        </div>
+        
       <div class="bg-det"></div>
       <div class="bg-det bg-det2"></div>
       <div class="bg-det bg-det3"></div>
+
+      <div class="bg-det-gray"></div>
+      <div class="bg-det-gray bg-det2"></div>
+      <div class="bg-det-gray bg-det3"></div>
 
       <div id="myModal" class="modal">
         <span class="close-mod">&times;</span>
         <img class="modal-content" id="img01" />
         <div id="caption"></div>
       </div>
-
+      <div id="background-wrap">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+        <div class="bubble x11"></div>
+        <div class="bubble x12"></div>
+        <div class="bubble x13"></div>
+        <div class="bubble x14"></div>
+        <div class="bubble x15"></div>
+        <div class="bubble x16"></div>
+        <div class="bubble x17"></div>
+        <div class="bubble x18"></div>
+        <div class="bubble x19"></div>
+        <div class="bubble x20"></div>
+      </div>
       <meu-footer></meu-footer>
     </div>
   </main>

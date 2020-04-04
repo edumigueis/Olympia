@@ -20,24 +20,12 @@ toDataURL('https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0', fu
 })
 
 
-setInterval(() => {
+setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
-  if ($('#container-obra').css('display') == 'block' && jaFoi == false) {
+  if ($("#container-obra").length && jaFoi == false) {
+
+    jaFoi = true;
     $(function () {
-      jaFoi = true;
-      cor = cor +"";
-      $('body').css('background-color', 'rgb('+cor.substring(0, 5)+')');
-
-      var altura = $(document).height()
-
-      $('#bg').css('height', altura);
-
-      $(window).resize(function () {
-        var altura2 = $(document).height()
-
-        $('#bg').css('height', altura2);
-        altura2 = 0;
-      });
 
       $(document.body).on('click', '.img-col', function () {
         var src = $(this).attr("src");
@@ -46,10 +34,29 @@ setInterval(() => {
         $(window).scrollTop(0);
         $('#mouse').css('display', 'block');
       });
+      $(document.body).on('click', '#arrows-pag-det', function () {
+        $('#img-col-d').fadeOut(200);
+        $('#info-col-d').fadeIn(1200);
+        $('#arrows-pag-det').css('display', 'none');
+        $('#arrows-pag-det-2').css('display', 'block');
+        $('.bg-det').css('display', 'block');
+        $('.bg-det-gray').css('display', 'none');
+        $('#mouse').css('display', 'none');
+      });
+      $(document.body).on('click', '#arrows-pag-det-2', function () {
+        $('#img-col-d').fadeIn(1200);
+        $('#info-col-d').fadeOut(200);
+        $('#arrows-pag-det').css('display', 'block');
+        $('#arrows-pag-det-2').css('display', 'none');
+        $('.bg-det').css('display', 'none');
+        $('.bg-det-gray').css('display', 'block');
+        $('#mouse').css('display', 'block');
+      });
 
       $(document.body).on('click', '.close-mod', function () {
         $('#myModal').css('display', 'none');
         $('#mouse').css('display', 'none');
+
       })
 
       $(document.body).on('click', '#myModal', function () {
