@@ -610,7 +610,7 @@ ul li {
     width: 55%;
   }
   #img-col-d{
-    margin-bottom: -10%;
+    margin-top: 100px !important;
   }
   #img-col-d{
     margin-left: 4%;
@@ -618,7 +618,15 @@ ul li {
     width: 92%;
   }
   #info-col-d{
-    margin-top: 60px;
+    margin-top: 100px;
+  }
+  #info-list{
+    width: 95%;
+    float: left;
+    border-radius: 15px;
+  }
+  #more-arrows{
+    margin-top: 100px;
   }
 }
 @media only screen and (min-width: 616px) and (max-width: 950px) {
@@ -639,6 +647,12 @@ ul li {
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
+    margin-top: 100px !important;
+  }
+  #info-list{
+    width: 95%;
+    float: left;
+    border-radius: 15px;
   }
 }
 

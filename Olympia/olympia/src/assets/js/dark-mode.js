@@ -16,7 +16,7 @@ $(document).ready(function () {
             $("#fullpage").fadeOut(1000)
             $("#menu-bar").removeClass("dark-mode");
             $("#footer").removeClass("dark-mode");
-            $("#more-arrows").remove("dark-mode");
+            $("#more-arrows").removeClass("dark-mode");
             $(".error-modal").removeClass("dark-mode");
             $("#small-footer").removeClass("dark-mode");
             $(".dark-register-div").removeClass("dark-mode");
