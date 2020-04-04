@@ -1,5 +1,4 @@
 var jaFoi = false;
-
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
   if ($("#container-obra").length && jaFoi == false) {
