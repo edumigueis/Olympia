@@ -1,4 +1,4 @@
-var c, w, h, ctx,
+var w, h, ctx,
   minDist,
   maxDist,
   initialWidth,
@@ -11,6 +11,7 @@ var c, w, h, ctx,
   dirs,
   starter;
 
+
 function init() {
 
   lines.length = 0;
@@ -21,23 +22,24 @@ function init() {
   ctx.fillStyle = '#DDD';
   ctx.fillRect(0, 0, w, h);
 
-  // if you want a cookie ;)
-  // ctx.lineCap = 'round';
 }
+
+
 function getColor(x) {
 
   return 'hsl( hue, 80%, 50% )'.replace(
     'hue', x / w * 360 + frame
   );
 }
+
+
 function anim() {
 
   window.requestAnimationFrame(anim);
-
   ++frame;
 
   ctx.shadowBlur = 0;
-  ctx.fillStyle = 'rgba(255,255,255,.02)';
+  ctx.fillStyle = 'rgba(250,250,250,.03)';
   ctx.fillRect(0, 0, w, h);
   ctx.shadowBlur = .5;
 
@@ -49,8 +51,6 @@ function anim() {
       --i;
 
     }
-
-  // spawn new
 
   ++timeSinceLast
 
@@ -67,6 +67,7 @@ function anim() {
     ctx.fill();
   }
 }
+
 
 function Line(parent) {
 
@@ -89,6 +90,8 @@ function Line(parent) {
   this.dist = (Math.random() * (maxDist - minDist) + minDist);
 
 }
+
+
 Line.prototype.step = function () {
 
   var dead = false;
@@ -130,7 +133,7 @@ Line.prototype.step = function () {
 }
 
 //VARIÁVEIS AUXILIARES
-var jaFoi = false; 
+var jaFoi = false;
 var iniciouAnimacao = false;
 
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
@@ -143,42 +146,38 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
       if (!iniciouAnimacao) { //SE NÃO INICIOU A ANIMAÇÃO
 
-        c = document.getElementById("c");
         w = c.width = window.innerWidth;
         h = c.height = window.innerHeight;
         ctx = c.getContext("2d");
+
         minDist = 10;
-        maxDist = 30;
+        maxDist = 20;
         initialWidth = 10;
-        maxLines = 100;
-        initialLines = 4;
+        maxLines = 80;
+        initialLines = 3;
         speed = 5;
+
         lines = [];
         frame = 0;
         timeSinceLast = 0;
+
         dirs = [
-          // straight x, y velocity
           [0, 1],
           [1, 0],
           [0, -1],
           [-1, 0],
-          // diagonals, 0.7 = sin(PI/4) = cos(PI/4)
           [.7, .7],
           [.7, -.7],
           [-.7, .7],
           [-.7, -.7]
         ];
-        starter = { // starting parent line, just a pseudo line
-
+        starter = {
           x: w / 2,
           y: h / 2,
           vx: 0,
           vy: 0,
           width: initialWidth
         };
-
-        init();
-        anim();
 
         window.addEventListener('resize', function () {
 
@@ -189,6 +188,9 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
           init();
         })
+
+        init();
+        anim();
 
         iniciouAnimacao = true;
       }
