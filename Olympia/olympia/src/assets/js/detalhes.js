@@ -1,30 +1,11 @@
 var jaFoi = false;
-var cor;
-function toDataURL(url, callback) {
-  var xhr = new XMLHttpRequest();
-  xhr.onload = function() {
-    var reader = new FileReader();
-    reader.onloadend = function() {
-      callback(reader.result);
-    }
-    reader.readAsDataURL(xhr.response);
-  };
-  xhr.open('GET', url);
-  xhr.responseType = 'blob';
-  xhr.send();
-}
-var imagem = $("#3image-1-det").attr("src");
-
-toDataURL('https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0', function(dataUrl) {
-  var image64 = dataUrl;
-})
-
 
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
   if ($("#container-obra").length && jaFoi == false) {
 
     jaFoi = true;
+
     $(function () {
 
       $(document.body).on('click', '.img-col', function () {
@@ -67,7 +48,7 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
       
     })
   }
-  else if (!$('#container-obra').length) {
+  else if (!$("#container-obra").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
     jaFoi = false;
   }
 }, 100);
