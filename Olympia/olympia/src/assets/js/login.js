@@ -15,7 +15,7 @@ var w, h, ctx,
 function init() {
 
   lines.length = 0;
-
+  
   for (var i = 0; i < initialLines; ++i)
     lines.push(new Line(starter));
 
@@ -74,7 +74,7 @@ function Line(parent) {
   this.x = parent.x | 0;
   this.y = parent.y | 0;
   this.width = parent.width / 1.25;
-
+  
   do {
 
     var dir = dirs[(Math.random() * dirs.length) | 0];
@@ -83,7 +83,7 @@ function Line(parent) {
 
   } while (
     (this.vx === -parent.vx && this.vy === -parent.vy) || (this.vx === parent.vx && this.vy === parent.vy));
-
+    
   this.vx *= speed;
   this.vy *= speed;
 
@@ -93,7 +93,6 @@ function Line(parent) {
 
 
 Line.prototype.step = function () {
-
   var dead = false;
 
   var prevX = this.x,
@@ -145,15 +144,14 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
     $(function () {
 
       if (!iniciouAnimacao) { //SE NÃO INICIOU A ANIMAÇÃO
-
         w = c.width = window.innerWidth;
         h = c.height = window.innerHeight;
         ctx = c.getContext("2d");
 
-        minDist = 10;
+        minDist = 5;
         maxDist = 20;
         initialWidth = 10;
-        maxLines = 80;
+        maxLines = 100;
         initialLines = 3;
         speed = 5;
 

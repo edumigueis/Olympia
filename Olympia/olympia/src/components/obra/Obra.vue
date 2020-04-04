@@ -1,5 +1,5 @@
 <template>
-  <main style="overflow:hidden;" class="white-4">
+  <main style="overflow:hidden;">
     <div id="container-obra">
       <link rel="stylesheet" href="/src/assets/css/detalhe.css" />
 
@@ -10,14 +10,14 @@
       <meu-mouse></meu-mouse>
 
       <div id="col-container">
-        <div id="img-col-d" class="white-4">
+        <div id="img-col-d" class="transparent">
           <div class="bg"></div>
           <table
             id="table-img"
             width="100%"
             data-aos="fade-down"
             data-aos-duration="1000"
-            class="white-4"
+            class="transparent"
           >
             <colgroup>
               <col width="33.3333333%" />
@@ -26,50 +26,50 @@
             </colgroup>
             <tr class="line-img-container-detail">
               <td class="detail-img-container" id="detail-img-1" colspan="2">
-                <div class="detail-mask white-4">
+                <div class="detail-mask transparent">
                   <img
-                    src="https://http2.mlstatic.com/pintura-abstrata-17a-pintor-jackson-pollock-em-tela-55cm-x-42cm-D_NQ_NP_892308-MLB31892097848_082019-F.webp"
-                    class="img-col white-4"
+                    src="https://gagosian.com/media/images/exhibitions/2013/willem-de-kooning-ten-paintings-1983-1985/xNTqSjL1UVAw_585x329.jpg"
+                    class="img-col transparent"
                     id="image-1-det"
                   />
                 </div>
               </td>
               <td class="detail-img-container" id="detail-img-2">
-                <div class="detail-mask white-4">
+                <div class="detail-mask transparent">
                   <img
-                    src="https://zoomoncontemporaryart.files.wordpress.com/2017/11/jackson-pollock-getty-56898334.jpg?w=840"
-                    class="img-col white-4"
+                    src="https://i.pinimg.com/originals/d0/83/56/d08356194ca7ddf4c0d09acbc58bccec.jpg"
+                    class="img-col transparent"
                   />
                 </div>
               </td>
             </tr>
             <tr class="line-img-container-detail">
               <td class="detail-img-container" id="detail-img-3">
-                <div class="detail-mask white-4">
+                <div class="detail-mask transparent">
                   <img
-                    src="https://s2.glbimg.com/XWhdTZNcD4q3aftXoFdt44vGobQ=/560x560/e.glbimg.com/og/ed/f/original/2018/04/05/73154573_sc---mostras-no-mam---jackson-pollock.jpg"
-                    class="img-col white-4"
+                    src="https://cdn.e-konomista.pt/uploads/2019/07/quadros-mais-caros-850x514.jpg "
+                    class="img-col transparent"
                   />
                 </div>
               </td>
               <td class="detail-img-container" id="detail-img-4" colspan="2">
-                <div class="detail-mask white-4">
+                <div class="detail-mask transparent">
                   <img
                     src="https://ep00.epimg.net/cultura/imagenes/2016/02/18/actualidad/1455830675_596061_1455873497_noticia_fotograma.jpg"
-                    class="img-col white-4"
+                    class="img-col transparent"
                   />
                 </div>
               </td>
             </tr>
           </table>
         </div>
-        <div id="info-col-d" class="white-4">
-          <ul id="info-list" class="white-4">
-            <li class="info-item white-4" id="info-1">
-              <div class="inner-list white-4">
+        <div id="info-col-d" class="white">
+          <ul id="info-list" class="white">
+            <li class="info-item white" id="info-1">
+              <div class="inner-list white">
                 <div id="simple-art-info">
-                  <p id="art-name">N. 17a</p>
-                  <p id="art-detail-p">
+                  <p id="art-name" class="black-to-white">N. 17a</p>
+                  <p id="art-detail-p" class="black-to-white">
                     <span id="art-local">Nova York,</span>
                     <span id="art-year">1948.</span>
                     <span id="art-dim">1,38 m x 1,38 m.</span>
@@ -77,7 +77,7 @@
                   </p>
                 </div>
                 <div class="fine-line white"></div>
-                <div id="art-data">
+                <div id="art-data" class="black-to-white">
                   O Retrato de Adele Bloch-Bauer I é uma pintura de Gustav Klimt
                   completada em 1907. Foi vendida em junho de 2006, a Ronald
                   Lauder, proprietário da Neue Galerie em Nova Iorque, por 135
@@ -94,30 +94,30 @@
                 </div>
               </div>
             </li>
-            <li class="info-item white-4" id="info-2">
-              <div class="inner-list">
+            <li class="info-item white" id="info-2">
+              <div class="inner-list" >
                 <div id="simple-artist-info">
                   <p id="artist-user">
                     <b>
                       User:
-                      <a id="user-link" href="/user/pollock">@pollock</a>
+                      <a id="user-link" href="/user/pollock" class="black-to-white">@pollock</a>
                     </b>
                   </p>
-                  <p id="artist-name">
+                  <p id="artist-name" class="black-to-white">
                     <b>Nome:</b> Jakson Pollock
                   </p>
-                  <p id="artist-nac">
+                  <p id="artist-nac" class="black-to-white">
                     <b>Nacionalidade:</b> Americano
                   </p>
                 </div>
-                <div id="artist-pic">
+                <div id="artist-pic" class="black-to-white">
                   <img
                     src="https://static.todamateria.com.br/upload/po/ll/pollockarte-cke.jpg"
                     alt
                     class="art-icon"
                   />
                 </div>
-                <p id="artist-profile">
+                <p id="artist-profile" class="black-to-white">
                   <a href="/profile/klimt" class="link">Visitar o perfil</a>
                 </p>
               </div>
@@ -129,15 +129,15 @@
           <div id="arrows-pag-det">
               <svg id="more-arrows">
                 <polygon
-                  class="arrow-top"
+                  class="arrow-top black-to-white-pol"
                   points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
                 />
                 <polygon
-                  class="arrow-middle"
+                  class="arrow-middle black-to-white-pol"
                   points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "
                 />
                 <polygon
-                  class="arrow-bottom"
+                  class="arrow-bottom black-to-white-pol"
                   points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
                 />
               </svg>

@@ -122,3 +122,17 @@
 .dark-mode.linha-sobre{
   background-color: rgb(180, 180, 180) !important;
 }
+.dark-mode.transparent{
+  background-color: transparent !important;
+}
+.dark-mode.bg-det-gray{
+  background-image: linear-gradient(-60deg, #4a4a4a 50%, #5b5b5b 50%);
+}
+.dark-mode.black-to-white-pol{
+  fill: rgb(231, 231, 231);
+}
+.dark-mode#more-arrows:hover .black-to-white-pol{
+  fill: rgb(231, 231, 231) !important;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
