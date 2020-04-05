@@ -15,7 +15,7 @@
 
 /* feito antigamente */
 
-.img-header .img-wrap:before {
+.dark-mode.img-wrap:before {
   background-image: linear-gradient(
     to top,
     #8e8e94 ,
