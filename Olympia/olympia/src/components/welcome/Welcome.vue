@@ -6,12 +6,12 @@
 
       <section class="canvas-wrap">
         <div class="canvas-content"></div>
-        <div id="canvas" class="gradient"></div>
+        <div id="canvas" class="gradiente"></div>
       </section>
 
-      <div id="home-animation-wrapper" style="opacity: 0">
+      <div id="animation-wrapper" style="opacity: 1">
  
-        <div class="slides">
+        <div class="slides" >
             <div class="slide" count="0" data-1="FOR ART" data-2="thinkers" data-3="+Doers"></div>
             <div class="slide" count="1" data-1="OLYMPIA" data-2="optimists" data-3="+realists"></div>
             <div class="slide" count="2" data-1="ALL THE PALACES" data-2="willing" data-3="+able"></div>
@@ -22,7 +22,7 @@
             <!-- TEXTS -->
             <mask maskUnits="userSpaceOnUse" x="-273" y="-353.2" width="3011.9" height="1453" id="bubbles-1">
                 <g id="svg-texts">
-                    <text transform="matrix(1 0 0 1 62.9893 351.1275)" style="fill:#FFFFFF;font-weight: 900; font-size:150px;">BEM VINDO AO OLYMPIA</text>
+                    <text transform="matrix(1 0 0 1 62.9893 351.1275)" style="fill:#FFFFFF;font-weight: 900; font-size:150px;"></text>
                 </g>
             </mask>
 

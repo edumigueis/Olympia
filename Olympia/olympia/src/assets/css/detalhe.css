@@ -710,7 +710,7 @@ ul li {
   right: 0px;
   bottom: 20px;
   margin: 0 auto;
-  z-index: 1001;
+  z-index: 998;
 }
 
 #mouse::before {
