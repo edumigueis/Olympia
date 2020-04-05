@@ -1,6 +1,6 @@
 
 <template>
-  <main class="main-content white-4">
+  <main class="main-content white-6">
     <div id="container-eventos">
       <title>E V E N T O S</title>
       <link rel="stylesheet" type="text/css" href="/src/assets/css/events-slider.css" />
@@ -11,6 +11,7 @@
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
       <meu-mouse></meu-mouse>
+      <meu-dark-mode></meu-dark-mode>
 
       <section class="slideshow">
         <div class="slideshow-inner">
@@ -159,59 +160,59 @@
         </div>
       </section>
 
-      <div id="filter-container" class="white-4">
-        <ul id="radio-tab" class="white-4">
+      <div id="filter-container" class="white-6">
+        <ul id="radio-tab" class="white-6">
           <li class="radio-item">
-            <label class="container">
+            <label class="container black-to-white">
               Todos
               <input type="radio" checked="checked" name="radio" />
               <span class="checkmark"></span>
             </label>
           </li>
           <li class="radio-item">
-            <label class="container">
+            <label class="container black-to-white">
               Pintura
               <input type="radio" name="radio" />
               <span class="checkmark"></span>
             </label>
           </li>
           <li class="radio-item">
-            <label class="container">
+            <label class="container black-to-white">
               Música
               <input type="radio" name="radio" />
               <span class="checkmark"></span>
             </label>
           </li>
           <li class="radio-item">
-            <label class="container">
+            <label class="container black-to-white">
               Teatro
               <input type="radio" name="radio" />
               <span class="checkmark"></span>
             </label>
           </li>
           <li class="radio-item">
-            <label class="container">
+            <label class="container black-to-white">
               Arquiteura
               <input type="radio" name="radio" />
               <span class="checkmark"></span>
             </label>
           </li>
           <li class="radio-item">
-            <label class="container">
+            <label class="container black-to-white">
               Dança
               <input type="radio" name="radio" />
               <span class="checkmark"></span>
             </label>
           </li>
           <li class="radio-item">
-            <label class="container">
+            <label class="container black-to-white">
               Literatura
               <input type="radio" name="radio" />
               <span class="checkmark"></span>
             </label>
           </li>
           <li class="radio-item">
-            <label class="container">
+            <label class="container black-to-white">
               Escultura
               <input type="radio" name="radio" />
               <span class="checkmark"></span>
@@ -220,8 +221,8 @@
         </ul>
       </div>
 
-      <div id="events-container" class="white-4">
-        <div class="event-card-container" id="filter-container">
+      <div id="events-container" class="white-6">
+        <div class="event-card-container border-black" id="filter-container">
           <ul class="card-table white">
             <li class="card-item white">
               <div class="event-image-container">
@@ -260,7 +261,7 @@
             </li>
           </ul>
         </div>
-        <div class="event-card-container">
+        <div class="event-card-container border-black">
           <ul class="card-table white">
             <li class="card-item white">
               <div class="event-image-container">
@@ -299,7 +300,7 @@
             </li>
           </ul>
         </div>
-        <div class="event-card-container">
+        <div class="event-card-container border-black">
           <ul class="card-table white">
             <li class="card-item">
               <div class="event-image-container">
@@ -318,7 +319,7 @@
             </div>
             <li class="card-item-2 white">
               <div class="event-date-container">
-                <p class="expo-name">Picasso no MP</p>
+                <p class="expo-name">Van Gogh Memory Expo</p>
                 <p class="date">12/07/2020, SAB</p>
               </div>
             </li>

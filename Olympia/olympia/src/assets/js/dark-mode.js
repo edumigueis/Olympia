@@ -32,6 +32,9 @@ $(document).ready(function () {
             $(".transparent").removeClass("dark-mode");
             $(".bg-det-gray").removeClass("dark-mode");
             $(".img-wrap").removeClass("dark-mode");
+            $(".white-4").removeClass("dark-mode");
+            $(".white-6").removeClass("dark-mode");
+            $(".border-black").removeClass("dark-mode");
             $(".background-white-to-darkgray").removeClass("dark-mode");
             $('#dark-mode-link').text('MODO NOTURNO');
         }
@@ -57,6 +60,9 @@ $(document).ready(function () {
             $(".transparent").addClass("dark-mode");
             $(".bg-det-gray").addClass("dark-mode");
             $(".img-wrap").addClass("dark-mode");
+            $(".white-4").addClass("dark-mode");
+            $(".white-6").addClass("dark-mode");
+            $(".border-black").addClass("dark-mode");
             $(".background-white-to-darkgray").addClass("dark-mode");
             $('#dark-mode-link').text('MODO CLARO');
             $('#dark-mode-link-smf').text('MODO CLARO');

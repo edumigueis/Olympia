@@ -77,7 +77,12 @@
 .dark-mode.white-5 {
   background-color: #8e8e94 !important;
 }
-
+.dark-mode.white-6 {
+  background-color: #2b2b2b !important;
+}
+.dark-mode.border-black{
+  border-color: #2b2b2b !important;
+}
 .dark-mode.gray {
   background-color: #393749 !important;
   border-color: #393749 !important;
