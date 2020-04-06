@@ -88,6 +88,10 @@
   fill-opacity: 0.4;
 }
 
+.menu-link-art{
+  z-index: 9999;
+}
+
 #detalhes-artes{
   cx: 180;
   cy: 150;
@@ -360,6 +364,7 @@
   margin-left: 10%;
   width: 27%;
   top: 0;
+  z-index: 1;
 }
 
 #col-menu-2 {
@@ -367,6 +372,7 @@
   margin-left: 41%;
   width: 27%;
   top: 0;
+  z-index: 2;
 }
 
 #col-menu-3 {
@@ -374,6 +380,7 @@
   margin-left: 73%;
   width: 27%;
   top: 0;
+  z-index: 3;
 }
 
 .close {
