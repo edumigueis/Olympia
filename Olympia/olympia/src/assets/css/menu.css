@@ -44,6 +44,10 @@
   background: rgb(92, 91, 91);
 }
 
+.blur{
+  transition: 0.3s all;
+}
+
 .menu-container {
   background: linear-gradient(
     136deg,
@@ -1175,7 +1179,6 @@
   font-size: 1.5em;
   float: right;
   z-index: 1000;
-  transition: 0.5s all;
 }
 
 #dark-mode-link-smf:hover {
@@ -1191,7 +1194,6 @@
   font-size: 1.5em;
   float: left;
   z-index: 1000;
-  transition: 0.5s all;
 }
 
 #use-terms-smf:hover {
@@ -1201,7 +1203,6 @@
 
 .footer-link {
   font-family: "Bebas";
-  transition: 1s all;
 }
 
 .footer-link:hover {
@@ -1212,7 +1213,7 @@
   font-family: "Bruzh";
   letter-spacing: 0.1em;
   font-size: 1.9em;
-  padding: 20px 0 30px;
+  padding: 10px 0 30px;
   text-align: center;
   transition: 1s all;
 }

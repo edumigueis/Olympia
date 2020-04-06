@@ -11,6 +11,7 @@ var w, h, ctx,
   dirs,
   starter;
 
+  var opacity = '.03';
 
 function init() {
 
@@ -39,7 +40,7 @@ function anim() {
   ++frame;
 
   ctx.shadowBlur = 0;
-  ctx.fillStyle = 'rgba(250,250,250,.03)';
+  ctx.fillStyle = 'rgba(250,250,250,' + opacity + ')';
   ctx.fillRect(0, 0, w, h);
   ctx.shadowBlur = .5;
 
@@ -134,12 +135,15 @@ Line.prototype.step = function () {
 //VARIÁVEIS AUXILIARES
 var jaFoi = false;
 var iniciouAnimacao = false;
+var vez = 1;
+var variavelAuxiliarDaAuxiliar = false;
 
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
   if ($("#container-login").length && jaFoi == false) {
 
     jaFoi = true;
+    variavelAuxiliarDaAuxiliar = false;
 
     $(function () {
 
@@ -149,11 +153,39 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
         ctx = c.getContext("2d");
 
         minDist = 5;
-        maxDist = 20;
-        initialWidth = 10;
+        maxDist = 50;
         maxLines = 100;
-        initialLines = 3;
-        speed = 5;
+        initialLines = 4;
+
+        if(vez == 1){
+          speed = 5;
+          initialWidth = 10;
+        }
+        else if (vez == 2){
+          speed = 2.5;
+          initialWidth = 12;
+          opacity = '.025';
+        }
+        else if (vez == 3){
+        speed = 1.7;
+        initialWidth = 15;
+        opacity = '.02';
+        }
+        else if (vez == 4){
+          speed = 1.2;
+          initialWidth = 18;
+          opacity = '.018';
+        }
+        else if (vez == 5){
+          speed = 1;
+          initialWidth = 20;
+          opacity = '.018';
+          }
+          else {
+            speed = 1;
+            initialWidth = 21;
+            opacity = '.018';
+          }
 
         lines = [];
         frame = 0;
@@ -218,5 +250,9 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
   } else if (!$("#container-login").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
     jaFoi = false;
     iniciouAnimacao = false;
+    if (variavelAuxiliarDaAuxiliar == false){
+      vez++;
+      variavelAuxiliarDaAuxiliar = true;
+    }
   }
 }, 100);

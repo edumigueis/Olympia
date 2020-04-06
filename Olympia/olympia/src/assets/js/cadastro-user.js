@@ -275,7 +275,7 @@ setInterval(() => {
           $(".error-modal").fadeIn(500);
           $(".error-modal").css('opacity','1');
           $(".ui-widget-overlay").fadeIn(500);
-          $(".warn").html("Deve ser fornecido o nome e o sobrenome.");
+          $(".warn").html("Deve ser fornecido o nome completo.");
           $('#name').val("");
         }                     
       })
