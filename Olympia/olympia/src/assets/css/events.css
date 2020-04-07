@@ -47,6 +47,10 @@
 #events-container{
     height: auto;
     width: 100%;
+    background-color: #f7f7f7;
+}
+#container-eventos{
+  background-color: #f7f7f7;
 }
 body{
   overflow-x: hidden;
@@ -66,6 +70,7 @@ body{
     margin: 0;
     padding: 0;
     height: 265px;
+    background-color: #fff !important;
 }
 ul li{
     display: inline-flex;
@@ -209,7 +214,12 @@ html, body {
     -ms-user-select: none;
     user-select: none;
   }
-  
+  #filter-container{
+    height: fit-content;
+    width: 100%;
+    background-color: #fbfbfb;
+    padding: 20px;
+  }
   /* Hide the browser's default radio button */
   .container input {
     position: absolute;
@@ -265,8 +275,7 @@ html, body {
   }
   #radio-tab{
       height: 50px;
-      padding-top: 10px;
-      width: 100%;
+      background-color: #fbfbfb;
   }
   #mouse {
     display: block;
@@ -312,9 +321,14 @@ html, body {
   }
   #radio-tab{
     width: 80%;
+    margin: 0 !important;
+    padding-top: 10px;
   }
   #footer{
     width: 90%;
+  }
+  #first-card-container{
+    margin-top: 0 !important;
   }
   @media only screen and (min-width: 1590px) and (max-width: 1620px) {
     main{
@@ -375,6 +389,9 @@ html, body {
   #footer{
     margin-top: 5% !important;
   }
+  #radio-tab{
+    height: 90px !important;
+  }
 }
 @media only screen and (min-width: 462px) and (max-width: 669px) {
   #radio-tab{
@@ -428,6 +445,9 @@ html, body {
   #footer{
     margin-top: 4% !important;
   }
+  #radio-tab{
+    height: 80px !important;
+  }
 }
 @media only screen and (min-width: 670px) and (max-width: 950px) {
   #radio-tab{
@@ -465,8 +485,6 @@ html, body {
     font-size: 0.96em;
     padding-right: 5px;
     padding: 0;
-    margin-left: 10px;
-    margin-top: 20px;
   }
   .btn-wrap{
     left: -12.5%;
@@ -483,9 +501,6 @@ html, body {
     width: 100%;
     font-size: 0.96em;
     padding-right: 5px;
-    padding: 0;
-    margin-left: 10px;
-    margin-top: 20px;
   }
   .btn-wrap{
     left: -12.5%;

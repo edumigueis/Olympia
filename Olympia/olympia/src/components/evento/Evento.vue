@@ -73,32 +73,7 @@
                     </div>
                 </li>
                 <li class="grid-item-last">
-                    <div class="inner-list">
-
-                        <div id="simple-artist-info-event">
-                            <p id="artist-user"><b>User: <a id="user-link" href="/user/klimt">@MoMA</a></b></p>
-                            <p id="artist-name"><b>Nome:</b> Gustav Klimt</p>
-                            <p id="artist-nac"><b>Nacionalidade:</b> Austríaco </p>
-                            <p id="artist-email"><b>E-mail:</b> gustavklint@team.br</p>
-                            <p id="artist-tel"><b>Telefone:</b>+38 78 9817618191</p>
-                        </div>
-                        <div id="artist-pic-event">
-                            <img src="https://appseducacao.files.wordpress.com/2016/09/icon175x175-1.png?w=636" alt=""
-                                class="art-icon">
-                        </div>
-                        <div class="fine-line"></div>
-                        <div id="artist-data">
-                            Gustav Klimt (Baumgarten, em Viena, 14 de julho de 1862 - Viena, 6 de fevereiro de 1918) foi
-                            um pintor simbolista austríaco. Em 1876, estudou desenho ornamental na Escola de Artes
-                            Decorativas. Associado ao simbolismo, destacou-se dentro do movimento art nouveau austríaco
-                            e foi um dos fundadores do movimento da Secessão de Viena, que recusava a tradição académica
-                            nas artes, e do seu jornal, Ver Sacrum. Klimt foi também membro honorário das universidades
-                            de Universidade de Munique e Viena. Os seus maiores trabalhos incluem pinturas, murais,
-                            esboços e outros objetos de arte, muitos dos quais estão em exposição na Galeria da Secessão
-                            de Viena.
-                        </div>
-                        <p id="artist-profile"><a href="/profile/klimt" class="link detail-link-0">Visitar o perfil</a></p>
-                    </div>
+                    
                 </li>
             </ul>
         </div>

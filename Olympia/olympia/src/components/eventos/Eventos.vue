@@ -222,7 +222,7 @@
       </div>
 
       <div id="events-container" class="white-6">
-        <div class="event-card-container border-black" id="filter-container">
+        <div class="event-card-container border-black" id="first-card-container">
           <ul class="card-table white">
             <li class="card-item white">
               <div class="event-image-container">
@@ -250,7 +250,7 @@
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1958340837805!2d-46.65807058538399!3d-23.56140906747839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59ceb1eb771f%3A0xe904f6a669744da1!2sMuseu%20de%20Arte%20de%20S%C3%A3o%20Paulo%20Assis%20Chateaubriand!5e0!3m2!1spt-BR!2sbr!4v1584722338674!5m2!1spt-BR!2sbr"
                   width="400"
-                  height="260"
+                  height="264"
                   frameborder="0"
                   style="border:0;"
                   allowfullscreen
@@ -289,7 +289,7 @@
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.48741836628!2d2.1787040149271406!3d41.38522000409329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2fe99bce26b%3A0x27011e710700cc63!2sMuseu%20Picasso!5e0!3m2!1spt-BR!2sbr!4v1584723142970!5m2!1spt-BR!2sbr"
                   width="400"
-                  height="260"
+                  height="264"
                   frameborder="0"
                   style="border:0;"
                   allowfullscreen
@@ -328,7 +328,7 @@
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.661787563492!2d4.878886915343618!3d52.35841915594437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609ef96d35a5f%3A0xc22828aef97cc51a!2sMuseu%20Van%20Gogh!5e0!3m2!1spt-BR!2sbr!4v1584723696099!5m2!1spt-BR!2sbr"
                   width="400"
-                  height="260"
+                  height="264"
                   frameborder="0"
                   style="border:0;"
                   allowfullscreen

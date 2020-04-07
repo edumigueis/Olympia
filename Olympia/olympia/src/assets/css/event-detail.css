@@ -62,6 +62,10 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+#page-rol {
+  margin-top: 50px;
+  background-color: #fff;
+}
 #mouse {
   display: block;
   width: 22px;
@@ -229,7 +233,7 @@ body {
     width: 20em !important;
   }
   #page-grid {
-    margin-top: 10%;
+    margin-top: 5%;
     list-style: none;
     width: 100%;
     display: inline-block;
@@ -328,7 +332,8 @@ body {
   margin-top: -150px;
 }
 #page-grid {
-  margin-top: 10%;
+  margin-top: 5%;
+  background-color: #fff;
   list-style: none;
   width: 100%;
   display: inline-block;
@@ -339,10 +344,6 @@ body {
   width: 48%;
   min-height: 400px;
   display: inline-block;
-}
-#grid-item-2 {
-  margin-right: 20px;
-  margin-top: 20px;
 }
 
 .card {
@@ -443,7 +444,9 @@ body {
   margin-left: 20px;
 }
 .event-info-p {
-  padding: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .event-info-item {
   font-family: "Open Sans SemiBold";
@@ -452,6 +455,7 @@ body {
 }
 #event-info-nome {
   font-family: "Open Sans ExtraBold";
+  margin-top: 0 !important;
 }
 .tickets-link {
   background: linear-gradient(to bottom, #ff9800 0%, #ff0000 100%);
