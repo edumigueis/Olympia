@@ -3,13 +3,13 @@
     <div id="container-evento">
       <link rel="stylesheet" href="/src/assets/css/event-detail.css" />
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
-
+      <title>E V E N T O</title>
       <meu-menu-bar></meu-menu-bar>
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
       <meu-mouse></meu-mouse>
-      <div class="event-header">
+      <div class="event-header dark-6">
         <div class="img-header">
           <div class="img-wrap">
             <img
@@ -18,7 +18,7 @@
             />
           </div>
         </div>
-        <div id="bottom-header">
+        <div id="bottom-header" class="white-6">
           <div id="calendar-red">
             <p class="month">SET</p>
             <div id="calendar-white">
@@ -26,30 +26,30 @@
             </div>
           </div>
           <div id="title">
-            <p id="event-name">Mirrors by Fenjhki MoMA</p>
+            <p id="event-name" class="black-to-white">Mirrors by Fenjhki MoMA</p>
           </div>
         </div>
       </div>
-      <div id="page-rol" class="white-5">
-        <div class="grid-item" id="grid-item-1">
+      <div id="page-rol" class="white-6">
+        <div class="grid-item gray" id="grid-item-1">
           <div id="event-info">
-            <div class="event-info-p">
-              <p id="event-info-nome" class="event-info-item">Mirrors by Fenjhki MoMA</p>
-              <p id="event-info-local" class="event-info-item">
+            <div class="event-info-p gray">
+              <p id="event-info-nome" class="event-info-item black-to-white">Mirrors by Fenjhki MoMA</p>
+              <p id="event-info-local" class="event-info-item black-to-white">
                 Endereço: 11 W 53rd St, New York, NY 10019,
                 Estados Unidos
               </p>
-              <p id="event-info-datas" class="event-info-item">Datas: De 23/09/2020 a 27/10/2020</p>
-              <p id="event-info-horarios" class="event-info-item">Horários: 9:00-16:00</p>
-              <p id="event-info-precominimo" class="event-info-item">Preço mínimo: USD $20</p>
+              <p id="event-info-datas" class="event-info-item black-to-white">Datas: De 23/09/2020 a 27/10/2020</p>
+              <p id="event-info-horarios" class="event-info-item black-to-white">Horários: 9:00-16:00</p>
+              <p id="event-info-precominimo" class="event-info-item black-to-white">Preço mínimo: USD $20</p>
               <p id="event-info-website" class="event-info-item">
-                <a href="wwww.moma.org" class="tickets-link detail-link-0">Compre Ingressos</a>
+                <a href="wwww.moma.org" class="tickets-link black-to-white">Compre Ingressos</a>
               </p>
             </div>
           </div>
         </div>
         <div id="second-part-eve">
-          <div id="gallery-cont">
+          <div id="gallery-cont" class="gray">
             <div class="view-gallery">
               <button>View Gallery</button>
             </div>
@@ -63,7 +63,7 @@
             </ul>
           </div>
 
-          <div id="text-about-event">
+          <div id="text-about-event" class="gray">
             <div class="deconstructed">
               SOBRE
               <div>SOBRE</div>
@@ -74,13 +74,13 @@
             <p class="about-event-text-in">
               <span>
                 Lorem ipsum dolor sit amet,
-                <a class="underlined underlined--reverse">consectetur adipiscing elit</a>. Nunc tincidunt velit nulla, id pharetra ex pellentesque et. Ut at ante malesuada neque vulputate fringilla a eget leo. Nam ultrices diam eu metus tristique, vel faucibus lacus sollicitudin. Aliquam metus urna, elementum eu finibus eu, hendrerit maximus nunc. Sed id massa et nibh scelerisque semper in at magna. Suspendisse sed ultrices felis. Praesent felis leo, elementum id maximus eget, blandit vitae eros. Proin vel lacus lacus. Maecenas mauris purus, finibus a efficitur sed, lobortis sit amet augue. Morbi elementum massa at pulvinar tempus. Nullam suscipit nisl eu erat faucibus pretium. Aliquam sodales eget dolor vestibulum facilisis. Praesent consectetur, justo vitae molestie ullamcorper, nisl sapien iaculis mi, sit amet accumsan lorem felis non tellus.
+                <a class="underlined underlined--reverse black-to-white">consectetur adipiscing elit</a>. Nunc tincidunt velit nulla, id pharetra ex pellentesque et. Ut at ante malesuada neque vulputate fringilla a eget leo. Nam ultrices diam eu metus tristique, vel faucibus lacus sollicitudin. Aliquam metus urna, elementum eu finibus eu, hendrerit maximus nunc. Sed id massa et nibh scelerisque semper in at magna. Suspendisse sed ultrices felis. Praesent felis leo, elementum id maximus eget, blandit vitae eros. Proin vel lacus lacus. Maecenas mauris purus, finibus a efficitur sed, lobortis sit amet augue. Morbi elementum massa at pulvinar tempus. Nullam suscipit nisl eu erat faucibus pretium. Aliquam sodales eget dolor vestibulum facilisis. Praesent consectetur, justo vitae molestie ullamcorper, nisl sapien iaculis mi, sit amet accumsan lorem felis non tellus.
                 Praesent vitae mollis sapien. Sed id neque sem. Aenean purus nunc, fermentum varius risus ut, porttitor blandit tellus. Sed fermentum consectetur lectus, nec iaculis nisi molestie eget. Vestibulum rutrum tincidunt arcu, sed malesuada nisi. Curabitur libero urna, pulvinar quis faucibus sit amet, venenatis nec odio. Ut vel nibh vehicula, porttitor mi nec, laoreet justo. Duis euismod pharetra leo, et ultrices lacus placerat at. Vestibulum lorem erat, euismod ac dolor luctus, pharetra pretium eros. Nulla sit amet consequat arcu, et aliquam ante. Integer iaculis, turpis at venenatis tincidunt, dolor purus tristique massa, id tincidunt ante lorem porttitor purus. Duis felis sapien, ullamcorper sit amet suscipit eu, tristique id nulla. Duis tristique dolor non consectetur ultrices. Curabitur eget libero lobortis, posuere erat sed, rhoncus mauris.
                 Nullam vel quam felis. Donec egestas interdum enim, quis hendrerit sem consequat vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed dictum posuere orci in consectetur. Proin vitae lacus euismod, blandit magna id, sollicitudin tortor. Vivamus at fermentum neque. Fusce a rutrum metus. Duis porta sollicitudin dui. In lobortis laoreet laoreet. Quisque ut mi at nisi scelerisque viverra non in eros. Integer aliquam ipsum nec elit mattis, a commodo sem porta.
               </span>
             </p>
           </div>
-          <div id="location-of-event">
+          <div id="location-of-event" class="gray">
             <div class="deconstructed" style="height: 1.2em !important;">
               LOCALIZAÇÃO
               <div>LOCALIZAÇÃO</div>
