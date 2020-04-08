@@ -5,16 +5,14 @@
 @font-face {
   font-family: "Calibre-Bold";
   src: url("/src/assets/fonts/calibri-bold-2.ttf");
-  src: url("/src/assets/fonts/CalibreWeb-Bold.eot?#iefix") format("embedded-opentype"),
-    url("/src/assets/fonts/CalibreWeb-Bold.woff") format("woff");
+  src: url("/src/assets/fonts/CalibreWeb-Bold.eot?#iefix") format("embedded-opentype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Calibre-Regular";
   src: url("/src/assets/fonts/calibri-7.ttf");
-  src: url("/src/assets/fonts/CalibreWeb-Regular.eot?#iefix") format("embedded-opentype"),
-    url("/src/assets/fonts/CalibreWeb-Regular.woff") format("woff");
+  src: url("/src/assets/fonts/CalibreWeb-Regular.eot?#iefix") format("embedded-opentype");
 }
 @font-face {
   font-family: "Bebas-Neue-Bold";

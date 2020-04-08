@@ -64,17 +64,6 @@
 
                     </div>
                 </li>
-                <li class="grid-item">
-                    <div id="map-container">
-                        <iframe class="map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.026733576006!2d-73.97981028509388!3d40.761436742527366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f97bdb102b%3A0xea9f8fc0b3ffff55!2sThe%20Museum%20of%20Modern%20Art!5e0!3m2!1spt-BR!2sbr!4v1584739212478!5m2!1spt-BR!2sbr"
-                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                </li>
-                <li class="grid-item-last">
-                    
-                </li>
             </ul>
         </div>
 
