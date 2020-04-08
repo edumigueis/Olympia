@@ -476,7 +476,7 @@
   height: 120px;
   width: 102%;
   background-color: white;
-  z-index: 999;
+  z-index: 1001;
   overflow: hidden;
   margin-top: -102px;
   border-top: 1px solid #bebebe8e;
