@@ -208,149 +208,7 @@ body {
 #bottom-header{
   background-color: #fff !important;
 }
-@media only screen and (min-width: 300px) and (max-width: 499px) {
-  #calendar-red {
-    width: 101px;
-    height: 80px;
-  }
-  #calendar-white {
-    width: 101px;
-    height: 60px;
-  }
-  .day {
-    font-size: 2.1em;
-    height: 60px;
-  }
-  .month {
-    font-size: 1.8em;
-    height: 46px;
-  }
-  .grid-item-last {
-    height: 650px;
-    min-width: 100%;
-    margin: 0;
-    float: left;
-  }
-  .inner-list {
-    width: 300px;
-    float: right;
-  }
-  #event-name {
-    font-size: 0.6em;
-    width: 100%;
-    float: right;
-    margin-right: -20px;
-  }
-  #title {
-    font-size: 0.6em;
-    width: 50%;
-    float: right;
-  }
-  #grid-item-1 {
-    margin-top: 50px;
-    margin-left: 0;
-  }
-  #grid-item-2 {
-    margin-top: 50px;
-    margin-left: 0;
-  }
-  .grid-item-last {
-    margin: 0;
-  }
-  #event-info {
-    width: 20em !important;
 
-  }
-  #page-grid {
-    margin-top: 5%;
-    list-style: none;
-    width: 100%;
-    display: inline-flex;
-    padding: 0;
-    
-    background-color: transparent;
-  }
-  .grid-item {
-    width: 100%;
-    min-height: 400px;
-    display: inline-flex;
-  }
-  #grid-item-2 {
-    margin-right: 20px;
-    margin-top: 20px;
-  }
-  #title {
-    font-size: 0.8em;
-    margin-left: 55%;
-  }
-}
-@media only screen and (min-width: 500px) and (max-width: 899px) {
-  #calendar-red {
-    width: 131px;
-    height: 100px;
-  }
-  #calendar-white {
-    width: 131px;
-    height: 80px;
-  }
-  .day {
-    font-size: 2.8em;
-    height: 90px;
-  }
-  .month {
-    font-size: 2.1em;
-    height: 70px;
-  }
-  #page-rol {
-    margin-top: 200px;
-  }
-  #event-name {
-    font-size: 1em;
-  }
-  #title {
-    font-size: 0.8em;
-    margin-left: 55%;
-    width: 250px;
-  }
-}
-@media only screen and (min-width: 900px) and (max-width: 1050px) {
-  #page-rol {
-    margin-top: 90px;
-  }
-  #event-name {
-    font-size: 1em;
-  }
-  #title {
-    font-size: 1em;
-  }
-  #title {
-    font-size: 0.8em;
-    margin-left: 45%;
-    width: 400px;
-  }
-  .event-info-p{
-    padding-top: 0;
-  }
-}
-@media only screen and (min-width: 1050px) and (max-width: 1185px) {
-  #page-rol {
-    margin-top: 90px;
-  }
-  #event-name {
-    font-size: 1em;
-  }
-  #title {
-    font-size: 1em;
-  }
-  #title {
-    font-size: 0.8em;
-    margin-left: 45%;
-    width: 450px;
-  }
-  .event-info-p{
-    padding-top: 0;
-  }
-}
 #event-name {
   font-family: "Calibre-Bold";
   font-size: 4em;
@@ -1063,4 +921,182 @@ ul {
 @keyframes a-ltr-before{
     0% {transform: translateX(0)}
     100% {transform: translateX(200%)}
+}
+/*MEDIA*/
+@media only screen and (min-width: 300px) and (max-width: 499px) {
+  #calendar-red {
+    width: 101px;
+    height: 80px;
+  }
+  #calendar-white {
+    width: 101px;
+    height: 60px;
+  }
+  .day {
+    font-size: 2.1em;
+    height: 60px;
+  }
+  .month {
+    font-size: 1.8em;
+    height: 46px;
+  }
+  .grid-item-last {
+    height: 650px;
+    min-width: 100%;
+    margin: 0;
+    float: left;
+  }
+  .inner-list {
+    width: 300px;
+    float: right;
+  }
+  #event-name {
+    font-size: 0.6em;
+    width: 100%;
+    float: right;
+    margin-right: -20px;
+  }
+  #title {
+    font-size: 0.6em;
+    width: 50%;
+    float: right;
+  }
+  #grid-item-1 {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+  #grid-item-2 {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+  .grid-item-last {
+    margin: 0;
+  }
+  #event-info {
+    width: 20em !important;
+
+  }
+  #page-grid {
+    margin-top: 5%;
+    list-style: none;
+    width: 100%;
+    display: inline-flex;
+    padding: 0;
+    
+    background-color: transparent;
+  }
+  .grid-item {
+    width: 100%;
+    min-height: 400px;
+    display: inline-flex;
+  }
+  #grid-item-2 {
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  #title {
+    font-size: 0.8em;
+    margin-left: 55%;
+  }
+  #second-part-eve{
+    margin: 0;
+    width: 100%;
+  }
+  #gallery-cont{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .about-event-loc-in{
+    text-indent: 0.5em;
+  }
+  #title {
+    font-size: 2em;
+    width: 300px;
+    float: left;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 899px) {
+  #calendar-red {
+    width: 131px;
+    height: 100px;
+  }
+  #calendar-white {
+    width: 131px;
+    height: 80px;
+  }
+  .day {
+    font-size: 2.8em;
+    height: 90px;
+  }
+  .month {
+    font-size: 2.1em;
+    height: 70px;
+  }
+  #page-rol {
+    margin-top: 200px;
+  }
+  #event-name {
+    font-size: 1em;
+  }
+  #second-part-eve{
+    margin: 0;
+    width: 100%;
+  }
+  #gallery-cont{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #grid-item-1{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .grid-item{
+    min-width: 100%;
+  }
+  #y-r-here{
+    width: 100px;
+  }
+  .about-event-loc-in{
+    text-indent: 0.5em;
+  }
+  #title {
+    font-size: 2.2em;
+    margin-left: 45%;
+    width: 300px;
+    margin-top: -60px;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1050px) {
+  #page-rol {
+    margin-top: 90px;
+  }
+  #event-name {
+    font-size: 1em;
+  }
+  #title {
+    font-size: 2.6em;
+    margin-left: 45%;
+    width: 400px;
+    margin-top: -120px;
+  }
+}
+@media only screen and (min-width: 1050px) and (max-width: 1185px) {
+  #page-rol {
+    margin-top: 90px;
+  }
+  #event-name {
+    font-size: 1em;
+  }
+  #title {
+    font-size: 3em;
+    margin-top: -140px;
+  }
+  #title {
+    margin-left: 45%;
+    width: 450px;
+  }
 }
