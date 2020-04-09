@@ -1,6 +1,7 @@
 .title{
-    margin-top: 65px;
-    font: 300 50px/1.2 'Oswald', sans-serif;
+    margin-top: 0px;
+    font: 300 50px/1.2 "Calibre-Bold";
+    margin-left: 44%;
 }
 @font-face {
 	font-family: 'Open Sans';
@@ -51,13 +52,31 @@
 body{
     overflow-x: hidden;
   }
-  .event-image-container{
+.event-image-container{
     height: 100%;
     float: left;
+    position: absolute;
+    
 }
 .event-image-container{
     width: 100%;
   }
   .event-image-container{
     width: 280px;
+  }
+  .image-container{
+      width: 100%;
+  
+  }
+  .image{
+      width: 100%;
+  }
+  .texto{
+      font: "Calibre-Regular";
+      font-weight: bold;
+      
+  }
+  .caixa-texto{
+      width: 80%;
+      margin-left: 10%;
   }
