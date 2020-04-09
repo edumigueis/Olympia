@@ -1,0 +1,63 @@
+.title{
+    margin-top: 65px;
+    font: 300 50px/1.2 'Oswald', sans-serif;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans.ttf');
+}
+
+@font-face {
+	font-family: 'Bruzh';
+	src: url('../fonts/Bruzh.ttf');
+}
+@font-face {
+	font-family: 'Bebas';
+	src: url('../fonts/BebasNeue.ttf');
+}
+@font-face {
+	font-family: 'Calibre-Bold';
+	src: url('../fonts/calibri-bold-2.ttf');
+	src: url('../fonts/CalibreWeb-Bold.eot?#iefix') format('embedded-opentype'), 
+	url('../fonts/CalibreWeb-Bold.woff') format('woff'); 
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Calibre-Regular';
+    src: url('../fonts/calibri-7.ttf');
+}
+@font-face {
+	font-family: 'Bebas-Neue-Bold';
+	src: url('../fonts/BebasNeue-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+	font-family: 'Bebas-Neue-Regular';
+	src: url('../fonts/BebasNeue-Regular.ttf');
+}
+@font-face {
+	font-family: 'Bebas-Neue-Light';
+	src: url('../fonts/BebasNeue-Light.ttf');
+}
+@font-face {
+	font-family: 'Bebas-Neue-Book';
+	src: url('../fonts/BebasNeue-Book.ttf');
+}
+@font-face {
+	font-family: 'Bebas-Neue-Thin';
+	src: url('../fonts/BebasNeue-Thin.ttf');
+}
+body{
+    overflow-x: hidden;
+  }
+  .event-image-container{
+    height: 100%;
+    float: left;
+}
+.event-image-container{
+    width: 100%;
+  }
+  .event-image-container{
+    width: 280px;
+  }

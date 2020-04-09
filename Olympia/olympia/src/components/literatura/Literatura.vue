@@ -4,6 +4,7 @@
       <title>L I T E R A T U R A</title>
       <link rel="stylesheet" href="/src/assets/css/event-detail.css" />
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
+       <link rel="stylesheet" href="/src/assets/css/literatura.css" />
 
       <meu-menu-bar></meu-menu-bar>
       <meu-menu-items></meu-menu-items>
@@ -12,7 +13,14 @@
       <meu-mouse></meu-mouse>
 
       <!--Seu código aqui-->
-
+      <div class="image-container">
+                <img
+                  src="https://images.unsplash.com/photo-1465433045946-ba6506ce5a59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                  alt
+                  class="image"
+                />
+              </div>
+     <h1 class="title">Literatura</h1>
       <!---->
 
       <meu-footer></meu-footer>
