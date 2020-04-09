@@ -24,14 +24,13 @@
   font-size: 22px;
 }
 
-#container-cad-user {
+#container-cad-artist {
   position: absolute;
   width: 100%;
   font: 100% Lato, Arial, Sans Serif;
   height: 100vh;
   z-index: 100;
 }
-
 body {
   overflow-x: hidden;
 }
@@ -65,7 +64,7 @@ body {
   top: 0;
   z-index: -1;
 }
-#user-let-img {
+#artist-let-img {
   transition: 0.5s all ease-in-out;
   display: none;
   width: 300px;
@@ -98,7 +97,7 @@ body {
   margin: 20px 0;
   transition: 1s all;
 }
-#user-let-img:hover {
+#artist-let-img:hover {
   opacity: 0.8;
   cursor: pointer;
   background: linear-gradient(
@@ -623,7 +622,7 @@ list-type-ulli,
   padding: 0;
 }
 
-#pick-image-modal {
+#pick-image-modal-art {
   display: none;
   border-radius: 20px;
   -moz-border-radius: 20px;
@@ -680,12 +679,13 @@ list-type-ulli,
   filter: Alpha(Opacity=60) !important;
   background-color: rgb(40, 40, 40) !important;
   display: none;
-  height: 100vh;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
   z-index: 7;
   transition: 1s all;
+  height: 100%;
 }
 /* Esconde o input */
 input[type="file"] {
@@ -1249,10 +1249,10 @@ img {
   margin-right: 20px;
   margin-top: 10px;
 }
-#user-let-img {
+#artist-let-img {
   width: 100%;
 }
-#user-prof-image {
+#artist-prof-image {
   border-radius: 300px;
   height: 300px;
   width: 300px;
@@ -1270,7 +1270,7 @@ img {
   }
 }
 @media screen and (min-width: 1400px) {
-  #user-prof-image {
+  #artist-prof-image {
     border-radius: 300px;
     height: 300px;
     width: 300px;
@@ -1282,7 +1282,7 @@ img {
     }*/
 }
 @media screen and (min-width: 770px) and (max-width: 999px) {
-  #user-let-img {
+  #artist-let-img {
     width: 310px;
     height: 310px;
   }
@@ -1302,14 +1302,14 @@ img {
   }
 }
 @media screen and (min-width: 771px) and (max-width: 999px) {
-  #user-prof-image {
+  #artist-prof-image {
     border-radius: 300px;
     height: 300px;
     width: 300px;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 880px) {
-  #user-let-img {
+  #artist-let-img {
     width: 310px;
     height: 310px;
   }
@@ -1328,18 +1328,18 @@ img {
   .error-modal {
     height: 420px;
   }
-  #user-prof-image {
+  #artist-prof-image {
     border-radius: 250px;
     height: 250px;
     width: 250px;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1070px) {
-  #user-let-img:before {
+  #artist-let-img:before {
     padding-top: 40%;
     padding-bottom: 40%;
   }
-  #user-let-img {
+  #artist-let-img {
     max-width: 320px;
   }
   .hexcolor {
@@ -1356,23 +1356,23 @@ img {
     z-index: 3;
     position: absolute;
   }
-  #user-prof-image {
+  #artist-prof-image {
     border-radius: 300px;
     height: 300px;
     width: 300px;
   }
-  #user-prof-image {
+  #artist-prof-image {
     border-radius: 290px;
     height: 290px;
     width: 290px;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1100px) {
-  #user-let-img:before {
+  #artist-let-img:before {
     padding-top: 40%;
     padding-bottom: 40%;
   }
-  #user-let-img {
+  #artist-let-img {
     max-width: 320px;
   }
   .hexcolor {
@@ -1415,11 +1415,11 @@ img {
   }
 }
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
-  #user-let-img:before {
+  #artist-let-img:before {
     padding-top: 42%;
     padding-bottom: 42%;
   }
-  #user-let-img {
+  #artist-let-img {
     max-width: 315px;
   }
 }
@@ -1432,10 +1432,10 @@ img {
   }
 }
 @media screen and (min-width: 1401px) {
-  #user-let-img:before {
+  #artist-let-img:before {
     padding-top: 50%;
   }
-  #user-let-img {
+  #artist-let-img {
     margin: 0;
     z-index: -1;
     max-width: 100%;
@@ -1513,7 +1513,7 @@ img {
   .form-title {
     text-align: center;
   }
-  #user-let-img {
+  #artist-let-img {
     margin-left: 21%;
   }
   .hexcolor {
@@ -1522,7 +1522,7 @@ img {
     margin-left: 10%;
     margin-right: 10%;
   }
-  #user-let-img {
+  #artist-let-img {
     width: 340px;
     height: 340px;
   }
@@ -1544,7 +1544,7 @@ img {
   }
 }
 @media screen and (min-width: 551px) and (max-width: 590px) {
-  #user-let-img {
+  #artist-let-img {
     margin-left: 9%;
   }
   .warn-image {
@@ -1566,7 +1566,7 @@ img {
     margin-top: 10% !important;
     margin-right: 20.5%;
   }
-  #pick-image-modal {
+  #pick-image-modal-art {
     height: 410px !important;
   }
   .error-modal {
@@ -1575,14 +1575,14 @@ img {
   .warn-image {
     margin-left: 10%;
   }
-  #user-prof-image {
+  #artist-prof-image {
     border-radius: 400px;
     height: 400px;
     width: 400px;
   }
 }
 @media screen and (min-width: 450px) and (max-width: 550px) {
-  #user-let-img {
+  #artist-let-img {
     margin-left: 0;
   }
   .file-label {
@@ -1598,7 +1598,7 @@ img {
   .circle {
     margin-top: 10% !important;
   }
-  #pick-image-modal {
+  #pick-image-modal-art {
     height: 400px !important;
   }
   .error-modal {
@@ -1607,7 +1607,7 @@ img {
   .warn-image {
     margin-left: 8%;
   }
-  #user-prof-image {
+  #artist-prof-image {
     border-radius: 350px;
     height: 350px;
     width: 350px;
@@ -1638,7 +1638,7 @@ img {
   .circle {
     margin-top: 10% !important;
   }
-  #pick-image-modal {
+  #pick-image-modal-art {
     height: 400px !important;
   }
   .error-modal {
@@ -1647,7 +1647,7 @@ img {
   .warn-image {
     margin-left: 6%;
   }
-  #user-prof-image {
+  #artist-prof-image {
     border-radius: 210px;
     height: 210px;
     width: 210px;

@@ -14,7 +14,7 @@
               <h2 class="form-title black-to-white">Cadastre-se</h2>
               <form class="register-form" id="register-form">
                 <div class="form-group">
-                  <label for="name">
+                  <label for="name-art">
                     <div class="gray-n-imp">
                     <i class="zmdi dark-register-ico zmdi-account material-icons-name" style="margin-top: 5.5px"></i>
                     </div>
@@ -22,14 +22,14 @@
                   <input
                     class="dark-register-input"
                     type="text"
-                    name="name"
-                    id="name"
+                    name="name-art"
+                    id="name-art"
                     placeholder="Seu Nome"
                     required
                   />
                 </div>
                 <div class="form-group">
-                  <label for="user">
+                  <label for="artist">
                     <div class="gray-n-imp">
                     <i class="zmdi dark-register-ico zmdi-sign-in" style="margin-top: 5.5px"></i>
                     </div>
@@ -37,14 +37,14 @@
                   <input
                     class="dark-register-input"
                     type="text"
-                    name="user"
-                    id="user"
+                    name="artist"
+                    id="artist"
                     placeholder="Seu Nome de Usuário"
                     required
                   />
                 </div>
                 <div class="form-group">
-                  <label for="email">
+                  <label for="email-art">
                     <div class="gray-n-imp">
                     <i class="zmdi dark-register-ico zmdi-email" style="margin-top: 5.5px"></i>
                     </div>
@@ -53,7 +53,7 @@
                     class="dark-register-input"
                     type="email"
                     name="email"
-                    id="email"
+                    id="email-art"
                     placeholder="Seu Email"
                     required
                   />
@@ -74,7 +74,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="pass">
+                  <label for="pass_art">
                     <div class="locker-cont gray-n-imp">
                     <i class="zmdi dark-register-ico zmdi-lock" style="margin-top: 5.5px"></i>
                     </div>
@@ -82,14 +82,14 @@
                   <input
                     class="dark-register-input"
                     type="password"
-                    name="pass"
-                    id="pass"
+                    name="pass_art"
+                    id="pass_art"
                     placeholder="Sua senha"
                     required
                   />
                 </div>
                 <div class="form-group">
-                  <label for="re-pass">
+                  <label for="re-pass_art">
                     <div class="is-same-cont gray-n-imp">
                     <i class="zmdi dark-register-ico zmdi-lock-outline" style="margin-top: 5.5px"></i>
                     </div>
@@ -97,8 +97,8 @@
                   <input
                     class="dark-register-input"
                     type="password"
-                    name="re_pass"
-                    id="re_pass"
+                    name="re_pass_art"
+                    id="re_pass_art"
                     placeholder="Confirme sua senha"
                     required
                   />
@@ -107,7 +107,7 @@
                   <input
                     type="checkbox"
                     name="agree-term"
-                    id="agree-term"
+                    id="agree-term-artist"
                     class="agree-term dark-register-input"
                   />
                   <label for="agree-term" class="label-agree-term black-to-white">
@@ -120,8 +120,8 @@
                 <div class="form-group form-button">
                   <input
                     type="submit"
-                    name="signup"
-                    id="signup"
+                    name="signup-artist"
+                    id="signup-artist"
                     class="form-submit"
                     value="Registrar"
                   />
@@ -129,43 +129,43 @@
               </form>
             </div>
             <div class="form-group hexcolor">
-              <label for="hexcolor" style="margin-top:-13px">
+              <label for="hexcolor-art" style="margin-top:-13px">
                 <i class="zmdi dark-register-ico zmdi-palette"></i>
               </label>
               <input
                 type="text"
                 name="custom_color"
                 placeholder="#FFFFFF"
-                id="hexcolor"
+                id="hexcolor-art"
                 class="call-picker"
               />
             </div>
             <div class="color-holder call-picker" style="display: none"></div>
-            <div class="color-picker" id="color-picker" style="display: none"></div>
+            <div class="color-picker" id="color-picker-artist" style="display: none"></div>
 
             <div class="signup-image">
-              <figure class="default-prof-user">
-                <img src="/src/assets/images/user-ico.png" alt="sing up image" id="user-prof-image" />
+              <figure class="default-prof-artist">
+                <img src="/src/assets/images/user-ico.png" alt="sing up image" id="artist-prof-image" />
               </figure>
-              <div id="user-let-img"></div>
+              <div id="artist-let-img"></div>
               <p class="signup-image-link">Escolher Foto de Perfil</p>
               <img class='bin' src='/src/assets/images/trash-can-icon.png'>
             </div>
           </div>
         </div>
       </section>
-      <div id="pick-image-modal" class="background-white-to-darkgray" >
+      <div id="pick-image-modal-art" class="background-white-to-darkgray" >
         <h3 class="file-input-title black-to-white">Selecione uma Imagem</h3>
         <ul class="file-list">
           <li class="file-item file-item-1">
             <div class="input-file-cont">
-              <input type="file" name="file" id="file" class="inputfile" accept=".jpg, .jpeg, .png" />
-              <label for="file" class="file-label">Escolher Imagem</label>
+              <input type="file" name="file" id="file-artist" class="inputfile" accept=".jpg, .jpeg, .png" />
+              <label for="file-artist" class="file-label">Escolher Imagem</label>
             </div>
           </li>
           <li class="file-item">
             <div class="circle">
-              <img class="profile-pic" src="/src/assets/images/user-ico.png" />
+              <img id="profile-pic-artist" src="/src/assets/images/user-ico.png" />
             </div>
           </li>
         </ul>
@@ -173,7 +173,7 @@
       <div class="ui-widget-overlay"></div>
       <div class="error-modal">
         <div class="warn-image"><img class="warning-pic" src="/src/assets/images/warn-ico.png" /></div>
-        <P class="warn"></P>
+        <p class="warn"></p>
       </div>
       <div id="background-wrap">
         <div class="bubble x1"></div>

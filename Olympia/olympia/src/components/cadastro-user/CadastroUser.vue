@@ -126,7 +126,9 @@
               />
             </div>
             <div class="color-holder call-picker" style="display: none"></div>
-            <div class="color-picker" id="color-picker" style="display: none"></div>
+            <div class="color-picker" id="color-picker" style="display: none">
+              
+            </div>
 
             <div class="signup-image">
               <figure class="default-prof-user">
@@ -150,7 +152,7 @@
           </li>
           <li class="file-item">
             <div class="circle">
-              <img class="profile-pic" src="/src/assets/images/user-ico.png" />
+              <img id="profile-pic" src="/src/assets/images/user-ico.png" />
             </div>
           </li>
         </ul>

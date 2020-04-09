@@ -42,7 +42,7 @@ var colorList = [
   "CCFF00",
   "CC04FF"
 ];
-var picker = $("#color-picker");
+var picker = $("#color-picker-artist");
 
 for (var i = 0; i < colorList.length; i++) {
   picker.append(
@@ -62,32 +62,32 @@ setInterval(() => {
     $(function() {
       var firstLet = null;
 
-      $("#name").focusout(function() {
+      $("#name-art").focusout(function() {
         $(".zmdi.zmdi-palette").fadeIn();
-        $("#hexcolor").fadeIn();
-        if ($("#name").val() != "") {
+        $("#hexcolor-art").fadeIn();
+        if ($("#name-art").val() != "") {
           $(".default-prof-user").empty();
-          firstLet = $("#name")
+          firstLet = $("#name-art")
             .val()
             .charAt(0);
           firstLet = firstLet.toUpperCase();
           var vzs = 0;
           vzs++;
-          if (vzs == 1) $("#user-let-img").css("display", "block");
+          if (vzs == 1) $("#artist-let-img").css("display", "block");
           $(".hexcolor").css("display", "block");
           $(".color-holder").css("display", "block");
-          $("#user-let-img").html(
+          $("#artist-let-img").html(
             "<p class='prof-user-letter'>" + firstLet + "</p>"
           );
           $(".signup-image").css("margin-top", 0);
-          $("#user-let-img").css("margin-bottom", "60px");
+          $("#artist-let-img").css("margin-bottom", "60px");
           firstLet = null;
         } else {
-          $("#user-let-img").css("display", "none");
+          $("#artist-let-img").css("display", "none");
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".bin").fadeOut();
         }
@@ -99,27 +99,27 @@ setInterval(() => {
         if (selectedImage != null) {
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
-          $("#user-let-img").empty();
+          $("#artist-let-img").empty();
           $('.is-same-cont').css("background-color","transparent");
           $(".signup-image").html(
             "<figure class='default-prof-user'><img src='" +
               selectedImage +
-              "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+              "' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".bin").fadeIn();
           $(".ui-widget-overlay").fadeOut(350);
-          $("#pick-image-modal").fadeOut(500);
+          $("#pick-image-modal-art").fadeOut(500);
           $(".error-modal").fadeOut(500);
           $(".error-modal").css('opacity','0');
         } 
         else
-        if(selectedImage == null && $("#name").val() != "")
+        if(selectedImage == null && $("#name-art").val() != "")
         {
           $(".hexcolor").css("display", "block");
           $(".color-holder").css("display", "block");
           $('.is-same-cont').css("background-color","transparent");
           $(".ui-widget-overlay").fadeOut(350);
-          $("#pick-image-modal").fadeOut(500);
+          $("#pick-image-modal-art").fadeOut(500);
           $(".error-modal").fadeOut(500);
           $(".error-modal").css('opacity','0');
         }
@@ -127,43 +127,43 @@ setInterval(() => {
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
           $('.is-same-cont').css("background-color","transparent");
-          $("#user-let-img").empty();
+          $("#artist-let-img").empty();
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".ui-widget-overlay").fadeOut(350);
-          $("#pick-image-modal").fadeOut(500);
+          $("#pick-image-modal-art").fadeOut(500);
           $(".error-modal").fadeOut(500);
           $(".error-modal").css('opacity','0');
         }
       });
       $(".bin").on("click", function() {
         $(".zmdi.zmdi-palette").fadeIn();
-        $("#hexcolor").fadeIn();
-        if ($("#name").val() != "") {
+        $("#hexcolor-art").fadeIn();
+        if ($("#name-art").val() != "") {
           $(".default-prof-user").empty();
-          firstLet = $("#name")
+          firstLet = $("#name-art")
             .val()
             .charAt(0);
           firstLet = firstLet.toUpperCase();
           var vzs = 0;
           vzs++;
-          if (vzs == 1) $("#user-let-img").css("display", "block");
+          if (vzs == 1) $("#artist-let-img").css("display", "block");
           $(".hexcolor").css("display", "block");
           $(".color-holder").css("display", "block");
-          $("#user-let-img").html(
+          $("#artist-let-img").html(
             "<p class='prof-user-letter'>" + firstLet + "</p>"
           );
           $(".signup-image").css("margin-top", 0);
-          $("#user-let-img").css("margin-bottom", "60px");
+          $("#artist-let-img").css("margin-bottom", "60px");
           $(".bin").fadeOut();
           firstLet = null;
         } else {
-          $("#user-let-img").css("display", "none");
+          $("#artist-let-img").css("display", "none");
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".bin").fadeOut();
         }
@@ -173,7 +173,7 @@ setInterval(() => {
           var reader = new FileReader();
 
           reader.onload = function(e) {
-            $(".profile-pic").attr("src", e.target.result);
+            $("#profile-pic-artist").attr("src", e.target.result);
             selectedImage = e.target.result;
           };
 
@@ -181,7 +181,7 @@ setInterval(() => {
         }
       };
 
-      $("#file").on("change", function() {
+      $("#file-artist").on("change", function() {
         readURL(this);
       });
 
@@ -192,24 +192,24 @@ setInterval(() => {
           var codeHex = $(this).data("hex");
 
           $(".color-holder").css("background-color", codeHex);
-          $("#user-let-img").css("background", codeHex);
-          $("#hexcolor").val(codeHex);
+          $("#artist-let-img").css("background", codeHex);
+          $("#hexcolor-art").val(codeHex);
         });
       });
-      $("#name").focusin(function() {
+      $("#name-art").focusin(function() {
         if (
-          $("#user-prof-image").attr(src) == "/src/assets/images/user-ico.png"
+          $("#artist-prof-image").attr(src) == "/src/assets/images/user-ico.png"
         ) {
-          $("#user-let-img").empty();
+          $("#artist-let-img").empty();
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p>"
+            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p>"
           );
-          $("#name").css("border-radius", "0");
+          $("#name-art").css("border-radius", "0");
           $(".color-holder").css("display", "none");
-          $("#name").css("border-top", 0);
-          $("#name").css("border-left", 0);
-          $("#name").css("border-right", 0);
-          $("#name").css("border-bottom", "1px solid #999");
+          $("#name-art").css("border-top", 0);
+          $("#name-art").css("border-left", 0);
+          $("#name-art").css("border-right", 0);
+          $("#name-art").css("border-bottom", "1px solid #999");
         } else {
           return;
         }
@@ -221,37 +221,37 @@ setInterval(() => {
         $("#tel").css("border-right", 0);
         $("#tel").css("border-bottom", "1px solid #999");
       });
-      $("#pass").focusin(function() {
-        $("#pass").css("border-radius", "0");
-        $("#pass").css("border-top", 0);
-        $("#pass").css("border-left", 0);
-        $("#pass").css("border-right", 0);
-        $("#pass").css("border-bottom", "1px solid #999");
+      $("#pass_art").focusin(function() {
+        $("#pass_art").css("border-radius", "0");
+        $("#pass_art").css("border-top", 0);
+        $("#pass_art").css("border-left", 0);
+        $("#pass_art").css("border-right", 0);
+        $("#pass_art").css("border-bottom", "1px solid #999");
       });
-      $("#re_pass").focusin(function() {
-        $("#re_pass").css("border-radius", "0");
-        $("#re_pass").css("border-top", 0);
-        $("#re_pass").css("border-left", 0);
-        $("#re_pass").css("border-right", 0);
-        $("#re_pass").css("border-bottom", "1px solid #999");
+      $("#re_pass_art").focusin(function() {
+        $("#re_pass_art").css("border-radius", "0");
+        $("#re_pass_art").css("border-top", 0);
+        $("#re_pass_art").css("border-left", 0);
+        $("#re_pass_art").css("border-right", 0);
+        $("#re_pass_art").css("border-bottom", "1px solid #999");
       });
-      $("#email").focusin(function() {
-        $("#email").css("border-radius", "0");
-        $("#email").css("border-top", 0);
-        $("#email").css("border-left", 0);
-        $("#email").css("border-right", 0);
-        $("#email").css("border-bottom", "1px solid #999");
-      });
-
-      $("#hexcolor").on("change", function() {
-        $("#user-let-img").css("background", this.value);
+      $("#email-art").focusin(function() {
+        $("#email-art").css("border-radius", "0");
+        $("#email-art").css("border-top", 0);
+        $("#email-art").css("border-left", 0);
+        $("#email-art").css("border-right", 0);
+        $("#email-art").css("border-bottom", "1px solid #999");
       });
 
-      $('#pass').on("keyup",function (){
+      $("#hexcolor-art").on("change", function() {
+        $("#artist-let-img").css("background", this.value);
+      });
+
+      $('#pass_art').on("keyup",function (){
         forcaSenha($(this).val());                        
       })
-      $('#user').on("keyup",function (){
-        var user = $('#user').val();
+      $('#artist').on("keyup",function (){
+        var user = $('#artist').val();
         if(user ==  "")
         {
           return;
@@ -261,11 +261,11 @@ setInterval(() => {
           $(".error-modal").css('opacity','1');
           $(".ui-widget-overlay").fadeIn(500);
           $(".warn").html("O username não deve ter @ no ínicio e não deve ter acentuação.");
-          $('#user').val("");
+          $('#artist').val("");
         }                     
       })
-      $('#name').on("focusout",function (){
-        var name = $('#name').val();
+      $('#name-art').on("focusout",function (){
+        var name = $('#name-art').val();
         var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
         if(name ==  "")
         {
@@ -276,7 +276,7 @@ setInterval(() => {
           $(".error-modal").css('opacity','1');
           $(".ui-widget-overlay").fadeIn(500);
           $(".warn").html("Deve ser fornecido o nome e o sobrenome.");
-          $('#name').val("");
+          $('#name-art').val("");
         }                     
       })
       $('#tel').on("focusout",function (){
@@ -294,8 +294,8 @@ setInterval(() => {
           $('#tel').val("");
         }                     
       })
-      $('#email').on("focusout",function (){
-        var email = $('#email').val();
+      $('#email-art').on("focusout",function (){
+        var email = $('#email-art').val();
         if(email ==  "")
         {
           return;
@@ -305,7 +305,7 @@ setInterval(() => {
           $(".error-modal").css('opacity','1');
           $(".ui-widget-overlay").fadeIn(500);
           $(".warn").html("O email deve ter um @ seguido pelo domínio.");
-          $('#email').val("");
+          $('#email-art').val("");
         }
       })
       function validar(emailp){
@@ -383,9 +383,9 @@ setInterval(() => {
     
         $('.locker-cont').css("background-color", color);
     }
-    $('#pass').on("focusout", function(){
+    $('#pass_art').on("focusout", function(){
       var color = $('.locker-cont').css("background-color");
-      if($('#pass').val() == "")
+      if($('#pass_art').val() == "")
       {
         $('.locker-cont').css("background-color","transparent")
         color = "rgb(255, 255, 255)";
@@ -394,7 +394,7 @@ setInterval(() => {
         $(".ui-widget-overlay").fadeIn(450);
         $(".error-modal").fadeIn(500);
         $(".error-modal").css('opacity','0');
-        $('#pass').val("");
+        $('#pass_art').val("");
         $('.is-same-cont').css("background-color","transparent");
         $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições!");
       }
@@ -402,42 +402,42 @@ setInterval(() => {
         $(".ui-widget-overlay").fadeIn(450);
         $(".error-modal").fadeIn(500);
         $(".error-modal").css('opacity','1');
-        $('#pass').val("");
+        $('#pass_art').val("");
         $('.is-same-cont').css("background-color","transparent");
         $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições.");
       }
     });
 
 
-    $('#re_pass').on("focusin", function(){
+    $('#re_pass_art').on("focusin", function(){
       $('.is-same-cont').css("background-color","rgb(237, 41, 57)");
     });
-    $('#pass, #re_pass').on('keyup', function () {
-      if ($('#pass').val() == $('#re_pass').val() && $('#pass').val() != "") {
+    $('#pass_art, #re_pass_art').on('keyup', function () {
+      if ($('#pass_art').val() == $('#re_pass_art').val() && $('#pass_art').val() != "") {
         $('.is-same-cont').css("background-color","#2eb82e");
       } 
-      if ($('#pass').val() != $('#re_pass').val() && $('#pass').val() != "")
+      if ($('#pass_art').val() != $('#re_pass_art').val() && $('#pass_art').val() != "")
         $('.is-same-cont').css("background-color","rgb(237, 41, 57)");
-      if($('#pass').val() == ""){
+      if($('#pass_art').val() == ""){
         $('.is-same-cont').css("background-color","transparent")
       }
     });
       $(".signup-image-link").on("click", function() {
         $(".ui-widget-overlay").fadeIn(500);
-        $("#pick-image-modal").fadeIn(500);
+        $("#pick-image-modal-art").fadeIn(500);
       });
-      $("#signup").on("click", function(e) {
-        if ($("#name").val() == "") {
+      $("#signup-artist").on("click", function(e) {
+        if ($("#name-art").val() == "") {
           return;
-        } else if ($("#email").val() == "") {
+        } else if ($("#email-art").val() == "") {
           return;
         } else if ($("#tel").val() == "") {
           return;
-        } else if ($("#pass").val() == "") {
+        } else if ($("#pass_art").val() == "") {
           return;
-        } else if ($("#re_pass").val() == "") {
+        } else if ($("#re_pass_art").val() == "") {
           return;
-        } else if ($("#pass").val() != $("#re_pass").val()) {
+        } else if ($("#pass_art").val() != $("#re_pass_art").val()) {
           $(".warn").text("As senhas não correspondem!");
           $(".error-modal").fadein();
           $(".error-modal").css('opacity','1');

@@ -173,7 +173,7 @@ setInterval(() => {
           var reader = new FileReader();
 
           reader.onload = function(e) {
-            $(".profile-pic").attr("src", e.target.result);
+            $("#profile-pic").attr("src", e.target.result);
             selectedImage = e.target.result;
           };
 
