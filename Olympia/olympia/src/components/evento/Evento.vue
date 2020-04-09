@@ -3,13 +3,14 @@
     <div id="container-evento">
       <link rel="stylesheet" href="/src/assets/css/event-detail.css" />
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <title>E V E N T O</title>
       <meu-menu-bar></meu-menu-bar>
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
       <meu-mouse></meu-mouse>
-      <div class="event-header dark-6">
+      <div id="event-header" class="dark-6">
         <div class="img-header">
           <div class="img-wrap">
             <img
@@ -137,6 +138,13 @@
         <div class="bubble x19"></div>
         <div class="bubble x20"></div>
       </div>
+      <div class="icon-bar">
+  <a id="to-top-tb" href="#event-header"><i class="fa fa-home"></i></a> 
+  <a id="to-info-tb" href="#event-info"><i class="fa fa-info"></i></a> 
+  <a id="to-gal-tb" href="#gallery-cont"><i class="fa fa-camera"></i></a> 
+  <a id="to-ab-tb" href="#text-about-event"><i class="fa fa-indent"></i></a>
+  <a id="to-loc-tb" href="#location-of-event"><i class="fa fa-globe"></i></a> 
+</div>
       <meu-footer></meu-footer>
     </div>
   </main>
