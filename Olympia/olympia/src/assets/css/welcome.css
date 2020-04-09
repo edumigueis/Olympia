@@ -64,8 +64,8 @@ text {
 
 .title {
   font-size: 45px;
-  margin-bottom: 2%;
-  color: rgb(170, 170, 170, 0.8);
+  margin-bottom: 2%!important;
+  color: rgb(170, 170, 170, 0.8)!important;
   transition: 1s all;
 }
 
@@ -101,7 +101,7 @@ text {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 .start:hover,

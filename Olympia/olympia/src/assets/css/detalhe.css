@@ -307,6 +307,7 @@ ul li {
 }
 #info-2{
   width: 21%;
+  vertical-align: top;
 }
 #info-list {
   width: 100%;
@@ -436,7 +437,7 @@ ul li {
   background-repeat: repeat-x;
   background-size: 4px 4px;
   transition: background-size 0.2s;
-  padding: 2px;
+  padding: 4px;
   margin-left: 5px;
   text-decoration: none;
   color: black;

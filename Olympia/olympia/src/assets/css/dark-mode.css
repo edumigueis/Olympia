@@ -136,7 +136,7 @@
 .dark-mode.black-to-white-pol{
   fill: rgb(231, 231, 231);
 }
-.dark-mode#more-arrows:hover .black-to-white-pol{
+.dark-mode.arrow:hover .black-to-white-pol{
   fill: rgb(231, 231, 231) !important;
   transition: all 0.2s ease-out;
   cursor: pointer;

@@ -57,6 +57,11 @@
   border: none;
 }
 
+.c-circle-menu__toggle:focus{
+  outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+}
 .c-circle-menu__items {
   display: block;
   list-style: none;

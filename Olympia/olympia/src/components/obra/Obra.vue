@@ -63,10 +63,10 @@
             </tr>
           </table>
         </div>
-        <div id="info-col-d" class="white">
-          <ul id="info-list" class="white">
-            <li class="info-item white" id="info-1">
-              <div class="inner-list white">
+        <div id="info-col-d" class="white-6">
+          <ul id="info-list" class="white-6">
+            <li class="info-item white-6" id="info-1">
+              <div class="inner-list white-6">
                 <div id="simple-art-info">
                   <p id="art-name" class="black-to-white">N. 17a</p>
                   <p id="art-detail-p" class="black-to-white">
@@ -76,7 +76,7 @@
                     <span id="art-mat">Tela, Tinta a óleo.</span>
                   </p>
                 </div>
-                <div class="fine-line white"></div>
+                <div class="fine-line white-6"></div>
                 <div id="art-data" class="black-to-white">
                   O Retrato de Adele Bloch-Bauer I é uma pintura de Gustav Klimt
                   completada em 1907. Foi vendida em junho de 2006, a Ronald
@@ -94,7 +94,7 @@
                 </div>
               </div>
             </li>
-            <li class="info-item white" id="info-2">
+            <li class="info-item white-6" id="info-2">
               <div class="inner-list" >
                 <div id="simple-artist-info">
                   <p id="artist-user">
@@ -118,7 +118,7 @@
                   />
                 </div>
                 <p id="artist-profile" class="black-to-white">
-                  <a href="/profile/klimt" class="link">Visitar o perfil</a>
+                  <a href="/profile/klimt" class="link black-to-white">Visitar o perfil</a>
                 </p>
               </div>
             </li>
@@ -127,7 +127,7 @@
       </div>
         <div id="paginate-detail">
           <div id="arrows-pag-det">
-              <svg id="more-arrows">
+              <svg id="more-arrows" class='arrow'>
                 <polygon
                   class="arrow-top black-to-white-pol"
                   points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
@@ -143,17 +143,17 @@
               </svg>
           </div>
           <div id="arrows-pag-det-2">
-              <svg id="more-arrows-2" class="more-arrows-2">
+              <svg id="more-arrows-2" class="more-arrows-2 arrow">
                 <polygon
-                  class="arrow-top-2"
+                  class="arrow-top-2 black-to-white-pol"
                   points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
                 />
                 <polygon
-                  class="arrow-middle-2"
+                  class="arrow-middle-2 black-to-white-pol"
                   points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "
                 />
                 <polygon
-                  class="arrow-bottom-2"
+                  class="arrow-bottom-2 black-to-white-pol"
                   points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
                 />
               </svg>

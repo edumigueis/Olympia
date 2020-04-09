@@ -16,7 +16,7 @@ $(document).ready(function () {
             $("#fullpage").fadeOut(1000)
             $("#menu-bar").removeClass("dark-mode");
             $("#footer").removeClass("dark-mode");
-            $("#more-arrows").removeClass("dark-mode");
+            $(".arrow").removeClass("dark-mode");
             $(".error-modal").removeClass("dark-mode");
             $("#small-footer").removeClass("dark-mode");
             $(".dark-register-div").removeClass("dark-mode");
@@ -44,7 +44,7 @@ $(document).ready(function () {
             $("#fullpage").fadeOut(1000)
             $("#menu-bar").addClass("dark-mode");
             $("#footer").addClass("dark-mode");
-            $("#more-arrows").addClass("dark-mode");
+            $(".arrow").addClass("dark-mode");
             $(".error-modal").addClass("dark-mode");
             $("#small-footer").addClass("dark-mode");
             $(".dark-register-div").addClass("dark-mode");
