@@ -1415,31 +1415,32 @@ ul {
   font-size: 2.8em;
   padding: 20px;
   padding-left: 30px !important;
+  color: black;
 }
 @-webkit-keyframes ani {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
     text-shadow: 0em 0em 0 lightblue;
-    color: black;
+
   }
   30% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
     text-shadow: 0em 0em 0 lightblue;
-    color: black;
+
   }
   70% {
     -webkit-transform: translate3d(0.08em, -0.08em, 0);
             transform: translate3d(0.08em, -0.08em, 0);
     text-shadow: -0.08em 0.08em lightblue;
-    color: black;
+
   }
   100% {
     -webkit-transform: translate3d(0.08em, -0.08em, 0);
             transform: translate3d(0.08em, -0.08em, 0);
     text-shadow: -0.08em 0.08em lightblue;
-    color: black;
+
   }
 }
 @keyframes ani {
@@ -1447,25 +1448,24 @@ ul {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
     text-shadow: 0em 0em 0 lightblue;
-    color: black;
+
   }
   30% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
     text-shadow: 0em 0em 0 lightblue;
-    color: black;
+
   }
   70% {
     -webkit-transform: translate3d(0.08em, -0.08em, 0);
             transform: translate3d(0.08em, -0.08em, 0);
     text-shadow: -0.08em 0.08em lightblue;
-    color: black;
+
   }
   100% {
     -webkit-transform: translate3d(0.08em, -0.08em, 0);
             transform: translate3d(0.08em, -0.08em, 0);
     text-shadow: -0.08em 0.08em lightblue;
-    color: black;
   }
 }
 .popout span {

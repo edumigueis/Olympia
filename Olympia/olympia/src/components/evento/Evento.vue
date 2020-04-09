@@ -103,7 +103,7 @@
               <img src="/src/assets/images/finish.png" class="location-icon" />
               <p id="y-r-here">Você está aqui!</p>
               <div class="address-cont">
-                <p class="popout">
+                <p class="popout black-to-white">
                   <span>11 W 53rd St,</span>
                   <br />
                   <span>New York, NY,</span>
