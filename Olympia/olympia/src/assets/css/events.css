@@ -184,7 +184,7 @@ ul li{
     line-height: 1.4;
 }
 .expo-name{
-    margin-top: 30%;
+    margin-top: 25%;
     text-align: center;
     max-width: 1000px;
     font: 300 50px/1.2 'Oswald', sans-serif;
@@ -588,6 +588,7 @@ html, body {
 .card{
   list-style: none;
   position: relative;
+  transition: 0.1s all;
 }
 
 .card:before{
@@ -596,7 +597,12 @@ html, body {
   padding-bottom: 150%;
   width: 100%;
 }
-
+.card:active{
+  opacity: 0.7;
+}
+.card:focus{
+  opacity: 0.7;
+}
 .card__background{
   background-size: cover;
   background-position: center;
