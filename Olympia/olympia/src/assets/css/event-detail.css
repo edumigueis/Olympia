@@ -75,6 +75,12 @@ body {
   visibility: visible;
   backface-visibility: visible;
 }
+button:active {
+  outline: none;
+  border: none;
+  }
+  
+  button:focus {outline:0;}
 #mouse {
   display: block;
   width: 22px;
@@ -514,9 +520,6 @@ b {
   border-radius: 16px;
 }
 /* GALLERY /////////////////////////////////////////////////////////////*/
-* {
-	box-sizing: border-box;
-}
 
 ul {
 	list-style: none;
@@ -611,14 +614,18 @@ ul {
 .view-gallery button {
 	background: red;
 	color: white;
-	padding: 1rem 2rem;
+	padding: 1.2rem 2.5rem;
 	border: 0;
-	transition: background 200ms ease;
+  transition: background 200ms ease;
+  border-radius: 9px;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 1.1em;
 }
 
 .view-gallery button:hover {
 	cursor: pointer;
-	background: rgba(255, 0, 0, 0.8);
+  background: rgba(255, 0, 0, 0.8);
+  font-weight: bold;
 }
 
 .animated {
@@ -686,7 +693,10 @@ ul {
   font-family: 'Montserrat', sans-serif;
   text-indent: 1.8em;
   text-align: justify;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 1.1em;
 }
 
@@ -872,11 +882,6 @@ ul {
   float: left;
 }
 /* Basic styles */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 :root{
     --bg-color: #D8D8D8;

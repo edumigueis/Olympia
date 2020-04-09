@@ -55,7 +55,12 @@
 body{
   overflow-x: hidden;
 }
-
+button:active {
+  outline: none;
+  border: none;
+}
+  
+button:focus {outline:0;}
 /*#events-container :hover{
     background-color: darkgray;
 }*/
@@ -63,6 +68,7 @@ body{
     border-bottom: 1px solid lightgray;
     border-top: 1px solid lightgray;;
     margin-top: 20px;
+    border-radius: 16px;
 }
 .card-table{
     list-style: none;
@@ -71,6 +77,7 @@ body{
     padding: 0;
     height: 265px;
     background-color: #fff !important;
+    border-radius: 16px;
 }
 ul li{
     display: inline-flex;
@@ -526,13 +533,6 @@ html, body {
   --spacing-xl: 16px;
   --spacing-xxl: 32px;
   --width-container: 1200px;
-}
-
-*{
-  border: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .hero-section{

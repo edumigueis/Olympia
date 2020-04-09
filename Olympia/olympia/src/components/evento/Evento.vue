@@ -51,7 +51,7 @@
         <div id="second-part-eve">
           <div id="gallery-cont" class="gray">
             <div class="view-gallery">
-              <button>View Gallery</button>
+              <button>Ver Galeria</button>
             </div>
             <ul>
               <li class="box box-1"></li>
