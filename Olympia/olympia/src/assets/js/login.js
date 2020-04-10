@@ -13,7 +13,7 @@ var w, h, ctx,
 
   var opacity = '.03';
 
-function init() {
+function initAnimLogin() {
 
   lines.length = 0;
   
@@ -216,10 +216,10 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
           starter.x = w / 2;
           starter.y = h / 2;
 
-          init();
+          initAnimLogin();
         })
 
-        init();
+        initAnimLogin();
         anim();
 
         iniciouAnimacao = true;

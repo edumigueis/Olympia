@@ -122,7 +122,6 @@
                 name="custom_color"
                 placeholder="#FFFFFF"
                 id="hexcolor"
-                class="call-picker"
               />
             </div>
             <div class="color-holder call-picker" style="display: none"></div>

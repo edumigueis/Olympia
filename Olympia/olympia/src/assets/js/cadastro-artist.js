@@ -1,4 +1,4 @@
-var jaFoi = false;
+var jaFoiCadArt = false;
 var senhaFoi = false;
 var colorList = [
   "f8b195",
@@ -58,7 +58,7 @@ for (var i = 0; i < colorList.length; i++) {
 
 var selectedImage;
 setInterval(() => {
-  if ($("#container-cad-artist").css("display") == "block" && jaFoi == false) {
+  if ($("#container-cad-artist").css("display") == "block" && jaFoiCadArt == false) {
     $(function() {
       var firstLet = null;
 
@@ -66,14 +66,14 @@ setInterval(() => {
         $(".zmdi.zmdi-palette").fadeIn();
         $("#hexcolor-art").fadeIn();
         if ($("#name-art").val() != "") {
-          $(".default-prof-user").empty();
+
+          $(".default-prof-artist").empty();
           firstLet = $("#name-art")
             .val()
             .charAt(0);
           firstLet = firstLet.toUpperCase();
-          var vzs = 0;
-          vzs++;
-          if (vzs == 1) $("#artist-let-img").css("display", "block");
+          
+          $("#artist-let-img").css("display", "block");
           $(".hexcolor").css("display", "block");
           $(".color-holder").css("display", "block");
           $("#artist-let-img").html(
@@ -87,7 +87,7 @@ setInterval(() => {
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            "<figure class='default-prof-artist'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".bin").fadeOut();
         }
@@ -102,7 +102,7 @@ setInterval(() => {
           $("#artist-let-img").empty();
           $('.is-same-cont').css("background-color","transparent");
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='" +
+            "<figure class='default-prof-artist'><img src='" +
               selectedImage +
               "' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
@@ -129,7 +129,7 @@ setInterval(() => {
           $('.is-same-cont').css("background-color","transparent");
           $("#artist-let-img").empty();
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            "<figure class='default-prof-artist'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".ui-widget-overlay").fadeOut(350);
           $("#pick-image-modal-art").fadeOut(500);
@@ -141,14 +141,14 @@ setInterval(() => {
         $(".zmdi.zmdi-palette").fadeIn();
         $("#hexcolor-art").fadeIn();
         if ($("#name-art").val() != "") {
-          $(".default-prof-user").empty();
+          $(".default-prof-artist").empty();
           firstLet = $("#name-art")
             .val()
             .charAt(0);
           firstLet = firstLet.toUpperCase();
-          var vzs = 0;
-          vzs++;
-          if (vzs == 1) $("#artist-let-img").css("display", "block");
+          var vzsart2 = 0;
+          vzsart2++;
+          if (vzsart2 == 1) $("#artist-let-img").css("display", "block");
           $(".hexcolor").css("display", "block");
           $(".color-holder").css("display", "block");
           $("#artist-let-img").html(
@@ -163,7 +163,7 @@ setInterval(() => {
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            "<figure class='default-prof-artist'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".bin").fadeOut();
         }
@@ -185,7 +185,7 @@ setInterval(() => {
         readURL(this);
       });
 
-      $(".call-picker").on("click", function(event) {
+      $("#call-picker-art").on("click", function(event) {
         event.stopPropagation();
         picker.fadeIn();
         picker.children("li").hover(function() {
@@ -196,13 +196,15 @@ setInterval(() => {
           $("#hexcolor-art").val(codeHex);
         });
       });
+
       $("#name-art").focusin(function() {
         if (
           $("#artist-prof-image").attr(src) == "/src/assets/images/user-ico.png"
         ) {
+          alert('ain');
           $("#artist-let-img").empty();
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p>"
+            "<figure class='default-prof-artist'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p>"
           );
           $("#name-art").css("border-radius", "0");
           $(".color-holder").css("display", "none");
@@ -445,7 +447,7 @@ setInterval(() => {
         }
       });
     });
-  } else if (!$("#container-cad-user").length) {
-    jaFoi = false;
+  } else if (!$("#container-cad-artist").length) {
+    jaFoiCadArt = false;
   }
 }, 1500);

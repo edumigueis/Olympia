@@ -137,10 +137,9 @@
                 name="custom_color"
                 placeholder="#FFFFFF"
                 id="hexcolor-art"
-                class="call-picker"
               />
             </div>
-            <div class="color-holder call-picker" style="display: none"></div>
+            <div class="color-holder" id="call-picker-art" style="display: none"></div>
             <div class="color-picker" id="color-picker-artist" style="display: none"></div>
 
             <div class="signup-image">

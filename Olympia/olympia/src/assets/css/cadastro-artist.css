@@ -96,6 +96,7 @@ body {
   line-height: 150px;
   margin: 20px 0;
   transition: 1s all;
+  display: none;
 }
 #artist-let-img:hover {
   opacity: 0.8;

@@ -1,4 +1,4 @@
-var jaFoi = false;
+var jaFoiCadUser = false;
 var senhaFoi = false;
 var colorList = [
   "f8b195",
@@ -42,10 +42,9 @@ var colorList = [
   "CCFF00",
   "CC04FF"
 ];
-var picker = $("#color-picker");
 
 for (var i = 0; i < colorList.length; i++) {
-  picker.append(
+  $("#color-picker").append(
     '<li class="color-item" data-hex="' +
       "#" +
       colorList[i] +
@@ -58,7 +57,7 @@ for (var i = 0; i < colorList.length; i++) {
 
 var selectedImage;
 setInterval(() => {
-  if ($("#container-cad-user").css("display") == "block" && jaFoi == false) {
+  if ($("#container-cad-user").css("display") == "block" && jaFoiCadUser == false) {
     $(function() {
       var firstLet = null;
 
@@ -93,7 +92,7 @@ setInterval(() => {
         }
       });
       $("body").on("click", function() {
-        picker.fadeOut();
+        $("#color-picker").fadeOut();
       });
       $(".ui-widget-overlay").on("click", function() {
         if (selectedImage != null) {
@@ -168,6 +167,9 @@ setInterval(() => {
           $(".bin").fadeOut();
         }
       });
+      $('.hexcolor').on('click', function(){
+        $("#color-picker").css('display', 'none');
+      })
       var readURL = function(input) {
         if (input.files && input.files[0]) {
           var reader = new FileReader();
@@ -187,8 +189,8 @@ setInterval(() => {
 
       $(".call-picker").on("click", function(event) {
         event.stopPropagation();
-        picker.fadeIn();
-        picker.children("li").hover(function() {
+        $("#color-picker").fadeIn();
+        $("#color-picker").children("li").hover(function() {
           var codeHex = $(this).data("hex");
 
           $(".color-holder").css("background-color", codeHex);
@@ -200,6 +202,7 @@ setInterval(() => {
         if (
           $("#user-prof-image").attr(src) == "/src/assets/images/user-ico.png"
         ) {
+
           $("#user-let-img").empty();
           $(".signup-image").html(
             "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p>"
@@ -243,7 +246,8 @@ setInterval(() => {
         $("#email").css("border-bottom", "1px solid #999");
       });
 
-      $("#hexcolor").on("change", function() {
+      $("#hexcolor").on("click", function() {
+        $('#color-picker').css('display','none')
         $("#user-let-img").css("background", this.value);
       });
 
@@ -446,6 +450,6 @@ setInterval(() => {
       });
     });
   } else if (!$("#container-cad-user").length) {
-    jaFoi = false;
+    jaFoiCadUser = false;
   }
 }, 1500);
