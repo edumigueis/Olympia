@@ -1,25 +1,24 @@
-
+var jaFoi = false;
 setInterval(() => {
     if ($('.menu-container').length && jaFoi == false) {
         jaFoi = true;
 
-        $(function () {
-            var coordenadas = document.getElementById('menu-item-art').getBoundingClientRect();
-            var tamanho = document.getElementsByClassName('ico')[0].getBoundingClientRect();
+        var coordenadas = document.getElementById('menu-item-art').getBoundingClientRect();
+        var tamanho = document.getElementsByClassName('ico')[0].getBoundingClientRect();
 
-            $('.c-circle-menu__toggle').css('top', coordenadas.bottom + 50);
-            $('.c-circle-menu__toggle').css('left', coordenadas.left);
-            $('.c-circle-menu__item').css('top', coordenadas.top + 400);
-            $('.c-circle-menu__item').css('right', coordenadas.right);
-            $('.js-menu-container-circle').css('top', coordenadas.top - 30);
-            $('.js-menu-container-circle').css('right', coordenadas.right - 155);
-            $('.js-menu-container-circle').css('width', tamanho.width + 490);
-            $('.js-menu-container-circle').css('height', tamanho.height + 290);
-        })
-      }
-      else if (!$('.menu-container').length) {
+        $('.c-circle-menu__toggle').css('top', coordenadas.bottom + 50);
+        $('.c-circle-menu__toggle').css('left', coordenadas.left);
+        $('.c-circle-menu__item').css('top', coordenadas.top + 400);
+        $('.c-circle-menu__item').css('right', coordenadas.right);
+        $('.js-menu-container-circle').css('top', coordenadas.top - 30);
+        $('.js-menu-container-circle').css('right', coordenadas.right - 155);
+        $('.js-menu-container-circle').css('width', tamanho.width + 490);
+        $('.js-menu-container-circle').css('height', tamanho.height + 290);
+
+    }
+    else if (!$('.menu-container').length) {
         jaFoi = false;
-      }
+    }
 
 }, 1);
 
@@ -27,12 +26,7 @@ $(document).ready(function () {
 
     setInterval(updateGradient, 10);
 
-    $(document.body).on('click', '#forced-click', function () {
-        alert('entrei');
-        window.location.reload();
-    })
-
-    $(document.body).on('click', '#nav-bars', function () {
+    $('body').on('click', '#nav-bars', function () {
         $("#menu-items").fadeIn("slow");
         $('#footer').fadeOut();
     })
