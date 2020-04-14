@@ -9,6 +9,7 @@ import Sobre from './components/sobre/Sobre.vue';
 import CadastroUser from './components/cadastro-user/CadastroUser.vue';
 import CadastroArtist from './components/cadastro-artist/CadastroArtist.vue';
 import Login from './components/login/Login.vue';
+import Categorias from './components/categories/Categories.vue';
 import Literatura from './components/literatura/Literatura.vue';
 import Cinema from './components/cinema/Cinema.vue';
 
@@ -24,6 +25,7 @@ export const routes = [
     { path: '/cadastro/user', component: CadastroUser, titulo: 'C A D A S T R O' },
     { path: '/cadastro/artist', component: CadastroArtist, titulo: 'A R T I S T A' },
     { path: '/login', component: Login, titulo: 'L O G I N' },
+    { path: '/categorias', component: Categorias, titulo: 'C A T E G O R I A S' },
     { path: '/literatura', component: Literatura, titulo: 'L I T E R A T U R A'},
     { path: '/cinema', component: Cinema, titulo: 'C I N E M A'}
 ]
