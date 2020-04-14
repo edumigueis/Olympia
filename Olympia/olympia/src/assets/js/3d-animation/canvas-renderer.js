@@ -2,7 +2,7 @@
  * @author mrdoob / http://mrdoob.com/
  */
 
- var param = THREE.Material.prototype;
+ var param = THREE.Material.prototype
 
 THREE.SpriteCanvasMaterial = function (parameters) {
 
@@ -27,7 +27,7 @@ THREE.SpriteCanvasMaterial.prototype.clone = function () {
 	THREE.Material.prototype.clone.call(this, material);
 
 	material.color.copy(this.color);
-	material.program = this.program;
+	material.program = this.program;	
 
 	return material;
 
@@ -36,6 +36,7 @@ THREE.SpriteCanvasMaterial.prototype.clone = function () {
 //
 
 THREE.CanvasRenderer = function (parameters) {
+
 
 	console.log('THREE.CanvasRenderer', THREE.REVISION);
 

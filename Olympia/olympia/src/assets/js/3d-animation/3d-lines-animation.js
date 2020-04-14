@@ -149,14 +149,12 @@ function render() {
 
 }
 
-var jaFoi2 = false;
+var jaFoi3 = false;
 
 setInterval(() => {
 
-  if ($('#container-welcome').length && jaFoi2 == false) {
-    jaFoi2 = true;
-
-    $(function () {
+  if ($('#container-welcome').length && jaFoi3 == false) {
+        jaFoi3 = true;
         mouseX = 0; mouseY = 0;
 
         windowHalfX = window.innerWidth / 2;
@@ -165,12 +163,11 @@ setInterval(() => {
         SEPARATION = 200;
         AMOUNTX = 1;
         AMOUNTY = 1;
-
+    
         init2();
-        animate();
-    })
+        animate(); 
   }
   else if (!$('#container-welcome').length) {
-    jaFoi2 = false;
+    jaFoi3 = false;
   }
-}, 100);
+}, 1);
