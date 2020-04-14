@@ -59,10 +59,13 @@ body {
 #background-wrap {
   bottom: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
+  height: 115vh;
+  width: 100vw;
   right: 0;
   top: 0;
   z-index: -1;
+  overflow: hidden;
 }
 #artist-let-img {
   transition: 0.5s all ease-in-out;

@@ -200,7 +200,7 @@ setInterval(() => {
       });
       $("#name").focusin(function() {
         if (
-          $("#user-prof-image").attr(src) == "/src/assets/images/user-ico.png"
+          $("#user-prof-image").attr('src') == "/src/assets/images/user-ico.png"
         ) {
 
           $("#user-let-img").empty();

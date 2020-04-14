@@ -62,7 +62,10 @@ body {
 #background-wrap {
   bottom: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
+  overflow: hidden;
+  height: 105vh;
+  width: 100vw;
   right: 0;
   top: 0;
   z-index: -1;
@@ -856,6 +859,7 @@ body {
   width: 900px;
   background: #fff;
   margin: 0 auto;
+  z-index: 998;
   box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
@@ -904,6 +908,8 @@ body {
 .signup {
   margin-bottom: 2%;
   margin-top: 3%;
+  z-index: 999;
+  position: sticky;
 }
 .signup-content {
   padding: 45px 0;

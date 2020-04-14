@@ -1268,15 +1268,14 @@
 /*Small Footer*/
 #small-footer {
   transition: 0.3s all;
-  position: relative;
+  position: absolute;
+  bottom: 0;
   padding: 15px;
   height: 45px;
   padding-top: 0;
   width: 102%;
   background-color: white;
-  z-index: 999;
-  overflow: hidden;
-  margin-top: -45px;
+  z-index: 9999;
   margin-bottom: 0;
   border-top: 1px solid #bebebe8e;
   font-family: "Bruzh";
@@ -1331,7 +1330,7 @@
   font-family: "Bruzh";
   letter-spacing: 0.1em;
   font-size: 1.9em;
-  padding: 10px 0 30px;
+  margin-top: 0.9%;
   text-align: center;
   transition: 1s all;
 }

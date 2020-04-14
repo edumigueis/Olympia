@@ -182,8 +182,9 @@
         <div class="bubble x18"></div>
         <div class="bubble x19"></div>
         <div class="bubble x20"></div>
+        <meu-small-footer></meu-small-footer>
       </div>
-      <meu-small-footer></meu-small-footer>
+
     </div>
   </main>
 </template>
