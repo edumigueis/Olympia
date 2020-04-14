@@ -134,9 +134,9 @@
     background-color: white;
 }
 #go-btn{
-  margin-top: 5vh;
+  margin-top: 4vh;
     width: 100%;
-    height: fit-content;
+    height: 80px;
 }
 .btn-wrap{
     position: relative;
@@ -262,4 +262,8 @@ h3{
   to {
     top: 6px;
   }
+}
+#small-footer{
+  position: relative !important;
+  margin-top: 3vh !important;
 }
