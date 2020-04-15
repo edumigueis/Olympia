@@ -23,7 +23,7 @@ setInterval(() => {
         $('.usuario').css('opacity', 1);
         $('.usuario').css('margin-left', '-4em');
         $('#more-arrows').css('transition', '1s all');
-        $('#more-arrows').css('opacity', 1);     
+        $('#more-arrows').css('opacity', 1);
         $('#animation').css('animation', 'none');
         $('#animation').css('animation', 'swing 1s ease')
       })
@@ -58,9 +58,9 @@ setInterval(() => {
         $('#bola-sobre').css('top', '40%');
         $('.info').css('opacity', 0)
       })
-      if(parseInt($('#bola-sobre').css('top').substring(0,3)) != "NaN"){
+      if (parseInt($('#bola-sobre').css('top').substring(0, 3)) != "NaN") {
         $('#bola-sobre').click(function (event) {
-          if(event.target.id!='#bola-sobre'){
+          if (event.target.id != '#bola-sobre') {
             $('#bola-sobre').css('top', '150%');
             $('#bola-sobre').css('opacity', 0);
             $('.info').css('opacity', 1)
