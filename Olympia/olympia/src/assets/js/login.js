@@ -20,7 +20,7 @@ function initAnimLogin() {
   for (var i = 0; i < initialLines; ++i)
     lines.push(new Line(starter));
 
-  ctx.fillStyle = '#DDD';
+  ctx.fillStyle = 'rgb(189, 185, 185)';
   ctx.fillRect(0, 0, w, h);
 
 }
@@ -160,31 +160,32 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
         if(vez == 1){
           speed = 5;
           initialWidth = 10;
+          opacity = '.022';
         }
         else if (vez == 2){
           speed = 2.5;
-          initialWidth = 12;
-          opacity = '.025';
+          initialWidth = 15;
+          opacity = '.020';
         }
         else if (vez == 3){
-        speed = 1.7;
-        initialWidth = 15;
-        opacity = '.02';
+        speed = 1.8;
+        initialWidth = 17;
+        opacity = '.017';
         }
         else if (vez == 4){
           speed = 1.2;
-          initialWidth = 18;
-          opacity = '.018';
+          initialWidth = 20;
+          opacity = '.017';
         }
         else if (vez == 5){
           speed = 1;
-          initialWidth = 20;
-          opacity = '.018';
+          initialWidth = 22;
+          opacity = '.017';
           }
           else {
             speed = 1;
             initialWidth = 21;
-            opacity = '.018';
+            opacity = '.009';
           }
 
         lines = [];

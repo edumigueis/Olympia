@@ -24,7 +24,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background:  linear-gradient(to right, rgb(235, 56, 190) , rgb(93, 61, 236));
+  background: linear-gradient(to right, rgb(235, 56, 190), rgb(93, 61, 236));
 }
 .canvas-wrap {
   position: relative;
@@ -41,12 +41,12 @@ body {
   margin: 0;
 }
 
-#home-animation-wrapper  {
+#home-animation-wrapper {
   width: 100%;
   height: 100vh;
   position: relative;
   float: left;
-  color: rgb(236, 99, 236)
+  color: rgb(236, 99, 236);
 }
 
 #home-animation {
@@ -68,13 +68,13 @@ text {
   font-family: "Spare Parts";
 }
 
-.link{
+.link {
   opacity: 0.8;
 }
 
 .title {
   font-size: 45px;
-  margin-bottom: 2%!important;
+  margin-bottom: 2% !important;
   color: white;
   opacity: 0.4;
   transition: 1s all;
@@ -87,9 +87,8 @@ text {
   position: fixed;
   padding: 2%;
   border-radius: 10px;
-  top: 20%;
-  left: 33%;
-  width: 30%;
+  top: 15%;
+  width: 96%;
   transition: all 1s;
 }
 
@@ -109,10 +108,12 @@ text {
   margin-top: -1.335em;
   z-index: -10;
   margin-bottom: 0;
+  margin-left: 6em;
+  color: rgba(255, 255, 255, 0.801);
 }
 
 a {
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
 
 .start:hover,
@@ -185,7 +186,7 @@ a {
 }
 
 #more-arrows {
-  width: 80px;
+  width: 5%;
   height: 9%;
   transform: rotate(180deg);
   position: fixed;
@@ -227,29 +228,8 @@ polygon.arrow-top {
   width: 100%;
   height: 100%;
   opacity: 0;
-  top: 150%;
-}
-
-.close-sobre {
-  transition: 1s all;
-  position: fixed;
-  z-index: 999;
-  will-change: transform;
-  margin-left: 0 !important;
-  left:30%;
-  top:10%;
-  height: 6%;
-  width: 6%;
-}
-
-.close-sobre-img {
-  height: 100%;
-  padding: 0;
-  opacity: 0;
-}
-
-.close-sobre-img:hover {
-  transform: translateY(5px);
+  top: 100%;
+  left: 0;
 }
 
 @keyframes swing {
@@ -285,60 +265,284 @@ polygon.arrow-top {
   }
 }
 
-@media only screen and (min-width: 0) and (max-width: 800px) {
-  .close-sobre {
-    left: 8%;
-    top: 10%;
+@media only screen and (min-width: 0) and (max-width: 900px) {
+  .title {
+    font-size: 25px;
   }
-}
+  .start,
+  .artista,
+  .usuario {
+    font-size: 60px;
+  }
 
-@media only screen and (min-width: 801px) and (max-width: 900px) {
-  .close-sobre {
-    left: 12%;
-    top: 10%;
+  .start:hover,
+  .artista:hover,
+  .usuario:hover {
+    font-size: 70px;
+    cursor: pointer;
+  }
+
+  .login {
+    transition: 1s all;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .login:hover {
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .sobre {
+    transition: 1s all;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .sobre:hover {
+    font-size: 20px;
+    cursor: pointer;
   }
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1150px) {
-  .close-sobre {
-    left: 22%;
-    top: 10%;
+  .title {
+    font-size: 35px;
   }
-}
+  .start,
+  .artista,
+  .usuario {
+    font-size: 70px;
+  }
 
-@media only screen and (min-width: 1151px) and (max-width: 1350px) {
-  .close-sobre {
-    left: 28%;
-    top: 10%;
+  .start:hover,
+  .artista:hover,
+  .usuario:hover {
+    font-size: 80px;
+    cursor: pointer;
+  }
+
+  .login {
+    transition: 1s all;
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .login:hover {
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .sobre {
+    transition: 1s all;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .sobre:hover {
+    font-size: 20px;
+    cursor: pointer;
   }
 }
 
 @media only screen and (min-width: 1351px) and (max-width: 1599px) {
-  .close-sobre {
-    left: 32%;
-    top: 10%;
+
+  .title {
+    font-size: 45px;
+  }
+
+  .start,
+  .artista,
+  .usuario {
+    font-size: 80px;
+  }
+
+  .start:hover,
+  .artista:hover,
+  .usuario:hover {
+    font-size: 90px;
+    cursor: pointer;
+  }
+
+  .login {
+    transition: 1s all;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .login:hover {
+    font-size: 50px;
+    cursor: pointer;
+  }
+
+  .sobre {
+    transition: 1s all;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .sobre:hover {
+    font-size: 30px;
+    cursor: pointer;
   }
 }
 
 @media screen and (min-width: 1600px) and (max-width: 1800px) {
-  .close-sobre {
-    left: 36%;
-    top: 10%;
+  .title {
+    font-size: 55px;
+  }
+  .start,
+  .artista,
+  .usuario {
+    font-size: 90px;
+  }
+
+  .start:hover,
+  .artista:hover,
+  .usuario:hover {
+    font-size: 100px;
+    cursor: pointer;
+  }
+
+  .login {
+    transition: 1s all;
+    font-size: 55px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .login:hover {
+    font-size: 60px;
+    cursor: pointer;
+  }
+
+  .sobre {
+    transition: 1s all;
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .sobre:hover {
+    font-size: 40px;
+    cursor: pointer;
   }
 }
 
-@media screen and (min-width: 1801px) and (max-width: 2000px) {
-  .close-sobre {
-    left: 37%;
-    top: 10%;
+@media screen and (min-width: 1801px) and (max-width: 2200px) {
+  .title {
+    font-size: 65px;
+  }
+  .start,
+  .artista,
+  .usuario {
+    font-size: 100px;
+  }
+
+  .start:hover,
+  .artista:hover,
+  .usuario:hover {
+    font-size: 110px;
+    cursor: pointer;
+  }
+
+  .login {
+    transition: 1s all;
+    font-size: 65px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .login:hover {
+    font-size: 70px;
+    cursor: pointer;
+  }
+
+  .sobre {
+    transition: 1s all;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .sobre:hover {
+    font-size: 50px;
+    cursor: pointer;
   }
 }
 
-@media screen and (min-width: 2001px) {
-  .close-sobre {
-    left: 38%;
-    top: 10%;
+@media screen and (min-width: 2201px) and (max-width: 2600px) {
+  .title {
+    font-size: 75px;
+  }
+  .start,
+  .artista,
+  .usuario {
+    font-size: 110px;
+  }
+
+  .start:hover,
+  .artista:hover,
+  .usuario:hover {
+    font-size: 120px;
+    cursor: pointer;
+  }
+
+  .login {
+    transition: 1s all;
+    font-size: 75px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .login:hover {
+    font-size: 80px;
+    cursor: pointer;
+  }
+
+  .sobre {
+    transition: 1s all;
+    font-size: 55px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .sobre:hover {
+    font-size: 60px;
+    cursor: pointer;
   }
 }
 
+@media screen and (min-width: 2601px){
+  .title {
+    font-size: 85px;
+  }
+  .start,
+  .artista,
+  .usuario {
+    font-size: 120px;
+  }
 
+  .start:hover,
+  .artista:hover,
+  .usuario:hover {
+    font-size: 130px;
+    cursor: pointer;
+  }
+
+  .login {
+    transition: 1s all;
+    font-size: 85px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .login:hover {
+    font-size: 90px;
+    cursor: pointer;
+  }
+
+  .sobre {
+    transition: 1s all;
+    font-size: 65px;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .sobre:hover {
+    font-size: 70px;
+    cursor: pointer;
+  }
+}
