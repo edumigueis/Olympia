@@ -14,31 +14,13 @@
 
       <div id="palaces-container">
         <svg class="intro">
-          <text text-anchor="start" x="50" y="90" class="text text-stroke">All the</text>
-          <text text-anchor="start" x="500" y="110" class="text text-stroke">PALACES</text>
-          <text text-anchor="start" x="1000" y="130" class="text text-stroke">for art.</text>
-          <text text-anchor="start" x="50" y="90" class="text text-stroke text-stroke-2">All the</text>
-          <text text-anchor="start" x="500" y="110" class="text text-stroke text-stroke-2">PALACES</text>
-          <text text-anchor="start" x="1000" y="130" class="text text-stroke text-stroke-2">for art.</text>
-          <defs>
-            <clipPath id="text1">
-              <text text-anchor="start" x="50" y="90" class="text">All the</text>
-            </clipPath>
-            <clipPath id="text2">
-              <text text-anchor="start" x="500" y="40" class="text">PALACES</text>
-            </clipPath>
-            <clipPath id="text3">
-              <text text-anchor="start" x="1000" y="50" class="text">for art.</text>
-            </clipPath>
-          </defs>
+          <text text-anchor="start" x="200" y="60" class="text text-stroke" id="text1" font-size='60'>All the</text>
+          <text text-anchor="start" x="610" y="60" class="text text-stroke" id="text2" font-size='60'>PALACES</text>
+          <text text-anchor="start" x="1050" y="60" class="text text-stroke" id="text3" font-size='60'>of art.</text>
+          <text text-anchor="start" x="200" y="60" class="text text-stroke text-stroke-2" id="text1" font-size='60'>All the</text>
+          <text text-anchor="start" x="610" y="60" class="text text-stroke text-stroke-2" id="text2" font-size='60'>PALACES</text>
+          <text text-anchor="start" x="1050" y="60" class="text text-stroke text-stroke-2" id="text3" font-size='60'>of art.</text>         
         </svg>
-      </div>
-
-      <div id="black-div">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-        <img id="palaces-img" src="src/assets/images/palaces.png" />
       </div>
 
       <!--////////////////////////deixa chamativo. clean porém colorido. um ambiente gostoso de navegar////////////////////////////////////-->

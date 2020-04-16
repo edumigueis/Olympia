@@ -8,12 +8,15 @@
 }
 
 svg.intro {
-  background: linear-gradient(135deg, #ba46c2, #461d68);
+  background: url('../images/watercolor.jpg');
+  background-repeat: no-repeat;
+  image-orientation: from-image;
+  background-size: cover;
   width: 100%;
+  height: 12vh;
   bottom: 0;
-  -webkit-box-shadow: 0px 0px 10px rgb(0, 0, 0) inset;
-	-moz-box-shadow: 0px 0px 10px rgb(0, 0, 0) inset; 
-	box-shadow: 0px 0px 10px rgb(0, 0, 0) inset;
+  box-shadow: 0px 0px 20px rgb(0, 0, 0) inset;
+  max-height: 80px;
 }
 
 svg.intro .text {
@@ -22,15 +25,15 @@ svg.intro .text {
 
 svg.intro.go .text {
   font-family: Arial, sans-serif;
-  font-size: 100px;
   text-transform: uppercase;
   display: block;
+  transition: 0.5s all;
 }
 
 svg.intro.go .text-stroke {
   fill: none;
-  stroke: #51256f;
-  stroke-width: 2.8px;
+  stroke: #47256f;
+  stroke-width: 2.2px;
   stroke-dashoffset: -900;
   stroke-dasharray: 900;
   stroke-linecap: butt;
@@ -47,7 +50,7 @@ svg.intro.go .text-stroke:nth-child(3) {
 }
 
 svg.intro.go .text-stroke-2 {
-  stroke: #f6bdfa;
+  stroke: #a4edff;
   animation-delay: 1.2s;
 }
 
@@ -62,5 +65,65 @@ svg.intro.go .text-stroke:nth-child(6) {
 @keyframes dash {
   100% {
     stroke-dashoffset: 0;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 100px){
+  svg.intro.go .text {
+    font-size: 10px;
+    stroke-width: 1px;
+  }
+}
+
+@media only screen and (min-width: 101px) and (max-width: 199px){
+  svg.intro.go .text {
+    font-size: 18px;
+    stroke-width: 1px;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 400px){
+  svg.intro.go .text {
+    font-size: 25px;
+    stroke-width: 1px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 800px){
+  svg.intro.go .text {
+    font-size: 30px;
+    stroke-width: 1px;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1200px){
+  svg.intro.go .text {
+    font-size: 40px;
+    stroke-width: 1.5px;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1400px){
+  svg.intro.go .text {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1800px){
+  svg.intro.go .text {
+    font-size: 55px;
+  }
+
+}
+
+@media only screen and (min-width: 1801px) and (max-width: 2000px){
+  svg.intro.go .text {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 2001px){
+  svg.intro.go .text {
+    font-size: 65px;
   }
 }
