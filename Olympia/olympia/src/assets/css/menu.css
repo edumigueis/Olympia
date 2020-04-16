@@ -118,9 +118,9 @@
   right: 0;
   border-bottom-color: rgba(0, 0, 0, 0.1);
   padding-bottom: 2px !important;
-  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(50, 50, 50, 0.35);
+  -moz-box-shadow: 0px 4px 15px 0px rgba(50, 50, 50, 0.35);
+  box-shadow: 0px 4px 15px 0px rgba(50, 50, 50, 0.35);
   background-color: rgb(255, 255, 255);
   transition: 0.3s background, color;
 }
