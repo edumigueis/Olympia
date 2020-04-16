@@ -12,6 +12,7 @@ setInterval(() => {
             jaFoiHome = true;
             $(function() {
                 $('.intro').addClass('go');
+                
             })
             
     }
