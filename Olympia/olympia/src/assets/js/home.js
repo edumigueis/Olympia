@@ -9,10 +9,11 @@ var jaFoiHome = false;
 
 setInterval(() => {
     if ($('#container-home').length && jaFoiHome == false) {
-        jaFoiHome = true;
-        $(function () {
-            $('.intro').addClass('go');
-        })
+            jaFoiHome = true;
+            $(function() {
+                $('.intro').addClass('go');
+                
+            })
     }
     else if (!$('#container-home').length) {
         jaFoiHome = false;
