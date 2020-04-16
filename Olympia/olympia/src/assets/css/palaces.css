@@ -2,7 +2,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  margin-top: 4.4%;
+  margin-top: 60px;
   margin-bottom: 0;
   z-index: 999;
 }
@@ -50,7 +50,7 @@ svg.intro.go .text-stroke:nth-child(3) {
 }
 
 svg.intro.go .text-stroke-2 {
-  stroke: #a4edff;
+  stroke: #e7e7e7;
   animation-delay: 1.2s;
 }
 
@@ -68,62 +68,83 @@ svg.intro.go .text-stroke:nth-child(6) {
   }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 100px){
-  svg.intro.go .text {
-    font-size: 10px;
-    stroke-width: 1px;
-  }
-}
-
-@media only screen and (min-width: 101px) and (max-width: 199px){
-  svg.intro.go .text {
-    font-size: 18px;
-    stroke-width: 1px;
-  }
-}
-
-@media only screen and (min-width: 200px) and (max-width: 400px){
-  svg.intro.go .text {
-    font-size: 25px;
-    stroke-width: 1px;
-  }
-}
-
-@media only screen and (min-width: 401px) and (max-width: 800px){
+@media only screen and (min-width: 0) and (max-width: 799px){
   svg.intro.go .text {
     font-size: 30px;
     stroke-width: 1px;
   }
+  #text3{
+    transform: translate(-600px,-8px);
+  }
+  #text2{
+    transform: translate(-380px,-8px);
+  }
+  #text1{
+    transform: translate(-160px,-8px);
+  }
 }
 
-@media only screen and (min-width: 801px) and (max-width: 1200px){
+@media only screen and (min-width: 800px) and (max-width: 900px){
+  svg.intro.go .text {
+    font-size: 30px;
+    stroke-width: 1px;
+  }
+  #text3{
+    transform: translate(-450px,-5px);
+  }
+  #text2{
+    transform: translate(-280px,-5px);
+  }
+  #text1{
+    transform: translate(-100px,-5px);
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1150px){
   svg.intro.go .text {
     font-size: 40px;
     stroke-width: 1.5px;
   }
+  #text1{
+    transform: translate(-100px,-2px);
+  }
+  #text2{
+    transform: translate(-200px,-2px);
+  }
+  #text3{
+    transform: translate(-300px,-2px);
+  }
 }
 
-@media only screen and (min-width: 1201px) and (max-width: 1400px){
+@media only screen and (min-width: 1151px) and (max-width: 1300px){
+  svg.intro.go .text {
+    font-size: 48px;
+  }
+  #text1{
+    transform: translateX(-100px);
+  }
+  #text2{
+    transform: translateX(-100px);
+  }
+  #text3{
+    transform: translateX(-100px);
+  }
+}
+
+@media only screen and (min-width: 1301px) and (max-width: 1599px){
   svg.intro.go .text {
     font-size: 48px;
   }
 }
 
-@media only screen and (min-width: 1401px) and (max-width: 1800px){
+@media only screen and (min-width: 1600px){
   svg.intro.go .text {
     font-size: 55px;
   }
-
-}
-
-@media only screen and (min-width: 1801px) and (max-width: 2000px){
-  svg.intro.go .text {
-    font-size: 60px;
+  #text2{
+    transform: translateX(70px);
   }
-}
-
-@media only screen and (min-width: 2001px){
-  svg.intro.go .text {
-    font-size: 65px;
+  #text3{
+    transform: translateX(100px);
   }
 }

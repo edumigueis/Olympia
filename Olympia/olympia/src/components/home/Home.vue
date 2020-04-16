@@ -15,11 +15,11 @@
       <div id="palaces-container">
         <svg class="intro">
           <text text-anchor="start" x="200" y="60" class="text text-stroke" id="text1" font-size='60'>All the</text>
-          <text text-anchor="start" x="610" y="60" class="text text-stroke" id="text2" font-size='60'>PALACES</text>
-          <text text-anchor="start" x="1050" y="60" class="text text-stroke" id="text3" font-size='60'>of art.</text>
+          <text text-anchor="start" x="620" y="60" class="text text-stroke" id="text2" font-size='60'>PALACES</text>
+          <text text-anchor="start" x="1030" y="60" class="text text-stroke" id="text3" font-size='60'>of art.</text>
           <text text-anchor="start" x="200" y="60" class="text text-stroke text-stroke-2" id="text1" font-size='60'>All the</text>
-          <text text-anchor="start" x="610" y="60" class="text text-stroke text-stroke-2" id="text2" font-size='60'>PALACES</text>
-          <text text-anchor="start" x="1050" y="60" class="text text-stroke text-stroke-2" id="text3" font-size='60'>of art.</text>         
+          <text text-anchor="start" x="620" y="60" class="text text-stroke text-stroke-2" id="text2" font-size='60'>PALACES</text>
+          <text text-anchor="start" x="1030" y="60" class="text text-stroke text-stroke-2" id="text3" font-size='60'>of art.</text>         
         </svg>
       </div>
 
