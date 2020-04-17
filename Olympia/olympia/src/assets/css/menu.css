@@ -26,20 +26,21 @@
 
 ::-webkit-scrollbar {
   width: 10px;
+  transition: 0.4s all;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 2px rgb(100, 100, 100);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(143, 142, 142);
+  background-color: #a1a1a1;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(92, 91, 91);
+  background-color: #868686;
 }
 
 .blur {
