@@ -131,7 +131,7 @@ body {
   content: "";
   background-image: linear-gradient(
     to top,
-    rgba(250, 250, 250, 255),
+    white,
     rgba(250, 250, 250, 0)
   );
   position: absolute;
@@ -160,23 +160,22 @@ body {
   left: 15%;
   border-radius: 16px;
   box-shadow: 10px 5px 5px lightgray;
-  border-left: 1px solid lightgray;
-  border-right: 1px solid lightgray;
+  border: 1px solid lightgray;
   border-top: lightgray;
-  z-index: 21;
+  z-index:100;
   transition: 0.6s all;
 }
 #calendar-white {
   background-color: white;
-  height: 110px;
-  width: 151px;
+  height: 109px;
+  width: 148px;
   position: absolute;
   margin-top: -4px;
+  z-index: 20;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   border-bottom: 1px solid lightgray;
-  border-left: 1px solid lightgray;
-  border-right: 1px solid lightgray;
+  border: 1px solid lightgray;
   box-shadow: 10px 5px 5px lightgray;
   margin-left: -1px;
   transition: 0.6s all;
@@ -206,13 +205,25 @@ body {
   border-radius: 16px;
   position: relative;
   top: 5px;
-  box-shadow: inset 0 0 0.4em #454545, 0 0 0.4em #444444;
+  box-shadow: 0 0 0.35em #787878, 0 0 0.35em #676767;
   perspective: 3000px;
   transition: 0.7s all;
 }
 #bottom-header{
   background-color: #fff;
   transition: 0.6s all;
+}
+
+#gradient-wrap{
+  background-image: linear-gradient(
+    to bottom,
+    white,
+    rgba(250, 250, 250, 0)
+  );
+  z-index: 99;
+  width: 100vw;
+  height: 60px;
+  margin-top: -50px;
 }
 
 #event-name {
@@ -230,9 +241,8 @@ body {
 }
 .grid-item {
   min-width: 650px;
-  width: 85%;
-  margin-left: 7.5%;
-  margin-right: 7.5%;
+  width: 70%;
+  margin-left: 15%;
   min-height: 400px;
   display: inline-flex;
   background-color: #fff;
@@ -331,7 +341,7 @@ body {
 .map {
   width: 100%;
   transition: 0.6s all;
-  box-shadow: inset 0 0 0.35em #898989, 0 0 0.35em #797979;;
+  box-shadow: 0 0 0.35em #787878, 0 0 0.35em #676767
 }
 #map-container {
   margin-top: 60px;
@@ -359,7 +369,9 @@ body {
 .tickets-link {
   background: linear-gradient(to bottom, rgba(255,246,64,1) 0%, rgba(255,79,165,1) 100%);
   border-radius: 7px;
-  padding: 2px;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 4px;
@@ -514,9 +526,8 @@ b {
   background-color: transparent;
   position: sticky;
   height: fit-content;
-  width: 86%;
-  margin-left: 7%;
-  margin-right: 7%;
+  width: 60%;
+  margin-left: 20%;
   border-radius: 16px;
 }
 /* GALLERY /////////////////////////////////////////////////////////////*/
@@ -545,8 +556,9 @@ ul {
 	height: 200px;
 	margin: -3rem 0 0;
 	transform: translateY(10vh) skew(60deg, -15deg) rotateX(40deg);
-	box-shadow: -5px 5px 30px 1px rgba(0, 0, 0, 0.3);
-	transition: all 300ms ease;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
+  transition: all 300ms ease;
+  border-radius: 10px;
 }
 
 .box-1 {
@@ -605,27 +617,27 @@ ul {
   border-radius: 16px;
   height: fit-content;
   margin-bottom: 100px;
-  box-shadow: inset 0 0 0.35em #787878, 0 0 0.35em #676767;
+  box-shadow: 0 0 0.35em #787878, 0 0 0.35em #676767;
   padding-top: 30px;
   padding-bottom: 100px;
   margin-top: 100px;
   transition: 0.6s all;
 }
 .view-gallery button {
-	background: red;
+  background: linear-gradient(110deg, rgb(230, 212, 58) 0%, rgba(255,79,165,1) 100%);
+  box-shadow: 0 0 5px #676767;
 	color: white;
 	padding: 1.2rem 2.5rem;
 	border: 0;
-  transition: background 200ms ease;
-  border-radius: 9px;
+  border-radius: 10px;
   font-family: 'Montserrat',sans-serif;
   font-size: 1.1em;
+  transition: 0.2s all;
 }
 
 .view-gallery button:hover {
 	cursor: pointer;
-  background: rgba(255, 0, 0, 0.8);
-  font-weight: bold;
+  opacity: 0.7;
 }
 
 .animated {
@@ -648,7 +660,7 @@ ul {
   border-radius: 16px;
   height: fit-content;
   margin-bottom: 100px;
-  box-shadow: inset 0 0 0.35em #787878, 0 0 0.35em #676767;
+  box-shadow: 0 0 0.35em #787878, 0 0 0.35em #676767;
   padding-top: 30px;
   padding-bottom: 100px;
   margin-top: 100px;
@@ -713,6 +725,7 @@ ul {
   letter-spacing: -0.02em;
   line-height: 1.13em;
   margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 .deconstructed > div {
@@ -820,7 +833,7 @@ ul {
   border-radius: 16px;
   height: max-content;
   margin-bottom: 120px;
-  box-shadow: inset 0 0 0.35em #787878, 0 0 0.35em #676767;
+  box-shadow: 0 0 0.35em #787878, 0 0 0.35em #676767;
   padding-top: 30px;
   padding-bottom: 50px;
   margin-top: 100px;
@@ -837,7 +850,7 @@ ul {
 }
 #bottom-location{
   position: relative;
-  min-height: 650px;
+  min-height: 500px;
   bottom: 0;
 }
 #background{
@@ -848,10 +861,10 @@ ul {
   top: 0;
 }
 #y-r-here{
+  float: left;
   width: 210px;
   margin-top: 6%;
   margin-left: 16px;
-  float: left;
   font-family: 'Montserrat', sans-serif;
   text-align: justify;
   padding: 2px;
@@ -860,14 +873,14 @@ ul {
 }
 .location-icon{
   width: 100px;
-  margin-left: 20px;
+  margin-left: 15%;
   margin-top: 3%;
-  float: left;
+  margin-bottom: 3%;
   transition: 0.6s all;
 }
 .map-container{
   min-width: 62%;
-  margin-right: 3%;
+  margin-right: -6.5%;
   float: right;
   border-radius: 16px;
   height: 600px;
@@ -875,8 +888,8 @@ ul {
   transition: 0.6s all;
 }
 .map{
-  height: 100%;
-  width: 100%;
+  height: 500px;
+  width: 460px;
   border-radius: 16px;
   transition: 0.6s all;
 }
@@ -917,7 +930,7 @@ ul {
     right: 0;
     width: 100%;
     height: 100%;
-    background: var(--bg-color);
+    background: white;
     animation: a-ltr-before 6s cubic-bezier(.77,0,.18,1) forwards;
     transform: translateX(0);
 }
@@ -1358,7 +1371,7 @@ ul {
   width: 250px;
   border-radius: 50%;
   background: rgb(255,246,64);
-  background: linear-gradient(90deg, rgba(255,246,64,1) 0%, rgba(255,79,165,1) 100%);
+  background: linear-gradient(90deg, rgb(223, 191, 50) 0%, rgb(255, 105, 197) 100%);
   background-size: 1400% 1400%;
 
   -webkit-animation: BubblesBackground 8s ease infinite;
@@ -1415,7 +1428,7 @@ ul {
 .popout {
   font-family: 'Futura', sans-serif;
   font-weight: 600;
-  font-size: 2.8em;
+  font-size: 1.1em;
   padding: 20px;
   padding-left: 30px !important;
   color: black;
@@ -1472,7 +1485,7 @@ ul {
   }
 }
 .popout span {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   position: relative;
   display: inline-block;
   -webkit-animation: ani 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1);
@@ -1497,7 +1510,7 @@ ul {
   position: fixed;
   bottom: 3%;
   left: 2%;
-  z-index: 22;
+  z-index: 1000;
   border-radius: 12px;
 }
 
@@ -1694,7 +1707,7 @@ ul {
   }
   .map-container{
     min-width: 62%;
-    margin-right: 3%;
+    margin-right: -5%;
     height: 300px;
   }
   .address-cont{
@@ -1731,5 +1744,11 @@ ul {
   #title {
     margin-left: 45%;
     width: 450px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .map{
+    width: 80%;
   }
 }

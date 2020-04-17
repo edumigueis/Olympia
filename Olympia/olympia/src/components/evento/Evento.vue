@@ -20,6 +20,7 @@
           </div>
         </div>
         <div id="bottom-header" class="white-6">
+
           <div id="calendar-red">
             <p class="month">SET</p>
             <div id="calendar-white">
@@ -29,9 +30,10 @@
           <div id="title">
             <p id="event-name" class="black-to-white">Mirrors by Fenjhki MoMA</p>
           </div>
-        </div>
+        </div>                     
       </div>
       <div id="page-rol" class="white-6">
+       <div id="gradient-wrap"></div>
         <div class="grid-item gray" id="grid-item-1">
           <div id="event-info">
             <div class="event-info-p gray">
@@ -101,8 +103,7 @@
                   tabindex="0"
                 ></iframe>
               </div>
-              <img src="/src/assets/images/finish.png" class="location-icon" />
-              <p id="y-r-here">Você está aqui!</p>
+              <img src="/src/assets/images/location.png" class="location-icon" />
               <div class="address-cont">
                 <p class="popout black-to-white">
                   <span>11 W 53rd St,</span>
