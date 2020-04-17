@@ -35,6 +35,20 @@
           'cinegrafia', estando dicionarizada.</p>
 
       </div>
+      <div class="cartao" >
+       
+          <img class="linha" src="https://img.pngio.com/black-line-png-just-pink-about-it-black-line-png-900_150.png">
+          <div class= "texto-linha">Louis e Auguste eram filhos e colaboradores do industrial Antoine Lumière, fotógrafo e fabricante de películas fotográficas, proprietário da Fábrica Lumière (Usine Lumière), instalada na cidade francesa de Lyon. Antoine reformou-se em 1892, deixando a fábrica entregue aos filhos.
+
+O cinematógrafo era uma máquina de filmar e projetor de cinema, invento que lhes tem sido atribuído mas que na verdade foi inventado por Léon Bouly no ano de 1892, o qual teria perdido o registro dessa patente, sendo então de novo registrado pelos irmãos Lumiere em 13 de fevereiro de 1895.
+
+São considerados os inventores da Sétima Arte junto com Georges Méliès, também francês, sendo este visto como o pai do cinema de ficção. </div></td>
+          <img class="imagem-esquerdo" margin-right:100px src="https://upload.wikimedia.org/wikipedia/commons/9/93/Fratelli_Lumiere.jpg"></tr>
+      
+      <img class="linha" src="https://img.pngio.com/black-line-png-just-pink-about-it-black-line-png-900_150.png">
+    
+
+      </div>
 
 
       <!---->

@@ -80,4 +80,16 @@ body{
       width: 80%;
       margin-left: 10%;
   }
-  
+  .linha{
+      width: 100%;
+  }
+  .imagem-esquerdo{
+    float: right;
+    width: 200px;
+}
+.texto-linha{
+    font: "Calibre-Regular";
+      font-weight: bold;
+      margin-right: 20%;
+
+}
