@@ -153,7 +153,7 @@
           </div>
           </div>
         </div>
-      </div>
+      
       <div id="padding"></div>
       <!---->
 
@@ -166,7 +166,106 @@
       </section>
       <!-- feed -->
       <section id="home-feed">
-          
+          <div class="slider-container">
+      <div class="slider-control left inactive"></div>
+      <div class="slider-control right"></div>
+      <ul class="slider-pagi"></ul>
+      <div class="slider">
+        <div class="slide slide-0 active">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <div class="feed-item">
+              <div class="post-img-cont">
+                <img
+                  class="post-main-img"
+                  src="https://i.pinimg.com/originals/55/6a/47/556a47568fdcb3eb1199eb9d388ed311.jpg"
+                />
+              </div>
+              <div class="post-det-cont">
+                <div class="name-of-post">Outter Seas</div>
+                <div class="name-of-prof"><a class="name-of-prof-link">Luna Dias</a></div>
+                <div class="desc-of-post">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut facilisis justo. In hac habitasse platea dictumst. Fusce vestibulum imperdiet felis sed ultrices. Curabitur ullamcorper molestie nunc in pharetra. Curabitur at cursus nunc. Curabitur porta, orci sed eleifend mollis, justo elit ullamcorper erat, sed vehicula nisl turpis a nibh. Pellentesque id odio a purus bibendum congue. Nunc ut viverra tellus. Donec volutpat posuere nisi, sed efficitur augue pretium sit amet. Curabitur congue, erat a mattis imperdiet, lectus ligula lacinia dolor, in tincidunt augue sem nec est.</div>
+                <div class="prof-cont-feed">
+                  <div class="prof-img-cont"><img class="prof-img-prop" src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"></div>
+                  <div class="prof-name-det">Luna Dias</div>
+                  <div class="prof-bio-det">What would our lives be without art?</div>
+                </div>
+                <div class="categories-cont-on-feed">
+                  <div class="cat-on-feed paint">Pintura</div>
+                  <div class="cat-on-feed paint">Tinta Óleo</div>
+                  <div class="cat-on-feed paint">Arte Moderna</div>
+                  <div class="cat-on-feed pers">Oceano</div>
+                  <div class="cat-on-feed pers">Azul</div>
+                </div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="post-img-cont">
+                <img
+                  class="post-main-img"
+                  src="https://www.tickpick.com/blog/wp-content/uploads/2019/02/audience-1835431_1280.jpg"
+                />
+              </div>
+              <div class="post-det-cont">
+                <div class="name-of-post">The Dawn Project</div>
+                <div class="name-of-prof"><a class="name-of-prof-link">Justin Alberman</a></div>
+                <div class="desc-of-post">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut facilisis justo. In hac habitasse platea dictumst. Fusce vestibulum imperdiet felis sed ultrices. Curabitur ullamcorper molestie nunc in pharetra. Curabitur at cursus nunc. Curabitur porta, orci sed eleifend mollis, justo elit ullamcorper erat, sed vehicula nisl turpis a nibh. Pellentesque id odio a purus bibendum congue. Nunc ut viverra tellus. Donec volutpat posuere nisi, sed efficitur augue pretium sit amet. Curabitur congue, erat a mattis imperdiet, lectus ligula lacinia dolor, in tincidunt augue sem nec est.</div>
+                <div class="prof-cont-feed">
+                  <div class="prof-img-cont"><img class="prof-img-prop" src="https://66.media.tumblr.com/8ca7ae9aef947480f0530429044bee3d/tumblr_phqvwbIT9p1xhllc7o5_250.png"></div>
+                  <div class="prof-name-det">Justin Alberman</div>
+                  <div class="prof-bio-det">Music inspires us to be who we are xd</div>
+                </div>
+                <div class="categories-cont-on-feed">
+                  <div class="cat-on-feed music">Music</div>
+                  <div class="cat-on-feed pers">Young Artist</div>
+                  <div class="cat-on-feed music">Show</div>
+                  <div class="cat-on-feed music">Comtemporary</div>
+                  <div class="cat-on-feed pers">Indie</div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+          </div>
+        </div>
+        <div class="slide slide-1">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+          </div>
+        </div>
+        <div class="slide slide-2">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+          </div>
+        </div>
+        <div class="slide slide-3">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+            <div class="feed-item"></div>
+          </div>
+        </div>
+      </div>
+    </div>
       </section>
       <meu-footer></meu-footer>
     </div>
