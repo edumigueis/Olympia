@@ -22,13 +22,15 @@ function init() {
     e.preventDefault();
     openMenu();
     $('.blur').css('filter', 'blur(10px)');
-    $('.menu-link-art').css('font-size', '1.8em');
+    $('.blur').css('filter', 'blur(10px)');
+    $('.js-menu-container-circle').css('display', 'block');
 
     $menuContainer[0].addEventListener('mouseout', function (e) {
       if (!$(".c-circle-menu__items").is(':hover')){
         closeMenu();
         $('.blur').css('filter', 'none');
         $('.menu-link-art').css('font-size', '1.2em');
+        $('.js-menu-container-circle').css('display', 'none');
       }
     });
 

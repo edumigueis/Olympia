@@ -18,6 +18,7 @@
   position: fixed;
   z-index: 90;
   border-radius: 50px;
+  display: none;
 }
 
 .c-circle-menu__link {
