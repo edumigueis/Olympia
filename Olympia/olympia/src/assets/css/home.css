@@ -7,15 +7,6 @@ html {
   src: url("../fonts/Gooseberry Juice.otf");
 }
 
-#colorful-mask {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  background: linear-gradient(to right, #ee86fc, #91c6e5);
-  z-index: -10;
-}
-
 .circle {
   transition: 0.4s all;
   display: none;
@@ -595,7 +586,6 @@ html {
   /* you can add color names and their values here
   and then simply add classes like .m--blend-$colorName to .fnc-slide 
   to apply specific color for mask blend mode */
-  padding-bottom: 100px;
 }
 .fnc-slider {
   overflow: hidden;
@@ -620,7 +610,7 @@ html {
   background-color: #575757;
 }
 .fnc-slider .m--navbg-dark {
-  background-color: #575757;
+  background-color: rgba(238, 101, 101, 0.904);
 }
 .fnc-slider .m--blend-green .fnc-slide__inner {
   background-color: #6d9b98;
@@ -629,7 +619,7 @@ html {
   background-color: #42605e;
 }
 .fnc-slider .m--navbg-green {
-  background-color: #42605e;
+  background-color: #5e6068;
 }
 .fnc-slider .m--blend-red .fnc-slide__inner {
   background-color: #ea2329;
@@ -638,7 +628,7 @@ html {
   background-color: #990e13;
 }
 .fnc-slider .m--navbg-red {
-  background-color: #990e13;
+  background-color: rgb(50, 40, 68);
 }
 .fnc-slider .m--blend-blue .fnc-slide__inner {
   background-color: #59aecb;
@@ -647,7 +637,7 @@ html {
   background-color: #2d7791;
 }
 .fnc-slider .m--navbg-blue {
-  background-color: #2d7791;
+  background-color: #2d8291;
 }
 .fnc-slide {
   overflow: hidden;
@@ -734,7 +724,7 @@ html {
   margin-top: -50vh;
   background-size: cover;
   background-position: center center;
-  background-blend-mode: difference;
+  background-blend-mode: multiply;
   transform-origin: 50% 16.5vh;
   transition-timing-function: ease-in-out;
 }
@@ -753,15 +743,22 @@ html {
   z-index: 2;
   position: absolute;
   left: 40%;
-  top: 20%;
+  top: 9%;
+  transition: 0.3s all;
 }
 
-#recuo-teste{
-  margin-bottom: 100px;
+#margin{
+  margin-top: 60px;
 }
+
+#padding{
+  margin-top: 200px;
+}
+
 .fnc-slide__heading {
   margin-bottom: 10px;
   text-transform: uppercase;
+  transition: 0.3s all;
 }
 .fnc-slide__heading-line {
   overflow: hidden;
@@ -772,6 +769,7 @@ html {
   font-family: 'Gooseberry Juice';
   color: #fff;
   word-spacing: 10px;
+  transition: 0.3s all;
 }
 .fnc-slide__heading-line:nth-child(2) {
   padding-left: 30px;
@@ -827,7 +825,7 @@ html {
   transition: transform 0.3s;
   transform-origin: 50% 0;
   line-height: 30px;
-  color:#1f2833;
+  color:#dbdbdb;
   font-weight: 600;
 }
 .fnc-slide__action-btn span:before {
@@ -837,7 +835,7 @@ html {
   top: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #1f2833;
+  border: 2px solid #dbdbdb;
   border-top: none;
   border-bottom: none;
 }
@@ -962,7 +960,7 @@ body {
 }
 .demo-cont__credits {
   box-sizing: border-box;
-  overflow-y: auto;
+  overflow-y: hidden;
   z-index: 1;
   position: absolute;
   right: 0;
@@ -977,6 +975,7 @@ body {
   transition: transform 0.7s;
   transform: translate3d(100%, 0, 0) rotateY(-45deg);
   will-change: transform;
+  box-shadow: -5px 0 15px rgba(189, 189, 189, 0.6);
 }
 .credits-active .demo-cont__credits {
   transition: transform 0.7s 0.2333333333s;
@@ -1014,8 +1013,13 @@ body {
 }
 .demo-cont__credits-heading {
   text-transform: uppercase;
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 25px;
+  font-family: 'Gooseberry Juice';
+  font-weight: normal;
+  margin-bottom: -5px;
+  background: linear-gradient(to left, rgb(204, 199, 179), rgb(63, 63, 63));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .demo-cont__credits-img {
   display: block;
@@ -1029,13 +1033,57 @@ body {
 }
 .demo-cont__credits-link {
   display: block;
+  text-decoration: none;
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
 }
 .demo-cont__credits-blend {
   font-size: 30px;
   margin-bottom: 10px;
+}
+
+.mask-img{
+  margin-top: 25px !important;
+  margin: auto;
+  height: 135px;
+  width: 135px;
+  border-radius: 135px;
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  z-index:991;
+  overflow: hidden;
+}
+
+.mask-img:after{
+  top: 0;
+  left: 0;
+  padding: 0;
+  box-shadow: 0 0 0 3px rgb(212, 212, 212);
+  box-shadow: 0 0 0 3px rgb(212, 212, 212);
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.mask-img:hover:after {
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
+  opacity: 0.5;
+}
+
+.mask-img:hover {
+  box-shadow: 0 0 0 8px rgb(212, 212, 212);;
+  color: #fff;
+  cursor: pointer;
+}
+
+.daily-art-img{
+  width: 100%;
+  z-index: -1;
 }
 
 .example-slider {
@@ -1053,14 +1101,13 @@ body {
 }
 .example-slider .fnc-slide-2 .fnc-slide__inner,
 .example-slider .fnc-slide-2 .fnc-slide__mask-inner {
-  background-color: #abe9cd;
-  background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);  
-  box-shadow: 0px 0px 20px rgb(0, 0, 0) inset;
-
+  background-image: url("../images/slide-2.jpg");
 }
 .example-slider .fnc-slide-3 .fnc-slide__inner,
 .example-slider .fnc-slide-3 .fnc-slide__mask-inner {
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/ironman-alt.jpg");
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  
 }
 .example-slider .fnc-slide-3 .fnc-slide__inner:before {
   content: "";
@@ -1073,7 +1120,7 @@ body {
 }
 .example-slider .fnc-slide-4 .fnc-slide__inner,
 .example-slider .fnc-slide-4 .fnc-slide__mask-inner {
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/thor.jpg");
+  background-image: url("../images/slide-4.jpg");
 }
 .example-slider .fnc-slide-4 .fnc-slide__inner:before {
   content: "";
@@ -1275,7 +1322,17 @@ body {
   transform: rotate(-45deg) scaleX(0) translateZ(0);
 }
 
+@media only screen and (min-width: 400px) and (max-width: 700px){
+  .fnc-slide__heading-line {
+    font-size: 50px;
+  }
+}
 
+@media only screen and (min-width: 701px) and (max-width: 1000px){
+  .fnc-slide__heading-line {
+    font-size: 60px;
+  }
+}
 
 
 /*-------------------------------------------------------*/

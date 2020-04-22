@@ -12,16 +12,7 @@
       <meu-mouse></meu-mouse>
       <meu-dark-mode></meu-dark-mode>
 
-      <div id="palaces-container">
-        <svg class="intro">
-          <text text-anchor="start" x="200" y="60" class="text text-stroke" id="text1" font-size='60'>All the</text>
-          <text text-anchor="start" x="620" y="60" class="text text-stroke" id="text2" font-size='60'>PALACES</text>
-          <text text-anchor="start" x="1030" y="60" class="text text-stroke" id="text3" font-size='60'>of art.</text>
-          <text text-anchor="start" x="200" y="60" class="text text-stroke text-stroke-2" id="text1" font-size='60'>All the</text>
-          <text text-anchor="start" x="620" y="60" class="text text-stroke text-stroke-2" id="text2" font-size='60'>PALACES</text>
-          <text text-anchor="start" x="1030" y="60" class="text text-stroke text-stroke-2" id="text3" font-size='60'>of art.</text>         
-        </svg>
-      </div>
+      <div id="margin"></div>
 
       <!--slider-->
       <div class="demo-cont">
@@ -138,7 +129,7 @@
                 <span class="fnc-nav__control-progress"></span>
               </button>
               <button class="fnc-nav__control">
-                Grandient
+                Gradient
                 <span class="fnc-nav__control-progress"></span>
               </button>
               <button class="fnc-nav__control">
@@ -151,50 +142,19 @@
         <!-- slider end -->
         <div class="demo-cont__credits">
           <div class="demo-cont__credits-close"></div>
-          <h2 class="demo-cont__credits-heading">Made by</h2>
-          <img
-            src="//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg"
-            alt=""
-            class="demo-cont__credits-img"
-          />
-          <h3 class="demo-cont__credits-name">Nikolay Talanov</h3>
+          <h2 class="demo-cont__credits-heading">DAILY ART</h2>
+          <h3 class="demo-cont__credits-name">"Mona Lisa", por</h3>
           <a
-            href="https://codepen.io/suez/"
-            target="_blank"
             class="demo-cont__credits-link"
-            >My codepen</a
+            >Botero - 1977</a
           >
-          <a
-            href="https://twitter.com/NikolayTalanov"
-            target="_blank"
-            class="demo-cont__credits-link"
-            >My twitter</a
-          >
-          <h2 class="demo-cont__credits-heading">Based on</h2>
-          <a
-            href="https://dribbble.com/shots/2375246-Fashion-Butique-slider-animation"
-            target="_blank"
-            class="demo-cont__credits-link"
-            >Concept by Kreativa Studio</a
-          >
-          <h4 class="demo-cont__credits-blend">Global Blend Mode</h4>
-          <div class="colorful-switch">
-            <input
-              type="checkbox"
-              class="colorful-switch__checkbox js-activate-global-blending"
-              id="colorful-switch-cb"
-            />
-            <label class="colorful-switch__label" for="colorful-switch-cb">
-              <span class="colorful-switch__bg"></span>
-              <span class="colorful-switch__dot"></span>
-              <span class="colorful-switch__on">
-                <span class="colorful-switch__on__inner"></span>
-              </span>
-              <span class="colorful-switch__off"></span>
-            </label>
+          <div class="mask-img">
+              <img class="daily-art-img" src="/src/assets/images/daily-art.jpg">
+          </div>
           </div>
         </div>
       </div>
+      <div id="padding"></div>
       <!---->
 
 
@@ -208,7 +168,6 @@
       <section id="home-feed">
           
       </section>
-      <div id="recuo-teste"></div>
       <meu-footer></meu-footer>
     </div>
   </main>

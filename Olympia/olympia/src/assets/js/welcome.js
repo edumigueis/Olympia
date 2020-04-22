@@ -50,6 +50,7 @@ setInterval(() => {
         $('#more-arrows').css('transition', '1s all');
         $('#more-arrows').css('opacity', 0);
         $('.usuario').css('opacity', 0);
+        $('.usuario').css('z-index', '-50');
         $('#animation').css('animation', 'none');
         $('#animation').css('animation', 'swing 1s ease');
       })

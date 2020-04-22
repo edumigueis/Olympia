@@ -11,7 +11,6 @@ setInterval(() => {
     if ($('#container-home').length && jaFoiHome == false) {
         jaFoiHome = true;
         $(function () {
-            $('.intro').addClass('go');
 
             $(function () {
 

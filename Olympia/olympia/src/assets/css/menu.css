@@ -145,6 +145,23 @@
   padding: 0 20px;
 }
 
+#bordao {
+  text-align: center;
+  position: absolute;
+  left: 60%;
+  top: 8px;
+  width: 280px;
+  font-family: "Bruzh";
+  letter-spacing: 0.2em;
+  font-size: 0.9em !important;
+  transition: 0.3s all;
+}
+
+#bordao:hover{
+  font-size: 1em !important;
+  cursor: pointer;
+}
+
 .hover-line {
   color: black;
   font-size: 1.5em;
@@ -1170,6 +1187,10 @@
     letter-spacing: 0.2em;
   }
 
+  #bordao{
+    left: 55%;
+  }
+
   #search-ico {
     height: 40px;
     position: absolute;
@@ -1195,6 +1216,10 @@
     left: 30.5%;
     width: 280px;
     letter-spacing: 0.2em;
+  }
+
+  #bordao{
+    left: 55%;
   }
 
   #search-ico {
@@ -1384,5 +1409,158 @@
     font-family: "Bebas";
     font-size: 1.4em;
     transition: 0.5s all;
+  }
+}
+
+#palaces-container {
+  height: 100%;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 0;
+  z-index: 999;
+  position: fixed;
+  display: none;
+}
+
+svg.intro {
+  background: url('../images/watercolor.jpg');
+  background-repeat: no-repeat;
+  image-orientation: from-image;
+  background-size: cover;
+  width: 100%;
+  height: 12vh;
+  bottom: 0;
+  box-shadow: 0px 0px 20px rgb(0, 0, 0) inset;
+  max-height: 80px;
+  border-bottom: 5px solid white;
+}
+
+svg.intro .text {
+  display: none;
+}
+
+svg.intro.go .text {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  display: block;
+  transition: 0.5s all;
+}
+
+svg.intro.go .text-stroke {
+  fill: none;
+  stroke: #47256f;
+  stroke-width: 2.2px;
+  stroke-dashoffset: -900;
+  stroke-dasharray: 900;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  animation: dash 2.5s ease-in-out forwards;
+}
+
+svg.intro.go .text-stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+svg.intro.go .text-stroke:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+svg.intro.go .text-stroke-2 {
+  stroke: #e7e7e7;
+  animation-delay: 1.2s;
+}
+
+svg.intro.go .text-stroke:nth-child(5) {
+  animation-delay: 1.5s;
+}
+
+svg.intro.go .text-stroke:nth-child(6) {
+  animation-delay: 1.8s;
+}
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 799px){
+  svg.intro.go .text {
+    font-size: 30px;
+    stroke-width: 1px;
+  }
+  #text3{
+    transform: translate(-600px,-8px);
+  }
+  #text2{
+    transform: translate(-380px,-8px);
+  }
+  #text1{
+    transform: translate(-160px,-8px);
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px){
+  svg.intro.go .text {
+    font-size: 30px;
+    stroke-width: 1px;
+  }
+  #text3{
+    transform: translate(-450px,-5px);
+  }
+  #text2{
+    transform: translate(-280px,-5px);
+  }
+  #text1{
+    transform: translate(-100px,-5px);
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1150px){
+  svg.intro.go .text {
+    font-size: 40px;
+    stroke-width: 1.5px;
+  }
+  #text1{
+    transform: translate(-100px,-2px);
+  }
+  #text2{
+    transform: translate(-200px,-2px);
+  }
+  #text3{
+    transform: translate(-300px,-2px);
+  }
+}
+
+@media only screen and (min-width: 1151px) and (max-width: 1300px){
+  svg.intro.go .text {
+    font-size: 48px;
+  }
+  #text1{
+    transform: translateX(-100px);
+  }
+  #text2{
+    transform: translateX(-100px);
+  }
+  #text3{
+    transform: translateX(-100px);
+  }
+}
+
+@media only screen and (min-width: 1301px) and (max-width: 1599px){
+  svg.intro.go .text {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (min-width: 1600px){
+  svg.intro.go .text {
+    font-size: 55px;
+  }
+  #text2{
+    transform: translateX(70px);
+  }
+  #text3{
+    transform: translateX(100px);
   }
 }

@@ -59,6 +59,21 @@ $(document).ready(function () {
             "-ms-filter": "blur(" + 10 + "px)",
         });
     })
+
+    $(document.body).on('click', '#bordao', function () {
+        if($('#palaces-container').css('display') == 'none'){
+            $('#palaces-container').fadeIn("slow");
+            $('.intro').addClass('go');
+            $("#bordao").text('FECHAR');
+            $("#bordao").css('transform','translateX(8px)');
+        }
+        else{
+            $('#palaces-container').fadeOut("slow");
+            $('.intro').removeClass('go');
+            $("#bordao").text('CLICK!');
+            $("#bordao").css('transform','none');
+        }
+    })
 })
 
 

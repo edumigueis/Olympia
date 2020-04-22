@@ -1,4 +1,3 @@
-
 import Welcome from './components/welcome/Welcome.vue';
 import Home from './components/home/Home.vue';
 import Artes from './components/artes/Artes.vue';
@@ -27,5 +26,7 @@ export const routes = [
     { path: '/login', component: Login, titulo: 'L O G I N' },
     { path: '/categorias', component: Categorias, titulo: 'C A T E G O R I A S' },
     { path: '/literatura', component: Literatura, titulo: 'L I T E R A T U R A'},
-    { path: '/cinema', component: Cinema, titulo: 'C I N E M A'}
+    { path: '/cinema', component: Cinema, titulo: 'C I N E M A'},
 ]
+
+
