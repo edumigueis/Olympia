@@ -12,10 +12,36 @@
       <meu-mouse></meu-mouse>
       <meu-dark-mode></meu-dark-mode>
 
-      <div id="margin"></div>
+      <svg class="click" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 462.8 580.9">
 
+      <path id="tap-target" class="st1" d="M142.8,276.4c-0.1-51.8-0.2-81.5-0.2-102.6c0-45.9,76.5-48.1,80.7-3.1v104.4
+        c57.1-18,98.5-71.3,98.5-134.3C321.8,63,258.8,0,181,0S40.2,63,40.2,140.8C40.2,205.4,83.6,259.8,142.8,276.4z"/>
+
+      <g id="hand">
+        <path class="st0" id="hand-untapped" d="M297.3,572.9c-46.1,0-94.4-5.9-126.1-15.4c-37.1-11.1-49.6-43.4-66.8-88.1c-16-41.4-35.9-93-82.7-154.7
+          c-12.9-17.1-16.7-30.5-11.5-41c3.3-6.7,11.9-14.7,33.8-14.7c10.9,0,23.8,2.1,34.6,5.7l0.5,0.2l0.5,0.2c1,0.5,2.2,1,3.4,1.6
+          c11.7,5.6,31.3,14.8,51.4,40.6v-4.8l0.6,1.1c-0.1-55.9-0.3-170.3-0.3-202.3c0-13.3,5.6-25,15.7-33c8.8-6.9,20.4-10.7,32.8-10.7
+          c21.4,0,45.6,12.5,48.2,39.8l0,0.4v128.7l1.8-1c7.5-4.2,19.1-9.2,32-9.2c13.8,0,33.2,5.9,47.1,33.9l2.7-1.5
+          c9.8-5.6,20-8.6,29.5-8.6c8.1,0,15.7,2,22.8,6.1c6.3,3.6,14.5,11.9,19.5,30.9l5.2-1.2c3.7-0.9,7.4-1.3,11-1.3
+          c14.6,0,34.7,7.3,47.7,42c6.1,16.4,5.4,71.8-1.7,121c-6.7,47.1-21.3,105.9-52.7,119.6C371.7,570.8,323.8,572.9,297.3,572.9
+          C297.3,572.9,297.3,572.9,297.3,572.9z"/>
+      </g>
+
+      <g id="hand-tapping">
+        <path class="st0" id="hand-tapped" style="display:none" d="M297.3,572.9c-46.1,0-94.4-5.9-126.1-15.4c-37.1-11.1-49.6-43.4-66.8-88.1c-16-41.4-35.9-93-82.7-154.7
+            c-12.9-17.1-16.7-30.5-11.5-41c3.3-6.7,11.9-14.7,33.8-14.7c10.9,0,23.8,2.1,34.6,5.7l0.5,0.2l0.5,0.2c1,0.5,2.2,1,3.4,1.6
+            c11.7,5.6,31.3,14.8,51.4,40.6v-4.8l0.6,1c-0.1-38-0.3-100.8-0.3-129.6c0-13.3,5.6-25,15.7-33c8.8-6.9,20.4-10.7,32.8-10.7
+            c21.4,0,45.6,12.5,48.2,39.8l0,0.4v56l1.8-1c7.5-4.2,19.1-9.2,32-9.2c13.8,0,33.2,5.9,47.1,33.9l2.7-1.5c9.8-5.6,20-8.6,29.5-8.6
+            c8.1,0,15.7,2,22.8,6.1c6.3,3.6,14.5,11.9,19.5,30.9l5.2-1.2c3.7-0.9,7.4-1.3,11-1.3c14.6,0,34.7,7.3,47.7,42
+            c6.1,16.4,5.4,71.8-1.7,121c-6.7,47.1-21.3,105.9-52.7,119.6C371.7,570.8,323.8,572.9,297.3,572.9
+            C297.3,572.9,297.3,572.9,297.3,572.9z"/>
+      </g>
+    </svg>
+
+      <div id="margin"></div>
       <!--slider-->
       <div class="demo-cont">
+              <img src="/src/assets/images/page-ico.png" class="logo-ico">
         <!-- slider start -->
         <div class="fnc-slider example-slider">
           <div class="fnc-slider__slides">
@@ -153,20 +179,42 @@
           </div>
           </div>
         </div>
-      
-      <div id="padding"></div>
+
       <!---->
 
 
-      <!--////////////////////////deixa chamativo. clean porém colorido. um ambiente gostoso de navegar////////////////////////////////////-->
+      <!--////////////////////////////////////////////////////////////-->
 
       <!--tab page control-->
       <section id="tab-page">
         
       </section>
       <!-- feed -->
+      <div id="background-wrap">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+        <div class="bubble x11"></div>
+        <div class="bubble x12"></div>
+        <div class="bubble x13"></div>
+        <div class="bubble x14"></div>
+        <div class="bubble x15"></div>
+        <div class="bubble x16"></div>
+        <div class="bubble x17"></div>
+        <div class="bubble x18"></div>
+        <div class="bubble x19"></div>
+        <div class="bubble x20"></div>
+      </div>
       <section id="home-feed">
           <div class="slider-container">
+
       <div class="slider-control left inactive"></div>
       <div class="slider-control right"></div>
       <ul class="slider-pagi"></ul>

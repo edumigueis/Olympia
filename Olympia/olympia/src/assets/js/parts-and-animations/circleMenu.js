@@ -1,4 +1,4 @@
-var jaFoi2 = false;
+var auxiliar = false;
 var $menu = document.getElementsByClassName('js-menu');
 var $menuToggle = document.getElementsByClassName('js-menu-toggle');
 var $menuMask = document.getElementsByClassName('js-menu-mask');
@@ -6,18 +6,14 @@ var $menuContainer = document.getElementsByClassName('js-menu-container-circle')
 
 
 setInterval(() => {
+  if ($('.menu-container').length) {
 
-  if ($('.menu-container').length && jaFoi2 == false) {
-
-    jaFoi2 = true;
+    auxiliar = true;
 
     $(function () {
       init();
     })
 
-  }
-  else if (!$('.menu-container').length) {
-    jaFoi2 = false;
   }
 }, 100);
 

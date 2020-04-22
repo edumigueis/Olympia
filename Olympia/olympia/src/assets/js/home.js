@@ -2,195 +2,223 @@ var i = -1;
 var y = 10;
 var x = 0;
 var passou = false;
-var tempo = 600; /* TEMPO DE APARIÇÃO DOS CÍRCULOS */
-var max = 70; /* NÚMERO TOTAL DE CÍRCULOS */
+
+function fingerTap() {
+
+  var tl_options = {
+    delay: 0.5,
+    repeat: -1,
+    repeatDelay: 1
+  }
+
+  var tl = new TimelineMax(tl_options),
+    finger_tapped = document.getElementById('hand-tapped'),
+    finger_tapped_path = finger_tapped.getAttribute('d'),
+    finger_untapped = document.getElementById('hand-untapped'),
+    finger_untapped_path = finger_untapped.getAttribute('d'),
+    tap_target = document.getElementById('tap-target'),
+    finger_timing = 0.15,
+    tap_target_timing = 0.325;
+
+  tl.set(tap_target, {
+    transformOrigin: '50% 50%',
+    scale: 0
+  });          // .to(element, timing, options, timeline position)
+  tl.to(finger_untapped, finger_timing, { morphSVG: finger_tapped_path, ease: Ease.easeIn })
+    .add('fingerdown')
+    .to(finger_untapped, finger_timing, { morphSVG: finger_untapped_path, ease: Ease.easeOut })
+    .add('fingerup')
+    .to(tap_target, tap_target_timing, { opacity: 1, scale: 1.2, ease: Cubic.easeInOut }, 'fingerup-=0.25')
+    .to(tap_target, tap_target_timing, { opacity: 0 });
+
+  return tl;
+}
 
 var jaFoiHome = false;
 
 setInterval(() => {
-    if ($('#container-home').length && jaFoiHome == false) {
-        jaFoiHome = true;
-        $(function () {
+  if ($('#container-home').length && jaFoiHome == false) {
+    jaFoiHome = true;
+    $(function () {
 
-            $(function () {
+      $(function () {
 
-                var $$ = function (selector, context) {
-                    var context = context || document;
-                    var elements = context.querySelectorAll(selector);
-                    return [].slice.call(elements);
-                };
+        fingerTap();
 
-                function _fncSliderInit($slider, options) {
-                    var prefix = ".fnc-";
+        var $$ = function (selector, context) {
+          var context = context || document;
+          var elements = context.querySelectorAll(selector);
+          return [].slice.call(elements);
+        };
 
-                    var $slider = $slider;
-                    var $slidesCont = $slider.querySelector(prefix + "slider__slides");
-                    var $slides = $$(prefix + "slide", $slider);
-                    var $controls = $$(prefix + "nav__control", $slider);
-                    var $controlsBgs = $$(prefix + "nav__bg", $slider);
-                    var $progressAS = $$(prefix + "nav__control-progress", $slider);
+        function _fncSliderInit($slider, options) {
+          var prefix = ".fnc-";
 
-                    var numOfSlides = $slides.length;
-                    var curSlide = 1;
-                    var sliding = false;
-                    var slidingAT = +parseFloat(getComputedStyle($slidesCont)["transition-duration"]) * 1000;
-                    var slidingDelay = +parseFloat(getComputedStyle($slidesCont)["transition-delay"]) * 1000;
+          var $slider = $slider;
+          var $slidesCont = $slider.querySelector(prefix + "slider__slides");
+          var $slides = $$(prefix + "slide", $slider);
+          var $controls = $$(prefix + "nav__control", $slider);
+          var $controlsBgs = $$(prefix + "nav__bg", $slider);
+          var $progressAS = $$(prefix + "nav__control-progress", $slider);
 
-                    var autoSlidingActive = false;
-                    var autoSlidingTO;
-                    var autoSlidingDelay = 5000; // default autosliding delay value
-                    var autoSlidingBlocked = false;
+          var numOfSlides = $slides.length;
+          var curSlide = 1;
+          var sliding = false;
+          var slidingAT = +parseFloat(getComputedStyle($slidesCont)["transition-duration"]) * 1000;
+          var slidingDelay = +parseFloat(getComputedStyle($slidesCont)["transition-delay"]) * 1000;
 
-                    var $activeSlide;
-                    var $activeControlsBg;
-                    var $prevControl;
+          var autoSlidingActive = false;
+          var autoSlidingTO;
+          var autoSlidingDelay = 5000; // default autosliding delay value
+          var autoSlidingBlocked = false;
 
-                    function setIDs() {
-                        $slides.forEach(function ($slide, index) {
-                            $slide.classList.add("fnc-slide-" + (index + 1));
-                        });
+          var $activeSlide;
+          var $activeControlsBg;
+          var $prevControl;
 
-                        $controls.forEach(function ($control, index) {
-                            $control.setAttribute("data-slide", index + 1);
-                            $control.classList.add("fnc-nav__control-" + (index + 1));
-                        });
+          function setIDs() {
+            $slides.forEach(function ($slide, index) {
+              $slide.classList.add("fnc-slide-" + (index + 1));
+            });
 
-                        $controlsBgs.forEach(function ($bg, index) {
-                            $bg.classList.add("fnc-nav__bg-" + (index + 1));
-                        });
-                    };
+            $controls.forEach(function ($control, index) {
+              $control.setAttribute("data-slide", index + 1);
+              $control.classList.add("fnc-nav__control-" + (index + 1));
+            });
 
-                    setIDs();
+            $controlsBgs.forEach(function ($bg, index) {
+              $bg.classList.add("fnc-nav__bg-" + (index + 1));
+            });
+          };
 
-                    function afterSlidingHandler() {
-                        $slider.querySelector(".m--previous-slide").classList.remove("m--active-slide", "m--previous-slide");
-                        $slider.querySelector(".m--previous-nav-bg").classList.remove("m--active-nav-bg", "m--previous-nav-bg");
+          setIDs();
 
-                        $activeSlide.classList.remove("m--before-sliding");
-                        $activeControlsBg.classList.remove("m--nav-bg-before");
-                        $prevControl.classList.remove("m--prev-control");
-                        $prevControl.classList.add("m--reset-progress");
-                        var triggerLayout = $prevControl.offsetTop;
-                        $prevControl.classList.remove("m--reset-progress");
+          function afterSlidingHandler() {
+            $slider.querySelector(".m--previous-slide").classList.remove("m--active-slide", "m--previous-slide");
+            $slider.querySelector(".m--previous-nav-bg").classList.remove("m--active-nav-bg", "m--previous-nav-bg");
 
-                        sliding = false;
-                        var layoutTrigger = $slider.offsetTop;
+            $activeSlide.classList.remove("m--before-sliding");
+            $activeControlsBg.classList.remove("m--nav-bg-before");
+            $prevControl.classList.remove("m--prev-control");
+            $prevControl.classList.add("m--reset-progress");
+            var triggerLayout = $prevControl.offsetTop;
+            $prevControl.classList.remove("m--reset-progress");
 
-                        if (autoSlidingActive && !autoSlidingBlocked) {
-                            setAutoslidingTO();
-                        }
-                    };
+            sliding = false;
+            var layoutTrigger = $slider.offsetTop;
 
-                    function performSliding(slideID) {
-                        if (sliding) return;
-                        sliding = true;
-                        window.clearTimeout(autoSlidingTO);
-                        curSlide = slideID;
+            if (autoSlidingActive && !autoSlidingBlocked) {
+              setAutoslidingTO();
+            }
+          };
 
-                        $prevControl = $slider.querySelector(".m--active-control");
-                        $prevControl.classList.remove("m--active-control");
-                        $prevControl.classList.add("m--prev-control");
-                        $slider.querySelector(prefix + "nav__control-" + slideID).classList.add("m--active-control");
+          function performSliding(slideID) {
+            if (sliding) return;
+            sliding = true;
+            window.clearTimeout(autoSlidingTO);
+            curSlide = slideID;
 
-                        $activeSlide = $slider.querySelector(prefix + "slide-" + slideID);
-                        $activeControlsBg = $slider.querySelector(prefix + "nav__bg-" + slideID);
+            $prevControl = $slider.querySelector(".m--active-control");
+            $prevControl.classList.remove("m--active-control");
+            $prevControl.classList.add("m--prev-control");
+            $slider.querySelector(prefix + "nav__control-" + slideID).classList.add("m--active-control");
 
-                        $slider.querySelector(".m--active-slide").classList.add("m--previous-slide");
-                        $slider.querySelector(".m--active-nav-bg").classList.add("m--previous-nav-bg");
+            $activeSlide = $slider.querySelector(prefix + "slide-" + slideID);
+            $activeControlsBg = $slider.querySelector(prefix + "nav__bg-" + slideID);
 
-                        $activeSlide.classList.add("m--before-sliding");
-                        $activeControlsBg.classList.add("m--nav-bg-before");
+            $slider.querySelector(".m--active-slide").classList.add("m--previous-slide");
+            $slider.querySelector(".m--active-nav-bg").classList.add("m--previous-nav-bg");
 
-                        var layoutTrigger = $activeSlide.offsetTop;
+            $activeSlide.classList.add("m--before-sliding");
+            $activeControlsBg.classList.add("m--nav-bg-before");
 
-                        $activeSlide.classList.add("m--active-slide");
-                        $activeControlsBg.classList.add("m--active-nav-bg");
+            var layoutTrigger = $activeSlide.offsetTop;
 
-                        setTimeout(afterSlidingHandler, slidingAT + slidingDelay);
-                    };
+            $activeSlide.classList.add("m--active-slide");
+            $activeControlsBg.classList.add("m--active-nav-bg");
 
-
-
-                    function controlClickHandler() {
-                        if (sliding) return;
-                        if (this.classList.contains("m--active-control")) return;
-                        if (options.blockASafterClick) {
-                            autoSlidingBlocked = true;
-                            $slider.classList.add("m--autosliding-blocked");
-                        }
-
-                        var slideID = +this.getAttribute("data-slide");
-
-                        performSliding(slideID);
-                    };
-
-                    $controls.forEach(function ($control) {
-                        $control.addEventListener("click", controlClickHandler);
-                    });
-
-                    function setAutoslidingTO() {
-                        window.clearTimeout(autoSlidingTO);
-                        var delay = +options.autoSlidingDelay || autoSlidingDelay;
-                        curSlide++;
-                        if (curSlide > numOfSlides) curSlide = 1;
-
-                        autoSlidingTO = setTimeout(function () {
-                            performSliding(curSlide);
-                        }, delay);
-                    };
-
-                    if (options.autoSliding || +options.autoSlidingDelay > 0) {
-                        if (options.autoSliding === false) return;
-
-                        autoSlidingActive = true;
-                        setAutoslidingTO();
-
-                        $slider.classList.add("m--with-autosliding");
-                        var triggerLayout = $slider.offsetTop;
-
-                        var delay = +options.autoSlidingDelay || autoSlidingDelay;
-                        delay += slidingDelay + slidingAT;
-
-                        $progressAS.forEach(function ($progress) {
-                            $progress.style.transition = "transform " + (delay / 1000) + "s";
-                        });
-                    }
-
-                    $slider.querySelector(".fnc-nav__control:first-child").classList.add("m--active-control");
-
-                };
-
-                var fncSlider = function (sliderSelector, options) {
-                    var $sliders = $$(sliderSelector);
-
-                    $sliders.forEach(function ($slider) {
-                        _fncSliderInit($slider, options);
-                    });
-                };
-
-                window.fncSlider = fncSlider;
+            setTimeout(afterSlidingHandler, slidingAT + slidingDelay);
+          };
 
 
-                fncSlider(".example-slider", { autoSlidingDelay: 4000 });
 
-                var $demoCont = document.querySelector(".demo-cont");
+          function controlClickHandler() {
+            if (sliding) return;
+            if (this.classList.contains("m--active-control")) return;
+            if (options.blockASafterClick) {
+              autoSlidingBlocked = true;
+              $slider.classList.add("m--autosliding-blocked");
+            }
 
-                [].slice.call(document.querySelectorAll(".fnc-slide__action-btn")).forEach(function ($btn) {
-                    $btn.addEventListener("click", function () {
-                        $demoCont.classList.toggle("credits-active");
-                    });
-                });
+            var slideID = +this.getAttribute("data-slide");
 
-                document.querySelector(".demo-cont__credits-close").addEventListener("click", function () {
-                    $demoCont.classList.remove("credits-active");
-                });
+            performSliding(slideID);
+          };
 
-                document.querySelector(".js-activate-global-blending").addEventListener("click", function () {
-                    document.querySelector(".example-slider").classList.toggle("m--global-blending-active");
-                });
+          $controls.forEach(function ($control) {
+            $control.addEventListener("click", controlClickHandler);
+          });
 
-                /*FEED---------------------------------------------- */
-          var $sliderFeed = $(".slider"),
+          function setAutoslidingTO() {
+            window.clearTimeout(autoSlidingTO);
+            var delay = +options.autoSlidingDelay || autoSlidingDelay;
+            curSlide++;
+            if (curSlide > numOfSlides) curSlide = 1;
+
+            autoSlidingTO = setTimeout(function () {
+              performSliding(curSlide);
+            }, delay);
+          };
+
+          if (options.autoSliding || +options.autoSlidingDelay > 0) {
+            if (options.autoSliding === false) return;
+
+            autoSlidingActive = true;
+            setAutoslidingTO();
+
+            $slider.classList.add("m--with-autosliding");
+            var triggerLayout = $slider.offsetTop;
+
+            var delay = +options.autoSlidingDelay || autoSlidingDelay;
+            delay += slidingDelay + slidingAT;
+
+            $progressAS.forEach(function ($progress) {
+              $progress.style.transition = "transform " + (delay / 1000) + "s";
+            });
+          }
+
+          $slider.querySelector(".fnc-nav__control:first-child").classList.add("m--active-control");
+
+        };
+
+        var fncSlider = function (sliderSelector, options) {
+          var $sliders = $$(sliderSelector);
+
+          $sliders.forEach(function ($slider) {
+            _fncSliderInit($slider, options);
+          });
+        };
+
+        window.fncSlider = fncSlider;
+
+
+        fncSlider(".example-slider", { autoSlidingDelay: 4000 });
+
+        var $demoCont = document.querySelector(".demo-cont");
+
+        [].slice.call(document.querySelectorAll(".fnc-slide__action-btn")).forEach(function ($btn) {
+          $btn.addEventListener("click", function () {
+            $demoCont.classList.toggle("credits-active");
+          });
+        });
+
+        document.querySelector(".demo-cont__credits-close").addEventListener("click", function () {
+          $demoCont.classList.remove("credits-active");
+        });
+
+
+        /*FEED---------------------------------------------- */
+        var $sliderFeed = $(".slider"),
           $slideBGs = $(".slide__bg"),
           diff = 0,
           curSlide = 0,
@@ -320,13 +348,13 @@ setInterval(() => {
           curSlide = $(this).data("page");
           changeSlides();
         });
-            })
+      })
 
-        })
-    }
-    else if (!$('#container-home').length) {
-        jaFoiHome = false;
-    }
+    })
+  }
+  else if (!$('#container-home').length) {
+    jaFoiHome = false;
+  }
 }, 100);
 
 
