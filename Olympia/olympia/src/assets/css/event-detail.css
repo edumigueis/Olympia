@@ -526,8 +526,8 @@ b {
   background-color: transparent;
   position: sticky;
   height: fit-content;
-  width: 60%;
-  margin-left: 20%;
+  width: 70%;
+  margin-left: 15%;
   border-radius: 16px;
 }
 /* GALLERY /////////////////////////////////////////////////////////////*/
@@ -873,7 +873,8 @@ ul {
 }
 .location-icon{
   width: 100px;
-  margin-left: 15%;
+  margin-right: 7%;
+  float: right;
   margin-top: 3%;
   margin-bottom: 3%;
   transition: 0.6s all;
@@ -1428,10 +1429,12 @@ ul {
 .popout {
   font-family: 'Futura', sans-serif;
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: 1.8em;
   padding: 20px;
   padding-left: 30px !important;
   color: black;
+  margin-top: -13%;
+  max-width: 100%;
 }
 @-webkit-keyframes ani {
   0% {
@@ -1692,10 +1695,6 @@ ul {
   }
   .about-event-loc-in{
     text-indent: 0.5em;
-  }
-  .location-icon{
-    width: 120px;
-    margin-left: 8%;
   }
   #title {
     font-size: 2.2em;

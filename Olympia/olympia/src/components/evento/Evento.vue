@@ -103,6 +103,7 @@
                   tabindex="0"
                 ></iframe>
               </div>
+              <p id="y-r-here">Você está aqui!</p>
               <img src="/src/assets/images/location.png" class="location-icon" />
               <div class="address-cont">
                 <p class="popout black-to-white">

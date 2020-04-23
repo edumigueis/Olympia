@@ -645,7 +645,7 @@ list-type-ulli,
   width: 50%;
   height: 350px;
   position: absolute;
-  z-index: 9;
+  z-index: 12;
   left: 25%;
   top: 20%;
   background-color: #fff;
@@ -679,7 +679,7 @@ list-type-ulli,
   width: 100%;
   position: absolute;
   top: 0;
-  z-index: 7;
+  z-index: 11;
   transition: 1s all;
 }
 /* Esconde o input */
@@ -908,7 +908,7 @@ body {
 .signup {
   margin-bottom: 2%;
   margin-top: 3%;
-  z-index: 999;
+  z-index: 10;
   position: sticky;
 }
 .signup-content {
