@@ -2250,7 +2250,7 @@ svg {
 .cat-on-feed {
   box-sizing: border-box;
   padding: 5px 7px;
-  max-width: 110px;
+  max-width: 170px;
   margin: 3px;
   border-radius: 15px;
   width: fit-content;
@@ -2338,6 +2338,9 @@ svg {
   .desc-of-post {
     margin-left: 21px;
     margin-right: 21px;
+  }
+  .cat-on-feed{
+    max-width: 130px;
   }
 }
 @media (min-width: 751px) and (max-width: 1000px) {
