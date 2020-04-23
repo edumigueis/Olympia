@@ -81,6 +81,90 @@
             </tr>
           </table>
         </div>
+    
+      <div class="container-left">
+          <table> <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
+            <tr>
+              <td class="texto-linha">
+                <h1 class="text-title">E o vento levou</h1>
+                A complicada vida de Scarlett O’Hara, seus amores e desilusões em um período que tem a Guerra Civil Americana como pano de fundo. Rhett Butler é um vivido aventureiro que passa pela vida dela, em uma relação de amor e ódio marcada por conflitos já clássicos e cenas inesquecíveis de amor. Praticamente o inventor das telenovelas, devido aos conflitos constantes de emoções manifestadas e o romance como tema – não necessariamente por uma outra pessoa, e sim por uma causa, lugar ou qualquer outra coisa que se refira sentimentalmente ao personagem.
+              </td>
+              <td class="td-imagem">
+                <img
+                  class="imagem"
+                  margin-right:100px
+                  src="https://cinemalivre.net/imagens/capas/e_o_vento_levou_1939_o.jpg"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+          <div class="container-right">
+          <table>
+            <tr>
+              <td class="texto-linha">
+                <h1 class="text-title">Assim caminha a humanidade</h1>
+                Depois que um rancheiro texano aparece para comprar um cavalo premiado em uma fazenda distante, ele acaba se apaixonando pela filha do proprietário, com quem logo se casa. Uma vez de volta aos Texas, sua nova família enfrenta um cowboy rival a ele, em um confronto que se estende por duas gerações.
+              </td>
+              <td class="td-imagem">
+                <img
+                  class="imagem"
+                  margin-right:100px
+                  src="https://br.web.img2.acsta.net/pictures/14/02/06/13/55/182482.jpg"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>    
+      <div class="container-left">
+          <table> 
+            <tr>
+              <td class="texto-linha">
+                <h1 class="text-title">Magnólia</h1>
+                A história se desenvolve em Los Angeles, nos arredores da rua Magnólia, acompanhando um dia na vida de nove personagens, que moram na mesma área e cujas histórias se cruzam por coincidências do destino. O filme aborda diversos temas polêmicos como vício, suicídio, abuso infantil, e homossexualidade.
+              </td>
+              <td class="td-imagem">
+                <img
+                  class="imagem"
+                  margin-right:100px
+                  src="https://www.cafecomfilme.com.br/media/k2/items/cache/9a9975ed61463a6dc929492ab2b7763b_XL.jpg?t=20170320_031632"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="container-right">
+          <table>
+            <tr>
+              <td class="texto-linha">
+                <h1 class="text-title">O poderoso chefão</h1>
+                Amplamente considerado um dos melhores filmes de todos os tempos, esse drama da máfia, baseado no romance homônimo de Mario Puzo, concentra-se na poderosa família criminosa ítalo-americana de Don Vito Corleone (Marlon Brando). Quando o filho mais novo de Don, Michael (Al Pacino), se junta com relutância à Máfia, ele se envolve no inevitável ciclo de violência e traição. Embora Michael tente manter um relacionamento normal com sua esposa, Kay (Diane Keaton), ele está mais envolvido nos negócios da família.
+              </td>
+              <td class="td-imagem">
+                <img
+                  class="imagem"
+                  margin-right:100px
+                  src="https://br.web.img3.acsta.net/medias/nmedia/18/90/93/20/20120876.jpg"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="container-left">
+          <table> 
+            <tr>
+              <td class="texto-linha">
+                <h1 class="text-title">Contato</h1>
+                 DEP. CINEMA
+
+🖂 cinema@olympia.com
+☏ 0800 123 0004 
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+        
       </div>
       <!---->
 
