@@ -65,7 +65,7 @@ $(document).ready(function () {
             $('#palaces-container').fadeIn("slow");
             $('.intro').addClass('go');
             $("#bordao").text('FECHAR');
-            $("#bordao").css('transform','translateX(8px)');
+            $("#bordao").css('transform','translateX(1px)');
         }
         else{
             $('#palaces-container').fadeOut("slow");
