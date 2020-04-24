@@ -105,7 +105,7 @@ text {
   opacity: 0;
   transition: 1.2s all;
   position: absolute;
-  margin-top: -1.335em;
+  top: 40%;
   z-index: -10;
   margin-bottom: 0;
   margin-left: 6em;
@@ -186,26 +186,29 @@ a {
 }
 
 #more-arrows {
-  width: 5%;
-  height: 9%;
+  width: fit-content;
+  height: 0;
   transform: rotate(180deg);
-  position: fixed;
   top: 4%;
-  left: 47.5%;
+  margin: auto;
   opacity: 0;
-  transition: none;
+  transition: 0.4s all;
 }
 
-#more-arrows:hover polygon {
-  fill: #fff;
-  transition: all 0.2s ease-out;
+#more-arrows svg {
+  width: 80px;
+  height: 80px;
 }
 
-#more-arrows:hover polygon.arrow-bottom {
+#more-arrows svg:hover{
+  cursor: pointer;
+}
+
+#more-arrows-click:hover polygon.arrow-bottom {
   transform: translateY(-18px);
 }
 
-#more-arrows:hover polygon.arrow-top {
+#more-arrows-click:hover polygon.arrow-top {
   transform: translateY(18px);
 }
 
@@ -303,6 +306,29 @@ polygon.arrow-top {
     font-size: 20px;
     cursor: pointer;
   }
+
+  .media{
+    font-size: 2em;
+  }
+
+  .usuario {
+    transform: translateX(40px);
+    top: 39%;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1000px) {
+  .usuario {
+    transform: translateX(30px);
+    top: 40%;
+  }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1100px) {
+  .usuario {
+    transform: translateX(50px);
+    top: 40.5%;
+  }
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1150px) {
@@ -342,6 +368,10 @@ polygon.arrow-top {
   .sobre:hover {
     font-size: 20px;
     cursor: pointer;
+  }
+
+  .media{
+    font-size: 3.2em;
   }
 }
 

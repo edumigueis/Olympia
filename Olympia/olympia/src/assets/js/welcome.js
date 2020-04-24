@@ -27,6 +27,9 @@ setInterval(() => {
         $('#animation').css('animation', 'none');
         $('#animation').css('animation', 'swing 1s ease')
         $('.usuario').css('z-index', '999');
+        $('.artista').addClass('media');
+        $('.artista').css('margin-top','100px');
+        $('#more-arrows').css('height','fit-content');
       })
 
       setTimeout(function () {
@@ -38,21 +41,23 @@ setInterval(() => {
         }
       }, 100);
 
-      $('#more-arrows').click(function () {
+      $('#more-arrows-click').click(function () {
+        $('.artista').css('transform','none');
         $('.title').text('Bem vindo!');
         $('.sobre').css('opacity', .8);
         $('.login').css('opacity', .8);
         $('.artista').removeClass('artista').addClass('start');
-        $('.start').text('Começar');
+        $('.start').text('Começar!');
         $('.start').css('margin-left', '0');
         $('.artista').attr('href', '');
         $('.usuario').css('margin-left', '6em');
-        $('#more-arrows').css('transition', '1s all');
         $('#more-arrows').css('opacity', 0);
         $('.usuario').css('opacity', 0);
         $('.usuario').css('z-index', '-50');
         $('#animation').css('animation', 'none');
         $('#animation').css('animation', 'swing 1s ease');
+        $('.start').removeClass('media');
+        $('#more-arrows').css('height','0');
       })
 
       $('.sobre').click(function () {

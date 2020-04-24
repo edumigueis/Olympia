@@ -607,8 +607,8 @@ html {
   /* you can add color names and their values here
   and then simply add classes like .m--blend-$colorName to .fnc-slide 
   to apply specific color for mask blend mode */
-  position: sticky;
   z-index: 999;
+  width: 99vw;
 }
 .fnc-slider {
   overflow: hidden;
@@ -1546,12 +1546,12 @@ svg {
   position: absolute;
   overflow: hidden;
   height: 95%;
-  width: 99.35%;
+  width: 100%;
   right: 0;
   top: 5%;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: -2;
   -webkit-animation: BubblesBackground 15s ease infinite;
   -moz-animation: BubblesBackground 15s ease infinite;
   -o-animation: BubblesBackground 15s ease infinite;

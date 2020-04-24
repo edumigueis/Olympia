@@ -114,18 +114,20 @@
         <div class="info">
             <p class="title">Bem vindo!</p>
             <a class="link start">Começar!</a><br><br>
-            <a href='/#/cadastro/user' class="link usuario">Usuário</a>
+            <a href='/#/cadastro/user' class="link usuario media">Usuário</a>
             <div id="animation">
                 <a href='/#/login' class="link login">Login</a><br><br>
                 <a class="link sobre">Sobre</a>
             </div>
         </div>
-            
-        <svg id="more-arrows">
-            <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
-            <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
-            <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
-        </svg>
+
+        <div id="more-arrows">
+            <svg id="more-arrows-click">
+                <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
+                <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+                <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+            </svg>
+        </div>
 
         <svg id="bola-sobre" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <circle cx="50" cy="55" r="35" fill="lightgray"></circle>

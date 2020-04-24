@@ -66,12 +66,14 @@ $(document).ready(function () {
             $('.intro').addClass('go');
             $("#bordao").text('FECHAR');
             $("#bordao").css('transform','translateX(1px)');
+            $("svg.intro").css('transform','none');
         }
         else{
             $('#palaces-container').fadeOut("slow");
             $('.intro').removeClass('go');
             $("#bordao").text('CLICK!');
             $("#bordao").css('transform','none');
+            $(".intro").css('transform','translateY(-150px)');
         }
     })
 })
