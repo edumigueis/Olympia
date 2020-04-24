@@ -1303,7 +1303,7 @@
   padding-top: 0;
   width: 102%;
   background-color: white;
-  z-index: 9999;
+  z-index: 9999!important;
   margin-bottom: 0;
   border-top: 1px solid #bebebe8e;
   font-family: "Bruzh";
@@ -1359,57 +1359,26 @@
   letter-spacing: 0.1em;
   font-size: 1.9em;
   margin-top: 0.9%;
+  left: 0;
+  right: 0;
+  width: 100vw;
   text-align: center;
   transition: 1s all;
 }
 /* Responsividade do small-footer*/
 
-@media only screen and (max-width: 560px) {
+@media only screen and (min-width: 0) and (max-width: 900px) {
   #copyright-small-footer {
     letter-spacing: 0.1em;
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
   #dark-mode-link-smf {
-    letter-spacing: 0.1em;
     font-size: 1.2em;
-  }
-  #dark-mode-link-smf {
-    position: absolute;
-    bottom: 45%;
-    font-family: "Bebas";
-    font-size: 1.1em;
-    transition: 0.5s all;
+    margin-right: 25px;
   }
   #use-terms-smf {
-    bottom: 45%;
-    font-family: "Bebas";
-    font-size: 1.1em;
-    transition: 0.5s all;
-  }
-}
-@media only screen and (min-width: 300px) and (max-width: 461px) {
-  #small-footer {
-    padding-left: 0;
-  }
-}
-@media only screen and (min-width: 462px) and (max-width: 615px) {
-  #small-footer {
-    padding-left: 0;
-  }
-}
-@media only screen and (min-width: 561px) and (max-width: 700px) {
-  #dark-mode-link-smf {
-    position: absolute;
-    bottom: 35%;
-    font-family: "Bebas";
-    font-size: 1.4em;
-    transition: 0.5s all;
-  }
-  #use-terms-smf {
-    bottom: 35%;
-    font-family: "Bebas";
-    font-size: 1.4em;
-    transition: 0.5s all;
+    font-size: 1.2em;
+    margin-left: 8px;
   }
 }
 

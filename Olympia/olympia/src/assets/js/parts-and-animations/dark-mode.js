@@ -36,7 +36,7 @@ $(document).ready(function () {
             $(".white-6").removeClass("dark-mode");
             $(".border-black").removeClass("dark-mode");
             $(".background-white-to-darkgray").removeClass("dark-mode");
-            $('#dark-mode-link').text('MODO NOTURNO');
+            $('.dark-mode-activators').text('MODO NOTURNO');
         }
         else {
             $("#fullpage").fadeIn(1000)
@@ -64,8 +64,7 @@ $(document).ready(function () {
             $(".white-6").addClass("dark-mode");
             $(".border-black").addClass("dark-mode");
             $(".background-white-to-darkgray").addClass("dark-mode");
-            $('#dark-mode-link').text('MODO CLARO');
-            $('#dark-mode-link-smf').text('MODO CLARO');
+            $('.dark-mode-activators').text('MODO CLARO');
         }
     });
 })

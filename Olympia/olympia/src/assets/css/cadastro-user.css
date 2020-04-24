@@ -13,24 +13,11 @@
   margin: 0;
 }
 
-#dark-mode-link {
-  position: absolute;
-  right: 3%;
-  bottom: 3%;
-  font-family: "Bebas-Neue-Regular";
-  font-size: 22px;
-}
-
-#dark-mode-link:hover {
-  font-weight: bold;
-  cursor: pointer;
-}
-
 #container-cad-user {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   font: 100% Lato, Arial, Sans Serif;
-  height: 100vh;
+  min-height: 105%;
   z-index: 100;
 }
 
@@ -62,10 +49,10 @@ body {
 #background-wrap {
   bottom: 0;
   left: 0;
-  position: absolute;
-  overflow: hidden;
-  height: 105vh;
+  position: fixed;
+  height: 100vh;
   width: 100vw;
+  margin: 0;
   right: 0;
   top: 0;
   z-index: -1;
@@ -906,7 +893,7 @@ body {
   -ms-transform: translate(-50%, -50%);
 }
 .signup {
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   margin-top: 3%;
   z-index: 10;
   position: sticky;
@@ -1439,10 +1426,15 @@ img{
     width: 50% !important;
   }
 }
-@media screen and (min-width: 768px) {
-  /*body {
-    overflow-y: hidden;
-  }*/
+@media screen and (min-height: 0) and (max-height: 500px){
+  .signup {
+    margin-bottom: 10%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  .signup {
+    margin-bottom: 15%;
+  }
 }
 @media screen and (max-width: 768px) {
   .signup-content,
@@ -1457,6 +1449,9 @@ img{
     -webkit-justify-content: center;
     -o-justify-content: center;
     -ms-justify-content: center;
+  }
+  .signup {
+    margin-bottom: 15%;
   }
   .signup-form {
     margin-left: 0;
