@@ -317,10 +317,21 @@ polygon.arrow-top {
   }
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1000px) {
-  .usuario {
-    transform: translateX(30px);
-    top: 40%;
+@media only screen and (min-height: 0) and (max-height: 300px) {
+  #more-arrows-click{
+    transform: translateY(40px);
+  }
+}
+
+@media only screen and (min-height: 301px) and (max-height: 500px) {
+  #more-arrows-click{
+    transform: translateY(20px);
+  }
+}
+
+@media only screen and (min-height: 501px) and (max-height: 700px) {
+  #more-arrows-click{
+    transform: translateY(10px);
   }
 }
 
@@ -331,7 +342,7 @@ polygon.arrow-top {
   }
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1150px) {
+@media only screen and (min-width: 901px) and (max-width: 1250px) {
   .title {
     font-size: 35px;
   }
