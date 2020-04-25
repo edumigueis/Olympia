@@ -199,7 +199,7 @@ setInterval(() => {
 
       $("#name-art").focusin(function() {
         if (
-          $("#artist-prof-image").attr(src) == "/src/assets/images/user-ico.png"
+          $("#artist-prof-image").attr('src') == "/src/assets/images/user-ico.png"
         ) {
           alert('ain');
           $("#artist-let-img").empty();

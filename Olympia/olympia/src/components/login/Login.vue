@@ -72,22 +72,6 @@
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
 import SmallFooter from "../shared/small-footer/SmallFooter.vue";
 export default {
-  name: 'register-form',
-  methods: {
-      login: function () {
-        this.$http.post('http://localhost:8080/user/login', {
-          password: this.password,
-          user: this.user
-      }).then(function (response) {
-          this.$session.start()
-          this.$session.set('jwt', response.body.token)
-          Vue.http.headers.common['Authorization'] = 'Bearer ' + response.body.token
-          this.$router.push('/#/home')
-      }, function (err) {
-        console.log('err', err)
-      })
-    }    
-  },
   components: {
     "meu-dark-mode": DarkMode,
     "meu-small-footer": SmallFooter,

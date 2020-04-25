@@ -133,16 +133,16 @@ Line.prototype.step = function () {
 }
 
 //VARIÁVEIS AUXILIARES
-var jaFoi = false;
+var jaFoiLogin = false;
 var iniciouAnimacao = false;
 var vez = 1;
 var variavelAuxiliarDaAuxiliar = false;
 
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
-  if ($("#container-login").length && jaFoi == false) {
+  if ($("#container-login").length && jaFoiLogin == false) {
 
-    jaFoi = true;
+    jaFoiLogin = true;
     variavelAuxiliarDaAuxiliar = false;
 
     $(function () {
@@ -212,6 +212,7 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
         window.addEventListener('resize', function () {
 
+          var c = document.getElementById('c');
           w = c.width = window.innerWidth;
           h = c.height = window.innerHeight;
           starter.x = w / 2;
@@ -249,7 +250,7 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
     });
 
   } else if (!$("#container-login").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
-    jaFoi = false;
+    jaFoiLogin = false;
     iniciouAnimacao = false;
     if (variavelAuxiliarDaAuxiliar == false){
       vez++;

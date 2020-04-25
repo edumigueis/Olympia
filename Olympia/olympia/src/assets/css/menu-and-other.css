@@ -1299,10 +1299,8 @@
   transition: 0.3s all;
   position: absolute;
   bottom: 0;
-  padding: 15px;
-  height: 45px;
-  padding-top: 0;
-  width: 102%;
+  height: 58px;
+  width: 100%;
   background-color: white;
   z-index: 9999!important;
   margin-bottom: 0;
@@ -1319,7 +1317,7 @@
 
 #dark-mode-link-smf {
   position: absolute;
-  right: 5.5%;
+  right: 2.1%;
   bottom: 20%;
   font-family: "Bebas";
   font-size: 1.5em;
@@ -1375,7 +1373,6 @@
   }
   #dark-mode-link-smf {
     font-size: 1.2em;
-    margin-right: 25px;
   }
   #use-terms-smf {
     font-size: 1.2em;
