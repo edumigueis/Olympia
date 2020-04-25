@@ -33,7 +33,6 @@
         </div>                     
       </div>
       <div id="page-rol" class="white-6">
-       <div id="gradient-wrap"></div>
         <div class="grid-item gray" id="grid-item-1">
           <div id="event-info">
             <div class="event-info-p gray">

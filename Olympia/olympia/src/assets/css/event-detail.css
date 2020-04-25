@@ -212,6 +212,7 @@ body {
 #bottom-header{
   background-color: #fff;
   transition: 0.6s all;
+  box-shadow: 0 30px 30px white;
 }
 
 #gradient-wrap{
@@ -228,16 +229,16 @@ body {
 
 #event-name {
   font-family: "Calibre-Bold";
-  font-size: 4em;
+  font-size: 3.3em;
   transition: 0.6s all;
 }
 #title {
-  margin-right: 18%;
+  margin-right: 25%;
   float: right;
   transition: 0.6s all;
   
   position: relative;
-  margin-top: -150px;
+  margin-top: -120px;
 }
 .grid-item {
   min-width: 650px;
@@ -1544,7 +1545,20 @@ ul {
   background-color: #4CAF50;
 }
 /*MEDIA*/
-@media only screen and (min-width: 300px) and (max-width: 499px) {
+@media only screen and (min-width: 0) and (max-width: 800px) {
+  #event-name{
+    margin-left: 35%;
+  }
+  #title {
+    margin-top: -80px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 1000px) {
+  #event-name{
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 499px) {
   #calendar-red {
     width: 101px;
     height: 80px;
@@ -1575,7 +1589,7 @@ ul {
     font-size: 0.6em;
     width: 100%;
     float: right;
-    margin-right: -20px;
+    margin-right: -40px;
   }
   #title {
     font-size: 0.6em;
@@ -1615,10 +1629,6 @@ ul {
     margin-right: 20px;
     margin-top: 20px;
   }
-  #title {
-    font-size: 0.8em;
-    margin-left: 55%;
-  }
   #second-part-eve{
     margin: 0;
     width: 100%;
@@ -1630,12 +1640,6 @@ ul {
   }
   .about-event-loc-in{
     text-indent: 0.5em;
-  }
-  #title {
-    font-size: 2em;
-    width: 300px;
-    float: right;
-    margin: 0;
   }
   .map-container{
     min-width: 62%;
@@ -1697,7 +1701,7 @@ ul {
     text-indent: 0.5em;
   }
   #title {
-    font-size: 2.2em;
+    font-size: 1.8em;
     width: 400px;
     float: right;
     margin-left: 0;
@@ -1723,13 +1727,13 @@ ul {
     font-size: 1em;
   }
   #title {
-    font-size: 2.6em;
+    font-size: 2em;
     margin-left: 45%;
     width: 400px;
-    margin-top: -120px;
+    margin-top: -100px;
   }
 }
-@media only screen and (min-width: 1050px) and (max-width: 1185px) {
+@media only screen and (min-width: 1051px) and (max-width: 1185px) {
   #page-rol {
     margin-top: 90px;
   }
@@ -1737,12 +1741,10 @@ ul {
     font-size: 1em;
   }
   #title {
-    font-size: 3em;
-    margin-top: -140px;
-  }
-  #title {
+    font-size: 2.6em;
     margin-left: 45%;
     width: 450px;
+    margin-top: -100px;
   }
 }
 
