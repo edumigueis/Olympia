@@ -1,8 +1,9 @@
 var auxiliar = false;
 var $menu = document.getElementsByClassName('js-menu');
-var $menuToggle = document.getElementsByClassName('js-menu-toggle');
+var $menuToggle = document.getElementsByClassName('menu-item-art-hover');
 var $menuMask = document.getElementsByClassName('js-menu-mask');
 var $menuContainer = document.getElementsByClassName('js-menu-container-circle');
+var $menuClose = document.getElementsByClassName('close-img');
 
 
 setInterval(() => {
@@ -32,6 +33,15 @@ function init() {
         $('.menu-link-art').css('font-size', '1.2em');
         $('.js-menu-container-circle').css('display', 'none');
       }
+
+      $menuClose[0].addEventListener('mouseenter', function (e) {
+        if (!$(".c-circle-menu__items").is(':hover')){
+          closeMenu();
+          $('.blur').css('filter', 'none');
+          $('.menu-link-art').css('font-size', '1.2em');
+          $('.js-menu-container-circle').css('display', 'none');
+        }
+      })
     });
 
   });

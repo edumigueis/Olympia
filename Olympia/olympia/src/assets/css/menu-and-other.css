@@ -27,6 +27,7 @@
 ::-webkit-scrollbar {
   width: 10px;
   transition: 0.4s all;
+  background-color: #f0f0f0;
 }
 
 ::-webkit-scrollbar-track {

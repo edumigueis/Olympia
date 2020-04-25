@@ -769,7 +769,7 @@ html {
   position: absolute;
   left: 40%;
   top: 9%;
-  transition: 0.3s all;
+  transition: 0.4s all;
 }
 
 #margin {
@@ -790,7 +790,7 @@ html {
   font-family: "Gooseberry Juice";
   color: #fff;
   word-spacing: 10px;
-  transition: 0.3s all;
+  transition: 0.4s all;
 }
 .fnc-slide__heading-line:nth-child(2) {
   padding-left: 30px;
@@ -834,6 +834,7 @@ html {
   text-align: center;
   outline: none;
   font-weight: 300;
+  transition: 0.4s all;
 }
 .fnc-slide__action-btn span {
   position: absolute;
@@ -1345,14 +1346,25 @@ body {
   transition-timing-function: ease;
   transform: rotate(-45deg) scaleX(0) translateZ(0);
 }
-
-@media only screen and (min-width: 400px) and (max-width: 700px) {
+@media only screen and (min-width: 0) and (max-width: 599px) {
   .fnc-slide__heading-line {
-    font-size: 50px;
+    font-size: 40px;
+  }
+  .fnc-slide__action-btn {
+    margin-left: 140px;
   }
 }
 
-@media only screen and (min-width: 701px) and (max-width: 1000px) {
+@media only screen and (min-width: 600px) and (max-width: 850px) {
+  .fnc-slide__heading-line {
+    font-size: 50px;
+  }
+  .fnc-slide__action-btn {
+    margin-left: 160px;
+  }
+}
+
+@media only screen and (min-width: 851px) and (max-width: 1250px) {
   .fnc-slide__heading-line {
     font-size: 60px;
   }

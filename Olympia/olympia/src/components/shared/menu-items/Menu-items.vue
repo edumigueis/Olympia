@@ -36,13 +36,10 @@
                     </div>
                     <div id="col-menu-2">
                         <div class="menu-item-1 row1">
-                            <a href="/#/artes" id="menu-item-art"><img class="ico blur" src="/src/assets/images/art.png"></a>
+                            <a id="menu-item-art"><img class="ico blur menu-item-art-hover" src="/src/assets/images/art.png"></a>
                             <a class="menu-link menu-link-art" href="/#/artes">A R T E S</a>
                             <div class='js-menu-container-circle'></div>
                             <nav class="c-circle-menu js-menu">
-                            <button class="c-circle-menu__toggle js-menu-toggle">
-                                <span>Toggle</span>
-                            </button>
                             <ul class="c-circle-menu__items">
                                 <li class="c-circle-menu__item">
                                 <a href="#" class="c-circle-menu__link">

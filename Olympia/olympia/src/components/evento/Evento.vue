@@ -9,17 +9,16 @@
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
-      <meu-mouse></meu-mouse>
       <div id="event-header" class="dark-6">
         <div class="img-header">
-          <div class="img-wrap">
+          <div class="img-wrap dark-img-wrap">
             <img
               src="https://www.moma.org/d/assets/W1siZiIsIjIwMTkvMTAvMTAvaGxleXY0b2E4X2luMjQyN18wNzc5LmpwZyJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/in2427_0779.jpg?sha=2b029d673aa33a2e"
               class="img-header-proper"
             />
           </div>
         </div>
-        <div id="bottom-header" class="white-6">
+        <div id="bottom-header" class="white-6-special">
 
           <div id="calendar-red">
             <p class="month">SET</p>
@@ -32,7 +31,7 @@
           </div>
         </div>                     
       </div>
-      <div id="page-rol" class="white-6">
+      <div id="page-rol">
         <div class="grid-item gray" id="grid-item-1">
           <div id="event-info">
             <div class="event-info-p gray">
@@ -139,13 +138,6 @@
         <div class="bubble x19"></div>
         <div class="bubble x20"></div>
       </div>
-      <div class="icon-bar">
-  <a id="to-top-tb" href="#event-header"><i class="fa fa-home"></i></a> 
-  <a id="to-info-tb" href="#event-info"><i class="fa fa-info"></i></a> 
-  <a id="to-gal-tb" href="#gallery-cont"><i class="fa fa-camera"></i></a> 
-  <a id="to-ab-tb" href="#text-about-event"><i class="fa fa-indent"></i></a>
-  <a id="to-loc-tb" href="#location-of-event"><i class="fa fa-globe"></i></a> 
-</div>
       <meu-footer></meu-footer>
     </div>
   </main>
