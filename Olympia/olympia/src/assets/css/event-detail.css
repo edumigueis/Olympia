@@ -865,17 +865,16 @@ ul {
 #y-r-here{
   float: left;
   width: 58%;
-  margin-top: 6%;
-  margin-left: 16px;
-  font-family: 'Montserrat', sans-serif;
+  margin-top: 8%;
+  margin-left: 30px;
+  font-family: 'bebas', sans-serif;
   text-align: left;
   padding: 2px;
   font-size: 1.6em;
   transition: 0.6s all;
-  text-indent: 1em;
   line-height: 1.6em;
-  letter-spacing: 0.1em;
-  font-weight: bold;
+  letter-spacing: 0.08em;
+  font-weight: 100;
 }
 .location-icon{
   width: 50%;

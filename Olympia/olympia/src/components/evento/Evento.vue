@@ -52,7 +52,7 @@
         <div id="second-part-eve">
           <div id="gallery-cont" class="gray">
             <div class="view-gallery">
-              <button>Ver Galeria</button>
+              <button>Ver fotos do evento</button>
             </div>
             <ul>
               <li class="box box-1"></li>
