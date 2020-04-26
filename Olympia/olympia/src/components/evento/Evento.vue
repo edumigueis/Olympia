@@ -101,8 +101,12 @@
                   tabindex="0"
                 ></iframe>
               </div>
-              <p id="y-r-here">Você está aqui!</p>
-              <img src="/src/assets/images/location.png" class="location-icon" />
+              <div class="right-part-cont">
+              <div class="upper-loc-cont">
+                <p id="y-r-here">Use o mapa para ver a localização.</p>
+                <img src="/src/assets/images/location.png" class="location-icon" />
+              </div>
+              
               <div class="address-cont">
                 <p class="popout black-to-white">
                   <span>11 W 53rd St,</span>
@@ -111,6 +115,7 @@
                   <br />
                   <span>10019, Estados Unidos</span>
                 </p>
+              </div>
               </div>
             </div>
           </div>
