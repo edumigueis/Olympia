@@ -92,11 +92,13 @@ html {
 #tap-target {
   opacity: 0;
 }
+
 .st0 {
-  fill: #ffffff;
+  fill: rgba(0, 0, 0, 0);
   stroke: rgb(97, 97, 97);
   stroke-width: 35px;
 }
+
 .st1 {
   fill: #525252;
 }
@@ -608,7 +610,6 @@ html {
   and then simply add classes like .m--blend-$colorName to .fnc-slide 
   to apply specific color for mask blend mode */
   z-index: 999;
-  width: 99vw;
 }
 .fnc-slider {
   overflow: hidden;
@@ -688,6 +689,7 @@ html {
   background-position: center top;
   transform: translate3d(0, 0, 0);
   z-index: 999;
+  box-shadow: 0 30px 30px white;
 }
 .m--global-blending-active .fnc-slide__inner,
 .m--blend-bg-active .fnc-slide__inner {
@@ -980,6 +982,7 @@ body {
   perspective: 1500px;
   background: #000;
   z-index: 999;
+  box-shadow: 0 30px 30px rgb(209, 209, 209);
 }
 .demo-cont__credits {
   box-sizing: border-box;

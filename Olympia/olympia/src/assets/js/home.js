@@ -21,8 +21,8 @@ function fingerTap() {
     tap_target_timing = 0.325;
 
   tl.set(tap_target, {
-    transformOrigin: '50% 50%',
-    scale: 0
+    transformOrigin: '50% 180%',
+    scale: 0.5,
   });          // .to(element, timing, options, timeline position)
   tl.to(finger_untapped, finger_timing, { morphSVG: finger_tapped_path, ease: Ease.easeIn })
     .add('fingerdown')
@@ -301,10 +301,7 @@ setInterval(() => {
           $(document).on("mousemove touchmove", function (e) {
             var x = e.pageX || e.originalEvent.touches[0].pageX;
             diff = ((startX - x) / winW) * 70;
-            if (
-              (!curSlide && diff < 0) ||
-              (curSlide === numOfSlides && diff > 0)
-            )
+
               diff /= 2;
             $sliderFeed.css(
               "transform",
