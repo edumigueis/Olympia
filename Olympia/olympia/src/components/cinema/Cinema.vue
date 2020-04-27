@@ -22,6 +22,8 @@
             class="image"
           />
         </div>
+        <h1 class="art-title">Cinema</h1>
+        <h2 class="art-subtitle">A sétima arte, um mar de sensações</h2>
       </div>
 
       <div id="corpo">
