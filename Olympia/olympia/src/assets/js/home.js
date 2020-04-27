@@ -411,6 +411,27 @@ setInterval(() => {
           $('#to-slide-0').removeClass('active-tab-p');
           $('#page-name-on-tab').text('Contate-nos');
         });
+        $(document).on("click", "#list-tab-ut", function () {
+          if($('#app-cover').css('display') == 'block'){
+          $('#app-cover').css('display','none')
+
+          if($(window).width() > 1000)
+          $('.right-tab-control').css({ 'width': '60%' })
+
+          if($(window).width() < 1000 && $(window).width() > 764)
+          $('.right-tab-control').css({ 'width': '60%' })
+          }
+          else{
+            $('#app-cover').css('display','block')
+
+            if($(window).width() > 1000)
+            $('.right-tab-control').css({ 'width': 'calc(62% - ' + 330+ 'px)' })
+
+            if($(window).width() < 1000 && $(window).width() > 764)
+            $('.right-tab-control').css({ 'width': 'calc(60% - ' + 300+ 'px)' })
+          }
+
+        });
       })
 
     })

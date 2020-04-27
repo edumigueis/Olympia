@@ -3,7 +3,10 @@
     <div id="container-home">
       <link rel="stylesheet" href="/src/assets/css/home.css" />
       <link rel="stylesheet" href="/src/assets/css/palaces.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
       <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
@@ -332,10 +335,18 @@
           </div>
         </form>
         <div class="right-tab-control">
-          <img class="tab-page-ut" src="/src/assets/images/plus-sign.png" /><img
+          <img 
+          id="post-tab-ut"
+          class="tab-page-ut" src="/src/assets/images/plus-sign.png" 
+          />
+          <img
+          id="search-tab-ut"
             class="tab-page-ut"
             src="/src/assets/images/search-small.png"
-          /><img class="tab-page-ut" src="/src/assets/images/list-ico.png" />
+          /><img 
+          id="list-tab-ut"
+          class="tab-page-ut" src="/src/assets/images/list-ico.png" 
+          />
         </div>
       </section>
       <!-- feed -->

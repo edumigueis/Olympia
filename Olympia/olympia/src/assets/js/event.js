@@ -45,12 +45,12 @@
 });*/
 //VARIÁVEIS AUXILIARES
 var vzs = 0;
-var jaFoi = false;
+var jaFoiEvento = false;
 setInterval(() => {
   //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
-  if ($("#container-evento").length && jaFoi == false) {
-    jaFoi = true;
+  if ($("#container-evento").length && jaFoiEvento == false) {
+    jaFoiEvento = true;
 
     $(function() {
       $(".dark-mode-activators").on("click", function() {
@@ -101,6 +101,6 @@ $('#to-ab-tb').click(function(ev){
     });
   } else if (!$("#container-evento").length) {
     //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
-    jaFoi = false;
+    jaFoiEvento = false;
   }
 }, 100);
