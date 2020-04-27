@@ -336,14 +336,80 @@ setInterval(() => {
         $(document).on("click", ".slider-control", function () {
           if ($(this).hasClass("left")) {
             navigateLeft();
+            $('#to-slide-'+curSlide).addClass('active-tab-p');
+          $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
+          if(curSlide == 0){
+            $('#page-name-on-tab').text('Obras');
+          }
+          if(curSlide == 1){
+            $('#page-name-on-tab').text('Serviços');
+          }
+          if(curSlide == 2){
+            $('#page-name-on-tab').text('Contate-nos');
+          }
           } else {
             navigateRight();
+            $('#to-slide-'+curSlide).addClass('active-tab-p');
+          $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
+          if(curSlide == 0){
+            $('#page-name-on-tab').text('Obras');
+          }
+          if(curSlide == 1){
+            $('#page-name-on-tab').text('Serviços');
+          }
+          if(curSlide == 2){
+            $('#page-name-on-tab').text('Contate-nos');
+          }
           }
         });
 
         $(document).on("click", ".slider-pagi__elem", function () {
           curSlide = $(this).data("page");
           changeSlides();
+          $('#to-slide-'+curSlide).addClass('active-tab-p');
+          $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
+          if(curSlide == 0){
+            $('#page-name-on-tab').text('Obras');
+          }
+          if(curSlide == 1){
+            $('#page-name-on-tab').text('Serviços');
+          }
+          if(curSlide == 2){
+            $('#page-name-on-tab').text('Contate-nos');
+          }
+        });
+        $(document).on("click", "#to-slide-0", function () {
+          curSlide = 0;
+          changeSlides();
+          $('#to-slide-0').addClass('active-tab-p');
+          $('#to-slide-1').removeClass('active-tab-p');
+          $('#to-slide-2').removeClass('active-tab-p');
+          $('#page-name-on-tab').text('Obras');
+        });
+        $(document).on("click", "#to-slide-1", function () {
+          curSlide = 1;
+          changeSlides();
+          $('#to-slide-1').addClass('active-tab-p');
+          $('#to-slide-0').removeClass('active-tab-p');
+          $('#to-slide-2').removeClass('active-tab-p');
+          $('#page-name-on-tab').text('Serviços');
+        });
+        $(document).on("click", "#to-slide-2", function () {
+          curSlide = 2;
+          changeSlides();
+          $('#to-slide-2').addClass('active-tab-p');
+          $('#to-slide-1').removeClass('active-tab-p');
+          $('#to-slide-0').removeClass('active-tab-p');
+          $('#page-name-on-tab').text('Contate-nos');
         });
       })
 
