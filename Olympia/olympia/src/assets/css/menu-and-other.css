@@ -125,6 +125,7 @@
   box-shadow: 0px 4px 15px 0px rgba(50, 50, 50, 0.35);
   background-color: rgb(255, 255, 255);
   transition: 0.3s background, color;
+  transition: all 0.1s;
 }
 
 #logo {
@@ -506,6 +507,77 @@
   -webkit-box-shadow: 0px 4px 15px 0px rgba(50, 50, 50, 0.35);
   -moz-box-shadow: 0px 4px 15px 0px rgba(50, 50, 50, 0.35);
   box-shadow: 0px 4px 15px 0px rgba(50, 50, 50, 0.35);
+}
+
+.config-img{
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+}
+
+.footer-config{
+  width: 30px;
+  margin-left: -100px;
+  height: fit-content;
+  float: right;
+  margin-right:5%;
+  opacity: .7;
+  transition: transform 0.2s;
+  transform: translateY(-5px);
+}
+
+.footer-config:hover{
+  cursor: pointer;
+  opacity: 1!important;
+}
+
+.config{
+  transition: all 0.4s;
+  display: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.548);
+  background-color: white;
+  width: 180px;
+  list-style: none;
+  padding: 10px;
+  z-index: 9999;
+  right: 1%;
+  position: absolute;
+  margin-bottom: 0;
+  transform: translateY(-45px);
+}
+
+.line-config{
+  border: none;
+  height: 1px;
+  background-color:  rgb(95, 95, 95);
+}
+
+.config-link{
+  font-family: 'bebas';
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  font-size: 0.86em;
+  transition: font-size 100ms;
+}
+
+.config-link:hover{
+  cursor: pointer;
+}
+
+.config-link-clicked:hover{
+  opacity: .7;
+}
+
+.config-link-clicked{
+  font-size: 0.9em;
+}
+.config-link-hover:hover{
+  font-weight: bold!important;
+}
+
+#config-container{
+position: relative;
 }
 
 #copyright {
@@ -1283,6 +1355,20 @@
 }
 
 /*Responsividade do Footer*/
+@media only screen and (min-width: 0) and (max-width: 650px){
+  .footer-config{
+    transform: translateY(-60px);
+  }
+  .config{
+    transform: translateY(-105px);
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 900px){
+  .footer-config{
+    margin-right:6%;
+    margin-bottom: 0;
+  }
+}
 @media only screen and (min-width: 300px) and (max-width: 461px) {
   #footer {
     padding-left: 0;

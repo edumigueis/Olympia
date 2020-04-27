@@ -1,7 +1,8 @@
-var jaFoi = false;
+var jaFoiMenu = false;
+
 setInterval(() => {
-    if ($('.menu-container').length && jaFoi == false) {
-        jaFoi = true;
+    if ($('.menu-container').length && jaFoiMenu == false) {
+        jaFoimenu = true;
 
         var coordenadas = document.getElementById('menu-item-art').getBoundingClientRect();
         var tamanho = document.getElementsByClassName('ico')[0].getBoundingClientRect();
@@ -17,12 +18,49 @@ setInterval(() => {
 
     }
     else if (!$('.menu-container').length) {
-        jaFoi = false;
+        jaFoiMenu = false;
     }
 
 }, 1);
 
 $(document).ready(function () {
+
+
+    var body = document.getElementsByTagName("body")[0];
+
+    if (body.addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        body.addEventListener("mousewheel", detectarDirecaoRolagem, false);
+        // Firefox
+        body.addEventListener("DOMMouseScroll", detectarDirecaoRolagem, false);
+    }
+    
+    function detectarDirecaoRolagem( e )
+    {
+        var delta = null,
+            direction = false
+        ;
+        if ( !e ) {
+            e = window.event;
+        }
+        if ( e.wheelDelta ) { // funciona na maioria dos casos
+            delta = e.wheelDelta / 60;
+        } else if ( e.detail ) { // funciona no Firefox
+            delta = -e.detail / 2;
+        }
+        if ( delta !== null ) {
+            direction = delta > 0 ? 'cima' : 'baixo';
+        }
+    
+        if(direction == 'baixo'){
+            $('#menu-bar').css('transform','translateY(-70px)');
+        }
+        else{
+            $('#menu-bar').css('transform','none');
+        }
+    
+        return direction;
+    }
 
     setInterval(updateGradient, 10);
 
@@ -58,6 +96,33 @@ $(document).ready(function () {
             "-o-filter": "blur(" + 10 + "px)",
             "-ms-filter": "blur(" + 10 + "px)",
         });
+    })
+
+    
+    $(document.body).on('click', '.footer-config', function () {
+
+        if ($('.config').css("display") == 'none'){
+            $('.config').css("display","block");
+            $('.config-img').css("transform","rotate(70deg)");
+        }
+        else{
+            $('.config').css("display","none");
+            $('.config-img').css("transform","none");
+        }
+    })
+
+    $(document.body).on('click', '.config-link', function () {
+
+        if ($(this).hasClass('config-link-hover')){
+            $(this).removeClass("config-link-hover");
+            $(this).css('font-weight','bold');
+            $(this).addClass("config-link-clicked");
+        }
+        else{
+            $(this).addClass("config-link-hover");
+            $(this).css('font-weight','normal');
+            $(this).removeClass("config-link-clicked");
+        }
     })
 
     $(document.body).on('click', '#bordao', function () {
