@@ -335,17 +335,19 @@
           </div>
         </form>
         <div class="right-tab-control">
-          <img 
-          id="post-tab-ut"
-          class="tab-page-ut" src="/src/assets/images/plus-sign.png" 
+          <img
+            id="post-tab-ut"
+            class="tab-page-ut"
+            src="/src/assets/images/plus-sign.png"
           />
           <img
-          id="search-tab-ut"
+            id="search-tab-ut"
             class="tab-page-ut"
             src="/src/assets/images/search-small.png"
-          /><img 
-          id="list-tab-ut"
-          class="tab-page-ut" src="/src/assets/images/list-ico.png" 
+          /><img
+            id="list-tab-ut"
+            class="tab-page-ut"
+            src="/src/assets/images/list-ico.png"
           />
         </div>
       </section>
@@ -383,10 +385,21 @@
               <div class="slide__content">
                 <div class="feed-item">
                   <div class="post-img-cont">
-                    <img
-                      class="post-main-img"
-                      src="https://i.pinimg.com/originals/55/6a/47/556a47568fdcb3eb1199eb9d388ed311.jpg"
-                    />
+                    <a href="/#/obra">
+                    <figure class="snip1321">
+                      
+                      <img
+                        src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
+                        alt="sq-sample26"
+                      />
+                      <figcaption>
+                        <i class="ion-upload"></i>
+                        <h4>Inverness</h4>
+                        <h2>McKenzie</h2>
+                      </figcaption>
+                      
+                    </figure>
+                    </a>
                   </div>
                   <div class="post-det-cont">
                     <div class="name-of-post">Outter Seas</div>

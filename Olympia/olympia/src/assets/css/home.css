@@ -2189,6 +2189,103 @@ svg {
   -o-animation: BubblesBackground 15s ease infinite;
   animation: BubblesBackground 15s ease infinite;
 }
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+figure.snip1321 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  min-width: 230px;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+figure.snip1321 * {
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+
+}
+figure.snip1321 img {
+  width: 100%;
+  min-height: 100%;
+  max-height: 490px;
+  vertical-align: top;
+  border-radius: 16px;
+}
+figure.snip1321 figcaption {
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+figure.snip1321 h2,
+figure.snip1321 h4 {
+  margin: 0;
+}
+figure.snip1321 h2 {
+  font-weight: 600;
+}
+figure.snip1321 h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+figure.snip1321 i {
+  font-size: 32px;
+}
+figure.snip1321:after {
+  background-color: #ffffff;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50px;
+  left: 20px;
+  right: 25px;
+  bottom: 50px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  opacity: 0;
+}
+figure.snip1321 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+figure.snip1321:hover figcaption,
+figure.snip1321.hover figcaption {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.snip1321:hover:after,
+figure.snip1321.hover:after {
+  -webkit-transform: rotateX(0);
+  transform: rotateX(0);
+  opacity: 0.9;
+}
 
 /* ANIMATIONS */
 
@@ -2821,7 +2918,7 @@ svg {
   background-color: #fff;
   position: relative;
   margin-top: 5vh;
-  border-radius: 16px;
+  border-radius: 21px;
   padding: 16px;
   box-shadow: 3px 3px 9px 3px #444;
   display: flex;
@@ -2974,6 +3071,18 @@ svg {
   .cat-on-feed{
     max-width: 130px;
   }
+  figure.snip1321 {
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  figure.snip1321 img{
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 @media (min-width: 751px) and (max-width: 1000px) {
   .feed-item {
@@ -2990,10 +3099,6 @@ svg {
     flex: 50%;
     float: right;
   }
-  .post-main-img {
-    height: 100%;
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
-  }
+  
 }
 
