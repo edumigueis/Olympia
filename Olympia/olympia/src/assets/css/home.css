@@ -11,6 +11,7 @@ html {
   position: absolute;
   z-index: 9998;
   width: 4.5%;
+  min-width: 30px;
   top: 10%;
   left: 2%;
   object-fit: cover;
@@ -865,6 +866,10 @@ html {
   }
   .fnc-slide__heading {
     margin-left: -80px;
+    transform: translateY(20px);
+  }
+  .fnc-slide__action-btn {
+    transform: translateY(20px);
   }
 }
 
@@ -1115,7 +1120,6 @@ body {
 .example-slider .fnc-slide-1 .fnc-slide__inner,
 .example-slider .fnc-slide-1 .fnc-slide__mask-inner {
   background-image: url("../images/slide-1.jpg");
-  background-position: center;
   box-shadow: 0px 0px 20px rgb(0, 0, 0) inset;
 }
 .example-slider .fnc-slide-2 .fnc-slide__inner,
