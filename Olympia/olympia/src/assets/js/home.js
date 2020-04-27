@@ -3,37 +3,6 @@ var y = 10;
 var x = 0;
 var passou = false;
 
-function fingerTap() {
-
-  var tl_options = {
-    delay: 0.5,
-    repeat: -1,
-    repeatDelay: 1
-  }
-
-  var tl = new TimelineMax(tl_options),
-    finger_tapped = document.getElementById('hand-tapped'),
-    finger_tapped_path = finger_tapped.getAttribute('d'),
-    finger_untapped = document.getElementById('hand-untapped'),
-    finger_untapped_path = finger_untapped.getAttribute('d'),
-    tap_target = document.getElementById('tap-target'),
-    finger_timing = 0.15,
-    tap_target_timing = 0.325;
-
-  tl.set(tap_target, {
-    transformOrigin: '50% 180%',
-    scale: 0.5,
-  });          // .to(element, timing, options, timeline position)
-  tl.to(finger_untapped, finger_timing, { morphSVG: finger_tapped_path, ease: Ease.easeIn })
-    .add('fingerdown')
-    .to(finger_untapped, finger_timing, { morphSVG: finger_untapped_path, ease: Ease.easeOut })
-    .add('fingerup')
-    .to(tap_target, tap_target_timing, { opacity: 1, scale: 1.2, ease: Cubic.easeInOut }, 'fingerup-=0.25')
-    .to(tap_target, tap_target_timing, { opacity: 0 });
-
-  return tl;
-}
-
 var jaFoiHome = false;
 
 setInterval(() => {
@@ -42,8 +11,6 @@ setInterval(() => {
     $(function () {
 
       $(function () {
-
-        fingerTap();
 
         var $$ = function (selector, context) {
           var context = context || document;
