@@ -1293,6 +1293,31 @@ position: relative;
   }
 }
 
+@media only screen and (min-width: 2101px) and (max-width: 2200px){
+  #titulo {
+    margin-left: -10%;
+  }
+
+  .div-text {
+    transform: translateY(2em);
+    font-family: "Calibre-Regular";
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 2201px){
+  #titulo {
+    margin-left: -10%;
+    margin-top: -10%;
+  }
+
+  .div-text {
+    transform: translateY(3.5em);
+    font-family: "Calibre-Regular";
+    font-size: 25px;
+  }
+}
+
 /* Responsividade do footer*/
 
 @media only screen and (max-width: 560px) {
