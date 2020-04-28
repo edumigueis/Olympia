@@ -34,6 +34,12 @@ $(document).ready(function () {
             $(".img-wrap").removeClass("dark-mode");
             $(".white-4").removeClass("dark-mode");
             $(".white-6").removeClass("dark-mode");
+            $(".white-3").removeClass("dark-mode");
+            $(".white-2").removeClass("dark-mode");
+            $(".white-7").removeClass("dark-mode");
+            $(".text-gray").removeClass("dark-mode");
+            $(".feed-item").removeClass("dark-mode");
+            $(".white-icon").removeClass("dark-mode");
             $(".white-6-special").removeClass("dark-mode");
             $(".dark-img-wrap").removeClass("dark-mode");
             $(".border-black").removeClass("dark-mode");
@@ -58,9 +64,15 @@ $(document).ready(function () {
             $(".linha-sobre").addClass("dark-mode");
             $(".gray").addClass("dark-mode");
             $(".gray-n-imp").addClass("dark-mode");
+            $(".white-3").addClass("dark-mode");
+            $(".white-2").addClass("dark-mode");
+            $(".white-7").addClass("dark-mode");
+            $(".text-gray").addClass("dark-mode");
             $(".white").addClass("dark-mode");
             $(".transparent").addClass("dark-mode");
             $(".bg-det-gray").addClass("dark-mode");
+            $(".feed-item").addClass("dark-mode");
+            $(".white-icon").addClass("dark-mode");
             $(".img-wrap").addClass("dark-mode");
             $(".white-4").addClass("dark-mode");
             $(".white-6").addClass("dark-mode");
