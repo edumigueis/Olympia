@@ -1,27 +1,3 @@
-var jaFoiMenu = false;
-
-setInterval(() => {
-    if ($('.menu-container').length && jaFoiMenu == false) {
-        jaFoimenu = true;
-
-        var coordenadas = document.getElementById('menu-item-art').getBoundingClientRect();
-        var tamanho = document.getElementsByClassName('ico')[0].getBoundingClientRect();
-
-        $('.c-circle-menu__toggle').css('top', coordenadas.bottom + 50);
-        $('.c-circle-menu__toggle').css('left', coordenadas.left);
-        $('.c-circle-menu__item').css('top', coordenadas.top + 400);
-        $('.c-circle-menu__item').css('right', coordenadas.right);
-        $('.js-menu-container-circle').css('top', coordenadas.top - 30);
-        $('.js-menu-container-circle').css('right', coordenadas.right - 155);
-        $('.js-menu-container-circle').css('width', tamanho.width + 490);
-        $('.js-menu-container-circle').css('height', tamanho.height + 290);
-
-    }
-    else if (!$('.menu-container').length) {
-        jaFoiMenu = false;
-    }
-
-}, 1);
 
 $(document).ready(function () {
 
@@ -69,7 +45,7 @@ $(document).ready(function () {
         $('#footer').fadeOut();
     })
 
-    $(document.body).on('click', '.close', function () {
+    $(document.body).on('click', '.close-image', function () {
         if ($('.table-contato').css('display') == 'none') {
             $("#menu-items").fadeOut("slow");
             $('#footer').fadeIn();
@@ -139,6 +115,24 @@ $(document).ready(function () {
             $("#bordao").text('CLICK!');
             $("#bordao").css('transform','none');
             $(".intro").css('transform','translateY(-150px)');
+        }
+    })
+
+    $(document.body).on('click','.artes-link',function(){
+        if($('#container-artes').length){
+            $('#menu-items').fadeOut('slow');
+        }
+    })
+
+    $(document.body).on('click','.home-link',function(){
+        if($('#container-home').length){
+            $('#menu-items').fadeOut('slow');
+        }
+    })
+
+    $(document.body).on('click','.eventos-link',function(){
+        if($('#container-eventos').length){
+            $('#menu-items').fadeOut('slow');
         }
     })
 })

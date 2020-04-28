@@ -1,131 +1,133 @@
 @font-face {
-	font-family: 'Open Sans';
-	src: url('../fonts/OpenSans.ttf');
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans.ttf");
 }
 
 @font-face {
-	font-family: 'Bruzh';
-	src: url('../fonts/Bruzh.ttf');
+  font-family: "Bruzh";
+  src: url("../fonts/Bruzh.ttf");
 }
 @font-face {
-	font-family: 'Bebas';
-	src: url('../fonts/BebasNeue.ttf');
+  font-family: "Bebas";
+  src: url("../fonts/BebasNeue.ttf");
 }
 @font-face {
-	font-family: 'Calibre-Bold';
-	src: url('../fonts/calibri-bold-2.ttf');
-	src: url('../fonts/CalibreWeb-Bold.eot?#iefix') format('embedded-opentype'), 
-	url('../fonts/CalibreWeb-Bold.woff') format('woff'); 
-	font-weight: bold;
+  font-family: "Calibre-Bold";
+  src: url("../fonts/calibri-bold-2.ttf");
+  src: url("../fonts/CalibreWeb-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/CalibreWeb-Bold.woff") format("woff");
+  font-weight: bold;
 }
 
 @font-face {
-	font-family: 'Calibre-Regular';
-    src: url('../fonts/calibri-7.ttf');
+  font-family: "Calibre-Regular";
+  src: url("../fonts/calibri-7.ttf");
 }
 @font-face {
-	font-family: 'Bebas-Neue-Bold';
-	src: url('../fonts/BebasNeue-Bold.ttf');
-    font-weight: bold;
+  font-family: "Bebas-Neue-Bold";
+  src: url("../fonts/BebasNeue-Bold.ttf");
+  font-weight: bold;
 }
 @font-face {
-	font-family: 'Bebas-Neue-Regular';
-	src: url('../fonts/BebasNeue-Regular.ttf');
+  font-family: "Bebas-Neue-Regular";
+  src: url("../fonts/BebasNeue-Regular.ttf");
 }
 @font-face {
-	font-family: 'Bebas-Neue-Light';
-	src: url('../fonts/BebasNeue-Light.ttf');
+  font-family: "Bebas-Neue-Light";
+  src: url("../fonts/BebasNeue-Light.ttf");
 }
 @font-face {
-	font-family: 'Bebas-Neue-Book';
-	src: url('../fonts/BebasNeue-Book.ttf');
+  font-family: "Bebas-Neue-Book";
+  src: url("../fonts/BebasNeue-Book.ttf");
 }
 @font-face {
-	font-family: 'Bebas-Neue-Thin';
-	src: url('../fonts/BebasNeue-Thin.ttf');
+  font-family: "Bebas-Neue-Thin";
+  src: url("../fonts/BebasNeue-Thin.ttf");
 }
-#events-container{
-    height: auto;
-    width: 100%;
-    background-color: #f7f7f7;
-}
-#container-eventos{
+#events-container {
+  height: auto;
+  width: 100%;
   background-color: #f7f7f7;
 }
-body{
+#container-eventos {
+  background-color: #f7f7f7;
+}
+body {
   overflow-x: hidden;
 }
 button:active {
   outline: none;
   border: none;
 }
-  
-button:focus {outline:0;}
+
+button:focus {
+  outline: 0;
+}
 /*#events-container :hover{
     background-color: darkgray;
 }*/
-.event-card-container{
-    border-bottom: 1px solid lightgray;
-    border-top: 1px solid lightgray;;
-    margin-top: 20px;
-    border-radius: 16px;
+.event-card-container {
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  margin-top: 20px;
+  border-radius: 16px;
 }
-.card-table{
-    list-style: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 265px;
-    background-color: #fff !important;
-    border-radius: 16px;
+.card-table {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 265px;
+  background-color: #fff !important;
+  border-radius: 16px;
 }
-ul li{
-    display: inline-flex;
+ul li {
+  display: inline-flex;
 }
-.card-item{
-    width: 33%;
-    height: 100%;
+.card-item {
+  width: 33%;
+  height: 100%;
 }
-.event-image .image-mask-event{
-    position: absolute;
+.event-image .image-mask-event {
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
-.event-image{
-    max-width: 400px;
-    opacity: 0.8;
+.event-image {
+  max-width: 400px;
+  opacity: 0.8;
 }
-.image-mask-event{
-    background-color: #aaa;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    bottom: 0;
+.image-mask-event {
+  background-color: #aaa;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
 }
-.event-image-container{
-    height: 100%;
-    float: left;
+.event-image-container {
+  height: 100%;
+  float: left;
 }
-.card-item{
-    float: left;
+.card-item {
+  float: left;
 }
-.text-in-itself{
-  font-family: 'Montserrat', sans-serif;
+.text-in-itself {
+  font-family: "Montserrat", sans-serif;
 }
-.btn-wrap{
-    position: relative;
-    left: -18.5%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 800;
-    width: 200px;
-    float: left;
+.btn-wrap {
+  position: relative;
+  left: -18.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 800;
+  width: 200px;
+  float: left;
 }
-.know-more-btn-inner{
-    background-color: transparent;
+.know-more-btn-inner {
+  background-color: transparent;
 }
-.know-more-btn{
+.know-more-btn {
   display: block;
   width: 200px;
   height: 40px;
@@ -138,18 +140,18 @@ ul li{
   letter-spacing: 2px;
   text-align: center;
   position: relative;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
-.know-more-btn .know-more-btn-inner{
+.know-more-btn .know-more-btn-inner {
   position: relative;
   z-index: 2000;
 }
-.know-more-btn-inner{
-    background-color: transparent;
+.know-more-btn-inner {
+  background-color: transparent;
 }
 
-.know-more-btn:after{
+.know-more-btn:after {
   position: absolute;
   color: #373737;
   content: "";
@@ -158,375 +160,376 @@ ul li{
   width: 0;
   height: 100%;
   background: white;
-  transition: all .35s;
+  transition: all 0.35s;
 }
-.know-more-btn:hover{
-    color: #373737;
-    font-weight: bold;
-  }
-  
-.know-more-btn:hover:after{
-    width: 100%;
+.know-more-btn:hover {
+  color: #373737;
+  font-weight: bold;
 }
 
-.event-date-container{
-    height: 100%;
-    bottom: 0;
-    width: 320px;
+.know-more-btn:hover:after {
+  width: 100%;
 }
-.date{
-    font-size: 1.5em;
-    text-align: center;
-    font: 300 50px/1.2 'Oswald', sans-serif;
-    margin: 0 auto;
-    max-width: 1000px;
-    font-size: 1.3em;
-    line-height: 1.4;
+
+.event-date-container {
+  height: 100%;
+  bottom: 0;
+  width: 320px;
 }
-.expo-name{
-    margin-top: 25%;
-    text-align: center;
-    max-width: 1000px;
-    font: 300 50px/1.2 'Oswald', sans-serif;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-  }
+.date {
+  font-size: 1.5em;
+  text-align: center;
+  font: 300 50px/1.2 "Oswald", sans-serif;
+  margin: 0 auto;
+  max-width: 1000px;
+  font-size: 1.3em;
+  line-height: 1.4;
+}
 .expo-name {
-    max-width: 1000px;
-    font-size: 1.7em;
-    line-height: 1.4;
-  }
-.card-item-last{
-    float: right;
+  margin-top: 25%;
+  text-align: center;
+  max-width: 1000px;
+  font: 300 50px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
 }
-.card-item-2{
-    margin-left: -9%;
-    position: relative;
-    height: 100%;
+.expo-name {
+  max-width: 1000px;
+  font-size: 1.7em;
+  line-height: 1.4;
 }
-#footer{
-    margin-top:30px !important;
+.card-item-last {
+  float: right;
 }
-html, body {
-    height: 100%;
-  }
-  
-  .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    padding-top: 6.5%;
-    cursor: pointer;
-    font-size: 1.4em;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  #filter-container{
-    height: fit-content;
-    width: 100%;
-    background-color: #fbfbfb;
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-  /* Hide the browser's default radio button */
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  /* Create a custom radio button */
-  .checkmark {
-    position: absolute;
-    top: 5px;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .container input:checked ~ .checkmark {
-    background-color: rgb(24, 32, 39);
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
-  .container .checkmark:after {
-       top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-  }
-  .radio-item{
-      margin-right: 30px;
-      font-family: "Bebas";
-  }
-  #radio-tab{
-      height: 50px;
-      background-color: #fbfbfb;
-  }
-  #mouse {
-    display: block;
-    width: 22px;
-    height: 40px;
-    border-radius: 20px;
-    border: 4px solid rgb(255, 255, 255);
-    text-align: center;
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    bottom: 20px;
-      margin: 0 auto;
-    z-index: 1000;
-  }
-  
-  #mouse::before {
-    content: '';
-    display: inline-block;
-    width: 4px;
-    height: 8px;
-    position: relative;
-    border-radius: 4px;
-    background: rgb(255, 255, 255);
-    animation-name: mouse;
-    animation-duration: .7s;
-      animation-iteration-count: infinite;
-  }
-  .map {
-    -webkit-filter: grayscale(100%);
-       -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-         -o-filter: grayscale(100%);
-            filter: grayscale(100%);
+.card-item-2 {
+  margin-left: -9%;
+  position: relative;
+  height: 100%;
 }
-  @keyframes mouse {
-    from {
-      top: 0px;
-    }
-    to {
-      top: 6px;
-    }
+#footer {
+  margin-top: 30px !important;
+}
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  padding-top: 6.5%;
+  cursor: pointer;
+  font-size: 1.4em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#filter-container {
+  height: fit-content;
+  width: 100%;
+  background-color: #fbfbfb;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: rgb(24, 32, 39);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+.radio-item {
+  margin-right: 30px;
+  font-family: "Bebas";
+}
+#radio-tab {
+  height: 50px;
+  background-color: #fbfbfb;
+}
+#mouse {
+  display: block;
+  width: 22px;
+  height: 40px;
+  border-radius: 20px;
+  border: 4px solid rgb(255, 255, 255);
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 20px;
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+#mouse::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  position: relative;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  animation-name: mouse;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+}
+.map {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+@keyframes mouse {
+  from {
+    top: 0px;
   }
-  #radio-tab{
-    width: 80%;
-    margin: 0 !important;
-    padding-top: 10px;
+  to {
+    top: 6px;
   }
-  #footer{
-    width: 90%;
+}
+#radio-tab {
+  width: 80%;
+  margin: 0 !important;
+  padding-top: 10px;
+}
+#footer {
+  width: 90%;
+}
+#first-card-container {
+  margin-top: 0 !important;
+}
+@media only screen and (min-width: 1590px) and (max-width: 1620px) {
+  main {
+    width: 1600px;
   }
-  #first-card-container{
-    margin-top: 0 !important;
+  body {
+    overflow-x: hidden;
   }
-  @media only screen and (min-width: 1590px) and (max-width: 1620px) {
-    main{
-        width: 1600px;
-    }
-    body{
-      overflow-x: hidden;
-    }
-    #menu-bar{
-      width: 1600px;
-    }
+  #menu-bar {
+    width: 1600px;
+  }
 }
 @media only screen and (min-width: 300px) and (max-width: 461px) {
-  #radio-tab{
+  #radio-tab {
     width: 100%;
     font-size: 0.96em;
     padding-right: 5px;
   }
-  .btn-wrap{
+  .btn-wrap {
     left: 50%;
     top: -50%;
   }
-  .card-item{
+  .card-item {
     width: 100%;
   }
-  .event-image-container{
+  .event-image-container {
     width: 100%;
   }
-  iframe{
+  iframe {
     width: 100%;
   }
-  .event-card-container{
+  .event-card-container {
     display: inline-block;
   }
-  .card-item-last{
+  .card-item-last {
     width: 100%;
   }
-  .event-location-container{
+  .event-location-container {
     width: 100%;
   }
-  .card-item-2{
+  .card-item-2 {
     width: 100%;
     margin: 0;
     height: 100px;
   }
-  .event-date-container{
+  .event-date-container {
     width: 100%;
     height: 100px;
     margin: 0;
   }
-  .expo-name{
+  .expo-name {
     margin: 0;
     padding-bottom: 30px;
   }
-  .date{
+  .date {
     margin-top: -20px;
   }
-  #footer{
+  #footer {
     margin-top: 5% !important;
   }
-  #radio-tab{
+  #radio-tab {
     height: 90px !important;
   }
 }
 @media only screen and (min-width: 462px) and (max-width: 669px) {
-  #radio-tab{
+  #radio-tab {
     width: 100%;
     font-size: 0.96em;
     padding-right: 5px;
   }
-  .btn-wrap{
+  .btn-wrap {
     left: 50%;
     top: -50%;
   }
-  .card-item{
+  .card-item {
     width: 100%;
   }
-  .event-image-container{
+  .event-image-container {
     width: 100%;
   }
-  .event-image{
+  .event-image {
     width: 100%;
     max-width: 100%;
   }
-  iframe{
+  iframe {
     width: 100%;
   }
-  .event-card-container{
+  .event-card-container {
     display: inline-block;
   }
-  .card-item-last{
+  .card-item-last {
     width: 100%;
   }
-  .event-location-container{
+  .event-location-container {
     width: 100%;
   }
-  .card-item-2{
+  .card-item-2 {
     width: 100%;
     margin: 0;
     height: 100px;
   }
-  .event-date-container{
+  .event-date-container {
     width: 100%;
     height: 100px;
     margin: 0;
   }
-  .expo-name{
+  .expo-name {
     margin: 0;
     padding-bottom: 30px;
   }
-  .date{
+  .date {
     margin-top: -20px;
   }
-  #footer{
+  #footer {
     margin-top: 4% !important;
   }
-  #radio-tab{
+  #radio-tab {
     height: 80px !important;
   }
 }
 @media only screen and (min-width: 670px) and (max-width: 950px) {
-  #radio-tab{
+  #radio-tab {
     width: 100%;
     font-size: 0.96em;
     padding-right: 5px;
   }
-  .btn-wrap{
+  .btn-wrap {
     left: -13.5%;
   }
-  .card-item-2{
+  .card-item-2 {
     left: -13.5%;
     width: 33%;
   }
-  .card-item-last{
+  .card-item-last {
     float: right;
     width: 13%;
   }
-  .card-item{
+  .card-item {
     width: 33%;
   }
-  iframe{
+  iframe {
     width: 100%;
   }
-  .event-image-container{
+  .event-image-container {
     width: 280px;
   }
-  .event-location-container{
+  .event-location-container {
     width: 100%;
   }
 }
 @media only screen and (min-width: 951px) and (max-width: 1100px) {
-  #radio-tab{
+  #radio-tab {
     width: 100%;
     font-size: 0.96em;
     padding-right: 5px;
     padding: 0;
   }
-  .btn-wrap{
+  .btn-wrap {
     left: -12.5%;
   }
-  .card-item-2{
+  .card-item-2 {
     left: -1%;
   }
-  iframe{
+  iframe {
     width: 240px;
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1210px) {
-  #radio-tab{
+  #radio-tab {
     width: 100%;
     font-size: 0.96em;
     padding-right: 5px;
   }
-  .btn-wrap{
+  .btn-wrap {
     left: -12.5%;
   }
-  .card-item-2{
+  .card-item-2 {
     left: -1%;
   }
-  iframe{
+  iframe {
     width: 240px;
   }
 }
 /*CARD SELECTORS*/
-:root{
+:root {
   --background-dark: #2d3548;
-  --text-light: rgba(255,255,255,0.6);
-  --text-lighter: rgba(255,255,255,0.9);
+  --text-light: rgba(255, 255, 255, 0.6);
+  --text-lighter: rgba(255, 255, 255, 0.9);
   --spacing-s: 8px;
   --spacing-m: 16px;
   --spacing-l: 32px;
@@ -535,16 +538,16 @@ html, body {
   --width-container: 1200px;
 }
 
-.hero-section{
+.hero-section {
   align-items: flex-start;
   background-color: linear-gradient(15deg, #fff 0%, #eeeeee 150%);
   display: flex;
   min-height: 100%;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.card-grid{
+.card-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-column-gap: var(--spacing-l);
@@ -553,57 +556,57 @@ html, body {
   width: 100%;
 }
 
-@media(max-width: 540px){
-  .card-grid{
-    grid-template-columns: repeat(3, 1fr); 
+@media (max-width: 540px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media(min-width: 541px) and (max-width: 680px){
-  .card-grid{
-    grid-template-columns: repeat(4, 1fr); 
+@media (min-width: 541px) and (max-width: 680px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media(min-width: 681px) and (max-width: 959px){
-  .card-grid{
-    grid-template-columns: repeat(5, 1fr); 
+@media (min-width: 681px) and (max-width: 959px) {
+  .card-grid {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
-@media(min-width: 960px) and (max-width: 1100px){
-  .card-grid{
-    grid-template-columns: repeat(6, 1fr); 
+@media (min-width: 960px) and (max-width: 1100px) {
+  .card-grid {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
-@media(min-width: 1101px) and (max-width: 1200px){
-  .card-grid{
-    grid-template-columns: repeat(8, 1fr); 
+@media (min-width: 1101px) and (max-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(8, 1fr);
   }
 }
-@media(min-width: 1201px){
-  .card-grid{
-    grid-template-columns: repeat(9, 1fr); 
+@media (min-width: 1201px) {
+  .card-grid {
+    grid-template-columns: repeat(9, 1fr);
   }
 }
 
-.card{
+.card {
   list-style: none;
   position: relative;
   transition: 0.1s all;
 }
 
-.card:before{
-  content: '';
+.card:before {
+  content: "";
   display: block;
   padding-bottom: 150%;
   width: 100%;
 }
-.card:active{
+.card:active {
   opacity: 0.7;
 }
-.card:focus{
+.card:focus {
   opacity: 0.7;
 }
-.card__background{
+.card__background {
   background-size: cover;
   background-position: center;
   border-radius: 15px;
@@ -615,20 +618,18 @@ html, body {
   top: 0;
   transform-origin: center;
   transform: scale(1) translateZ(0);
-  transition: 
-    filter 200ms linear,
-    transform 200ms linear;
+  transition: filter 200ms linear, transform 200ms linear;
 }
 
-.card:hover .card__background{
+.card:hover .card__background {
   transform: scale(1.05) translateZ(0);
 }
 
-.card-grid:hover > .card:not(:hover) .card__background{
+.card-grid:hover > .card:not(:hover) .card__background {
   filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
-.card__content{
+.card__content {
   left: 0;
   padding-left: 12px;
   padding-top: 6px;
@@ -636,28 +637,55 @@ html, body {
   top: 0;
 }
 
-.card__category{
+.card__category {
   color: var(--text-light);
   font-size: 0.7rem;
   margin-bottom: var(--spacing-s);
   text-transform: uppercase;
 }
 
-.card__heading{
+.card__heading {
   color: var(--text-lighter);
   font-size: 1.35rem;
-  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
   line-height: 1.4;
   word-spacing: 100vw;
 }
-button{
+button {
   border-radius: var(--spacing-l);
   background: none;
-color: inherit;
-border: none;
-padding: 0;
-font: inherit;
-cursor: pointer;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
   outline: inherit;
   text-align: start;
+}
+
+
+#mouse {
+  display: block;
+  width: 22px;
+  height: 40px;
+  border-radius: 20px;
+  border: 4px solid rgb(255, 255, 255);
+  position: fixed;
+  bottom: 20px;
+  margin-left: 18px;
+  z-index: 999;
+}
+
+#mouse::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  position: relative;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  animation-name: mouse;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  z-index: 999;
 }
