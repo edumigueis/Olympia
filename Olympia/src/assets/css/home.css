@@ -2272,6 +2272,7 @@ figure.snip1321:after {
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   opacity: 0;
+  pointer-events: none;
 }
 
 figure.snip1321:hover figcaption,
