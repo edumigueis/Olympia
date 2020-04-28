@@ -212,7 +212,7 @@
         <div id="tab-pages-cont">
           <div class="paginate-tab active-tab-p" id="to-slide-0">Obras</div>
           <div class="paginate-tab" id="to-slide-1">Serviços</div>
-          <div class="paginate-tab" id="to-slide-2">Contate-nos</div>
+          <div class="paginate-tab" id="to-slide-2">Inspire-se</div>
         </div>
 
         <form id="app-cover">
@@ -393,7 +393,7 @@
                         alt="sq-sample26"
                       />
                       <figcaption>
-                        <i class="ion-upload"></i>
+                        <i class="fas fa-arrow-right"></i>
                         <h4>Inverness</h4>
                         <h2>McKenzie</h2>
                       </figcaption>
@@ -442,10 +442,21 @@
                 </div>
                 <div class="feed-item">
                   <div class="post-img-cont">
-                    <img
-                      class="post-main-img"
-                      src="https://www.tickpick.com/blog/wp-content/uploads/2019/02/audience-1835431_1280.jpg"
-                    />
+                    <a href="/#/obra">
+                    <figure class="snip1321">
+                      
+                      <img
+                        src="https://www.tickpick.com/blog/wp-content/uploads/2019/02/audience-1835431_1280.jpg"
+                        alt="sq-sample26"
+                      />
+                      <figcaption>
+                        <i class="fas fa-arrow-right"></i>
+                        <h4>Inverness</h4>
+                        <h2>McKenzie</h2>
+                      </figcaption>
+                      
+                    </figure>
+                    </a>
                   </div>
                   <div class="post-det-cont">
                     <div class="name-of-post">The Dawn Project</div>
@@ -486,7 +497,63 @@
                     </div>
                   </div>
                 </div>
-                <div class="feed-item"></div>
+                <div class="feed-item">
+                  <div class="post-img-cont">
+                    <a href="/#/obra">
+                    <figure class="snip1321">
+                      
+                      <img
+                        src="https://i.pinimg.com/originals/7d/80/9c/7d809cc3528614e7a0fbdbe8f960d235.jpg"
+                        alt="sq-sample26"
+                      />
+                      <figcaption>
+                        <i class="fas fa-arrow-right"></i>
+                        <h4>Inverness</h4>
+                        <h2>McKenzie</h2>
+                      </figcaption>
+                      
+                    </figure>
+                    </a>
+                  </div>
+                  <div class="post-det-cont">
+                    <div class="name-of-post">The Dawn Project</div>
+                    <div class="name-of-prof">
+                      <a class="name-of-prof-link">Justin Alberman</a>
+                    </div>
+                    <div class="desc-of-post">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Etiam ut facilisis justo. In hac habitasse platea
+                      dictumst. Fusce vestibulum imperdiet felis sed ultrices.
+                      Curabitur ullamcorper molestie nunc in pharetra. Curabitur
+                      at cursus nunc. Curabitur porta, orci sed eleifend mollis,
+                      justo elit ullamcorper erat, sed vehicula nisl turpis a
+                      nibh. Pellentesque id odio a purus bibendum congue. Nunc
+                      ut viverra tellus. Donec volutpat posuere nisi, sed
+                      efficitur augue pretium sit amet. Curabitur congue, erat a
+                      mattis imperdiet, lectus ligula lacinia dolor, in
+                      tincidunt augue sem nec est.
+                    </div>
+                    <div class="prof-cont-feed">
+                      <div class="prof-img-cont">
+                        <img
+                          class="prof-img-prop"
+                          src="https://66.media.tumblr.com/8ca7ae9aef947480f0530429044bee3d/tumblr_phqvwbIT9p1xhllc7o5_250.png"
+                        />
+                      </div>
+                      <div class="prof-name-det">Justin Alberman</div>
+                      <div class="prof-bio-det">
+                        Music inspires us to be who we are xd
+                      </div>
+                    </div>
+                    <div class="categories-cont-on-feed">
+                      <div class="cat-on-feed music">Music</div>
+                      <div class="cat-on-feed pers">Young Artist</div>
+                      <div class="cat-on-feed music">Show</div>
+                      <div class="cat-on-feed music">Comtemporary</div>
+                      <div class="cat-on-feed pers">Indie</div>
+                    </div>
+                  </div>
+                </div>
                 <div class="feed-item"></div>
                 <div class="feed-item"></div>
                 <div class="feed-item"></div>
