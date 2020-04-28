@@ -1,5 +1,6 @@
 var jaFoiCin = false;
-
+var slideIndex = 1;
+showSlides(slideIndex);
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -30,8 +31,7 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
     jaFoiCin = true;
 
     $(function () {
-        var slideIndex = 1;
-        showSlides(slideIndex);
+
     })
   }
   else if (!$("#container-cinema").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
