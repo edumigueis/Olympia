@@ -143,6 +143,11 @@ body {
 .slideshow-container {
   position: relative;
   background: #efefef;
+  width: 80%;
+  margin-left: 10%;
+  z-index: 20;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 /* Slides */
@@ -152,6 +157,8 @@ body {
   text-align: center;
   transition: 0.5s all;
   background: #efefef !important;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 /* Next & previous buttons */
@@ -187,6 +194,11 @@ body {
     text-align: center;
     padding: 20px;
     background: #ccc;
+    width: calc(80% - 40px);
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 /* The dots/bullets/indicators */
