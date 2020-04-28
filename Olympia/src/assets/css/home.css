@@ -3096,9 +3096,6 @@ figure.snip1321.hover:after {
   justify-content: flex-start;
   z-index: 2500;
 }
-.prof-cont-feed :hover{
-  opacity: 1;
-}
 .prof-name-det {
   font-size: 1.6em;
   padding-top: 10px;
