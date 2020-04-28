@@ -2217,6 +2217,7 @@ figure.snip1321 {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2000;
 }
 figure.snip1321 * {
   -webkit-box-sizing: padding-box;
@@ -2229,7 +2230,6 @@ figure.snip1321 img {
   width: 100%;
   height: auto;
   vertical-align: top;
-
 }
 figure.snip1321 figcaption {
   top: 50%;
@@ -3094,7 +3094,7 @@ figure.snip1321.hover:after {
   display: inline-flex;
   align-items: flex-start;
   justify-content: flex-start;
-  /*border-top: 1px solid #999;*/
+  z-index: 2500;
 }
 .prof-name-det {
   font-size: 1.6em;

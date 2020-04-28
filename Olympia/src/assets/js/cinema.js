@@ -1,6 +1,4 @@
 var jaFoiCin = false;
-var slideIndex = 1;
-showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -27,16 +25,16 @@ function showSlides(n) {
 }
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
-  if ($("#container-categorias").length && jaFoiCin == false) {
+  if ($("#container-cinema").length && jaFoiCin == false) {
 
     jaFoiCin = true;
 
     $(function () {
-        
-      
+        var slideIndex = 1;
+        showSlides(slideIndex);
     })
   }
-  else if (!$("#container-categorias").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
+  else if (!$("#container-cinema").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
     jaFoiCin = false;
   }
 }, 100);
