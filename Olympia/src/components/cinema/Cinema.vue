@@ -28,25 +28,25 @@
       <div id="corpo">
         <div class="slideshow-container">
 
-<div class="mySlides">
-  <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
-  <p class="author">- John Keats</p>
-</div>
+      <div class="mySlides">
+        <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+        <p class="author">- John Keats</p>
+      </div>
 
-<div class="mySlides">
-  <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
-  <p class="author">- Ernest Hemingway</p>
-</div>
+      <div class="mySlides">
+        <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+        <p class="author">- Ernest Hemingway</p>
+      </div>
 
-<div class="mySlides">
-  <q>I have not failed. I've just found 10,000 ways that won't work.</q>
-  <p class="author">- Thomas A. Edison</p>
-</div>
+      <div class="mySlides">
+        <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+        <p class="author">- Thomas A. Edison</p>
+      </div>
 
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
 
-</div>
+      </div>
 
 <div class="dot-container">
   <span class="dot" onclick="currentSlide(1)"></span> 
@@ -178,15 +178,13 @@
             </tr>
           </table>
         </div>
-        <div class="container-left">
+        <div class="container-left" id="contato-div" style="width:20%;">
           <table> 
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">Contato</h1>
-                 DEP. CINEMA
-
-🖂 cinema@olympia.com
-☏ 0800 123 0004 
+                🖂 cinema@olympia.com<br>
+                ☏ 0800 123 0004 
               </td>
               
             </tr>
