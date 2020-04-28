@@ -346,7 +346,7 @@
                           src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
                         />
                       </div>
-                      <div class="prof-name-det">Luna Dias</div>
+                      <a href="/#/perfil" class="prof-name-det">Luna Dias</a>
                       <div class="prof-bio-det">
                         What would our lives be without art?
                       </div>
@@ -387,7 +387,7 @@
                           src="https://66.media.tumblr.com/8ca7ae9aef947480f0530429044bee3d/tumblr_phqvwbIT9p1xhllc7o5_250.png"
                         />
                       </div>
-                      <div class="prof-name-det">Justin Alberman</div>
+                      <a href="/#/profile" class="prof-name-det">Justin Alberman</a>
                       <div class="prof-bio-det">
                         Music inspires us to be who we are xd
                       </div>
@@ -447,7 +447,7 @@
                           src="https://66.media.tumblr.com/fa3132fa612a71b96c8e56f072a93f0e/tumblr_p7lsesJBkX1x6djmko5_250.jpg"
                         />
                       </div>
-                      <div class="prof-name-det">Lisa Kosh</div>
+                      <a href="/#/profile" class="prof-name-det">Lisa Kosh</a>
                       <div class="prof-bio-det">
                         Inspied to make the world a better place...
                       </div>
@@ -487,7 +487,7 @@
                           src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
                         />
                       </div>
-                      <div class="prof-name-det">Luna Dias</div>
+                      <a href="/#/profile" class="prof-name-det">Luna Dias</a>
                       <div class="prof-bio-det">
                         What would our lives be without art?
                       </div>
@@ -528,7 +528,7 @@
                           src="https://66.media.tumblr.com/be7afcb38d3b2e94a3fc4c644c9a83fa/tumblr_nvo1c55Jci1uwfie2o1_400.jpg"
                         />
                       </div>
-                      <div class="prof-name-det">John Birman</div>
+                      <a href="/#/profile" class="prof-name-det">John Birman</a>
                       <div class="prof-bio-det">
                         We 've come far.
                       </div>
@@ -569,7 +569,7 @@
                           src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/08/fotos-tumblr.png"
                         />
                       </div>
-                      <div class="prof-name-det">Maria Herman</div>
+                      <a href="/#/profile" class="prof-name-det">Maria Herman</a>
                       <div class="prof-bio-det">
                         We all adore something.
                       </div>
@@ -610,7 +610,7 @@
                           src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
                         />
                       </div>
-                      <div class="prof-name-det">Luna Dias</div>
+                      <a href="/#/profile" class="prof-name-det">Luna Dias</a>
                       <div class="prof-bio-det">
                         What would our lives be without art?
                       </div>

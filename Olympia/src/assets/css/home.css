@@ -3105,6 +3105,14 @@ figure.snip1321.hover:after {
   font-weight: 500;
   color: #111;
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.prof-name-det:hover {
+  font-size: 1.65em;
+  opacity: 0.82;
+  color: #000;
 }
 .prof-bio-det {
   font-size: 1em;
