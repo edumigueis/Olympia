@@ -106,9 +106,9 @@ setInterval(() => {
             "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".bin").fadeIn();
-          $(".ui-widget-overlay").fadeOut(350);
-          $("#pick-image-modal").fadeOut(500);
-          $(".error-modal").fadeOut(500);
+          $(".ui-widget-overlay").css('display','none');
+          $("#pick-image-modal").css('display','none');
+          $(".error-modal").css('display','none');
           $(".error-modal").css('opacity', '0');
         }
         else
@@ -116,9 +116,9 @@ setInterval(() => {
             $(".hexcolor").css("display", "block");
             $(".color-holder").css("display", "block");
             $('.is-same-cont').css("background-color", "transparent");
-            $(".ui-widget-overlay").fadeOut(350);
-            $("#pick-image-modal").fadeOut(500);
-            $(".error-modal").fadeOut(500);
+            $(".ui-widget-overlay").css('display','none');
+            $("#pick-image-modal").css('display','none');
+            $(".error-modal").css('display','none');
             $(".error-modal").css('opacity', '0');
           }
           else {
@@ -129,9 +129,9 @@ setInterval(() => {
             $(".signup-image").html(
               "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
             );
-            $(".ui-widget-overlay").fadeOut(350);
-            $("#pick-image-modal").fadeOut(500);
-            $(".error-modal").fadeOut(500);
+            $(".ui-widget-overlay").css('display','none');
+            $("#pick-image-modal").css('display','none');
+            $(".error-modal").css('display','none');
             $(".error-modal").css('opacity', '0');
           }
       });
@@ -259,10 +259,10 @@ setInterval(() => {
           return;
         }
         if (!user.match(/^[A-Za-z0-9 ]+$/)) {
-          $(".error-modal").fadeIn(500);
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity', '1');
-          $(".ui-widget-overlay").fadeIn(500);
-          $(".warn").html("O username não deve ter @ no ínicio e não deve ter acentuação.");
+          $(".ui-widget-overlay").css('display','block');
+          $(".warn").html("O username não deve conter acentuação e caracteres especiais.");
           $('#user').val("");
         }
       })
@@ -273,9 +273,9 @@ setInterval(() => {
           return;
         }
         if (!regName.test(name)) {
-          $(".error-modal").fadeIn(500);
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity', '1');
-          $(".ui-widget-overlay").fadeIn(500);
+          $(".ui-widget-overlay").css('display','block');
           $(".warn").html("Deve ser fornecido o nome completo.");
           $('#name').val("");
         }
@@ -287,9 +287,9 @@ setInterval(() => {
           return;
         }
         if (!regName.test(tele)) {
-          $(".error-modal").fadeIn(500);
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity', '1');
-          $(".ui-widget-overlay").fadeIn(500);
+          $(".ui-widget-overlay").css('display','block');
           $(".warn").html("Deve ser fornecido telefone nos padrões: +55 00 000000000 (BR), +591 00000000, +1 000 000 0000, +(591) 0000000, +(591) (0) 0000000, 0000 00000000, 0001 0000000000 ou (0001) 0000000.");
           $('#tel').val("");
         }
@@ -300,9 +300,9 @@ setInterval(() => {
           return;
         }
         if (!validar(email)) {
-          $(".error-modal").fadeIn(500);
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity', '1');
-          $(".ui-widget-overlay").fadeIn(500);
+          $(".ui-widget-overlay").css('display','block');
           $(".warn").html("O email deve ter um @ seguido pelo domínio.");
           $('#email').val("");
         }
@@ -389,16 +389,16 @@ setInterval(() => {
           color = "rgb(255, 255, 255)";
         }
         if (color == "rgb(237, 41, 57)") {
-          $(".ui-widget-overlay").fadeIn(450);
-          $(".error-modal").fadeIn(500);
+          $(".ui-widget-overlay").css('display','block');
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity', '0');
           $('#pass').val("");
           $('.is-same-cont').css("background-color", "transparent");
           $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições!");
         }
         if (color == "rgb(255, 165, 0)") {
-          $(".ui-widget-overlay").fadeIn(450);
-          $(".error-modal").fadeIn(500);
+          $(".ui-widget-overlay").css('display','block');
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity', '1');
           $('#pass').val("");
           $('.is-same-cont').css("background-color", "transparent");
@@ -421,8 +421,8 @@ setInterval(() => {
         }
       });
       $(".signup-image-link").on("click", function () {
-        $(".ui-widget-overlay").fadeIn(500);
-        $("#pick-image-modal").fadeIn(500);
+        $(".ui-widget-overlay").css('display','block');
+        $("#pick-image-modal").css('display','block');
       });
       $("#signup").on("click", function (e) {
         if ($("#name").val() == "") {
@@ -437,7 +437,7 @@ setInterval(() => {
           return;
         } else if ($("#pass").val() != $("#re_pass").val()) {
           $(".warn").text("As senhas não correspondem!");
-          $(".error-modal").fadein();
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity', '1');
           return;
         }

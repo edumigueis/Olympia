@@ -107,9 +107,9 @@ setInterval(() => {
               "' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".bin").fadeIn();
-          $(".ui-widget-overlay").fadeOut(350);
-          $("#pick-image-modal-art").fadeOut(500);
-          $(".error-modal").fadeOut(500);
+          $(".ui-widget-overlay").css('display','none');
+          $("#pick-image-modal-art").css('display','none');
+          $(".error-modal").css('display','none');
           $(".error-modal").css('opacity','0');
         } 
         else
@@ -118,9 +118,9 @@ setInterval(() => {
           $(".hexcolor").css("display", "block");
           $(".color-holder").css("display", "block");
           $('.is-same-cont').css("background-color","transparent");
-          $(".ui-widget-overlay").fadeOut(350);
-          $("#pick-image-modal-art").fadeOut(500);
-          $(".error-modal").fadeOut(500);
+          $(".ui-widget-overlay").css('display','none');
+          $("#pick-image-modal-art").css('display','none');
+          $(".error-modal").css('display','none');
           $(".error-modal").css('opacity','0');
         }
         else {
@@ -131,9 +131,9 @@ setInterval(() => {
           $(".signup-image").html(
             "<figure class='default-prof-artist'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
-          $(".ui-widget-overlay").fadeOut(350);
-          $("#pick-image-modal-art").fadeOut(500);
-          $(".error-modal").fadeOut(500);
+          $(".ui-widget-overlay").css('display','none');
+          $("#pick-image-modal-art").css('display','none');
+          $(".error-modal").css('display','none');
           $(".error-modal").css('opacity','0');
         }
       });
@@ -258,10 +258,10 @@ setInterval(() => {
           return;
         }
         if (!user.match(/^[A-Za-z0-9 ]+$/)) {
-          $(".error-modal").fadeIn(500);
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity','1');
-          $(".ui-widget-overlay").fadeIn(500);
-          $(".warn").html("O username não deve ter @ no ínicio e não deve ter acentuação.");
+          $(".ui-widget-overlay").css('display','block');
+          $(".warn").html("O username não deve conter acentuação e caracteres especiais");
           $('#artist').val("");
         }                     
       })
@@ -273,9 +273,9 @@ setInterval(() => {
           return;
         }
         if (!regName.test(name)) {
-          $(".error-modal").fadeIn(500);
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity','1');
-          $(".ui-widget-overlay").fadeIn(500);
+          $(".ui-widget-overlay").css('display','block');
           $(".warn").html("Deve ser fornecido o nome e o sobrenome.");
           $('#name-art').val("");
         }                     
@@ -302,9 +302,9 @@ setInterval(() => {
           return;
         }
         if (!validar(email)) {
-          $(".error-modal").fadeIn(500);
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity','1');
-          $(".ui-widget-overlay").fadeIn(500);
+          $(".ui-widget-overlay").css('display','block');
           $(".warn").html("O email deve ter um @ seguido pelo domínio.");
           $('#email-art').val("");
         }
@@ -392,16 +392,16 @@ setInterval(() => {
         color = "rgb(255, 255, 255)";
       }
       if(color == "rgb(237, 41, 57)"){
-        $(".ui-widget-overlay").fadeIn(450);
-        $(".error-modal").fadeIn(500);
+        $(".ui-widget-overlay").css('display','block');
+        $(".error-modal").css('display','block');
         $(".error-modal").css('opacity','0');
         $('#pass_art').val("");
         $('.is-same-cont').css("background-color","transparent");
         $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições!");
       }
       if(color == "rgb(255, 165, 0)"){
-        $(".ui-widget-overlay").fadeIn(450);
-        $(".error-modal").fadeIn(500);
+        $(".ui-widget-overlay").css('display','block');
+        $(".error-modal").css('display','block');
         $(".error-modal").css('opacity','1');
         $('#pass_art').val("");
         $('.is-same-cont').css("background-color","transparent");
@@ -424,8 +424,8 @@ setInterval(() => {
       }
     });
       $(".signup-image-link").on("click", function() {
-        $(".ui-widget-overlay").fadeIn(500);
-        $("#pick-image-modal-art").fadeIn(500);
+        $(".ui-widget-overlay").css('display','block');
+        $("#pick-image-modal-art").css('display','block');
       });
       $("#signup-artist").on("click", function(e) {
         if ($("#name-art").val() == "") {
@@ -440,7 +440,7 @@ setInterval(() => {
           return;
         } else if ($("#pass_art").val() != $("#re_pass_art").val()) {
           $(".warn").text("As senhas não correspondem!");
-          $(".error-modal").fadein();
+          $(".error-modal").css('display','block');
           $(".error-modal").css('opacity','1');
           return;
         }

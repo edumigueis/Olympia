@@ -700,6 +700,25 @@ input[type="file"] {
   font-size: 1.45em;
   margin-top: 3%;
 }
+#label-table{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#label-table tr td{
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  vertical-align: center;
+  text-align: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 451px){
+  .file-label {
+  font-size: 1em!important;
+  }
+}
 
 .file-label:hover {
   opacity: 0.8;
@@ -743,9 +762,28 @@ ul li {
   height: 80%;
 }
 .input-file-cont {
-  width: 55%;
+  width: 100%!important;
   margin-top: 12%;
-  margin-left: 0 !important;
+  margin-left: -15%;
+  transition: all 0.3s;
+}
+@media only screen and (min-width: 770px) and (max-width: 1150px){
+  .input-file-cont {
+    margin-left: -30% !important;
+  }
+  .file-label {
+    font-size: 1.1em;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1399px){
+  .input-file-cont {
+    margin-left: -30% !important;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1700px){
+  .input-file-cont {
+    margin-left: -25% !important;
+  }
 }
 .locker-cont {
   width: 25px;
@@ -1301,7 +1339,44 @@ img {
     width: 300px;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 880px) {
+/*aqi*/
+@media screen and (max-width: 1000px){
+  .file-input-title{
+    font-size: 1.6em;
+  }
+}
+@media screen and (max-width: 560px){
+  .file-input-title{
+    font-size: 1.4em;
+  }
+  .file-input-title{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width: 449px){
+  .file-label{
+    font-size: 0.8em!important;
+  }
+  #label-table{
+    width: 100%;
+    padding: 15px!important;
+    margin-bottom: 40px;
+    transform: translateX(-25px);
+  }
+}
+@media screen and (min-width: 770px) and (max-width: 950px){
+  #label-table{
+    transform: translateX(-25px);
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 700px){
+  .circle{
+    transform: translateX(-20px);
+  }
+}
+                  /*aqui*/
+@media screen and (min-width: 770px) and (max-width: 880px) {
   #artist-let-img {
     width: 310px;
     height: 310px;
@@ -1313,7 +1388,6 @@ img {
   }
   .file-label {
     padding: 10px !important;
-    margin: 0 !important;
   }
   .circle {
     margin-right: 0 !important;
@@ -1384,9 +1458,6 @@ img {
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1150px) {
-  .file-label {
-    margin: 0;
-  }
   .circle {
     margin-right: 6.5% !important;
   }
@@ -1559,12 +1630,8 @@ img {
     padding: 10px !important;
     width: 100%;
     font-size: 1.5em;
-    margin-left: 20%;
   }
-  .input-file-cont {
-    width: 100%;
-    margin: 5px !important;
-  }
+
   .circle {
     margin-top: 10% !important;
     margin-right: 20.5%;
@@ -1589,11 +1656,6 @@ img {
     padding: 10px !important;
     width: 100%;
     font-size: 1.5em;
-    margin: 0 !important;
-  }
-  .input-file-cont {
-    width: 100%;
-    margin: 5px !important;
   }
   .circle {
     margin-top: 10% !important;
@@ -1628,13 +1690,7 @@ img {
   }
   .file-label {
     padding: 10px !important;
-    width: 100%;
-    font-size: 1.5em;
-    margin: 0 !important;
-  }
-  .input-file-cont {
-    width: 100%;
-    margin: 5px !important;
+    width: 100%;   /*aqui*/
   }
   .circle {
     margin-top: 10% !important;

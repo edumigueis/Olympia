@@ -663,7 +663,7 @@ list-type-ulli,
   filter: Alpha(Opacity=60) !important;
   background-color: rgb(40, 40, 40) !important;
   display: none;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
