@@ -1,6 +1,6 @@
-var jaFoiCin = false;
+
 var slideIndex = 1;
-showSlides(slideIndex);
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -24,14 +24,15 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
-setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
+var jaFoiCin = false;
+setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
   if ($("#container-cinema").length && jaFoiCin == false) {
 
     jaFoiCin = true;
 
     $(function () {
-
+      showSlides(slideIndex);
     })
   }
   else if (!$("#container-cinema").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
