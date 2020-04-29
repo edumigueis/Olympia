@@ -72,6 +72,9 @@
 .dark-mode.white-6 {
   background-color: #2b2b2b !important;
 }
+.dark-mode.white-7 {
+  background-color: #535353 !important;
+}
 .dark-mode.white-6-special {
   background-color: #2b2b2b !important;
   box-shadow: 0 30px 30px #2b2b2b !important;
@@ -143,4 +146,17 @@
   fill: rgb(231, 231, 231) !important;
   transition: all 0.2s ease-out;
   cursor: pointer;
+}
+.dark-mode.feed-item{
+  box-shadow: 2px 2px 5px 5px #434343;
+}
+.dark-mode.border-bottom-0{
+  border-bottom: 0 !important;
+  box-shadow: 3px 0px 6px 6px rgba(70, 70, 70, .5);
+}
+.dark-mode.active-tab-p.border-bottom-wh{
+  border-color: white;
+}
+.dark-mode.white-icon{
+  filter: invert(100%);
 }

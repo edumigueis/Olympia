@@ -298,6 +298,11 @@ setInterval(() => {
           if (diff >= 8) {
             navigateRight();
           }
+          $('#to-slide-'+curSlide).addClass('active-tab-p');
+          $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
+          $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
         });
 
         $(document).on("click", ".slider-control", function () {

@@ -745,6 +745,48 @@ ul li {
   vertical-align: middle;
   text-align: center;
 }
+@media only screen and (max-width: 600px){
+  #img-col-d{
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 15vh !important;
+  }
+  .detail-mask{
+    max-height: 300px;
+  }
+}
+@media only screen and (min-width: 1600px){
+  .detail-mask{
+    max-height: 400px;
+  }
+  #info-col-d{
+    max-width: 55%;
+    margin-left: 22.5%;
+    align-items: center;
+    justify-content: center;
+  }
+  #art-data{
+    font-size: 1.3em;
+  }
+  #artist-user{
+    font-size: 1.5em;
+  }
+  #artist-name{
+    font-size: 1.5em;
+  }
+  #artist-nac{
+    font-size: 1.5em;
+  }
+  #art-detail-p{
+    font-size: 1.6em;
+  }
+  .link{
+    font-size: 1.6em;
+  }
+  #art-name{
+    font-size: 4em;
+  }
+}
 @-webkit-keyframes animateBubble {
   0% {
     margin-top: 1000px;

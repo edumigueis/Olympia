@@ -162,12 +162,12 @@
       <!--////////////////////////////////////////////////////////////-->
 
       <!--tab page control-->
-      <section id="tab-page">
-        <h1 id="page-name-on-tab">Obras</h1>
+      <section id="tab-page" class="white-7 border-bottom-0">
+        <h1 id="page-name-on-tab" class="black-to-white">Obras</h1>
         <div id="tab-pages-cont">
-          <div class="paginate-tab active-tab-p" id="to-slide-0">Obras</div>
-          <div class="paginate-tab" id="to-slide-1">Serviços</div>
-          <div class="paginate-tab" id="to-slide-2">Inspire-se</div>
+          <div class="paginate-tab active-tab-p text-gray border-bottom-wh" id="to-slide-0">Obras</div>
+          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-1">Serviços</div>
+          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-2">Inspire-se</div>
         </div>
 
         <form id="app-cover">
@@ -292,22 +292,22 @@
         <div class="right-tab-control">
           <img
             id="post-tab-ut"
-            class="tab-page-ut"
+            class="tab-page-ut white-icon"
             src="/src/assets/images/plus-sign.png"
           />
           <img
             id="search-tab-ut"
-            class="tab-page-ut"
+            class="tab-page-ut white-icon"
             src="/src/assets/images/search-small.png"
           /><img
             id="list-tab-ut"
-            class="tab-page-ut"
+            class="tab-page-ut white-icon"
             src="/src/assets/images/list-ico.png"
           />
         </div>
       </section>
       <!-- feed -->
-      <div id="background-wrap">
+      <div id="background-wrap" class="white-6">
         <div class="bubble x1"></div>
         <div class="bubble x2"></div>
         <div class="bubble x3"></div>
@@ -339,15 +339,15 @@
               <div class="slide__bg"></div>
               <div class="slide__content">
                 <div class="feed-item">
-                  <div class="prof-cont-feed">
+                  <div class="prof-cont-feed white-7">
                       <div class="prof-img-cont">
                         <img
                           class="prof-img-prop"
                           src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
                         />
                       </div>
-                      <div class="prof-name-det">Luna Dias</div>
-                      <div class="prof-bio-det">
+                      <a href="/#/perfil" class="prof-name-det black-to-white">Luna Dias</a>
+                      <div class="prof-bio-det text-gray">
                         What would our lives be without art?
                       </div>
                     </div>
@@ -380,15 +380,15 @@
                   </div>
                 </div>
                 <div class="feed-item">
-                  <div class="prof-cont-feed">
+                  <div class="prof-cont-feed white-7">
                       <div class="prof-img-cont">
                         <img
                           class="prof-img-prop"
                           src="https://66.media.tumblr.com/8ca7ae9aef947480f0530429044bee3d/tumblr_phqvwbIT9p1xhllc7o5_250.png"
                         />
                       </div>
-                      <div class="prof-name-det">Justin Alberman</div>
-                      <div class="prof-bio-det">
+                      <a href="/#/profile" class="prof-name-det black-to-white">Justin Alberman</a>
+                      <div class="prof-bio-det text-gray">
                         Music inspires us to be who we are xd
                       </div>
                     </div>
@@ -440,15 +440,15 @@
                   </div>-->
                 </div>
                 <div class="feed-item">
-                  <div class="prof-cont-feed">
+                  <div class="prof-cont-feed white-7">
                       <div class="prof-img-cont">
                         <img
                           class="prof-img-prop"
                           src="https://66.media.tumblr.com/fa3132fa612a71b96c8e56f072a93f0e/tumblr_p7lsesJBkX1x6djmko5_250.jpg"
                         />
                       </div>
-                      <div class="prof-name-det">Lisa Kosh</div>
-                      <div class="prof-bio-det">
+                      <a href="/#/profile" class="prof-name-det black-to-white">Lisa Kosh</a>
+                      <div class="prof-bio-det text-gray">
                         Inspied to make the world a better place...
                       </div>
                     </div>
@@ -480,15 +480,15 @@
                   </div>
                 </div>
                 <div class="feed-item">
-                  <div class="prof-cont-feed">
+                  <div class="prof-cont-feed white-7">
                       <div class="prof-img-cont">
                         <img
                           class="prof-img-prop"
                           src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
                         />
                       </div>
-                      <div class="prof-name-det">Luna Dias</div>
-                      <div class="prof-bio-det">
+                      <a href="/#/profile" class="prof-name-det black-to-white">Luna Dias</a>
+                      <div class="prof-bio-det text-gray">
                         What would our lives be without art?
                       </div>
                     </div>
@@ -521,15 +521,15 @@
                   </div>
                 </div>
                 <div class="feed-item">
-                  <div class="prof-cont-feed">
+                  <div class="prof-cont-feed white-7">
                       <div class="prof-img-cont">
                         <img
                           class="prof-img-prop"
                           src="https://66.media.tumblr.com/be7afcb38d3b2e94a3fc4c644c9a83fa/tumblr_nvo1c55Jci1uwfie2o1_400.jpg"
                         />
                       </div>
-                      <div class="prof-name-det">John Birman</div>
-                      <div class="prof-bio-det">
+                      <a href="/#/profile" class="prof-name-det black-to-white">John Birman</a>
+                      <div class="prof-bio-det text-gray">
                         We 've come far.
                       </div>
                     </div>
@@ -562,15 +562,15 @@
                   </div>
                 </div>
                 <div class="feed-item">
-                  <div class="prof-cont-feed">
+                  <div class="prof-cont-feed white-7">
                       <div class="prof-img-cont">
                         <img
                           class="prof-img-prop"
                           src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/08/fotos-tumblr.png"
                         />
                       </div>
-                      <div class="prof-name-det">Maria Herman</div>
-                      <div class="prof-bio-det">
+                      <a href="/#/profile" class="prof-name-det black-to-white">Maria Herman</a>
+                      <div class="prof-bio-det text-gray">
                         We all adore something.
                       </div>
                     </div>
@@ -603,15 +603,15 @@
                   </div>
                 </div>
                 <div class="feed-item">
-                  <div class="prof-cont-feed">
+                  <div class="prof-cont-feed white-7">
                       <div class="prof-img-cont">
                         <img
                           class="prof-img-prop"
                           src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
                         />
                       </div>
-                      <div class="prof-name-det">Luna Dias</div>
-                      <div class="prof-bio-det">
+                      <a href="/#/profile" class="prof-name-det black-to-white">Luna Dias</a>
+                      <div class="prof-bio-det text-gray">
                         What would our lives be without art?
                       </div>
                     </div>
