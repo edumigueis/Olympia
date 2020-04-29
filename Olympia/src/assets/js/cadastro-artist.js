@@ -201,7 +201,6 @@ setInterval(() => {
         if (
           $("#artist-prof-image").attr('src') == "/src/assets/images/user-ico.png"
         ) {
-          alert('ain');
           $("#artist-let-img").empty();
           $(".signup-image").html(
             "<figure class='default-prof-artist'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='artist-prof-image'></figure><div id='artist-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p>"
@@ -292,7 +291,7 @@ setInterval(() => {
           $(".error-modal").fadeIn(500);
           $(".error-modal").css('opacity','1');
           $(".ui-widget-overlay").fadeIn(500);
-          $(".warn").html("Deve ser fornecido telefone nos padrões: +55 00 000000000 (BR), +591 00000000, +1 000 000 0000, +(591) 0000000, +(591) (0) 0000000, 0000 00000000, 0001 0000000000 ou (0001) 0000000.");
+          $(".warn").html("Deve ser fornecido telefone nos padrões: +55 00 000000000 (BR), +591 00000000, +1 000 000 0000 ou +(591) 0000000.");
           $('#tel').val("");
         }                     
       })

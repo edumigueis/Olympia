@@ -53,14 +53,20 @@ html {
   margin-left: 8.5%;
   height: fit-content;
   float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
   margin-top: 9% !important;
   background-color: #fff;
   padding: 4px;
   transition: 1s all;
   padding-right: 1%;
   padding-left: 0.9%;
+}
+#footer-container{
+  background-color: transparent !important;
 }
 #info-col-d {
   width: 85%;
@@ -77,18 +83,16 @@ html {
   transition: 1s all;
 }
 #arrows-pag-det{
-  height: 100%;
-  width: 8%;
-  margin-left: 46%;
+  width: 75px;
+  height: 65px;
   text-align: center;
   padding: 4px;
   position: relative;
   transition: 1s all;
 }
 #arrows-pag-det-2{
-  height: 100%;
-  width: 8%;
-  margin-left: 46%;
+  width: 75px;
+  height: 65px;
   text-align: center;
   padding: 4px;
   position: relative;
@@ -103,6 +107,51 @@ html {
 }
 #arrows-pag-det-2:hover{
   cursor: pointer;
+}
+/* Masonry grid */
+.masonry {
+  transition: all .5s ease-in-out;
+  column-gap: 30px;
+  column-fill: initial;
+}
+
+/* Masonry item */
+.masonry .brick {
+  margin-bottom: 30px;
+  display: inline-block; /* Fix the misalignment of items */
+  vertical-align: top; /* Keep the item on the very top */
+}
+
+/* Masonry image effects */
+.masonry .brick img {
+  transition: all .5s ease-in-out;
+  backface-visibility: hidden; /* Remove Image flickering on hover */
+  width: 100%
+}
+
+.masonry .brick:hover img {
+  opacity: .75;
+}
+
+/* Masonry on tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+/* Masonry on big screens */
+@media only screen and (min-width: 1024px) and (max-width: 1630px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 1631px){
+
+  .masonry {
+    max-width: 1500px;
+    column-count: 2;
+  }
 }
 /* Arrow & Hover Animation */
 #more-arrows {
@@ -156,14 +205,14 @@ polygon.arrow-middle-2 {
 polygon.arrow-top-2 {
   opacity: 0.75;
 }
-.more-arrows-2{
-  margin-bottom: -250px;
-}
 #paginate-detail{
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  height: 250px;
-    margin-bottom: -10%;
+  height: 100px;
+    margin-top: -10%;
     float: left;
     margin-top: -3%;
 }

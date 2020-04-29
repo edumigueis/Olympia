@@ -13,6 +13,7 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
         $("#img01").attr("src", src);
         $(window).scrollTop(0);
         $('#mouse').css('display', 'block');
+        $('#footer').css('display', 'none');
       });
       $(document.body).on('click', '#arrows-pag-det', function () {
         $('#img-col-d').fadeOut(200);
@@ -36,12 +37,13 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
       $(document.body).on('click', '.close-mod', function () {
         $('#myModal').css('display', 'none');
         $('#mouse').css('display', 'none');
-
+        $('#footer').css('display', 'block');
       })
 
       $(document.body).on('click', '#myModal', function () {
         $('#myModal').css('display', 'none');
         $('#mouse').css('display', 'none');
+        $('#footer').css('display', 'block');
       })
 
       

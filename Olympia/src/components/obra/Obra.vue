@@ -12,7 +12,21 @@
       <div id="col-container">
         <div id="img-col-d" class="transparent">
           <div class="bg"></div>
-          <table
+          <div class="masonry">
+        <div class="brick">
+          <img class="img-col" src="https://i.pinimg.com/originals/2a/81/ab/2a81abef24a1630ef86ac1c74b0ec947.jpg">
+        </div>
+        <div class="brick">
+          <img class="img-col" src="https://i.pinimg.com/originals/92/2b/fd/922bfd8e4dceef87cce0aeaa017d0211.jpg">
+        </div>
+        <div class="brick">
+          <img class="img-col" src="https://blogscdn.thehut.net/wp-content/uploads/sites/7/2016/06/12184902/Matthew-Cusick-Featured.jpg">
+        </div>
+        <div class="brick">
+        <img class="img-col" src="https://i.pinimg.com/originals/d1/ba/98/d1ba981705ec9ca3b567d2093146e9aa.jpg">
+        </div>
+      </div>
+          <!--<table
             id="table-img"
             width="100%"
             data-aos="fade-down"
@@ -61,7 +75,7 @@
                 </div>
               </td>
             </tr>
-          </table>
+          </table>-->
         </div>
         <div id="info-col-d" class="white-6">
           <ul id="info-list" class="white-6">
