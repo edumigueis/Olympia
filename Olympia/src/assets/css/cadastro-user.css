@@ -615,11 +615,16 @@ list-type-ulli,
   width: 50%;
   height: 350px;
   position: absolute;
-  z-index: 9;
+  z-index: 40;
   left: 25%;
   top: 20%;
   background-color: #fff;
   transition: 1s all;
+}
+.file-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .error-modal {
   display: none;
@@ -683,14 +688,24 @@ input[type="file"] {
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
-  margin-left: 15%;
   padding: 12px 40px;
-  position: relative;
   font-family: "poppins";
   font-size: 1.45em;
-  margin-top: 3%;
+  width: 200px;
+  position: relative;
+  text-align: center;
 }
-
+.file-item-1{
+  width: 300px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-file-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .file-label:hover {
   opacity: 0.7;
 }
@@ -718,22 +733,31 @@ input[type="file"] {
 }
 .file-input-title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   font-size: 30px;
   font-family: "poppins";
 }
 .file-item {
   list-style: none;
-  width: 45%;
+  width: 230px;
+  margin: 0;
+  height: fit-content;
 }
 ul li {
   display: inline;
 }
 .file-list {
   height: 80%;
+  display: inline-flex !important;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  vertical-align: top;
+  align-items: center;
+  justify-content: center;
 }
 .input-file-cont {
-  width: 55%;
+  width: 100%;
   margin-top: 12%;
   margin-left: 0 !important;
 }
@@ -1268,12 +1292,6 @@ img{
     height: 60px !important;
     width: 50% !important;
   }
-  .file-label {
-    padding: 10px !important;
-  }
-  .circle {
-    margin-right: 0 !important;
-  }
   .error-modal{
     height: 420px;
   }
@@ -1295,13 +1313,6 @@ img{
     margin-right: -400px;
     height: 60px !important;
     width: 50% !important;
-  }
-  .file-label {
-    padding: 10px !important;
-    margin: 0 !important;
-  }
-  .circle {
-    margin-right: 0 !important;
   }
   .error-modal{
     height: 420px;
@@ -1366,14 +1377,6 @@ img{
     right: 43%;
     z-index: 3;
     position: absolute;
-  }
-}
-@media screen and (min-width: 1000px) and (max-width: 1150px) {
-  .file-label {
-    margin: 0;
-  }
-  .circle {
-    margin-right: 6.5% !important;
   }
 }
 @media screen and (min-width: 1100px) and (max-width: 1200px) {
@@ -1531,26 +1534,25 @@ img{
   }
 
 }
+@media screen and (min-width: 580px) and (max-width: 715px) {
+  .circle{
+    margin-top: -50%;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 579px) {
+  #pick-image-modal{
+    width: 80%;
+    left: 10%;
+    height: 500px !important;
+  }
+}
 @media screen and (min-width: 551px) and (max-width: 590px) {
   #user-let-img {
     margin-left: 9%;
   }
 }
 @media screen and (min-width: 551px) and (max-width: 769px) {
-  .file-label {
-    padding: 10px !important;
-    width: 100%;
-    font-size: 1.5em;
-    margin-left: 20%;
-  }
-  .input-file-cont {
-    width: 100%;
-    margin: 5px !important;
-  }
-  .circle {
-    margin-top: 10% !important;
-    margin-right: 20.5%;
-  }
   #pick-image-modal {
     height: 410px !important;
   }
@@ -1570,19 +1572,6 @@ img{
 @media screen and (min-width: 450px) and (max-width: 550px) {
   #user-let-img {
     margin-left: 0;
-  }
-  .file-label {
-    padding: 10px !important;
-    width: 100%;
-    font-size: 1.5em;
-    margin: 0 !important;
-  }
-  .input-file-cont {
-    width: 100%;
-    margin: 5px !important;
-  }
-  .circle {
-    margin-top: 10% !important;
   }
   #pick-image-modal {
     height: 400px !important;
@@ -1611,19 +1600,6 @@ img{
   .social-label {
     margin-right: 0;
     margin-bottom: 10px;
-  }
-  .file-label {
-    padding: 10px !important;
-    width: 100%;
-    font-size: 1.5em;
-    margin: 0 !important;
-  }
-  .input-file-cont {
-    width: 100%;
-    margin: 5px !important;
-  }
-  .circle {
-    margin-top: 10% !important;
   }
   #pick-image-modal {
     height: 400px !important;

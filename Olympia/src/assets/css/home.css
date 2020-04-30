@@ -3294,7 +3294,20 @@ figure.snip1321.hover:after {
 }
 .prof-insp{
   margin-left: 4% !important;
-
+}
+@media only screen and (max-width: 560px){
+  .insp-item{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media only screen and (min-width: 560px) and (max-width: 760px){
+  .insp-item{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 .post-img-cont {
   position: relative;
