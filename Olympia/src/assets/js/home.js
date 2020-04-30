@@ -258,30 +258,23 @@ setInterval(() => {
           changeSlides();
         }
 
-        $(document).on("mousedown touchstart", ".slider", function (e) {
+        $(document).on("mousedown touchstart", ".slider", function(e) {
           if (animating) return;
           window.clearTimeout(autoSlideTimeout);
           var startX = e.pageX || e.originalEvent.touches[0].pageX,
-            winW = $(window).width();
+              winW = $(window).width();
           diff = 0;
-
-          $(document).on("mousemove touchmove", function (e) {
+          
+          $(document).on("mousemove touchmove", function(e) {
             var x = e.pageX || e.originalEvent.touches[0].pageX;
-            diff = ((startX - x) / winW) * 70;
-
-              diff /= 2;
-            $sliderFeed.css(
-              "transform",
-              "translate3d(" + (-curSlide * 100 - diff) + "%,0,0)"
-            );
-            $slideBGs.css(
-              "transform",
-              "translate3d(" + (curSlide * 50 + diff / 2) + "%,0,0)"
-            );
+            diff = (startX - x) / winW * 70;
+            if ((!curSlide && diff < 0) || (curSlide === numOfSlidesFeed && diff > 0)) diff /= 2;
+            $sliderFeed.css("transform", "translate3d("+ (-curSlide*100 - diff) +"%,0,0)");
+            $slideBGs.css("transform", "translate3d("+ (curSlide*50 + diff/2) +"%,0,0)");
           });
         });
-
-        $(document).on("mouseup touchend", function (e) {
+        
+        $(document).on("mouseup touchend", function(e) {
           $(document).off("mousemove touchmove");
           if (animating) return;
           if (!diff) {
@@ -298,11 +291,6 @@ setInterval(() => {
           if (diff >= 8) {
             navigateRight();
           }
-          $('#to-slide-'+curSlide).addClass('active-tab-p');
-          $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
         });
 
         $(document).on("click", ".slider-control", function () {
