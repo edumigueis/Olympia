@@ -175,14 +175,18 @@ setInterval(() => {
 
         [].slice.call(document.querySelectorAll(".fnc-slide__action-btn")).forEach(function ($btn) {
           $btn.addEventListener("click", function () {
-            $demoCont.classList.toggle("credits-active");
+            if(!$('.modal-slider').hasClass('.modal-slider-active'))
+              $('.modal-slider').addClass("modal-slider-active");
+            else
+              $('.modal-slider').removeClass("modal-slider-active");
           });
         });
 
-        document.querySelector(".demo-cont__credits-close").addEventListener("click", function () {
-          $demoCont.classList.remove("credits-active");
-        });
-
+        $('.modal-container').on('click',function (event) {
+          if(event.target.id!='content'){
+              $('.modal-slider').removeClass("modal-slider-active");
+            }
+          });
 
         /*FEED---------------------------------------------- */
         var $sliderFeed = $(".slider"),
@@ -302,13 +306,13 @@ setInterval(() => {
           $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
           $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
           if(curSlide == 0){
-            $('#page-name-on-tab').text('Obras');
+            $('#page-name-on-tab').text('Explorar');
           }
           if(curSlide == 1){
-            $('#page-name-on-tab').text('Serviços');
+            $('#page-name-on-tab').text('Aprender');
           }
           if(curSlide == 2){
-            $('#page-name-on-tab').text('Contate-nos');
+            $('#page-name-on-tab').text('Inspirar-se');
           }
           } else {
             navigateRight();
@@ -318,13 +322,13 @@ setInterval(() => {
           $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
           $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
           if(curSlide == 0){
-            $('#page-name-on-tab').text('Obras');
+            $('#page-name-on-tab').text('Explorar');
           }
           if(curSlide == 1){
-            $('#page-name-on-tab').text('Serviços');
+            $('#page-name-on-tab').text('Aprender');
           }
           if(curSlide == 2){
-            $('#page-name-on-tab').text('Contate-nos');
+            $('#page-name-on-tab').text('Inspirar-se');
           }
           }
         });
@@ -338,13 +342,13 @@ setInterval(() => {
           $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
           $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
           if(curSlide == 0){
-            $('#page-name-on-tab').text('Obras');
+            $('#page-name-on-tab').text('Explorar');
           }
           if(curSlide == 1){
-            $('#page-name-on-tab').text('Serviços');
+            $('#page-name-on-tab').text('Aprender');
           }
           if(curSlide == 2){
-            $('#page-name-on-tab').text('Contate-nos');
+            $('#page-name-on-tab').text('Inspirar-se');
           }
         });
         $(document).on("click", "#to-slide-0", function () {
@@ -353,7 +357,7 @@ setInterval(() => {
           $('#to-slide-0').addClass('active-tab-p');
           $('#to-slide-1').removeClass('active-tab-p');
           $('#to-slide-2').removeClass('active-tab-p');
-          $('#page-name-on-tab').text('Obras');
+          $('#page-name-on-tab').text('Explorar');
         });
         $(document).on("click", "#to-slide-1", function () {
           curSlide = 1;
@@ -361,7 +365,7 @@ setInterval(() => {
           $('#to-slide-1').addClass('active-tab-p');
           $('#to-slide-0').removeClass('active-tab-p');
           $('#to-slide-2').removeClass('active-tab-p');
-          $('#page-name-on-tab').text('Serviços');
+          $('#page-name-on-tab').text('Aprender');
         });
         $(document).on("click", "#to-slide-2", function () {
           curSlide = 2;
@@ -369,7 +373,7 @@ setInterval(() => {
           $('#to-slide-2').addClass('active-tab-p');
           $('#to-slide-1').removeClass('active-tab-p');
           $('#to-slide-0').removeClass('active-tab-p');
-          $('#page-name-on-tab').text('Contate-nos');
+          $('#page-name-on-tab').text('Inspirar-se');
         });
         $(document).on("click", "#list-tab-ut", function () {
           if($('#app-cover').css('display') == 'block'){

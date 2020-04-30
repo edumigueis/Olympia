@@ -598,6 +598,8 @@ position: relative;
   padding: 20px 0 30px;
   text-align: center;
   letter-spacing: 0.05em;
+  width: 100vw;
+  margin: 0;
 }
 
 #footer-name {
@@ -1515,12 +1517,58 @@ position: relative;
 
 /* Responsividade do footer*/
 
-@media only screen and (max-width: 560px) {
-  #footer #copyright #footer-name {
+@media only screen and (min-width: 0px) and (max-width: 660px) {
+  #footer, #copyright, #footer-name {
     letter-spacing: 0.1em;
     font-size: 1.1em;
   }
 }
+
+@media only screen and (min-width: 0px) and (max-width: 560px) {
+  #footer, #copyright, #footer-name {
+    letter-spacing: 0.1em;
+    font-size: 1em;
+  }
+  .span-bar{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 430px) {
+  #footer, #copyright, #footer-name {
+    letter-spacing: 0.07em;
+    font-size: 0.95em;
+  }
+  .span-bar{
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .config-img{
+    width: 20px;
+    margin-top: 10px;
+  }
+}
+
+#footer, #copyright, #footer-name {
+  transition: 0.5s all;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 350px) {
+  #footer, #copyright, #footer-name {
+    letter-spacing: 0.05em;
+    font-size: 0.88em;
+  }
+  .span-bar{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .config-img{
+    width: 20px;
+    margin-top: 12px;
+  }
+}
+
 
 /*Responsividade da largura da tela no menu items*/
 .close-2 {
@@ -2184,10 +2232,10 @@ and (min-height: 600px){
 
 @media only screen and (min-width: 0px) and (max-width: 481px) {
   #logo {
-    left: 10.5%;
-    width: 280px;
     letter-spacing: 0.2em;
     top: -5px;
+    font-size: 0.9em;
+    transform: translate(10px, 0);
   }
 
   #search-ico {
@@ -2210,7 +2258,7 @@ and (min-height: 600px){
     top: 20px;
   }
   #bordao{
-    transform: translate(220px, -50px);
+    transform: translate(205px, -50px);
   }
 }
 @media only screen and (min-width: 482px) and (max-width: 615px) {
@@ -2331,7 +2379,7 @@ and (min-height: 600px){
     margin-bottom: 0;
   }
 }
-@media only screen and (min-width: 300px) and (max-width: 461px) {
+@media only screen and (min-width: 0px) and (max-width: 461px) {
   #footer {
     padding-left: 0;
   }
@@ -2410,7 +2458,7 @@ and (min-height: 600px){
   right: 0;
   width: 100vw;
   text-align: center;
-  transition: 1s all;
+  transition: 0.5s all;
 }
 /* Responsividade do small-footer*/
 

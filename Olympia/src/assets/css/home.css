@@ -7,6 +7,16 @@ html {
   src: url("../fonts/Gooseberry Juice.otf");
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins-light.otf");
+}
+
+@font-face {
+  font-family: "Calibre-Regular";
+  src: url("/src/assets/fonts/calibri-7.ttf");
+}
+
 .logo-ico {
   position: absolute;
   z-index: 9998;
@@ -939,7 +949,217 @@ html {
   transform: scaleX(0) !important;
 }
 
-/* NOT PART OF COMMON SLIDER STYLES */
+#title-modal{
+  font-family: 'Poppins';
+  font-size: 2.5em;
+}
+
+#subtitle-modal{
+  font-family: 'Calibre-Regular';
+  font-size: 1.3em;
+}
+
+#pretext-modal{
+  font-family: 'Calibre-Regular';
+  font-size: 1.7em;
+  color: rgb(32, 87, 87);
+  margin-left: 0;
+  text-align: left;
+  margin-left: 10px;
+}
+
+#text-modal{
+  font-family: 'Calibre-Regular';
+  font-size: 1.2em;
+  text-align: justify;
+  padding-right: 15px;
+  padding-right: 15px;
+  text-indent: 1em;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px){
+  #title-modal{
+    font-size: 2em;
+  }
+  
+  #subtitle-modal{
+    font-size: 0.7em;
+  }
+  
+  #pretext-modal{
+    font-size: 0.8em;
+  }
+  
+  #text-modal{
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (min-width: 970px) and (max-width: 1199px){
+  #title-modal{
+    font-size: 2.2em;
+  }
+  
+  #subtitle-modal{
+    font-size: 0.8em;
+  }
+  
+  #pretext-modal{
+    font-size: 1em;
+  }
+  
+  #text-modal{
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+  #title-modal{
+    font-size: 2.5em;
+  }
+  
+  #subtitle-modal{
+    font-size: 1.2em;
+  }
+  
+  #pretext-modal{
+    font-size: 1.2em;
+  }
+  
+  #text-modal{
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 1650px) and (max-width: 2000px){
+  #title-modal{
+    font-size: 3em;
+  }
+  
+  #subtitle-modal{
+    font-size: 1.7em;
+  }
+  
+  #pretext-modal{
+    font-size: 1.9em;
+  }
+  
+  #text-modal{
+    font-size: 1.45em;
+  }
+}
+
+@media only screen and (min-width: 2000px){
+  #title-modal{
+    font-size: 3.2em;
+  }
+  
+  #subtitle-modal{
+    font-size: 2em;
+  }
+  
+  #pretext-modal{
+    font-size: 2.1em;
+  }
+  
+  #text-modal{
+    font-size: 1.8em;
+  }
+}
+
+.modal-slider{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.644);
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: none;
+}
+
+.modal-slider-active{
+  display: block;
+}
+
+.modal-container{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.modal-content{
+  width: 50%;
+  height: fit-content;
+  padding: 15px;
+  background-color: rgb(221, 221, 221);
+  border-radius: 18px;
+  box-shadow: 0 0 15px black;
+}
+
+#table-modal  tr td{
+  vertical-align: top;
+  text-align: center;
+}
+
+#td1-modal{
+  width: 55%;
+}
+
+#td2-modal{
+  width: 45%;
+}
+
+#container-img-modal{
+  position: relative;
+  margin-left: 0;
+  width: 98%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-self:center;
+  vertical-align:center;
+  border-radius: 18px;
+  transition: 0.3s all;
+}
+
+#container-img-modal:hover{
+  cursor: pointer!important;
+  box-shadow: 0 0 30px inset;
+}
+
+#image-modal{
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 0) and (max-width: 969px){
+  #table-modal tr{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #td1-modal{
+    width: 100%;
+  }
+  
+  #td2-modal{
+    width: 100%;
+  }
+
+  #image-modal{
+    height: 50%;
+  }
+  #container-img-modal{
+    width: 100%;
+  }
+}
+
 body {
   margin: 0;
 }
