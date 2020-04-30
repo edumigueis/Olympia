@@ -3247,10 +3247,54 @@ figure.snip1321.hover:after {
     font-size: 1.4em !important;
   }
 }
-#teste{
-  position: relative;
-  z-index: 1000000000000000000000000000000000000000000000;
-  display: inline-block !important;
+.img-serv{
+  width: 100%;
+}
+#content-3{
+  column-count: 1 !important;
+}
+.insp-item{
+  border-radius: 21px;
+  /*padding: 16px;*/
+  margin-top: 10px;
+  box-sizing: content-box;
+  box-shadow: 3px 3px 9px 3px #666;
+  color: #222;
+  display: inline-block;
+  margin-bottom: 30px;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  vertical-align: top; /* Keep the item on the very top */
+
+}
+.inner-insp-item{
+  border-radius: 21px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+.img-insp{
+  width: 85%;
+  margin-left: calc(7.5% - 10px);
+  margin-right: calc(7.5% - 10px);
+  padding: 10px;
+  border-radius: 21px;
+}
+.insp-post-cont{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-indent: 1em;
+  padding-left: calc(7.5% - 10px);
+  padding-right: calc(7.5% - 10px);
+  padding-bottom: 30px;
+  padding-top: 5px;
+  color: #222;
+  text-align: justify;
+}
+.prof-insp{
+  margin-left: 4% !important;
+
 }
 .post-img-cont {
   position: relative;
