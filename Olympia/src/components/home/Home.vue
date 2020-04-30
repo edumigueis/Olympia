@@ -145,17 +145,31 @@
             </div>
           </nav>
         </div>
-        <!-- slider end -->
-        <div class="demo-cont__credits">
-          <div class="demo-cont__credits-close"></div>
-          <h2 class="demo-cont__credits-heading">DAILY ART</h2>
-          <h3 class="demo-cont__credits-name">"Mona Lisa", por</h3>
-          <a class="demo-cont__credits-link">Botero - 1977</a>
-          <div class="mask-img">
-            <img class="daily-art-img" src="/src/assets/images/daily-art.jpg" />
+      </div>
+      <div class="modal-slider">
+          <div class="modal-container">
+            <div class="modal-content" id="content">
+              <table id="table-modal">
+                <tr>
+                  <td id="td1-modal">
+                    <h1 id="title-modal">Daily Art</h1>
+                    <h2 id="subtitle-modal">"Mona Lisa", por Fernando Botero</h2>
+                    <h3 id="pretext-modal">Por que?</h3>
+                    <p id="text-modal">Percebemos, de cara, as formas arredondadas que o artista usou para representar
+                      a forma humana; com a intenção de destacar principalmente sua ganância. Botero nunca pintava 
+                      personagens negras, pois justamente queria criticar a desigualdade social, que promove tal soberba.
+                    </p>
+                  </td>
+                  <td id="td2-modal">
+                    <div id="container-img-modal">
+                        <img id="image-modal" src="/src/assets/images/daily-art.jpg">
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
 
       <!---->
 
@@ -163,11 +177,11 @@
 
       <!--tab page control-->
       <section id="tab-page" class="white-7 border-bottom-0">
-        <h1 id="page-name-on-tab" class="black-to-white">Obras</h1>
+        <h1 id="page-name-on-tab" class="black-to-white">Admirar</h1>
         <div id="tab-pages-cont">
-          <div class="paginate-tab active-tab-p text-gray border-bottom-wh" id="to-slide-0">Obras</div>
-          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-1">Serviços</div>
-          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-2">Inspire-se</div>
+          <div class="paginate-tab active-tab-p text-gray border-bottom-wh" id="to-slide-0">Explorar</div>
+          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-1">Aprender</div>
+          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-2">Inspirar-se</div>
         </div>
 
         <form id="app-cover">
