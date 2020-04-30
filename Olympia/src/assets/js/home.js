@@ -279,6 +279,20 @@ setInterval(() => {
             if ((!curSlide && diff < 0) || (curSlide === numOfSlidesFeed && diff > 0)) diff /= 2;
             $sliderFeed.css("transform", "translate3d("+ (-curSlide*100 - diff) +"%,0,0)");
             $slideBGs.css("transform", "translate3d("+ (curSlide*50 + diff/2) +"%,0,0)");
+            $('#to-slide-'+curSlide).addClass('active-tab-p');
+            $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
+            if(curSlide == 0)
+            $('#page-name-on-tab').text('Explorar');
+            else
+            if(curSlide == 1)
+            $('#page-name-on-tab').text('Aprender');
+            else
+            if(curSlide == 2)
+            $('#page-name-on-tab').text('Inpirar-se');
+
           });
         });
         
@@ -291,13 +305,52 @@ setInterval(() => {
           }
           if (diff > -8 && diff < 8) {
             changeSlides();
+            $('#to-slide-'+curSlide).addClass('active-tab-p');
+            $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
+            if(curSlide == 0)
+            $('#page-name-on-tab').text('Explorar');
+            else
+            if(curSlide == 1)
+            $('#page-name-on-tab').text('Aprender');
+            else
+            if(curSlide == 2)
+            $('#page-name-on-tab').text('Inpirar-se');
             return;
           }
           if (diff <= -8) {
             navigateLeft();
+            $('#to-slide-'+curSlide).addClass('active-tab-p');
+            $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
+            if(curSlide == 0)
+            $('#page-name-on-tab').text('Explorar');
+            else
+            if(curSlide == 1)
+            $('#page-name-on-tab').text('Aprender');
+            else
+            if(curSlide == 2)
+            $('#page-name-on-tab').text('Inpirar-se');
           }
           if (diff >= 8) {
             navigateRight();
+            $('#to-slide-'+curSlide).addClass('active-tab-p');
+            $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
+            $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
+            if(curSlide == 0)
+            $('#page-name-on-tab').text('Explorar');
+            else
+            if(curSlide == 1)
+            $('#page-name-on-tab').text('Aprender');
+            else
+            if(curSlide == 2)
+            $('#page-name-on-tab').text('Inpirar-se');
           }
         });
 
