@@ -29,18 +29,19 @@
         <div class="slideshow-container">
 
       <div class="mySlides">
-        <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
-        <p class="author">- John Keats</p>
+        <q>"O cinema não tem fronteiras nem limites. É um fluxo constante de sonho."</q>
+        <p class="author">- Orson Welles</p>
       </div>
 
       <div class="mySlides">
-        <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
-        <p class="author">- Ernest Hemingway</p>
+        <q>"Para o cinema tudo se torna uma imensa natureza-morta, até os sentimentos dos outros são qualquer coisa de que se pode dispor."</q>
+        <p class="author">- Federico Fellini</p>
       </div>
 
       <div class="mySlides">
-        <q>I have not failed. I've just found 10,000 ways that won't work.</q>
-        <p class="author">- Thomas A. Edison</p>
+        <q>"O cinema não é um ofício. É uma arte. Cinema não é um trabalho de equipe. O diretor está só diante de uma página em branco."</q>
+        <p class="author">- Jean-Luc Godard
+    </p>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -53,7 +54,7 @@
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
-        <div class="container-left">
+        <div class="container-left black-to-white white-7">
           <table> <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-principal">
@@ -81,7 +82,7 @@
 
         <!--<img class="linha" src="https://img.pngio.com/black-line-png-just-pink-about-it-black-line-png-900_150.png"/>-->
 
-        <div class="container-right">
+        <div class="container-right black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">
@@ -110,7 +111,7 @@
           </table>
         </div>
     
-      <div class="container-left">
+      <div class="container-left black-to-white white-7">
           <table> <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-linha">
@@ -127,7 +128,7 @@
             </tr>
           </table>
         </div>
-          <div class="container-right">
+          <div class="container-right black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">
@@ -144,7 +145,7 @@
             </tr>
           </table>
         </div>    
-      <div class="container-left">
+      <div class="container-left black-to-white white-7">
           <table> 
             <tr>
               <td class="texto-linha">
@@ -161,7 +162,7 @@
             </tr>
           </table>
         </div>
-        <div class="container-right">
+        <div class="container-right black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">
@@ -178,7 +179,7 @@
             </tr>
           </table>
         </div>
-        <div class="container-left" id="contato-div" style="width:20%;">
+        <div class="container-left black-to-white white-7" id="contato-div" style="width:20%;">
           <table> 
             <tr>
               <td class="texto-linha">
