@@ -1306,8 +1306,8 @@ img{
 }
 @media screen and (min-width: 769px) and (max-width: 880px) {
   #user-let-img {
-    width: 310px;
-    height: 310px;
+    width: 280px;
+    height: 280px;
   }
   .hexcolor {
     margin-right: -400px;
@@ -1538,6 +1538,11 @@ img{
   .circle{
     margin-top: -50%;
     margin-right: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 929px) {
+  .signup-image{
+    margin-left: 0 !important;
   }
 }
 @media screen and (max-width: 579px) {
