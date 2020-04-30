@@ -13,6 +13,8 @@
     "cli": "^1.0.1",
     "express-session": "^1.17.1",
     "jquery": "^3.4.1",
+    "modules": "^0.4.0",
+    "node": "^14.0.0",
     "save": "^2.4.0",
     "vue": "^2.6.11",
     "vue-resource": "^1.5.1",
