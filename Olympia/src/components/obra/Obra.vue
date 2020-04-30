@@ -7,7 +7,6 @@
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
-      <meu-mouse></meu-mouse>
 
       <div id="col-container">
         <div id="img-col-d" class="transparent">
@@ -26,56 +25,6 @@
         <img class="img-col" src="https://i.pinimg.com/originals/d1/ba/98/d1ba981705ec9ca3b567d2093146e9aa.jpg">
         </div>
       </div>
-          <!--<table
-            id="table-img"
-            width="100%"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            class="transparent"
-          >
-            <colgroup>
-              <col width="33.3333333%" />
-              <col width="33.3333333%" />
-              <col width="33.3333333%" />
-            </colgroup>
-            <tr class="line-img-container-detail">
-              <td class="detail-img-container" id="detail-img-1" colspan="2">
-                <div class="detail-mask transparent">
-                  <img
-                    src="https://gagosian.com/media/images/exhibitions/2013/willem-de-kooning-ten-paintings-1983-1985/xNTqSjL1UVAw_585x329.jpg"
-                    class="img-col transparent"
-                    id="image-1-det"
-                  />
-                </div>
-              </td>
-              <td class="detail-img-container" id="detail-img-2">
-                <div class="detail-mask transparent">
-                  <img
-                    src="https://i.pinimg.com/originals/d0/83/56/d08356194ca7ddf4c0d09acbc58bccec.jpg"
-                    class="img-col transparent"
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr class="line-img-container-detail">
-              <td class="detail-img-container" id="detail-img-3">
-                <div class="detail-mask transparent">
-                  <img
-                    src="https://cdn.e-konomista.pt/uploads/2019/07/quadros-mais-caros-850x514.jpg "
-                    class="img-col transparent"
-                  />
-                </div>
-              </td>
-              <td class="detail-img-container" id="detail-img-4" colspan="2">
-                <div class="detail-mask transparent">
-                  <img
-                    src="https://ep00.epimg.net/cultura/imagenes/2016/02/18/actualidad/1455830675_596061_1455873497_noticia_fotograma.jpg"
-                    class="img-col transparent"
-                  />
-                </div>
-              </td>
-            </tr>
-          </table>-->
         </div>
         <div id="info-col-d" class="white-6">
           <ul id="info-list" class="white-6">
@@ -186,6 +135,7 @@
         <span class="close-mod">&times;</span>
         <img class="modal-content" id="img01" />
         <div id="caption"></div>
+              <meu-mouse></meu-mouse>
       </div>
       <meu-footer></meu-footer>
     </div>

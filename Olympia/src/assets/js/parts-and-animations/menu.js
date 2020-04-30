@@ -34,8 +34,7 @@ $(document).ready(function () {
         else{
             $('#menu-bar').css('transform','none');
         }
-    
-        return direction;
+
     }
 
     setInterval(updateGradient, 10);

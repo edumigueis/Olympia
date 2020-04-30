@@ -177,7 +177,7 @@
 
       <!--tab page control-->
       <section id="tab-page" class="white-7 border-bottom-0">
-        <h1 id="page-name-on-tab" class="black-to-white">Admirar</h1>
+        <h1 id="page-name-on-tab" class="black-to-white">Explorar</h1>
         <div id="tab-pages-cont">
           <div class="paginate-tab active-tab-p text-gray border-bottom-wh" id="to-slide-0">Explorar</div>
           <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-1">Aprender</div>

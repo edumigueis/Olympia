@@ -188,6 +188,10 @@ setInterval(() => {
             }
           });
 
+          $('#image-modal').on('click',function(){
+            window.location.href = "/#/detalhes"
+          })
+
         /*FEED---------------------------------------------- */
         var $sliderFeed = $(".slider"),
           $slideBGs = $(".slide__bg"),

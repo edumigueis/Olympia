@@ -113,12 +113,9 @@
         </div>
         <div class="info">
             <p class="title">Bem vindo!</p>
-            <a class="link start">Começar!</a><br><br>
-            <a href='/#/cadastro/user' class="link usuario media">Usuário</a>
-            <div id="animation">
-                <a href='/#/login' class="link login">Login</a><br><br>
-                <a class="link sobre">Sobre</a>
-            </div>
+            <a href='/#/cadastro' class="link start">Começar!</a><br><br>
+            <a href='/#/login' class="link login">Login</a><br><br>
+            <a class="link sobre">Sobre</a>
         </div>
 
         <div id="more-arrows">
