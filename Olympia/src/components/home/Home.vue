@@ -939,7 +939,7 @@
                         What would our lives be without art?
                       </div>
                     </div>
-                    <img src="https://cristinapicteaza.com/wp-content/uploads/2019/01/fcbk.jpg?v=1575196524" class="img-insp" alt="Dummy Image">
+                    <img src="https://smhttp-ssl-49071.nexcesscdn.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/171401288_2.jpg" class="img-insp" alt="Dummy Image">
                     <div class="insp-post-cont black-to-white">Iusto magni quasi recusandae autem ipsum asperiores consequatur explicabo, vero nam iste quas sequi reiciendis quod, quos!</div>
                   </div>
                 </div>

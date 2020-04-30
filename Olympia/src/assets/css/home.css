@@ -2518,6 +2518,7 @@ figure.snip1321.hover:after {
   margin-bottom: 30px;
   width: 100%;
   margin-bottom: 30px;
+  margin-top: 10px;
 }
 .masonry-item, .masonry-content {
   border-radius: 21px;
@@ -3279,6 +3280,7 @@ figure.snip1321.hover:after {
   margin-right: calc(7.5% - 10px);
   padding: 10px;
   border-radius: 21px;
+  max-height: 700px;
 }
 .insp-post-cont{
   font-family: 'Montserrat', sans-serif;
