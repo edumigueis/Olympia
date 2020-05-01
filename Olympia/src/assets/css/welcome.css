@@ -13,6 +13,17 @@
   src: url("../fonts/Gooseberry Juice.otf");
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins-light.otf");
+}
+
+@font-face {
+  font-family: "Calibre-Regular";
+  src: url("/src/assets/fonts/calibri-7.ttf");
+}
+
+
 html,
 body {
   overflow: hidden;
@@ -24,7 +35,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, rgb(235, 56, 190), rgb(93, 61, 236));
+  background-color: #90d5ec;
+background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+
 }
 .canvas-wrap {
   position: relative;
@@ -225,15 +238,110 @@ polygon.arrow-top {
   opacity: 0.5;
 }
 
-#bola-sobre {
-  transition: 1s all;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  top: 100%;
-  left: 0;
+#title-modal{
+  font-family: 'Poppins';
+  font-size: 2.4em;
 }
+
+#text-modal{
+  font-family: 'Calibre-Regular';
+  font-size: 0.9em;
+  text-align: justify;
+  text-indent: 1em;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px){
+  #title-modal{
+    font-size: 1.2em;
+  }
+  
+  #text-modal{
+    font-size: 0.62em;
+  }
+}
+
+@media only screen and (min-width: 970px) and (max-width: 1199px){
+  #title-modal{
+    font-size: 1.8em;
+  }
+  #text-modal{
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+  #title-modal{
+    font-size: 2.1em;
+  }
+  
+  #text-modal{
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 1650px) and (max-width: 2000px){
+  #title-modal{
+    font-size: 2.6em;
+  }
+  
+  #text-modal{
+    font-size: 1.45em;
+  }
+}
+
+@media only screen and (min-width: 2000px){
+  #title-modal{
+    font-size: 3.2em;
+    }
+  
+  #text-modal{
+    font-size: 1.8em;
+  }
+}
+
+.modal-sobre{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.644);
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: none;
+}
+
+.modal-sobre-active{
+  display: block;
+}
+
+.modal-container{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.modal-content{
+  width: 50%;
+  height: fit-content;
+  padding: 15px;
+  background-color: rgb(221, 221, 221);
+  border-radius: 18px;
+  box-shadow: 0 0 15px black;
+}
+
+#table-modal  tr td{
+  vertical-align: top;
+  text-align: center;
+}
+
+#td1-modal{
+  width: 100%;
+}
+
 
 @keyframes swing {
   15% {
@@ -587,3 +695,5 @@ polygon.arrow-top {
     cursor: pointer;
   }
 }
+
+
