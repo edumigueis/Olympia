@@ -86,7 +86,7 @@ setInterval(() => {
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><div class='bin-wrapper'><img class='bin' src='/src/assets/images/trash-can-icon.png' /></div>"
           );
           $(".bin").fadeOut();
         }
@@ -103,7 +103,7 @@ setInterval(() => {
           $(".signup-image").html(
             "<figure class='default-prof-user'><img src='" +
             selectedImage +
-            "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><div class='bin-wrapper'><img class='bin' src='/src/assets/images/trash-can-icon.png' /></div>"
           );
           $(".bin").fadeIn();
           $(".ui-widget-overlay").css('display','none');
@@ -127,7 +127,7 @@ setInterval(() => {
             $('.is-same-cont').css("background-color", "transparent");
             $("#user-let-img").empty();
             $(".signup-image").html(
-              "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+              "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><div class='bin-wrapper'><img class='bin' src='/src/assets/images/trash-can-icon.png' /></div>"
             );
             $(".ui-widget-overlay").css('display','none');
             $("#pick-image-modal").css('display','none');
@@ -161,7 +161,7 @@ setInterval(() => {
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
           $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><div class='bin-wrapper'><img class='bin' src='/src/assets/images/trash-can-icon.png' /></div>"
           );
           $(".bin").fadeOut();
         }
