@@ -3684,4 +3684,13 @@ figure.snip1321.hover:after {
   .modal-content {
     width: 100%;
   }
+  .close-mod{
+    margin-top: -52px;
+    right: 30px;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 830px) {
+  .close-mod{
+    margin-top: -52px;
+  }
 }

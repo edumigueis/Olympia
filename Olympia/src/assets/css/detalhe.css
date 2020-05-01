@@ -60,10 +60,7 @@ html {
   margin-bottom: 1%;
   margin-top: 9% !important;
   background-color: #fff;
-  padding: 4px;
   transition: 1s all;
-  padding-right: 1%;
-  padding-left: 0.9%;
 }
 
 #info-col-d {
@@ -305,7 +302,6 @@ width: 100%;
   max-width: 900px;
   min-height: 310px;
   height: 100%;
-  margin: 5px;
   transition: 1s all;
   border-radius: 15px;
 }
@@ -620,6 +616,15 @@ ul li {
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
+  }
+  .close-mod{
+    margin-top: -52px;
+    right: 30px;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 830px) {
+  .close-mod{
+    margin-top: -52px;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 461px) {
