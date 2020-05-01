@@ -1092,13 +1092,35 @@ html {
   vertical-align: middle;
 }
 
-.modal-content{
+.slider-modal-content{
   width: 50%;
   height: fit-content;
   padding: 15px;
   background-color: rgb(221, 221, 221);
   border-radius: 18px;
   box-shadow: 0 0 15px black;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.5s;
+  animation-name: zoom;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 #table-modal  tr td{
@@ -2637,6 +2659,9 @@ figure.snip1321.hover:after {
   filter: invert(88%);
   font-size: 29px;
 }
+.fa-star:hover{
+  opacity: .8;
+}
 .magic {
   display:inline-block;
   position:relative;
@@ -2666,10 +2691,10 @@ figure.snip1321.hover:after {
 }
 .magic i{
   color:orange;
-  filter:grayscale(100%);
+  filter:grayscale(100%)!important;
 }
-.magic:focus i{
-  animation:change 1s forwards;
+.is-star-active i{
+  animation:change 0.5s forwards;
 }
 
 
@@ -2691,24 +2716,24 @@ figure.snip1321.hover:after {
 .magic:before {
   content:"";
   position:absolute;
-  top:calc(50% - 45px);
-  left:calc(50% - 45px);
-  width:90px;
-  height:90px;
+  top:calc(50% - 30px);
+  left:calc(50% - 30px);
+  width:60px;
+  height:60px;
   border-radius:50%;
   border-color:orange;
   border-style:solid;
-  border-width:45px;
+  border-width:2px;
   transform:scale(0);
   box-sizing:border-box;
 }
 
-.magic:focus::before {
+.is-star-active::before {
   border-width:0;
   transform:scale(1);
   transition:
-    transform 0.5s,
-    border-width 0.5s 0.5s;
+    transform 0.4s,
+    border-width 0.25s 0.25s;
 }
 
 /**/
@@ -2752,17 +2777,17 @@ figure.snip1321.hover:after {
   transform:rotate(10deg) scale(0);
 }
 
-.magic:focus:after {
+.is-star-active:after {
   transform:scale(1);
   opacity:0;
   background-size:0 0;
-  transition:transform 0.5s 0.5s,opacity 0.4s 0.9s,background-size 0.5s 0.9s;
+  transition:transform 0.35s 0.35s,opacity 0.35s 0.7s,background-size 0.35s 0.7s;
 }
-.magic:focus i:after {
+.is-star-active i:after {
   transform:rotate(10deg) scale(1);
   opacity:0;
   background-size:0 0;
-  transition:transform 0.5s 0.5s,opacity 0.4s 0.9s,background-size 0.5s 0.9s;
+  transition:transform 0.35s 0.35s,opacity 0.35s 0.7s,background-size 0.35s 0.7s;
 }
 
 /**/

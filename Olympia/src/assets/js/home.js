@@ -4,6 +4,20 @@ var x = 0;
 var passou = false;
 
 var jaFoiHome = false;
+var jaFoiHome2 = false;
+
+setInterval(() => {
+  if ($('#container-home').length && jaFoiHome == false) {
+    jaFoiHome2 = true;
+    var altura = $('.activo').css('height').toString();
+    var num = altura.substring(0, (altura.length-2));
+    var num = parseInt(num) +100;
+    $('.slider-container').css('height',num + "px");
+  }
+  else if (!$('#container-home').length) {
+    jaFoiHome2 = false;
+  }
+}, 500);
 
 setInterval(() => {
   if ($('#container-home').length && jaFoiHome == false) {
@@ -15,13 +29,6 @@ setInterval(() => {
           var num = altura.substring(0, (altura.length-2));
           var num = parseInt(num) +100;
           $('.slider-container').css('height',num + "px");
-
-          setInterval(() => {
-            var altura = $('.activo').css('height').toString();
-            var num = altura.substring(0, (altura.length-2));
-            var num = parseInt(num) +100;
-            $('.slider-container').css('height',num + "px");
-          }, 500);
 
           window.onresize = function(){
             setTimeout(() => {
