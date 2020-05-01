@@ -2584,10 +2584,11 @@ figure.snip1321.hover:after {
   position: absolute;
   z-index: 5000;
   margin-top: -30px ;
-  display: flex;
+  display: inline-flex;
+  flex-wrap: nowrap;
   align-items: flex-end;
   justify-content: flex-end;
-  width: 20%;
+  width: 50%;
   margin-left: 95%;
   float: right;
 }
@@ -2625,7 +2626,146 @@ figure.snip1321.hover:after {
   position: relative;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+          width: 100px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
 }
+.fa-star{
+  filter: invert(88%);
+  font-size: 29px;
+}
+.magic {
+  display:inline-block;
+  position:relative;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px !important;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.is-star-active i{
+  color:orange !important;
+  filter:grayscale(0%) !important;
+}
+.magic i{
+  color:orange;
+  filter:grayscale(100%);
+}
+.magic:focus i{
+  animation:change 1s forwards;
+}
+
+
+@keyframes change{
+  50% {
+    transform:scale(0);
+  filter:grayscale(100%);
+  }
+  51% {
+    filter:grayscale(0%);
+  }
+  100% {
+    transform:scale(1);
+    filter:grayscale(0%);
+  }
+}
+/**/
+
+.magic:before {
+  content:"";
+  position:absolute;
+  top:calc(50% - 45px);
+  left:calc(50% - 45px);
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  border-color:orange;
+  border-style:solid;
+  border-width:45px;
+  transform:scale(0);
+  box-sizing:border-box;
+}
+
+.magic:focus::before {
+  border-width:0;
+  transform:scale(1);
+  transition:
+    transform 0.5s,
+    border-width 0.5s 0.5s;
+}
+
+/**/
+
+.magic::after,
+.magic i::after{
+  content:"";
+  position:absolute;
+  width:160px;
+  height:160px;
+  left:calc(50% - 80px);
+  top:calc(50% - 80px);
+  background:
+    /*4 reds*/
+    radial-gradient(circle,red 50%,transparent 60%),
+    radial-gradient(circle,red 50%,transparent 60%),
+    radial-gradient(circle,red 50%,transparent 60%),
+    radial-gradient(circle,red 50%,transparent 60%),
+    /*4 oranges*/
+    radial-gradient(circle,orange 50%,transparent 60%),
+    radial-gradient(circle,orange 50%,transparent 60%),
+    radial-gradient(circle,orange 50%,transparent 60%),
+    radial-gradient(circle,orange 50%,transparent 60%); 
+  
+  background-size:16px 16px; 
+  background-position:
+    calc(50% - 50px) calc(50% - 50px),
+    calc(50% + 50px) calc(50% - 50px),
+    calc(50% - 50px) calc(50% + 50px),
+    calc(50% + 50px) calc(50% + 50px),
+    calc(50% +  0px) calc(50% + 70px),
+    calc(50% + 70px) calc(50% +  0px),
+    calc(50% - 70px) calc(50% +  0px),
+    calc(50% +  0px) calc(50% - 70px);
+  background-repeat:no-repeat;
+  border-radius:50%;
+  transform:scale(0);
+}
+.magic i::after {
+  background-size:10px 10px;
+  transform:rotate(10deg) scale(0);
+}
+
+.magic:focus:after {
+  transform:scale(1);
+  opacity:0;
+  background-size:0 0;
+  transition:transform 0.5s 0.5s,opacity 0.4s 0.9s,background-size 0.5s 0.9s;
+}
+.magic:focus i:after {
+  transform:rotate(10deg) scale(1);
+  opacity:0;
+  background-size:0 0;
+  transition:transform 0.5s 0.5s,opacity 0.4s 0.9s,background-size 0.5s 0.9s;
+}
+
+/**/
 @media only screen and (max-width: 768px){
   .interact-container{
     width: 100%;
@@ -2636,11 +2776,28 @@ figure.snip1321.hover:after {
     margin-right: -50px ;
   }
 }
+@media only screen and (min-width: 769px){
+  .stage{
+    margin-right: -50px ;
+  }
+  .insp-stage{
+    margin-right: 0px !important;
+  }
+  .insp-stage-1{
+    margin-right: -40px !important
+  }
+  .interact-container{
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: -40px;
+  }
+}
 .insp-inte{
   width: 80% !important;
     margin-left: 0 !important;
     margin-top: -40px !important;
 }
+
 @media only screen and (min-width: 1061px){
   .insp-inte{
     width: 70% !important;

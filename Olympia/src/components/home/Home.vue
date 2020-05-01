@@ -338,27 +338,27 @@
       <!-- feed -->
       <section id="home-feed">
         <div id="background-wrap" class="white-6">
-        <div class="bubble x1"></div>
-        <div class="bubble x2"></div>
-        <div class="bubble x3"></div>
-        <div class="bubble x4"></div>
-        <div class="bubble x5"></div>
-        <div class="bubble x6"></div>
-        <div class="bubble x7"></div>
-        <div class="bubble x8"></div>
-        <div class="bubble x9"></div>
-        <div class="bubble x10"></div>
-        <div class="bubble x11"></div>
-        <div class="bubble x12"></div>
-        <div class="bubble x13"></div>
-        <div class="bubble x14"></div>
-        <div class="bubble x15"></div>
-        <div class="bubble x16"></div>
-        <div class="bubble x17"></div>
-        <div class="bubble x18"></div>
-        <div class="bubble x19"></div>
-        <div class="bubble x20"></div>
-      </div>
+          <div class="bubble x1"></div>
+          <div class="bubble x2"></div>
+          <div class="bubble x3"></div>
+          <div class="bubble x4"></div>
+          <div class="bubble x5"></div>
+          <div class="bubble x6"></div>
+          <div class="bubble x7"></div>
+          <div class="bubble x8"></div>
+          <div class="bubble x9"></div>
+          <div class="bubble x10"></div>
+          <div class="bubble x11"></div>
+          <div class="bubble x12"></div>
+          <div class="bubble x13"></div>
+          <div class="bubble x14"></div>
+          <div class="bubble x15"></div>
+          <div class="bubble x16"></div>
+          <div class="bubble x17"></div>
+          <div class="bubble x18"></div>
+          <div class="bubble x19"></div>
+          <div class="bubble x20"></div>
+        </div>
         <div class="slider-container">
           <div class="slider-control left inactive"></div>
           <div class="slider-control right"></div>
@@ -413,6 +413,11 @@
                     </a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -459,6 +464,11 @@
                       </figure>
                     </a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -529,6 +539,11 @@
                     </a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -580,6 +595,11 @@
                     </a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -628,6 +648,11 @@
                       </figure>
                     </a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -680,6 +705,11 @@
                     </a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -731,6 +761,11 @@
                     </a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -750,6 +785,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -778,6 +818,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -801,10 +846,12 @@
                     <a class="link-to-serv" href="/#/detalhes"
                       ><img
                         src="https://picsum.photos/450/280?image=300"
-                        class="img-serv"> </a>
-                        <div class="stage">
-  <div class="heart"></div>
-</div>
+                        class="img-serv"
+                      />
+                    </a>
+                    <div class="stage">
+                      <div class="heart"></div>
+                    </div>
                     <h3 class="masonry-title">
                       Adipisci alias ullam est accusamus
                     </h3>
@@ -827,6 +874,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -855,6 +907,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -885,6 +942,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -911,6 +973,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -941,6 +1008,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -969,6 +1041,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -995,6 +1072,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1025,6 +1107,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1052,6 +1139,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1076,6 +1168,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1103,6 +1200,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1132,6 +1234,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1157,6 +1264,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1185,6 +1297,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1215,6 +1332,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1241,6 +1363,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1271,6 +1398,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1299,6 +1431,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1325,6 +1462,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1355,6 +1497,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1382,6 +1529,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1406,6 +1558,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1433,6 +1590,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1462,6 +1624,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1487,6 +1654,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1516,6 +1688,11 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
+                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1544,6 +1721,11 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
+                      <div class="stage">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1589,6 +1771,11 @@
                       alt="Dummy Image"
                     />
                     <div class="interact-container insp-inte">
+                      <div class="stage insp-stage insp-stage-1">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage insp-stage">
                         <div class="heart"></div>
                       </div>
@@ -1622,6 +1809,11 @@
                       alt="Dummy Image"
                     />
                     <div class="interact-container insp-inte">
+                      <div class="stage insp-stage insp-stage-1">
+                        <button class="magic">
+                          <i class="fas fa-star"></i>
+                        </button>
+                      </div>
                       <div class="stage insp-stage">
                         <div class="heart"></div>
                       </div>
@@ -1642,7 +1834,7 @@
         <span class="close-mod">&times;</span>
         <img class="modal-content" id="img01" />
         <div id="caption"></div>
-              <meu-mouse></meu-mouse>
+        <meu-mouse></meu-mouse>
       </div>
       <meu-footer></meu-footer>
     </div>
