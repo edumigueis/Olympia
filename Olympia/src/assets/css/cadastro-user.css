@@ -709,7 +709,11 @@ input[type="file"] {
 .file-label:hover {
   opacity: 0.7;
 }
-
+#profile-pic{
+  height: inherit;
+  object-fit: cover;
+  width: inherit;
+}
 .profile-pic {
   max-width: 200px;
   max-height: 200px;
@@ -726,10 +730,15 @@ input[type="file"] {
   float: right;
   margin-right: 10%;
   margin-top: -15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
 }
 .profile-pic {
   width: auto;
   height: 100%;
+  object-fit: cover;
 }
 .file-input-title {
   text-align: center;
