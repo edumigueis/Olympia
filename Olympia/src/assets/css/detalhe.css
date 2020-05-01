@@ -627,12 +627,16 @@ ul li {
     margin-top: -52px;
   }
 }
-@media only screen and (min-width: 300px) and (max-width: 461px) {
+@media only screen and (min-width: 200px) and (max-width: 461px) {
   #info-1{
-    width: 100%;
+    width: 95%;
+    border-radius: 16px;
   }
   #info-col-d{
     margin-top: 70px;
+  }
+  #info-2{
+    width: 80%;
   }
  
 }
