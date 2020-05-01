@@ -1160,6 +1160,10 @@ html {
   }
 }
 
+body {
+  margin: 0;
+}
+
 .demo-cont {
   overflow: hidden;
   position: relative;
@@ -2241,8 +2245,6 @@ input[type="radio"]
   position: relative;
   z-index: 999;
   margin-top: 5vh;
-  margin-bottom: -50px!important;
-  
 }
 @font-face {
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/polar.otf");
@@ -2251,8 +2253,6 @@ input[type="radio"]
 
 body {
   background: #fff;
-  margin: 0;
-  height: fit-content;
 }
 
 svg {
@@ -2269,19 +2269,17 @@ svg {
   -ms-user-select: none;
   user-select: none;
   cursor: all-scroll;
-  overflow: hidden;
-  transform: translateY(-5.2vh);
-  padding-top: 0;
 }
 
 .slider-control {
   z-index: 2;
   position: absolute;
-  top: 0;
+  top: -5vh;
   width: 5%;
-  height: 110%;
+  height: 100%;
   -webkit-transition: opacity 0.3s;
-  transition: opacity 0.2s;
+  transition: opacity 0.3s;
+  will-change: opacity;
   opacity: 0;
 }
 .slider-control.inactive:hover {
@@ -2433,7 +2431,6 @@ svg {
   top: 0;
   bottom: 0;
   left: 0;
-  margin-top: -5vh;
   z-index: -2;
   -webkit-animation: BubblesBackground 15s ease infinite;
   -moz-animation: BubblesBackground 15s ease infinite;

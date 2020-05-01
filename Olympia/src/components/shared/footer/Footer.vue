@@ -13,7 +13,7 @@
       <div id="copyright" class="wfont">© OLYMPIA INC. All Rights Reserved.</div>
 
       <div id="lower-footer">
-        <a class="footer-link back-to-top">Back To Top</a><span class="span-bar">|</span>
+        <a class="footer-link">Back To Top</a><span class="span-bar">|</span>
         <a class="footer-link  dark-mode-activators" id="dark-mode-link">Modo Noturno</a><span class="span-bar">|</span>
         <a class="footer-link">Termos De Uso</a>
         <a class="footer-config"><img src="/src/assets/images/config.png" class="config-img"></a>

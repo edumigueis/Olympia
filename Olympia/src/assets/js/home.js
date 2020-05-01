@@ -11,27 +11,7 @@ setInterval(() => {
     $(function () {
 
       $(function () {
-        var altura = $('.slide__content').css('height').toString();
-          var num = altura.substring(0, (altura.length-2));
-          var num = parseInt(num) +100;
-          $('.slider-container').css('height',num + "px");
 
-          setInterval(() => {
-            var altura = $('.activo').css('height').toString();
-            var num = altura.substring(0, (altura.length-2));
-            var num = parseInt(num) +100;
-            $('.slider-container').css('height',num + "px");
-          }, 500);
-
-          window.onresize = function(){
-            setTimeout(() => {
-              var altura = $('.activo').css('height').toString();
-              var num = altura.substring(0, (altura.length-2));
-              var num = parseInt(num) +100;
-              $('.slider-container').css('height',num + "px");
-            }, 500);
-
-          }
         var $$ = function (selector, context) {
           var context = context || document;
           var elements = context.querySelectorAll(selector);
@@ -260,8 +240,6 @@ setInterval(() => {
             $sliderFeed.css("top");
             $(".slide").removeClass("active");
             $(".slide-" + curSlide).addClass("active");
-            $(".slide").removeClass("activo");
-            $(".slide-" + curSlide).addClass("activo");
             setTimeout(function () {
               $sliderFeed.removeClass("animating");
               animating = false;
@@ -437,10 +415,6 @@ setInterval(() => {
           $('#to-slide-1').removeClass('active-tab-p');
           $('#to-slide-2').removeClass('active-tab-p');
           $('#page-name-on-tab').text('Explorar');
-          var altura = $('.slide__content').css('height').toString();
-          var num = altura.substring(0, (altura.length-2));
-          var num = parseInt(num) +100;
-          $('.slider-container').css('height',num + "px");
         });
         $(document).on("click", "#to-slide-1", function () {
           curSlide = 1;
@@ -449,10 +423,6 @@ setInterval(() => {
           $('#to-slide-0').removeClass('active-tab-p');
           $('#to-slide-2').removeClass('active-tab-p');
           $('#page-name-on-tab').text('Aprender');
-          var altura = $('.slide-1').css('height').toString();
-          var num = altura.substring(0, (altura.length-2));
-          var num = parseInt(num) + 100;
-          $('.slider-container').css('height',num + "px");
         });
         $(document).on("click", "#to-slide-2", function () {
           curSlide = 2;
@@ -461,10 +431,6 @@ setInterval(() => {
           $('#to-slide-1').removeClass('active-tab-p');
           $('#to-slide-0').removeClass('active-tab-p');
           $('#page-name-on-tab').text('Inspirar-se');
-          var altura = $('.slide-2').css('height').toString();
-          var num = altura.substring(0, (altura.length-2));
-          var num = parseInt(num) + 100;
-          $('.slider-container').css('height',num + "px");
         });
         $(document).on("click", "#list-tab-ut", function () {
           if($('#app-cover').css('display') == 'block'){

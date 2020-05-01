@@ -1,10 +1,6 @@
 
 $(document).ready(function () {
 
-    $('body').on('click','.back-to-top',function(){
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        $('#menu-bar').css('transform','none');
-    })
 
     var body = document.getElementsByTagName("body")[0];
 
@@ -38,6 +34,7 @@ $(document).ready(function () {
         else{
             $('#menu-bar').css('transform','none');
         }
+
     }
 
     setInterval(updateGradient, 10);
