@@ -126,9 +126,28 @@
             </svg>
         </div>
 
-        <svg id="bola-sobre" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <circle cx="50" cy="55" r="35" fill="lightgray"></circle>
-        </svg>
+        <div class="modal-sobre">
+        <div class="modal-container">
+          <div class="modal-content" id="content">
+            <table id="table-modal">
+              <tr>
+                <td id="td1-modal">
+                  <h1 id="title-modal">Uma breve introdução...</h1>      
+                  <p id="text-modal">
+                    Seja muito bem-vindo ao Olympia! Esperamos que deixe qualquer sentimento ruim de lado para 
+                    mergulhar no incrível mundo da arte com a gente! Talvez você esteja se perguntando "para que serve
+                    esse site??"... uma breve introdução: se prepare para publicar aquela pintura, linda foto ou divulgar um
+                    grande teatro em que vai participar! Compartilhe com a comunidade eventos artísticos e seja convidado para 
+                    palestras e workshops! Criamos até uma área chamada "Inspire-se", prontinha para suas dicas artísticas ou
+                    frases inspiradoras... não posso falar mais, sabe o porquê? Por que você terá que se logar e experimentar esse
+                    lindo ambiente!
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
 
       </div>
 

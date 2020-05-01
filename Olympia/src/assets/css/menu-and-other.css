@@ -64,6 +64,7 @@
   padding: 0px;
   margin: 0px;
   position: fixed;
+  overflow-y: hidden;
 }
 
 .gradient {
@@ -316,7 +317,6 @@
   margin: 0;
   padding: 0;
   max-width: 1600px;
-  max-height: 900px;
 }
 
 .ico {
@@ -2041,21 +2041,16 @@ position: relative;
 
 /*Responsividade da altura da tela no menu items*/
 @media screen and (min-width: 0px) and (max-width: 501px) 
-and (min-height: 730px){
-  .menu-container{
-    height: 150%!important;
-  }
-}
-@media screen and (min-width: 0px) and (max-width: 501px) 
 and (min-height: 600px){
   #menu-items {
     font-size: 170%;
-    position: absolute;
+    position: fixed;
     overflow-x: hidden;
+    height: 100%!important;
   }
   .menu-container{
     position: absolute;
-    height: 180%;
+    height: 190vh;
   }
   .close-img{
     width: 40px!important;
@@ -2085,19 +2080,19 @@ and (min-height: 600px){
   }
   #col-menu-1 {
     margin: auto;
-    transform: translate(-10px,-70px);
+    transform: translate(-10px,-140px);
   }
 
   #col-menu-2 {
     margin: auto;
     top: 320px!important;
-    transform: translate(-10px,-70px);
+    transform: translate(-10px,-40px);
   }
 
   #col-menu-3 {
     margin: auto;
     top: 635px!important;
-    transform: translate(-10px,-70px);
+    transform: translate(-10px,70px);
   }
 }
 
