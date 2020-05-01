@@ -570,10 +570,10 @@ html {
   background-color: #8a8a8a;
 }
 .fnc-slider .m--blend-dark .fnc-slide__mask-inner {
-  background-color: #575757;
+  background-color:#575757; 
 }
 .fnc-slider .m--navbg-dark {
-  background-color: rgba(238, 101, 101, 0.904);
+  background-color: #a9c068;
 }
 .fnc-slider .m--blend-green .fnc-slide__inner {
   background-color: #6d9b98;
@@ -582,7 +582,7 @@ html {
   background-color: #42605e;
 }
 .fnc-slider .m--navbg-green {
-  background-color: #5e6068;
+  background-color: #e76363;
 }
 .fnc-slider .m--blend-red .fnc-slide__inner {
   background-color: #ea2329;
@@ -1581,6 +1581,7 @@ html {
   margin-bottom: 8px;
   margin-left: 0;
   padding: 10px;
+  padding-left: 20px;
   font-family: 'Poppins', sans-serif;
   color: #222;
   width: 90%;
