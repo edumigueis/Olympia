@@ -1388,6 +1388,17 @@ img{
     position: absolute;
   }
 }
+@media screen and (max-width: 430px){
+#user-let-img {
+    width: 210px !important;
+    height: 210px !important;
+    margin-left: 0 !important;
+}
+.prof-user-letter{
+  font-size: 10em;
+  padding-top: 9%;
+}
+}
 @media screen and (min-width: 1100px) and (max-width: 1200px) {
   .hexcolor {
     margin-right: -650px;
@@ -1603,7 +1614,7 @@ img{
     height: 150px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   .social-login {
     flex-direction: column;
     -moz-flex-direction: column;
@@ -1616,7 +1627,19 @@ img{
     margin-bottom: 10px;
   }
   #pick-image-modal {
-    height: 400px !important;
+    height: 450px !important;
+  }
+  .circle{
+    margin-right: 0 !important;
+    margin-bottom: 40px !important;
+  }
+  .hexcolor{
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  .color-holder{
+    margin-top: -56px;
   }
   .error-modal {
     height: 400px !important;
