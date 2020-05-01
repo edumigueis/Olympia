@@ -336,7 +336,8 @@
         </div>
       </section>
       <!-- feed -->
-      <div id="background-wrap" class="white-6">
+      <section id="home-feed">
+        <div id="background-wrap" class="white-6">
         <div class="bubble x1"></div>
         <div class="bubble x2"></div>
         <div class="bubble x3"></div>
@@ -358,13 +359,12 @@
         <div class="bubble x19"></div>
         <div class="bubble x20"></div>
       </div>
-      <section id="home-feed">
         <div class="slider-container">
           <div class="slider-control left inactive"></div>
           <div class="slider-control right"></div>
           <ul class="slider-pagi"></ul>
           <div class="slider">
-            <div class="slide slide-0 active">
+            <div class="slide slide-0 active activo">
               <div class="slide__bg"></div>
               <div class="slide__content">
                 <div class="feed-item">
@@ -383,7 +383,7 @@
                     </div>
                   </div>
                   <div class="post-img-cont">
-                    <a href="/#/obra">
+                    <a href="/#/detalhes">
                       <figure class="snip1321">
                         <img
                           src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
@@ -434,7 +434,7 @@
                     </div>
                   </div>
                   <div class="post-img-cont">
-                    <a href="/#/obra">
+                    <a href="/#/detalhes">
                       <figure class="snip1321">
                         <img
                           src="https://www.tickpick.com/blog/wp-content/uploads/2019/02/audience-1835431_1280.jpg"
@@ -502,7 +502,7 @@
                     </div>
                   </div>
                   <div class="post-img-cont">
-                    <a href="/#/obra">
+                    <a href="/#/detalhes">
                       <figure class="snip1321">
                         <img
                           src="https://paintingvalley.com/image/watercolor-art-pinterest-22.jpg"
@@ -550,7 +550,7 @@
                     </div>
                   </div>
                   <div class="post-img-cont">
-                    <a href="/#/obra">
+                    <a href="/#/detalhes">
                       <figure class="snip1321">
                         <img
                           src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
@@ -601,7 +601,7 @@
                     </div>
                   </div>
                   <div class="post-img-cont">
-                    <a href="/#/obra">
+                    <a href="/#/detalhes">
                       <figure class="snip1321">
                         <img
                           src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
@@ -650,7 +650,7 @@
                     </div>
                   </div>
                   <div class="post-img-cont">
-                    <a href="/#/obra">
+                    <a href="/#/detalhes">
                       <figure class="snip1321">
                         <img
                           src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg"
@@ -701,7 +701,7 @@
                     </div>
                   </div>
                   <div class="post-img-cont">
-                    <a href="/#/obra">
+                    <a href="/#/detalhes">
                       <figure class="snip1321">
                         <img
                           src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
