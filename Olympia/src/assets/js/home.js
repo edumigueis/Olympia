@@ -490,6 +490,9 @@ setInterval(() => {
           $(".heart").on("click", function() {
             $(this).toggleClass("is-active");
           });
+          $(".magic").on("click", function() {
+            $(this).toggleClass("is-star-active");
+          });
           $(document.body).on('click', '.img-insp', function () {
             var src = $(this).attr("src");
             $('#myModal').css('display', 'block');
