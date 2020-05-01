@@ -80,10 +80,10 @@
                 <div class="fnc-slide__content">
                   <h2 class="fnc-slide__heading">
                     <div class="fnc-slide__heading-line">
-                      <span>Gradient of</span>
+                      <span>Daily</span>
                     </div>
                     <div class="fnc-slide__heading-line">
-                      <span>The month</span>
+                      <span>Gradient</span>
                     </div>
                   </h2>
                   <button type="button" class="fnc-slide__action-btn">
