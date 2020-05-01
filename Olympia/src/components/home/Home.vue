@@ -1638,7 +1638,12 @@
           </div>
         </div>
       </section>
-
+      <div id="myModal" class="modal">
+        <span class="close-mod">&times;</span>
+        <img class="modal-content" id="img01" />
+        <div id="caption"></div>
+              <meu-mouse></meu-mouse>
+      </div>
       <meu-footer></meu-footer>
     </div>
   </main>

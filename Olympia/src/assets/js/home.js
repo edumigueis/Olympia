@@ -490,6 +490,25 @@ setInterval(() => {
           $(".heart").on("click", function() {
             $(this).toggleClass("is-active");
           });
+          $(document.body).on('click', '.img-insp', function () {
+            var src = $(this).attr("src");
+            $('#myModal').css('display', 'block');
+            $("#img01").attr("src", src);
+            $(window).scrollTop(0);
+            $('#mouse').css('display', 'block');
+            $('#footer').css('display', 'none');
+          });
+          $(document.body).on('click', '.close-mod', function () {
+            $('#myModal').css('display', 'none');
+            $('#mouse').css('display', 'none');
+            $('#footer').css('display', 'block');
+          })
+    
+          $(document.body).on('click', '#myModal', function () {
+            $('#myModal').css('display', 'none');
+            $('#mouse').css('display', 'none');
+            $('#footer').css('display', 'block');
+          })
       })
 
     })
