@@ -157,9 +157,7 @@
               </figure>
               <div id="user-let-img"></div>
               <p class="signup-image-link">Escolher Foto de Perfil</p>
-              <div class="bin-wrapper">
               <img class="bin" src="/src/assets/images/trash-can-icon.png" />
-              </div>
             </div>
           </div>
         </div>
