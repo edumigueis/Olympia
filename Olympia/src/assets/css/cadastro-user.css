@@ -27,17 +27,12 @@ body {
 .hexcolor {
   display: none;
 }
-.bin-wrapper{
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
 .bin {
   transition: 0.5s all;
   height: 40px;
   padding-right: 10px;
   float: right;
+  margin-right: 38%;
   z-index: 99;
   display: none;
   margin-top: 8%;
