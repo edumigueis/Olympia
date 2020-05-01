@@ -2183,7 +2183,27 @@ input[type="radio"]
   .paginate-tab{
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 1.4em;
+    font-size: 1.3em;
+  }
+  #page-name-on-tab{
+    text-indent: 0;
+    font-size: 2.3em;
+  }
+  .right-tab-control{
+    width: 60%;
+    float: right;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 774px) and (max-width: 880px){
+  #tab-pages-cont{
+    width: 40%;
+    margin-left: 0;
+  }
+  .paginate-tab{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.2em !important;
   }
   #page-name-on-tab{
     text-indent: 0;
@@ -2255,7 +2275,7 @@ svg {
   z-index: 2;
   position: absolute;
   top: -5vh;
-  width: 9%;
+  width: 5%;
   height: 100%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -2519,6 +2539,7 @@ figure.snip1321.hover:after {
   width: 100%;
   margin-bottom: 30px;
   margin-top: 10px;
+  box-shadow: 3px 3px 9px 3px #666;
 }
 .masonry-item, .masonry-content {
   border-radius: 21px;
@@ -2554,6 +2575,72 @@ figure.snip1321.hover:after {
   font-size: .75rem;
   border-top: 1px solid rgba(0, 0, 0, .05);
   pointer-events: none;
+}
+.interact-container{
+  position: absolute;
+  z-index: 5000;
+  margin-top: -30px ;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 20%;
+  margin-left: 95%;
+  float: right;
+}
+[id='toggle-heart'] {
+  position: relative;
+  display: none;
+}
+.heart {
+  width: 100px;
+  height: 100px;
+  background: url("../images/heart-anim.png") no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  cursor: pointer;
+  z-index: 4000;
+  -webkit-transition: background-position 1s steps(28);
+  transition: background-position 1s steps(28);
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+}
+.heart.is-active {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  background-position: -2800px 0;
+}
+
+.stage {
+  position: relative;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 768px){
+  .interact-container{
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: -40px;
+  }
+  .stage{
+    margin-right: -50px ;
+  }
+}
+.insp-inte{
+  width: 80% !important;
+    margin-left: 0 !important;
+    margin-top: -40px !important;
+}
+@media only screen and (min-width: 1061px){
+  .insp-inte{
+    width: 70% !important;
+      margin-left: 0 !important;
+      margin-top: -40px !important;
+  }
+}
+@media only screen and (min-width: 1361px){
+  .insp-inte{
+    width: 67% !important;
+  }
 }
 /* ANIMATIONS */
 
@@ -3281,6 +3368,7 @@ figure.snip1321.hover:after {
   padding: 10px;
   border-radius: 21px;
   max-height: 700px;
+  pointer-events: none;
 }
 .insp-post-cont{
   font-family: 'Montserrat', sans-serif;
@@ -3305,6 +3393,13 @@ figure.snip1321.hover:after {
   }
 }
 @media only screen and (min-width: 560px) and (max-width: 760px){
+  .insp-item{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1060px){
   .insp-item{
     width: 80%;
     margin-left: 10%;
