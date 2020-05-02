@@ -130,13 +130,13 @@
               </form>
             </div>
             <div class="form-group hexcolor">
-             <div class="color-holder call-picker" style="display: none"></div>
-            <div
-              class="color-picker"
-              id="color-picker"
-              style="display: none"
-            ></div>
-              <label id="ico-color" for="hexcolor" style="margin-top:-13px;margin-left:40px;">
+              <div class="color-holder call-picker" style="display: none"></div>
+
+              <label
+                id="ico-color"
+                for="hexcolor"
+                style="margin-top:-13px;margin-left:40px;"
+              >
                 <i class="zmdi dark-register-ico zmdi-palette"></i>
               </label>
               <input
@@ -146,7 +146,11 @@
                 id="hexcolor"
               />
             </div>
-
+            <div
+              class="color-picker"
+              id="color-picker"
+              style="display: none"
+            ></div>
             <div class="signup-image">
               <figure class="default-prof-user">
                 <img

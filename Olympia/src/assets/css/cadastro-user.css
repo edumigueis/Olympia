@@ -1529,8 +1529,9 @@ img{
     height: 320px;
   }
   .color-picker {
-    bottom: 30%;
-    left: 32%;
+    bottom: 28%;
+    left: 10%;
+    top: unset !important;
   }
   .zmdi-palette {
     padding-bottom: 0;
@@ -1542,6 +1543,13 @@ img{
   .circle{
     margin-top: -50%;
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 430px) {
+  .color-picker {
+    bottom: 19%;
+    left: 10%;
+    top: unset !important;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 929px) {
@@ -1685,6 +1693,7 @@ img{
   right: 30%;
   z-index: 4;
   float: right;
+  overflow: hidden;
 }
 
 .color-holder {

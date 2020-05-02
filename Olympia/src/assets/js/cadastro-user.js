@@ -42,25 +42,13 @@ var colorList = [
   "CCFF00",
   "CC04FF"
 ];
-
-for (var i = 0; i < colorList.length; i++) {
-  $("#color-picker").append(
-    '<li class="color-item" data-hex="' +
-    "#" +
-    colorList[i] +
-    '" style="background-color:' +
-    "#" +
-    colorList[i] +
-    ';"></li>'
-  );
-}
-
+var JaFoiForCad = false;
 var selectedImage;
 setInterval(() => {
   if ($("#container-cad-user").length && jaFoiCadUser == false) {
     $(function () {
       var firstLet = null;
-
+      
       $("#name").focusout(function () {
         $(".zmdi.zmdi-palette").fadeIn();
         $("#hexcolor").fadeIn();
@@ -81,6 +69,7 @@ setInterval(() => {
           $(".signup-image").css("margin-top", 0);
           $("#user-let-img").css("margin-bottom", "60px");
           firstLet = null;
+          
         } else {
           $("#user-let-img").css("display", "none");
           $(".hexcolor").css("display", "none");
@@ -90,6 +79,19 @@ setInterval(() => {
           );
           $(".bin").fadeOut();
         }
+            for (var i = 0; i < colorList.length; i++) {
+              $("#color-picker").append(
+                '<li class="color-item" data-hex="' +
+                "#" +
+                colorList[i] +
+                '" style="background-color:' +
+                "#" +
+                colorList[i] +
+                ';"></li>'
+              );
+              
+            }
+          
       });
       $("body").on("click", function () {
         $("#color-picker").fadeOut();
@@ -212,6 +214,7 @@ setInterval(() => {
           $("#name").css("border-left", 0);
           $("#name").css("border-right", 0);
           $("#name").css("border-bottom", "1px solid #999");
+          
         } else {
           return;
         }
