@@ -11,157 +11,192 @@
                     <meu-mouse></meu-mouse>
                     <meu-dark-mode></meu-dark-mode>
 
-                    <div id="line-containers">
+                    <div class="line-containers">
                     <div class="line">
-                        
+                        <a href="/#/pintura" class="image-link-to-art">
                         <div class="line-img-left">
-                            <a href="/#/pintura" class="image-link-to-art">
+                            
                             <img src="/src/assets/images/music.jpg" alt=""
                                 class="line-img">
-                                </a>
+                                
                         </div>
+                        </a>
                         
-                        <div class="card-center gray ">
+                        <div class="card-center gray card">
+                            <div class="text-cont-art inner-center">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
                         </div>
-                        <div class="card-right gray ">
+                        <div class="card-right gray card">
+                            <div class="text-cont-art inner-right">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="line">
-                        <div class="card-left gray ">
+                        <div class="card-left gray card">
+                            <div class="text-cont-art inner-left">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
                         </div>
-                        <div class="card-center gray ">
+                        <div class="card-center gray card">
+                            <div class="text-cont-art inner-center">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
                         </div>
-                        <div class="line-img-right" >
-                            <a href="/#/pintura" class="image-link-to-art">
+                        <a href="/#/pintura" class="image-link-to-art">
+                        <div class="line-img-right">
                             <img src="/src/assets/images/music.jpg" alt="" class="line-img">
-                            </a>
                         </div>
+                        </a>
 
                         
                         
                     </div>
                     <div class="line">
+                        <a href="/#/pintura" class="image-link-to-art">
                         <div class="line-img-left">
-                            <a href="/#/pintura" class="image-link-to-art">
-                            <img src="/src/assets/images/music.jpg" alt="" class="line-img">
-                                </a>
+                            
+                            <img src="/src/assets/images/music.jpg" alt=""
+                                class="line-img">
+                                
                         </div>
-                        <div class="card-center gray ">
+                        </a>
+                        <div class="card-center gray card">
+                            <div class="text-cont-art inner-center">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
                         </div>
-                        <div class="card-right gray ">
+                        <div class="card-right gray card">
+                            <div class="text-cont-art inner-right">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="line">
-                        <div class="card-center gray ">
+                        <div class="card-center gray card">
+                            <div class="text-cont-art inner-center">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
                         </div>
-                        <div class="card-left gray ">
+                        <div class="card-left gray card">
+                            <div class="text-cont-art inner-left">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
                         </div>
-                        <div class="line-img-right">
                         <a href="/#/pintura" class="image-link-to-art">
-                            <img src="/src/assets/images/music.jpg" alt=""
-                                class="line-img">
-                                </a>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="line">
-                        
-                        <div class="line-img-left">
-                            <a href="/#/pintura" class="image-link-to-art">
-                            <img src="/src/assets/images/music.jpg" alt=""
-                                class="line-img">
-                                </a>
-                        </div>
-                        
-                        <div class="card-center gray ">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
-                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
-                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
-                                cursus tellus malesuada, feugiat dolor.</p>
-                        </div>
-                        <div class="card-right gray ">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
-                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
-                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
-                                cursus tellus malesuada, feugiat dolor.</p>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="card-center gray ">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
-                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
-                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
-                                cursus tellus malesuada, feugiat dolor.</p>
-                        </div>
-                        <div class="card-left gray ">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
-                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
-                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
-                                cursus tellus malesuada, feugiat dolor.</p>
-                        </div>
                         <div class="line-img-right">
-                            <a href="/#/pintura" class="image-link-to-art">
                             <img src="/src/assets/images/music.jpg" alt="" class="line-img">
-                            </a>
                         </div>
+                        </a>
                         
                         
                     </div>
                     <div class="line">
                         
+                        <a href="/#/pintura" class="image-link-to-art">
                         <div class="line-img-left">
-                            <a href="/#/pintura" class="image-link-to-art">
+                            
                             <img src="/src/assets/images/music.jpg" alt=""
-                                class="line-img"><br><br>
-                                </a>
+                                class="line-img">
+                                
                         </div>
+                        </a>
                         
-                        <div class="card-center gray ">
+                        <div class="card-center gray card">
+                            <div class="text-cont-art inner-center">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
                         </div>
-                        <div class="card-right gray ">
+                        <div class="card-right gray card">
+                            <div class="text-cont-art inner-right">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="card-center gray card">
+                            <div class="text-cont-art inner-center">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
+                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
+                                cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
+                        </div>
+                        <div class="card-left gray card">
+                            <div class="text-cont-art inner-left">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
+                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
+                                cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
+                        </div>
+                        <a href="/#/pintura" class="image-link-to-art">
+                        <div class="line-img-right">
+                            <img src="/src/assets/images/music.jpg" alt="" class="line-img">
+                        </div>
+                        </a>
+                        
+                        
+                    </div>
+                    <div class="line">
+                        
+                        <a href="/#/pintura" class="image-link-to-art">
+                        <div class="line-img-left">
+                            
+                            <img src="/src/assets/images/music.jpg" alt=""
+                                class="line-img">
+                                
+                        </div>
+                        </a>
+                        
+                        <div class="card-center gray card">
+                            <div class="text-cont-art inner-center">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
+                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
+                                cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
+                        </div>
+                        <div class="card-right gray card">
+                            <div class="text-cont-art inner-right">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
+                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
+                                cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

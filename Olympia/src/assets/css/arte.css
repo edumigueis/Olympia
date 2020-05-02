@@ -76,14 +76,14 @@ body {
   background: rgb(92, 91, 91);
 }
 
-#line-containers {
-  padding: 0;
-  margin: 0;
+.line-containers {
   width: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 .footer-link {
@@ -192,51 +192,72 @@ body {
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
-
+  z-index: 2;
 }
 .image-link-to-art{
-  width: 380px;
-  height: 100%;
+  width: calc(100%/3);
+  height: fit-content;
+  z-index: 400000000000;
+  cursor: pointer;
 }
 .line-img-left {
-  width: calc(100%/3);
+  width: 100%;
 }
 
 .line-img-right {
-  float: right;
-
-  width: calc(100%/3);
+  width: 100%;
 }
-
+.inner-center{
+  margin-bottom: -30%;
+  background-color: rgb(230, 230, 230);
+}
+.inner-left{
+  margin-top: -70%;
+  background-color: rgb(230, 230, 230);
+}
+.inner-right{
+  margin-top: -70%;
+  background-color: rgb(230, 230, 230);
+  width: 90%;
+}
 .line-img {
   border-radius: 5%;
   width: 100%;
 }
 .card-right {
-  background-color: rgb(230, 230, 230);
+  background-color: transparent;
   width: calc(100%/3);
   text-align: justify;
   text-indent: 40px;
   position: relative;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-center {
   width: calc(100%/3);
-  background-color: rgb(230, 230, 230);
+  background-color: transparent;
   text-align: justify;
   text-indent: 40px;
   position: relative;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-left {
   width: calc(100%/3);
-  background-color: rgb(230, 230, 230);
+  background-color: transparent;
   text-align: justify;
   text-indent: 40px;
   position: relative;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @-webkit-keyframes AnimationName {
