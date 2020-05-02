@@ -1161,11 +1161,6 @@ html {
   border: 2px solid rgb(80, 80, 80);
 }
 
-#color-form-oculto{
-  top: -100px;
-  position: absolute;
-}
-
 @media screen and (min-width: 75px) and (max-width: 1050px){
   #container-color {
     height: 250px!important;
@@ -3622,12 +3617,14 @@ figure.snip1321.hover:after {
   border-radius: 21px;
   overflow: hidden;
   background-color: #f9f9f9;
+  padding-top: 20px;
 }
 .img-insp{
   width: 85%;
   margin-left: calc(7.5% - 10px);
   margin-right: calc(7.5% - 10px);
   padding: 10px;
+  margin-bottom: 30px;
   border-radius: 21px;
   max-height: 500px;
   object-fit: cover;
@@ -3643,8 +3640,11 @@ figure.snip1321.hover:after {
   text-indent: 1em;
   padding-left: calc(7.5% - 10px);
   padding-right: calc(7.5% - 10px);
-  padding-bottom: 30px;
-  padding-top: 5px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   color: #222;
   text-align: justify;
 }

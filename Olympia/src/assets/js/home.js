@@ -8,15 +8,11 @@ var jaFoiHome2 = false;
 var jaFoiHome3 = false;
 
 setInterval(() => {
-  if ($('#container-home').length && jaFoiHome2 == false) {
-    jaFoiHome2 = true;
+  if ($('#container-home').length) {
     var altura = $('.activo').css('height').toString();
     var num = altura.substring(0, (altura.length - 2));
     var num = parseInt(num) + 100;
     $('.slider-container').css('height', num + "px");
-  }
-  else if (!$('#container-home').length) {
-    jaFoiHome2 = false;
   }
 }, 500);
 
