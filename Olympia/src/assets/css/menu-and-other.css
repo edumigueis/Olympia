@@ -2430,6 +2430,33 @@ and (min-height: 600px){
   float: left;
   z-index: 1000;
 }
+@media only screen and (min-width: 0px) and (max-width: 349px){
+  #dark-mode-link-smf {
+    font-size: 0.8em!important;
+  }
+  #use-terms-smf {
+    font-size: 0.8em!important;
+  }
+  #copyright-small-footer {
+    font-size: 1em!important;
+    margin-bottom: 15px!important;
+    margin-top:10px!important;
+  }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 500px){
+  #dark-mode-link-smf {
+    font-size: 1.1em!important;
+  }
+  #use-terms-smf {
+    font-size: 1.1em!important;
+  }
+  #copyright-small-footer {
+    font-size: 1em!important;
+    margin-bottom: 10px!important;
+    margin-top:10px!important;
+  }
+}
 
 #use-terms-smf:hover {
   font-weight: bold;

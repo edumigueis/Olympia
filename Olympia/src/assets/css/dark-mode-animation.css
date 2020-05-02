@@ -39,6 +39,12 @@
   -webkit-transition: all 1.1s ease-in-out;
   transition: all 1.1s ease-in-out;
 }
+@media only screen and (min-width: 0) and (max-width: 500px){
+  .time-circle {
+    width: 200px;
+    height: 200px;
+  }
+}
 .night .time-circle {
   background: linear-gradient(to bottom, #111936, #285a7b);
   border-color: #e9e5d5;
