@@ -149,10 +149,83 @@
       <div class="modal-slider">
         <div class="modal-container">
           <div class="slider-modal-content" id="content">
-            <table id="table-modal">
+            <table id="table-modal" class='table-modal-1'>
               <tr>
                 <td id="td1-modal">
-                  <h1 id="title-modal">Daily Art</h1>
+                  <h1 id="title-modal">Daily Art 1</h1>
+                  <h2 id="subtitle-modal">"Mona Lisa", por Fernando Botero</h2>
+                  <h3 id="pretext-modal">Por que?</h3>
+                  <p id="text-modal">
+                    Percebemos, de cara, as formas arredondadas que o artista
+                    usou para representar a forma humana; com a intenção de
+                    destacar principalmente sua ganância. Botero nunca pintava
+                    personagens negras, pois justamente queria criticar a
+                    desigualdade social, que promove tal soberba.
+                  </p>
+                </td>
+                <td id="td2-modal">
+                  <div id="container-img-modal">
+                    <img
+                      id="image-modal"
+                      src="/src/assets/images/daily-art.jpg"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table id="table-modal" class='table-modal-2'>
+              <tr>
+                <td id="td1-modal">
+                  <h1 id="title-modal">Daily Art 2</h1>
+                  <h2 id="subtitle-modal">"Mona Lisa", por Fernando Botero</h2>
+                  <h3 id="pretext-modal">Por que?</h3>
+                  <p id="text-modal">
+                    Percebemos, de cara, as formas arredondadas que o artista
+                    usou para representar a forma humana; com a intenção de
+                    destacar principalmente sua ganância. Botero nunca pintava
+                    personagens negras, pois justamente queria criticar a
+                    desigualdade social, que promove tal soberba.
+                  </p>
+                </td>
+                <td id="td2-modal">
+                  <div id="container-img-modal">
+                    <img
+                      id="image-modal"
+                      src="/src/assets/images/daily-art.jpg"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table id="table-modal" class='table-modal-3'>
+              <tr>
+                <td id="td1-modal">
+                  <h1 id="title-modal" class="title-3">Daily Gradient</h1>
+                  <h2 id="subtitle-modal">Riacho verde - #7B89C7 --> #5DCEB9</h2>
+                  <h3 id="pretext-modal" class="pretext-3">Por que?</h3>
+                  <p id="text-modal">
+                    O gradiente "Riacho Verde" é composto for duas cores frias e calmantes. foi batizado assim
+                    para remeter a um bonito campo com um riacho de águas cristalinas. É comprovado que essas cores acalmam a mente, 
+                    reduzindo a pressão arterial e aumentando a consciência. 
+                  </p>
+                </td>
+                <td id="td2-modal">
+                  <div id="container-color">
+                    <div id="color-btn-container">
+                    <button id="button" class="BT-OH-BR-R6-NF-FH-FP-TU-PT" data-clipboard-text="background-color: #9eabe4;background-image: linear-gradient(315deg, #7b89c7 0%, #5dceb9 74%);">
+                      <canvas id="canvas"></canvas> 
+                      <hover></hover>
+                      <span id="text-color">COPIAR CSS</span>                     
+                  </button>  
+                  </div> 
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table id="table-modal" class='table-modal-4'>
+              <tr>
+                <td id="td1-modal">
+                  <h1 id="title-modal">Daily Art 4</h1>
                   <h2 id="subtitle-modal">"Mona Lisa", por Fernando Botero</h2>
                   <h3 id="pretext-modal">Por que?</h3>
                   <p id="text-modal">

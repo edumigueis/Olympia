@@ -5,14 +5,15 @@ var passou = false;
 
 var jaFoiHome = false;
 var jaFoiHome2 = false;
+var jaFoiHome3 = false;
 
 setInterval(() => {
-  if ($('#container-home').length && jaFoiHome == false) {
+  if ($('#container-home').length && jaFoiHome2 == false) {
     jaFoiHome2 = true;
     var altura = $('.activo').css('height').toString();
-    var num = altura.substring(0, (altura.length-2));
-    var num = parseInt(num) +100;
-    $('.slider-container').css('height',num + "px");
+    var num = altura.substring(0, (altura.length - 2));
+    var num = parseInt(num) + 100;
+    $('.slider-container').css('height', num + "px");
   }
   else if (!$('#container-home').length) {
     jaFoiHome2 = false;
@@ -20,25 +21,152 @@ setInterval(() => {
 }, 500);
 
 setInterval(() => {
+  if ($('#container-home').length && $('.modal-slider').css('display') == 'none') {
+    var classe = $('.m--active-control').attr('class');
+    classe = classe.split(" ")[1];
+    if (classe === 'fnc-nav__control-1') {
+      $('.table-modal-1').css('display', 'block');
+      $('.table-modal-2').css('display', 'none');
+      $('.table-modal-3').css('display', 'none');
+      $('.table-modal-4').css('display', 'none');
+    }
+    else if (classe === 'fnc-nav__control-2') {
+      $('.table-modal-1').css('display', 'none');
+      $('.table-modal-2').css('display', 'block');
+      $('.table-modal-3').css('display', 'none');
+      $('.table-modal-4').css('display', 'none');
+    }
+    else if (classe === 'fnc-nav__control-3') {
+      $('.table-modal-1').css('display', 'none');
+      $('.table-modal-2').css('display', 'none');
+      $('.table-modal-3').css('display', 'block');
+      $('.table-modal-4').css('display', 'none');
+    }
+    else {
+      $('.table-modal-1').css('display', 'none');
+      $('.table-modal-2').css('display', 'none');
+      $('.table-modal-3').css('display', 'none');
+      $('.table-modal-4').css('display', 'block');
+    }
+  }
+  else if (!$('#container-home').length) {
+    jaFoiHome3 = false;
+  }
+}, 100);
+
+setInterval(() => {
   if ($('#container-home').length && jaFoiHome == false) {
     jaFoiHome = true;
     $(function () {
+      (function(){
+        new Clipboard('#button');
+      })();
+
+      $(function () {
+        var lastTime = 0;
+        var vendors = ['ms', 'moz', 'webkit', 'o'];
+        for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+          window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+          window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame']
+            || window[vendors[x] + 'CancelRequestAnimationFrame'];
+        }
+
+        if (!window.requestAnimationFrame)
+          window.requestAnimationFrame = function (callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function () { callback(currTime + timeToCall); },
+              timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+          };
+
+        if (!window.cancelAnimationFrame)
+          window.cancelAnimationFrame = function (id) {
+            clearTimeout(id);
+          };
+      });
+
+
+      $(function () {
+
+        var startBtn = document.getElementById('button');
+        var requestID;
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        var posX = 0;
+        var W = 246;
+        var H = 60;
+        var circles = [];
+        canvas.width = 246;
+        canvas.height = 60;
+
+        function animate() {
+          requestID = requestAnimationFrame(animate);
+          ctx.fillStyle = "rgba(0,0,0,0.15)";
+          ctx.fillRect(0, 0, W, H);
+
+          for (var j = 0; j < circles.length; j++) {
+            var c = circles[j];
+
+            ctx.beginPath();
+            ctx.arc(c.x, c.y, c.radius, 0, Math.PI * 2, false);
+            ctx.fillStyle = "rgba(" + c.r + ", " + c.g + ", " + c.b + ", 0.5)";
+            ctx.fill();
+
+            c.x += c.vx;
+            c.y += c.vy;
+            c.radius -= .02;
+
+            if (c.radius < 0)
+              circles[j] = new create();
+          }
+        }
+
+        function create() {
+          this.x = W / 2;
+          this.y = H / 2;
+          this.radius = 2 + Math.random() * 3;
+          this.vx = -5 + Math.random() * 10;
+          this.vy = -5 + Math.random() * 10;
+          this.r = Math.round(Math.random()) * 255;
+          this.g = Math.round(Math.random()) * 255;
+          this.b = Math.round(Math.random()) * 255;
+        }
+        for (var i = 0; i < 500; i++) {
+          circles.push(new create());
+        }
+        startBtn.addEventListener('mouseover', function (e) {
+          e.preventDefault();
+          requestID = requestAnimationFrame(animate);
+        });
+        startBtn.addEventListener('mouseout', function (e) {
+          e.preventDefault();
+          cancelAnimationFrame(requestID);
+          e.preventDefault();
+          posX = 0;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.fillRect(posX, 0, boxWidth, canvas.height);
+
+        });
+
+      }());
 
       $(function () {
         var altura = $('.slide__content').css('height').toString();
-          var num = altura.substring(0, (altura.length-2));
-          var num = parseInt(num) +100;
-          $('.slider-container').css('height',num + "px");
+        var num = altura.substring(0, (altura.length - 2));
+        var num = parseInt(num) + 100;
+        $('.slider-container').css('height', num + "px");
 
-          window.onresize = function(){
-            setTimeout(() => {
-              var altura = $('.activo').css('height').toString();
-              var num = altura.substring(0, (altura.length-2));
-              var num = parseInt(num) +100;
-              $('.slider-container').css('height',num + "px");
-            }, 500);
+        window.onresize = function () {
+          setTimeout(() => {
+            var altura = $('.activo').css('height').toString();
+            var num = altura.substring(0, (altura.length - 2));
+            var num = parseInt(num) + 100;
+            $('.slider-container').css('height', num + "px");
+          }, 500);
 
-          }
+        }
         var $$ = function (selector, context) {
           var context = context || document;
           var elements = context.querySelectorAll(selector);
@@ -202,22 +330,29 @@ setInterval(() => {
 
         [].slice.call(document.querySelectorAll(".fnc-slide__action-btn")).forEach(function ($btn) {
           $btn.addEventListener("click", function () {
-            if(!$('.modal-slider').hasClass('.modal-slider-active'))
+            if (!$('.modal-slider').hasClass('.modal-slider-active'))
               $('.modal-slider').addClass("modal-slider-active");
             else
               $('.modal-slider').removeClass("modal-slider-active");
           });
         });
 
-        $('.modal-container').on('click',function (event) {
-          if(event.target.id!='content'){
-              $('.modal-slider').removeClass("modal-slider-active");
-            }
-          });
+        $('.modal-container').on('click', function (event) {
+          if (event.target.id != 'content' && event.target.id != 'canvas' && event.target.id != 'text-color') {
+            $('.modal-slider').removeClass("modal-slider-active");
+          }
+        });
 
-          $('#image-modal').on('click',function(){
-            window.location.href = "/#/detalhes"
-          })
+        $('#image-modal').on('click', function () {
+          window.location.href = "/#/detalhes"
+        })
+
+        $('#button').on('click', function () {
+          setTimeout(() => {
+            $('#button').css("animation",'clicked 0.4s linear');
+          }, 10);
+          $('#button').css("animation",'none');
+        });
 
         /*FEED---------------------------------------------- */
         var $sliderFeed = $(".slider"),
@@ -280,7 +415,7 @@ setInterval(() => {
           $sliderFeed.css("transform", "translate3d(" + -curSlide * 100 + "%,0,0)");
           $slideBGs.css("transform", "translate3d(" + curSlide * 50 + "%,0,0)");
           diff = 0;
-          
+
         }
 
         function navigateLeft() {
@@ -295,37 +430,37 @@ setInterval(() => {
           changeSlides();
         }
 
-        $(document).on("mousedown touchstart", ".slider", function(e) {
+        $(document).on("mousedown touchstart", ".slider", function (e) {
           if (animating) return;
           window.clearTimeout(autoSlideTimeout);
           var startX = e.pageX || e.originalEvent.touches[0].pageX,
-              winW = $(window).width();
+            winW = $(window).width();
           diff = 0;
-          
-          $(document).on("mousemove touchmove", function(e) {
+
+          $(document).on("mousemove touchmove", function (e) {
             var x = e.pageX || e.originalEvent.touches[0].pageX;
             diff = (startX - x) / winW * 70;
             if ((!curSlide && diff < 0) || (curSlide === numOfSlidesFeed && diff > 0)) diff /= 2;
-            $sliderFeed.css("transform", "translate3d("+ (-curSlide*100 - diff) +"%,0,0)");
-            $slideBGs.css("transform", "translate3d("+ (curSlide*50 + diff/2) +"%,0,0)");
-            $('#to-slide-'+curSlide).addClass('active-tab-p');
-            $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
-            if(curSlide == 0)
-            $('#page-name-on-tab').text('Explorar');
+            $sliderFeed.css("transform", "translate3d(" + (-curSlide * 100 - diff) + "%,0,0)");
+            $slideBGs.css("transform", "translate3d(" + (curSlide * 50 + diff / 2) + "%,0,0)");
+            $('#to-slide-' + curSlide).addClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 2)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 2)).removeClass('active-tab-p');
+            if (curSlide == 0)
+              $('#page-name-on-tab').text('Explorar');
             else
-            if(curSlide == 1)
-            $('#page-name-on-tab').text('Aprender');
-            else
-            if(curSlide == 2)
-            $('#page-name-on-tab').text('Inpirar-se');
+              if (curSlide == 1)
+                $('#page-name-on-tab').text('Aprender');
+              else
+                if (curSlide == 2)
+                  $('#page-name-on-tab').text('Inpirar-se');
 
           });
         });
-        
-        $(document).on("mouseup touchend", function(e) {
+
+        $(document).on("mouseup touchend", function (e) {
           $(document).off("mousemove touchmove");
           if (animating) return;
           if (!diff) {
@@ -334,106 +469,106 @@ setInterval(() => {
           }
           if (diff > -8 && diff < 8) {
             changeSlides();
-            $('#to-slide-'+curSlide).addClass('active-tab-p');
-            $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
-            if(curSlide == 0)
-            $('#page-name-on-tab').text('Explorar');
+            $('#to-slide-' + curSlide).addClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 2)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 2)).removeClass('active-tab-p');
+            if (curSlide == 0)
+              $('#page-name-on-tab').text('Explorar');
             else
-            if(curSlide == 1)
-            $('#page-name-on-tab').text('Aprender');
-            else
-            if(curSlide == 2)
-            $('#page-name-on-tab').text('Inpirar-se');
+              if (curSlide == 1)
+                $('#page-name-on-tab').text('Aprender');
+              else
+                if (curSlide == 2)
+                  $('#page-name-on-tab').text('Inpirar-se');
             return;
           }
           if (diff <= -8) {
             navigateLeft();
-            $('#to-slide-'+curSlide).addClass('active-tab-p');
-            $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
-            if(curSlide == 0)
-            $('#page-name-on-tab').text('Explorar');
+            $('#to-slide-' + curSlide).addClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 2)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 2)).removeClass('active-tab-p');
+            if (curSlide == 0)
+              $('#page-name-on-tab').text('Explorar');
             else
-            if(curSlide == 1)
-            $('#page-name-on-tab').text('Aprender');
-            else
-            if(curSlide == 2)
-            $('#page-name-on-tab').text('Inpirar-se');
+              if (curSlide == 1)
+                $('#page-name-on-tab').text('Aprender');
+              else
+                if (curSlide == 2)
+                  $('#page-name-on-tab').text('Inpirar-se');
           }
           if (diff >= 8) {
             navigateRight();
-            $('#to-slide-'+curSlide).addClass('active-tab-p');
-            $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
-            $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
-            if(curSlide == 0)
-            $('#page-name-on-tab').text('Explorar');
+            $('#to-slide-' + curSlide).addClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 2)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 2)).removeClass('active-tab-p');
+            if (curSlide == 0)
+              $('#page-name-on-tab').text('Explorar');
             else
-            if(curSlide == 1)
-            $('#page-name-on-tab').text('Aprender');
-            else
-            if(curSlide == 2)
-            $('#page-name-on-tab').text('Inpirar-se');
+              if (curSlide == 1)
+                $('#page-name-on-tab').text('Aprender');
+              else
+                if (curSlide == 2)
+                  $('#page-name-on-tab').text('Inpirar-se');
           }
         });
 
         $(document).on("click", ".slider-control", function () {
           if ($(this).hasClass("left")) {
             navigateLeft();
-            $('#to-slide-'+curSlide).addClass('active-tab-p');
-          $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
-          if(curSlide == 0){
-            $('#page-name-on-tab').text('Explorar');
-          }
-          if(curSlide == 1){
-            $('#page-name-on-tab').text('Aprender');
-          }
-          if(curSlide == 2){
-            $('#page-name-on-tab').text('Inspirar-se');
-          }
+            $('#to-slide-' + curSlide).addClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 2)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 2)).removeClass('active-tab-p');
+            if (curSlide == 0) {
+              $('#page-name-on-tab').text('Explorar');
+            }
+            if (curSlide == 1) {
+              $('#page-name-on-tab').text('Aprender');
+            }
+            if (curSlide == 2) {
+              $('#page-name-on-tab').text('Inspirar-se');
+            }
           } else {
             navigateRight();
-            $('#to-slide-'+curSlide).addClass('active-tab-p');
-          $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
-          if(curSlide == 0){
-            $('#page-name-on-tab').text('Explorar');
-          }
-          if(curSlide == 1){
-            $('#page-name-on-tab').text('Aprender');
-          }
-          if(curSlide == 2){
-            $('#page-name-on-tab').text('Inspirar-se');
-          }
+            $('#to-slide-' + curSlide).addClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide + 2)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 1)).removeClass('active-tab-p');
+            $('#to-slide-' + (curSlide - 2)).removeClass('active-tab-p');
+            if (curSlide == 0) {
+              $('#page-name-on-tab').text('Explorar');
+            }
+            if (curSlide == 1) {
+              $('#page-name-on-tab').text('Aprender');
+            }
+            if (curSlide == 2) {
+              $('#page-name-on-tab').text('Inspirar-se');
+            }
           }
         });
 
         $(document).on("click", ".slider-pagi__elem", function () {
           curSlide = $(this).data("page");
           changeSlides();
-          $('#to-slide-'+curSlide).addClass('active-tab-p');
-          $('#to-slide-'+ (curSlide+1)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide+2)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide-1)).removeClass('active-tab-p');
-          $('#to-slide-'+ (curSlide-2)).removeClass('active-tab-p');
-          if(curSlide == 0){
+          $('#to-slide-' + curSlide).addClass('active-tab-p');
+          $('#to-slide-' + (curSlide + 1)).removeClass('active-tab-p');
+          $('#to-slide-' + (curSlide + 2)).removeClass('active-tab-p');
+          $('#to-slide-' + (curSlide - 1)).removeClass('active-tab-p');
+          $('#to-slide-' + (curSlide - 2)).removeClass('active-tab-p');
+          if (curSlide == 0) {
             $('#page-name-on-tab').text('Explorar');
           }
-          if(curSlide == 1){
+          if (curSlide == 1) {
             $('#page-name-on-tab').text('Aprender');
           }
-          if(curSlide == 2){
+          if (curSlide == 2) {
             $('#page-name-on-tab').text('Inspirar-se');
           }
         });
@@ -445,9 +580,9 @@ setInterval(() => {
           $('#to-slide-2').removeClass('active-tab-p');
           $('#page-name-on-tab').text('Explorar');
           var altura = $('.slide__content').css('height').toString();
-          var num = altura.substring(0, (altura.length-2));
-          var num = parseInt(num) +100;
-          $('.slider-container').css('height',num + "px");
+          var num = altura.substring(0, (altura.length - 2));
+          var num = parseInt(num) + 100;
+          $('.slider-container').css('height', num + "px");
         });
         $(document).on("click", "#to-slide-1", function () {
           curSlide = 1;
@@ -457,9 +592,9 @@ setInterval(() => {
           $('#to-slide-2').removeClass('active-tab-p');
           $('#page-name-on-tab').text('Aprender');
           var altura = $('.slide-1').css('height').toString();
-          var num = altura.substring(0, (altura.length-2));
+          var num = altura.substring(0, (altura.length - 2));
           var num = parseInt(num) + 100;
-          $('.slider-container').css('height',num + "px");
+          $('.slider-container').css('height', num + "px");
         });
         $(document).on("click", "#to-slide-2", function () {
           curSlide = 2;
@@ -469,56 +604,56 @@ setInterval(() => {
           $('#to-slide-0').removeClass('active-tab-p');
           $('#page-name-on-tab').text('Inspirar-se');
           var altura = $('.slide-2').css('height').toString();
-          var num = altura.substring(0, (altura.length-2));
+          var num = altura.substring(0, (altura.length - 2));
           var num = parseInt(num) + 100;
-          $('.slider-container').css('height',num + "px");
+          $('.slider-container').css('height', num + "px");
         });
         $(document).on("click", "#list-tab-ut", function () {
-          if($('#app-cover').css('display') == 'block'){
-          $('#app-cover').css('display','none')
+          if ($('#app-cover').css('display') == 'block') {
+            $('#app-cover').css('display', 'none')
 
-          if($(window).width() > 1000)
-          $('.right-tab-control').css({ 'width': '60%' })
+            if ($(window).width() > 1000)
+              $('.right-tab-control').css({ 'width': '60%' })
 
-          if($(window).width() < 1000 && $(window).width() > 764)
-          $('.right-tab-control').css({ 'width': '60%' })
+            if ($(window).width() < 1000 && $(window).width() > 764)
+              $('.right-tab-control').css({ 'width': '60%' })
           }
-          else{
-            $('#app-cover').css('display','block')
+          else {
+            $('#app-cover').css('display', 'block')
 
-            if($(window).width() > 1000)
-            $('.right-tab-control').css({ 'width': 'calc(62% - ' + 330+ 'px)' })
+            if ($(window).width() > 1000)
+              $('.right-tab-control').css({ 'width': 'calc(62% - ' + 330 + 'px)' })
 
-            if($(window).width() < 1000 && $(window).width() > 764)
-            $('.right-tab-control').css({ 'width': 'calc(60% - ' + 300+ 'px)' })
+            if ($(window).width() < 1000 && $(window).width() > 764)
+              $('.right-tab-control').css({ 'width': 'calc(60% - ' + 300 + 'px)' })
           }
 
         });
-          $(".heart").on("click", function() {
-            $(this).toggleClass("is-active");
-          });
-          $(".magic").on("click", function() {
-            $(this).toggleClass("is-star-active");
-          });
-          $(document.body).on('click', '.img-insp', function () {
-            var src = $(this).attr("src");
-            $('#myModal').css('display', 'block');
-            $("#img01").attr("src", src);
-            $(window).scrollTop(0);
-            $('#mouse').css('display', 'block');
-            $('#footer').css('display', 'none');
-          });
-          $(document.body).on('click', '.close-mod', function () {
-            $('#myModal').css('display', 'none');
-            $('#mouse').css('display', 'none');
-            $('#footer').css('display', 'block');
-          })
-    
-          $(document.body).on('click', '#myModal', function () {
-            $('#myModal').css('display', 'none');
-            $('#mouse').css('display', 'none');
-            $('#footer').css('display', 'block');
-          })
+        $(".heart").on("click", function () {
+          $(this).toggleClass("is-active");
+        });
+        $(".magic").on("click", function () {
+          $(this).toggleClass("is-star-active");
+        });
+        $(document.body).on('click', '.img-insp', function () {
+          var src = $(this).attr("src");
+          $('#myModal').css('display', 'block');
+          $("#img01").attr("src", src);
+          $(window).scrollTop(0);
+          $('#mouse').css('display', 'block');
+          $('#footer').css('display', 'none');
+        });
+        $(document.body).on('click', '.close-mod', function () {
+          $('#myModal').css('display', 'none');
+          $('#mouse').css('display', 'none');
+          $('#footer').css('display', 'block');
+        })
+
+        $(document.body).on('click', '#myModal', function () {
+          $('#myModal').css('display', 'none');
+          $('#mouse').css('display', 'none');
+          $('#footer').css('display', 'block');
+        })
       })
 
     })
