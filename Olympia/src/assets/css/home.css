@@ -1187,6 +1187,19 @@ html {
   display: none;
 }
 
+.text-4{
+  padding-left: 15px;
+}
+
+#link-4{
+  color: rgb(69, 139, 122);
+  text-decoration: none;
+}
+
+#link-4:hover{
+  cursor: pointer;
+}
+
 #table-modal  tr td{
   vertical-align: top;
   text-align: center;
@@ -2675,7 +2688,7 @@ figure.snip1321.hover:after {
   align-items: flex-end;
   justify-content: flex-end;
   width: 50%;
-  margin-left: 95%;
+  margin-left: 100%;
   float: right;
 }
 [id='toggle-heart'] {
@@ -2685,6 +2698,7 @@ figure.snip1321.hover:after {
 .heart {
   width: 100px;
   height: 100px;
+  margin: 0;
   background: url("../images/heart-anim.png") no-repeat;
   background-position: 0 0;
   background-size: cover;

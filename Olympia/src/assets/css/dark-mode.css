@@ -1,5 +1,6 @@
-
-/* INSIRA AQUI! (NOMES AUTOEXPLICATIVOS) */
+.dark-mode.dark-slideshow{
+  background-color: rgba(0, 0, 0, 0.527) !important;
+}
 
 .dark-mode.black-to-white {
   color: rgb(221, 221, 221) !important;
@@ -9,48 +10,15 @@
   background-color: #202020 !important;
 }
 
-/*  */
-
-
-
-/* feito antigamente */
-
-.detail-link-0 {
-  background: linear-gradient(to bottom, #a86500 0%, #b30000 100%) !important;
-  border-radius: 2px !important;
-  padding: 2px !important;
-  background-position: 0 100% !important;
-  background-repeat: repeat-x !important;
-  background-size: 4px 4px !important;
+.dark-mode.white {
+  background-color: #494949 !important;
 }
 
-.detail-link-0:hover {
-  cursor: pointer !important;
-  background-size: 4px 50px !important;
-}
 .dark-mode.gray-n-imp{
   background-color: #393749;
   border-color: #393749;
   color: white;
 }
-#calendar-red {
-  box-shadow: 10px 5px 5px rgb(83, 83, 83) !important;
-  border-left: 1px solid rgb(83, 83, 83) !important;
-  border-right: 1px solid rgb(83, 83, 83) !important;
-  border-top: rgb(83, 83, 83) !important;
-}
-#calendar-white {
-  border-bottom: 1px solid rgb(83, 83, 83) !important;
-  border-left: 1px solid rgb(83, 83, 83) !important;
-  border-right: 1px solid rgb(83, 83, 83) !important;
-  box-shadow: 10px 5px 5px rgb(83, 83, 83) !important;
-}
-
-.dark-mode.white {
-  background-color: #494949 !important;
-}
-
-/* ... */
 
 .dark-mode.white-2 {
   background-color: #555966 !important;
@@ -159,4 +127,34 @@
 }
 .dark-mode.white-icon{
   filter: invert(100%);
+}
+
+/**/
+
+.detail-link-0:hover {
+  cursor: pointer !important;
+  background-size: 4px 50px !important;
+}
+
+#calendar-red {
+  box-shadow: 10px 5px 5px rgb(83, 83, 83) !important;
+  border-left: 1px solid rgb(83, 83, 83) !important;
+  border-right: 1px solid rgb(83, 83, 83) !important;
+  border-top: rgb(83, 83, 83) !important;
+}
+#calendar-white {
+  border-bottom: 1px solid rgb(83, 83, 83) !important;
+  border-left: 1px solid rgb(83, 83, 83) !important;
+  border-right: 1px solid rgb(83, 83, 83) !important;
+  box-shadow: 10px 5px 5px rgb(83, 83, 83) !important;
+}
+
+
+.detail-link-0 {
+  background: linear-gradient(to bottom, #a86500 0%, #b30000 100%) !important;
+  border-radius: 2px !important;
+  padding: 2px !important;
+  background-position: 0 100% !important;
+  background-repeat: repeat-x !important;
+  background-size: 4px 4px !important;
 }

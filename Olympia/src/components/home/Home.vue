@@ -226,24 +226,18 @@
             <table id="table-modal" class='table-modal-4'>
               <tr>
                 <td id="td1-modal">
-                  <h1 id="title-modal">Daily Art 4</h1>
-                  <h2 id="subtitle-modal">"Mona Lisa", por Fernando Botero</h2>
-                  <h3 id="pretext-modal">Por que?</h3>
-                  <p id="text-modal">
-                    Percebemos, de cara, as formas arredondadas que o artista
-                    usou para representar a forma humana; com a intenção de
-                    destacar principalmente sua ganância. Botero nunca pintava
-                    personagens negras, pois justamente queria criticar a
-                    desigualdade social, que promove tal soberba.
+                  <h1 id="title-modal">Art News</h1>
+                  <h2 id="subtitle-modal">Notícia de hoje</h2>
+                  <h3 id="pretext-modal">Durante a quarentena, que tal cursos em casa?</h3>
+                  <p id="text-modal" class="text-4">
+                    "Usar o tempo dentro de casa para aprender algo novo é um dos artifícios 
+                    para deixar a quarentena, por assim dizer, mais produtiva. 
+                    Algumas celebridades e instituições culturais entraram na onda." - Você,
+                    amante da arte, não pode deixar de conferir essa notícia na íntegra clicando <a id="link-4" target="_blank" href="https://veja.abril.com.br/entretenimento/artistas-e-museus-levam-cursos-para-dentro-das-casas-confira-dicas/">
+                    AQUI!</a><br><br>
+                    Por Amanda Capuano - Atualizado em 20 abr 2020 - Acessado em 02 mai 2020 - VEJA
+        
                   </p>
-                </td>
-                <td id="td2-modal">
-                  <div id="container-img-modal">
-                    <img
-                      id="image-modal"
-                      src="/src/assets/images/daily-art.jpg"
-                    />
-                  </div>
                 </td>
               </tr>
             </table>
