@@ -80,6 +80,10 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footer-link {
@@ -185,112 +189,54 @@ body {
   width: 100%;
   position: relative;
   z-index: -9;
-  height: 632px;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 .image-link-to-art{
   width: 380px;
   height: 100%;
 }
 .line-img-left {
-  margin-left: 1.5%;
-  margin-top: 100px;
-  width: 30%;
+  width: calc(100%/3);
 }
 
 .line-img-right {
   float: right;
-  margin-top: 50px;
-  margin-right: 1.5%;
-  width: 30%;
+
+  width: calc(100%/3);
 }
 
 .line-img {
   border-radius: 5%;
   width: 100%;
 }
-.card-center-1 {
-  float: left;
-  margin-left: 35%;
-  width: 32%;
-  margin-top: -35%;
-  background-color: rgb(230, 230, 230);
-  border: 20px solid rgb(230, 230, 230);
-  text-align: justify;
-  text-indent: 40px;
-  position: relative;
-  border-radius: 10px;
-}
-.card-right-1 {
-  background-color: rgb(230, 230, 230);
-  float: right;
-  width: 32%;
-  margin-top: -230px;
-  margin-right: 1.5%;
-  border: 20px solid rgb(230, 230, 230);
-  text-align: justify;
-  text-indent: 40px;
-  position: relative;
-  border-radius: 10px;
-}
-.card-center-2 {
-  float: left;
-  margin-left: 35%;
-  width: 32%;
-  margin-top: -250px;
-  background-color: rgb(230, 230, 230);
-  border: 20px solid rgb(230, 230, 230);
-  text-align: justify;
-  text-indent: 40px;
-  position: relative;
-  border-radius: 10px;
-}
-.card-right-2 {
-  background-color: rgb(230, 230, 230);
-  float: right;
-  width: 32%;
-  margin-top: -500px;
-  margin-right: 1.5%;
-  border: 20px solid rgb(230, 230, 230);
-  text-align: justify;
-  text-indent: 40px;
-  position: inherit;
-  border-radius: 10px;
-}
-.card-center {
-  float: left;
-  border-radius: 10px;
-  margin-left: 30%;
-  width: 32%;
-  margin-top: 330px;
-  background-color: rgb(230, 230, 230);
-  border: 20px solid rgb(230, 230, 230);
-  text-align: justify;
-  text-indent: 40px;
-  position: relative;
-}
 .card-right {
   background-color: rgb(230, 230, 230);
-  float: right;
-  border-radius: 10px;
-  width: 32%;
-  margin-top: 180px;
-  margin-right: 1.5%;
-  border: 20px solid rgb(230, 230, 230);
+  width: calc(100%/3);
   text-align: justify;
   text-indent: 40px;
-  position: inherit;
+  position: relative;
+  border-radius: 10px;
 }
-.card-left {
-  border-radius: 10px;
+
+.card-center {
+  width: calc(100%/3);
   background-color: rgb(230, 230, 230);
-  float: left;
-  width: 32%;
-  margin-top: 95px;
-  margin-left: 1.5%;
-  border: 20px solid rgb(230, 230, 230);
   text-align: justify;
   text-indent: 40px;
-  position: absolute;
+  position: relative;
+  border-radius: 10px;
+}
+
+.card-left {
+  width: calc(100%/3);
+  background-color: rgb(230, 230, 230);
+  text-align: justify;
+  text-indent: 40px;
+  position: relative;
+  border-radius: 10px;
 }
 
 @-webkit-keyframes AnimationName {
