@@ -57,10 +57,10 @@
                 <div class="fnc-slide__content">
                   <h2 class="fnc-slide__heading">
                     <div class="fnc-slide__heading-line">
-                      <span>Destaques</span>
+                      <span>Pequenas</span>
                     </div>
                     <div class="fnc-slide__heading-line">
-                      <span></span>
+                      <span> ideias</span>
                     </div>
                   </h2>
                   <button type="button" class="fnc-slide__action-btn">
@@ -131,7 +131,7 @@
                 <span class="fnc-nav__control-progress"></span>
               </button>
               <button class="fnc-nav__control">
-                Destaques
+                Ideias
                 <span class="fnc-nav__control-progress"></span>
               </button>
               <button class="fnc-nav__control">
@@ -176,22 +176,23 @@
             <table id="table-modal" class='table-modal-2'>
               <tr>
                 <td id="td1-modal">
-                  <h1 id="title-modal">Daily Art 2</h1>
-                  <h2 id="subtitle-modal">"Mona Lisa", por Fernando Botero</h2>
-                  <h3 id="pretext-modal">Por que?</h3>
+                  <h1 id="title-modal">Pequenas Ideias</h1>
+                  <h2 id="subtitle-modal">Passos simples; belos resultados!</h2>
+                  <h3 id="pretext-modal" class="pretext-2">Vasinho de Rolha</h3>
                   <p id="text-modal">
-                    Percebemos, de cara, as formas arredondadas que o artista
-                    usou para representar a forma humana; com a intenção de
-                    destacar principalmente sua ganância. Botero nunca pintava
-                    personagens negras, pois justamente queria criticar a
-                    desigualdade social, que promove tal soberba.
+                    Aproveite aquela rolha de um bom vinho ou aquelas plantinhas danadas que crescem no chão e faça esse belo jardim:<br>
+                    1º) Com uma chave de fenda e com cuidado, faça um buraco do topo até a metade de uma rolha; <br>
+                    2º) Coloque um pouquinho de terra e uma folhinha de suculenta, um trevo ou outra planta de sua escolha; <br>
+                    3º) Regue de vez em quando (mas só uma gotinha!); <br>
+                    Viu só?? Esses vasinhos são belos ornamentos para seu quarto, cozinha, banheiro... ou para dar de presente a alguém!
                   </p>
                 </td>
                 <td id="td2-modal">
                   <div id="container-img-modal">
                     <img
                       id="image-modal"
-                      src="/src/assets/images/daily-art.jpg"
+                      src="/src/assets/images/ideias.jpg"
+                      class="img-ideias"
                     />
                   </div>
                 </td>
@@ -212,7 +213,8 @@
                 <td id="td2-modal">
                   <div id="container-color">
                     <div id="color-btn-container">
-                    <button id="button" class="BT-OH-BR-R6-NF-FH-FP-TU-PT" data-clipboard-text="background-color: #9eabe4;background-image: linear-gradient(315deg, #7b89c7 0%, #5dceb9 74%);">
+                    <button id="button" class="BT-OH-BR-R6-NF-FH-FP-TU-PT" data-clipboard-text="background-color: #9eabe4;
+    background-image: linear-gradient(315deg, #7b89c7 0%, #5dceb9 74%);">
                       <canvas id="canvas"></canvas> 
                       <hover></hover>
                       <span id="text-color">COPIAR CSS</span>                     
@@ -225,24 +227,18 @@
             <table id="table-modal" class='table-modal-4'>
               <tr>
                 <td id="td1-modal">
-                  <h1 id="title-modal">Daily Art 4</h1>
-                  <h2 id="subtitle-modal">"Mona Lisa", por Fernando Botero</h2>
-                  <h3 id="pretext-modal">Por que?</h3>
-                  <p id="text-modal">
-                    Percebemos, de cara, as formas arredondadas que o artista
-                    usou para representar a forma humana; com a intenção de
-                    destacar principalmente sua ganância. Botero nunca pintava
-                    personagens negras, pois justamente queria criticar a
-                    desigualdade social, que promove tal soberba.
+                  <h1 id="title-modal">Art News</h1>
+                  <h2 id="subtitle-modal">Notícias do mundo da arte!</h2>
+                  <h3 id="pretext-modal">Durante a quarentena, que tal cursos em casa?</h3>
+                  <p id="text-modal" class="text-4">
+                    "Usar o tempo dentro de casa para aprender algo novo é um dos artifícios 
+                    para deixar a quarentena, por assim dizer, mais produtiva. 
+                    Algumas celebridades e instituições culturais entraram na onda." - Você,
+                    amante da arte, não pode deixar de conferir essa notícia na íntegra clicando <a id="link-4" target="_blank" href="https://veja.abril.com.br/entretenimento/artistas-e-museus-levam-cursos-para-dentro-das-casas-confira-dicas/">
+                    AQUI!</a><br><br>
+                    Por Amanda Capuano - Atualizado em 20 abr 2020 - Acessado em 02 mai 2020 - VEJA
+        
                   </p>
-                </td>
-                <td id="td2-modal">
-                  <div id="container-img-modal">
-                    <img
-                      id="image-modal"
-                      src="/src/assets/images/daily-art.jpg"
-                    />
-                  </div>
                 </td>
               </tr>
             </table>
@@ -1761,11 +1757,6 @@
                     /></a>
                     <div class="interact-container">
                       <div class="stage">
-                        <a class="magic">
-                          <i class="fas fa-star"></i>
-                        </a>
-                      </div>
-                      <div class="stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1794,11 +1785,6 @@
                         alt="Dummy Image"
                     /></a>
                     <div class="interact-container">
-                      <div class="stage">
-                        <a class="magic">
-                          <i class="fas fa-star"></i>
-                        </a>
-                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1838,25 +1824,20 @@
                         What would our lives be without art?
                       </div>
                     </div>
+                    <div class="insp-post-cont black-to-white">
+                      Iusto magni quasi recusandae autem ipsum asperiores
+                      consequatur explicabo, vero nam iste quas sequi reiciendis
+                      quod, quos!
+                    </div>
                     <img
                       src="https://cristinapicteaza.com/wp-content/uploads/2019/01/fcbk.jpg?v=1575196524"
                       class="img-insp"
                       alt="Dummy Image"
                     />
                     <div class="interact-container insp-inte">
-                      <div class="stage insp-stage insp-stage-1">
-                        <a class="magic">
-                          <i class="fas fa-star"></i>
-                        </a>
-                      </div>
                       <div class="stage insp-stage">
                         <div class="heart"></div>
                       </div>
-                    </div>
-                    <div class="insp-post-cont black-to-white">
-                      Iusto magni quasi recusandae autem ipsum asperiores
-                      consequatur explicabo, vero nam iste quas sequi reiciendis
-                      quod, quos!
                     </div>
                   </div>
                 </div>
@@ -1876,25 +1857,20 @@
                         What would our lives be without art?
                       </div>
                     </div>
+                    <div class="insp-post-cont black-to-white">
+                      Iusto magni quasi recusandae autem ipsum asperiores
+                      consequatur explicabo, vero nam iste quas sequi reiciendis
+                      quod, quos!
+                    </div>
                     <img
                       src="https://smhttp-ssl-49071.nexcesscdn.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/7/171401288_2.jpg"
                       class="img-insp"
                       alt="Dummy Image"
                     />
                     <div class="interact-container insp-inte">
-                      <div class="stage insp-stage insp-stage-1">
-                        <a class="magic">
-                          <i class="fas fa-star"></i>
-                        </a>
-                      </div>
                       <div class="stage insp-stage">
                         <div class="heart"></div>
                       </div>
-                    </div>
-                    <div class="insp-post-cont black-to-white">
-                      Iusto magni quasi recusandae autem ipsum asperiores
-                      consequatur explicabo, vero nam iste quas sequi reiciendis
-                      quod, quos!
                     </div>
                   </div>
                 </div>

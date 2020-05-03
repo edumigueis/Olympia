@@ -37,6 +37,7 @@ $(document).ready(function () {
             $(".white-3").removeClass("dark-mode");
             $(".white-2").removeClass("dark-mode");
             $(".white-7").removeClass("dark-mode");
+            $(".dark-slideshow").removeClass("dark-mode");
             $(".text-gray").removeClass("dark-mode");
             $(".feed-item").removeClass("dark-mode");
             $(".white-icon").removeClass("dark-mode");
@@ -55,6 +56,7 @@ $(document).ready(function () {
             $(".arrow").addClass("dark-mode");
             $(".error-modal").addClass("dark-mode");
             $("#small-footer").addClass("dark-mode");
+            $(".dark-slideshow").addClass("dark-mode");
             $(".dark-register-div").addClass("dark-mode");
             $(".dark-register-input").addClass("dark-mode");
             $(".dark-register-ico").addClass("dark-mode");

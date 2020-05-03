@@ -9,7 +9,6 @@
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
-      <meu-mouse></meu-mouse>
 
       <!--ATENÇÂO-->
               <div class="bg"></div> <!--BACKGROUND-->
@@ -26,7 +25,7 @@
       </div>
 
       <div id="corpo">
-        <div class="slideshow-container">
+        <div class="slideshow-container dark-slideshow">
 
       <div class="mySlides">
         <q>"O cinema não tem fronteiras nem limites. É um fluxo constante de sonho."</q>
@@ -178,20 +177,7 @@
               </td>
             </tr>
           </table>
-        </div>
-        <div class="container-left black-to-white white-7" id="contato-div" style="width:20%;">
-          <table> 
-            <tr>
-              <td class="texto-linha">
-                <h1 class="text-title">Contato</h1>
-                🖂 cinema@olympia.com<br>
-                ☏ 0800 123 0004 
-              </td>
-              
-            </tr>
-          </table>
-        </div>
-        
+        </div>  
       </div>
       <!---->
 
