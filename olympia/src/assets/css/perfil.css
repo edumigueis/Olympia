@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "Bebas-Neue-Regular";
+  src: url("/src/assets/fonts/BebasNeue-Regular.ttf");
+}
+
+.container-profile {
+  position: relative;
+  height: fit-content;
+}
+
+.profile {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  width: 100%;
+  font-family: "Bebas-Neue-Regular";
+  letter-spacing: 0.2em;
+  font-size: 2.5em;
+}
+
+.title-content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.info-profile {
+  height: 80%;
+  margin: 0 auto;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 18px;
+  box-shadow: 0 0 30px black;
+}
+
+@media only screen and (max-width: 1050px) {
+  .container-profile {
+    top: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container-profile {
+    top: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .container-profile {
+      top: 30px !important;
+    }
+  }
+
+.bg {
+  background: rgb(11, 20, 29);
+  font-size: 52px;
+  color: transparent;
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
+  position: absolute;
+  top: 0;
+}
+
+.bg::before,
+.bg::after {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  content: ".";
+  mix-blend-mode: difference;
+  animation: 40s -27s move infinite ease-in-out alternate;
+}
+
+.bg::before {
+  text-shadow: 0.3255330133em 0.3372544142em 7px rgba(0, 56, 255, 0.9),
+    1.7073922737em 2.0866311727em 7px rgba(255, 0, 46, 0.9),
+    1.8234430163em 1.0065158359em 7px rgba(255, 14, 0, 0.9),
+    2.0840424522em 1.0170666933em 7px rgba(255, 0, 124, 0.9),
+    0.8304096983em 0.475774385em 7px rgba(192, 255, 0, 0.9),
+    0.8850520903em 0.9595194012em 7px rgba(0, 125, 255, 0.9),
+    -0.145541807em 0.2603276525em 7px rgba(0, 244, 255, 0.9),
+    0.6302398345em 0.5187273296em 7px rgba(185, 0, 255, 0.9),
+    0.596249683em -0.1031505184em 7px rgba(255, 135, 0, 0.9),
+    2.0563960102em 0.0451497201em 7px rgba(255, 97, 0, 0.9),
+    1.1181685483em 0.7544938233em 7px rgba(210, 255, 0, 0.9),
+    -0.4016927682em 0.4789258894em 7px rgba(0, 100, 255, 0.9),
+    2.0223206291em 1.7702987722em 7px rgba(0, 255, 200, 0.9),
+    1.0745687337em 1.8802273603em 7px rgba(0, 255, 113, 0.9),
+    0.3294779467em 2.2381344476em 7px rgba(255, 159, 0, 0.9),
+    2.351859268em 2.4008932793em 7px rgba(0, 213, 255, 0.9),
+    -0.420162681em 0.6442860426em 7px rgba(67, 0, 255, 0.9),
+    0.4982911354em 1.0196627739em 7px rgba(0, 24, 255, 0.9),
+    1.2270078454em 1.8452188862em 7px rgba(0, 83, 255, 0.9),
+    2.2325538271em 1.3423014447em 7px rgba(199, 0, 255, 0.9),
+    -0.1313236267em 1.8809321644em 7px rgba(255, 216, 0, 0.9),
+    -0.4974762767em 1.9113943175em 7px rgba(101, 0, 255, 0.9),
+    1.2796858883em 0.2266607193em 7px rgba(255, 0, 48, 0.9),
+    0.2757648878em 2.3121276589em 7px rgba(0, 112, 255, 0.9),
+    1.5418548535em 0.4378958729em 7px rgba(220, 0, 255, 0.9),
+    0.5409949059em 1.9365551376em 7px rgba(193, 255, 0, 0.9),
+    1.4810205146em 0.5725014281em 7px rgba(0, 8, 255, 0.9),
+    -0.0852178553em 1.0497760248em 7px rgba(0, 255, 168, 0.9),
+    1.4545159767em 0.0484250653em 7px rgba(14, 255, 0, 0.9),
+    1.7233387875em 0.0341836735em 7px rgba(0, 255, 216, 0.9),
+    1.9703959119em 0.1617420597em 7px rgba(255, 0, 139, 0.9),
+    1.0133316172em 2.2731703198em 7px rgba(255, 0, 109, 0.9),
+    0.1460179114em 0.6166622619em 7px rgba(0, 215, 255, 0.9),
+    0.8797642384em 1.3174202529em 7px rgba(0, 51, 255, 0.9),
+    0.1993923978em 0.0787363685em 7px rgba(0, 0, 255, 0.9),
+    0.6886673305em 2.0512389707em 7px rgba(78, 255, 0, 0.9),
+    1.2008812309em 2.1431502599em 7px rgba(255, 20, 0, 0.9),
+    1.3269378568em 1.8014972548em 7px rgba(255, 227, 0, 0.9),
+    2.447776548em 1.2856299478em 7px rgba(75, 0, 255, 0.9),
+    -0.38480126em 0.7512426529em 7px rgba(126, 0, 255, 0.9),
+    0.2487381339em 0.0881939297em 7px rgba(255, 149, 0, 0.9);
+  animation-duration: 44s;
+  animation-delay: -27s;
+}
+
+.bg::after {
+  text-shadow: 0.1842454514em 1.9391862125em 7px rgba(255, 0, 172, 0.9),
+    -0.4728026225em 1.1974779229em 7px rgba(255, 230, 0, 0.9),
+    -0.3423307269em 2.4643528867em 7px rgba(195, 255, 0, 0.9),
+    2.0149890545em 0.7442902523em 7px rgba(255, 131, 0, 0.9),
+    -0.3165303575em 0.7998353982em 7px rgba(0, 255, 235, 0.9),
+    0.5060259508em 0.7089118168em 7px rgba(255, 167, 0, 0.9),
+    0.7107611319em -0.1747606135em 7px rgba(0, 255, 53, 0.9),
+    1.4398291193em 0.7089078396em 7px rgba(0, 255, 32, 0.9),
+    -0.4447022388em -0.1379380131em 7px rgba(97, 255, 0, 0.9),
+    0.8538136944em 0.3628557509em 7px rgba(91, 0, 255, 0.9),
+    2.0857811499em 2.3460290385em 7px rgba(0, 255, 136, 0.9),
+    1.590224932em 0.3702197268em 7px rgba(0, 187, 255, 0.9),
+    2.4383616179em 1.3200325933em 7px rgba(0, 255, 255, 0.9),
+    2.0929513844em -0.3597481763em 7px rgba(0, 227, 255, 0.9),
+    1.0722508333em 0.3351559268em 7px rgba(149, 0, 255, 0.9),
+    0.1744693866em 0.5887478206em 7px rgba(255, 0, 105, 0.9),
+    0.1228868582em 1.5451672823em 7px rgba(0, 255, 198, 0.9),
+    1.6178053635em 0.047481995em 7px rgba(10, 0, 255, 0.9),
+    0.5983333862em -0.355935718em 7px rgba(0, 145, 255, 0.9),
+    0.2863904837em 0.0572166762em 7px rgba(255, 0, 192, 0.9),
+    0.4044502106em 0.5143739557em 7px rgba(155, 0, 255, 0.9),
+    0.0249829498em 1.4690077302em 7px rgba(255, 51, 0, 0.9),
+    0.8721595939em 1.7623532674em 7px rgba(255, 149, 0, 0.9),
+    -0.3976511205em 2.013051771em 7px rgba(12, 255, 0, 0.9),
+    1.8651310414em -0.3053708768em 7px rgba(96, 255, 0, 0.9),
+    -0.0410370674em -0.0726388289em 7px rgba(255, 0, 130, 0.9),
+    -0.3858345864em 0.8184578541em 7px rgba(255, 0, 83, 0.9),
+    0.4884771687em 2.3938434638em 7px rgba(255, 97, 0, 0.9),
+    -0.1009297533em 2.2783425864em 7px rgba(0, 255, 142, 0.9),
+    -0.4244004847em -0.2931068336em 7px rgba(28, 255, 0, 0.9),
+    0.2221212656em 0.7044789108em 7px rgba(8, 0, 255, 0.9),
+    -0.1982038167em 1.7080375448em 7px rgba(255, 93, 0, 0.9),
+    0.3406625864em 1.7344691274em 7px rgba(255, 174, 0, 0.9),
+    1.5542324809em 0.5806744547em 7px rgba(0, 255, 150, 0.9),
+    1.3170044135em 1.1904484294em 7px rgba(0, 163, 255, 0.9),
+    1.2207955933em 2.1728357324em 7px rgba(68, 255, 0, 0.9),
+    0.3719028906em -0.370875176em 7px rgba(1, 0, 255, 0.9),
+    1.3401354736em 0.5442345073em 7px rgba(255, 0, 113, 0.9),
+    2.4404957999em 2.2109731937em 7px rgba(255, 0, 178, 0.9),
+    1.3953094862em 0.0010589714em 7px rgba(255, 151, 0, 0.9),
+    1.4962031749em -0.3373249587em 7px rgba(0, 137, 255, 0.9);
+  animation-duration: 43s;
+  animation-delay: -32s;
+}
+
+@keyframes move {
+  from {
+    transform: rotate(0deg) scale(12) translateX(-20px);
+  }
+  to {
+    transform: rotate(360deg) scale(18) translateX(20px);
+  }
+}
+
+/*# sourceMappingURL=perfil-animation.css.map */

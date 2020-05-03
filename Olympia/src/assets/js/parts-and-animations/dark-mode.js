@@ -15,6 +15,7 @@ $(document).ready(function () {
             $("#fullpage").removeClass("night");
             $("#fullpage").fadeOut(1000)
             $("#menu-bar").removeClass("dark-mode");
+            $("body").removeClass("dark-mode-page");
             $("#footer").removeClass("dark-mode");
             $(".arrow").removeClass("dark-mode");
             $(".error-modal").removeClass("dark-mode");
@@ -54,6 +55,7 @@ $(document).ready(function () {
             $("#menu-bar").addClass("dark-mode");
             $("#footer").addClass("dark-mode");
             $(".arrow").addClass("dark-mode");
+            $("body").addClass("dark-mode-page");
             $(".error-modal").addClass("dark-mode");
             $("#small-footer").addClass("dark-mode");
             $(".dark-slideshow").addClass("dark-mode");

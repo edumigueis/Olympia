@@ -941,7 +941,7 @@ ul {
     right: 0;
     width: 100%;
     height: 100%;
-    background: white;
+    background: rgba(255, 255, 255, 0);
     animation: a-ltr-after 6s cubic-bezier(.77,0,.18,1) forwards;
     transform: translateX(-101%);
 }
@@ -953,7 +953,7 @@ ul {
     right: 0;
     width: 100%;
     height: 100%;
-    background: white;
+    background: rgba(143, 11, 11, 0);
     animation: a-ltr-before 6s cubic-bezier(.77,0,.18,1) forwards;
     transform: translateX(0);
 }
