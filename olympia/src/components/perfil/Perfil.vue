@@ -10,22 +10,100 @@
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
 
-      <div class="bg"></div>
       <div class="container-profile">
+        <div class="bg"></div>
         <div class="profile">
           <div class="title-content">
-            <h1 class="title">Seu <br/>Perfil</h1>
-            <div class="info-profile white-2 black-to-white">
+            <h1 class="title">Seu <br />Perfil</h1>
+          </div>
+          <div class="info-profile white-2 black-to-white">
             <div class="user-pic">
               <img
                 src="/src/assets/images/perfil.jpeg"
                 alt
                 class="img-profile"
               />
-              </div>
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+            </div>
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
             </div>
           </div>
         </div>
+        <div class="background-perfil"></div>
       </div>
       <div id="myModal" class="modal">
         <span class="close-mod">&times;</span>

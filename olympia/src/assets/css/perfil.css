@@ -3,22 +3,39 @@
   src: url("/src/assets/fonts/BebasNeue-Regular.ttf");
 }
 
+#container-perfil{
+  height: 100%;
+}
+
 .container-profile {
   position: relative;
   height: fit-content;
 }
 
-.profile {
-  height: 100vh;
+.background-perfil {
+  position: absolute;
   width: 100vw;
+  height: 50vh;
+  background: rgb(233, 233, 233);
+  z-index: -2;
+  bottom: 0;
+  transition: 0.5s background;
+}
+
+.profile {
+  height: 100%;
+  width: 100%;
   padding-top: 5%;
   padding-bottom: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  transition: 0.3s all;
 }
 
 .title {
+  transition: 0.3s all;
   color: white;
   width: 100%;
   font-family: "Bebas-Neue-Regular";
@@ -30,16 +47,15 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
   width: 60%;
   margin: 0 auto;
   text-align: left;
 }
 
 .info-profile {
-  height: 80%;
+  height: fit-content;
   margin: 0 auto;
-  width: 100%;
+  width: 70%;
   background-color: rgb(255, 255, 255);
   border-radius: 18px;
   box-shadow: 0 0 30px black;
@@ -69,7 +85,7 @@
   top: 0;
   left: 0;
   padding: 0;
-  box-shadow: 0 0 0 3px rgb(71, 71, 71);
+  box-shadow: 0 0 0 3px rgb(34, 34, 34);
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
   transition: transform 0.2s, opacity 0.2s;
@@ -83,13 +99,13 @@
   opacity: 0.5;
 }
 .user-pic:hover {
-  box-shadow: 0 0 0 10px rgb(71, 71, 71);
-  color: rgb(71, 71, 71);
+  box-shadow: 0 0 0 10px rgb(34, 34, 34);
+  color: rgb(34, 34, 34);
   cursor: pointer;
 }
 
 .user-pic:hover i {
-  color: rgb(71, 71, 71);
+  color: rgb(34, 34, 34);
 }
 .img-profile {
   width: 100%;
@@ -98,30 +114,41 @@
 @media only screen and (max-width: 1050px) {
   .container-profile {
     top: 10px !important;
-    margin-bottom: 20px!important;
+    margin-bottom: 20px !important;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .container-profile {
     top: 20px !important;
-    margin-bottom: 30px!important;
+    margin-bottom: 30px !important;
   }
 }
 
 @media only screen and (max-width: 600px) {
-    .container-profile {
-      top: 30px !important;
-      margin-bottom: 40px!important;
-    }
+  .container-profile {
+    top: 30px !important;
+    margin-bottom: 40px !important;
   }
+}
 
+@media only screen and (max-height: 650px) {
+  .profile {
+    padding-bottom: 10% !important;
+  }
+}
+
+@media only screen and (max-height: 450px) {
+  .profile {
+    padding-bottom: 15% !important;
+  }
+}
 .bg {
   background: rgb(11, 20, 29);
   font-size: 52px;
   color: transparent;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   z-index: -10;
   position: absolute;
   top: 0;
@@ -259,7 +286,6 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-
 }
 
 /* Modal Content (image) */
@@ -347,13 +373,49 @@
   .modal-content {
     width: 100%;
   }
-  .close-mod{
+  .close-mod {
     margin-top: -52px;
     right: 30px;
   }
 }
 @media only screen and (min-width: 700px) and (max-width: 830px) {
-  .close-mod{
+  .close-mod {
     margin-top: -52px;
+  }
+}
+
+#mouse {
+  width: 22px;
+  height: 40px;
+  border-radius: 20px;
+  border: 4px solid rgb(255, 255, 255);
+  text-align: center;
+  position: fixed;
+  display: none;
+  left: 30px;
+  right: 0px;
+  bottom: 30px;
+  margin: 0;
+  z-index: 1000;
+}
+
+#mouse::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  position: relative;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  animation-name: mouse;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+}
+@keyframes mouse {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 6px;
   }
 }
