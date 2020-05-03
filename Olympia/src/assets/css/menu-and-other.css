@@ -582,11 +582,14 @@
 
 .config-link-clicked{
   font-size: 0.9em;
+  font-weight: bold;
 }
 .config-link-hover:hover{
   font-weight: bold!important;
 }
-
+.config-link-hover{
+  font-weight: normal!important;
+}
 #config-container{
 position: relative;
 }

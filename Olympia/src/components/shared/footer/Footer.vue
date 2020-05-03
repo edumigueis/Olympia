@@ -2,11 +2,11 @@
   <div id="footer-container" class="white">
     <div id="config-container">
       <ul class="config">
-        <li class="config-item"><a class="config-link config-link-hover">menu-bar sumir ao rolar</a></li>
+        <li class="config-item"><a class="config-link config-link-hover sumir">menu-bar sumir ao rolar</a></li>
         <hr class="line-config">
-        <li class="config-item"><a class="config-link config-link-hover">desligar menu-bar</a></li>
+        <li class="config-item"><a class="config-link config-link-hover desligar">desligar menu-bar</a></li>
         <hr class="line-config">
-        <li class="config-item "><a class="config-link config-link-hover">reaplicar definições no login</a></li>
+        <li class="config-item "><a class="config-link config-link-hover reaplicar">reaplicar definições no login</a></li>
       </ul>
     </div>
     <div id="footer" class="white" style="margin-top: -10px;">

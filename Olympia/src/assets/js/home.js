@@ -652,6 +652,15 @@ setInterval(() => {
         })
       })
 
+      $(document.body).on('click', '.img-ideias', function () {
+        var src = $(this).attr("src");
+        $('#myModal').css('display', 'block');
+        $("#img01").attr("src", src);
+        $(window).scrollTop(0);
+        $("#img01").css("width", '40%');
+        $('#mouse').css('display', 'block');
+        $('#footer').css('display', 'none');
+      });
     })
   }
   else if (!$('#container-home').length) {

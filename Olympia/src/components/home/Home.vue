@@ -57,10 +57,10 @@
                 <div class="fnc-slide__content">
                   <h2 class="fnc-slide__heading">
                     <div class="fnc-slide__heading-line">
-                      <span>Destaques</span>
+                      <span>Pequenas</span>
                     </div>
                     <div class="fnc-slide__heading-line">
-                      <span></span>
+                      <span> ideias</span>
                     </div>
                   </h2>
                   <button type="button" class="fnc-slide__action-btn">
@@ -131,7 +131,7 @@
                 <span class="fnc-nav__control-progress"></span>
               </button>
               <button class="fnc-nav__control">
-                Destaques
+                Ideias
                 <span class="fnc-nav__control-progress"></span>
               </button>
               <button class="fnc-nav__control">
@@ -176,22 +176,23 @@
             <table id="table-modal" class='table-modal-2'>
               <tr>
                 <td id="td1-modal">
-                  <h1 id="title-modal">Daily Art 2</h1>
-                  <h2 id="subtitle-modal">"Mona Lisa", por Fernando Botero</h2>
-                  <h3 id="pretext-modal">Por que?</h3>
+                  <h1 id="title-modal">Pequenas Ideias</h1>
+                  <h2 id="subtitle-modal">Passos simples; belos resultados!</h2>
+                  <h3 id="pretext-modal" class="pretext-2">Vasinho de Rolha</h3>
                   <p id="text-modal">
-                    Percebemos, de cara, as formas arredondadas que o artista
-                    usou para representar a forma humana; com a intenção de
-                    destacar principalmente sua ganância. Botero nunca pintava
-                    personagens negras, pois justamente queria criticar a
-                    desigualdade social, que promove tal soberba.
+                    Aproveite aquela rolha de um bom vinho ou aquelas plantinhas danadas que crescem no chão e faça esse belo jardim:<br>
+                    1º) Com uma chave de fenda e com cuidado, faça um buraco do topo até a metade de uma rolha; <br>
+                    2º) Coloque um pouquinho de terra e uma folhinha de suculenta, um trevo ou outra planta de sua escolha; <br>
+                    3º) Regue de vez em quando (mas só uma gotinha!); <br>
+                    Viu só?? Esses vasinhos são belos ornamentos para seu quarto, cozinha, banheiro... ou para dar de presente a alguém!
                   </p>
                 </td>
                 <td id="td2-modal">
                   <div id="container-img-modal">
                     <img
                       id="image-modal"
-                      src="/src/assets/images/daily-art.jpg"
+                      src="/src/assets/images/ideias.jpg"
+                      class="img-ideias"
                     />
                   </div>
                 </td>
@@ -227,7 +228,7 @@
               <tr>
                 <td id="td1-modal">
                   <h1 id="title-modal">Art News</h1>
-                  <h2 id="subtitle-modal">Notícia de hoje</h2>
+                  <h2 id="subtitle-modal">Notícias do mundo da arte!</h2>
                   <h3 id="pretext-modal">Durante a quarentena, que tal cursos em casa?</h3>
                   <p id="text-modal" class="text-4">
                     "Usar o tempo dentro de casa para aprender algo novo é um dos artifícios 

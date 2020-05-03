@@ -1149,6 +1149,10 @@ html {
   display: none;
 }
 
+.pretext-2{
+  color: #436b23!important;
+}
+
 .table-modal-3{
   display: none;
 }
@@ -1211,6 +1215,7 @@ html {
 
 #td2-modal{
   width: 45%;
+  vertical-align: middle!important;
 }
 
 #container-img-modal{
@@ -1238,7 +1243,7 @@ html {
   object-fit: cover;
 }
 
-@media only screen and (min-width: 0) and (max-width: 749px){
+@media only screen and (min-width: 0) and (max-width: 600px){
   #table-modal tr{
     display: flex;
     flex-wrap: wrap;
@@ -4112,4 +4117,32 @@ figure.snip1321.hover:after {
   50%  {transform: rotate(10deg);}
   75%  {transform: rotate(-10deg);}
   100% {transform: none;}
+}
+
+#mouse {
+  width: 22px;
+  height: 40px;
+  border-radius: 20px;
+  border: 4px solid rgb(255, 255, 255);
+  text-align: center;
+  position: fixed;
+  display: none;
+  left: 30px;
+  right: 0px;
+  bottom: 30px;
+  margin: 0;
+  z-index: 1000;
+}
+
+#mouse::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  position: relative;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  animation-name: mouse;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
 }
