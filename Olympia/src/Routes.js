@@ -12,6 +12,7 @@ import Categorias from './components/categories/Categories.vue';
 import Literatura from './components/literatura/Literatura.vue';
 import Cinema from './components/cinema/Cinema.vue';
 import Perfil from './components/perfil/Perfil.vue';
+import Post from './components/post/Post.vue';
 
 export const routes = [
 
@@ -27,6 +28,7 @@ export const routes = [
     { path: '/login', component: Login, titulo: 'L O G I N' },
     { path: '/categorias', component: Categorias, titulo: 'C A T E G O R I A S' },
     { path: '/literatura', component: Literatura, titulo: 'L I T E R A T U R A'},
+    { path: '/post', component: Post, titulo: 'P O S T'},
     { path: '/cinema', component: Cinema, titulo: 'C I N E M A'},
 ]
 
