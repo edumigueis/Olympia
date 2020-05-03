@@ -453,6 +453,8 @@ setInterval(() => {
                 if (curSlide == 2)
                   $('#page-name-on-tab').text('Inpirar-se');
 
+                  resizeAllGridItems();
+
           });
         });
 
@@ -478,6 +480,8 @@ setInterval(() => {
               else
                 if (curSlide == 2)
                   $('#page-name-on-tab').text('Inpirar-se');
+
+                  resizeAllGridItems();
             return;
           }
           if (diff <= -8) {
@@ -495,6 +499,8 @@ setInterval(() => {
               else
                 if (curSlide == 2)
                   $('#page-name-on-tab').text('Inpirar-se');
+
+                  resizeAllGridItems();
           }
           if (diff >= 8) {
             navigateRight();
@@ -511,6 +517,8 @@ setInterval(() => {
               else
                 if (curSlide == 2)
                   $('#page-name-on-tab').text('Inpirar-se');
+
+                  resizeAllGridItems();
           }
         });
 
@@ -531,6 +539,7 @@ setInterval(() => {
             if (curSlide == 2) {
               $('#page-name-on-tab').text('Inspirar-se');
             }
+            resizeAllGridItems();
           } else {
             navigateRight();
             $('#to-slide-' + curSlide).addClass('active-tab-p');
@@ -547,6 +556,7 @@ setInterval(() => {
             if (curSlide == 2) {
               $('#page-name-on-tab').text('Inspirar-se');
             }
+            resizeAllGridItems();
           }
         });
 
@@ -567,6 +577,7 @@ setInterval(() => {
           if (curSlide == 2) {
             $('#page-name-on-tab').text('Inspirar-se');
           }
+          resizeAllGridItems();
         });
         $(document).on("click", "#to-slide-0", function () {
           curSlide = 0;
@@ -579,6 +590,7 @@ setInterval(() => {
           var num = altura.substring(0, (altura.length - 2));
           var num = parseInt(num) + 100;
           $('.slider-container').css('height', num + "px");
+          resizeAllGridItems();
         });
         $(document).on("click", "#to-slide-1", function () {
           curSlide = 1;
@@ -591,6 +603,7 @@ setInterval(() => {
           var num = altura.substring(0, (altura.length - 2));
           var num = parseInt(num) + 100;
           $('.slider-container').css('height', num + "px");
+          resizeAllGridItems();
         });
         $(document).on("click", "#to-slide-2", function () {
           curSlide = 2;
@@ -603,6 +616,7 @@ setInterval(() => {
           var num = altura.substring(0, (altura.length - 2));
           var num = parseInt(num) + 100;
           $('.slider-container').css('height', num + "px");
+          resizeAllGridItems();
         });
         $(document).on("click", "#list-tab-ut", function () {
           if ($('#app-cover').css('display') == 'block') {
@@ -661,6 +675,33 @@ setInterval(() => {
         $('#mouse').css('display', 'block');
         $('#footer').css('display', 'none');
       });
+      function resizeGridItem(item){
+        grid = document.getElementsByClassName("slide__content")[0];
+        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+        rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+        rowSpan = Math.ceil((item.querySelector('.masonry-content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+          item.style.gridRowEnd = "span "+rowSpan;
+      }
+      
+      function resizeAllGridItems(){
+        allItems = document.getElementsByClassName("masonry-item");
+        for(x=0;x<allItems.length;x++){
+          resizeGridItem(allItems[x]);
+        }
+      }
+      
+      function resizeInstance(instance){
+        item = instance.elements[0];
+        resizeGridItem(item);
+      }
+      resizeAllGridItems();
+
+      window.addEventListener("resize", resizeAllGridItems);
+
+      allItems = document.getElementsByClassName("masonry-item");
+      for(x=0;x<allItems.length;x++){
+        imagesLoaded( allItems[x], resizeInstance);
+      }
     })
   }
   else if (!$('#container-home').length) {

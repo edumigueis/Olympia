@@ -428,16 +428,16 @@
           <div class="bubble x19"></div>
           <div class="bubble x20"></div>
         </div>
+        <ul class="slider-pagi"></ul>
         <div class="slider-container">
           <div class="slider-control left inactive"></div>
           <div class="slider-control right"></div>
-          <ul class="slider-pagi"></ul>
           <div class="slider">
             <div class="slide slide-0 active activo">
               <div class="slide__bg"></div>
               <div class="slide__content">
-                <span id="col-1-obra">
-                <div class="feed-item">
+                <div class="masonry-item">
+                  <div class="masonry-content">
                   <div class="prof-cont-feed white-7">
                     <div class="prof-img-cont">
                       <img
@@ -492,8 +492,10 @@
                       </div>
                     </div>
                   </div>
+                  </div>
                 </div>
-                <div class="feed-item">
+                <div class="masonry-item">
+                   <div class="masonry-content">
                   <div class="prof-cont-feed white-7">
                     <div class="prof-img-cont">
                       <img
@@ -543,6 +545,7 @@
                         <div class="heart"></div>
                       </div>
                     </div>
+                  
                   </div>
                   <!--<div class="post-det-cont">
                     <div class="name-of-post">The Dawn Project</div>
@@ -565,10 +568,10 @@
                     
                     
                   </div>-->
+                  </div>
                 </div>
-                </span>
-                <span id="col-2-obra">
-                <div class="feed-item">
+                <div class="masonry-item">
+                  <div class="masonry-content">
                   <div class="prof-cont-feed white-7">
                     <div class="prof-img-cont">
                       <img
@@ -620,8 +623,10 @@
                       </div>
                     </div>
                   </div>
+                  </div>
                 </div>
-                <div class="feed-item">
+                <div class="masonry-item">
+                  <div class="masonry-content">
                   <div class="prof-cont-feed white-7">
                     <div class="prof-img-cont">
                       <img
@@ -676,10 +681,10 @@
                       </div>
                     </div>
                   </div>
+                  </div>
                 </div>
-                </span>
-                <span id="col-3-obra">
-                <div class="feed-item">
+                <div class="masonry-item">
+                  <div class="masonry-content">
                   <div class="prof-cont-feed white-7">
                     <div class="prof-img-cont">
                       <img
@@ -732,8 +737,10 @@
                       </div>
                     </div>
                   </div>
+                  </div>
                 </div>
-                <div class="feed-item">
+                <div class="masonry-item">
+                  <div class="masonry-content">
                   <div class="prof-cont-feed white-7">
                     <div class="prof-img-cont">
                       <img
@@ -788,8 +795,10 @@
                       </div>
                     </div>
                   </div>
+                  </div>
                 </div>
-                <div class="feed-item">
+                <div class="masonry-item">
+                  <div class="masonry-content">
                   <div class="prof-cont-feed white-7">
                     <div class="prof-img-cont">
                       <img
@@ -845,13 +854,12 @@
                     </div>
                   </div>
                 </div>
-                </span>
+              </div>
               </div>
             </div>
             <div class="slide slide-1">
               <div class="slide__bg"></div>
               <div class="slide__content">
-                <span id="col-1-serv">
                 <div class="masonry-item">
                   <div class="masonry-content">
                     <a class="link-to-serv" href="/#/detalhes"
@@ -1173,8 +1181,6 @@
                     </p>
                   </div>
                 </div>
-                </span>
-                <span id="col-2-serv">
                 <div class="masonry-item">
                   <div class="masonry-content">
                     <a class="link-to-serv" href="/#/detalhes"
@@ -1499,8 +1505,6 @@
                     </p>
                   </div>
                 </div>
-                </span>
-                <span id="col-3-serv">
                 <div class="masonry-item">
                   <div class="masonry-content">
                     <a class="link-to-serv" href="/#/detalhes"
@@ -1814,7 +1818,6 @@
                     </p>
                   </div>
                 </div>
-                </span>
               </div>
             </div>
             <div class="slide slide-2">
