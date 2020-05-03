@@ -436,6 +436,7 @@
             <div class="slide slide-0 active activo">
               <div class="slide__bg"></div>
               <div class="slide__content">
+                <span id="col-1-obra">
                 <div class="feed-item">
                   <div class="prof-cont-feed white-7">
                     <div class="prof-img-cont">
@@ -565,6 +566,8 @@
                     
                   </div>-->
                 </div>
+                </span>
+                <span id="col-2-obra">
                 <div class="feed-item">
                   <div class="prof-cont-feed white-7">
                     <div class="prof-img-cont">
@@ -674,6 +677,8 @@
                     </div>
                   </div>
                 </div>
+                </span>
+                <span id="col-3-obra">
                 <div class="feed-item">
                   <div class="prof-cont-feed white-7">
                     <div class="prof-img-cont">
@@ -840,11 +845,13 @@
                     </div>
                   </div>
                 </div>
+                </span>
               </div>
             </div>
             <div class="slide slide-1">
               <div class="slide__bg"></div>
               <div class="slide__content">
+                <span id="col-1-serv">
                 <div class="masonry-item">
                   <div class="masonry-content">
                     <a class="link-to-serv" href="/#/detalhes"
@@ -1166,6 +1173,8 @@
                     </p>
                   </div>
                 </div>
+                </span>
+                <span id="col-2-serv">
                 <div class="masonry-item">
                   <div class="masonry-content">
                     <a class="link-to-serv" href="/#/detalhes"
@@ -1490,6 +1499,8 @@
                     </p>
                   </div>
                 </div>
+                </span>
+                <span id="col-3-serv">
                 <div class="masonry-item">
                   <div class="masonry-content">
                     <a class="link-to-serv" href="/#/detalhes"
@@ -1803,6 +1814,7 @@
                     </p>
                   </div>
                 </div>
+                </span>
               </div>
             </div>
             <div class="slide slide-2">

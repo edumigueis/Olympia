@@ -321,7 +321,7 @@ body {
       display: none;
   }
   #post-obra{
-      display: block;
+      display: none;
   }
   #post-serv{
     display: none;
@@ -380,7 +380,7 @@ body {
     border:none;
   }
   ul li:last-child {
-    width: calc(100%/8);
+    width: calc(100%/8.5);
   }
   
   img {
@@ -1182,56 +1182,6 @@ Basic input element using psuedo classes
       width: 100%;
     }
   }
-  
-  /* ==========================================================================
-     #BOX-SIZING
-     ========================================================================== */
-  /**
-   * More sensible default box-sizing:
-   * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
-   */
-  html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-  }
-  
-  *, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-  }
-  
-  /* ==========================================================================
-     #RESET
-     ========================================================================== */
-  /**
-   * A very simple reset that sits on top of Normalize.css.
-   */
-  body,
-  h1, h2, h3, h4, h5, h6,
-  blockquote, p, pre,
-  dl, dd, ol, ul,
-  figure,
-  hr,
-  fieldset, legend {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /**
-   * Remove trailing margins from nested lists.
-   */
-  li > ol,
-  li > ul {
-    margin-bottom: 0;
-  }
-  
   /**
    * Remove default table spacing.
    */
@@ -1635,7 +1585,9 @@ Basic input element using psuedo classes
   }
   
   .card-3 .card-heading {
-    background: url("../images/bg-heading-03.jpg") top left/cover no-repeat;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: table-cell;
     width: 50%;
   }
@@ -1664,7 +1616,7 @@ Basic input element using psuedo classes
     }
   }
   
-  #go-on-btn{
+  .go-on-btn{
       display: none;
       border: 2px solid #333;
       width: 200px;
@@ -1689,7 +1641,7 @@ Basic input element using psuedo classes
 	position: relative;
 	overflow: hidden;
   }
-#go-on-btn::before, .button25::after{
+.go-on-btn::before, .button25::after{
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1709,11 +1661,11 @@ Basic input element using psuedo classes
 	border-right-color: rgb(92, 92, 92);
 	background-color: rgba(92, 92, 92, 0.4);
 }
-#go-on-btn::after{
+.go-on-btn::after{
 	-webkit-transition-delay: 0.2s; /* Safari */
     transition-delay: 0.2s;
 }
-#go-on-btn:hover::before, #go-on-btn:hover::after{
+.go-on-btn:hover::before, .go-on-btn:hover::after{
 	opacity: 0;
 	-webkit-transform: translate(0,0);
 	transform: translate(0,0);	

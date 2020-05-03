@@ -24,6 +24,7 @@ function resize() {
     }, 500);  
   };
   var contImg = 0;
+  var contImgServ = 0;
 var jaFoiPost = false;
 var selectedImage;
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
@@ -51,11 +52,34 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
                 contImg++;
               reader.onload = function (e) {
                 $("#obra-" +contImg).attr("src", e.target.result);
-                selectedImage = e.target.result;
+                if(contImg == 1){
+                  selectedImage = e.target.result;
+                }
                 if(contImg >= 2){
-                    $('#go-on-btn').css('display','block');
+                    $('#go-on-btn-obra').css('display','block');
                 }
                 if(contImg >= 8){
+                    $('.fileUpload').css('filter','brightness(68%)');
+                    $('.fileUpload').css('pointer-events','none');
+                }
+              };
+    
+              reader.readAsDataURL(input.files[0]);
+            }
+          };
+          var readURLServ = function (input) {
+            if (input.files && input.files[0]) {
+              var reader = new FileReader();
+                contImgServ++;
+              reader.onload = function (e) {
+                $("#serv-" +contImgServ).attr("src", e.target.result);
+                if(contImgServ == 1){
+                selectedImage = e.target.result;
+                }
+                if(contImgServ >= 2){
+                    $('#go-on-btn-serv').css('display','block');
+                }
+                if(contImgServ >= 8){
                     $('.fileUpload').css('filter','brightness(68%)');
                     $('.fileUpload').css('pointer-events','none');
                 }
@@ -98,13 +122,18 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
   $("#obra-picker").on("change", function () {
     readURLObra(this);
   });
-  // Click to Scroll UP Functions
-  $('.scroll-prev').click(function(event){
-    scrollUp();
-    event.preventDefault();
-
+  $("#serv-picker").on("change", function () {
+    readURLServ(this);
   });
-
+  $("#go-on-btn-obra").on("click", function () {
+    $('#post-obra').css('display','block');
+    $('.card-heading').css("background-image", "url('" + selectedImage + "')");
+    scrollDown();
+    event.preventDefault();
+    setInterval(() => {
+        $('#post-obra-img').css('display','none')
+    }, 840)
+  });
 // Resize Container on window resize
 $(window).resize(function(){
   
