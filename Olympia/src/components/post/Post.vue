@@ -114,62 +114,62 @@
               <input type="file" class="upload" id="obra-picker" />
               <span>Escolher Imagens</span>
             </div>
-            <div id="go-on-btn">Continuar</div>
+            <div id="go-on-btn-obra" class="go-on-btn">Continuar</div>
           </div>
         </section>
         <section id="post-serv-img">
           <ul class="img-list">
             <li class="img-list-item">
               <img
-                class="img-inner"
+                class="img-inner" id="serv-1"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner"
+                class="img-inner" id="serv-2"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner"
+                class="img-inner" id="serv-3"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner"
+                class="img-inner" id="serv-4"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner"
+                class="img-inner" id="serv-5"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner"
+                class="img-inner" id="serv-6"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner"
+                class="img-inner" id="serv-7"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
             <li class="img-list-item">
               <img
-                class="img-inner"
+                class="img-inner" id="serv-8"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
@@ -179,7 +179,7 @@
               <input type="file" class="upload" id="serv-picker" />
               <span>Escolher Imagens</span>
             </div>
-            <div id="go-on-btn">Continuar</div>
+            <div id="go-on-btn-serv" class="go-on-btn">Continuar</div>
           </div>
         </section>
         <section id="post-obra">
@@ -296,7 +296,7 @@
             </form>
             <div class="img-pick-cont">
               <img id="image-picked" />
-              <div class="pick-file-cont">
+              <div class="pick-file-cont-insp">
                 <div class="image-upload">
                   <label for="file-input">
                     <img src="/src/assets/images/clip.svg" />
