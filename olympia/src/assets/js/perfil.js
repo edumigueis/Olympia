@@ -5,15 +5,27 @@ setInterval(() => {
 
         jaFoiPerfil = true;
 
-        var rn = Math.floor((Math.random() * 150) + 60);
-        var rs = Math.floor((Math.random() * 11) + 4);
-        var t = new Trianglify({
-            x_gradient: Trianglify.colorbrewer.Spectral[rs],
-            noiseIntensity: 0,
-            cellsize: rn
+        $(document.body).on('click', '.img-profile', function () {
+            var src = $(this).attr("src");
+            $('#myModal').css('display', 'block');
+            $("#img01").attr("src", src);
+            $("#img01").css("max-width", '55%');
+            $(window).scrollTop(0);
+            $('#mouse').css('display', 'block');
+            $('#footer').css('display', 'none');
         });
-        var pattern = t.generate(window.innerWidth, window.innerWidth + 200);
-        $('.container-profile').css('background-image: ', pattern.dataUrl);
+        $(document.body).on('click', '.close-mod', function () {
+            $('#myModal').css('display', 'none');
+            $('#mouse').css('display', 'none');
+            $('#footer').css('display', 'block');
+        });
+
+        $(document.body).on('click', '#myModal', function () {
+            $('#myModal').css('display', 'none');
+            $('#mouse').css('display', 'none');
+            $('#footer').css('display', 'block');
+        });
+
     }
     else if (!$('#container-perfil').length) {
         jaFoiPerfil = false;

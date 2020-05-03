@@ -14,10 +14,24 @@
       <div class="container-profile">
         <div class="profile">
           <div class="title-content">
-            <h1 class="title">Seu <br>Perfil</h1>
-            <div class="info-profile white-2 black-to-white"></div>
+            <h1 class="title">Seu <br/>Perfil</h1>
+            <div class="info-profile white-2 black-to-white">
+            <div class="user-pic">
+              <img
+                src="/src/assets/images/perfil.jpeg"
+                alt
+                class="img-profile"
+              />
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div id="myModal" class="modal">
+        <span class="close-mod">&times;</span>
+        <img class="modal-content" id="img01" />
+        <div id="caption"></div>
+        <meu-mouse></meu-mouse>
       </div>
 
       <meu-footer></meu-footer>
