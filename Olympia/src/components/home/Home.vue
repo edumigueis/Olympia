@@ -216,7 +216,6 @@
                     <button id="button" class="BT-OH-BR-R6-NF-FH-FP-TU-PT" data-clipboard-text="background-color: #9eabe4;
     background-image: linear-gradient(315deg, #7b89c7 0%, #5dceb9 74%);">
                       <canvas id="canvas"></canvas> 
-                      <hover></hover>
                       <span id="text-color">COPIAR CSS</span>                     
                   </button>  
                   </div> 

@@ -20,6 +20,7 @@ setInterval(() => {
   if ($('#container-home').length && $('.modal-slider').css('display') == 'none') {
     var classe = $('.m--active-control').attr('class');
     classe = classe.split(" ")[1];
+
     if (classe === 'fnc-nav__control-1') {
       $('.table-modal-1').css('display', 'block');
       $('.table-modal-2').css('display', 'none');
@@ -48,7 +49,7 @@ setInterval(() => {
   else if (!$('#container-home').length) {
     jaFoiHome3 = false;
   }
-}, 100);
+}, 500);
 
 setInterval(() => {
   if ($('#container-home').length && jaFoiHome == false) {
@@ -160,7 +161,8 @@ setInterval(() => {
             var num = altura.substring(0, (altura.length - 2));
             var num = parseInt(num) + 100;
             $('.slider-container').css('height', num + "px");
-          }, 500);
+            resizeAllGridItems();
+          }, 300);
 
         }
         var $$ = function (selector, context) {
