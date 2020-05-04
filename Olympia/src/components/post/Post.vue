@@ -56,57 +56,73 @@
           <ul class="img-list">
             <li class="img-list-item">
               <img
-                class="img-inner" id="obra-1"
+                class="img-inner"
+                id="obra-1"
                 src="/src/assets/images/colorful-cam.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="obra-2"
+                class="img-inner"
+                id="obra-2"
                 src="/src/assets/images/colorful-cam.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="obra-3"
+                class="img-inner"
+                id="obra-3"
                 src="/src/assets/images/colorful-cam.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="obra-4"
+                class="img-inner"
+                id="obra-4"
                 src="/src/assets/images/colorful-cam.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="obra-5"
+                class="img-inner"
+                id="obra-5"
                 src="/src/assets/images/colorful-cam.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="obra-6"
+                class="img-inner"
+                id="obra-6"
                 src="/src/assets/images/colorful-cam.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="obra-7"
+                class="img-inner"
+                id="obra-7"
                 src="/src/assets/images/colorful-cam.jpg"
               />
+              <span class="remove-img"></span>
             </li>
             <li class="img-list-item">
               <img
-                class="img-inner" id="obra-8"
+                class="img-inner"
+                id="obra-8"
                 src="/src/assets/images/colorful-cam.jpg"
               />
+              <span class="remove-img"></span>
             </li>
           </ul>
           <div class="pick-file-cont">
@@ -121,55 +137,63 @@
           <ul class="img-list">
             <li class="img-list-item">
               <img
-                class="img-inner" id="serv-1"
+                class="img-inner"
+                id="serv-1"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="serv-2"
+                class="img-inner"
+                id="serv-2"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="serv-3"
+                class="img-inner"
+                id="serv-3"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="serv-4"
+                class="img-inner"
+                id="serv-4"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="serv-5"
+                class="img-inner"
+                id="serv-5"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="serv-6"
+                class="img-inner"
+                id="serv-6"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
 
             <li class="img-list-item">
               <img
-                class="img-inner" id="serv-7"
+                class="img-inner"
+                id="serv-7"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
             <li class="img-list-item">
               <img
-                class="img-inner" id="serv-8"
+                class="img-inner"
+                id="serv-8"
                 src="/src/assets/images/colorful-cam.jpg"
               />
             </li>
@@ -187,13 +211,13 @@
             <div class="card card-3">
               <div class="card-heading"></div>
               <div class="card-body">
-                <h2 class="title">Registration Info</h2>
+                <h2 class="title">Dados da Postagem</h2>
                 <form method="POST">
                   <div class="input-group">
                     <input
                       class="input--style-3"
                       type="text"
-                      placeholder="Name"
+                      placeholder="Título"
                       name="name"
                     />
                   </div>
@@ -201,7 +225,7 @@
                     <input
                       class="input--style-3 js-datepicker"
                       type="text"
-                      placeholder="Birthdate"
+                      placeholder="Dados Técnicos"
                       name="birthday"
                     />
                     <i
@@ -209,64 +233,41 @@
                     ></i>
                   </div>
                   <div class="input-group">
-                    <div class="rs-select2 js-select-simple select--no-search">
-                      <select
-                        name="gender"
-                        tabindex="-1"
-                        class="select2-hidden-accessible"
-                        aria-hidden="true"
-                      >
-                        <option disabled="disabled" selected="selected"
-                          >Gender</option
+                    <textarea
+                      class="input--style-3 text-area-desc"
+                      placeholder="Descrição"
+                      rows="1"
+                    ></textarea>
+                  </div>
+                  <div class="input-group">
+                    <div class="select">
+                      <select name="slct" id="slct">
+                        <option
+                          title="Arte Digital"
+                          value="Arte Digital"
+                          selected="selected"
+                          >Arte Digital</option
                         >
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Other</option> </select
-                      ><span
-                        class="select2 select2-container select2-container--default"
-                        dir="ltr"
-                        style="width: 69px;"
-                        ><span class="selection"
-                          ><span
-                            class="select2-selection select2-selection--single"
-                            role="combobox"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            tabindex="0"
-                            aria-labelledby="select2-gender-o2-container"
-                            ><span
-                              class="select2-selection__rendered"
-                              id="select2-gender-o2-container"
-                              title="Gender"
-                              >Gender</span
-                            ><span
-                              class="select2-selection__arrow"
-                              role="presentation"
-                              ><b role="presentation"></b></span></span></span
-                        ><span
-                          class="dropdown-wrapper"
-                          aria-hidden="true"
-                        ></span
-                      ></span>
-                      <div class="select-dropdown"></div>
+                        <option title="Arquitetura" value="Arquitetura"
+                          >Arquitetura</option
+                        >
+                        <option title="Cinema" value="Cinema">Cinema</option>
+                        <option title="Escultura" value="Escultura"
+                          >Escultura</option
+                        >
+                        <option title="Fotografia" value="Fotografia"
+                          >Fotografia</option
+                        >
+                        <option title="Literatura" value="Literatura"
+                          >Literatura</option
+                        >
+                        <option title="Música" value="Música">Música</option>
+                        <option title="Pintura" value="Pintura">Pintura</option>
+                        <option title="Teatro" value="Teatro">Teatro</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="input-group">
-                    <input
-                      class="input--style-3"
-                      type="email"
-                      placeholder="Email"
-                      name="email"
-                    />
-                  </div>
-                  <div class="input-group">
-                    <input
-                      class="input--style-3"
-                      type="text"
-                      placeholder="Phone"
-                      name="phone"
-                    />
-                  </div>
+                  <div class="input-group"></div>
                   <div class="p-t-10">
                     <button class="btn btn--pill btn--green" type="submit">
                       Submit

@@ -382,7 +382,40 @@ body {
   ul li:last-child {
     width: calc(100%/8.5);
   }
-  
+  @media only screen and (max-width: 880px){
+    ul{
+      width: 90%;
+    }
+    ul li:last-child {
+      width: calc(100%/8.7);
+    }
+  }
+  @media only screen and (max-width: 780px){
+    ul li:last-child {
+      width: calc(100%/8.9);
+    }
+  }
+  @media only screen and (max-width: 630px){
+    ul{
+      width: 95%;
+    }
+    ul li:last-child {
+      width: calc(100%/9.1);
+    }
+  }
+  @media only screen and (max-width: 500px){
+    ul{
+      width: 100%;
+    }
+    ul li:last-child {
+      width: calc(100%/9.3);
+    }
+  }
+  @media only screen and (max-width: 410px){
+    ul li:last-child {
+      width: calc(100%/9.6);
+    }
+  }
   img {
     width: 100%;
     min-height: 100%;
@@ -395,10 +428,36 @@ body {
   
   
   ul li:hover {
-    width: 750px !important;
+    width: 750px;
   }
-  
-  
+  ul li:last-child:hover {
+    width: 500px !important;
+  }
+  ul li:nth-last-child(2):hover {
+    width: 500px !important;
+  }
+  ul li:nth-last-child(3):hover {
+    width: 600px !important;
+  }
+  ul li:hover > span { 
+    height: 30px;
+    width: 30px; 
+    top: 12px;
+    right: 10px;
+  }
+  .remove-img{
+    position: absolute;
+    top: 9px;
+    right: 7px;
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s all;
+    cursor: pointer;
+  }
   
   
   
@@ -1306,6 +1365,10 @@ Basic input element using psuedo classes
   
   .wrapper--w780 {
     max-width: 780px;
+    margin-top: 20px !important;
+    font-family: 'Poppins',sans-serif;
+    box-shadow: 3px 3px 9px 9px #a9a9a9;
+    border-radius: 21px;
   }
   
   .wrapper--w680 {
@@ -1390,7 +1453,7 @@ Basic input element using psuedo classes
   }
   
   .daterangepicker .table-condensed th select {
-    border: 1px solid #ccc;
+    border: 1px solid #222;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -1417,7 +1480,7 @@ Basic input element using psuedo classes
   .input-icon {
     position: absolute;
     font-size: 18px;
-    color: #ccc;
+    color: #222;
     right: 8px;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1431,41 +1494,41 @@ Basic input element using psuedo classes
   .input-group {
     position: relative;
     margin-bottom: 33px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(2, 2, 2, 0.2);
   }
   
   .input--style-3 {
     padding: 5px 0;
     font-size: 16px;
-    color: #ccc;
+    color: #222;
     background: transparent;
   }
   
   .input--style-3::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
-    color: #ccc;
+    color: #222;
   }
   
   .input--style-3:-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
-    color: #ccc;
+    color: #222;
     opacity: 1;
   }
   
   .input--style-3::-moz-placeholder {
     /* Mozilla Firefox 19+ */
-    color: #ccc;
+    color: #222;
     opacity: 1;
   }
   
   .input--style-3:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: #ccc;
+    color: #222;
   }
   
   .input--style-3:-ms-input-placeholder {
     /* Microsoft Edge */
-    color: #ccc;
+    color: #222;
   }
   
   /* ==========================================================================
@@ -1556,7 +1619,7 @@ Basic input element using psuedo classes
      ========================================================================== */
   .title {
     font-size: 24px;
-    color: #fff;
+    color: #222;
     font-weight: 400;
     margin-bottom: 36px;
   }
@@ -1573,10 +1636,10 @@ Basic input element using psuedo classes
   }
   
   .card-3 {
-    background: #000;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    background: #f9f9f9;
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    border-radius: 21px;
     -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
@@ -1669,4 +1732,63 @@ Basic input element using psuedo classes
 	opacity: 0;
 	-webkit-transform: translate(0,0);
 	transform: translate(0,0);	
+}
+.text-area-desc{
+  width: 100%;
+  border: none !important;
+  font-family: 'Poppins', sans-serif;
+}
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: transparent;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: transparent;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 0;
+    font-size: 16px;
+    color: #222;
+}
+/* Arrow */
+.select::after {
+  content: " ";
+  white-space: pre;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+  background-image: url(../images/arrow-single-down.png);
+  background-position: center;
+  background-size: cover;
 }
