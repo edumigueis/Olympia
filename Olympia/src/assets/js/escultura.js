@@ -25,17 +25,17 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-var jaFoiCin = false;
+var jaFoiEsc = false;
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
-  if ($("#container-escultura").length && jaFoiCin == false) {
+  if ($("#container-escultura").length && jaFoiEsc == false) {
 
-    jaFoiCin = true;
+    jaFoiEsc = true;
 
     $(function () {
       showSlides(slideIndex);
     })
   }
   else if (!$("#container-escultura").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
-    jaFoiCin = false;
+    jaFoiEsc = false;
   }
 }, 100);

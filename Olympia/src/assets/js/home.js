@@ -13,6 +13,7 @@ setInterval(() => {
     var num = altura.substring(0, (altura.length - 2));
     var num = parseInt(num) + 100;
     $('.slider-container').css('height', num + "px");
+    resizeAllGridItems();
   }
 }, 500);
 
@@ -677,20 +678,6 @@ setInterval(() => {
         $('#mouse').css('display', 'block');
         $('#footer').css('display', 'none');
       });
-      function resizeGridItem(item){
-        grid = document.getElementsByClassName("slide__content")[0];
-        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-        rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-        rowSpan = Math.ceil((item.querySelector('.masonry-content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
-          item.style.gridRowEnd = "span "+rowSpan;
-      }
-      
-      function resizeAllGridItems(){
-        allItems = document.getElementsByClassName("masonry-item");
-        for(x=0;x<allItems.length;x++){
-          resizeGridItem(allItems[x]);
-        }
-      }
       
       function resizeInstance(instance){
         item = instance.elements[0];
@@ -711,6 +698,20 @@ setInterval(() => {
   }
 }, 100);
 
+function resizeAllGridItems(){
+  allItems = document.getElementsByClassName("masonry-item");
+  for(x=0;x<allItems.length;x++){
+    resizeGridItem(allItems[x]);
+  }
+}
+
+function resizeGridItem(item){
+  grid = document.getElementsByClassName("slide__content")[0];
+  rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+  rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+  rowSpan = Math.ceil((item.querySelector('.masonry-content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+    item.style.gridRowEnd = "span "+rowSpan;
+}
 
 
 
