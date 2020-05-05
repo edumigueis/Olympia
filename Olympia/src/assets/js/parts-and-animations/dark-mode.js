@@ -51,6 +51,7 @@ $(document).ready(function () {
             $("select").removeClass("dark");
             $(".border-bottom-7").removeClass("dark-mode");
             $(".filter-invert").removeClass("dark-mode");
+            $(".masonry-item").removeClass("dark-mode");
             $(".background-white-to-darkgray").removeClass("dark-mode");
             $('.dark-mode-activators').text('MODO NOTURNO');
         }
@@ -95,6 +96,7 @@ $(document).ready(function () {
             $("select").addClass("dark");
             $(".border-bottom-7").addClass("dark-mode");
             $(".filter-invert").addClass("dark-mode");
+            $(".masonry-item").addClass("dark-mode");
             $(".background-white-to-darkgray").addClass("dark-mode");
             $('.dark-mode-activators').text('MODO CLARO');
         }

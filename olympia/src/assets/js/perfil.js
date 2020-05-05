@@ -1,6 +1,12 @@
 var jaFoiPerfil = false;
 
 setInterval(() => {
+    if ($('#container-perfil').length) {
+      resizeAllGridItems();
+    }
+  }, 500);
+
+setInterval(() => {
     if ($('#container-perfil').length && !jaFoiPerfil) {
 
         jaFoiPerfil = true;
@@ -40,6 +46,7 @@ setInterval(() => {
             $('.salvos-content').fadeOut(300);
             $('.configuracoes-content').fadeOut(300);
             $('.estatisticas-content').fadeOut(300);
+            resizeAllGridItems();
         });
 
         $(document.body).on('click', '.curtidas', function () {
@@ -48,6 +55,7 @@ setInterval(() => {
             $('.salvos-content').fadeOut(300);
             $('.configuracoes-content').fadeOut(300);
             $('.estatisticas-content').fadeOut(300);
+            resizeAllGridItems();
         });
 
         $(document.body).on('click', '.salvos', function () {
@@ -56,6 +64,7 @@ setInterval(() => {
             $('.salvos-content').fadeIn(300);
             $('.configuracoes-content').fadeOut(300);
             $('.estatisticas-content').fadeOut(300);
+            resizeAllGridItems();
         });
 
         $(document.body).on('click', '.configuracoes', function () {
@@ -82,12 +91,42 @@ setInterval(() => {
             $('.bg').addClass('black-css');
             $('.bg').removeClass('colorful-css');
             $('.bg').removeClass('black-and-white-css');
-        });
+        }); 
+        $(".heart").on("click", function () {
+            $(this).toggleClass("is-active");
+          });
+          $(".magic").on("click", function () {
+            $(this).toggleClass("is-star-active");
+          });
+        function resizeInstance(instance){
+            item = instance.elements[0];
+            resizeGridItem(item);
+          }
+          resizeAllGridItems();
+    
+          window.addEventListener("resize", resizeAllGridItems);
+    
+          allItems = document.getElementsByClassName("masonry-item");
     }
     else if (!$('#container-perfil').length) {
         jaFoiPerfil = false;
     }
 }, 300);
+
+function resizeAllGridItems(){
+    allItems = document.getElementsByClassName("masonry-item");
+    for(x=0;x<allItems.length;x++){
+      resizeGridItem(allItems[x]);
+    }
+  }
+  
+  function resizeGridItem(item){
+    grid = document.getElementsByClassName("slide__content")[0];
+    rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+    rowSpan = Math.ceil((item.querySelector('.masonry-content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+      item.style.gridRowEnd = "span "+rowSpan;
+  }
 
 setInterval(() => {
     if ($('#container-perfil').length) {
