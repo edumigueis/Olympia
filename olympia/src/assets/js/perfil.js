@@ -128,10 +128,18 @@ function resizeAllGridItems(){
       item.style.gridRowEnd = "span "+rowSpan;
   }
 
+var clickHeart = false;
 setInterval(() => {
     if ($('#container-perfil').length) {
+
         if (!$('body').hasClass('desligar-menu-bar') && !$('body').hasClass('sumir-menu-bar')) {
             $("#control_03-2").trigger("click");
+        }
+
+        if($('.color-verify').css('background-color') == 'rgb(142, 207, 147)' && !clickHeart){
+            $('i').css('visibility','hidden');
+            clickHeart = true;
+            $('.heart').trigger('click');
         }
     }
 }, 100);

@@ -50,7 +50,10 @@
 }
 
 .div-scroll{
-  border-radius: 18px;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 18px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
   border: 2px solid rgb(121, 123, 126);
   box-shadow: 0 0 5px rgb(75, 75, 75) inset;
   margin-left: auto;
@@ -62,7 +65,12 @@
 }
 
 .div-scroll::-webkit-scrollbar {
-  display: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0%;
+}
+
+.div-scroll::-webkit-scrollbar-track {
+  border-radius: 5px!important;
 }
 
 .div-scroll {

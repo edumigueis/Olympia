@@ -108,7 +108,7 @@
         </div>
         <div class="perfil-content white-4">
           <div class="sobre-mim-content content-perfil white-6 black-to-white">
-            <hr />
+            <hr class="color-verify"/>
             <h1 class="title-content-config black-to-white">
               Mais sobre mim...
             </h1>
@@ -234,27 +234,6 @@
                     </div>
                   
                   </div>
-                  <!--<div class="post-det-cont">
-                    <div class="name-of-post">The Dawn Project</div>
-                    <div class="name-of-prof">
-                      <a class="name-of-prof-link">Justin Alberman</a>
-                    </div>
-                    <div class="desc-of-post">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Etiam ut facilisis justo. In hac habitasse platea
-                      dictumst. Fusce vestibulum imperdiet felis sed ultrices.
-                      Curabitur ullamcorper molestie nunc in pharetra. Curabitur
-                      at cursus nunc. Curabitur porta, orci sed eleifend mollis,
-                      justo elit ullamcorper erat, sed vehicula nisl turpis a
-                      nibh. Pellentesque id odio a purus bibendum congue. Nunc
-                      ut viverra tellus. Donec volutpat posuere nisi, sed
-                      efficitur augue pretium sit amet. Curabitur congue, erat a
-                      mattis imperdiet, lectus ligula lacinia dolor, in
-                      tincidunt augue sem nec est.
-                    </div>
-                    
-                    
-                  </div>-->
                   </div>
                 </div>
                 <div class="masonry-item">
@@ -546,7 +525,7 @@
             </div>
           </div>
           <div class="curtidas-content content-perfil white-6 black-to-white">
-            <hr />
+            <hr class="color-verify"/>
             <h1 class="title-content-config black-to-white">
               Confira as suas curtidas...
             </h1>
@@ -975,7 +954,7 @@
             </div>
           </div>
           <div class="salvos-content content-perfil white-6 black-to-white">
-            <hr />
+            <hr class="color-verify"/>
             <h1 class="title-content-config black-to-white">
               Publicações salvas... (só você pode ver isto)
             </h1>
@@ -1404,7 +1383,7 @@
             </div>
           </div>
           <div class="configuracoes-content content-perfil white-6 black-to-white">
-            <hr />
+            <hr class="color-verify"/>
             <h1 class="title-content-config black-to-white">Mude o efeito da capa...</h1>
             <section class="config-section">
               <div class="div-capa">
