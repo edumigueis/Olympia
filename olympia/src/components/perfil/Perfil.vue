@@ -108,7 +108,7 @@
         </div>
         <div class="perfil-content white-4">
           <div class="sobre-mim-content content-perfil white-6 black-to-white">
-            <hr class="color-verify"/>
+            <hr class="color-verify sobre-hr"/>
             <h1 class="title-content-config black-to-white">
               Mais sobre mim...
             </h1>
@@ -121,7 +121,7 @@
             <h1 class="title-content-config black-to-white">
               Suas publicações...
             </h1>
-            <div class="div-scroll">
+            <div class="div-scroll div-scroll-sobre">
               <div class="slide__content">
                 <div class="masonry-item">
                   <div class="masonry-content">
@@ -525,11 +525,11 @@
             </div>
           </div>
           <div class="curtidas-content content-perfil white-6 black-to-white">
-            <hr class="color-verify"/>
+            <hr class="color-verify curtidas-hr"/>
             <h1 class="title-content-config black-to-white">
               Confira as suas curtidas...
             </h1>
-            <div class="div-scroll">
+            <div class="div-scroll div-scroll-curtidas">
               <div class="slide__content">
                 <div class="masonry-item">
                   <div class="masonry-content">
@@ -708,7 +708,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -766,7 +766,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -822,7 +822,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -880,7 +880,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -938,7 +938,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -954,11 +954,11 @@
             </div>
           </div>
           <div class="salvos-content content-perfil white-6 black-to-white">
-            <hr class="color-verify"/>
+            <hr class="color-verify salvos-hr"/>
             <h1 class="title-content-config black-to-white">
               Publicações salvas... (só você pode ver isto)
             </h1>
-            <div class="div-scroll">
+            <div class="div-scroll div-scroll-salvos">
               <div class="slide__content">
                 <div class="masonry-item">
                   <div class="masonry-content">
@@ -1006,7 +1006,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -1060,7 +1060,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -1137,7 +1137,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -1195,7 +1195,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -1251,12 +1251,12 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
                       </div>
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <div class="heart"></div>
                       </div>
                     </div>
@@ -1309,7 +1309,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -1367,7 +1367,7 @@
                       </figure>
                     </a>
                     <div class="interact-container">
-                      <div class="stage">
+                      <div class="stage heart-stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
                         </a>
@@ -1383,7 +1383,7 @@
             </div>
           </div>
           <div class="configuracoes-content content-perfil white-6 black-to-white">
-            <hr class="color-verify"/>
+            <hr class="color-verify config-hr"/>
             <h1 class="title-content-config black-to-white">Mude o efeito da capa...</h1>
             <section class="config-section">
               <div class="div-capa">

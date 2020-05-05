@@ -50,8 +50,8 @@
 }
 
 .div-scroll{
-  border-bottom-left-radius: 18px;
-  border-top-left-radius: 18px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   border: 2px solid rgb(121, 123, 126);
