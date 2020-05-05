@@ -201,3 +201,6 @@ input.dark{
 .dark-mode.masonry-item{
   background-color: #535353 !important;
 }
+.dark-mode.inverted{
+  filter: invert(95%);
+}

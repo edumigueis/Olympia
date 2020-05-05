@@ -28,7 +28,8 @@ body {
     align-items: center;
     justify-content: center;
     min-width: 300px;
-    filter: brightness(90%);
+    filter: brightness(70%);
+    filter: saturate(135%);
   }
   #cont-major-1{
       background-image: url('../images/paint.jpg');
@@ -452,11 +453,18 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    filter: saturate(90%);
+    filter: brightness(100%);
+    filter: contrast(90%);
   }
   ul:hover li {
     width:50px;  
   }
-  
+  li {
+    filter: saturate(90%);
+    filter: brightness(100%);
+    filter: contrast(90%);
+  }
   
   ul li:hover {
     width: 750px;
@@ -2131,4 +2139,8 @@ textarea.dark:-ms-input-placeholder {
 
 textarea.dark::placeholder {
   color: #dfdfdf;  
+}
+
+.dark-mode.white-7{
+  box-shadow: 3px 3px 9px 9px #686868 !important;
 }

@@ -530,7 +530,7 @@
           </div>
         </section>
         <section id="post-insp" class="white-6">
-          <div class="insp-post-cont">
+          <div class="insp-post-cont white-7">
             <form>
               <textarea
                 name="message"
@@ -550,7 +550,7 @@
               <div class="pick-file-cont-insp">
                 <div class="image-upload">
                   <label for="file-input">
-                    <img src="/src/assets/images/clip.svg" />
+                    <img src="/src/assets/images/clip.svg"/>
                   </label>
 
                   <input id="file-input" type="file" />
