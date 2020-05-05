@@ -21,7 +21,7 @@
           />
         </div>
         <h1 class="art-title">Literatura</h1>
-        <h2 class="art-subtitle">A sétima arte, um mar de sensações</h2>
+        <h2 class="art-subtitle">Representação escrita dos sentimentos e das vivências</h2>
       </div>
 
       <div id="corpo">
@@ -39,8 +39,8 @@
       </div>
 
       <div class="mySlides">
-        <q>"O declínio da literatura indica o declínio de uma nação."</q>
-        <p class="author">- Johann Goethe
+        <q>"Literatura consiste no caráter do leitor, a exemplo da abelha ou da aranha que, do suco das flores retiram, uma o mel, a outra o veneno"</q>
+        <p class="author">- Pedro Bodstein
     </p>
       </div>
 
@@ -167,7 +167,31 @@
             </tr>
           </table>
         </div>    
-      
+       <div class="container-left black-to-white white-7">
+          <table> <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
+            <tr>
+              <td class="texto-linha">
+                <h1 class="text-title">1984</h1>
+                1984 é um romance do escritor inglês Eric Arthur Blair, que assinava seus livros como George Orwell. 
+                1984 é um dos clássicos mundiais por prever uma sociedade onde todos os cidadãos teriam seus pensamentos
+                e atitudes controlados pelo Grande Irmão (em inglês, Big Brother, daí surgiu o reality show 
+                Big Brother Brasil). A obra é uma grande análise de um regime totalitário e foi o último livro publicado
+                por Orwell.
+                Publicada originalmente em 1949, a distopia futurista 1984 é um dos romances mais influentes do século XX,
+                um inquestionável clássico moderno. Lançada poucos meses antes da morte do autor, é uma obra magistral
+                que ainda se impõe como uma poderosa reflexão ficcional sobre a essência nefasta de qualquer forma de 
+                poder totalitário.
+              </td>
+              <td class="td-imagem">
+                <img
+                  class="imagem"
+                  margin-right:100px
+                  src="https://images-na.ssl-images-amazon.com/images/I/410ZirPKXKL.jpg"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
         
       </div>
       <!---->
