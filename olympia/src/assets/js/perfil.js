@@ -88,3 +88,11 @@ setInterval(() => {
         jaFoiPerfil = false;
     }
 }, 300);
+
+setInterval(() => {
+    if ($('#container-perfil').length) {
+        if (!$('body').hasClass('desligar-menu-bar') && !$('body').hasClass('sumir-menu-bar')) {
+            $("#control_03-2").trigger("click");
+        }
+    }
+}, 100);

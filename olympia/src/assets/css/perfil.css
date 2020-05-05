@@ -85,7 +85,7 @@
 }
 
 .configuracoes-content {
-  height: 120vh;
+  height: fit-content;
   width: 80vw;
   border-radius: 18px;
   box-shadow: 0 0 20px rgb(36, 36, 36);
@@ -954,7 +954,7 @@
   }
 }
 
-.capas-config {
+.title-content-config {
   color: #363636;
   margin-bottom: 2rem;
   font-family: "Calibre-Regular";
@@ -1052,5 +1052,115 @@ background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
   .configuracoes-content section {
     flex-direction: column;
   }
+}
+
+/*****************************************************/
+
+@media only screen and (max-width: 880px) {
+  .config-section-2{
+    flex-direction: column!important;
+  }
+}
+
+.config-section-2{
+  transform: translateY(25px);
+}
+
+.config-section-2 input[type="radio"] {
+  display: none;
+}
+.config-section-2 input[type="radio"]:not(:disabled) ~ label {
+  cursor: pointer;
+}
+.config-section-2 input[type="radio"]:disabled ~ label {
+  color: #bcc2bf;
+  border-color: #bcc2bf;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.config-section-2 label {
+  height: 70%;
+  display: block;
+  background: white;
+  transition: all 0.3s;
+  border: 2px solid #646464;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
+  position: relative;
+}
+
+.config-section-2 input[type="radio"]:checked + label {
+  color: white;
+  box-shadow: 0px 0px 20px rgba(61, 61, 61, 0.75);
+}
+.config-section-2 input[type="radio"]:checked + label::after {
+  color: #3d3f43;
+  transition: all 0.3s;
+  font-family: FontAwesome;
+  border: 2px solid #646464;
+  content: "\f00c";
+  font-size: 24px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
+}
+
+.config-section-2 input[type="radio"]#control_01-2:checked+ label {
+  background-color: #db7f8e;
+background-image: linear-gradient(315deg, #db7f8e 0%, #7b0d1e 74%);
+  color: white;
+}
+
+.config-section-2 input[type="radio"]#control_02-2:checked+ label {
+  background-color: #db7f8e;
+background-image: linear-gradient(315deg, #db7f8e 0%, #7b0d1e 74%);
+  color: white;
+}
+
+.config-section-2 input[type="radio"]#control_03-2:checked+ label {
+  background-color: #db7f8e;
+background-image: linear-gradient(315deg, #db7f8e 0%, #7b0d1e 74%);
+  color: white;
+}
+
+.config-section-2 input[type="radio"]#control_04-2:checked+ label {
+  background-color: #db7f8e;
+background-image: linear-gradient(315deg, #db7f8e 0%, #7b0d1e 74%);
+  color: white;
+}
+
+.label-config h2{
+  font-family: "Calibre-Regular";
+  letter-spacing: 0.15em;
+}
+
+.label-config p{
+  font-family: "Calibre-Regular";
+}
+
+#container-section{
+position: relative;
+width: fit-content;
+height: fit-content;
+}
+
+#div-invisivel{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #00000000;
 }
 

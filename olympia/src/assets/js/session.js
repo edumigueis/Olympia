@@ -21,19 +21,50 @@ $(document).ready(function () {
             if (reaplicarAoLogar === 0) {
                 rolarMenu = 0;
                 desligarMenu = 0;
-                reaplicarAoLogar = 0;
+                reaplicarAoLogar = 1;
             }
 
 
             jaFoiFooterSessao = true;
             enderecoAntigo = window.location.href;
 
-            if (rolarMenu === 1)
-                $(".sumir").trigger("click");
-            if (desligarMenu === 1)
-                $(".desligar").trigger("click");
-            if (reaplicarAoLogar === 1)
-                $(".reaplicar").trigger("click");
+            if (rolarMenu === 1){
+                var auxRolar = false;
+                setInterval(() => {
+                    if ($('#container-perfil').length && !auxRolar){
+                        auxRolar = true;
+                        $("#control_01-2").trigger("click");
+                    }
+                    else if (!$('#container-perfil').length) {
+                        auxRolar = false;
+                    }
+                }, 100);
+            }
+            if (desligarMenu === 1){
+                var auxDesligar = false;
+                setInterval(() => {
+                    if ($('#container-perfil').length && !auxDesligar){
+                        auxDesligar = true;
+                        $("#control_02-2").trigger("click");
+                    }
+                    else if (!$('#container-perfil').length) {
+                        auxDesligar = false;
+                    }
+                }, 100);
+            }
+            if (reaplicarAoLogar === 1){
+    
+                var auxReaplicar = false;
+                setInterval(() => {
+                    if ($('#container-perfil').length && !auxReaplicar){
+                        auxReaplicar = true;
+                        $("#control_03-2").trigger("click");
+                    }
+                    else if (!$('#container-perfil').length) {
+                        auxReaplicar = false;
+                    }
+                }, 100);
+            }
 
             if ($(document.body).hasClass('sumir-menu-bar')) {
                 $('.sumir').removeClass('config-link-hover').addClass('config-link-clicked');

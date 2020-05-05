@@ -108,7 +108,7 @@
           </div>
           <div class="configuracoes-content content-perfil">
             <hr />
-            <h1 class="capas-config">Efeito da capa...</h1>
+            <h1 class="title-content-config">Efeito da capa...</h1>
             <section class="config-section">
               <div class="div-capa">
                 <input type="radio" id="control_01" name="select" value="1" checked/>
@@ -138,6 +138,49 @@
                 </label>
               </div>
             </section>
+            <!----------------------------------------------------->
+            <h1 class="title-content-config">Configurações do site... (alterar no rodapé)</h1>
+            <div id='container-section'>
+                            <div id="div-invisivel"></div>
+            <section class="config-section-2">
+              <div class="div-capa">
+                <input type="radio" id="control_01-2" name="select-2" value="1"/>
+                <label for="control_01-2" class="label-config label-sumir" >
+                  <h2>MENU DINÂMICO</h2>
+                  <p>
+                    Com essa opção ativada, a menu bar some quando você desce a tela e, aparece quando sobe. 
+                  </p>
+                </label>
+              </div>
+              <div class="div-capa">
+                <input type="radio" id="control_02-2" name="select-2" value="1" />
+                <label class="label-config label-desligar" for="control_02-2">
+                  <h2>DESLIGAR</h2>
+                  <p>
+                    Desligue a menu bar, se ela te encomoda!
+                  </p>
+                </label>
+              </div>
+                            <div class="div-capa">
+                <input type="radio" id="control_03-2" name="select-2" value="1" />
+                <label class="label-config label-padrao" for="control_03-2">
+                  <h2>PADRÃO</h2>
+                  <p>
+                    Ou então, deixe ela sempre exposta.
+                  </p>
+                </label>
+              </div>
+              <div class="div-capa">
+                <input type="radio" id="control_04-2" name="select-3" value="1" />
+                <label class="label-config label-salvar" for="control_04-2">
+                  <h2>REAPLICAR</h2>
+                  <p>
+                    Reaplicar as alterações dessa seção ao logar
+                  </p>
+                </label>
+              </div>
+            </section>
+            </div>
           </div>
         </div>
       </div>
