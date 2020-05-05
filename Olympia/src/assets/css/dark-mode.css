@@ -122,6 +122,9 @@
   border-bottom: 0 !important;
   box-shadow: 3px 0px 6px 6px rgba(70, 70, 70, .5);
 }
+.dark-mode.border-bottom-7{
+  border-color: #535353 !important;
+}
 .dark-mode.active-tab-p.border-bottom-wh{
   border-color: white;
 }
@@ -147,7 +150,9 @@
   fill: #949494;
 }
 
-
+input.dark{
+  background-color: #535353;
+}
 /**/
 
 .detail-link-0:hover {
@@ -176,5 +181,12 @@
   background-position: 0 100% !important;
   background-repeat: repeat-x !important;
   background-size: 4px 4px !important;
+}
+
+.select.dark-mode::after{
+  filter: invert(90%);
+}
+.dark-mode.filter-invert{
+  filter: invert(98%);
 }
 

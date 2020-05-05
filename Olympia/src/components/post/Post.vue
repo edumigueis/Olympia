@@ -3,7 +3,7 @@
     <div id="container-post">
       <link rel="stylesheet" href="/src/assets/css/post.css" />
       <title>P O S T</title>
-
+      <div id="fullpage" class="night" style="display: none;"><div class="section"><div class="time-circle"><div class="sun"></div> <div class="moon"><div></div> <div></div> <div></div></div> <div class="stars"><div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div></div> <div class="water"></div></div></div></div>
       <div class="buttons-cont">
         <div class="cont-major" id="cont-major-1">
           <div class="btn-cont">
@@ -52,7 +52,8 @@
         </div>
       </div>
       <div class="section">
-        <section id="post-obra-img">
+        <section id="post-obra-img" class="white-6">
+          <div class="return-btn filter-invert" id="to-btn-cont-from-obra"></div>
           <ul class="img-list">
             <li class="img-list-item">
               <img
@@ -130,10 +131,11 @@
               <input type="file" class="upload" id="obra-picker" />
               <span>Escolher Imagens</span>
             </div>
-            <div id="go-on-btn-obra" class="go-on-btn">Continuar</div>
+            <div id="go-on-btn-obra" class="go-on-btn black-to-white active-tab-p border-bottom-wh">Continuar</div>
           </div>
         </section>
-        <section id="post-serv-img">
+        <section id="post-serv-img" class="white-6">
+          <div class="return-btn filter-invert" id="to-btn-cont-from-serv"></div>
           <ul class="img-list">
             <li class="img-list-item">
               <img
@@ -203,19 +205,20 @@
               <input type="file" class="upload" id="serv-picker" />
               <span>Escolher Imagens</span>
             </div>
-            <div id="go-on-btn-serv" class="go-on-btn">Continuar</div>
+            <div id="go-on-btn-serv" class="go-on-btn black-to-white active-tab-p border-bottom-wh">Continuar</div>
           </div>
         </section>
-        <section id="post-obra">
+        <section id="post-obra" class="white-6">
+          <div class="return-btn filter-invert" id="to-pick-img-from-obra"></div>
           <div class="wrapper wrapper--w780">
-            <div class="card card-3">
+            <div class="card card-3 white-7">
               <div class="card-heading"></div>
               <div class="card-body">
-                <h2 class="title">Dados da Postagem</h2>
+                <h2 class="title black-to-white">Dados da Postagem</h2>
                 <form method="POST">
                   <div class="input-group">
                     <input
-                      class="input--style-3"
+                      class="input--style-3 black-to-white"
                       type="text"
                       placeholder="Título"
                       name="name"
@@ -224,7 +227,7 @@
                   </div>
                   <div class="input-group">
                     <input
-                      class="input--style-3 js-datepicker"
+                      class="input--style-3 js-datepicker black-to-white"
                       type="text"
                       placeholder="Dados Técnicos"
                       name="birthday"
@@ -234,15 +237,15 @@
                       class="zmdi zmdi-calendar-note input-icon js-btn-calendar"
                     ></i>
                   </div>
-                  <div class="input-group">
+                  <div class="input-group black-to-white">
                     <textarea
                       class="input--style-3 text-area-desc"
                       placeholder="Descrição"
                       rows="1"
                     ></textarea>
                   </div>
-                  <div class="input-group">
-                    <div class="select">
+                  <div class="input-group black-to-white">
+                    <div class="select black-to-white">
                       <select name="slct" id="slct">
                         <option
                           title="Arte Digital"
@@ -273,7 +276,7 @@
                   <div class="input-group" id="inp-gp-no-border">
                     <div class="dropdown">
                       <div class="input-group" id="inp-gp-no-border-2">
-                        <div class="select" id="search-select">
+                        <div class="select black-to-white" id="search-select">
                           Selecione Categorias
                         </div>
                       </div>
@@ -293,7 +296,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="input-group" id="inp-gp-no-border-3">
+                  <div class="input-group border-bottom-7" id="inp-gp-no-border-3">
                     <div class="add-tags-cont">
                       <p id="tag-1">
                         <span class="input">
@@ -350,6 +353,11 @@
                           <img src="/src/assets/images/plus-sign.png" class="plus-ico">
                         </span>
                       </p>
+                      <p id="minus-tag">
+                        <span class="input">
+                          <img src="/src/assets/images/minus-icon.svg" class="plus-ico">
+                        </span>
+                      </p>
                     </div>
                   </div>
                   <div class="p-t-10">
@@ -362,9 +370,10 @@
             </div>
           </div>
         </section>
-        <section id="post-serv">
+        <section id="post-serv" class="white-6">
+          <div class="return-btn filter-invert" id="to-pick-img-from-serv"></div>
           <div class="wrapper wrapper--w780">
-            <div class="card card-3">
+            <div class="card card-3 white-7">
               <div class="card-heading"></div>
               <div class="card-body">
                 <h2 class="title">Dados da Postagem</h2>
@@ -386,9 +395,6 @@
                       name="birthday"
                       maxlength="370"
                     />
-                    <i
-                      class="zmdi zmdi-calendar-note input-icon js-btn-calendar"
-                    ></i>
                   </div>
                   <div class="input-group">
                     <textarea
@@ -449,7 +455,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="input-group" id="inp-gp-no-border-3">
+                  <div class="input-group border-bottom-7" id="inp-gp-no-border-3">
                     <div class="add-tags-cont">
                       <p id="tag-serv-1">
                         <span class="input">
@@ -506,6 +512,11 @@
                           <img src="/src/assets/images/plus-sign.png" class="plus-ico">
                         </span>
                       </p>
+                      <p id="minus-tag-serv">
+                        <span class="input">
+                          <img src="/src/assets/images/minus-icon.svg" class="plus-ico">
+                        </span>
+                      </p>
                     </div>
                   </div>
                   <div class="p-t-10">
@@ -518,7 +529,7 @@
             </div>
           </div>
         </section>
-        <section id="post-insp">
+        <section id="post-insp" class="white-6">
           <div class="insp-post-cont">
             <form>
               <textarea
@@ -570,6 +581,7 @@
             <div class="bubble x20"></div>
           </div>
         </section>
+        <meu-small-footer></meu-small-footer>
       </div>
     </div>
   </main>
@@ -581,6 +593,7 @@ import Contatos from "../shared/contatos/Contatos.vue";
 import Mouse from "../shared/mouse/Mouse.vue";
 import Footer from "../shared/footer/Footer.vue";
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+import SmallFooter from "../shared/small-footer/SmallFooter.vue";
 
 export default {
   components: {
@@ -589,6 +602,7 @@ export default {
     "meus-contatos": Contatos,
     "meu-mouse": Mouse,
     "meu-footer": Footer,
+    "meu-small-footer": SmallFooter,
     "meu-dark-mode": DarkMode
   }
 };
