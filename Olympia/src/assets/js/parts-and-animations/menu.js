@@ -93,7 +93,6 @@ $(document).ready(function () {
         }
     })
 
-    var vindoSumir = false;
     $(document.body).on('click', '.sumir', function () {
 
         if ($(document.body).hasClass('sumir-menu-bar')) {
@@ -103,7 +102,6 @@ $(document).ready(function () {
             $(document.body).removeClass('sumir-menu-bar');
             $('.desligar').css('visibility', 'visible');
             vindoSumir = true;
-            $('#control_01-2').trigger('click');
         }
         else {
             body.addEventListener("mousewheel", detectarDirecaoRolagem, false);
@@ -111,7 +109,6 @@ $(document).ready(function () {
             $(document.body).addClass('sumir-menu-bar');
             $('.desligar').css('visibility', 'hidden');
             vindoSumir = true;
-            $('#control_01-2').trigger('click');
         }
     })
 
@@ -120,27 +117,14 @@ $(document).ready(function () {
             $('#menu-bar').css('transform', 'none');
             $(document.body).removeClass('desligar-menu-bar');
             $('.sumir').css('visibility', 'visible');
-            $('#control_02-2').trigger('click');
         }
         else {
             $('#menu-bar').css('transform', 'translateY(-70px)');
             $(document.body).addClass('desligar-menu-bar');
             $('.sumir').css('visibility', 'hidden');
-            $('#control_02-2').trigger('click');
         }
 
     })
-
-    $(document.body).on('click', '.reaplicar', function () {
-        $('#control_04-2').trigger('click');
-    })
-
-    $('body').on('click','#control_04-2',function(){
-        if (this.previous) {
-            this.checked = false;
-        }
-        this.previous = this.checked;
-    });
 
     $(document.body).on('click', '#bordao', function () {
         if ($('#palaces-container').css('display') == 'none') {

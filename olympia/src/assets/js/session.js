@@ -4,7 +4,7 @@ var reaplicarAoLogar = 0; /*receberá um select da tabela com a pré definição
 var rolarMenu;
 var desligarMenu;
 var reaplicarAoLogar;
-var darkMode;
+var dark_Mode;
 
 /* VARIAVEIS AUXILIARES*/
 
@@ -21,49 +21,24 @@ $(document).ready(function () {
             if (reaplicarAoLogar === 0) {
                 rolarMenu = 0;
                 desligarMenu = 0;
-                reaplicarAoLogar = 1;
+                reaplicarAoLogar;
+                dark_Mode = 1;
             }
-
 
             jaFoiFooterSessao = true;
             enderecoAntigo = window.location.href;
 
-            if (rolarMenu === 1){
-                var auxRolar = false;
-                setInterval(() => {
-                    if ($('#container-perfil').length && !auxRolar){
-                        auxRolar = true;
-                        $("#control_01-2").trigger("click");
-                    }
-                    else if (!$('#container-perfil').length) {
-                        auxRolar = false;
-                    }
-                }, 100);
+            if (rolarMenu === 1) {
+                $("#control_01-2").trigger("click");
             }
-            if (desligarMenu === 1){
-                var auxDesligar = false;
-                setInterval(() => {
-                    if ($('#container-perfil').length && !auxDesligar){
-                        auxDesligar = true;
-                        $("#control_02-2").trigger("click");
-                    }
-                    else if (!$('#container-perfil').length) {
-                        auxDesligar = false;
-                    }
-                }, 100);
+            if (desligarMenu === 1) {
+                $("#control_02-2").trigger("click");
             }
-            if (reaplicarAoLogar === 1){
-    
-                var auxReaplicar = false;
-                setInterval(() => {
-                    if ($('#container-perfil').length && !auxReaplicar){
-                        auxReaplicar = true;
-                        $("#control_03-2").trigger("click");
-                    }
-                    else if (!$('#container-perfil').length) {
-                        auxReaplicar = false;
-                    }
-                }, 100);
+            if (reaplicarAoLogar === 1) {
+                $("#control_03-2").trigger("click");
+            }
+            if (dark_Mode === 1) {
+                darkMode();
             }
 
             if ($(document.body).hasClass('sumir-menu-bar')) {
@@ -104,13 +79,14 @@ $(document).ready(function () {
 })
 
 function darkMode() {
-    $("#menu-bar").addClass("dark-mode");
     $("#fullpage").addClass("night");
+    $("#menu-bar").addClass("dark-mode");
     $("#footer").addClass("dark-mode");
     $(".arrow").addClass("dark-mode");
     $("body").addClass("dark-mode-page");
     $(".error-modal").addClass("dark-mode");
     $("#small-footer").addClass("dark-mode");
+    $(".fill").addClass("dark-mode");
     $(".dark-slideshow").addClass("dark-mode");
     $(".dark-register-div").addClass("dark-mode");
     $(".dark-register-input").addClass("dark-mode");

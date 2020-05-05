@@ -3,7 +3,10 @@
     <div id="container-perfil">
       <title>P E R F I L</title>
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
-      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <link
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+      />
       <link rel="stylesheet" href="/src/assets/css/perfil.css" />
 
       <meu-menu-bar></meu-menu-bar>
@@ -44,7 +47,6 @@
           </div>
           <main ontouchstart class="tab-bar">
             <nav class="tab-link">
-              <a class="tab-link-a estatisticas">Estatísticas</a>
               <a class="tab-link-a sobre-mim">Sobre mim</a>
               <a class="tab-link-a curtidas">Curtidas</a>
               <a class="tab-link-a salvos">Salvos</a>
@@ -74,54 +76,87 @@
                   xlink:href="#gentle-wave"
                   x="48"
                   y="0"
-                  fill="rgba(255,255,255,0.7"
+                  fill="rgba(255,255,255,0.7)"
+                  class="fill fill-1"
                 />
                 <use
                   xlink:href="#gentle-wave"
                   x="48"
                   y="3"
                   fill="rgba(255,255,255,0.5)"
+                  class="fill fill-2"
                 />
                 <use
                   xlink:href="#gentle-wave"
                   x="48"
                   y="5"
                   fill="rgba(255,255,255,0.3)"
+                  class="fill fill-3"
                 />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" class="fill fill-4"/>
               </g>
             </svg>
           </div>
         </div>
-        <div class="perfil-content">
-          <div class="estatisticas-content content-perfil">
+        <div class="perfil-content white-4">
+          <div class="sobre-mim-content content-perfil white-6 black-to-white">
             <hr />
+            <h1 class="title-content-config black-to-white">
+              Mais sobre mim...
+            </h1>
+            <div class="div-info-perfil">
+              <p class="bio"><b>Uma frase que me descreva:</b> ekdiejrjghtjrjfuiejfkfjrjfjrjrjjrrjjrjrjrrf</p>
+              <p class="biografia"><b>Mais um pouco de mim...</b> My name is Karl Kristiansen. I was born in Connecticut. I spent most of my childhood in Stonington, a small, seaside town on the Connecticut-Rhode Island border. My father was a commercial fisherman and since he was from Norway, life on the sea was a natural for him. My mother was a housewife. We were the typical '50's family. Much of my childhood was spent around the docks and fishing boats of Stonington. In 1954, my father and a few of the other fishermen decided to try their luck at shrimping in Brownsville, Texas. After a few months, and very little success, we returned to Stonington. Most of the Stonington boats were selling their catches in New Bedford, MA, so it was no surprise that in 1959, we packed up and moved.New Bedford remained my home through my secondary school years. I graduated from New Bedford High School in 1965. I had the opportunity to go to college, but I opted for a hitch in the Navy. If you recall, at that time, you only had a few choices: go to college, wait to be drafted, enlist or After an exciting ten weeks at NTCkes and a couple of weeks leave, I flew to Subic Bay in the Philippines, to catch my ship, the USS Mansfield DD-728. Our main mission was p
+              </p> 
+              <button class="alterar btnPerfil">Alterar biografia</button>
+            </div>
+            <h1 class="title-content-config black-to-white">
+              Suas publicações...
+            </h1>
+            <div class="div-scroll">
+
+            </div>
           </div>
-          <div class="sobre-mim-content content-perfil">
+          <div class="curtidas-content content-perfil white-6 black-to-white">
             <hr />
+            <h1 class="title-content-config black-to-white">
+              Confira as suas curtidas...
+            </h1>
+            <div class="div-scroll">
+              
+            </div>
           </div>
-          <div class="curtidas-content content-perfil">
+          <div class="salvos-content content-perfil white-6 black-to-white">
             <hr />
+            <h1 class="title-content-config black-to-white">
+              Publicações salvas... (só você pode ver isto)
+            </h1>
+            <div class="div-scroll">
+              
+            </div>
           </div>
-          <div class="salvos-content content-perfil">
+          <div class="configuracoes-content content-perfil white-6 black-to-white">
             <hr />
-          </div>
-          <div class="configuracoes-content content-perfil">
-            <hr />
-            <h1 class="title-content-config">Efeito da capa...</h1>
+            <h1 class="title-content-config black-to-white">Mude o efeito da capa...</h1>
             <section class="config-section">
               <div class="div-capa">
-                <input type="radio" id="control_01" name="select" value="1" checked/>
-                <label for="control_01" class="label-capa colorful" >
+                <input
+                  type="radio"
+                  id="control_01"
+                  name="select"
+                  value="1"
+                  checked
+                />
+                <label for="control_01" class="label-capa colorful">
                   <h2>COLORFUL</h2>
                   <p>
                     Que tal uma animação bem colorida para adoçar seu dia??
                   </p>
                 </label>
               </div>
-              <div class="div-capa">
+              <div class="div-capa black-and-white-capa">
                 <input type="radio" id="control_02" name="select" value="2" />
-                <label class="label-capa black-and-white" for="control_02">
+                <label class="label-capa" for="control_02">
                   <h2>B&W</h2>
                   <p>
                     Ou, então, em preto e branco?
@@ -138,48 +173,9 @@
                 </label>
               </div>
             </section>
-            <!----------------------------------------------------->
-            <h1 class="title-content-config">Configurações do site... (alterar no rodapé)</h1>
-            <div id='container-section'>
-                            <div id="div-invisivel"></div>
-            <section class="config-section-2">
-              <div class="div-capa">
-                <input type="radio" id="control_01-2" name="select-2" value="1"/>
-                <label for="control_01-2" class="label-config label-sumir" >
-                  <h2>MENU DINÂMICO</h2>
-                  <p>
-                    Com essa opção ativada, a menu bar some quando você desce a tela e, aparece quando sobe. 
-                  </p>
-                </label>
-              </div>
-              <div class="div-capa">
-                <input type="radio" id="control_02-2" name="select-2" value="1" />
-                <label class="label-config label-desligar" for="control_02-2">
-                  <h2>DESLIGAR</h2>
-                  <p>
-                    Desligue a menu bar, se ela te encomoda!
-                  </p>
-                </label>
-              </div>
-                            <div class="div-capa">
-                <input type="radio" id="control_03-2" name="select-2" value="1" />
-                <label class="label-config label-padrao" for="control_03-2">
-                  <h2>PADRÃO</h2>
-                  <p>
-                    Ou então, deixe ela sempre exposta.
-                  </p>
-                </label>
-              </div>
-              <div class="div-capa">
-                <input type="radio" id="control_04-2" name="select-3" value="1" />
-                <label class="label-config label-salvar" for="control_04-2">
-                  <h2>REAPLICAR</h2>
-                  <p>
-                    Reaplicar as alterações dessa seção ao logar
-                  </p>
-                </label>
-              </div>
-            </section>
+            <div class="btnsPerfil">
+              <button class="apagar btnPerfil">Apagar conta</button>
+              <button class="sair btnPerfil">Sair</button>
             </div>
           </div>
         </div>

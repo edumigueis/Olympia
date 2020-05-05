@@ -72,7 +72,7 @@ setInterval(() => {
             $('.bg').removeClass('black-css');
         });
 
-        $(document.body).on('click', '.black-and-white', function () {
+        $(document.body).on('click', '.black-and-white-capa', function () {
             $('.bg').addClass('black-and-white-css');
             $('.bg').removeClass('colorful-css');
             $('.bg').removeClass('black-css');

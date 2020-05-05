@@ -45,19 +45,21 @@ $(document).ready(function () {
             $(".white-6-special").removeClass("dark-mode");
             $(".dark-img-wrap").removeClass("dark-mode");
             $(".border-black").removeClass("dark-mode");
+            $(".fill").removeClass("dark-mode");
             $(".background-white-to-darkgray").removeClass("dark-mode");
             $('.dark-mode-activators').text('MODO NOTURNO');
         }
         else {
             $("#fullpage").fadeIn(1000)
-            $("#fullpage").addClass("night");
             $("#fullpage").fadeOut(1000)
+            $("#fullpage").addClass("night");
             $("#menu-bar").addClass("dark-mode");
             $("#footer").addClass("dark-mode");
             $(".arrow").addClass("dark-mode");
             $("body").addClass("dark-mode-page");
             $(".error-modal").addClass("dark-mode");
             $("#small-footer").addClass("dark-mode");
+            $(".fill").addClass("dark-mode");
             $(".dark-slideshow").addClass("dark-mode");
             $(".dark-register-div").addClass("dark-mode");
             $(".dark-register-input").addClass("dark-mode");

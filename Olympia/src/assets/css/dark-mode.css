@@ -129,6 +129,25 @@
   filter: invert(100%);
 }
 
+.dark-mode.fill-1{
+  fill: #c7c7c73b;
+}
+
+.dark-mode.fill-4{
+  fill: #aaaaaa6e;
+}
+
+
+.dark-mode.fill-3{
+  fill: #b3b3b38c;
+}
+
+
+.dark-mode.fill-4{
+  fill: #949494;
+}
+
+
 /**/
 
 .detail-link-0:hover {
@@ -158,3 +177,4 @@
   background-repeat: repeat-x !important;
   background-size: 4px 4px !important;
 }
+
