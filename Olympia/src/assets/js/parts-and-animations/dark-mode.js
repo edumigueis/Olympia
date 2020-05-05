@@ -45,19 +45,27 @@ $(document).ready(function () {
             $(".white-6-special").removeClass("dark-mode");
             $(".dark-img-wrap").removeClass("dark-mode");
             $(".border-black").removeClass("dark-mode");
+            $(".fill").removeClass("dark-mode");
+            $("input").removeClass("dark");
+            $("textarea").removeClass("dark");
+            $("select").removeClass("dark");
+            $(".border-bottom-7").removeClass("dark-mode");
+            $(".filter-invert").removeClass("dark-mode");
+            $(".masonry-item").removeClass("dark-mode");
             $(".background-white-to-darkgray").removeClass("dark-mode");
             $('.dark-mode-activators').text('MODO NOTURNO');
         }
         else {
             $("#fullpage").fadeIn(1000)
-            $("#fullpage").addClass("night");
             $("#fullpage").fadeOut(1000)
+            $("#fullpage").addClass("night");
             $("#menu-bar").addClass("dark-mode");
             $("#footer").addClass("dark-mode");
             $(".arrow").addClass("dark-mode");
             $("body").addClass("dark-mode-page");
             $(".error-modal").addClass("dark-mode");
             $("#small-footer").addClass("dark-mode");
+            $(".fill").addClass("dark-mode");
             $(".dark-slideshow").addClass("dark-mode");
             $(".dark-register-div").addClass("dark-mode");
             $(".dark-register-input").addClass("dark-mode");
@@ -83,6 +91,12 @@ $(document).ready(function () {
             $(".white-6-special").addClass("dark-mode");
             $(".border-black").addClass("dark-mode");
             $(".dark-img-wrap").addClass("dark-mode");
+            $("input").addClass("dark");
+            $("textarea").addClass("dark");
+            $("select").addClass("dark");
+            $(".border-bottom-7").addClass("dark-mode");
+            $(".filter-invert").addClass("dark-mode");
+            $(".masonry-item").addClass("dark-mode");
             $(".background-white-to-darkgray").addClass("dark-mode");
             $('.dark-mode-activators').text('MODO CLARO');
         }

@@ -45,9 +45,9 @@ userName varchar(30) not null,
 email varchar(255) not null,
 senha varchar(500) not null,
 foto varbinary(max) not null,
-biografia varchar(500) not null,
+biografia varchar(1200) not null,
 bio varchar(50) not null,
-configs char(40) not null, /*{"menu":0,"deslig":0,"login":1,"capa":3}*/
+configs char(49) not null, /*{"menu":0,"deslig":0,"login":1,"capa":3,"dark":1}*/
 seguindo varchar(max) not null, /*{1,9,6,2,5,6,3,26}*/
 seguidores varchar(max) not null /*{111,94,6,2,5,644,3044,216}*/
 )

@@ -101,17 +101,18 @@ $(document).ready(function () {
             body.removeEventListener("DOMMouseScroll", detectarDirecaoRolagem, false);
             $(document.body).removeClass('sumir-menu-bar');
             $('.desligar').css('visibility', 'visible');
+            vindoSumir = true;
         }
         else {
             body.addEventListener("mousewheel", detectarDirecaoRolagem, false);
             body.addEventListener("DOMMouseScroll", detectarDirecaoRolagem, false);
             $(document.body).addClass('sumir-menu-bar');
             $('.desligar').css('visibility', 'hidden');
+            vindoSumir = true;
         }
     })
 
     $(document.body).on('click', '.desligar', function () {
-
         if ($(document.body).hasClass('desligar-menu-bar')) {
             $('#menu-bar').css('transform', 'none');
             $(document.body).removeClass('desligar-menu-bar');
@@ -122,6 +123,7 @@ $(document).ready(function () {
             $(document.body).addClass('desligar-menu-bar');
             $('.sumir').css('visibility', 'hidden');
         }
+
     })
 
     $(document.body).on('click', '#bordao', function () {
@@ -156,6 +158,19 @@ $(document).ready(function () {
             $('#menu-items').fadeOut('slow');
         }
     })
+
+    $(document.body).on('click', '.perfil-link', function () {
+        if ($('#container-perfil').length) {
+            $('#menu-items').fadeOut('slow');
+        }
+    })
+
+    $(document.body).on('click', '.sobre-link', function () {
+        if ($('#container-sobre').length) {
+            $('#menu-items').fadeOut('slow');
+        }
+    })
 })
+
 
 

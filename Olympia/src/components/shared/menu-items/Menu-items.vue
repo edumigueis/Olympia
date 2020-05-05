@@ -29,8 +29,8 @@
                             </div>
                             <br><br><br><br><br><br><br><br><br><br>
                             <div class="menu-item row2">
-                                <a href="/#/sobre"><img class="ico" src="/src/assets/images/users.png"></a>
-                                <a class="menu-link " href="/#/sobre">S O B R E   N Ó S</a>
+                                <a href="/#/sobre" class="sobre-link"><img class="ico" src="/src/assets/images/users.png"></a>
+                                <a class="menu-link sobre-link" href="/#/sobre">S O B R E   N Ó S</a>
                             </div>
                         </div>
                     </div>
@@ -54,8 +54,8 @@
                         </div>
                         <br><br><br><br><br><br><br><br><br><br>
                         <div class="menu-item row2">
-                            <a href="/#/perfil" class="eventos-link"><img class="ico" src="/src/assets/images/user.png"></a>
-                            <a class="menu-link perfil-link" href="/#/sobre">P E R F I L</a>
+                            <a href="/#/perfil" class="perfil-link"><img class="ico" src="/src/assets/images/user.png"></a>
+                            <a class="menu-link perfil-link" href="/#/perfil">P E R F I L</a>
                         </div>
                     </div>
                 </div>

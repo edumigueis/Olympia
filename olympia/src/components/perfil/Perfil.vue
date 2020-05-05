@@ -3,7 +3,18 @@
     <div id="container-perfil">
       <title>P E R F I L</title>
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
-      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <link
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      />
       <link rel="stylesheet" href="/src/assets/css/perfil.css" />
 
       <meu-menu-bar></meu-menu-bar>
@@ -44,7 +55,6 @@
           </div>
           <main ontouchstart class="tab-bar">
             <nav class="tab-link">
-              <a class="tab-link-a estatisticas">Estatísticas</a>
               <a class="tab-link-a sobre-mim">Sobre mim</a>
               <a class="tab-link-a curtidas">Curtidas</a>
               <a class="tab-link-a salvos">Salvos</a>
@@ -74,54 +84,1347 @@
                   xlink:href="#gentle-wave"
                   x="48"
                   y="0"
-                  fill="rgba(255,255,255,0.7"
+                  fill="rgba(255,255,255,0.7)"
+                  class="fill fill-1"
                 />
                 <use
                   xlink:href="#gentle-wave"
                   x="48"
                   y="3"
                   fill="rgba(255,255,255,0.5)"
+                  class="fill fill-2"
                 />
                 <use
                   xlink:href="#gentle-wave"
                   x="48"
                   y="5"
                   fill="rgba(255,255,255,0.3)"
+                  class="fill fill-3"
                 />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" class="fill fill-4"/>
               </g>
             </svg>
           </div>
         </div>
-        <div class="perfil-content">
-          <div class="estatisticas-content content-perfil">
+        <div class="perfil-content white-4">
+          <div class="sobre-mim-content content-perfil white-6 black-to-white">
             <hr />
+            <h1 class="title-content-config black-to-white">
+              Mais sobre mim...
+            </h1>
+            <div class="div-info-perfil">
+              <p class="bio"><b>Uma frase que me descreva:</b> ekdiejrjghtjrjfuiejfkfjrjfjrjrjjrrjjrjrjrrf</p>
+              <p class="biografia"><b>Mais um pouco de mim...</b> My name is Karl Kristiansen. I was born in Connecticut. I spent most of my childhood in Stonington, a small, seaside town on the Connecticut-Rhode Island border. My father was a commercial fisherman and since he was from Norway, life on the sea was a natural for him. My mother was a housewife. We were the typical '50's family. Much of my childhood was spent around the docks and fishing boats of Stonington. In 1954, my father and a few of the other fishermen decided to try their luck at shrimping in Brownsville, Texas. After a few months, and very little success, we returned to Stonington. Most of the Stonington boats were selling their catches in New Bedford, MA, so it was no surprise that in 1959, we packed up and moved.New Bedford remained my home through my secondary school years. I graduated from New Bedford High School in 1965. I had the opportunity to go to college, but I opted for a hitch in the Navy. If you recall, at that time, you only had a few choices: go to college, wait to be drafted, enlist or After an exciting ten weeks at NTCkes and a couple of weeks leave, I flew to Subic Bay in the Philippines, to catch my ship, the USS Mansfield DD-728. Our main mission was p
+              </p> 
+              <button class="alterar btnPerfil">Alterar biografia</button>
+            </div>
+            <h1 class="title-content-config black-to-white">
+              Suas publicações...
+            </h1>
+            <div class="div-scroll">
+              <div class="slide__content">
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      />
+                    </div>
+                    <a href="/#/perfil" class="prof-name-det black-to-white"
+                      >Luna Dias</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      What would our lives be without art?
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                   <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://66.media.tumblr.com/8ca7ae9aef947480f0530429044bee3d/tumblr_phqvwbIT9p1xhllc7o5_250.png"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Justin Alberman</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      Music inspires us to be who we are xd
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://www.tickpick.com/blog/wp-content/uploads/2019/02/audience-1835431_1280.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>The Dawn</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed music">Music</div>
+                            <div class="cat-on-feed pers">Young Artist</div>
+                            <div class="cat-on-feed music">Show</div>
+                            <div class="cat-on-feed music">Comtemporary</div>
+                            <div class="cat-on-feed pers">Indie</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <!--<div class="post-det-cont">
+                    <div class="name-of-post">The Dawn Project</div>
+                    <div class="name-of-prof">
+                      <a class="name-of-prof-link">Justin Alberman</a>
+                    </div>
+                    <div class="desc-of-post">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Etiam ut facilisis justo. In hac habitasse platea
+                      dictumst. Fusce vestibulum imperdiet felis sed ultrices.
+                      Curabitur ullamcorper molestie nunc in pharetra. Curabitur
+                      at cursus nunc. Curabitur porta, orci sed eleifend mollis,
+                      justo elit ullamcorper erat, sed vehicula nisl turpis a
+                      nibh. Pellentesque id odio a purus bibendum congue. Nunc
+                      ut viverra tellus. Donec volutpat posuere nisi, sed
+                      efficitur augue pretium sit amet. Curabitur congue, erat a
+                      mattis imperdiet, lectus ligula lacinia dolor, in
+                      tincidunt augue sem nec est.
+                    </div>
+                    
+                    
+                  </div>-->
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://66.media.tumblr.com/fa3132fa612a71b96c8e56f072a93f0e/tumblr_p7lsesJBkX1x6djmko5_250.jpg"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Lisa Kosh</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      Inspied to make the world a better place...
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://paintingvalley.com/image/watercolor-art-pinterest-22.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Lisa Kosh</a
+                            >
+                          </div>
+                          <h2>Woman in Flower Aura</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Aquarela</div>
+                            <div class="cat-on-feed pers">Watercolor</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Modern Art</div>
+                            <div class="cat-on-feed pers">Fantasy Bodies</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Luna Dias</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      What would our lives be without art?
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://66.media.tumblr.com/be7afcb38d3b2e94a3fc4c644c9a83fa/tumblr_nvo1c55Jci1uwfie2o1_400.jpg"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >John Birman</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      We 've come far.
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >John Birman</a
+                            >
+                          </div>
+                          <h2>Cigarrette</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Stencil</div>
+                            <div class="cat-on-feed paint">Grafite</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Homem</div>
+                            <div class="cat-on-feed pers">Colorful</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">Flair Avant Gard</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/08/fotos-tumblr.png"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Maria Herman</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      We all adore something.
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Maria Herman</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Luna Dias</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      What would our lives be without art?
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
           </div>
-          <div class="sobre-mim-content content-perfil">
+          <div class="curtidas-content content-perfil white-6 black-to-white">
             <hr />
+            <h1 class="title-content-config black-to-white">
+              Confira as suas curtidas...
+            </h1>
+            <div class="div-scroll">
+              <div class="slide__content">
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      />
+                    </div>
+                    <a href="/#/perfil" class="prof-name-det black-to-white"
+                      >Luna Dias</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      What would our lives be without art?
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                   <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://66.media.tumblr.com/8ca7ae9aef947480f0530429044bee3d/tumblr_phqvwbIT9p1xhllc7o5_250.png"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Justin Alberman</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      Music inspires us to be who we are xd
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://www.tickpick.com/blog/wp-content/uploads/2019/02/audience-1835431_1280.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>The Dawn</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed music">Music</div>
+                            <div class="cat-on-feed pers">Young Artist</div>
+                            <div class="cat-on-feed music">Show</div>
+                            <div class="cat-on-feed music">Comtemporary</div>
+                            <div class="cat-on-feed pers">Indie</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <!--<div class="post-det-cont">
+                    <div class="name-of-post">The Dawn Project</div>
+                    <div class="name-of-prof">
+                      <a class="name-of-prof-link">Justin Alberman</a>
+                    </div>
+                    <div class="desc-of-post">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Etiam ut facilisis justo. In hac habitasse platea
+                      dictumst. Fusce vestibulum imperdiet felis sed ultrices.
+                      Curabitur ullamcorper molestie nunc in pharetra. Curabitur
+                      at cursus nunc. Curabitur porta, orci sed eleifend mollis,
+                      justo elit ullamcorper erat, sed vehicula nisl turpis a
+                      nibh. Pellentesque id odio a purus bibendum congue. Nunc
+                      ut viverra tellus. Donec volutpat posuere nisi, sed
+                      efficitur augue pretium sit amet. Curabitur congue, erat a
+                      mattis imperdiet, lectus ligula lacinia dolor, in
+                      tincidunt augue sem nec est.
+                    </div>
+                    
+                    
+                  </div>-->
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://66.media.tumblr.com/fa3132fa612a71b96c8e56f072a93f0e/tumblr_p7lsesJBkX1x6djmko5_250.jpg"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Lisa Kosh</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      Inspied to make the world a better place...
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://paintingvalley.com/image/watercolor-art-pinterest-22.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Lisa Kosh</a
+                            >
+                          </div>
+                          <h2>Woman in Flower Aura</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Aquarela</div>
+                            <div class="cat-on-feed pers">Watercolor</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Modern Art</div>
+                            <div class="cat-on-feed pers">Fantasy Bodies</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Luna Dias</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      What would our lives be without art?
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://66.media.tumblr.com/be7afcb38d3b2e94a3fc4c644c9a83fa/tumblr_nvo1c55Jci1uwfie2o1_400.jpg"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >John Birman</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      We 've come far.
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >John Birman</a
+                            >
+                          </div>
+                          <h2>Cigarrette</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Stencil</div>
+                            <div class="cat-on-feed paint">Grafite</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Homem</div>
+                            <div class="cat-on-feed pers">Colorful</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">Flair Avant Gard</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/08/fotos-tumblr.png"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Maria Herman</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      We all adore something.
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Maria Herman</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Luna Dias</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      What would our lives be without art?
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
           </div>
-          <div class="curtidas-content content-perfil">
+          <div class="salvos-content content-perfil white-6 black-to-white">
             <hr />
+            <h1 class="title-content-config black-to-white">
+              Publicações salvas... (só você pode ver isto)
+            </h1>
+            <div class="div-scroll">
+              <div class="slide__content">
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      />
+                    </div>
+                    <a href="/#/perfil" class="prof-name-det black-to-white"
+                      >Luna Dias</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      What would our lives be without art?
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                   <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://66.media.tumblr.com/8ca7ae9aef947480f0530429044bee3d/tumblr_phqvwbIT9p1xhllc7o5_250.png"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Justin Alberman</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      Music inspires us to be who we are xd
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://www.tickpick.com/blog/wp-content/uploads/2019/02/audience-1835431_1280.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>The Dawn</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed music">Music</div>
+                            <div class="cat-on-feed pers">Young Artist</div>
+                            <div class="cat-on-feed music">Show</div>
+                            <div class="cat-on-feed music">Comtemporary</div>
+                            <div class="cat-on-feed pers">Indie</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <!--<div class="post-det-cont">
+                    <div class="name-of-post">The Dawn Project</div>
+                    <div class="name-of-prof">
+                      <a class="name-of-prof-link">Justin Alberman</a>
+                    </div>
+                    <div class="desc-of-post">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Etiam ut facilisis justo. In hac habitasse platea
+                      dictumst. Fusce vestibulum imperdiet felis sed ultrices.
+                      Curabitur ullamcorper molestie nunc in pharetra. Curabitur
+                      at cursus nunc. Curabitur porta, orci sed eleifend mollis,
+                      justo elit ullamcorper erat, sed vehicula nisl turpis a
+                      nibh. Pellentesque id odio a purus bibendum congue. Nunc
+                      ut viverra tellus. Donec volutpat posuere nisi, sed
+                      efficitur augue pretium sit amet. Curabitur congue, erat a
+                      mattis imperdiet, lectus ligula lacinia dolor, in
+                      tincidunt augue sem nec est.
+                    </div>
+                    
+                    
+                  </div>-->
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://66.media.tumblr.com/fa3132fa612a71b96c8e56f072a93f0e/tumblr_p7lsesJBkX1x6djmko5_250.jpg"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Lisa Kosh</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      Inspied to make the world a better place...
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://paintingvalley.com/image/watercolor-art-pinterest-22.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Lisa Kosh</a
+                            >
+                          </div>
+                          <h2>Woman in Flower Aura</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Aquarela</div>
+                            <div class="cat-on-feed pers">Watercolor</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Modern Art</div>
+                            <div class="cat-on-feed pers">Fantasy Bodies</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Luna Dias</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      What would our lives be without art?
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://66.media.tumblr.com/be7afcb38d3b2e94a3fc4c644c9a83fa/tumblr_nvo1c55Jci1uwfie2o1_400.jpg"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >John Birman</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      We 've come far.
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >John Birman</a
+                            >
+                          </div>
+                          <h2>Cigarrette</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Stencil</div>
+                            <div class="cat-on-feed paint">Grafite</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Homem</div>
+                            <div class="cat-on-feed pers">Colorful</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">Flair Avant Gard</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/08/fotos-tumblr.png"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Maria Herman</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      We all adore something.
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Maria Herman</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="masonry-item">
+                  <div class="masonry-content">
+                  <div class="prof-cont-feed white-7">
+                    <div class="prof-img-cont">
+                      <img
+                        class="prof-img-prop"
+                        src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      />
+                    </div>
+                    <a href="/#/profile" class="prof-name-det black-to-white"
+                      >Luna Dias</a
+                    >
+                    <div class="prof-bio-det text-gray">
+                      What would our lives be without art?
+                    </div>
+                  </div>
+                  <div class="post-img-cont">
+                    <a href="/#/detalhes">
+                      <figure class="snip1321">
+                        <img
+                          src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
+                          alt="sq-sample26"
+                        />
+                        <figcaption>
+                          <i class="fas fa-arrow-right"></i>
+                          <div class="name-of-prof">
+                            <a href="/#/perfil" class="name-of-prof-link"
+                              >Luna Dias</a
+                            >
+                          </div>
+                          <h2>Outter Seas</h2>
+                          <div class="categories-cont-on-feed">
+                            <div class="cat-on-feed paint">Pintura</div>
+                            <div class="cat-on-feed paint">Tinta Óleo</div>
+                            <div class="cat-on-feed paint">Arte Moderna</div>
+                            <div class="cat-on-feed pers">Oceano</div>
+                            <div class="cat-on-feed pers">Azul</div>
+                            <div class="cat-on-feed paint">Brushed</div>
+                            <div class="cat-on-feed pers">
+                              Fantasy Landscape
+                            </div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </a>
+                    <div class="interact-container">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
           </div>
-          <div class="salvos-content content-perfil">
+          <div class="configuracoes-content content-perfil white-6 black-to-white">
             <hr />
-          </div>
-          <div class="configuracoes-content content-perfil">
-            <hr />
-            <h1 class="capas-config">Efeito da capa...</h1>
+            <h1 class="title-content-config black-to-white">Mude o efeito da capa...</h1>
             <section class="config-section">
               <div class="div-capa">
-                <input type="radio" id="control_01" name="select" value="1" checked/>
-                <label for="control_01" class="label-capa colorful" >
+                <input
+                  type="radio"
+                  id="control_01"
+                  name="select"
+                  value="1"
+                  checked
+                />
+                <label for="control_01" class="label-capa colorful">
                   <h2>COLORFUL</h2>
                   <p>
                     Que tal uma animação bem colorida para adoçar seu dia??
                   </p>
                 </label>
               </div>
-              <div class="div-capa">
+              <div class="div-capa black-and-white-capa">
                 <input type="radio" id="control_02" name="select" value="2" />
-                <label class="label-capa black-and-white" for="control_02">
+                <label class="label-capa" for="control_02">
                   <h2>B&W</h2>
                   <p>
                     Ou, então, em preto e branco?
@@ -138,6 +1441,10 @@
                 </label>
               </div>
             </section>
+            <div class="btnsPerfil">
+              <button class="apagar btnPerfil">Apagar conta</button>
+              <button class="sair btnPerfil">Sair</button>
+            </div>
           </div>
         </div>
       </div>

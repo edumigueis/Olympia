@@ -1911,6 +1911,7 @@ import Contatos from "../shared/contatos/Contatos.vue";
 import Mouse from "../shared/mouse/Mouse.vue";
 import Footer from "../shared/footer/Footer.vue";
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+import Vue from 'vue';
 
 export default {
   components: {
@@ -1922,4 +1923,31 @@ export default {
     "meu-dark-mode": DarkMode
   }
 };
+
+/*var vm = new Vue({
+  el:"#app",
+  mounted:function(){
+        this.resizeAllGridItems() //method1 will execute at pageload
+  },
+  methods:{
+        resizeAllGridItems:function(){
+          let _this = this
+          this.
+              setTimeout(function(){
+              var allItems = document.getElementsByClassName("masonry-item");
+        for(var x=0;x<allItems.length;x++){
+          _this.resizeGridItem(allItems[x]);
+        }
+            }, 1000)
+        },
+        resizeGridItem:function(item){
+        grid = document.getElementsByClassName("slide__content")[0];
+        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+        rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+        rowSpan = Math.ceil((item.querySelector('.masonry-content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
+          item.style.gridRowEnd = "span "+rowSpan;
+      }
+     },
+})
+global.vm = vm; //Define you app variable globally*/
 </script>
