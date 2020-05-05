@@ -128,7 +128,7 @@
           </ul>
           <div class="pick-file-cont">
             <div class="fileUpload">
-              <input type="file" class="upload" id="obra-picker" />
+              <input type="file" class="upload" id="obra-picker"/>
               <span>Escolher Imagens</span>
             </div>
             <div id="go-on-btn-obra" class="go-on-btn black-to-white active-tab-p border-bottom-wh">Continuar</div>
@@ -202,7 +202,7 @@
           </ul>
           <div class="pick-file-cont">
             <div class="fileUpload"> 
-              <input type="file" class="upload" id="serv-picker" />
+              <input type="file" class="upload" id="serv-picker"/>
               <span>Escolher Imagens</span>
             </div>
             <div id="go-on-btn-serv" class="go-on-btn black-to-white active-tab-p border-bottom-wh">Continuar</div>
@@ -223,6 +223,7 @@
                       placeholder="Título"
                       name="name"
                       maxlength="40"
+                      required
                     />
                   </div>
                   <div class="input-group">
@@ -232,6 +233,7 @@
                       placeholder="Dados Técnicos"
                       name="birthday"
                       maxlength="140"
+                      required
                     />
                     <i
                       class="zmdi zmdi-calendar-note input-icon js-btn-calendar"
@@ -285,6 +287,7 @@
                           type="text"
                           placeholder="Search.."
                           id="myInput"
+                          required
                         />
                         <a class="sel-cat">About</a>
                         <a class="sel-cat">Base</a>
@@ -385,6 +388,7 @@
                       placeholder="Título"
                       name="name"
                       maxlength="40"
+                      required
                     />
                   </div>
                   <div class="input-group">
@@ -394,6 +398,7 @@
                       placeholder="Curta Descrição"
                       name="birthday"
                       maxlength="370"
+                      required
                     />
                   </div>
                   <div class="input-group">
@@ -535,13 +540,13 @@
               <textarea
                 name="message"
                 rows="3"
-                class="question"
+                class="question black-to-white"
                 id="msg"
                 required
                 autocomplete="off"
               ></textarea>
               <label for="msg"
-                ><span class="question">O que te inspira?</span></label
+                ><span class="question black-to-white">O que te inspira?</span></label
               >
               <input type="submit" value="Postar" id="submit" />
             </form>
@@ -553,7 +558,7 @@
                     <img src="/src/assets/images/clip.svg"/>
                   </label>
 
-                  <input id="file-input" type="file" />
+                  <input id="file-input" type="file"/>
                 </div>
               </div>
             </div>

@@ -2111,7 +2111,7 @@ input.dark::-ms-input-placeholder { /* Microsoft Edge */
 select.dark { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #dfdfdf;
   opacity: 1; /* Firefox */
-  background-color: #646464;
+  background-color: #535353;
 }
 
 select.dark { /* Internet Explorer 10-11 */

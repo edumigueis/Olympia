@@ -387,11 +387,13 @@
           </div>
         </form>
         <div class="right-tab-control">
+          <a href="/#/post">
           <img
             id="post-tab-ut"
             class="tab-page-ut white-icon"
             src="/src/assets/images/plus-sign.png"
           />
+          </a>
           <img
             id="search-tab-ut"
             class="tab-page-ut white-icon"
