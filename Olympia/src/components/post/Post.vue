@@ -3,7 +3,7 @@
     <div id="container-post">
       <link rel="stylesheet" href="/src/assets/css/post.css" />
       <title>P O S T</title>
-      <div id="fullpage" class="night" style="display: none;"><div class="section"><div class="time-circle"><div class="sun"></div> <div class="moon"><div></div> <div></div> <div></div></div> <div class="stars"><div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div></div> <div class="water"></div></div></div></div>
+      <div id="fullpage"  style="display: none;"><div class="section"><div class="time-circle"><div class="sun"></div> <div class="moon"><div></div> <div></div> <div></div></div> <div class="stars"><div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div></div> <div class="water"></div></div></div></div>
       <div class="buttons-cont">
         <div class="cont-major" id="cont-major-1">
           <div class="btn-cont">
@@ -59,7 +59,7 @@
               <img
                 class="img-inner"
                 id="obra-1"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -68,7 +68,7 @@
               <img
                 class="img-inner"
                 id="obra-2"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -77,7 +77,7 @@
               <img
                 class="img-inner"
                 id="obra-3"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -86,7 +86,7 @@
               <img
                 class="img-inner"
                 id="obra-4"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -95,7 +95,7 @@
               <img
                 class="img-inner"
                 id="obra-5"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -104,7 +104,7 @@
               <img
                 class="img-inner"
                 id="obra-6"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -113,7 +113,7 @@
               <img
                 class="img-inner"
                 id="obra-7"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -121,14 +121,14 @@
               <img
                 class="img-inner"
                 id="obra-8"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
               <span class="remove-img"></span>
             </li>
           </ul>
           <div class="pick-file-cont">
             <div class="fileUpload">
-              <input type="file" class="upload" id="obra-picker" />
+              <input type="file" class="upload" id="obra-picker"/>
               <span>Escolher Imagens</span>
             </div>
             <div id="go-on-btn-obra" class="go-on-btn black-to-white active-tab-p border-bottom-wh">Continuar</div>
@@ -141,7 +141,7 @@
               <img
                 class="img-inner"
                 id="serv-1"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
             </li>
 
@@ -149,7 +149,7 @@
               <img
                 class="img-inner"
                 id="serv-2"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
             </li>
 
@@ -157,7 +157,7 @@
               <img
                 class="img-inner"
                 id="serv-3"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
             </li>
 
@@ -165,7 +165,7 @@
               <img
                 class="img-inner"
                 id="serv-4"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
             </li>
 
@@ -173,7 +173,7 @@
               <img
                 class="img-inner"
                 id="serv-5"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
             </li>
 
@@ -181,7 +181,7 @@
               <img
                 class="img-inner"
                 id="serv-6"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
             </li>
 
@@ -189,20 +189,20 @@
               <img
                 class="img-inner"
                 id="serv-7"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
             </li>
             <li class="img-list-item">
               <img
                 class="img-inner"
                 id="serv-8"
-                src="/src/assets/images/colorful-cam.jpg"
+                src="/src/assets/images/bg1.jpg"
               />
             </li>
           </ul>
           <div class="pick-file-cont">
-            <div class="fileUpload">
-              <input type="file" class="upload" id="serv-picker" />
+            <div class="fileUpload"> 
+              <input type="file" class="upload" id="serv-picker"/>
               <span>Escolher Imagens</span>
             </div>
             <div id="go-on-btn-serv" class="go-on-btn black-to-white active-tab-p border-bottom-wh">Continuar</div>
@@ -223,6 +223,7 @@
                       placeholder="Título"
                       name="name"
                       maxlength="40"
+                      required
                     />
                   </div>
                   <div class="input-group">
@@ -232,6 +233,7 @@
                       placeholder="Dados Técnicos"
                       name="birthday"
                       maxlength="140"
+                      required
                     />
                     <i
                       class="zmdi zmdi-calendar-note input-icon js-btn-calendar"
@@ -285,6 +287,7 @@
                           type="text"
                           placeholder="Search.."
                           id="myInput"
+                          required
                         />
                         <a class="sel-cat">About</a>
                         <a class="sel-cat">Base</a>
@@ -385,6 +388,7 @@
                       placeholder="Título"
                       name="name"
                       maxlength="40"
+                      required
                     />
                   </div>
                   <div class="input-group">
@@ -394,6 +398,7 @@
                       placeholder="Curta Descrição"
                       name="birthday"
                       maxlength="370"
+                      required
                     />
                   </div>
                   <div class="input-group">
@@ -435,7 +440,7 @@
                   <div class="input-group" id="inp-gp-no-border">
                     <div class="dropdown">
                       <div class="input-group" id="inp-gp-no-border-2">
-                        <div class="select" id="search-select-serv">
+                        <div class="select black-to-white" id="search-select-serv">
                           Selecione Categorias
                         </div>
                       </div>
@@ -530,18 +535,18 @@
           </div>
         </section>
         <section id="post-insp" class="white-6">
-          <div class="insp-post-cont">
+          <div class="insp-post-cont white-7">
             <form>
               <textarea
                 name="message"
                 rows="3"
-                class="question"
+                class="question black-to-white"
                 id="msg"
                 required
                 autocomplete="off"
               ></textarea>
               <label for="msg"
-                ><span class="question">O que te inspira?</span></label
+                ><span class="question black-to-white">O que te inspira?</span></label
               >
               <input type="submit" value="Postar" id="submit" />
             </form>
@@ -550,10 +555,10 @@
               <div class="pick-file-cont-insp">
                 <div class="image-upload">
                   <label for="file-input">
-                    <img src="/src/assets/images/clip.svg" />
+                    <img src="/src/assets/images/clip.svg"/>
                   </label>
 
-                  <input id="file-input" type="file" />
+                  <input id="file-input" type="file"/>
                 </div>
               </div>
             </div>

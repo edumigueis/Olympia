@@ -387,11 +387,13 @@
           </div>
         </form>
         <div class="right-tab-control">
+          <a href="/#/post">
           <img
             id="post-tab-ut"
             class="tab-page-ut white-icon"
             src="/src/assets/images/plus-sign.png"
           />
+          </a>
           <img
             id="search-tab-ut"
             class="tab-page-ut white-icon"
@@ -867,7 +869,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -899,7 +901,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -932,8 +934,15 @@
                         class="img-serv"
                       />
                     </a>
-                    <div class="stage">
-                      <div class="heart"></div>
+                    <div class="interact-container on-serv">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
+                      <div class="stage">
+                        <div class="heart"></div>
+                      </div>
                     </div>
                     <h3 class="masonry-title">
                       Adipisci alias ullam est accusamus
@@ -956,7 +965,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -989,7 +998,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1023,7 +1032,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1055,7 +1064,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1089,7 +1098,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1122,7 +1131,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1154,7 +1163,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1188,7 +1197,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1220,7 +1229,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1250,7 +1259,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1282,7 +1291,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1315,7 +1324,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1346,7 +1355,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1379,7 +1388,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1413,7 +1422,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1445,7 +1454,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1479,7 +1488,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1512,7 +1521,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1544,7 +1553,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1578,7 +1587,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1610,7 +1619,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1640,7 +1649,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1672,7 +1681,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1705,7 +1714,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1736,7 +1745,7 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
                       <div class="stage">
                         <a class="magic">
                           <i class="fas fa-star"></i>
@@ -1769,7 +1778,12 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>
@@ -1798,7 +1812,12 @@
                         class="img-serv"
                         alt="Dummy Image"
                     /></a>
-                    <div class="interact-container">
+                    <div class="interact-container on-serv">
+                      <div class="stage">
+                        <a class="magic">
+                          <i class="fas fa-star"></i>
+                        </a>
+                      </div>
                       <div class="stage">
                         <div class="heart"></div>
                       </div>

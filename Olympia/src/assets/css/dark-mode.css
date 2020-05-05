@@ -186,9 +186,21 @@ input.dark{
 .select.dark-mode::after{
   filter: invert(90%);
 }
-.dark-mode.filter-invert{
-  filter: invert(98%);
+.dark-mode.filter-invert:hover::before{
+  border-color: #0f97af !important;
+}
+.dark-mode.filter-invert:hover::after{
+  border-color: #0f97af !important;
+}
+.dark-mode.filter-invert::after{
+  border-color: #efefef !important;
+}
+.dark-mode.filter-invert::before{
+  border-color: #efefef !important;
 }
 .dark-mode.masonry-item{
   background-color: #535353 !important;
+}
+.dark-mode.inverted{
+  filter: invert(95%);
 }
