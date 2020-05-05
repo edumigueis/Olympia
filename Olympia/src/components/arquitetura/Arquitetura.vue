@@ -1,9 +1,9 @@
 <template>
   <main>
-    <div id="container-cinema">
-      <title>C I N E M A</title>
+    <div id="container-arquitetura">
+      <title>A R Q U I T E T U R A</title>
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
-      <link rel="stylesheet" href="/src/assets/css/cinema.css" />
+      <link rel="stylesheet" href="/src/assets/css/arquitetura.css" />
 
       <meu-menu-bar></meu-menu-bar>
       <meu-menu-items></meu-menu-items>
@@ -15,12 +15,12 @@
       <div style="position:relative">
         <div class="image-container">
           <img
-            src="https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80"
+            src="https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
             alt
             class="image"
           />
         </div>
-        <h1 class="art-title">Cinema</h1>
+        <h1 class="art-title">Arquitetura</h1>
         <h2 class="art-subtitle">A sétima arte, um mar de sensações</h2>
       </div>
 
@@ -28,12 +28,12 @@
         <div class="slideshow-container dark-slideshow">
 
       <div class="mySlides">
-        <q>"O cinema não tem fronteiras nem limites. É um fluxo constante de sonho."</q>
+        <q>"O arquitetura não tem fronteiras nem limites. É um fluxo constante de sonho."</q>
         <p class="author">- Orson Welles</p>
       </div>
 
       <div class="mySlides">
-        <q>"Para o cinema tudo se torna uma imensa natureza-morta, até os sentimentos dos outros são qualquer coisa de que se pode dispor."</q>
+        <q>"Para o arquitetura tudo se torna uma imensa natureza-morta, até os sentimentos dos outros são qualquer coisa de que se pode dispor."</q>
         <p class="author">- Federico Fellini</p>
       </div>
 

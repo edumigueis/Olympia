@@ -11,6 +11,7 @@ import Login from './components/login/Login.vue';
 import Categorias from './components/categories/Categories.vue';
 import Literatura from './components/literatura/Literatura.vue';
 import Cinema from './components/cinema/Cinema.vue';
+import Arquitetura from './components/arquitetura/Arquitetura.vue';
 import Escultura from './components/escultura/Escultura.vue';
 import Perfil from './components/perfil/Perfil.vue';
 import Post from './components/post/Post.vue';
@@ -31,7 +32,8 @@ export const routes = [
     { path: '/literatura', component: Literatura, titulo: 'L I T E R A T U R A'},
     { path: '/post', component: Post, titulo: 'P O S T'},
     { path: '/cinema', component: Cinema, titulo: 'C I N E M A'},
-    { path: '/escultura', component: Escultura, titulo: 'E S C U L T U R A'}
+    { path: '/escultura', component: Escultura, titulo: 'E S C U L T U R A'},
+    { path: '/arquitetura', component: Arquitetura, titulo: 'A R Q U I T E T U R A'}
 ]
 
 
