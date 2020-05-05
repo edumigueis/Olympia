@@ -15,7 +15,7 @@
       <div style="position:relative">
         <div class="image-container">
           <img
-            src="https://images.unsplash.com/photo-1558611913-d707111c702e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+            src="/src/assets/images/sculpture-bg.jpg"
             alt
             class="image"
           />

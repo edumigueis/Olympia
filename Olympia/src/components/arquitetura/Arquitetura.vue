@@ -15,7 +15,7 @@
       <div style="position:relative">
         <div class="image-container">
           <img
-            src="https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            src="/src/assets/images/arch-bg.jpg"
             alt
             class="image"
           />

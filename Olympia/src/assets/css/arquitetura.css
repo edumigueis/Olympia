@@ -107,8 +107,8 @@
     font-weight: bold;
   }
   .art-title{
-    font-family: "Broadway Regular", sans-serif;
-    font-weight: normal;
+    font-family: "Gotham", sans-serif;
+    font-weight: bold;
     color: #fff;
     font-size: 4em;
     margin-top: -400px;
@@ -118,12 +118,12 @@
     transition: 0.4s all;
   }
   .art-subtitle{
-    font-family: "Calibre-Regular", sans-serif;
+    font-family: "Gotham", sans-serif;
     transition: 0.4s all;
     color: #fff;
     font-size: 1.3em;
     margin-top: -60px;
-    margin-bottom: 400px;
+    margin-bottom: 390px;
     text-indent: 6.5%;
     height: 50px;
     letter-spacing: 0.05em;
