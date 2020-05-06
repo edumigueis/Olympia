@@ -192,7 +192,7 @@ setInterval(() => {
       $('.call-picker').click(function (event) {
         event.stopPropagation();
         $("#color-picker").fadeIn();
-        $("#color-picker").children("li").hover(function () {
+        $("#color-picker").children("li").click(function () {
           var codeHex = $(this).data("hex");
 
           $(".color-holder").css("background-color", codeHex);

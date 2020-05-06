@@ -48,7 +48,7 @@ setInterval(() => {
   if ($("#container-perfil").length && jaFoiPerUser == false) {
     $(function () {
       var firstLet = null;
-      
+
       $("#name").focusout(function () {
         $(".zmdi.zmdi-palette").fadeIn();
         $("#hexcolor").fadeIn();
@@ -69,7 +69,7 @@ setInterval(() => {
           $(".signup-image").css("margin-top", 0);
           $("#user-let-img").css("margin-bottom", "60px");
           firstLet = null;
-          
+
         } else {
           $("#user-let-img").css("display", "none");
           $(".hexcolor").css("display", "none");
@@ -79,19 +79,19 @@ setInterval(() => {
           );
           $(".bin").fadeOut();
         }
-            for (var i = 0; i < colorList.length; i++) {
-              $("#color-picker").append(
-                '<li class="color-item" data-hex="' +
-                "#" +
-                colorList[i] +
-                '" style="background-color:' +
-                "#" +
-                colorList[i] +
-                ';"></li>'
-              );
-              
-            }
-          
+        for (var i = 0; i < colorList.length; i++) {
+          $("#color-picker").append(
+            '<li class="color-item" data-hex="' +
+            "#" +
+            colorList[i] +
+            '" style="background-color:' +
+            "#" +
+            colorList[i] +
+            ';"></li>'
+          );
+
+        }
+
       });
       $("body").on("click", function () {
         $("#color-picker").fadeOut();
@@ -108,9 +108,9 @@ setInterval(() => {
             "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".bin").fadeIn();
-          $(".ui-widget-overlay").css('display','none');
-          $("#pick-image-modal").css('display','none');
-          $(".error-modal").css('display','none');
+          $(".ui-widget-overlay").css('display', 'none');
+          $("#pick-image-modal").css('display', 'none');
+          $(".error-modal").css('display', 'none');
           $(".error-modal").css('opacity', '0');
         }
         else
@@ -118,9 +118,9 @@ setInterval(() => {
             $(".hexcolor").css("display", "block");
             $(".color-holder").css("display", "block");
             $('.is-same-cont').css("background-color", "transparent");
-            $(".ui-widget-overlay").css('display','none');
-            $("#pick-image-modal").css('display','none');
-            $(".error-modal").css('display','none');
+            $(".ui-widget-overlay").css('display', 'none');
+            $("#pick-image-modal").css('display', 'none');
+            $(".error-modal").css('display', 'none');
             $(".error-modal").css('opacity', '0');
           }
           else {
@@ -131,9 +131,9 @@ setInterval(() => {
             $(".signup-image").html(
               "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
             );
-            $(".ui-widget-overlay").css('display','none');
-            $("#pick-image-modal").css('display','none');
-            $(".error-modal").css('display','none');
+            $(".ui-widget-overlay").css('display', 'none');
+            $("#pick-image-modal").css('display', 'none');
+            $(".error-modal").css('display', 'none');
             $(".error-modal").css('opacity', '0');
           }
       });
@@ -191,7 +191,7 @@ setInterval(() => {
       $('.call-picker').click(function (event) {
         event.stopPropagation();
         $("#color-picker").fadeIn();
-        $("#color-picker").children("li").hover(function () {
+        $("#color-picker").children("li").click(function () {
           var codeHex = $(this).data("hex");
 
           $(".color-holder").css("background-color", codeHex);
@@ -214,7 +214,7 @@ setInterval(() => {
           $("#name").css("border-left", 0);
           $("#name").css("border-right", 0);
           $("#name").css("border-bottom", "1px solid #999");
-          
+
         } else {
           return;
         }
@@ -262,9 +262,9 @@ setInterval(() => {
           return;
         }
         if (!user.match(/^[A-Za-z0-9 ]+$/)) {
-          $(".error-modal").css('display','block');
+          $(".error-modal").css('display', 'block');
           $(".error-modal").css('opacity', '1');
-          $(".ui-widget-overlay").css('display','block');
+          $(".ui-widget-overlay").css('display', 'block');
           $(".warn").html("O username não deve conter acentuação e caracteres especiais.");
           $('#user').val("");
         }
@@ -276,9 +276,9 @@ setInterval(() => {
           return;
         }
         if (!regName.test(name)) {
-          $(".error-modal").css('display','block');
+          $(".error-modal").css('display', 'block');
           $(".error-modal").css('opacity', '1');
-          $(".ui-widget-overlay").css('display','block');
+          $(".ui-widget-overlay").css('display', 'block');
           $(".warn").html("Deve ser fornecido o nome completo.");
           $('#name').val("");
         }
@@ -290,9 +290,9 @@ setInterval(() => {
           return;
         }
         if (!regName.test(tele)) {
-          $(".error-modal").css('display','block');
+          $(".error-modal").css('display', 'block');
           $(".error-modal").css('opacity', '1');
-          $(".ui-widget-overlay").css('display','block');
+          $(".ui-widget-overlay").css('display', 'block');
           $(".warn").html("Deve ser fornecido telefone nos padrões: +55 00 000000000 (BR), +591 00000000, +1 000 000 0000, +(591) 0000000, +(591) (0) 0000000, 0000 00000000, 0001 0000000000 ou (0001) 0000000.");
           $('#tel').val("");
         }
@@ -303,9 +303,9 @@ setInterval(() => {
           return;
         }
         if (!validar(email)) {
-          $(".error-modal").css('display','block');
+          $(".error-modal").css('display', 'block');
           $(".error-modal").css('opacity', '1');
-          $(".ui-widget-overlay").css('display','block');
+          $(".ui-widget-overlay").css('display', 'block');
           $(".warn").html("O email deve ter um @ seguido pelo domínio.");
           $('#email').val("");
         }
@@ -392,16 +392,16 @@ setInterval(() => {
           color = "rgb(255, 255, 255)";
         }
         if (color == "rgb(237, 41, 57)") {
-          $(".ui-widget-overlay").css('display','block');
-          $(".error-modal").css('display','block');
+          $(".ui-widget-overlay").css('display', 'block');
+          $(".error-modal").css('display', 'block');
           $(".error-modal").css('opacity', '1');
           $('#pass').val("");
           $('.is-same-cont').css("background-color", "transparent");
           $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições!");
         }
         if (color == "rgb(255, 165, 0)") {
-          $(".ui-widget-overlay").css('display','block');
-          $(".error-modal").css('display','block');
+          $(".ui-widget-overlay").css('display', 'block');
+          $(".error-modal").css('display', 'block');
           $(".error-modal").css('opacity', '1');
           $('#pass').val("");
           $('.is-same-cont').css("background-color", "transparent");
@@ -424,27 +424,9 @@ setInterval(() => {
         }
       });
 
-      /****SENHA ANTIGA SESSION */
-
-      var senhaAntiga = 'JoseDaniella22'
-
-      $('#old_pass').on('keyup', function () {
-        if ($('#old_pass').val() == senhaAntiga != "") {
-          $('.is-old-cont').css("background-color", "#2eb82e");
-        }
-        if ($('#old_pass').val() != senhaAntiga != "") {
-          $('.is-old-cont').css("background-color", "rgb(237, 41, 57)");
-        }
-        if ($('#old_pass').val() == "") {
-          $('.is-old-cont').css("background-color", "transparent");
-        }
-      });
-
-      /**************************/
-
       $(".signup-image-link").on("click", function () {
-        $(".ui-widget-overlay").css('display','block');
-        $("#pick-image-modal").css('display','block');
+        $(".ui-widget-overlay").css('display', 'block');
+        $("#pick-image-modal").css('display', 'block');
       });
       $("#signup").on("click", function (e) {
         if ($("#name").val() == "") {
@@ -459,11 +441,40 @@ setInterval(() => {
           return;
         } else if ($("#pass").val() != $("#re_pass").val()) {
           $(".warn").text("As senhas não correspondem!");
-          $(".error-modal").css('display','block');
+          $(".error-modal").css('display', 'block');
           $(".error-modal").css('opacity', '1');
           return;
         }
       });
+      /*-----------------------------------------------------Final Verifications*/
+      setInterval(function () {
+        if ($("#name").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
+        } else if ($("#user").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
+        } else if ($("#email").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
+        } else if ($("#pass").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
+        } else if ($("#re_pass").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
+        } else if ($("#pass").val() != $("#re_pass").val()) {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
+        }
+      }, 100);
+      /*-----------------------------------------------------/Final Verifications*/
     });
   } else if (!$("#container-cad-user").length) {
     jaFoiPerUser = false;
@@ -472,11 +483,11 @@ setInterval(() => {
 
 setInterval(() => {
   if ($('#container-perfil').length) {
-      if(!$('#pass').val() == ''){
-        $('#re_pass').attr("required",true);
-      }
-      else{
-        $('#re_pass').attr("required",false);
-      }
+    if (!$('#pass').val() == '') {
+      $('#re_pass').attr("required", true);
+    }
+    else {
+      $('#re_pass').attr("required", false);
+    }
   }
 }, 500);

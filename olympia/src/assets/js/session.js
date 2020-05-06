@@ -5,6 +5,8 @@ var rolarMenu;
 var desligarMenu;
 var reaplicarAoLogar;
 var dark_Mode;
+var email = 'lsodl@ckd.com';
+var senha = 'josefe';
 
 /* VARIAVEIS AUXILIARES*/
 
@@ -73,6 +75,35 @@ $(document).ready(function () {
         }
         else if (enderecoAntigo != window.location.href) {
             jaFoiDarkSessao = false;
+        }
+    }, 100);
+
+    setInterval(() => {
+
+        if ($('#container-perfil').length) {
+
+            $('#old_pass').on('keyup', function () {
+                if ($('#old_pass').val() == senha != "") {
+                    $('.is-old-cont').css("background-color", "#2eb82e");
+                }
+                if ($('#old_pass').val() != senha != "") {
+                    $('.is-old-cont').css("background-color", "rgb(237, 41, 57)");
+                }
+                if ($('#old_pass').val() == "") {
+                    $('.is-old-cont').css("background-color", "transparent");
+                }
+            });
+
+            if ($("#old_pass").val() != senha) {
+                document.getElementById("signup").disabled = true;
+                $("#signup").css('opacity', '0.7');
+                $("#signup").css('cursor', 'unset');
+            }
+            else{
+                document.getElementById("signup").disabled = false;
+                $("#signup").css('opacity', '1');
+                $("#signup").css('cursor', 'pointer');
+            }
         }
     }, 100);
 
