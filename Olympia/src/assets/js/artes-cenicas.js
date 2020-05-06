@@ -25,17 +25,17 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-var jaFoiArq = false;
+var jaFoiAC = false;
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
-  if ($("#container-arquitetura").length && jaFoiArq == false) {
+  if ($("#container-artes-cenicas").length && jaFoiAC == false) {
 
-    jaFoiArq = true;
+    jaFoiAC = true;
 
     $(function () {
       showSlides(slideIndex);
     })
   }
-  else if (!$("#container-arquitetura").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
-    jaFoiArq = false;
+  else if (!$("#container-artes-cenicas").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
+    jaFoiAC = false;
   }
 }, 100);
