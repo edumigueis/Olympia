@@ -427,24 +427,43 @@ setInterval(() => {
         $(".ui-widget-overlay").css('display','block');
         $("#pick-image-modal").css('display','block');
       });
-      $("#signup").on("click", function (e) {
+      /*-----------------------------------------------------Final Verifications*/
+      setInterval(function(){ 
         if ($("#name").val() == "") {
-          return;
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
+        } else if ($("#user").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
         } else if ($("#email").val() == "") {
-          return;
-        } else if ($("#tel").val() == "") {
-          return;
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
         } else if ($("#pass").val() == "") {
-          return;
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
         } else if ($("#re_pass").val() == "") {
-          return;
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
         } else if ($("#pass").val() != $("#re_pass").val()) {
-          $(".warn").text("As senhas não correspondem!");
-          $(".error-modal").css('display','block');
-          $(".error-modal").css('opacity', '1');
-          return;
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
+        } else if ($('#agree-term').is(':checked') == false) {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css('opacity', '0.7');
+          $("#signup").css('cursor', 'unset');
+        } else{
+          document.getElementById("signup").disabled = false;
+          $("#signup").css('opacity', '1');
+          $("#signup").css('cursor', 'pointer');
         }
-      });
+    }, 100);
+    /*-----------------------------------------------------/Final Verifications*/
     });
   } else if (!$("#container-cad-user").length) {
     jaFoiCadUser = false;
