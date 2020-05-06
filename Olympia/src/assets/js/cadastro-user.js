@@ -58,6 +58,7 @@ setInterval(() => {
             .val()
             .charAt(0);
           firstLet = firstLet.toUpperCase();
+          $('.bin').css('display','none')
           var vzs = 0;
           vzs++;
           if (vzs == 1) $("#user-let-img").css("display", "block");
