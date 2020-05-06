@@ -140,6 +140,7 @@
                 <i class="zmdi dark-register-ico zmdi-palette"></i>
               </label>
               <input
+              class="dark-register-input"
                 type="text"
                 name="custom_color"
                 placeholder="#FFFFFF"

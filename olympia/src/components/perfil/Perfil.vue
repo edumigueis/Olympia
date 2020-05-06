@@ -119,8 +119,8 @@
               Mais sobre mim...
             </h1>
             <div class="div-info-perfil">
-              <p class="bio">Oi tudo bem?? Meu nome e jose marques costa</p>
-              <p class="biografia">
+              <p class="bio black-to-white">Oi tudo bem?? Meu nome e jose marques costa</p>
+              <p class="biografia black-to-white">
                 My name is Karl Kristiansen. I was born in Connecticut. I spent
                 most of my childhood in Stonington, a small, seaside town on the
                 Connecticut-Rhode Island border. My father was a commercial
@@ -1470,7 +1470,7 @@
               <div class="container dark-register-div">
                 <div class="signup-content">
                   <div class="signup-form">
-                    <h2 class="form-title black-to-white">Cadastre-se</h2>
+                    <h2 class="form-title black-to-white">Alterar dados</h2>
                     <form class="register-form" id="register-form">
                       <div class="form-group">
                         <label for="name">
@@ -1540,8 +1540,7 @@
                           type="password"
                           name="pass"
                           id="pass"
-                          placeholder="Sua senha"
-                          required
+                          placeholder="Sua nova senha"
                         />
                       </div>
                       <div class="form-group">
@@ -1558,24 +1557,26 @@
                           type="password"
                           name="re_pass"
                           id="re_pass"
-                          placeholder="Confirme sua senha"
-                          required
+                          placeholder="Confirme sua nova senha"
                         />
                       </div>
                       <div class="form-group">
-                        <input
-                          type="checkbox"
-                          name="agree-term"
-                          id="agree-term"
-                          class="agree-term dark-register-input"
-                        />
-                        <label
-                          for="agree-term"
-                          class="label-agree-term black-to-white"
-                        >
-                          <span> <span></span> </span>Eu concordo com os
-                          <a href="#" class="term-service">Termos de Serviço</a>
+                        <label for="old-pass">
+                          <div class="is-old-cont gray-n-imp">
+                            <i
+                              class="zmdi dark-register-ico zmdi-lock-outline"
+                              style="margin-top: 5.5px"
+                            ></i>
+                          </div>
                         </label>
+                        <input
+                          class="dark-register-input"
+                          type="password"
+                          name="old_pass"
+                          id="old_pass"
+                          placeholder="Confirme sua senha antiga"
+                          required
+                        />
                       </div>
                       <div class="form-group form-button">
                         <input
@@ -1602,6 +1603,7 @@
                       <i class="zmdi dark-register-ico zmdi-palette"></i>
                     </label>
                     <input
+                      class="dark-register-input"
                       type="text"
                       name="custom_color"
                       placeholder="#FFFFFF"
