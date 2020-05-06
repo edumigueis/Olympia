@@ -49,6 +49,20 @@ setInterval(() => {
             resizeAllGridItems();
         });
 
+        $('body').on('click', '.img-ico', function () {
+            $('.modal-form').css('display', 'block')
+            $('.alterar-form').css('display', 'block')
+        })
+
+        $('body').on('click', '.alterar', function () {
+            $('.modal-form').css('display', 'block')
+            $('.bio-form').css('display', 'block')
+    })
+
+        $('body').on('click', '.close-modal', function () {
+            $('.modal-form').css('display','none')
+        })
+
         $(document.body).on('click', '.curtidas', function () {
             $('.sobre-mim-content').fadeOut(300);
             $('.curtidas-content').fadeIn(300);
@@ -98,6 +112,7 @@ setInterval(() => {
         $(".magic").on("click", function () {
             $(this).toggleClass("is-star-active");
         });
+
         function resizeInstance(instance) {
             item = instance.elements[0];
             resizeGridItem(item);
@@ -133,12 +148,8 @@ var clickStar = false;
 setInterval(() => {
     if ($('#container-perfil').length) {
 
-        if (!$('body').hasClass('desligar-menu-bar') && !$('body').hasClass('sumir-menu-bar')) {
-            $("#control_03-2").trigger("click");
-        }
-
         if ($('.curtidas-content').css('display') == 'block' && !clickHeart) {
-            $('.div-scroll-curtidas i').css('visibility', 'hidden');
+            $('.div-scroll-curtidas .magic').css('visibility', 'hidden');
             clickHeart = true;
             $('.div-scroll-curtidas .heart').trigger('click');
         }
@@ -149,4 +160,4 @@ setInterval(() => {
             clickStar = true;
         }
     }
-}, 300);
+}, 1000);

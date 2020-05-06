@@ -22,7 +22,7 @@ $(document).ready(function () {
                 rolarMenu = 0;
                 desligarMenu = 0;
                 reaplicarAoLogar;
-                dark_Mode = 1;
+                dark_Mode = 0;
             }
 
             jaFoiFooterSessao = true;
