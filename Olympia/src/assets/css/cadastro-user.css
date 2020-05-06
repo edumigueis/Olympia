@@ -622,7 +622,9 @@ list-type-ulli,
   background-color: #fff;
   transition: 1s all;
 }
-
+.signup-image {
+  margin-left: auto;
+}
 @media screen and (max-width: 420px) and (min-width: 0px){
   .file-label{
     width: 50%!important;
@@ -641,6 +643,13 @@ list-type-ulli,
   height: 180px!important;
   margin-top:5%!important;
 }
+
+input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+.dark-mode input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 30px #46454b inset !important;
+}
 .error-modal {
   display: none;
   border-radius: 20px;
@@ -648,7 +657,7 @@ list-type-ulli,
   -webkit-border-radius: 20px;
   -o-border-radius: 20px;
   -ms-border-radius: 20px;
-  padding: 10px;
+  padding: 30px;
   width: 50%;
   height: 350px;
   position: absolute;

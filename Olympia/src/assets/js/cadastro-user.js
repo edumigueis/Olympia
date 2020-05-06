@@ -394,7 +394,7 @@ setInterval(() => {
         if (color == "rgb(237, 41, 57)") {
           $(".ui-widget-overlay").css('display','block');
           $(".error-modal").css('display','block');
-          $(".error-modal").css('opacity', '0');
+          $(".error-modal").css('opacity', '1');
           $('#pass').val("");
           $('.is-same-cont').css("background-color", "transparent");
           $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições!");

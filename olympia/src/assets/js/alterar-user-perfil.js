@@ -394,7 +394,7 @@ setInterval(() => {
         if (color == "rgb(237, 41, 57)") {
           $(".ui-widget-overlay").css('display','block');
           $(".error-modal").css('display','block');
-          $(".error-modal").css('opacity', '0');
+          $(".error-modal").css('opacity', '1');
           $('#pass').val("");
           $('.is-same-cont').css("background-color", "transparent");
           $(".warn").html("A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições!");
@@ -423,6 +423,25 @@ setInterval(() => {
           $('.is-same-cont').css("background-color", "transparent")
         }
       });
+
+      /****SENHA ANTIGA SESSION */
+
+      var senhaAntiga = 'JoseDaniella22'
+
+      $('#old_pass').on('keyup', function () {
+        if ($('#old_pass').val() == senhaAntiga != "") {
+          $('.is-old-cont').css("background-color", "#2eb82e");
+        }
+        if ($('#old_pass').val() != senhaAntiga != "") {
+          $('.is-old-cont').css("background-color", "rgb(237, 41, 57)");
+        }
+        if ($('#old_pass').val() == "") {
+          $('.is-old-cont').css("background-color", "transparent");
+        }
+      });
+
+      /**************************/
+
       $(".signup-image-link").on("click", function () {
         $(".ui-widget-overlay").css('display','block');
         $("#pick-image-modal").css('display','block');
@@ -450,3 +469,14 @@ setInterval(() => {
     jaFoiPerUser = false;
   }
 }, 1500);
+
+setInterval(() => {
+  if ($('#container-perfil').length) {
+      if(!$('#pass').val() == ''){
+        $('#re_pass').attr("required",true);
+      }
+      else{
+        $('#re_pass').attr("required",false);
+      }
+  }
+}, 500);
