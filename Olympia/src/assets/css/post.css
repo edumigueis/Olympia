@@ -453,17 +453,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: saturate(90%);
-    filter: brightness(100%);
-    filter: contrast(90%);
   }
   ul:hover li {
     width:50px;  
   }
   li {
-    filter: saturate(90%);
-    filter: brightness(100%);
-    filter: contrast(90%);
+    filter: saturate(110%);
   }
   
   ul li:hover {
@@ -2079,11 +2074,11 @@ select {
 }
 .return-btn:hover::after {
   transform: rotate(45deg);
-  border-color: #00bcbe;
+  border-color: #333;
   height: 120%;
 }
 .return-btn:hover::before {
-  border-color:  #00bcbe;
+  border-color:  #333;
   transform: scale(0.8);
 }
 #small-footer{

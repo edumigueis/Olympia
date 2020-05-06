@@ -187,10 +187,10 @@ input.dark{
   filter: invert(90%);
 }
 .dark-mode.filter-invert:hover::before{
-  border-color: #0f97af !important;
+  border-color: #eeeeee !important;
 }
 .dark-mode.filter-invert:hover::after{
-  border-color: #0f97af !important;
+  border-color: #eeeeee !important;
 }
 .dark-mode.filter-invert::after{
   border-color: #efefef !important;

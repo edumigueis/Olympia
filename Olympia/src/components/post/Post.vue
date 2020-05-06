@@ -59,7 +59,7 @@
               <img
                 class="img-inner"
                 id="obra-1"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -68,7 +68,7 @@
               <img
                 class="img-inner"
                 id="obra-2"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -77,7 +77,7 @@
               <img
                 class="img-inner"
                 id="obra-3"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -86,7 +86,7 @@
               <img
                 class="img-inner"
                 id="obra-4"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -95,7 +95,7 @@
               <img
                 class="img-inner"
                 id="obra-5"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -104,7 +104,7 @@
               <img
                 class="img-inner"
                 id="obra-6"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -113,7 +113,7 @@
               <img
                 class="img-inner"
                 id="obra-7"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -121,7 +121,7 @@
               <img
                 class="img-inner"
                 id="obra-8"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -141,7 +141,7 @@
               <img
                 class="img-inner"
                 id="serv-1"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
             </li>
 
@@ -149,7 +149,7 @@
               <img
                 class="img-inner"
                 id="serv-2"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
             </li>
 
@@ -157,7 +157,7 @@
               <img
                 class="img-inner"
                 id="serv-3"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
             </li>
 
@@ -165,7 +165,7 @@
               <img
                 class="img-inner"
                 id="serv-4"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
             </li>
 
@@ -173,7 +173,7 @@
               <img
                 class="img-inner"
                 id="serv-5"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
             </li>
 
@@ -181,7 +181,7 @@
               <img
                 class="img-inner"
                 id="serv-6"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
             </li>
 
@@ -189,14 +189,14 @@
               <img
                 class="img-inner"
                 id="serv-7"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
             </li>
             <li class="img-list-item">
               <img
                 class="img-inner"
                 id="serv-8"
-                src="/src/assets/images/bg1.jpg"
+                src="/src/assets/images/bg3.jpg"
               />
             </li>
           </ul>
