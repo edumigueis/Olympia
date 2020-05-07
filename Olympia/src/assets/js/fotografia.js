@@ -25,17 +25,17 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-var jaFoiPintura = false;
+var jaFoiFotografia = false;
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
-  if ($("#container-pintura").length && jaFoiPintura == false) {
+  if ($("#container-fotografia").length && jaFoiFotografia == false) {
 
-    jaFoiPintura = true;
+    jaFoiFotografia = true;
 
     $(function () {
       showSlides(slideIndex);
     })
   }
-  else if (!$("#container-pintura").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
-    jaFoiPintura = false;
+  else if (!$("#container-fotografia").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
+    jaFoiFotografia = false;
   }
 }, 100);
