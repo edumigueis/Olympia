@@ -95,7 +95,7 @@
                     
                     <div class="line">
                         <div class="card-center gray card">
-                            <div class="text-cont-art inner-center">
+                            <div class="text-cont-art inner-left">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                         <div class="card-left gray card">
-                            <div class="text-cont-art inner-left">
+                            <div class="text-cont-art inner-center">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
@@ -148,7 +148,7 @@
                     </div>
                     <div class="line">
                         <div class="card-center gray card">
-                            <div class="text-cont-art inner-center">
+                            <div class="text-cont-art inner-left">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
@@ -156,7 +156,7 @@
                             </div>
                         </div>
                         <div class="card-left gray card">
-                            <div class="text-cont-art inner-left">
+                            <div class="text-cont-art inner-center">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,

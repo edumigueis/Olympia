@@ -84,6 +84,8 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   z-index: 1;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .footer-link {
@@ -96,17 +98,29 @@ body {
 }
 
 .bg {
-  background-image: url("/src/assets/images/circles.png");
-  position: absolute;
+
+  
+  position: fixed;
   width: 100%;
-  height: 4850px;
+  bottom: 0;
+  top: 0;
   z-index: -10;
   animation-name: bg-circles;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   filter: blur(5px);
 }
-
+.bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/src/assets/images/circles.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+}
 @keyframes bg-circles {
   0% {
     opacity: 0.2;
@@ -221,8 +235,10 @@ body {
   width: 90%;
 }
 .line-img {
-  border-radius: 5%;
-  width: 100%;
+  border-radius: 21px;
+  width: 92%;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
 }
 .card-right {
   background-color: transparent;
@@ -234,6 +250,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 21px;
 }
 
 .card-center {
@@ -246,6 +263,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 21px;
 }
 
 .card-left {
@@ -258,6 +276,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 21px;
 }
 
 @-webkit-keyframes AnimationName {
@@ -369,4 +388,37 @@ body {
   padding-top: 4%;
 }
 
-
+.text-cont-art p{
+  padding: 10px;
+}
+.text-cont-art{
+  border-radius: 20px;
+  width: 93%;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+}
+@media only screen and (max-width: 800px){
+  .text-cont-art{
+    height: 80%;
+    width: 95%;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+  }
+  .inner-right{
+    margin-top: -25%;
+  }
+  .inner-center{
+    margin-bottom: -5%
+  }
+  .inner-left{
+    margin-top: -25%;
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 1050px){
+  .text-cont-art{
+    height: 50%;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
