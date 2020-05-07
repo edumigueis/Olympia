@@ -17,6 +17,17 @@ html {
   src: url("/src/assets/fonts/calibri-7.ttf");
 }
 
+@media only screen and (min-width: 0) and (max-width: 380px){
+  .prof-bio-det{
+    font-size: 0.6em!important;
+    padding-right: 10px!important;
+    margin-left: 95px!important;
+  }
+  .prof-name-det{
+    font-size: 1em!important;
+  }
+}
+
 .logo-ico {
   position: absolute;
   z-index: 9998;
