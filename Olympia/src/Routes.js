@@ -19,6 +19,7 @@ import ArtesCenicas from './components/artes-cenicas/Artes-Cenicas.vue'
 import Musica from './components/musica/Musica.vue'
 import Pintura from './components/pintura/Pintura.vue'
 import Fotografia from './components/fotografia/Fotografia.vue'
+import ArtesDigitais from './components/artes-digitais/ArtesDigitais.vue'
 
 export const routes = [
 
@@ -41,6 +42,7 @@ export const routes = [
     { path: '/artes-cenicas', component: ArtesCenicas, titulo: 'A R T E S C E N I C A S'},
     { path: '/pintura', component: Pintura, titulo: 'P I N T U R A'},
     { path: '/fotografia', component: Fotografia, titulo: 'F O T O G R A F I A'},
+    { path: '/artes-digitais', component: ArtesDigitais, titulo: 'A R T E S D I G I T A I S'},
     { path: '/musica', component: Musica, titulo: 'M U S I C A'}
 
 ]
