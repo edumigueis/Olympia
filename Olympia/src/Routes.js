@@ -18,6 +18,7 @@ import Post from './components/post/Post.vue';
 import ArtesCenicas from './components/artes-cenicas/Artes-Cenicas.vue'
 import Musica from './components/musica/Musica.vue'
 import Pintura from './components/pintura/Pintura.vue'
+import Fotografia from './components/fotografia/Fotografia.vue'
 
 export const routes = [
 
@@ -39,6 +40,7 @@ export const routes = [
     { path: '/arquitetura', component: Arquitetura, titulo: 'A R Q U I T E T U R A'},
     { path: '/artes-cenicas', component: ArtesCenicas, titulo: 'A R T E S C E N I C A S'},
     { path: '/pintura', component: Pintura, titulo: 'P I N T U R A'},
+    { path: '/fotografia', component: Fotografia, titulo: 'F O T O G R A F I A'},
     { path: '/musica', component: Musica, titulo: 'M U S I C A'}
 
 ]
