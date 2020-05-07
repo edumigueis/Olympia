@@ -2044,7 +2044,29 @@ position: relative;
 
 /*Responsividade da altura da tela no menu items*/
 @media screen and (min-width: 0px) and (max-width: 501px) 
-and (min-height: 600px){
+and (min-height: 560px) and (max-height: 620px){
+  .menu-container{
+    position: absolute;
+    height: 220%!important;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 501px) 
+and (min-height: 6210px) and (max-height: 699px){
+  .menu-container{
+    position: absolute;
+    height: 200%!important;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 501px) 
+and (min-height: 700px){
+  .menu-container{
+    position: absolute;
+    height: 180%!important;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 501px) 
+and (min-height: 500px){
   #menu-items {
     font-size: 170%;
     position: fixed;
@@ -2053,7 +2075,7 @@ and (min-height: 600px){
   }
   .menu-container{
     position: absolute;
-    height: 190vh;
+    height: 240%;
   }
   .close-img{
     width: 40px!important;
@@ -2077,7 +2099,7 @@ and (min-height: 600px){
     margin-top: 80px;
   }
   #menu-list {
-    margin-top: 10%;
+    margin-top: 20%;
     margin-left: 40%;
     background-color: #686868;
   }
@@ -2100,13 +2122,13 @@ and (min-height: 600px){
 }
 
 @media screen and (min-width: 300px) and (max-width: 401px) 
-and (min-height: 600px){
+and (min-height: 500px){
   .menu-link {
     font-size: 1.4em!important;
   }
 }
 @media screen and (min-width:0) and (max-width: 300px) 
-and (min-height: 600px){
+and (min-height: 500px){
   .menu-link {
     font-size: 1em!important;
   }

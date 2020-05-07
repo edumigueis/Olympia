@@ -2,7 +2,11 @@
   <main>
     <div id="container-perfil">
       <title>P E R F I L</title>
-      <link rel="shortcut icon" importance="high" href="/src/assets/images/page-ico.png" />
+      <link
+        rel="shortcut icon"
+        importance="high"
+        href="/src/assets/images/page-ico.png"
+      />
       <link
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         rel="stylesheet"
@@ -119,7 +123,9 @@
               Mais sobre mim...
             </h1>
             <div class="div-info-perfil">
-              <p class="bio black-to-white">Oi tudo bem?? Meu nome e jose marques costa</p>
+              <p class="bio black-to-white">
+                Oi tudo bem?? Meu nome e jose marques costa
+              </p>
               <p class="biografia black-to-white">
                 My name is Karl Kristiansen. I was born in Connecticut. I spent
                 most of my childhood in Stonington, a small, seaside town on the
@@ -1466,14 +1472,223 @@
               />
             </div>
 
-            <section class="signup">
-              <div class="container dark-register-div">
-                <div class="signup-content">
+            <div class="alterar-form">
+              <section class="signup">
+                <div class="container dark-register-div">
+                  <div class="signup-content">
+                    <div class="signup-form">
+                      <h2 class="form-title black-to-white">Alterar dados</h2>
+                      <form class="register-form" id="register-form">
+                        <div class="form-group">
+                          <label for="name">
+                            <div class="gray-n-imp">
+                              <i
+                                class="zmdi dark-register-ico zmdi-account material-icons-name"
+                                style="margin-top: 5.5px"
+                              ></i>
+                            </div>
+                          </label>
+                          <input
+                            class="dark-register-input"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Seu Nome"
+                            required
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="user">
+                            <div class="gray-n-imp">
+                              <i
+                                class="zmdi dark-register-ico zmdi-sign-in"
+                                style="margin-top: 5.5px"
+                              ></i>
+                            </div>
+                          </label>
+                          <input
+                            class="dark-register-input"
+                            type="text"
+                            name="user"
+                            id="user"
+                            placeholder="Seu Nome de Usuário"
+                            required
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="email">
+                            <div class="gray-n-imp">
+                              <i
+                                class="zmdi dark-register-ico zmdi-email"
+                                style="margin-top: 5.5px"
+                              ></i>
+                            </div>
+                          </label>
+                          <input
+                            class="dark-register-input"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Seu Email"
+                            required
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="pass">
+                            <div class="locker-cont gray-n-imp">
+                              <i
+                                class="zmdi dark-register-ico zmdi-lock"
+                                style="margin-top: 5.5px"
+                              ></i>
+                            </div>
+                          </label>
+                          <input
+                            class="dark-register-input"
+                            type="password"
+                            name="pass"
+                            id="pass"
+                            placeholder="Sua nova senha"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="re-pass">
+                            <div class="is-same-cont gray-n-imp">
+                              <i
+                                class="zmdi dark-register-ico zmdi-lock-outline"
+                                style="margin-top: 5.5px"
+                              ></i>
+                            </div>
+                          </label>
+                          <input
+                            class="dark-register-input"
+                            type="password"
+                            name="re_pass"
+                            id="re_pass"
+                            placeholder="Confirme sua nova senha"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="old-pass">
+                            <div class="is-old-cont gray-n-imp">
+                              <i
+                                class="zmdi dark-register-ico zmdi-lock-outline"
+                                style="margin-top: 5.5px"
+                              ></i>
+                            </div>
+                          </label>
+                          <input
+                            class="dark-register-input"
+                            type="password"
+                            name="old_pass"
+                            id="old_pass"
+                            placeholder="Confirme sua senha antiga"
+                            required
+                          />
+                        </div>
+                        <div class="form-group form-button">
+                          <input
+                            type="submit"
+                            name="signup"
+                            id="signup"
+                            class="form-submit"
+                            value="Alterar"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="form-group hexcolor">
+                      <div
+                        class="color-holder call-picker"
+                        style="display: none"
+                      ></div>
+
+                      <label
+                        id="ico-color"
+                        for="hexcolor"
+                        style="margin-top:-13px;margin-left:40px;"
+                      >
+                        <i class="zmdi dark-register-ico zmdi-palette"></i>
+                      </label>
+                      <input
+                        class="dark-register-input"
+                        type="text"
+                        name="custom_color"
+                        placeholder="#FFFFFF"
+                        id="hexcolor"
+                      />
+                    </div>
+                    <div
+                      class="color-picker"
+                      id="color-picker"
+                      style="display: none"
+                    ></div>
+                    <div class="signup-image">
+                      <figure class="default-prof-user">
+                        <img
+                          src="/src/assets/images/user-ico.png"
+                          alt="sing up image"
+                          id="user-prof-image"
+                        />
+                      </figure>
+                      <div id="user-let-img"></div>
+                      <p class="signup-image-link">Escolher Foto de Perfil</p>
+                      <img
+                        class="bin"
+                        src="/src/assets/images/trash-can-icon.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <div id="pick-image-modal" class="background-white-to-darkgray">
+                <h3 class="file-input-title black-to-white">
+                  Selecione uma Imagem
+                </h3>
+                <ul class="file-list">
+                  <li class="file-item file-item-1">
+                    <div class="input-file-cont">
+                      <input
+                        type="file"
+                        name="file"
+                        id="file"
+                        class="inputfile"
+                        accept=".jpg, .jpeg, .png"
+                      />
+                      <label for="file" class="file-label"
+                        >Escolher Imagem</label
+                      >
+                    </div>
+                  </li>
+                  <li class="file-item file-item-2">
+                    <div class="circle">
+                      <img
+                        id="profile-pic"
+                        src="/src/assets/images/user-ico.png"
+                      />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="ui-widget-overlay"></div>
+              <div class="error-modal">
+                <div class="warn-image">
+                  <img
+                    class="warning-pic"
+                    src="/src/assets/images/warn-ico.png"
+                  />
+                </div>
+                <P class="warn"></P>
+              </div>
+            </div>
+
+            <section class="signup bio-form">
+              <div class="container dark-register-div container-bio">
+                <div class="signup-content bio-signup-content">
                   <div class="signup-form">
-                    <h2 class="form-title black-to-white">Alterar dados</h2>
-                    <form class="register-form" id="register-form">
+                    <h2 class="form-title black-to-white">Alterar bio/biografia</h2>
+                    <form class="register-form bio-register-form" id="register-form">
                       <div class="form-group">
-                        <label for="name">
+                        <label for="bio">
                           <div class="gray-n-imp">
                             <i
                               class="zmdi dark-register-ico zmdi-account material-icons-name"
@@ -1484,99 +1699,33 @@
                         <input
                           class="dark-register-input"
                           type="text"
-                          name="name"
-                          id="name"
-                          placeholder="Seu Nome"
+                          name="bio"
+                          id="bio"
+                          placeholder="Adicione sua bio"
+                          maxlength="50"
                           required
                         />
                       </div>
                       <div class="form-group">
-                        <label for="user">
+                      <label for="biografia" class="biografia-i">
                           <div class="gray-n-imp">
                             <i
-                              class="zmdi dark-register-ico zmdi-sign-in"
+                              class="zmdi dark-register-ico zmdi-account material-icons-name"
                               style="margin-top: 5.5px"
                             ></i>
                           </div>
                         </label>
-                        <input
+                        <textarea
+                          rows="8"
+                          style="resize: none"
+                          onkeydown="return limitLines(this, event)"
                           class="dark-register-input"
-                          type="text"
-                          name="user"
-                          id="user"
-                          placeholder="Seu Nome de Usuário"
+                          name="biografia"
+                          id="biografia"
+                          placeholder="Adicione sua biografia"
+                          maxlength="1200"
                           required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="email">
-                          <div class="gray-n-imp">
-                            <i
-                              class="zmdi dark-register-ico zmdi-email"
-                              style="margin-top: 5.5px"
-                            ></i>
-                          </div>
-                        </label>
-                        <input
-                          class="dark-register-input"
-                          type="email"
-                          name="email"
-                          id="email"
-                          placeholder="Seu Email"
-                          required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="pass">
-                          <div class="locker-cont gray-n-imp">
-                            <i
-                              class="zmdi dark-register-ico zmdi-lock"
-                              style="margin-top: 5.5px"
-                            ></i>
-                          </div>
-                        </label>
-                        <input
-                          class="dark-register-input"
-                          type="password"
-                          name="pass"
-                          id="pass"
-                          placeholder="Sua nova senha"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="re-pass">
-                          <div class="is-same-cont gray-n-imp">
-                            <i
-                              class="zmdi dark-register-ico zmdi-lock-outline"
-                              style="margin-top: 5.5px"
-                            ></i>
-                          </div>
-                        </label>
-                        <input
-                          class="dark-register-input"
-                          type="password"
-                          name="re_pass"
-                          id="re_pass"
-                          placeholder="Confirme sua nova senha"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="old-pass">
-                          <div class="is-old-cont gray-n-imp">
-                            <i
-                              class="zmdi dark-register-ico zmdi-lock-outline"
-                              style="margin-top: 5.5px"
-                            ></i>
-                          </div>
-                        </label>
-                        <input
-                          class="dark-register-input"
-                          type="password"
-                          name="old_pass"
-                          id="old_pass"
-                          placeholder="Confirme sua senha antiga"
-                          required
-                        />
+                        ></textarea>
                       </div>
                       <div class="form-group form-button">
                         <input
@@ -1584,92 +1733,14 @@
                           name="signup"
                           id="signup"
                           class="form-submit"
-                          value="Registrar"
+                          value="Salvar"
                         />
                       </div>
                     </form>
                   </div>
-                  <div class="form-group hexcolor">
-                    <div
-                      class="color-holder call-picker"
-                      style="display: none"
-                    ></div>
-
-                    <label
-                      id="ico-color"
-                      for="hexcolor"
-                      style="margin-top:-13px;margin-left:40px;"
-                    >
-                      <i class="zmdi dark-register-ico zmdi-palette"></i>
-                    </label>
-                    <input
-                      class="dark-register-input"
-                      type="text"
-                      name="custom_color"
-                      placeholder="#FFFFFF"
-                      id="hexcolor"
-                    />
-                  </div>
-                  <div
-                    class="color-picker"
-                    id="color-picker"
-                    style="display: none"
-                  ></div>
-                  <div class="signup-image">
-                    <figure class="default-prof-user">
-                      <img
-                        src="/src/assets/images/user-ico.png"
-                        alt="sing up image"
-                        id="user-prof-image"
-                      />
-                    </figure>
-                    <div id="user-let-img"></div>
-                    <p class="signup-image-link">Escolher Foto de Perfil</p>
-                    <img
-                      class="bin"
-                      src="/src/assets/images/trash-can-icon.png"
-                    />
-                  </div>
                 </div>
               </div>
             </section>
-            <div id="pick-image-modal" class="background-white-to-darkgray">
-              <h3 class="file-input-title black-to-white">
-                Selecione uma Imagem
-              </h3>
-              <ul class="file-list">
-                <li class="file-item file-item-1">
-                  <div class="input-file-cont">
-                    <input
-                      type="file"
-                      name="file"
-                      id="file"
-                      class="inputfile"
-                      accept=".jpg, .jpeg, .png"
-                    />
-                    <label for="file" class="file-label">Escolher Imagem</label>
-                  </div>
-                </li>
-                <li class="file-item file-item-2">
-                  <div class="circle">
-                    <img
-                      id="profile-pic"
-                      src="/src/assets/images/user-ico.png"
-                    />
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="ui-widget-overlay"></div>
-            <div class="error-modal">
-              <div class="warn-image">
-                <img
-                  class="warning-pic"
-                  src="/src/assets/images/warn-ico.png"
-                />
-              </div>
-              <P class="warn"></P>
-            </div>
           </div>
         </div>
       </div>

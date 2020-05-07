@@ -52,15 +52,17 @@ setInterval(() => {
         $('body').on('click', '.img-ico', function () {
             $('.modal-form').css('display', 'block')
             $('.alterar-form').css('display', 'block')
+            $('.bio-form').css('display', 'none')
         })
 
         $('body').on('click', '.alterar', function () {
             $('.modal-form').css('display', 'block')
             $('.bio-form').css('display', 'block')
-    })
+            $('.alterar-form').css('display', 'none')
+        })
 
         $('body').on('click', '.close-modal', function () {
-            $('.modal-form').css('display','none')
+            $('.modal-form').css('display', 'none')
         })
 
         $(document.body).on('click', '.curtidas', function () {
