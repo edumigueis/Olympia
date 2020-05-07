@@ -4,7 +4,7 @@
             <link rel="stylesheet" href="/src/assets/css/arte.css">
                     <div class="gradient"></div>
                     <div class="bg"></div>
-
+                    <title>A R T E S</title>
                     <meu-menu-bar></meu-menu-bar>
                     <meu-menu-items></meu-menu-items>
                     <meus-contatos></meus-contatos> 
@@ -22,17 +22,17 @@
                         </div>
                         </a>
                         
-                        <div class="card-center gray card">
-                            <div class="text-cont-art inner-center">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                        <div class="card-center card">
+                            <div class="text-cont-art white-7 inner-center">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
                             </div>
                         </div>
-                        <div class="card-right gray card">
-                            <div class="text-cont-art inner-right">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                        <div class="card-right  card">
+                            <div class="text-cont-art white-7 inner-right">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
@@ -41,17 +41,17 @@
                     </div>
 
                     <div class="line">
-                        <div class="card-left gray card">
-                            <div class="text-cont-art inner-left">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                        <div class="card-left  card">
+                            <div class="text-cont-art white-7 inner-left">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
                             </div>
                         </div>
-                        <div class="card-center gray card">
-                            <div class="text-cont-art inner-center">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                        <div class="card-center  card">
+                            <div class="text-cont-art white-7 inner-center">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
@@ -75,17 +75,17 @@
                                 
                         </div>
                         </a>
-                        <div class="card-center gray card">
-                            <div class="text-cont-art inner-center">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                        <div class="card-center  card">
+                            <div class="text-cont-art white-7 inner-center">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
                             </div>
                         </div>
-                        <div class="card-right gray card">
-                            <div class="text-cont-art inner-right">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                        <div class="card-right  card">
+                            <div class="text-cont-art white-7 inner-right">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
@@ -94,70 +94,17 @@
                     </div>
                     
                     <div class="line">
-                        <div class="card-center gray card">
-                            <div class="text-cont-art inner-center">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                        <div class="card-center  card">
+                            <div class="text-cont-art white-7 inner-left">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
                             </div>
                         </div>
-                        <div class="card-left gray card">
-                            <div class="text-cont-art inner-left">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
-                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
-                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
-                                cursus tellus malesuada, feugiat dolor.</p>
-                            </div>
-                        </div>
-                        <a href="/#/pintura" class="image-link-to-art">
-                        <div class="line-img-right">
-                            <img src="/src/assets/images/music.jpg" alt="" class="line-img">
-                        </div>
-                        </a>
-                        
-                        
-                    </div>
-                    <div class="line">
-                        
-                        <a href="/#/pintura" class="image-link-to-art">
-                        <div class="line-img-left">
-                            
-                            <img src="/src/assets/images/music.jpg" alt=""
-                                class="line-img">
-                                
-                        </div>
-                        </a>
-                        
-                        <div class="card-center gray card">
-                            <div class="text-cont-art inner-center">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
-                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
-                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
-                                cursus tellus malesuada, feugiat dolor.</p>
-                            </div>
-                        </div>
-                        <div class="card-right gray card">
-                            <div class="text-cont-art inner-right">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
-                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
-                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
-                                cursus tellus malesuada, feugiat dolor.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="card-center gray card">
-                            <div class="text-cont-art inner-center">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
-                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
-                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
-                                cursus tellus malesuada, feugiat dolor.</p>
-                            </div>
-                        </div>
-                        <div class="card-left gray card">
-                            <div class="text-cont-art inner-left">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                        <div class="card-left  card">
+                            <div class="text-cont-art white-7 inner-center">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
@@ -182,17 +129,70 @@
                         </div>
                         </a>
                         
-                        <div class="card-center gray card">
-                            <div class="text-cont-art inner-center">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                        <div class="card-center  card">
+                            <div class="text-cont-art white-7 inner-center">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
                             </div>
                         </div>
-                        <div class="card-right gray card">
-                            <div class="text-cont-art inner-right">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                        <div class="card-right  card">
+                            <div class="text-cont-art white-7 inner-right">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
+                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
+                                cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="card-center  card">
+                            <div class="text-cont-art white-7 inner-left">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
+                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
+                                cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
+                        </div>
+                        <div class="card-left  card">
+                            <div class="text-cont-art white-7 inner-center">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
+                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
+                                cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
+                        </div>
+                        <a href="/#/pintura" class="image-link-to-art">
+                        <div class="line-img-right">
+                            <img src="/src/assets/images/music.jpg" alt="" class="line-img">
+                        </div>
+                        </a>
+                        
+                        
+                    </div>
+                    <div class="line">
+                        
+                        <a href="/#/pintura" class="image-link-to-art">
+                        <div class="line-img-left">
+                            
+                            <img src="/src/assets/images/music.jpg" alt=""
+                                class="line-img">
+                                
+                        </div>
+                        </a>
+                        
+                        <div class="card-center  card">
+                            <div class="text-cont-art white-7 inner-center">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
+                                interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
+                                est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
+                                cursus tellus malesuada, feugiat dolor.</p>
+                            </div>
+                        </div>
+                        <div class="card-right  card">
+                            <div class="text-cont-art white-7 inner-right">
+                            <p class="black-to-white" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ante sagittis, feugiat leo
                                 interdum, mollis lorem. Cras elementum ipsum magna, quis pellentesque mauris ornare a. Donec turpis
                                 est, tempus ac consequat quis, sagittis et lacus. Duis vitae dolor enim. Ut vitae tellus feugiat,
                                 cursus tellus malesuada, feugiat dolor.</p>
