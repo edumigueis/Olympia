@@ -259,6 +259,80 @@
             </div>
           </div>
         </div>
+        <div class="line">
+          <h2 class="title-art right-title">Fotografia</h2>
+          <div class="card-left  card">
+            <div class="text-cont-art white-7 inner-center">
+              <p class="black-to-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eget ante sagittis, feugiat leo interdum, mollis lorem. Cras
+                elementum ipsum magna, quis pellentesque mauris ornare a. Donec
+                turpis est, tempus ac consequat quis, sagittis et lacus. Duis
+                vitae dolor enim. Ut vitae tellus feugiat, cursus tellus
+                malesuada, feugiat dolor.
+              </p>
+            </div>
+          </div>
+          <div class="card-right  card">
+            <div class="text-cont-art white-7 inner-right">
+              <p class="black-to-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eget ante sagittis, feugiat leo interdum, mollis lorem. Cras
+                elementum ipsum magna, quis pellentesque mauris ornare a. Donec
+                turpis est, tempus ac consequat quis, sagittis et lacus. Duis
+                vitae dolor enim. Ut vitae tellus feugiat, cursus tellus
+                malesuada, feugiat dolor.
+              </p>
+            </div>
+          </div>
+          <a href="/#/pintura" class="image-link-to-art">
+            <div class="line-img-right">
+              <img
+                src="/src/assets/images/art-photo.jpg"
+                alt=""
+                class="line-img"
+              />
+            </div>
+          </a>
+        </div>
+        <div class="line">
+          <h2 class="title-art">Artes Digitais</h2>
+
+          <a href="/#/pintura" class="image-link-to-art">
+            <div class="line-img-left">
+              <img
+                src="/src/assets/images/art-digital.jpg"
+                alt=""
+                class="line-img"
+              />
+            </div>
+          </a>
+
+          <div class="card-center  card">
+            <div class="text-cont-art white-7 inner-center">
+              <p class="black-to-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eget ante sagittis, feugiat leo interdum, mollis lorem. Cras
+                elementum ipsum magna, quis pellentesque mauris ornare a. Donec
+                turpis est, tempus ac consequat quis, sagittis et lacus. Duis
+                vitae dolor enim. Ut vitae tellus feugiat, cursus tellus
+                malesuada, feugiat dolor.
+              </p>
+            </div>
+          </div>
+          <div class="card-right  card">
+            <div class="text-cont-art white-7 inner-right">
+              <p class="black-to-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eget ante sagittis, feugiat leo interdum, mollis lorem. Cras
+                elementum ipsum magna, quis pellentesque mauris ornare a. Donec
+                turpis est, tempus ac consequat quis, sagittis et lacus. Duis
+                vitae dolor enim. Ut vitae tellus feugiat, cursus tellus
+                malesuada, feugiat dolor.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <meu-footer></meu-footer>
     </div>

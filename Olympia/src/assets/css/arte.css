@@ -100,15 +100,6 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-
-.footer-link {
-  font-family: "bebas-neue-regular";
-}
-
-.footer-link:hover {
-  cursor: pointer;
-  font-weight: bolder;
-}
 .card{
   min-width: 220px;
 }
@@ -234,6 +225,13 @@ body {
   border-radius: 21px;
 }
 
+.line-img {
+  transition: all .5s ease;
+}
+.image-link-to-art:hover img {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 7px 7px rgba(100, 100, 100, .2);
+}
 .line-img{
   width: 100%;
   object-fit: cover;
