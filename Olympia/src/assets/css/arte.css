@@ -45,7 +45,7 @@ body {
   height: fit-content !important;
   overflow-x: hidden;
   padding: 0 !important;
-  font-family: "bebas-Neue-Regular";
+  font-family: "Calibre-Regular", sans-serif;
 }
 .title-art{
   width: 100%;
@@ -265,19 +265,19 @@ body {
 }
 @keyframes bounceAndRotate {
   0% {
-    transform:rotate(0deg);top:-2px;
+    transform:rotate(0deg);
   }
   25% {
-     transform:rotate(00deg);top:-1px;
+     transform:rotate(00deg);
   }
   50% {
-     transform:rotate(-2deg);top:0px;
+     transform:rotate(-2deg);
   }
   75% {
-     transform:rotate(1deg);top:1px;
+     transform:rotate(1deg);
   }
   100% {
-    transform: rotate(0deg);top:2px;
+    transform: rotate(0deg);
   }
 }
 .card-right {
