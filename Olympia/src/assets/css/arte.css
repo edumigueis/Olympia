@@ -65,6 +65,8 @@ body {
   position: fixed;
   top: 0;
   z-index: -10;
+  filter: saturate(87.5%);
+  opacity: 0.94;
 }
 
 /* width */
@@ -104,8 +106,6 @@ body {
   min-width: 220px;
 }
 .bg {
-
-  
   position: fixed;
   width: 100%;
   bottom: 0;

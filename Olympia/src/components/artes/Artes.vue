@@ -76,7 +76,7 @@
               </p>
             </div>
           </div>
-          <a href="/#/pintura" class="image-link-to-art">
+          <a href="/#/artes-cenicas" class="image-link-to-art">
             <div class="line-img-right">
               <img
                 src="/src/assets/images/art-dance.jpg"
@@ -88,7 +88,7 @@
         </div>
         <div class="line show-on-scroll">
           <h2 class="title-art">Música</h2>
-          <a href="/#/pintura" class="image-link-to-art">
+          <a href="/#/musica" class="image-link-to-art">
             <div class="line-img-left">
               <img src="/src/assets/images/music.jpg" alt="" class="line-img" />
             </div>
@@ -145,7 +145,7 @@
               </p>
             </div>
           </div>
-          <a href="/#/pintura" class="image-link-to-art">
+          <a href="/#/escultura" class="image-link-to-art">
             <div class="line-img-right">
               <img
                 src="/src/assets/images/art-sculpture.jpg"
@@ -158,7 +158,7 @@
         <div class="line show-on-scroll">
           <h2 class="title-art">Música</h2>
 
-          <a href="/#/pintura" class="image-link-to-art">
+          <a href="/#/literatura" class="image-link-to-art">
             <div class="line-img-left">
               <img src="/src/assets/images/art-litera.jpeg" alt="" class="line-img" />
             </div>
@@ -215,7 +215,7 @@
               </p>
             </div>
           </div>
-          <a href="/#/pintura" class="image-link-to-art">
+          <a href="/#/arquitetura" class="image-link-to-art">
             <div class="line-img-right">
               <img src="/src/assets/images/art-architecture.png" alt="" class="line-img" />
             </div>
@@ -224,7 +224,7 @@
         <div class="line show-on-scroll">
           <h2 class="title-art">Cinema</h2>
 
-          <a href="/#/pintura" class="image-link-to-art">
+          <a href="/#/cinema" class="image-link-to-art">
             <div class="line-img-left">
               <img
                 src="/src/assets/images/art-cinema.jpg"
@@ -285,7 +285,7 @@
               </p>
             </div>
           </div>
-          <a href="/#/pintura" class="image-link-to-art">
+          <a href="/#/fotografia" class="image-link-to-art">
             <div class="line-img-right">
               <img
                 src="/src/assets/images/art-photo.jpg"
@@ -298,7 +298,7 @@
         <div class="line show-on-scroll">
           <h2 class="title-art">Artes Digitais</h2>
 
-          <a href="/#/pintura" class="image-link-to-art">
+          <a href="/#/arte-digital" class="image-link-to-art">
             <div class="line-img-left">
               <img
                 src="/src/assets/images/art-digital.jpg"
