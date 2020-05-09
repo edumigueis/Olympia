@@ -107,9 +107,9 @@
     font-weight: bold;
   }
   .art-title{
-    font-family: "Broadway Regular", sans-serif;
-    font-weight: normal;
-    color: rgb(176, 56, 94);
+    font-family: "Gotham", sans-serif;
+    font-weight: bold;
+    color: #333;
     font-size: 4em;
     margin-top: -400px;
     margin-bottom: 80px;
@@ -120,7 +120,7 @@
   .art-subtitle{
     font-family: "Calibre-Regular", sans-serif;
     transition: 0.4s all;
-    color: rgb(176, 56, 94);
+    color: #333;
     font-size: 1.3em;
     margin-top: -60px;
     margin-bottom: 400px;
@@ -179,7 +179,7 @@
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgb(176, 56, 94);
+    background-color:rgb(48, 170, 226);
     color: white;
   }
   
@@ -187,7 +187,7 @@
   .dot-container {
       text-align: center;
       padding: 20px;
-      background: rgba(204, 204, 204, 0);
+      background: transparent;
       transition: 0.3s;
       transform: translateY(-60px);
       margin-bottom: -70px;
@@ -216,7 +216,7 @@
     letter-spacing: 0.05em;
   }
   .author {
-    color: rgb(176, 56, 94);
+    color: rgb(48, 170, 226);
     font-family: 'Bebas', sans-serif;
     font-size: 1.6em;
     letter-spacing: 0.05em;
@@ -230,7 +230,7 @@
       letter-spacing: 0.05em;
     }
     .author {
-      color: rgb(176, 56, 94);
+      color: rgb(48, 170, 226);
       font-family: 'Bebas', sans-serif;
       font-size: 1em;
       letter-spacing: 0.05em;
@@ -267,7 +267,7 @@
       letter-spacing: 0.05em;
     }
     .author {
-      color: rgb(176, 56, 94);
+      color: rgb(48, 170, 226);
       font-family: 'Bebas', sans-serif;
       font-size: 1.1em;
       letter-spacing: 0.05em;
@@ -299,7 +299,7 @@
       letter-spacing: 0.05em;
     }
     .author {
-      color: rgb(176, 56, 94);
+      color: rgb(48, 170, 226);
       font-family: 'Bebas', sans-serif;
       font-size: 1.2em;
       letter-spacing: 0.05em;
@@ -343,7 +343,7 @@
       letter-spacing: 0.05em;
     }
     .author {
-      color: rgb(176, 56, 94);
+      color: rgb(48, 170, 226);
       font-family: 'Bebas', sans-serif;
       font-size: 1.4em;
       letter-spacing: 0.05em;
@@ -423,7 +423,7 @@
     width: 70%;
     border-radius: 20px;
     height: max-content;
-    box-shadow: 0 0 25px rgb(176, 56, 94);
+    box-shadow: 0 0 25px rgb(48, 170, 226);
     vertical-align: top;
     margin-top: 5%;
     z-index: 100;
@@ -441,7 +441,7 @@
     font-size: 2.8em;
     font-weight: normal;
     text-align: center;
-    background: linear-gradient(to left, rgb(41, 38, 38), rgb(176, 56, 94));
+    background: linear-gradient(to left, rgb(41, 38, 38), rgb(48, 170, 226));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

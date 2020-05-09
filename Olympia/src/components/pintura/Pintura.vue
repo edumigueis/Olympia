@@ -15,13 +15,14 @@
       <div style="position:relative">
         <div class="image-container">
           <img
-            src="https://images.unsplash.com/photo-1460398495418-62c9b5d79fbf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80fit=crop&w=1355&q=80"
+            src="/src/assets/images/art-paint-h.jpg"
             alt
             class="image"
+            style="margin-top: 40px"
           />
         </div>
         <h1 class="art-title">Pintura</h1>
-        <h2 class="art-subtitle">A sétima arte, um mar de sensações</h2>
+        <h2 class="art-subtitle">Tintas, pincéis, lápis e cores. É o melhor que existe.</h2>
       </div>
 
       <div id="corpo">

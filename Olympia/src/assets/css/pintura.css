@@ -109,7 +109,7 @@
   .art-title{
     font-family: "Broadway Regular", sans-serif;
     font-weight: normal;
-    color: #fff;
+    color: #222;
     font-size: 4em;
     margin-top: -400px;
     margin-bottom: 80px;
@@ -120,7 +120,7 @@
   .art-subtitle{
     font-family: "Calibre-Regular", sans-serif;
     transition: 0.4s all;
-    color: #fff;
+    color: #222;
     font-size: 1.3em;
     margin-top: -60px;
     margin-bottom: 400px;
