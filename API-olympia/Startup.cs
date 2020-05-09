@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using API_olympia.Data;
 
 namespace API_olympia
 {
@@ -25,7 +27,11 @@ namespace API_olympia
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<OlympiaContext>(
+                x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
+            );
             services.AddControllers();
+            services.AddScoped<IRepository, Repository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
