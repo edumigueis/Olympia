@@ -12,7 +12,7 @@
       <meu-dark-mode></meu-dark-mode>
 
       <div class="line-containers">
-        <div class="line">
+        <div class="line show-on-scroll">
           <h2 class="title-art">Pintura</h2>
           <a href="/#/pintura" class="image-link-to-art">
             <div class="line-img-left">
@@ -50,7 +50,7 @@
           </div>
         </div>
 
-        <div class="line">
+        <div class="line show-on-scroll">
           <h2 class="title-art right-title">Artes Cênicas</h2>
           <div class="card-left  card">
             <div class="text-cont-art white-7 inner-left">
@@ -86,7 +86,7 @@
             </div>
           </a>
         </div>
-        <div class="line">
+        <div class="line show-on-scroll">
           <h2 class="title-art">Música</h2>
           <a href="/#/pintura" class="image-link-to-art">
             <div class="line-img-left">
@@ -119,7 +119,7 @@
           </div>
         </div>
 
-        <div class="line">
+        <div class="line show-on-scroll">
           <h2 class="title-art right-title">Escultura</h2>
           <div class="card-center  card">
             <div class="text-cont-art white-7 inner-left">
@@ -155,7 +155,7 @@
             </div>
           </a>
         </div>
-        <div class="line">
+        <div class="line show-on-scroll">
           <h2 class="title-art">Música</h2>
 
           <a href="/#/pintura" class="image-link-to-art">
@@ -189,7 +189,7 @@
             </div>
           </div>
         </div>
-        <div class="line">
+        <div class="line show-on-scroll">
           <h2 class="title-art right-title">Arquitetura</h2>
           <div class="card-center  card">
             <div class="text-cont-art white-7 inner-left">
@@ -221,7 +221,7 @@
             </div>
           </a>
         </div>
-        <div class="line">
+        <div class="line show-on-scroll">
           <h2 class="title-art">Cinema</h2>
 
           <a href="/#/pintura" class="image-link-to-art">
@@ -259,7 +259,7 @@
             </div>
           </div>
         </div>
-        <div class="line">
+        <div class="line show-on-scroll">
           <h2 class="title-art right-title">Fotografia</h2>
           <div class="card-left  card">
             <div class="text-cont-art white-7 inner-center">
@@ -295,7 +295,7 @@
             </div>
           </a>
         </div>
-        <div class="line">
+        <div class="line show-on-scroll">
           <h2 class="title-art">Artes Digitais</h2>
 
           <a href="/#/pintura" class="image-link-to-art">
