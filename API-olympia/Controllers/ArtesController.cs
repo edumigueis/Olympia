@@ -1,0 +1,112 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using API_olympia.Data;
+using API_olympia.Models;
+using System.Threading.Tasks;
+
+namespace API_olympia.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ArtesController : Controller
+    {
+        public IRepository Repo { get; }
+        public ArtesController(IRepository repo)
+        {
+            this.Repo = repo;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            try
+            {
+                var result = await this.Repo.GetAllArtesAsync();
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpGet("{ArtesId}")]
+        public async Task<IActionResult> Get(int ArtesId)
+        {
+            try
+            {
+                var result = await this.Repo.GetAllArtesAsyncById(ArtesId);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpPut("{idArtes}")]
+        public async Task<IActionResult> put(int ArtesId, Artes model)
+        {
+            try
+            {
+                var arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
+                if (arte == null) return NotFound(); //método do EF
+                this.Repo.Update(model);
+                //
+                if (await this.Repo.SaveChangesAsync())
+                {
+                    arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
+                    return Created($"/api/artes/{model.IdArte}", arte);
+                }
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+            return BadRequest();
+        }
+
+        [HttpDelete("{idArtes}")]
+        public async Task<IActionResult> delete(int ArtesId)
+        {
+            try
+            {
+                //verifica se existe aluno a ser excluído
+                var arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
+                if (arte == null) return NotFound(); //método do EF
+                this.Repo.Delete(arte);
+                //
+                if (await this.Repo.SaveChangesAsync())
+                {
+                    return Ok();
+                }
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+            return BadRequest();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> post(Artes model)
+        {
+            try
+            {
+                this.Repo.Add(model);
+                //
+                if (await this.Repo.SaveChangesAsync())
+                {
+                    //return Ok();
+                    return Created($"/api/artes/{model.IdArte}", model);
+                }
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+            return BadRequest();
+        }
+
+    }
+}
