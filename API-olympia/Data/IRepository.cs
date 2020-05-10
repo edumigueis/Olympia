@@ -14,5 +14,8 @@ namespace API_olympia.Data
         // Métodos GET
         Task<Artes[]> GetAllArtesAsync();
         Task<Artes> GetAllArtesAsyncById(int ArtesId);
+
+        Task<Fotos[]> GetAllFotosAsync();
+        Task<Fotos> GetAllFotosAsyncById(int idFoto);
     }
 }

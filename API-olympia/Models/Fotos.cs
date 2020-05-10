@@ -8,7 +8,7 @@ namespace API_olympia.Models
         public int IdFoto { get; set; }
 
         [Required]
-        public byte[] Foto { get; set; }
+        public HttpPostedFileBase Foto { get; set; }
 
         public int IdObra { get; set; }
 

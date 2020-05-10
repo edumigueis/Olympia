@@ -50,5 +50,20 @@ namespace API_olympia.Data
             .Where(arte => arte.IdArte == id);
             return await consultaArtes.FirstOrDefaultAsync();
         }
+
+        public async Task<Fotos[]> GetAllFotosAsync()
+        {
+            IQueryable<Fotos> consultaFotos = this.Context.Fotos;
+            consultaFotos = consultaFotos.OrderBy(a => a.IdFoto);
+            return await consultaFotos.ToArrayAsync();
+        }
+
+        public async Task<Fotos> GetAllFotosAsyncById(int id)
+        {
+            IQueryable<Fotos> consultaFotos = this.Context.Fotos;
+            consultaFotos = consultaFotos.OrderBy(f => f.IdFoto)
+            .Where(foto => foto.IdFoto == id);
+            return await consultaFotos.FirstOrDefaultAsync();
+        }
     }
 }

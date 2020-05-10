@@ -21,7 +21,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var result = await this.Repo.GetAllArtesAsync();
+                var result = await this.Repo.GetAllFotosAsync();
                 return Ok(result);
             }
             catch
@@ -35,7 +35,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var result = await this.Repo.GetAllArtesAsyncById(idFoto);
+                var result = await this.Repo.GetAllFotosAsyncById(idFoto);
                 return Ok(result);
             }
             catch
