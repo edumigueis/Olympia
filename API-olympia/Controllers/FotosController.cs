@@ -8,10 +8,10 @@ namespace API_olympia.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ArtesController : Controller
+    public class FotosController : Controller
     {
         public IRepository Repo { get; }
-        public ArtesController(IRepository repo)
+        public FotosController(IRepository repo)
         {
             this.Repo = repo;
         }
@@ -30,12 +30,12 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("{idArte}")]
-        public async Task<IActionResult> Get(int ArtesId)
+        [HttpGet("{idFoto}")]
+        public async Task<IActionResult> Get(int idFoto)
         {
             try
             {
-                var result = await this.Repo.GetAllArtesAsyncById(ArtesId);
+                var result = await this.Repo.GetAllArtesAsyncById(idFoto);
                 return Ok(result);
             }
             catch
@@ -44,19 +44,19 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpPut("{idArte}")]
-        public async Task<IActionResult> put(int ArtesId, Artes model)
+        [HttpPut("{idFoto}")]
+        public async Task<IActionResult> put(int idFoto, Fotos model)
         {
             try
             {
-                var arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
-                if (arte == null) return NotFound(); //método do EF
+                var foto = await this.Repo.GetAllArtesAsyncById(idFoto);
+                if (foto == null) return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
-                    return Created($"/api/artes/{model.IdArte}", arte);
+                    foto = await this.Repo.GetAllArtesAsyncById(idFoto);
+                    return Created($"/api/fotos/{model.IdFoto}", foto);
                 }
             }
             catch
@@ -66,15 +66,14 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
-        [HttpDelete("{idArte}")]
-        public async Task<IActionResult> delete(int ArtesId)
+        [HttpDelete("{idFoto}")]
+        public async Task<IActionResult> delete(int idFoto)
         {
             try
             {
-                //verifica se existe aluno a ser excluído
-                var arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
-                if (arte == null) return NotFound(); //método do EF
-                this.Repo.Delete(arte);
+                var foto = await this.Repo.GetAllArtesAsyncById(idFoto);
+                if (foto == null) return NotFound();
+                this.Repo.Delete(foto);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
@@ -89,7 +88,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> post(Artes model)
+        public async Task<IActionResult> post(Fotos model)
         {
             try
             {
@@ -98,7 +97,7 @@ namespace API_olympia.Controllers
                 if (await this.Repo.SaveChangesAsync())
                 {
                     //return Ok();
-                    return Created($"/api/artes/{model.IdArte}", model);
+                    return Created($"/api/fotos/{model.IdFoto}", model);
                 }
             }
             catch
