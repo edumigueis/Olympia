@@ -31,6 +31,6 @@ namespace API_olympia.Models
 
         [Required]
         [StringLength(100, ErrorMessage = "A descrição não deve ter mais do que 100 caracteres.")]
-        public string localizacaoCoord { get; set; }
+        public string LocalizacaoCoord { get; set; }
     }
 }
