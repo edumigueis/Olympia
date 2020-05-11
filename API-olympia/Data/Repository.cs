@@ -65,5 +65,50 @@ namespace API_olympia.Data
             .Where(foto => foto.IdFoto == id);
             return await consultaFotos.FirstOrDefaultAsync();
         }
+
+        public async Task<Usuarios[]> GetAllUsuariosAsync()
+        {
+            IQueryable<Usuarios> consultaUsuarios = this.Context.Usuarios;
+            consultaUsuarios = consultaUsuarios.OrderBy(a => a.idUsuarios);
+            return await consultaUsuarios.ToArrayAsync();
+        }
+
+        public async Task<Usuarios> GetAllUsuariosAsyncById(int id)
+        {
+            IQueryable<Usuarios> consultaUsuarios = this.Context.Usuarios;
+            consultaUsuarios = consultaUsuarios.OrderBy(f => f.idUsuario)
+            .Where(usuario => usuario.idUsuario == id);
+            return await consultaUsuarios.FirstOrDefaultAsync();
+        }
+
+        public async Task<Eventos[]> GetAllEventosAsync()
+        {
+            IQueryable<Eventos> consultaEventos = this.Context.Eventos;
+            consultaEventos = consultaEventos.OrderBy(a => a.idEvento);
+            return await consultaEventos.ToArrayAsync();
+        }
+
+        public async Task<Eventos> GetAllEventosAsyncById(int id)
+        {
+            IQueryable<Eventos> consultaEventos = this.Context.Eventos;
+            consultaEventos = consultaEventos.OrderBy(f => f.idEvento)
+            .Where(evento => evento.idEvento == id);
+            return await consultaEventos.FirstOrDefaultAsync();
+        }
+
+        public async Task<Publicacoes[]> GetAllPublicacoesAsync()
+        {
+            IQueryable<Eventos> consultaPublicacoes = this.Context.Publicacoes;
+            consultaPublicacoes = consultaPublicacoes.OrderBy(a => a.idPublicacao);
+            return await consultaPublicacoes.ToArrayAsync();
+        }
+
+        public async Task<Publicacoes> GetAllEventosAsyncById(int id)
+        {
+            IQueryable<Eventos> consultaPublicacoes = this.Context.Publicacoes;
+            consultaPublicacoes = consultaPublicacoes.OrderBy(f => f.idPublicacao)
+            .Where(publicacao => publicacao.idPublicacao == id);
+            return await consultaPublicacoes.FirstOrDefaultAsync();
+        }
     }
 }
