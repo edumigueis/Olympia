@@ -14,7 +14,7 @@
       <div style="position:relative">
         <div class="image-container">
           <img
-            src="https://images.unsplash.com/photo-1486916856992-e4db22c8df33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"
+            src="/src/assets/images/art-cam-head.jpg"
             alt
             class="image"
           />

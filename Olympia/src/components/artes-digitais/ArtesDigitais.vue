@@ -14,9 +14,10 @@
       <div style="position:relative">
         <div class="image-container">
           <img
-            src="src\assets\images\design.png"
+            src="src\assets\images\ui-digital.png"
             alt
             class="image"
+            style="margin-top: 40px"
           />
         </div>
         <h1 class="art-title">Artes Digitais</h1>

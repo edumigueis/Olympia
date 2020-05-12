@@ -77,7 +77,7 @@ constraint fkEventoCurtida foreign key (idEvento) references Eventos (idEvento)
 )
 
 create table Fotos(
-idfoto int identity primary key not null,
+idFoto int identity primary key not null,
 foto varbinary(max) not null,
 idObra int null,
 idServico int null,
@@ -86,6 +86,7 @@ constraint kfObraFoto foreign key (idObra) references Obras (idObra),
 constraint fkServicoFoto foreign key (idServico) references Servicos (idServico),
 constraint fkEventoFoto foreign key (idEvento) references Eventos (idEvento)
 )
+
 
 create table Categorias(
 idCategoria int identity primary key not null,

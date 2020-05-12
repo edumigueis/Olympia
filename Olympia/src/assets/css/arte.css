@@ -45,13 +45,28 @@ body {
   height: fit-content !important;
   overflow-x: hidden;
   padding: 0 !important;
-  font-family: "bebas-Neue-Regular";
+  font-family: "Calibre-Regular", sans-serif;
 }
-
+.title-art{
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  font-size: 2.5em;
+  padding-left: 2.5%;
+}
+.right-title{
+  text-align: end;
+  padding-right: 2.5%;
+  padding-left: 0 !important;
+}
 .gradient {
   position: fixed;
   top: 0;
   z-index: -10;
+  filter: saturate(87.5%);
+  opacity: 0.94;
 }
 
 /* width */
@@ -87,21 +102,10 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-
-.footer-link {
-  font-family: "bebas-neue-regular";
-}
-
-.footer-link:hover {
-  cursor: pointer;
-  font-weight: bolder;
-}
 .card{
   min-width: 220px;
 }
 .bg {
-
-  
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -209,19 +213,32 @@ body {
   display: flex;
   flex-wrap: wrap;
   z-index: 2;
+  opacity: 0;
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+  will-change: transform, opacity;
 }
 .image-link-to-art{
   width: calc(100%/3);
   height: fit-content;
   z-index: 400000000000;
   cursor: pointer;
-}
-.line-img-left {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 21px;
 }
 
-.line-img-right {
+.line-img {
+  transition: all .5s ease;
+}
+.image-link-to-art:hover img {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 7px 7px rgba(100, 100, 100, .2);
+}
+.line-img{
   width: 100%;
+  object-fit: cover;
 }
 .inner-center{
   margin-bottom: -30%;
@@ -241,6 +258,27 @@ body {
   width: 92%;
   margin-left: 3.5%;
   margin-right: 3.5%;
+}
+.line.is-visible{
+  opacity: 1;
+  animation: bounceAndRotate 1s 1 linear alternate;
+}
+@keyframes bounceAndRotate {
+  0% {
+    transform:rotate(0deg);
+  }
+  25% {
+     transform:rotate(00deg);
+  }
+  50% {
+     transform:rotate(-2deg);
+  }
+  75% {
+     transform:rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 .card-right {
   background-color: transparent;
@@ -386,12 +424,8 @@ body {
   }
 }
 
-.table-contato{
-  padding-top: 4%;
-}
-
 .text-cont-art p{
-  padding: 10px;
+  padding: 14px;
 }
 .text-cont-art{
   border-radius: 20px;
@@ -422,5 +456,105 @@ body {
     width: 95%;
     margin-left: 2.5%;
     margin-right: 2.5%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 799px){
+  .text-cont-art{
+    height: 80%;
+    width: 100%;
+    margin: 0;
+  }
+  .card{
+    width: 80%;
+    margin-left: 10%;
+  }
+  .image-link-to-art{
+    width: 80%;
+    margin-left: 10%;
+    max-height: 450px !important;
+    overflow: hidden;
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .line-img{
+    width: 100%;
+    object-fit: cover;
+    margin: 0 !important;
+  }
+  .title-art{
+    padding-left: 10%;
+  }
+  .right-title{
+    padding-right: 10%;
+    padding-left: 0;
+  }
+}
+@media only screen and (min-width: 410px) and (max-width: 600px){
+  .text-cont-art{
+    height: 86%;
+    width: 100%;
+    margin: 0;
+  }
+  .card{
+    width: 86%;
+    margin-left: 7%;
+  }
+  .image-link-to-art{
+    width: 86%;
+    margin-left: 7%;
+    max-height: 400px !important;
+    overflow: hidden;
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .line-img{
+    width: 100%;
+    object-fit: cover;
+    margin: 0 !important;
+  }
+  .title-art{
+    padding-left: 7%;
+  }
+  .right-title{
+    padding-right: 7%;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 409px){
+  .text-cont-art{
+    height: 90%;
+    width: 100%;
+    margin: 0;
+  }
+  .card{
+    width: 92%;
+    margin-left: 4%;
+  }
+  .image-link-to-art{
+    width: 92%;
+    margin-left: 4%;
+    max-height: 380px !important;
+    overflow: hidden;
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .line-img{
+    width: 100%;
+    object-fit: cover;
+    margin: 0 !important;
+  }
+  .title-art{
+    padding-left: 4%;
+  }
+  .right-title{
+    padding-right: 4%;
+    padding-left: 0;
   }
 }
