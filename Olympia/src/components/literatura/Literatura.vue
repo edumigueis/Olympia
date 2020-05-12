@@ -28,19 +28,19 @@
         <div class="slideshow-container dark-slideshow">
 
       <div class="mySlides">
-        <q>"O amor e a literatura coincidem na procura apaixonada, quase sempre desesperada, da comunicação."</q>
+        <q>O amor e a literatura coincidem na procura apaixonada, quase sempre desesperada, da comunicação.</q>
         <p class="author">- Jorge Duran
     </p>
       </div>
 
       <div class="mySlides">
-        <q>"A literatura antecipa sempre a vida. Não a copia, molda-a aos seus desígnios."</q>
+        <q>A literatura antecipa sempre a vida. Não a copia, molda-a aos seus desígnios.</q>
         <p class="author">- Oscar Wilde</p>
       </div>
 
       <div class="mySlides">
-        <q>"Literatura consiste no caráter do leitor, a exemplo da abelha ou da aranha que, do suco das flores retiram, uma o mel, a outra o veneno"</q>
-        <p class="author">- Pedro Bodstein
+        <q>Literatura consiste no caráter do leitor, a exemplo da abelha ou da aranha que, do suco das flores retiram, uma o mel, a outra o veneno</q>
+        <p class="author">- Pedro Bodstein (adaptado)
     </p>
       </div>
 
