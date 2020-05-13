@@ -33,7 +33,8 @@ namespace API_olympia
                                     builder =>
                                     {
                                         builder.WithOrigins("https://localhost:5001",
-                                                            "https://localhost:5000")
+                                                            "https://localhost:5000",
+                                                            "http://olympia.gearhostpreview.com")
                                         .AllowAnyHeader();
                                     });
             });
