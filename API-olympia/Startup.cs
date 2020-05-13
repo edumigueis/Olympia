@@ -27,6 +27,17 @@ namespace API_olympia
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "myPolicy",
+                                    builder =>
+                                    {
+                                        builder.WithOrigins("https://localhost:5001",
+                                                            "https://localhost:5000")
+                                        .AllowAnyHeader();
+                                    });
+            });
+
             services.AddDbContext<OlympiaContext>(
                 x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
             );
@@ -47,6 +58,8 @@ namespace API_olympia
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("myPolicy");
 
             app.UseEndpoints(endpoints =>
             {
