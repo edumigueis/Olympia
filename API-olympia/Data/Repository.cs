@@ -69,45 +69,45 @@ namespace API_olympia.Data
         public async Task<Usuarios[]> GetAllUsuariosAsync()
         {
             IQueryable<Usuarios> consultaUsuarios = this.Context.Usuarios;
-            consultaUsuarios = consultaUsuarios.OrderBy(a => a.idUsuarios);
+            consultaUsuarios = consultaUsuarios.OrderBy(u => u.IdUsuario);
             return await consultaUsuarios.ToArrayAsync();
         }
 
         public async Task<Usuarios> GetAllUsuariosAsyncById(int id)
         {
             IQueryable<Usuarios> consultaUsuarios = this.Context.Usuarios;
-            consultaUsuarios = consultaUsuarios.OrderBy(f => f.idUsuario)
-            .Where(usuario => usuario.idUsuario == id);
+            consultaUsuarios = consultaUsuarios.OrderBy(u => u.IdUsuario)
+            .Where(usuario => usuario.IdUsuario == id);
             return await consultaUsuarios.FirstOrDefaultAsync();
         }
 
         public async Task<Eventos[]> GetAllEventosAsync()
         {
             IQueryable<Eventos> consultaEventos = this.Context.Eventos;
-            consultaEventos = consultaEventos.OrderBy(a => a.idEvento);
+            consultaEventos = consultaEventos.OrderBy(e => e.IdEvento);
             return await consultaEventos.ToArrayAsync();
         }
 
         public async Task<Eventos> GetAllEventosAsyncById(int id)
         {
             IQueryable<Eventos> consultaEventos = this.Context.Eventos;
-            consultaEventos = consultaEventos.OrderBy(f => f.idEvento)
-            .Where(evento => evento.idEvento == id);
+            consultaEventos = consultaEventos.OrderBy(e => e.IdEvento)
+            .Where(evento => evento.IdEvento == id);
             return await consultaEventos.FirstOrDefaultAsync();
         }
 
         public async Task<Publicacoes[]> GetAllPublicacoesAsync()
         {
-            IQueryable<Eventos> consultaPublicacoes = this.Context.Publicacoes;
-            consultaPublicacoes = consultaPublicacoes.OrderBy(a => a.idPublicacao);
+            IQueryable<Publicacoes> consultaPublicacoes = this.Context.Publicacoes;
+            consultaPublicacoes = consultaPublicacoes.OrderBy(p => p.IdPublicacao);
             return await consultaPublicacoes.ToArrayAsync();
         }
 
-        public async Task<Publicacoes> GetAllEventosAsyncById(int id)
+        public async Task<Publicacoes> GetAllPublicacoesAsyncById(int id)
         {
-            IQueryable<Eventos> consultaPublicacoes = this.Context.Publicacoes;
-            consultaPublicacoes = consultaPublicacoes.OrderBy(f => f.idPublicacao)
-            .Where(publicacao => publicacao.idPublicacao == id);
+            IQueryable<Publicacoes> consultaPublicacoes = this.Context.Publicacoes;
+            consultaPublicacoes = consultaPublicacoes.OrderBy(p => p.IdPublicacao)
+            .Where(publicacao => publicacao.IdPublicacao == id);
             return await consultaPublicacoes.FirstOrDefaultAsync();
         }
     }

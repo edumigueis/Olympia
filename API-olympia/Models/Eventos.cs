@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace API_olympia.Models
 {
@@ -23,11 +24,11 @@ namespace API_olympia.Models
 
         [DataType(DataType.Date)]
         [Required]
-        public Date DataPost { get; set; }
+        public DateTime DataPost { get; set; }
 
         [DataType(DataType.Date)]
         [Required]
-        public Date DataEvento { get; set; }
+        public DateTime DataEvento { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "A descrição não deve ter mais do que 100 caracteres.")]

@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace API_olympia.Models
 {
@@ -18,10 +19,10 @@ namespace API_olympia.Models
         public string Tags { get; set; }
 
         [Required]
-        public HttpPostedFileBase Foto { get; set; }
+        public string Foto { get; set; }
 
         [DataType(DataType.Date)]
         [Required]
-        public Date DataPost { get; set; }
+        public DateTime DataPost { get; set; }
     }
 }

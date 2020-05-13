@@ -26,5 +26,6 @@ namespace API_olympia.Data
 
         Task<Publicacoes[]> GetAllPublicacoesAsync();
         Task<Publicacoes> GetAllPublicacoesAsyncById(int idPublicacao);
+
     }
 }

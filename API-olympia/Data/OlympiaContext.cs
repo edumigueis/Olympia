@@ -10,5 +10,8 @@ namespace API_olympia.Data
         }
         public DbSet<Artes> Artes { get; set; }
         public DbSet<Fotos> Fotos { get; set; }
+        public DbSet<Eventos> Eventos { get; set; }
+        public DbSet<Publicacoes> Publicacoes { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
     }
 }

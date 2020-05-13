@@ -24,7 +24,7 @@ namespace API_olympia.Models
         public string Senha { get; set; }
 
         [Required]
-        public HttpPostedFileBase Foto { get; set; }
+        public string Foto { get; set; }
 
         [Required]
         [StringLength(1200, ErrorMessage = "A biografia não pode ter mais de 1200 caracteres.")]
