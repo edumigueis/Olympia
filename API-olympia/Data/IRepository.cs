@@ -17,5 +17,14 @@ namespace API_olympia.Data
 
         Task<Fotos[]> GetAllFotosAsync();
         Task<Fotos> GetAllFotosAsyncById(int idFoto);
+
+        Task<Usuarios[]> GetAllUsuariosAsync();
+        Task<Usuarios> GetAllUsuariosAsyncById(int idUsuario);
+
+        Task<Eventos[]> GetAllEventosAsync();
+        Task<Eventos> GetAllEventosAsyncById(int idEvento);
+
+        Task<Publicacoes[]> GetAllPublicacoesAsync();
+        Task<Publicacoes> GetAllPublicacoesAsyncById(int idPublicacao);
     }
 }

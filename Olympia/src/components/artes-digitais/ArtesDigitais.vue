@@ -60,7 +60,7 @@
                 <h1 class="text-title-principal">Artes Digitais</h1>
                 Arte digital é aquela que se produz no ambiente gráfico computacional. 
                 Tem por objetivo criar obras de arte multimídia por intermédio de software e hardware, 
-                em um espaço virtual.[1] Existem diversas categorias de arte digital, tais como: pintura digital, 
+                em um espaço virtual.Existem diversas categorias de arte digital, tais como: pintura digital, 
                 digigravura, modelagem digital, fotografia digital, animação digital, vídeo digital entre outras. 
                 Os resultados também podem ser apreciados depois de "impressos" em um suporte 2D ou em um objeto 3D, 
                 mas são melhor exibidos no próprio ambiente em que foram produzidos. Proliferam-se comunidades 
