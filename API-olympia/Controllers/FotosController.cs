@@ -93,10 +93,8 @@ namespace API_olympia.Controllers
             try
             {
                 this.Repo.Add(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    //return Ok();
                     return Created($"/api/fotos/{model.IdFoto}", model);
                 }
             }
