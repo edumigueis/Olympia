@@ -160,32 +160,32 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
         if(vez == 1){
           speed = 5;
           initialWidth = 10;
-          opacity = '.022';
+          opacity = '.0235';
         }
         else if (vez == 2){
           speed = 2.5;
           initialWidth = 15;
-          opacity = '.020';
+          opacity = '.0219';
         }
         else if (vez == 3){
         speed = 1.8;
         initialWidth = 17;
-        opacity = '.017';
+        opacity = '.0185';
         }
         else if (vez == 4){
-          speed = 1.2;
+          speed = 1;
           initialWidth = 20;
-          opacity = '.017';
+          opacity = '.0179';
         }
         else if (vez == 5){
-          speed = 1;
+          speed = 0.85;
           initialWidth = 22;
-          opacity = '.017';
+          opacity = '.0179';
           }
           else {
-            speed = 1;
+            speed = 0.7;
             initialWidth = 21;
-            opacity = '.009';
+            opacity = '.0178';
           }
 
         lines = [];
