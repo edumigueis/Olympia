@@ -31,7 +31,7 @@ namespace API_olympia.Models
         public DateTime DataEvento { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "A descrição não deve ter mais do que 100 caracteres.")]
+        [StringLength(100, ErrorMessage = "A localização não deve ter mais do que 100 caracteres.")]
         public string LocalizacaoCoord { get; set; }
     }
 }

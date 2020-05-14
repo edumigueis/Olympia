@@ -32,11 +32,9 @@ namespace API_olympia
                 options.AddPolicy(name: "myPolicy",
                                     builder =>
                                     {
-                                        builder.WithOrigins("https://localhost:5001",
-                                                            "https://localhost:5000",
-                                                            "http://olympia.gearhostpreview.com",
-                                                            "http://olympia.gear.host")
-                                        .AllowAnyHeader();
+                                        builder.AllowAnyOrigin()
+                                               .AllowAnyMethod()
+                                               .AllowAnyHeader();
                                     });
             });
 
