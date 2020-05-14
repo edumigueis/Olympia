@@ -1,3 +1,6 @@
+org: digosmithh
+app: my-first-app
+
 # Welcome to Serverless!
 #
 # This file is the main config file for your service.
@@ -112,6 +115,3 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
-
-org: digosmithh
-app: olympia
