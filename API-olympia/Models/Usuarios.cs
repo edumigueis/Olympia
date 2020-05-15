@@ -8,7 +8,7 @@ namespace API_olympia.Models
         public int IdUsuario { get; set; }
 
         [Required]
-        [StringLength(40, ErrorMessage = "O Nome não deve ter menos do que 6 caracteres e mais do que 40 caracteres.", MinimumLength = 5)]
+        [StringLength(40, ErrorMessage = "O Nome não deve ter menos do que 5 caracteres e mais do que 40 caracteres.", MinimumLength = 5)]
         public string Nome { get; set; }
 
         [Required]
