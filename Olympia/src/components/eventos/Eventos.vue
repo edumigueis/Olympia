@@ -23,10 +23,10 @@
                   <div class="text">
                     <p
                       class="text-in-itself"
-                    >Visual, colorful, unapologetic: Paintings for the Future</p>
+                    >Visual, colorido, esplêndido: Pinturas Para O Futuro</p>
                   </div>
                   <a href="#" class="btn">
-                    <span class="btn-inner">Learn More</span>
+                    <span class="btn-inner">Saber Mais</span>
                   </a>
                 </div>
               </div>
@@ -43,10 +43,10 @@
                 <div class="caption">
                   <div class="title">Sydney Rock Festival</div>
                   <div class="text">
-                    <p class="text-in-itself">Loving Sydney? Just wait for this festival.</p>
+                    <p class="text-in-itself">Amando Sydney? Só espere até ver esse festival.</p>
                   </div>
                   <a href="#" class="btn">
-                    <span class="btn-inner">Learn More</span>
+                    <span class="btn-inner">Saber Mais</span>
                   </a>
                 </div>
               </div>
@@ -66,7 +66,7 @@
                     <p class="text-in-itself">Aproveite a bienal do livro: Um paraíso literário.</p>
                   </div>
                   <a href="#" class="btn">
-                    <span class="btn-inner">Learn More</span>
+                    <span class="btn-inner">Saber Mais</span>
                   </a>
                 </div>
               </div>
@@ -83,10 +83,10 @@
                 <div class="caption">
                   <div class="title">World Expo 2020</div>
                   <div class="text">
-                    <p class="text-in-itself">Architecture in its greatest form.</p>
+                    <p class="text-in-itself">Arquitetura em sua melhor forma: em comunidade.</p>
                   </div>
                   <a href="#" class="btn">
-                    <span class="btn-inner">Learn More</span>
+                    <span class="btn-inner">Saber Mais</span>
                   </a>
                 </div>
               </div>
@@ -171,7 +171,7 @@
                 style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"
               ></div>
               <div class="card__content">
-                <p class="card__category">Category</p>
+                <p class="card__category">Categoria</p>
                 <h3 class="card__heading">Todos</h3>
               </div>
             </button>
@@ -181,7 +181,7 @@
                 style="background-image: url(https://i.pinimg.com/originals/0c/36/d7/0c36d74668bc99fa34a6eeeaaf73cf2f.png)"
               ></div>
               <div class="card__content">
-                <p class="card__category">Category</p>
+                <p class="card__category">Categoria</p>
                 <h3 class="card__heading">Pintura</h3>
               </div>
             </button>
@@ -191,7 +191,7 @@
                 style="background-image: url(https://images.unsplash.com/photo-1471306224500-6d0d218be372?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)"
               ></div>
               <div class="card__content">
-                <p class="card__category">Category</p>
+                <p class="card__category">Categoria</p>
                 <h3 class="card__heading">
                   Arqui
                   tetura
@@ -204,7 +204,7 @@
                 style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"
               ></div>
               <div class="card__content">
-                <p class="card__category">Category</p>
+                <p class="card__category">Categoria</p>
                 <h3 class="card__heading">
                   Litera
                   tura
@@ -217,8 +217,8 @@
                 style="background-image: url(https://i.pinimg.com/originals/13/8a/a7/138aa796ed18dafa488b51870d0f0113.jpg)"
               ></div>
               <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Dança</h3>
+                <p class="card__category">Categoria</p>
+                <h3 class="card__heading">Artes Cênicas</h3>
               </div>
             </button>
             <button class="card" href="#">
@@ -227,7 +227,7 @@
                 style="background-image: url(https://s2.best-wallpaper.net/wallpaper/iphone/1801/France-Cannes-film-festival-sea-screen-chairs_iphone_640x960.jpg)"
               ></div>
               <div class="card__content">
-                <p class="card__category">Category</p>
+                <p class="card__category">Categoria</p>
                 <h3 class="card__heading">Cinema</h3>
               </div>
             </button>
@@ -237,7 +237,7 @@
                 style="background-image: url(https://images.unsplash.com/photo-1548811579-017cf2a4268b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)"
               ></div>
               <div class="card__content">
-                <p class="card__category">Category</p>
+                <p class="card__category">Categoria</p>
                 <h3 class="card__heading">
                   Escul
                   tura
@@ -250,18 +250,30 @@
                 style="background-image: url(https://images.wallpaperscraft.com/image/concert_hands_silhouettes_122478_1350x2400.jpg)"
               ></div>
               <div class="card__content">
-                <p class="card__category">Category</p>
+                <p class="card__category">Categoria</p>
                 <h3 class="card__heading">Música</h3>
               </div>
             </button>
             <button class="card" href="#">
               <div
                 class="card__background"
-                style="background-image: url(https://images.unsplash.com/photo-1487788270274-b0a7d600569f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)"
+                style="background-image: url(/src/assets/images/photo-art.jpg)"
               ></div>
               <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Teatro</h3>
+                <p class="card__category">Categoria</p>
+                <h3 class="card__heading">Fotogra
+                  fia</h3>
+              </div>
+            </button>
+            <button class="card" href="#">
+              <div
+                class="card__background"
+                style="background-image: url(/src/assets/images/digital-art-2.jpg)"
+              ></div>
+              <div class="card__content">
+                <p class="card__category">Categoria</p>
+                <h3 class="card__heading">Arte
+                  Digital</h3>
               </div>
             </button>
           </div>
