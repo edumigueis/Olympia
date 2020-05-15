@@ -15,7 +15,7 @@
       <div style="position:relative">
         <div class="image-container">
           <img
-            src="https://images.unsplash.com/photo-1475243907012-e01b4e4b0a1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            src="https://images.wallpaperscraft.com/image/sunglasses_books_beach_sun_110969_3840x2400.jpg"
             alt
             class="image"
           />

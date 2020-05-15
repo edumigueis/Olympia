@@ -16,7 +16,7 @@
       <div style="position:relative">
         <div class="image-container">
           <img
-            src="https://midia.gruposinos.com.br/_midias/jpg/2019/09/03/caxiasensemble6-18431661.jpg"
+            src="https://images.wallpaperscraft.com/image/concert_performance_light_organ_137789_3840x2160.jpg"
             alt
             class="image"
           />

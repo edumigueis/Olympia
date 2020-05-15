@@ -44,6 +44,10 @@
     font-family: "Broadway Regular";
     src: url("../fonts/Broadway Regular.ttf");
   }
+  @font-face {
+    font-family: "Mail Ray";
+    src: url("../fonts/mail\ ray\ stuff.ttf");
+  }
   body {
     overflow-x: hidden;
   }
@@ -107,8 +111,8 @@
     font-weight: bold;
   }
   .art-title{
-    font-family: "Broadway Regular", sans-serif;
-    font-weight: normal;
+    font-family: "Gotham", sans-serif;
+    font-weight: bold;
     color: #fff;
     font-size: 4em;
     margin-top: -400px;

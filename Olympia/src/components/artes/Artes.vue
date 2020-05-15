@@ -298,7 +298,7 @@
         <div class="line show-on-scroll">
           <h2 class="title-art">Artes Digitais</h2>
 
-          <a href="/#/arte-digital" class="image-link-to-art">
+          <a href="/#/artes-digitais" class="image-link-to-art">
             <div class="line-img-left">
               <img
                 src="/src/assets/images/art-digital.jpg"
