@@ -20,7 +20,7 @@
           />
         </div>
         <h1 class="art-title">Fotografia</h1>
-        <h2 class="art-subtitle">A sétima arte, um mar de sensações</h2>
+        <h2 class="art-subtitle">A história que palavras não podem expressar.</h2>
       </div>
 
       <div id="corpo">
@@ -58,7 +58,7 @@
               <td class="texto-principal">
                 <h1 class="text-title-principal">fotografia</h1>
                 Fotografia (do grego φως [fós] ("luz"), e γραφις [grafis] ("estilo", "pincel") ou γραφη grafê, 
-                e significa "desenhar com luz e contraste"[1]), por definição,[2] é essencialmente a técnica de 
+                e significa "desenhar com luz e contraste"), por definição, é essencialmente a técnica de 
                 criação de imagens por meio de exposição luminosa, fixando-as em uma superfície sensível. 
                 A primeira fotografia reconhecida remonta ao ano de 1826 e é atribuída ao francês Joseph Nicéphore 
                 Niépce. Contudo, a invenção da fotografia não é obra de um só autor, mas um processo de acúmulo de 
@@ -181,7 +181,7 @@
                 <img
                   class="imagem"
                   margin-right:100px
-                  src="https://www.revistabula.com/wp/wp-content/uploads/2013/05/5a.jpg"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/CheHigh.jpg/245px-CheHigh.jpg"
                 />
               </td>
             </tr>

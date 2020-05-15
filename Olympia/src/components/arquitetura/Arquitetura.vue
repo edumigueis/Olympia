@@ -21,7 +21,7 @@
           />
         </div>
         <h1 class="art-title">Arquitetura</h1>
-        <h2 class="art-subtitle">A quarta arte, um mar de sensações</h2>
+        <h2 class="art-subtitle">Arquitetura é uma arte visual e as obras falam por si mesmas.</h2>
       </div>
 
       <div id="corpo">

@@ -21,7 +21,7 @@
           />
         </div>
         <h1 class="art-title">Artes Digitais</h1>
-        <h2 class="art-subtitle">A nova arte que surgiu no século XXI</h2>
+        <h2 class="art-subtitle">A arte que empodera o lado pintor de um fotógrafo e o lado fotógrafo de um pintor.</h2>
       </div>
 
       <div id="corpo">

@@ -183,7 +183,7 @@
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgb(68, 35, 18);
+    background-color: rgb(247, 154, 33);
     color: white;
   }
   
@@ -220,7 +220,7 @@
     letter-spacing: 0.05em;
   }
   .author {
-    color: rgb(68, 35, 18);
+    color: rgb(247, 154, 33);
     font-family: 'Bebas', sans-serif;
     font-size: 1.6em;
     letter-spacing: 0.05em;
@@ -234,7 +234,7 @@
       letter-spacing: 0.05em;
     }
     .author {
-      color: rgb(68, 35, 18);
+      color: rgb(247, 154, 33);
       font-family: 'Bebas', sans-serif;
       font-size: 1em;
       letter-spacing: 0.05em;
@@ -271,7 +271,7 @@
       letter-spacing: 0.05em;
     }
     .author {
-      color: rgb(68, 35, 18);
+      color: rgb(247, 154, 33);
       font-family: 'Bebas', sans-serif;
       font-size: 1.1em;
       letter-spacing: 0.05em;
@@ -303,7 +303,7 @@
       letter-spacing: 0.05em;
     }
     .author {
-      color: rgb(68, 35, 18);
+      color: rgb(247, 154, 33);
       font-family: 'Bebas', sans-serif;
       font-size: 1.2em;
       letter-spacing: 0.05em;
@@ -347,7 +347,7 @@
       letter-spacing: 0.05em;
     }
     .author {
-      color: rgb(68, 35, 18);
+      color: rgb(247, 154, 33);
       font-family: 'Bebas', sans-serif;
       font-size: 1.4em;
       letter-spacing: 0.05em;
@@ -427,7 +427,7 @@
     width: 70%;
     border-radius: 20px;
     height: max-content;
-    box-shadow: 0 0 25px rgb(68, 35, 18);
+    box-shadow: 0 0 25px rgb(247, 154, 33);
     vertical-align: top;
     margin-top: 5%;
     z-index: 100;
@@ -445,7 +445,7 @@
     font-size: 2.8em;
     font-weight: normal;
     text-align: center;
-    background: linear-gradient(to left, rgb(41, 38, 38), rgb(68, 35, 18));
+    background: linear-gradient(to left, rgb(41, 38, 38), rgb(247, 154, 33));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

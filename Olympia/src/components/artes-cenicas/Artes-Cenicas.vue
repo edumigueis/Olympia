@@ -21,7 +21,7 @@
           />
         </div>
         <h1 class="art-title">Artes Cênicas</h1>
-        <h2 class="art-subtitle">A sétima arte, um mar de sensações</h2>
+        <h2 class="art-subtitle">O amor ao movimento, à dinâmica e às ideias.</h2>
       </div>
 
       <div id="corpo">
@@ -176,7 +176,7 @@
                 <img
                   class="imagem"
                   margin-right:100px
-                  src="https://www.infoescola.com/wp-content/uploads/2010/03/O-Quebra-Nozes.jpg"
+                  src="https://naspontas.com.br/wp-content/uploads/2017/11/49354-the-nutcracker-francesca-hayward-as-clara-croh-2015-photographed-by-tristram-kenton-510-510x550.jpg"
                 />
               </td>
             </tr>
