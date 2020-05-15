@@ -27,15 +27,15 @@ function showSlides(n) {
 
 var jaFoiMusica = false;
 setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
-  if ($("#container-escultura").length && jaFoiMusica == false) {
+  if ($("#container-musica").length && jaFoiMusica == false) {
 
     jaFoiMusica = true;
-
+      
     $(function () {
       showSlides(slideIndex);
     })
   }
-  else if (!$("#container-escultura").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
+  else if (!$("#container-musica").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
     jaFoiMusica = false;
   }
 }, 100);

@@ -452,7 +452,6 @@ body {
 }
 @media only screen and (min-width: 801px) and (max-width: 1050px){
   .text-cont-art{
-    height: 50%;
     width: 95%;
     margin-left: 2.5%;
     margin-right: 2.5%;
