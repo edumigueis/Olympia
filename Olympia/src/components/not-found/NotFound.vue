@@ -1,6 +1,6 @@
 <template>
   <div id="not-found-container">
-    <title>4 0 4</title>
+    <title>N O T - F O U N D</title>
     <link rel="stylesheet" href="/src/assets/css/notFound.css" />
     <header>
       <h1 class="gradient-text">404 - Not Found</h1>

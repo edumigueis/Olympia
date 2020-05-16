@@ -1478,7 +1478,7 @@
                   <div class="signup-content">
                     <div class="signup-form">
                       <h2 class="form-title black-to-white">Alterar dados</h2>
-                      <form class="register-form" id="register-form">
+                      <form class="register-form">
                         <div class="form-group">
                           <label for="name">
                             <div class="gray-n-imp">
@@ -1685,8 +1685,13 @@
               <div class="container dark-register-div container-bio">
                 <div class="signup-content bio-signup-content">
                   <div class="signup-form">
-                    <h2 class="form-title black-to-white">Alterar bio/biografia</h2>
-                    <form class="register-form bio-register-form" id="register-form">
+                    <h2 class="form-title black-to-white">
+                      Alterar bio/biografia
+                    </h2>
+                    <form
+                      class="register-form bio-register-form"
+                      id="register-form"
+                    >
                       <div class="form-group">
                         <label for="bio">
                           <div class="gray-n-imp">
@@ -1707,7 +1712,7 @@
                         />
                       </div>
                       <div class="form-group">
-                      <label for="biografia" class="biografia-i">
+                        <label for="biografia" class="biografia-i">
                           <div class="gray-n-imp">
                             <i
                               class="zmdi dark-register-ico zmdi-account material-icons-name"
@@ -1731,7 +1736,6 @@
                         <input
                           type="submit"
                           name="signup"
-                          id="signup"
                           class="form-submit"
                           value="Salvar"
                         />

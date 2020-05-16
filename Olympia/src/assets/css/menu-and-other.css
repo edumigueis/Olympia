@@ -48,6 +48,10 @@
   transition: 0.3s all;
 }
 
+.seta{
+  height: 523px !important;
+}
+
 .menu-container {
   background: linear-gradient(
     136deg,
