@@ -15,11 +15,12 @@ import Arquitetura from './components/arquitetura/Arquitetura.vue';
 import Escultura from './components/escultura/Escultura.vue';
 import Perfil from './components/perfil/Perfil.vue';
 import Post from './components/post/Post.vue';
-import ArtesCenicas from './components/artes-cenicas/Artes-Cenicas.vue'
-import Musica from './components/musica/Musica.vue'
-import Pintura from './components/pintura/Pintura.vue'
-import Fotografia from './components/fotografia/Fotografia.vue'
-import ArtesDigitais from './components/artes-digitais/ArtesDigitais.vue'
+import ArtesCenicas from './components/artes-cenicas/Artes-Cenicas.vue';
+import Musica from './components/musica/Musica.vue';
+import Pintura from './components/pintura/Pintura.vue';
+import Fotografia from './components/fotografia/Fotografia.vue';
+import ArtesDigitais from './components/artes-digitais/ArtesDigitais.vue';
+import SearchResult from './components/search-result/SearchResult.vue';
 
 export const routes = [
 
@@ -29,6 +30,7 @@ export const routes = [
     { path: '/detalhes', component: Obra, titulo: 'O B R A' },
     { path: '/evento', component: Evento, titulo: 'E V E N T O' },
     { path: '/eventos', component: Eventos, titulo: 'E V E N T O S' },
+    { path: '/search-result', component: SearchResult, titulo: 'P E S Q U I S A' },
     { path: '/sobre', component: Sobre, titulo: 'S O B R E' },
     { path: '/perfil', component: Perfil, titulo: 'P E R F I L' },
     { path: '/cadastro', component: CadastroUser, titulo: 'C A D A S T R O' },
