@@ -60,7 +60,7 @@
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-        <div class="container-left black-to-white white-7">
+        <div class="container-left show-on-scroll black-to-white white-7">
           <table>
             <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
@@ -82,7 +82,7 @@
 
         <!--<img class="linha" src="https://img.pngio.com/black-line-png-just-pink-about-it-black-line-png-900_150.png"/>-->
 
-        <div class="container-right black-to-white white-7">
+        <div class="container-right show-on-scroll black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">
@@ -109,7 +109,7 @@
           </table>
         </div>
 
-        <div class="container-left black-to-white white-7">
+        <div class="container-left show-on-scroll black-to-white white-7">
           <table>
             <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
@@ -136,7 +136,7 @@
             </tr>
           </table>
         </div>
-        <div class="container-right black-to-white white-7">
+        <div class="container-right show-on-scroll black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">
@@ -161,7 +161,7 @@
             </tr>
           </table>
         </div>
-        <div class="container-left black-to-white white-7">
+        <div class="container-left show-on-scroll black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">
@@ -186,7 +186,7 @@
             </tr>
           </table>
         </div>
-        <div class="container-right black-to-white white-7">
+        <div class="container-right show-on-scroll black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">
@@ -214,7 +214,7 @@
             </tr>
           </table>
         </div>
-        <div class="container-left black-to-white white-7">
+        <div class="container-left show-on-scroll black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">

@@ -471,7 +471,33 @@
   tr td{
     vertical-align: middle;
   }
-  
+  .show-on-scroll.is-visible{
+    opacity: 1;
+    animation: bounceAndRotate 1s 1 linear alternate;
+  }
+  .show-on-scroll{
+    opacity: 0;
+    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+    opacity .35s .3s ease-out;
+    will-change: transform, opacity;
+  }
+  @keyframes bounceAndRotate {
+    0% {
+      transform:rotate(0deg);
+    }
+    25% {
+       transform:rotate(00deg);
+    }
+    50% {
+       transform:rotate(-2deg);
+    }
+    75% {
+       transform:rotate(1deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
   @media only screen and (min-width: 0) and (max-width: 500px){ /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
     
     .texto-linha{
