@@ -367,7 +367,7 @@ li {
   -webkit-transition: all 0.7s;
   -moz-transition: all 0.7s;
   transition: all 0.7s;
-  box-shadow: -2px 0 10px 2px;
+  box-shadow: -2px 10px 10px 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1997,11 +1997,9 @@ select {
   margin: 0;
   border: none;
   outline: none;
-  padding-left: 3px;
-  padding-right: 3px;
   height: 29px;
   z-index: 1;
-  width: 95%;
+  width: 96%;
 }
 .input *:not(span):focus + span {
   opacity: 1;
@@ -2050,6 +2048,9 @@ select {
 }
 #tag-serv-5 {
   display: none;
+}
+#plus-tag{
+  margin-right: 2px;
 }
 #plus-tag span {
   min-width: unset !important;
