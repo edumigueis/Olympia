@@ -29,17 +29,17 @@
         <div class="slideshow-container dark-slideshow">
 
       <div class="mySlides">
-        <q>"A pintura é poesia sem palavras."</q>
+        <q>A pintura é poesia sem palavras.</q>
         <p class="author">- Voltaire</p>
       </div>
 
       <div class="mySlides">
-        <q>"A pintura nunca é prosa. É poesia que se escreve com versos de rima plástica."</q>
+        <q>A pintura nunca é prosa. É poesia que se escreve com versos de rima plástica.</q>
         <p class="author">- Picasso</p>
       </div>
 
       <div class="mySlides">
-        <q>"A pintura é poesia muda; a poesia, pintura cega."</q>
+        <q>A pintura é poesia muda; a poesia, pintura cega.</q>
         <p class="author">- Leonardo da Vinci
     </p>
       </div>

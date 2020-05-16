@@ -28,17 +28,17 @@
         <div class="slideshow-container dark-slideshow">
 
       <div class="mySlides">
-        <q>"Design é função, não forma."</q>
+        <q>Design é função, não forma.</q>
         <p class="author">- Steve Jobs</p>
       </div>
 
       <div class="mySlides">
-        <q>"No vocabulário da maioria das pessoas, design significa aparência. É decoração de interiores. É o tecido de cortinas, do sofá. Mas para mim, nada poderia estar tão longe do significado de design. Design é a alma fundamental de uma criação humana, que acaba se expressando em camadas externas sucessivas do produto ou serviço."</q>
+        <q>No vocabulário da maioria das pessoas, design significa aparência. É decoração de interiores. É o tecido de cortinas, do sofá. Mas para mim, nada poderia estar tão longe do significado de design. Design é a alma fundamental de uma criação humana, que acaba se expressando em camadas externas sucessivas do produto ou serviço.</q>
         <p class="author">- Steve Jobs</p>
       </div>
 
       <div class="mySlides">
-        <q>"Design dá ao mundo algo que ele não sabia que sentia falta"</q>
+        <q>Design dá ao mundo algo que ele não sabia que sentia falta</q>
         <p class="author">- Paola Antonelli
     </p>
       </div>

@@ -28,17 +28,17 @@
         <div class="slideshow-container dark-slideshow">
 
       <div class="mySlides">
-        <q>"A arquitetura é o jogo sábio, correto e magnífico dos volumes dispostos sob a luz."</q>
+        <q>A arquitetura é o jogo sábio, correto e magnífico dos volumes dispostos sob a luz.</q>
         <p class="author">- Le Corbusier</p>
       </div>
 
       <div class="mySlides">
-        <q>"A felicidade é como encontrar o belo na arquitetura: não esta onde procuramos e só encontramos quando somos humildes o suficente pra entender que a simplicidade é o caminho."</q>
+        <q>A felicidade é como encontrar o belo na arquitetura: não esta onde procuramos e só encontramos quando somos humildes o suficente pra entender que a simplicidade é o caminho.</q>
         <p class="author">- Sú Franke.</p>
       </div>
 
       <div class="mySlides">
-        <q>"A arquitetura é o engenho na insônia do poeta."</q>
+        <q>A arquitetura é o engenho na insônia do poeta.</q>
         <p class="author">- Brenon Salvador
     
     </p>

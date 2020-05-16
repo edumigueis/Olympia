@@ -28,18 +28,18 @@
         <div class="slideshow-container dark-slideshow">
 
       <div class="mySlides">
-        <q>“Eu vi o anjo no mármore e esculpi até que o libertei.”</q>
+        <q>Eu vi o anjo no mármore e esculpi até que o libertei.</q>
         <p class="author">- Michelangelo</p>
       </div>
 
       <div class="mySlides">
-        <q>"A educação é para a alma o que a escultura é para um bloco de mármore."</q>
+        <q>A educação é para a alma o que a escultura é para um bloco de mármore.</q>
         <p class="author">- Joseph Addison
     </p>
       </div>
 
       <div class="mySlides">
-        <q>"O valor da escultura impugna a beleza singela da alma."</q>
+        <q>O valor da escultura impugna a beleza singela da alma.</q>
         <p class="author">- Leandro Langone
     
     </p>

@@ -29,24 +29,24 @@
         <div class="slideshow-container dark-slideshow">
           <div class="mySlides">
             <q
-              >"A música é o vínculo que une a vida do espírito à vida dos
-              sentidos. A melodia é a vida sensível da poesia."</q
+              >A música é o vínculo que une a vida do espírito à vida dos
+              sentidos. A melodia é a vida sensível da poesia.</q
             >
             <p class="author">- Ludwig van Beethoven</p>
           </div>
 
           <div class="mySlides">
             <q
-              >"A música exprime a mais alta filosofia numa linguagem que a
-              razão não compreende."</q
+              >A música exprime a mais alta filosofia numa linguagem que a
+              razão não compreende.</q
             >
             <p class="author">- Arthur Schopenhauer</p>
           </div>
 
           <div class="mySlides">
             <q
-              >"Quando se ouve boa música fica-se com saudade de algo que nunca
-              se teve e nunca se terá."</q
+              >Quando se ouve boa música fica-se com saudade de algo que nunca
+              se teve e nunca se terá.</q
             >
             <p class="author">- Samuel Howe</p>
           </div>

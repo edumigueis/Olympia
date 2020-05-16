@@ -28,17 +28,17 @@
         <div class="slideshow-container dark-slideshow">
 
       <div class="mySlides">
-        <q>"O cinema não tem fronteiras nem limites. É um fluxo constante de sonho."</q>
+        <q>O cinema não tem fronteiras nem limites. É um fluxo constante de sonho.</q>
         <p class="author">- Orson Welles</p>
       </div>
 
       <div class="mySlides">
-        <q>"Para o cinema tudo se torna uma imensa natureza-morta, até os sentimentos dos outros são qualquer coisa de que se pode dispor."</q>
+        <q>Para o cinema tudo se torna uma imensa natureza-morta, até os sentimentos dos outros são qualquer coisa de que se pode dispor.</q>
         <p class="author">- Federico Fellini</p>
       </div>
 
       <div class="mySlides">
-        <q>"O cinema não é um ofício. É uma arte. Cinema não é um trabalho de equipe. O diretor está só diante de uma página em branco."</q>
+        <q>O cinema não é um ofício. É uma arte. Cinema não é um trabalho de equipe. O diretor está só diante de uma página em branco.</q>
         <p class="author">- Jean-Luc Godard
     </p>
       </div>

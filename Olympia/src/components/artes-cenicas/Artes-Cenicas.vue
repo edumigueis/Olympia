@@ -28,22 +28,22 @@
         <div class="slideshow-container dark-slideshow">
 
         <div class="mySlides">
-        <q>"A vida é uma peça de teatro que não permite ensaios. Por isso, cante, chore, dance, ria e viva intensamente, antes que a cortina se feche e a peça termine sem aplausos."</q>
+        <q>A vida é uma peça de teatro que não permite ensaios. Por isso, cante, chore, dance, ria e viva intensamente, antes que a cortina se feche e a peça termine sem aplausos.</q>
         <p class="author">- Desconhecido</p>
       </div>
       <div class="mySlides">
-        <q>"O teatro é o primeiro soro que o homem inventou para se proteger da doença da angústia."</q>
+        <q>O teatro é o primeiro soro que o homem inventou para se proteger da doença da angústia.</q>
         <p class="author">- Jean Barrault</p>
       </div>
 
       <div class="mySlides">
-        <q>"A dança: uma expressão perpendicular de um desejo horizontal."</q>
+        <q>"A dança: uma expressão perpendicular de um desejo horizontal.</q>
         <p class="author">- George Bernard Shaw
     </p>
       </div>
 
       <div class="mySlides">
-        <q>"O mundo já caiu, só me resta dançar sobre os destroços."</q>
+        <q>O mundo já caiu, só me resta dançar sobre os destroços.</q>
         <p class="author">- Clarice Lispector
     </p>
       </div>

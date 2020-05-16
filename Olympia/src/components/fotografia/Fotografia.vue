@@ -27,17 +27,17 @@
         <div class="slideshow-container dark-slideshow">
 
       <div class="mySlides">
-        <q>"Fotografia é o retrato de um concavo,de uma falta,de uma ausencia"</q>
+        <q>Fotografia é o retrato de um concavo, de uma falta, de uma ausencia</q>
         <p class="author">- Clarice Lispector</p>
       </div>
 
       <div class="mySlides">
-        <q>"A fotografia é uma das poucas coisas que tem poder sobre o tempo: ela o paralisa."</q>
+        <q>A fotografia é uma das poucas coisas que tem poder sobre o tempo: ela o paralisa.</q>
         <p class="author">- Tumblr</p>
       </div>
 
       <div class="mySlides">
-        <q>"No fundo a Fotografia é subversiva, não quando aterroriza, perturba ou mesmo estigmatiza, mas quando é pensativa."</q>
+        <q>No fundo a Fotografia é subversiva, não quando aterroriza, perturba ou mesmo estigmatiza, mas quando é pensativa.</q>
         <p class="author">- Roland Barthes
     </p>
       </div>
