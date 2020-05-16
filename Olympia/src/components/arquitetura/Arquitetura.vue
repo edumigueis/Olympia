@@ -11,7 +11,7 @@
       <meu-dark-mode></meu-dark-mode>
 
       <!--ATENÇÂO-->
-              <div class="bg"></div> <!--BACKGROUND-->
+              <div class="bg"></div> <!--BACKGROUND--> 
       <div style="position:relative">
         <div class="image-container">
           <img

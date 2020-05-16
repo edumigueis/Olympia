@@ -1932,8 +1932,22 @@ select {
   display: inline-block;
   border-radius: 9999em;
   max-height: 37px;
-  margin-right: 4px;
   min-width: 90px;
+}
+#tag-1{
+  margin-right: 4px;
+}
+#tag-2{
+  margin-right: 4px;
+}
+#tag-3{
+  margin-right: 4px;
+}
+#tag-4{
+  margin-right: 4px;
+}
+#tag-5{
+  margin-right: 4px;
 }
 .input *:not(span) {
   position: relative;
@@ -2031,6 +2045,7 @@ select {
   height: 29px !important;
   object-fit: cover !important;
   cursor: pointer;
+  padding-top: 3px;
 }
 
 .return-btn{
