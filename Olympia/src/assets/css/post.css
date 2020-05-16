@@ -446,7 +446,7 @@ img {
 }
 .img-list {
   transition: 0.5s all;
-  background-image: url('https://www.makeoverpaints.com/blog/wp-content/uploads/2017/03/TexturePaint.jpg');
+  background-image: url('../images/car-8.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
