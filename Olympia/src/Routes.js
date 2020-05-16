@@ -21,10 +21,12 @@ import Pintura from './components/pintura/Pintura.vue';
 import Fotografia from './components/fotografia/Fotografia.vue';
 import ArtesDigitais from './components/artes-digitais/ArtesDigitais.vue';
 import SearchResult from './components/search-result/SearchResult.vue';
+import NotFound from './components/not-found/NotFound.vue';
 
 export const routes = [
 
     { path: '/', component: Welcome, titulo: ' W E L C O M E' },
+    { path: '*', component: NotFound, titulo: '4 0 4' },
     { path: '/home', component: Home, titulo: 'H O M E' },
     { path: '/artes', component: Artes, titulo: 'A R T E S' },
     { path: '/detalhes', component: Obra, titulo: 'O B R A' },
