@@ -2183,7 +2183,7 @@ select.dark {
 textarea{
     /* will prevent resizing horizontally */
     resize:vertical;
-    max-height: 400px;
+    max-height: 200px;
 }
 textarea.dark::-webkit-input-placeholder {
   color: #dfdfdf;

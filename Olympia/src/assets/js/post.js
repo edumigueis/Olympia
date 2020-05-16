@@ -222,9 +222,23 @@ setInterval(() => {
         var target = $(e.target);
         var parent = target.parent();
         var child = parent.children(".img-inner");
-        child.attr("src", "/src/assets/images/colorful-cam.jpg");
         $(".fileUpload").css("filter", "brightness(100%)");
         $(".fileUpload").css("pointer-events", "all");
+        var id = child.attr('id');
+        
+        if(id.substring(0,4) == 'serv' && $("#serv-"+ id.substring(5,6)).attr("src") != "/src/assets/images/car-"+ id.substring(5,6) +".jpg"){
+          contImgServ--;
+        } 
+        if(id.substring(0,5) == 'obra'  && $("#obra-"+ id.substring(5,6)).attr("src") != "/src/assets/images/car-"+ id.substring(5,6) +".jpg"){
+          contImg--;
+        }
+        
+        $("#serv-"+ id.substring(5,6)).attr("src", "/src/assets/images/car-"+ id.substring(5,6) +".jpg");
+        $("#obra-"+ id.substring(5,6)).attr("src", "/src/assets/images/car-"+ id.substring(5,6) +".jpg");
+
+        
+
+
       });
       // Resize Container on window resize
       $(window).resize(function() {
