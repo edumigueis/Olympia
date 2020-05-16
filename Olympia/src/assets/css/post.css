@@ -446,7 +446,7 @@ img {
 }
 .img-list {
   transition: 0.5s all;
-  background-image: url(../images/bg1.jpg);
+  background-image: url('https://www.makeoverpaints.com/blog/wp-content/uploads/2017/03/TexturePaint.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2092,11 +2092,11 @@ select {
 }
 
 .return-btn {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  top: 24px;
-  left: 24px;
+  top: 30px;
+  left: 30px;
   cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
