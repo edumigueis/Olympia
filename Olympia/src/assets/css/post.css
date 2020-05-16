@@ -2180,6 +2180,11 @@ select.dark {
   /* Microsoft Edge */
   color: #dfdfdf;
 }
+textarea{
+    /* will prevent resizing horizontally */
+    resize:vertical;
+    max-height: 400px;
+}
 textarea.dark::-webkit-input-placeholder {
   color: #dfdfdf;
 }
