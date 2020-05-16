@@ -143,6 +143,7 @@
                 id="serv-1"
                 src="/src/assets/images/car-1.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
@@ -151,6 +152,7 @@
                 id="serv-2"
                 src="/src/assets/images/car-2.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
@@ -159,6 +161,7 @@
                 id="serv-3"
                 src="/src/assets/images/car-3.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
@@ -167,6 +170,7 @@
                 id="serv-4"
                 src="/src/assets/images/car-4.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
@@ -175,6 +179,7 @@
                 id="serv-5"
                 src="/src/assets/images/car-5.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
@@ -183,6 +188,7 @@
                 id="serv-6"
                 src="/src/assets/images/car-6.jpg"
               />
+              <span class="remove-img"></span>
             </li>
 
             <li class="img-list-item">
@@ -191,6 +197,7 @@
                 id="serv-7"
                 src="/src/assets/images/car-7.jpg"
               />
+              <span class="remove-img"></span>
             </li>
             <li class="img-list-item">
               <img
@@ -198,6 +205,7 @@
                 id="serv-8"
                 src="/src/assets/images/car-8.jpg"
               />
+              <span class="remove-img"></span>
             </li>
           </ul>
           <div class="pick-file-cont">
