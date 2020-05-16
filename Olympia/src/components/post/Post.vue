@@ -59,7 +59,7 @@
               <img
                 class="img-inner"
                 id="obra-1"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-1.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -68,7 +68,7 @@
               <img
                 class="img-inner"
                 id="obra-2"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-2.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -77,7 +77,7 @@
               <img
                 class="img-inner"
                 id="obra-3"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-3.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -86,7 +86,7 @@
               <img
                 class="img-inner"
                 id="obra-4"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-4.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -95,7 +95,7 @@
               <img
                 class="img-inner"
                 id="obra-5"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-5.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -104,7 +104,7 @@
               <img
                 class="img-inner"
                 id="obra-6"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-6.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -113,7 +113,7 @@
               <img
                 class="img-inner"
                 id="obra-7"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-7.jpg"
               />
               <span class="remove-img"></span>
             </li>
@@ -121,7 +121,7 @@
               <img
                 class="img-inner"
                 id="obra-8"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-8.jpg"
               />
               <span class="remove-img"></span>
             </li>
