@@ -141,7 +141,7 @@
               <img
                 class="img-inner"
                 id="serv-1"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-1.jpg"
               />
             </li>
 
@@ -149,7 +149,7 @@
               <img
                 class="img-inner"
                 id="serv-2"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-2.jpg"
               />
             </li>
 
@@ -157,7 +157,7 @@
               <img
                 class="img-inner"
                 id="serv-3"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-3.jpg"
               />
             </li>
 
@@ -165,7 +165,7 @@
               <img
                 class="img-inner"
                 id="serv-4"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-4.jpg"
               />
             </li>
 
@@ -173,7 +173,7 @@
               <img
                 class="img-inner"
                 id="serv-5"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-5.jpg"
               />
             </li>
 
@@ -181,7 +181,7 @@
               <img
                 class="img-inner"
                 id="serv-6"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-6.jpg"
               />
             </li>
 
@@ -189,14 +189,14 @@
               <img
                 class="img-inner"
                 id="serv-7"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-7.jpg"
               />
             </li>
             <li class="img-list-item">
               <img
                 class="img-inner"
                 id="serv-8"
-                src="/src/assets/images/bg3.jpg"
+                src="/src/assets/images/car-8.jpg"
               />
             </li>
           </ul>
