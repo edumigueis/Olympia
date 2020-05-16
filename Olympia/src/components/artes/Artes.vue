@@ -8,7 +8,6 @@
       <meu-menu-bar></meu-menu-bar>
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
-      <meu-mouse></meu-mouse>
       <meu-dark-mode></meu-dark-mode>
 
       <div class="line-containers">
