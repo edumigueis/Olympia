@@ -27,5 +27,14 @@ namespace API_olympia.Data
         Task<Publicacoes[]> GetAllPublicacoesAsync();
         Task<Publicacoes> GetAllPublicacoesAsyncById(int idPublicacao);
 
+        Task<Obras[]> GetAllObrasAsync();
+        Task<Obras> GetAllObrasAsyncById(int idObra);
+
+        Task<Curtidas[]> GetAllCurtidasAsync();
+        Task<Curtidas> GetAllCurtidasAsyncById(int idCurtida);
+
+        Task<Servicos[]> GetAllServicosAsync();
+        Task<Servicos> GetAllServicosAsyncById(int idServico);
+
     }
 }

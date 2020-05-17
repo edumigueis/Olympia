@@ -3,6 +3,8 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import VueSession from 'vue-session'
+import VuePageTransition from 'vue-page-transition'
+
 
 // tem que vir entre chaves, porque não é default
 import { routes } from './routes';
@@ -11,6 +13,7 @@ import { routes } from './routes';
 Vue.use(VueResource);
 Vue.use(VueRouter);
 Vue.use(VueSession);
+Vue.use(VuePageTransition)
 
 new Vue({
 
