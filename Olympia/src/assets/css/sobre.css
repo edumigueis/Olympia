@@ -14,22 +14,62 @@ body {
   overflow-x: hidden;
 }
 
-.gradient{
+
+.gradient {
+  position: absolute!important;
+  width: 100%;
+  height: 220px!important;
   right: 10px;
+  z-index: 192;
+  transition: all 0.8s, border-radius 0.2s;
+  border-bottom-left-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+  background: linear-gradient(to right, rgb(137, 124, 255),rgb(255, 129, 181))!important;
 }
 
+.part-2{
+  margin-bottom: 0;
+  height: fit-content;
+  width: 100vw;
+  background-color: white;
+  overflow: hidden;
+}
+.last{
+  margin-bottom: 50px;
+}
 .bg {
   right: 10px;
   z-index: 1;
   background-image: url("/src/assets/images/circles.png");
   position: absolute;
   width: 100%;
-  height: 100%;
-  z-index: 1;
+  height: 220px;
+  z-index: 195;
   animation-name: bg-circles;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   filter: blur(5px);
+  transition: all 0.2s;
+}
+.first{
+  margin-top: 300px!important;
+}
+.title{
+  position: absolute;
+  transition: all 0.2s;
+  right: 10px;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  z-index: 199;
+  box-shadow: 0 0 30px black;
+}
+.page-title{
+  font-family: "Bebas-Neue-Regular";
+  color: white;
+  font-size: 45px;
+  margin-left: 40px;
+  margin-top: 90px;
 }
 
 .image{
@@ -233,3 +273,169 @@ body {
   }
 }
 
+
+.container-right{  /*DIV PARA TODOS OS CARDS*/
+  padding: 3%;
+  padding-top: 1.5%;
+  position: relative;
+  margin-left: 38%;
+  width: 45%;
+    border-radius: 20px;
+  height: max-content;
+  box-shadow: 0 0 25px rgb(54, 53, 53);
+  vertical-align: top;
+  margin-top: 5%;
+  z-index: 100;
+  background-color: white;
+}
+
+.container-left{ /*DIV PARA TO CARD INICIAL*/
+  padding: 3%;
+  padding-top: 1.5%;
+  position: relative;
+  margin-left: 11%;
+  width: 53%;
+  border-radius: 20px;
+  height: max-content;
+  box-shadow: 0 0 25px rgb(54, 53, 53);
+  vertical-align: top;
+  margin-top: 5%;
+  z-index: 100;
+  background-color: white;
+}
+
+.text-title{
+  font-family: 'bebas';
+  font-weight: normal;
+  text-align: center;
+}
+
+.text-title-principal{
+  font-family: 'bebas';
+  font-size: 2.8em;
+  font-weight: normal;
+  text-align: center;
+  color: rgb(211, 156, 179);
+}
+
+.texto-linha{
+    width: 60%;
+    font-family: "Calibre-regular";
+    text-align: justify;
+    padding-right: 5%;
+    transition: 0.5s all; /*SEMPRE COLOQUE TRANSIÇÕES PARA SUAVIDADE NO SITE!*/
+}
+
+.texto-principal{
+  width: 100%;
+  font-family: "Calibre-regular";
+  text-align: justify;
+  transition: 0.5s all;
+}
+
+.td-imagem{
+  width: 30%;
+}
+
+.imagem{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(116, 116, 116);
+    margin-top: 20px;
+}
+
+tr td{
+  vertical-align: middle;
+}
+.show-on-scroll.is-visible{
+  opacity: 1;
+  animation: bounceAndRotate 1s 1 linear alternate;
+}
+.show-on-scroll{
+  opacity: 0;
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+  opacity .35s .3s ease-out;
+  will-change: transform, opacity;
+}
+@keyframes bounceAndRotate {
+  0% {
+    transform:rotate(0deg);
+  }
+  25% {
+     transform:rotate(00deg);
+  }
+  50% {
+     transform:rotate(-2deg);
+  }
+  75% {
+     transform:rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 500px){ /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
+  
+  .texto-linha{
+      font-size: 0.5em;
+  }
+  .texto-principal{
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 800px){ /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
+  
+  .texto-linha{
+    font-size: 0.7em;
+  }
+  .texto-principal{
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px){ /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
+  
+  .texto-linha{
+    font-size: 0.9em;
+  }
+  .texto-principal{
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (min-width: 1001px){ /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
+  
+  .texto-linha{
+    font-size: 1.2em;
+  }
+  .texto-principal{
+    font-size: 1.3em;
+  }
+}
+
+#mouse {
+  display: block;
+  width: 22px;
+  height: 40px;
+  border-radius: 20px;
+  border: 4px solid rgb(105, 104, 104);
+  position: fixed;
+  bottom: 20px;
+  margin-left: 18px;
+  z-index: 999;
+}
+
+#mouse::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  position: relative;
+  border-radius: 4px;
+  background: rgb(105, 104, 104);
+  animation-name: mouse;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  z-index: 999;
+}

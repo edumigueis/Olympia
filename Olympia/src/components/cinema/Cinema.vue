@@ -11,7 +11,8 @@
       <meu-dark-mode></meu-dark-mode>
 
       <!--ATENÇÂO-->
-              <div class="bg"></div> <!--BACKGROUND-->
+      <div class="bg"></div>
+      <!--BACKGROUND-->
       <div style="position:relative">
         <div class="image-container">
           <img
@@ -26,35 +27,43 @@
 
       <div id="corpo">
         <div class="slideshow-container dark-slideshow">
+          <div class="mySlides">
+            <q
+              >O cinema não tem fronteiras nem limites. É um fluxo constante de
+              sonho.</q
+            >
+            <p class="author">- Orson Welles</p>
+          </div>
 
-      <div class="mySlides">
-        <q>O cinema não tem fronteiras nem limites. É um fluxo constante de sonho.</q>
-        <p class="author">- Orson Welles</p>
-      </div>
+          <div class="mySlides">
+            <q
+              >Para o cinema tudo se torna uma imensa natureza-morta, até os
+              sentimentos dos outros são qualquer coisa de que se pode
+              dispor.</q
+            >
+            <p class="author">- Federico Fellini</p>
+          </div>
 
-      <div class="mySlides">
-        <q>Para o cinema tudo se torna uma imensa natureza-morta, até os sentimentos dos outros são qualquer coisa de que se pode dispor.</q>
-        <p class="author">- Federico Fellini</p>
-      </div>
+          <div class="mySlides">
+            <q
+              >O cinema não é um ofício. É uma arte. Cinema não é um trabalho de
+              equipe. O diretor está só diante de uma página em branco.</q
+            >
+            <p class="author">- Jean-Luc Godard</p>
+          </div>
 
-      <div class="mySlides">
-        <q>O cinema não é um ofício. É uma arte. Cinema não é um trabalho de equipe. O diretor está só diante de uma página em branco.</q>
-        <p class="author">- Jean-Luc Godard
-    </p>
-      </div>
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
 
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-
-      </div>
-
-<div class="dot-container">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
         <div class="container-left show-on-scroll black-to-white white-7">
-          <table> <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
+          <table>
+            <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-principal">
                 <h1 class="text-title-principal">CINEMA</h1>
@@ -109,13 +118,22 @@
             </tr>
           </table>
         </div>
-    
-      <div class="container-left show-on-scroll black-to-white white-7">
-          <table> <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
+
+        <div class="container-left show-on-scroll black-to-white white-7">
+          <table>
+            <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">E o vento levou</h1>
-                A complicada vida de Scarlett O’Hara, seus amores e desilusões em um período que tem a Guerra Civil Americana como pano de fundo. Rhett Butler é um vivido aventureiro que passa pela vida dela, em uma relação de amor e ódio marcada por conflitos já clássicos e cenas inesquecíveis de amor. Praticamente o inventor das telenovelas, devido aos conflitos constantes de emoções manifestadas e o romance como tema – não necessariamente por uma outra pessoa, e sim por uma causa, lugar ou qualquer outra coisa que se refira sentimentalmente ao personagem.
+                A complicada vida de Scarlett O’Hara, seus amores e desilusões
+                em um período que tem a Guerra Civil Americana como pano de
+                fundo. Rhett Butler é um vivido aventureiro que passa pela vida
+                dela, em uma relação de amor e ódio marcada por conflitos já
+                clássicos e cenas inesquecíveis de amor. Praticamente o inventor
+                das telenovelas, devido aos conflitos constantes de emoções
+                manifestadas e o romance como tema – não necessariamente por uma
+                outra pessoa, e sim por uma causa, lugar ou qualquer outra coisa
+                que se refira sentimentalmente ao personagem.
               </td>
               <td class="td-imagem">
                 <img
@@ -127,12 +145,16 @@
             </tr>
           </table>
         </div>
-          <div class="container-right show-on-scroll black-to-white white-7">
+        <div class="container-right show-on-scroll black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">Assim caminha a humanidade</h1>
-                Depois que um rancheiro texano aparece para comprar um cavalo premiado em uma fazenda distante, ele acaba se apaixonando pela filha do proprietário, com quem logo se casa. Uma vez de volta aos Texas, sua nova família enfrenta um cowboy rival a ele, em um confronto que se estende por duas gerações.
+                Depois que um rancheiro texano aparece para comprar um cavalo
+                premiado em uma fazenda distante, ele acaba se apaixonando pela
+                filha do proprietário, com quem logo se casa. Uma vez de volta
+                aos Texas, sua nova família enfrenta um cowboy rival a ele, em
+                um confronto que se estende por duas gerações.
               </td>
               <td class="td-imagem">
                 <img
@@ -143,23 +165,32 @@
               </td>
             </tr>
           </table>
-        </div>    
-      <div class="container-left show-on-scroll black-to-white white-7">
-          <table> 
+        </div>
+        <div class="container-left show-on-scroll black-to-white white-7">
+          <table>
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">Magnólia</h1>
-                A história se desenvolve em Los Angeles, nos arredores da rua Magnólia, acompanhando um dia na vida de 
-                nove personagens, que moram na mesma área e cujas histórias se cruzam por coincidências do destino. 
-                O filme aborda diversos temas polêmicos como vício, suicídio, abuso infantil, e homossexualidade.
-                Big Earl Partridge (Jason Robards) é um produtor de TV à beira da morte que deseja reencontrar o filho.
-                Phill (Phillip Seymour Hoffman) é seu dedicado enfermeiro e Linda (Juliane Moore), sua jovem esposa. 
-                Frank (Tom Cruise), um célebre guru machista, é o filho que Big Earl procura. 
-                Jimmy Gator (Philip Baker Hall) é o apresentador de um famoso programa de TV que também está com câncer 
-                e procurando se entender com a filha Cláudia (Melora Walters), cocainomaníaca. Stanley (Jeremy Blackman) 
-                é um garoto-prodígio manipulado pelo pai oportunista.  
-                Mas, antes que este círculo de personagens se feche, o espectador ainda terá muitas surpresas...
-                Magnólia foi elogiado por suas atuações, direção, ambição, narrativa de histórias, edição e trilha sonora. Recebeu três indicações ao Oscar 2000 incluindo Melhor Roteiro Original, Melhor Ator Coadjuvante para Tom Cruise e melhor canção original.              
+                A história se desenvolve em Los Angeles, nos arredores da rua
+                Magnólia, acompanhando um dia na vida de nove personagens, que
+                moram na mesma área e cujas histórias se cruzam por
+                coincidências do destino. O filme aborda diversos temas
+                polêmicos como vício, suicídio, abuso infantil, e
+                homossexualidade. Big Earl Partridge (Jason Robards) é um
+                produtor de TV à beira da morte que deseja reencontrar o filho.
+                Phill (Phillip Seymour Hoffman) é seu dedicado enfermeiro e
+                Linda (Juliane Moore), sua jovem esposa. Frank (Tom Cruise), um
+                célebre guru machista, é o filho que Big Earl procura. Jimmy
+                Gator (Philip Baker Hall) é o apresentador de um famoso programa
+                de TV que também está com câncer e procurando se entender com a
+                filha Cláudia (Melora Walters), cocainomaníaca. Stanley (Jeremy
+                Blackman) é um garoto-prodígio manipulado pelo pai oportunista.
+                Mas, antes que este círculo de personagens se feche, o
+                espectador ainda terá muitas surpresas... Magnólia foi elogiado
+                por suas atuações, direção, ambição, narrativa de histórias,
+                edição e trilha sonora. Recebeu três indicações ao Oscar 2000
+                incluindo Melhor Roteiro Original, Melhor Ator Coadjuvante para
+                Tom Cruise e melhor canção original.
               </td>
               <td class="td-imagem">
                 <img
@@ -176,7 +207,15 @@
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">O poderoso chefão</h1>
-                Amplamente considerado um dos melhores filmes de todos os tempos, esse drama da máfia, baseado no romance homônimo de Mario Puzo, concentra-se na poderosa família criminosa ítalo-americana de Don Vito Corleone (Marlon Brando). Quando o filho mais novo de Don, Michael (Al Pacino), se junta com relutância à Máfia, ele se envolve no inevitável ciclo de violência e traição. Embora Michael tente manter um relacionamento normal com sua esposa, Kay (Diane Keaton), ele está mais envolvido nos negócios da família.
+                Amplamente considerado um dos melhores filmes de todos os
+                tempos, esse drama da máfia, baseado no romance homônimo de
+                Mario Puzo, concentra-se na poderosa família criminosa
+                ítalo-americana de Don Vito Corleone (Marlon Brando). Quando o
+                filho mais novo de Don, Michael (Al Pacino), se junta com
+                relutância à Máfia, ele se envolve no inevitável ciclo de
+                violência e traição. Embora Michael tente manter um
+                relacionamento normal com sua esposa, Kay (Diane Keaton), ele
+                está mais envolvido nos negócios da família.
               </td>
               <td class="td-imagem">
                 <img
@@ -187,7 +226,7 @@
               </td>
             </tr>
           </table>
-        </div>  
+        </div>
       </div>
       <!---->
 

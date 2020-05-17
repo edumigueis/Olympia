@@ -71,11 +71,97 @@ setInterval(() => {
     if ($('#container-sobre').css('display') == 'block' && jaFoi == false) {
 
         $(function () {
+            jaFoi = true;            
+            var scroll =
+                window.requestAnimationFrame ||
+                // IE Fallback
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+            var elementsToShow = document.querySelectorAll(".show-on-scroll");
 
-            jaFoi = true;
+            function loop() {
+                Array.prototype.forEach.call(elementsToShow, function (element) {
+                    if (isElementInViewport(element)) {
+                        element.classList.add("is-visible");
+                    } else {
+                        element.classList.remove("is-visible");
+                    }
+                });
+
+                scroll(loop);
+            }
+
+            // Call the loop for the first time
+            loop();
+
+            function isElementInViewport(el) {
+                // special bonus for those using jQuery
+                if (typeof jQuery === "function" && el instanceof jQuery) {
+                    el = el[0];
+                }
+                var rect = el.getBoundingClientRect();
+                return (
+                    (rect.top <= 0 && rect.bottom >= 0) ||
+                    (rect.bottom >=
+                        (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.top <=
+                        (window.innerHeight || document.documentElement.clientHeight)) ||
+                    (rect.top >= 0 &&
+                        rect.bottom <=
+                        (window.innerHeight || document.documentElement.clientHeight))
+                );
+            }
+
+            var body = document.getElementsByTagName("body")[0];
+
+            body.addEventListener("mousewheel", detectarDirecaoRolagem, false);
+            body.addEventListener("DOMMouseScroll", detectarDirecaoRolagem, false);
+
+            function detectarDirecaoRolagem(e) {
+                var delta = null,
+                    direction = false
+                    ;
+                if (!e) {
+                    e = window.event;
+                }
+                if (e.wheelDelta) { // funciona na maioria dos casos
+                    delta = e.wheelDelta / 60;
+                } else if (e.detail) { // funciona no Firefox
+                    delta = -e.detail / 2;
+                }
+                if (delta !== null) {
+                    direction = delta > 0 ? 'cima' : 'baixo';
+                }
+        
+                if (direction == 'baixo') {
+                    $('.bg').css('transform', 'translateY(-240px)');
+                    $('.gradient').css('transform', 'translateY(-240px)');
+                    $('.title').css('transform', 'translateY(-240px)');
+                }
+                else {
+                    $('.bg').css('transform', 'none');
+                    $('.gradient').css('transform', 'none');
+                    $('.title').css('transform', 'none');
+                }
+            }
         })
     }
     else if (!$('#container-sobre').length) {
         jaFoi = false;
     }
 }, 100);
+
+var jaFoiBorda = false;
+
+setInterval(() => {
+
+    if ($('#container-sobre').css('display') == 'block' && jaFoiBorda == false) {
+
+        $('.gradient').css('border-bottom-left-radius','0');
+            $('.gradient').css('border-bottom-right-radius','0');
+    }
+    else if (!$('#container-sobre').length) {
+        jaFoiBorda = false;
+    }
+}, 300);
