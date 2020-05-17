@@ -283,6 +283,30 @@
             </tr>
           </table>
         </div>
+        <div class="container-right show-on-scroll black-to-white white-7">
+          <table>
+            <tr>
+              <td class="texto-linha">
+                <h1 class="text-title">Young Woman With Folded Hands</h1>
+
+                Este impressionante estudo de uma mulher desconhecida é um dos
+                melhores desenhos de Rubens. Ele usou giz vermelho para o rosto,
+                pescoço e mãos e giz preto para as roupas. O rosto com a boca
+                ligeiramente aberta é desenhada em três quartos. Evidentemente,
+                Rubens ficou extremamente satisfeito com este estudo, pois o
+                utilizou em várias pinturas, incluindo 'A coroação de Santa
+                Catarina', seu altar de 1631 (Museu de Arte de Toledo, Ohio).
+              </td>
+              <td class="td-imagem">
+                <img
+                  class="imagem"
+                  margin-right:100px
+                  src="https://upload.wikimedia.org/wikipedia/commons/0/04/Peter_Paul_Rubens_162.jpg"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
       <!---->
 
