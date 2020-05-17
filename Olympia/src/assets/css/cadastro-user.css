@@ -658,14 +658,32 @@ input:-webkit-autofill{
   -o-border-radius: 20px;
   -ms-border-radius: 20px;
   padding: 30px;
-  width: 50%;
   height: 350px;
   position: absolute;
   z-index: 12;
-  left: 25%;
+  left: calc(100vw/5);
+  right: calc(100vw/5);
   top: 20%;
   background-color: #fff;
   transition: 1s all;
+}
+@media only screen and (max-width: 370px){
+  .error-modal {
+    left: calc(100vw/7);
+    right: calc(100vw/7);
+  }
+}
+@media only screen and (max-width: 430px){
+  .error-modal {
+    left: calc(100vw/6);
+    right: calc(100vw/6);
+  }
+}
+@media only screen and (min-width: 1630px){
+  .error-modal {
+    left: calc(100vw/3);
+    right: calc(100vw/3);
+  }
 }
 .warn-image{
   margin-top: 10px;
