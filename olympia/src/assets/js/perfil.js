@@ -15,7 +15,7 @@ setInterval(() => {
             var src = $(this).attr("src");
             $('#myModal').css('display', 'block');
             $("#img01").attr("src", src);
-            $("#img01").css("max-width", '55%');
+            $("#img01").css("max-width", '35%');
             $(window).scrollTop(0);
             $('#mouse').css('display', 'block');
             $('#footer').css('display', 'none');
