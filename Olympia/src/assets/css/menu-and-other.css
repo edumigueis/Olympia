@@ -44,11 +44,11 @@
   background-color: #868686;
 }
 ::-moz-selection { /* Code for Firefox */
-  background: #08d2e0;
+  background: #089ce0;
 }
 
 ::selection {
-  background: #08d2e0;
+  background: #089ce0;
 }
 .blur {
   transition: 0.3s all;
