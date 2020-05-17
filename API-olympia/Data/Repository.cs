@@ -110,5 +110,50 @@ namespace API_olympia.Data
             .Where(publicacao => publicacao.IdPublicacao == id);
             return await consultaPublicacoes.FirstOrDefaultAsync();
         }
+
+         public async Task<Obras[]> GetAllObrasAsync()
+        {
+            IQueryable<Obras> consultaObras = this.Context.Obras;
+            consultaObras = consultaObras.OrderBy(p => p.IdObra);
+            return await consultaObras.ToArrayAsync();
+        }
+
+        public async Task<Obras> GetAllObrasAsyncById(int id)
+        {
+            IQueryable<Obras> consultaObras = this.Context.Obras;
+            consultaObras = consultaObras.OrderBy(p => p.IdObra)
+            .Where(obra => Obra.IdObra == id);
+            return await consultaObras.FirstOrDefaultAsync();
+        }
+
+         public async Task<Curtidas[]> GetAllCurtidasAsync()
+        {
+            IQueryable<Curtidas> consultaCurtidas = this.Context.Curtidas;
+            consultaCurtidas = consultaCurtidas.OrderBy(p => p.IdCurtida);
+            return await consultaCurtidas.ToArrayAsync();
+        }
+
+        public async Task<Curtidas> GetAllCurtidasAsyncById(int id)
+        {
+            IQueryable<Curtidas> consultaCurtidas = this.Context.Curtidas;
+            consultaCurtidas = consultaCurtidas.OrderBy(p => p.IdCurtida)
+            .Where(curtida => curtida.IdCurtida == id);
+            return await consultaCurtidas.FirstOrDefaultAsync();
+        }
+
+         public async Task<Servicos[]> GetAllServicosAsync()
+        {
+            IQueryable<Servicos> consultaServicos = this.Context.Servicos;
+            consultaServicos = consultaServicos.OrderBy(p => p.IdServico);
+            return await consultaServicos.ToArrayAsync();
+        }
+
+        public async Task<Servicos> GetAllServicosAsyncById(int id)
+        {
+            IQueryable<Servicos> consultaServicos = this.Context.Servicos;
+            consultaServicos = consultaServicos.OrderBy(p => p.IdServico)
+            .Where(servico => servico.IdServico == id);
+            return await consultaServicos.FirstOrDefaultAsync();
+        }
     }
 }
