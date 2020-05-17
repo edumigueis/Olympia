@@ -11,63 +11,64 @@
       <meu-dark-mode></meu-dark-mode>
 
       <!--ATENÇÂO-->
-              <div class="bg"></div> <!--BACKGROUND-->
+      <div class="bg"></div>
+      <!--BACKGROUND-->
       <div style="position:relative">
         <div class="image-container">
-          <img
-            src="/src/assets/images/sculpture-bg.jpg"
-            alt
-            class="image"
-          />
+          <img src="/src/assets/images/sculpture-bg.jpg" alt class="image" />
         </div>
         <h1 class="art-title">Escultura</h1>
-        <h2 class="art-subtitle">A quarta arte, representação esculpida dos sentimentos </h2>
+        <h2 class="art-subtitle">
+          A quarta arte, representação esculpida dos sentimentos
+        </h2>
       </div>
 
       <div id="corpo">
         <div class="slideshow-container dark-slideshow">
+          <div class="mySlides">
+            <q>Eu vi o anjo no mármore e esculpi até que o libertei.</q>
+            <p class="author">- Michelangelo</p>
+          </div>
 
-      <div class="mySlides">
-        <q>Eu vi o anjo no mármore e esculpi até que o libertei.</q>
-        <p class="author">- Michelangelo</p>
-      </div>
+          <div class="mySlides">
+            <q
+              >A educação é para a alma o que a escultura é para um bloco de
+              mármore.</q
+            >
+            <p class="author">- Joseph Addison</p>
+          </div>
 
-      <div class="mySlides">
-        <q>A educação é para a alma o que a escultura é para um bloco de mármore.</q>
-        <p class="author">- Joseph Addison
-    </p>
-      </div>
+          <div class="mySlides">
+            <q>O valor da escultura impugna a beleza singela da alma.</q>
+            <p class="author">- Leandro Langone</p>
+          </div>
 
-      <div class="mySlides">
-        <q>O valor da escultura impugna a beleza singela da alma.</q>
-        <p class="author">- Leandro Langone
-    
-    </p>
-      </div>
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
 
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-
-      </div>
-
-<div class="dot-container">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
         <div class="container-left show-on-scroll black-to-white white-7">
-          <table> <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
+          <table>
+            <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-principal">
                 <h1 class="text-title-principal">Escultura</h1>
-                Escultura é uma arte que representa ou ilustra imagens plásticas em relevo total ou parcial. 
-                Existem várias técnicas de trabalhar os materiais, como a cinzelação, a fundição, a moldagem ou a 
-                aglomeração de partículas para a criação de um objeto.
-                Vários materiais se prestam a esta arte, uns mais perenes como o bronze ou o mármore, 
-                outros mais fáceis de trabalhar, como a argila, a cera ou a madeira.
-                Embora possam ser utilizadas para representar qualquer coisa, ou até coisa nenhuma, 
-                tradicionalmente o objetivo maior foi sempre representar o corpo humano, ou a divindade numa 
-                forma antropomórfica. É considerada a quarta das artes clássicas.
+                Escultura é uma arte que representa ou ilustra imagens plásticas
+                em relevo total ou parcial. Existem várias técnicas de trabalhar
+                os materiais, como a cinzelação, a fundição, a moldagem ou a
+                aglomeração de partículas para a criação de um objeto. Vários
+                materiais se prestam a esta arte, uns mais perenes como o bronze
+                ou o mármore, outros mais fáceis de trabalhar, como a argila, a
+                cera ou a madeira. Embora possam ser utilizadas para representar
+                qualquer coisa, ou até coisa nenhuma, tradicionalmente o
+                objetivo maior foi sempre representar o corpo humano, ou a
+                divindade numa forma antropomórfica. É considerada a quarta das
+                artes clássicas.
               </td>
             </tr>
           </table>
@@ -80,12 +81,15 @@
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">Vitória de Samotrácia</h1>
-                A Vitória de Samotrácia, também conhecida como Nice de Samotrácia, é uma escultura que 
-                representa a deusa grega Nice (em grego Νίκη, Níkē ou Niké – "Vitória"), cujos pedaços 
-                foram descobertos em 1863 nas ruínas do Santuário dos grandes deuses de Samotrácia. 
-                Em grego, o seu nome é Níkē tes Samothrakes (Νίκη της Σαμοθράκη). Fazia parte de uma fonte, 
-                com a forma de proa de embarcação, em pedra calcária, doada ao santuário provavelmente pela 
-                cidade de Rodes. Ocupa lugar de destaque numa escadaria do Museu do Louvre, em Paris.
+                A Vitória de Samotrácia, também conhecida como Nice de
+                Samotrácia, é uma escultura que representa a deusa grega Nice
+                (em grego Νίκη, Níkē ou Niké – "Vitória"), cujos pedaços foram
+                descobertos em 1863 nas ruínas do Santuário dos grandes deuses
+                de Samotrácia. Em grego, o seu nome é Níkē tes Samothrakes (Νίκη
+                της Σαμοθράκη). Fazia parte de uma fonte, com a forma de proa de
+                embarcação, em pedra calcária, doada ao santuário provavelmente
+                pela cidade de Rodes. Ocupa lugar de destaque numa escadaria do
+                Museu do Louvre, em Paris.
               </td>
               <td class="td-imagem">
                 <img
@@ -97,26 +101,33 @@
             </tr>
           </table>
         </div>
-    
-      <div class="container-left show-on-scroll black-to-white white-7">
-          <table> <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
+
+        <div class="container-left show-on-scroll black-to-white white-7">
+          <table>
+            <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">Vênus de Milo</h1>
-                A Vênus de Milo (pt-BR) ou Vénus de Milo (pt) é uma estátua da Grécia Antiga pertencente ao acervo do 
-                Museu do Louvre, situado em Paris, França.
-                A história de sua descoberta em 1820 na ilha de Milo, então parte do Império Otomano, e a forma como 
-                perdeu os braços foram narradas pelas fontes primitivas em versões contraditórias que nunca puderam 
-                ser de todo esclarecidas, mas depois de sua aquisição pela França foi imediatamente exposta no Louvre, 
-                oficialmente como uma obra-prima da prestigiosa geração clássica e atribuída ao círculo de Praxíteles,
-                tornando-se uma celebridade instantânea e um motivo de orgulho nacionalista.
-                Mas logo se criou uma polêmica, pois segundo alguns eruditos havia evidências para se acreditar 
-                que de fato fora produzida no período helenístico, na época desprezado como uma fase decadente 
-                na tradição artística grega, e esta possibilidade não interessava politicamente ao governo francês. 
-                O debate se estendeu por muito tempo, mas mesmo assim seu valor estético não foi posto em séria dúvida, 
-                sendo elogiada em altos termos por muitos artistas e intelectuais e mesmo pelo público leigo. 
-                Foi copiada muitas vezes e divulgada em gravuras e outros meios de larga circulação ao longo de 
-                todo o século XIX.
+                A Vênus de Milo (pt-BR) ou Vénus de Milo (pt) é uma estátua da
+                Grécia Antiga pertencente ao acervo do Museu do Louvre, situado
+                em Paris, França. A história de sua descoberta em 1820 na ilha
+                de Milo, então parte do Império Otomano, e a forma como perdeu
+                os braços foram narradas pelas fontes primitivas em versões
+                contraditórias que nunca puderam ser de todo esclarecidas, mas
+                depois de sua aquisição pela França foi imediatamente exposta no
+                Louvre, oficialmente como uma obra-prima da prestigiosa geração
+                clássica e atribuída ao círculo de Praxíteles, tornando-se uma
+                celebridade instantânea e um motivo de orgulho nacionalista. Mas
+                logo se criou uma polêmica, pois segundo alguns eruditos havia
+                evidências para se acreditar que de fato fora produzida no
+                período helenístico, na época desprezado como uma fase decadente
+                na tradição artística grega, e esta possibilidade não
+                interessava politicamente ao governo francês. O debate se
+                estendeu por muito tempo, mas mesmo assim seu valor estético não
+                foi posto em séria dúvida, sendo elogiada em altos termos por
+                muitos artistas e intelectuais e mesmo pelo público leigo. Foi
+                copiada muitas vezes e divulgada em gravuras e outros meios de
+                larga circulação ao longo de todo o século XIX.
               </td>
               <td class="td-imagem">
                 <img
@@ -128,24 +139,28 @@
             </tr>
           </table>
         </div>
-          <div class="container-right show-on-scroll black-to-white white-7">
+        <div class="container-right show-on-scroll black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">O Pensador</h1>
-                O Pensador (francês: Le Penseur) é uma das mais famosas esculturas de bronze do escultor francês
-                Auguste Rodin. Retrata um homem em meditação soberba, lutando com uma poderosa força interna.
-                A peça era parte de uma comissão do Museu de Arte Decorativa em 
-                Paris para criar um portal monumental baseada na Divina Comédia, de Dante Alighieri. 
-                Cada uma das estátuas na peça representavam um dos personagens principais do poema épico. 
-                O Pensador originalmente procurava retratar Dante em frente dos Portões do Inferno, ponderando
-                seu grande poema. A escultura está nua porque Rodin queria uma figura heroica à la Michelangelo
-                para representar o pensamento assim como a poesia.           
-                 A primeira estátua (O Pensador) em escala maior 
-                foi terminada em 1902, mas não foi apresentada ao público até 1904. Tornou-se propriedade da cidade
-                de Paris  e foi colocada em frente 
-                do Panteão em 1906. Em 1922, contudo, foi levada para o Hotel Biron, transformado no Musée Rodin. 
-                Mais de vinte cópias da escultura estão em museus em volta do mundo. 
+                O Pensador (francês: Le Penseur) é uma das mais famosas
+                esculturas de bronze do escultor francês Auguste Rodin. Retrata
+                um homem em meditação soberba, lutando com uma poderosa força
+                interna. A peça era parte de uma comissão do Museu de Arte
+                Decorativa em Paris para criar um portal monumental baseada na
+                Divina Comédia, de Dante Alighieri. Cada uma das estátuas na
+                peça representavam um dos personagens principais do poema épico.
+                O Pensador originalmente procurava retratar Dante em frente dos
+                Portões do Inferno, ponderando seu grande poema. A escultura
+                está nua porque Rodin queria uma figura heroica à la
+                Michelangelo para representar o pensamento assim como a poesia.
+                A primeira estátua (O Pensador) em escala maior foi terminada em
+                1902, mas não foi apresentada ao público até 1904. Tornou-se
+                propriedade da cidade de Paris e foi colocada em frente do
+                Panteão em 1906. Em 1922, contudo, foi levada para o Hotel
+                Biron, transformado no Musée Rodin. Mais de vinte cópias da
+                escultura estão em museus em volta do mundo.
               </td>
               <td class="td-imagem">
                 <img
@@ -156,26 +171,32 @@
               </td>
             </tr>
           </table>
-        </div>    
-      <div class="container-left show-on-scroll black-to-white white-7">
-          <table> 
+        </div>
+        <div class="container-left show-on-scroll black-to-white white-7">
+          <table>
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">David</h1>
-                David ou Davi é uma das esculturas mais famosas do artista renascentista Michelangelo. 
-                O trabalho retrata o herói bíblico com realismo anatômico impressionante, sendo considerada 
-                uma das mais importantes obras do Renascimento. A escultura encontra-se em Florença, Itália, 
-                cidade que originalmente encomendou a obra.
-                A escultura possui 5,17 metros de altura e representa o herói bíblico David, 
-                um dos personagens mais frequentes na arte florentina. Originalmente encomendada como parte de 
-                uma série de outras estátuas de profetas e heróis bíblicos, David estava cotado para decorar 
-                uma das fachadas de Santa Maria del Fiore. No entanto, após sua conclusão, a escultura foi 
-                posicionada em frente ao Palazzo della Signoria, sede da governadoria de Florença, onde foi revelada 
-                ao público oficialmente em 8 de setembro de 1504.
-                Por conta da natureza heroica representada, a estátua simbolizou o sentimento de liberdades 
-                civis que dominava a República de Florença. Os olhos de David, com semblante sério e cauteloso, 
-                estavam posicionados em direção a Roma. Em 1873, a escultura foi transferida para o interior da 
-                Galeria da Academia de Belas Artes enquanto a praça pública recebeu uma réplica em seu lugar.
+                David ou Davi é uma das esculturas mais famosas do artista
+                renascentista Michelangelo. O trabalho retrata o herói bíblico
+                com realismo anatômico impressionante, sendo considerada uma das
+                mais importantes obras do Renascimento. A escultura encontra-se
+                em Florença, Itália, cidade que originalmente encomendou a obra.
+                A escultura possui 5,17 metros de altura e representa o herói
+                bíblico David, um dos personagens mais frequentes na arte
+                florentina. Originalmente encomendada como parte de uma série de
+                outras estátuas de profetas e heróis bíblicos, David estava
+                cotado para decorar uma das fachadas de Santa Maria del Fiore.
+                No entanto, após sua conclusão, a escultura foi posicionada em
+                frente ao Palazzo della Signoria, sede da governadoria de
+                Florença, onde foi revelada ao público oficialmente em 8 de
+                setembro de 1504. Por conta da natureza heroica representada, a
+                estátua simbolizou o sentimento de liberdades civis que dominava
+                a República de Florença. Os olhos de David, com semblante sério
+                e cauteloso, estavam posicionados em direção a Roma. Em 1873, a
+                escultura foi transferida para o interior da Galeria da Academia
+                de Belas Artes enquanto a praça pública recebeu uma réplica em
+                seu lugar.
               </td>
               <td class="td-imagem">
                 <img
@@ -192,17 +213,21 @@
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">Os 12 profetas</h1>
-                A série de 12 profetas esculpidos em pedra-sabão, na cidade de Congonhas, em Minas Gerais, 
-                é uma das mais completas da tradição cristã em todo mundo. De autoria do escultor e arquiteto 
-                Francisco Lisboa, o Aleijadinho, o conjunto fica instalado em frente à igreja do Senhor Bom Jesus 
-                de Matosinhos, no alto de um morro.
-                Principal artista do período colonial brasileiro, Aleijadinho realizou este trabalho entre 1796 e 1805, 
-                junto com as outras obras do Santuário de Congonhas - as seis capelas dos Passos da Paixão e os projetos 
-                de arquitetura e ornamentação da igreja.
-                A teologia cristã fixa em 16 o número de profetas, que resulta da soma dos 12 apóstolos e 
-                quatro evangelistas. São quatro profetas maiores e oito menores, selecionados na ordem do 
-                cânon bíblico. Os quatro profetas maiores, assim chamados pela maior quantidade de textos proféticos 
-                escritos, correspondem aos evangelistas Isaías, Jeremias, Ezequiel e Daniel.
+                A série de 12 profetas esculpidos em pedra-sabão, na cidade de
+                Congonhas, em Minas Gerais, é uma das mais completas da tradição
+                cristã em todo mundo. De autoria do escultor e arquiteto
+                Francisco Lisboa, o Aleijadinho, o conjunto fica instalado em
+                frente à igreja do Senhor Bom Jesus de Matosinhos, no alto de um
+                morro. Principal artista do período colonial brasileiro,
+                Aleijadinho realizou este trabalho entre 1796 e 1805, junto com
+                as outras obras do Santuário de Congonhas - as seis capelas dos
+                Passos da Paixão e os projetos de arquitetura e ornamentação da
+                igreja. A teologia cristã fixa em 16 o número de profetas, que
+                resulta da soma dos 12 apóstolos e quatro evangelistas. São
+                quatro profetas maiores e oito menores, selecionados na ordem do
+                cânon bíblico. Os quatro profetas maiores, assim chamados pela
+                maior quantidade de textos proféticos escritos, correspondem aos
+                evangelistas Isaías, Jeremias, Ezequiel e Daniel.
               </td>
               <td class="td-imagem">
                 <img
@@ -213,7 +238,34 @@
               </td>
             </tr>
           </table>
-        </div>  
+        </div>
+        <div class="container-left show-on-scroll black-to-white white-7">
+          <table>
+            <tr>
+              <td class="texto-linha">
+                <h1 class="text-title">Maman</h1>
+                Maman (1999) é uma escultura em bronze, aço inoxidável e mármore
+                da artista Louise Bourgeois. A escultura, que representa uma
+                aranha, está entre as maiores do mundo, medindo mais de 30 pés
+                de altura e 33 pés de largura (927 x 891 x 1024 cm). Inclui
+                um saco contendo 32 ovos de mármore e seu abdômen e tórax são
+                feitos de bronze com nervuras. O título é a familiar palavra
+                francesa para Mãe (semelhante a Mamãe). A escultura foi criada
+                em 1999 por Bourgeois como parte de sua comissão inaugural da
+                The Unilever Series (2000), no Turbine Hall da Tate Modern em
+                Londres. Este original foi criado em aço, com uma edição de
+                seis peças fundidas subsequentes em bronze.
+              </td>
+              <td class="td-imagem">
+                <img
+                  class="imagem"
+                  margin-right:100px
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Giant_spider_strikes_again%21.jpg/800px-Giant_spider_strikes_again%21.jpg"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
       <!---->
 

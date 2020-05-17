@@ -55,6 +55,7 @@ body {
   letter-spacing: 0.2em;
   font-size: 2.5em;
   padding-left: 2.5%;
+  transition: 0.3s all;
 }
 .right-title{
   text-align: end;
@@ -228,7 +229,15 @@ body {
   justify-content: center;
   border-radius: 21px;
 }
-
+.title-link-to-art{
+  text-decoration: none !important;
+  color: #222;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.title-link-to-art:hover{
+  font-size: 1.1em;
+}
 .line-img {
   transition: all .5s ease;
 }

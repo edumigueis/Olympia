@@ -12,7 +12,7 @@
 
       <div class="line-containers">
         <div class="line show-on-scroll">
-          <h2 class="title-art">Pintura</h2>
+          <h2 class="title-art"><a href="/#/pintura" class="title-link-to-art">Pintura</a></h2>
           <a href="/#/pintura" class="image-link-to-art">
             <div class="line-img-left">
               <img
@@ -50,7 +50,7 @@
         </div>
 
         <div class="line show-on-scroll">
-          <h2 class="title-art right-title">Artes Cênicas</h2>
+          <h2 class="title-art right-title"><a href="/#/artes-cenicas" class="title-link-to-art">Artes Cênicas</a></h2>
           <div class="card-left  card">
             <div class="text-cont-art white-7 inner-left">
               <p class="black-to-white">
@@ -86,7 +86,7 @@
           </a>
         </div>
         <div class="line show-on-scroll">
-          <h2 class="title-art">Música</h2>
+          <h2 class="title-art"><a href="/#/musica" class="title-link-to-art">Música</a></h2>
           <a href="/#/musica" class="image-link-to-art">
             <div class="line-img-left">
               <img src="/src/assets/images/music.jpg" alt="" class="line-img" />
@@ -119,7 +119,7 @@
         </div>
 
         <div class="line show-on-scroll">
-          <h2 class="title-art right-title">Escultura</h2>
+          <h2 class="title-art right-title"><a href="/#/escultura" class="title-link-to-art">Escultura</a></h2>
           <div class="card-center  card">
             <div class="text-cont-art white-7 inner-left">
               <p class="black-to-white">
@@ -155,7 +155,7 @@
           </a>
         </div>
         <div class="line show-on-scroll">
-          <h2 class="title-art">Música</h2>
+          <h2 class="title-art"><a href="/#/literatura" class="title-link-to-art">Literatura</a></h2>
 
           <a href="/#/literatura" class="image-link-to-art">
             <div class="line-img-left">
@@ -189,7 +189,7 @@
           </div>
         </div>
         <div class="line show-on-scroll">
-          <h2 class="title-art right-title">Arquitetura</h2>
+          <h2 class="title-art right-title"><a href="/#/arquitetura" class="title-link-to-art">Arquitetura</a></h2>
           <div class="card-center  card">
             <div class="text-cont-art white-7 inner-left">
               <p class="black-to-white">
@@ -221,7 +221,7 @@
           </a>
         </div>
         <div class="line show-on-scroll">
-          <h2 class="title-art">Cinema</h2>
+          <h2 class="title-art"><a href="/#/cinema" class="title-link-to-art">Cinema</a></h2>
 
           <a href="/#/cinema" class="image-link-to-art">
             <div class="line-img-left">
@@ -259,7 +259,7 @@
           </div>
         </div>
         <div class="line show-on-scroll">
-          <h2 class="title-art right-title">Fotografia</h2>
+          <h2 class="title-art right-title"><a href="/#/fotografia" class="title-link-to-art">Fotografia</a></h2>
           <div class="card-left  card">
             <div class="text-cont-art white-7 inner-center">
               <p class="black-to-white">
@@ -295,7 +295,7 @@
           </a>
         </div>
         <div class="line show-on-scroll">
-          <h2 class="title-art">Artes Digitais</h2>
+          <h2 class="title-art"><a href="/#/artes-digitais" class="title-link-to-art">Artes Digitais</a></h2>
 
           <a href="/#/artes-digitais" class="image-link-to-art">
             <div class="line-img-left">

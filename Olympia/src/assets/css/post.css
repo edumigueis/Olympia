@@ -2092,8 +2092,8 @@ select {
 }
 
 .return-btn {
-  width: 30px;
-  height: 30px;
+  width: 33px;
+  height: 33px;
   position: absolute;
   top: 30px;
   left: 30px;
@@ -2183,7 +2183,7 @@ select.dark {
 textarea{
     /* will prevent resizing horizontally */
     resize:vertical;
-    max-height: 400px;
+    max-height: 200px;
 }
 textarea.dark::-webkit-input-placeholder {
   color: #dfdfdf;
