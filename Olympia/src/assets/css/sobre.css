@@ -14,27 +14,30 @@ body {
   overflow-x: hidden;
 }
 
-
 .gradient {
-  position: absolute!important;
+  position: absolute !important;
   width: 100%;
-  height: 220px!important;
+  height: 220px !important;
   right: 10px;
   z-index: 192;
   transition: all 0.8s, border-radius 0.2s;
   border-bottom-left-radius: 1000px;
   border-bottom-right-radius: 1000px;
-  background: linear-gradient(to right, rgb(137, 124, 255),rgb(255, 129, 181))!important;
+  background: linear-gradient(
+    to right,
+    rgb(137, 124, 255),
+    rgb(255, 129, 181)
+  ) !important;
 }
 
-.part-2{
+.part-2 {
   margin-bottom: 0;
   height: fit-content;
   width: 100vw;
   background-color: white;
   overflow: hidden;
 }
-.last{
+.last {
   margin-bottom: 50px;
 }
 .bg {
@@ -51,10 +54,10 @@ body {
   filter: blur(5px);
   transition: all 0.2s;
 }
-.first{
-  margin-top: 300px!important;
+.first {
+  margin-top: 300px !important;
 }
-.title{
+.title {
   position: absolute;
   transition: all 0.2s;
   right: 10px;
@@ -64,7 +67,7 @@ body {
   z-index: 199;
   box-shadow: 0 0 30px black;
 }
-.page-title{
+.page-title {
   font-family: "Bebas-Neue-Regular";
   color: white;
   font-size: 45px;
@@ -72,7 +75,7 @@ body {
   margin-top: 90px;
 }
 
-.image{
+.image {
   position: sticky;
   z-index: 100;
   border-radius: 15px;
@@ -172,7 +175,10 @@ body {
   text-align: center;
 }
 
-#texto2,#texto3,#texto4,#texto5{
+#texto2,
+#texto3,
+#texto4,
+#texto5 {
   display: none;
 }
 
@@ -185,7 +191,6 @@ body {
   margin-bottom: 5%;
   margin-top: 5%;
 }
-
 
 @keyframes mouse {
   from {
@@ -273,14 +278,14 @@ body {
   }
 }
 
-
-.container-right{  /*DIV PARA TODOS OS CARDS*/
+.container-right {
+  /*DIV PARA TODOS OS CARDS*/
   padding: 3%;
   padding-top: 1.5%;
   position: relative;
   margin-left: 38%;
   width: 45%;
-    border-radius: 20px;
+  border-radius: 20px;
   height: max-content;
   box-shadow: 0 0 25px rgb(54, 53, 53);
   vertical-align: top;
@@ -289,7 +294,8 @@ body {
   background-color: white;
 }
 
-.container-left{ /*DIV PARA TO CARD INICIAL*/
+.container-left {
+  /*DIV PARA TO CARD INICIAL*/
   padding: 3%;
   padding-top: 1.5%;
   position: relative;
@@ -304,112 +310,116 @@ body {
   background-color: white;
 }
 
-.text-title{
-  font-family: 'bebas';
+.text-title {
+  font-family: "bebas";
   font-weight: normal;
   text-align: center;
 }
 
-.text-title-principal{
-  font-family: 'bebas';
+.text-title-principal {
+  font-family: "bebas";
   font-size: 2.8em;
   font-weight: normal;
   text-align: center;
   color: rgb(211, 156, 179);
 }
 
-.texto-linha{
-    width: 60%;
-    font-family: "Calibre-regular";
-    text-align: justify;
-    padding-right: 5%;
-    transition: 0.5s all; /*SEMPRE COLOQUE TRANSIÇÕES PARA SUAVIDADE NO SITE!*/
+.texto-linha {
+  width: 60%;
+  font-family: "Calibre-regular";
+  text-align: justify;
+  padding-right: 5%;
+  transition: 0.5s all; /*SEMPRE COLOQUE TRANSIÇÕES PARA SUAVIDADE NO SITE!*/
 }
 
-.texto-principal{
+.texto-principal {
   width: 100%;
   font-family: "Calibre-regular";
   text-align: justify;
   transition: 0.5s all;
 }
 
-.td-imagem{
+.td-imagem {
   width: 30%;
 }
 
-.imagem{
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgb(116, 116, 116);
-    margin-top: 20px;
+.imagem {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(116, 116, 116);
+  margin-top: 20px;
 }
 
-tr td{
+tr td {
   vertical-align: middle;
 }
-.show-on-scroll.is-visible{
+.show-on-scroll.is-visible {
   opacity: 1;
   animation: bounceAndRotate 1s 1 linear alternate;
 }
-.show-on-scroll{
+.show-on-scroll {
   opacity: 0;
-  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-  opacity .35s .3s ease-out;
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+    opacity 0.35s 0.3s ease-out;
   will-change: transform, opacity;
 }
 @keyframes bounceAndRotate {
   0% {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   25% {
-     transform:rotate(00deg);
+    transform: rotate(00deg);
   }
   50% {
-     transform:rotate(-2deg);
+    transform: rotate(-2deg);
   }
   75% {
-     transform:rotate(1deg);
+    transform: rotate(1deg);
   }
   100% {
     transform: rotate(0deg);
   }
 }
-@media only screen and (min-width: 0) and (max-width: 500px){ /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
-  
-  .texto-linha{
-      font-size: 0.5em;
+@media only screen and (min-width: 0) and (max-width: 500px) {
+  /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
+
+  .texto-linha {
+    font-size: 0.5em;
   }
-  .texto-principal{
+  .texto-principal {
     font-size: 0.7em;
   }
 }
 
-@media only screen and (min-width: 501px) and (max-width: 800px){ /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
-  
-  .texto-linha{
+@media only screen and (min-width: 501px) and (max-width: 800px) {
+  /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
+
+  .texto-linha {
     font-size: 0.7em;
   }
-  .texto-principal{
+  .texto-principal {
     font-size: 0.8em;
   }
 }
 
-@media only screen and (min-width: 801px) and (max-width: 1000px){ /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
-  
-  .texto-linha{
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+  /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
+
+  .texto-linha {
     font-size: 0.9em;
   }
-  .texto-principal{
+  .texto-principal {
     font-size: 1.1em;
   }
 }
 
-@media only screen and (min-width: 1001px){ /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
-  
-  .texto-linha{
+@media only screen and (min-width: 1001px) {
+  /*CONTROLA A FONTE CONFORME O TAMANHO DA TELA*/
+
+  .texto-linha {
     font-size: 1.2em;
   }
-  .texto-principal{
+  .texto-principal {
     font-size: 1.3em;
   }
 }

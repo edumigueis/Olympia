@@ -63,7 +63,6 @@
         </div>
         <div class="container-left show-on-scroll black-to-white white-7">
           <table>
-            <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-principal">
                 <h1 class="text-title-principal">CINEMA</h1>

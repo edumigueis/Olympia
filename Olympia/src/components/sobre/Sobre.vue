@@ -20,7 +20,6 @@
 
           <div class="container-left show-on-scroll black-to-white white-7 first">
           <table>
-            <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-principal">
                 <h1 class="text-title-principal">QUEM SOMOS?</h1>

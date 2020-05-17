@@ -58,6 +58,38 @@
   height: 523px !important;
 }
 
+@media only screen and (min-width: 0) and (max-width: 900px) {
+  .container-left table tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-left table tr td{
+    width: 100%;
+  }
+
+  .container-right table tr td{
+    width: 100%;
+  }
+
+  .container-right table tr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.container-right {
+  box-shadow: 0 0 20px rgb(39, 39, 39)!important;
+}
+
+.container-left{
+  box-shadow: 0 0 20px rgb(39, 39, 39)!important;
+}
+
 .menu-container {
   background: linear-gradient(
     136deg,
