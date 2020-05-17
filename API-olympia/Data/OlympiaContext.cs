@@ -13,5 +13,8 @@ namespace API_olympia.Data
         public DbSet<Eventos> Eventos { get; set; }
         public DbSet<Publicacoes> Publicacoes { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<Servicos> Servicos { get; set; }
+        public DbSet<Obras> Obras { get; set; }
+        public DbSet<Curtidas> Curtidas { get; set; }
     }
 }
