@@ -136,7 +136,7 @@ setInterval(() => {
         
                 if (direction == 'baixo') {
                     $('.bg').css('transform', 'translateY(-240px)');
-                    $('.gradient').css('transform', 'translateY(-240px)');
+                    $('.gradient-sobre').css('transform', 'translateY(-240px)');
                     $('.title').css('transform', 'translateY(-240px)');
                 }
                 else {

@@ -12,7 +12,7 @@
 
       <span id="fundo">
         <div class="part-2 white-4">
-          <div class="gradient"></div>
+          <div class="gradient gradient-sobre"></div>
           <div class="bg"></div>
           <div class="title">
             <h1 class="page-title">SOBRE<br />NÓS</h1>
