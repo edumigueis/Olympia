@@ -27,7 +27,7 @@ export const routes = [
 
     { path: '/', component: Welcome, titulo: ' W E L C O M E' },
     { path: '*', component: NotFound, titulo: '4 0 4' },
-    { path: '/home', component: Home, titulo: 'H O M E' },
+    { path: '/home', component: Home, titulo: 'H O M E', meta: { transition: 'zoom' }  },
     { path: '/artes', component: Artes, titulo: 'A R T E S' },
     { path: '/detalhes', component: Obra, titulo: 'O B R A' },
     { path: '/evento', component: Evento, titulo: 'E V E N T O' },
