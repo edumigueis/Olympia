@@ -8,10 +8,10 @@ namespace API_olympia.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ObrasController : Controller
+    public class CurtidasController : Controller
     {
         public IRepository Repo { get; }
-        public ObrasController(IRepository repo)
+        public CurtidasController(IRepository repo)
         {
             this.Repo = repo;
         }
@@ -21,7 +21,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var result = await this.Repo.GetAllObrasAsync();
+                var result = await this.Repo.GetAllCurtidasAsync();
                 return Ok(result);
             }
             catch
@@ -30,12 +30,12 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("{idObra}")]
-        public async Task<IActionResult> Get(int idObra)
+        [HttpGet("{idCurtida}")]
+        public async Task<IActionResult> Get(int idCurtida)
         {
             try
             {
-                var result = await this.Repo.GetAllEventosAsyncById(idObra);
+                var result = await this.Repo.GetAllCurtidasAsyncById(idCurtida);
                 return Ok(result);
             }
             catch
@@ -44,19 +44,19 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpPut("{idObra}")]
-        public async Task<IActionResult> put(int idObra, Obras model)
+        [HttpPut("{idCurtida}")]
+        public async Task<IActionResult> put(int idCurtida, Curtidas model)
         {
             try
             {
-                var Evento = await this.Repo.GetAllArtesAsyncById(idObra);
-                if (Evento == null) return NotFound(); //método do EF
+                var Curtida = await this.Repo.GetAllArtesAsyncById(idCurtida);
+                if (Curtida == null) return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Evento = await this.Repo.GetAllArtesAsyncById(idObra);
-                    return Created($"/api/Obras/{model.idObra}", Obras);
+                    Curtida = await this.Repo.GetAllArtesAsyncById(idCurtida);
+                    return Created($"/api/Curtidas/{model.IdCurtida}", Curtida);
                 }
             }
             catch
@@ -66,14 +66,14 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
-        [HttpDelete("{idObra}")]
-        public async Task<IActionResult> delete(int idObra)
+        [HttpDelete("{idCurtida}")]
+        public async Task<IActionResult> delete(int idCurtida)
         {
             try
             {
-                var Evento = await this.Repo.GetAllArtesAsyncById(idObra);
-                if (Evento == null) return NotFound();
-                this.Repo.Delete(Obras);
+                var Curtida = await this.Repo.GetAllArtesAsyncById(idCurtida);
+                if (Curtida == null) return NotFound();
+                this.Repo.Delete(Curtida);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
@@ -88,7 +88,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> post(Obras model)
+        public async Task<IActionResult> post(Curtidas model)
         {
             try
             {
@@ -97,7 +97,7 @@ namespace API_olympia.Controllers
                 if (await this.Repo.SaveChangesAsync())
                 {
                     //return Ok();
-                    return Created($"/api/Obras/{model.IdObra}", model);
+                    return Created($"/api/Curtidas/{model.IdCurtida}", model);
                 }
             }
             catch
