@@ -430,6 +430,7 @@ setInterval(() => {
       });
       /*-----------------------------------------------------Final Verifications*/
       setInterval(function(){ 
+        if ($("#container-cad-user").length && jaFoiCadUser == false) {
         if ($("#name").val() == "") {
           document.getElementById("signup").disabled = true;
           $("#signup").css('opacity', '0.7');
@@ -463,6 +464,9 @@ setInterval(() => {
           $("#signup").css('opacity', '1');
           $("#signup").css('cursor', 'pointer');
         }
+      }else if (!$("#container-cad-user").length) {
+        jaFoiCadUser = false;
+      }
     }, 100);
     /*-----------------------------------------------------/Final Verifications*/
     });

@@ -1,6 +1,8 @@
 <template>
   <div class="corpo">
-    <router-view></router-view>
+    <vue-page-transition name="fade">
+    <router-view/>
+    </vue-page-transition>
     <div id='forced-click'></div>
   </div>
 </template>
@@ -29,5 +31,16 @@ export default {
     height: 100%;
     margin: 0;
   }
+  .fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.37s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
 </style>
 <script href="/src/assets/js/menu.js"></script>
