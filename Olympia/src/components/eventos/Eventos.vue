@@ -168,7 +168,7 @@
             <button class="card" href="#">
               <div
                 class="card__background"
-                style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"
+                style="background-image: url(/src/assets/images/all-btn.jfif)"
               ></div>
               <div class="card__content">
                 <p class="card__category">Categoria</p>
@@ -178,7 +178,7 @@
             <button class="card" href="#">
               <div
                 class="card__background"
-                style="background-image: url(https://i.pinimg.com/originals/0c/36/d7/0c36d74668bc99fa34a6eeeaaf73cf2f.png)"
+                style="background-image: url(/src/assets/images/paint-btn.png)"
               ></div>
               <div class="card__content">
                 <p class="card__category">Categoria</p>
@@ -188,7 +188,7 @@
             <button class="card" href="#">
               <div
                 class="card__background"
-                style="background-image: url(https://images.unsplash.com/photo-1471306224500-6d0d218be372?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)"
+                style="background-image: url(/src/assets/images/arq-btn.jfif)"
               ></div>
               <div class="card__content">
                 <p class="card__category">Categoria</p>
@@ -201,7 +201,7 @@
             <button class="card" href="#">
               <div
                 class="card__background"
-                style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"
+                style="background-image: url(/src/assets/images/lit-btn.jfif)"
               ></div>
               <div class="card__content">
                 <p class="card__category">Categoria</p>
@@ -214,7 +214,7 @@
             <button class="card" href="#">
               <div
                 class="card__background"
-                style="background-image: url(https://i.pinimg.com/originals/13/8a/a7/138aa796ed18dafa488b51870d0f0113.jpg)"
+                style="background-image: url(/src/assets/images/dnc-btn.jpg)"
               ></div>
               <div class="card__content">
                 <p class="card__category">Categoria</p>
@@ -224,7 +224,7 @@
             <button class="card" href="#">
               <div
                 class="card__background"
-                style="background-image: url(https://s2.best-wallpaper.net/wallpaper/iphone/1801/France-Cannes-film-festival-sea-screen-chairs_iphone_640x960.jpg)"
+                style="background-image: url(/src/assets/images/cin-btn.jpg)"
               ></div>
               <div class="card__content">
                 <p class="card__category">Categoria</p>
@@ -234,7 +234,7 @@
             <button class="card" href="#">
               <div
                 class="card__background"
-                style="background-image: url(https://images.unsplash.com/photo-1548811579-017cf2a4268b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)"
+                style="background-image: url(/src/assets/images/sc-btn.jfif)"
               ></div>
               <div class="card__content">
                 <p class="card__category">Categoria</p>
@@ -247,7 +247,7 @@
             <button class="card" href="#">
               <div
                 class="card__background"
-                style="background-image: url(https://images.wallpaperscraft.com/image/concert_hands_silhouettes_122478_1350x2400.jpg)"
+                style="background-image: url(/src/assets/images/msc-btn.jpg)"
               ></div>
               <div class="card__content">
                 <p class="card__category">Categoria</p>
