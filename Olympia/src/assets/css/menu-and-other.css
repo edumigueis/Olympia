@@ -82,6 +82,19 @@
   }
 }
 
+@media only screen and (min-width: 0) and (max-width: 500px) {
+
+  .container-left table tr td{
+    font-size: 1em!important;
+    padding: 5px;
+  }
+
+  .container-right table tr td{
+    font-size: 1em!important;
+    padding: 5px;
+  }
+}
+
 .container-right {
   box-shadow: 0 0 20px rgb(39, 39, 39)!important;
 }
