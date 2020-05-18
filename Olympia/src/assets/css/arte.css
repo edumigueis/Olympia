@@ -435,6 +435,7 @@ body {
 
 .text-cont-art p{
   padding: 14px;
+  margin: 0;
 }
 .text-cont-art{
   border-radius: 20px;
@@ -535,13 +536,16 @@ body {
 
 @media only screen and (max-width: 409px){
   .text-cont-art{
-    height: 90%;
+    height: 100%;
     width: 100%;
     margin: 0;
   } 
   .card{
     width: 92%;
     margin-left: 4%;
+    margin-right: 0;
+    margin-bottom: 3%;
+    margin-top: 3%;
   }
   .image-link-to-art{
     width: 92%;
