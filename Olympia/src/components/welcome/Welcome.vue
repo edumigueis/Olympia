@@ -113,8 +113,8 @@
         </div>
         <div class="info">
             <p class="title">Bem vindo!</p>
-            <a href='/#/cadastro' class="link start">Começar!</a><br><br>
-            <a href='/#/login' class="link login">Login</a><br><br>
+            <a href='/#/go33265routedefinedat&vue&01routermodule200ok&code0001cadastrotocadastroxestatic0001&contentpartial&no&0olympia' class="link start">Começar!</a><br><br>
+            <a href='/#/go33265routedefinedat&vue&01routermodule200ok&code0001logintologinxestatic0001&contentpartial&no&0olympia' class="link login">Login</a><br><br>
             <a class="link sobre">Sobre</a>
         </div>
 
