@@ -11,19 +11,35 @@
       <meu-dark-mode></meu-dark-mode>
 
       <section id="tab-page" class="white-7 border-bottom-0">
+        <div class="search__container">
+          <input
+            type="text"
+            class="search__input"
+            name="pesquisa"
+            placeholder="Pesquisar..."
+            id="search"
+          />
+          <div class="search-button center-position">
+            <div class="search-icon"></div>
+          </div>
+        </div>
+
         <h1 id="page-name-on-tab" class="black-to-white">Explorar</h1>
         <div id="tab-pages-cont">
           <div
             class="paginate-tab active-tab-p text-gray border-bottom-wh"
             id="to-slide-0"
           >
-            Explorar
+            Principais
           </div>
           <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-1">
-            Aprender
+            Obras
           </div>
           <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-2">
-            Inspirar-se
+            Serviços
+          </div>
+          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-3">
+            Postagens
           </div>
         </div>
 
@@ -147,22 +163,36 @@
           </div>
         </form>
         <div class="right-tab-control">
-          <a href="/#/post">
           <img
-            id="post-tab-ut"
-            class="tab-page-ut white-icon"
-            src="/src/assets/images/plus-sign.png"
-          />
-          </a>
-          <img
-            id="search-tab-ut"
-            class="tab-page-ut white-icon"
-            src="/src/assets/images/search-small.png"
-          /><img
             id="list-tab-ut"
             class="tab-page-ut white-icon"
             src="/src/assets/images/list-ico.png"
           />
+        </div>
+      </section>
+      <section id="search-result">
+        <div class="slider">
+          <div class="slider__slide slider__slide--active" data-slide="1">
+            <img
+              src="https://img.freepik.com/free-vector/abstract-dynamic-pattern-wallpaper-vector_53876-59131.jpg?size=338&ext=jpg"
+            />
+          </div>
+          <div class="slider__slide" data-slide="2">
+            <img
+              src="https://timeline.canaltech.com.br/305150.1400/voce-ja-pode-baixar-os-wallpapers-oficiais-dos-novos-iphones-xs-e-xr.jpg"
+            />
+          </div>
+          <div class="slider__slide" data-slide="3">
+            <img
+              src="https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg"
+            />
+          </div>
+          <div class="slider__slide" data-slide="4">
+            <img
+              src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-1.2.1&w=1000&q=80"
+            />
+          </div>
+          <div class="slider__indicators"></div>
         </div>
       </section>
 
