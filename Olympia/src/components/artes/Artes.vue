@@ -101,19 +101,21 @@
                 A música (do grego μουσική τέχνη - musiké téchne, a arte das
                 musas) é uma forma de arte que se constitui na combinação de
                 vários sons e ritmos, seguindo uma pré-organização ao longo do
-                tempo. 
+                tempo. Dentro das "artes", a música pode ser classificada como
+                uma arte de representação, uma arte sublime, uma arte de
+                espetáculo.
               </p>
             </div>
           </div>
           <div class="card-right  card">
             <div class="text-cont-art white-7 inner-right">
               <p class="black-to-white">
-                É considerada por diversos autores como uma prática
-                cultural e humana. Não se conhece nenhuma civilização ou
-                agrupamento que não possua manifestações musicais próprias.
-                Embora nem sempre seja feita com esse objetivo, a música pode
-                ser considerada como uma forma de arte, considerada por muitos
-                como sua principal função.
+                É considerada por diversos autores como uma prática cultural e
+                humana. Não se conhece nenhuma civilização ou agrupamento que
+                não possua manifestações musicais próprias. Embora nem sempre
+                seja feita com esse objetivo, a música pode ser considerada como
+                uma forma de arte, considerada por muitos como sua principal
+                função.
               </p>
             </div>
           </div>
