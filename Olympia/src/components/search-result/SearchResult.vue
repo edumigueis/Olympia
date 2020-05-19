@@ -24,7 +24,7 @@
           </div>
         </div>
 
-        <h1 id="page-name-on-tab" class="black-to-white">Explorar</h1>
+        <h1 id="page-name-on-tab" class="black-to-white">Principais</h1>
         <div id="tab-pages-cont">
           <div
             class="paginate-tab active-tab-p text-gray border-bottom-wh"

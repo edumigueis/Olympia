@@ -8,7 +8,7 @@ setInterval(() => {
       $("#to-slide-1").removeClass("active-tab-p");
       $("#to-slide-2").removeClass("active-tab-p");
       $("#to-slide-3").removeClass("active-tab-p");
-      $("#page-name-on-tab").text("Destaques");
+      $("#page-name-on-tab").text("Principais");
       goToSlide(1);
     });
     $(document).on("click", "#to-slide-1", function() {

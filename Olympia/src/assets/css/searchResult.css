@@ -684,6 +684,7 @@ input[type="radio"] {
   margin-left: 300px;
   margin-top: -20px;
   position: relative;
+  z-index: 10;
 }
 
 .search-button::before {
@@ -741,19 +742,24 @@ input[type="radio"] {
 .search-button .search-icon {
   transition: all 0.3s ease-in-out;
 }
-
-.search-button.active,
-.search-button:hover {
-  background: linear-gradient(
-    136deg,
-    #fc6c85,
-    #fc6c6d,
-    #fc836c,
-    #fc9b6c,
-    #fc6c9d,
-    #fc6cb5,
-    #fc6ccd
-  );;
+.search-button:hover,
+.search-button:focus {
+  box-shadow: inset 0 -3.8em 0 0 var(--hover);
+  cursor: pointer;
+}
+.search-button {
+  --color: #e4cb58;
+  --hover: #fc6cb5;
+}
+.search-button {
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.search-button:hover,
+.search-button:focus {
+  border-color: var(--hover);
+  color: #fff;
 }
 
 /*-------------------------------------------------------*/
