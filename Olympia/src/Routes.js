@@ -32,7 +32,7 @@ export const routes = [
     { path: '/detalhes', component: Obra, titulo: 'O B R A' },
     { path: '/evento', component: Evento, titulo: 'E V E N T O' },
     { path: '/eventos', component: Eventos, titulo: 'E V E N T O S' },
-    { path: '/search-result', component: SearchResult, titulo: 'P E S Q U I S A', meta: { transition: 'zoom' } },
+    { path: '/pesquisar', component: SearchResult, titulo: 'P E S Q U I S A', meta: { transition: 'zoom' } },
     { path: '/sobre', component: Sobre, titulo: 'S O B R E' },
     { path: '/perfil', component: Perfil, titulo: 'P E R F I L' },
     { path: '/cadastro', component: CadastroUser, titulo: 'C A D A S T R O' },

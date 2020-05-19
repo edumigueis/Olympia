@@ -7,7 +7,7 @@
                 <a id="bordao">CLICK!</a>
               </div>
             </div>
-            <div id="search-ico"></div>
+            <a href="/#/pesquisar"><div id="search-ico"></div></a>
         </div>
 
         <div id="palaces-container">
