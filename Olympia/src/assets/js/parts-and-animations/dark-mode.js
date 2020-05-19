@@ -50,6 +50,8 @@ $(document).ready(function () {
             $("textarea").removeClass("dark");
             $("select").removeClass("dark");
             $(".border-bottom-7").removeClass("dark-mode");
+            $(".dark-search-input").removeClass("dark-mode");
+            $(".dark-search-icon").removeClass("dark-mode");
             $(".filter-invert").removeClass("dark-mode");
             $(".masonry-item").removeClass("dark-mode");
             $(".background-white-to-darkgray").removeClass("dark-mode");
@@ -95,6 +97,8 @@ $(document).ready(function () {
             $("textarea").addClass("dark");
             $("select").addClass("dark");
             $(".border-bottom-7").addClass("dark-mode");
+            $(".dark-search-input").addClass("dark-mode");
+            $(".dark-search-icon").addClass("dark-mode");
             $(".filter-invert").addClass("dark-mode");
             $(".masonry-item").addClass("dark-mode");
             $(".background-white-to-darkgray").addClass("dark-mode");

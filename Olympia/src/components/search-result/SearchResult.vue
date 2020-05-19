@@ -14,12 +14,12 @@
         <div class="search__container">
           <input
             type="text"
-            class="search__input"
+            class="search__input dark-search-input"
             name="pesquisa"
             placeholder="Pesquisar..."
             id="search"
           />
-          <div class="search-button center-position">
+          <div class="search-button center-position dark-search-icon">
             <div class="search-icon"></div>
           </div>
         </div>

@@ -204,3 +204,21 @@ input.dark{
 .dark-mode.inverted{
   filter: invert(95%);
 }
+.dark-mode.dark-search-input{
+  color: #efefef;
+  border-color: #efefef !important;
+}
+.dark-mode.dark-search-input:hover,.dark-mode.dark-search-input:focus{
+  border-left: 0 !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+}
+.dark-mode.dark-search-input::placeholder{
+  color: #efefef;
+}
+.dark-mode.dark-search-icon::after, .dark-mode.dark-search-icon::before{
+  background-color: #efefef !important;
+}
+.dark-mode.dark-search-icon > .search-icon{
+  border-color: #efefef !important;
+}
