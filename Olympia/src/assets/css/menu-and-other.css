@@ -89,6 +89,11 @@
 .container-left{
   box-shadow: 0 0 20px rgb(39, 39, 39)!important;
 }
+#map {
+  height: 400%;
+  position: fixed;
+  top: 0;
+}
 
 .menu-container {
   background: linear-gradient(

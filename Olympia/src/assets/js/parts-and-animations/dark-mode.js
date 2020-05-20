@@ -9,7 +9,7 @@ function sleep(milliseconds) {
 
 $(document).ready(function () {
 
-    $(document.body).on("click",".dark-mode-activators",function () {
+    $(document.body).on("click", ".dark-mode-activators", function () {
         if ($("#fullpage").hasClass("night")) {
             $("#fullpage").fadeIn(1000)
             $("#fullpage").removeClass("night");
@@ -37,6 +37,7 @@ $(document).ready(function () {
             $(".white-6").removeClass("dark-mode");
             $(".white-3").removeClass("dark-mode");
             $(".white-2").removeClass("dark-mode");
+            $("iframe").removeClass("dark-mode");
             $(".white-7").removeClass("dark-mode");
             $(".dark-slideshow").removeClass("dark-mode");
             $(".text-gray").removeClass("dark-mode");
@@ -81,6 +82,7 @@ $(document).ready(function () {
             $(".white-3").addClass("dark-mode");
             $(".white-2").addClass("dark-mode");
             $(".white-7").addClass("dark-mode");
+            $("iframe").addClass("dark-mode");
             $(".text-gray").addClass("dark-mode");
             $(".white").addClass("dark-mode");
             $(".transparent").addClass("dark-mode");
@@ -105,4 +107,6 @@ $(document).ready(function () {
             $('.dark-mode-activators').text('MODO CLARO');
         }
     });
+
+   
 })

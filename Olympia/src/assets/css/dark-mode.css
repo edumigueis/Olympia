@@ -10,6 +10,10 @@
   background-color: #202020 !important;
 }
 
+iframe.dark-mode{
+  filter: saturate(20%) brightness(70%);
+}
+
 .dark-mode.white {
   background-color: #494949 !important;
 }
