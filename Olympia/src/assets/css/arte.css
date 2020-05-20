@@ -5,14 +5,16 @@
 @font-face {
   font-family: "Calibre-Bold";
   src: url("/src/assets/fonts/calibri-bold-2.ttf");
-  src: url("/src/assets/fonts/CalibreWeb-Bold.eot?#iefix") format("embedded-opentype");
+  src: url("/src/assets/fonts/CalibreWeb-Bold.eot?#iefix")
+    format("embedded-opentype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Calibre-Regular";
   src: url("/src/assets/fonts/calibri-7.ttf");
-  src: url("/src/assets/fonts/CalibreWeb-Regular.eot?#iefix") format("embedded-opentype");
+  src: url("/src/assets/fonts/CalibreWeb-Regular.eot?#iefix")
+    format("embedded-opentype");
 }
 @font-face {
   font-family: "Bebas-Neue-Bold";
@@ -47,7 +49,7 @@ body {
   padding: 0 !important;
   font-family: "Calibre-Regular", sans-serif;
 }
-.title-art{
+.title-art {
   width: 100%;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -57,7 +59,7 @@ body {
   padding-left: 2.5%;
   transition: 0.3s all;
 }
-.right-title{
+.right-title {
   text-align: end;
   padding-right: 2.5%;
   padding-left: 0 !important;
@@ -103,7 +105,7 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-.card{
+.card {
   min-width: 220px;
 }
 .bg {
@@ -215,12 +217,12 @@ body {
   flex-wrap: wrap;
   z-index: 2;
   opacity: 0;
-  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-              opacity .3s .25s ease-out;
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+    opacity 0.3s 0.25s ease-out;
   will-change: transform, opacity;
 }
-.image-link-to-art{
-  width: calc(100%/3);
+.image-link-to-art {
+  width: calc(100% / 3);
   height: fit-content;
   z-index: 400000000000;
   cursor: pointer;
@@ -229,35 +231,37 @@ body {
   justify-content: center;
   border-radius: 21px;
 }
-.title-link-to-art{
+.title-link-to-art {
   text-decoration: none !important;
   color: #222;
   cursor: pointer;
+  font-family: "Bebas-Neue-regular";
+  font-weight: bolder;
   transition: 0.3s all;
 }
-.title-link-to-art:hover{
+.title-link-to-art:hover {
   font-size: 1.1em;
 }
 .line-img {
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 .image-link-to-art:hover img {
   transform: scale(1.02);
-  box-shadow: 2px 2px 7px 7px rgba(100, 100, 100, .2);
+  box-shadow: 2px 2px 7px 7px rgba(100, 100, 100, 0.2);
 }
-.line-img{
+.line-img {
   width: 100%;
   object-fit: cover;
 }
-.inner-center{
+.inner-center {
   margin-bottom: -30%;
   background-color: rgb(230, 230, 230);
 }
-.inner-left{
+.inner-left {
   margin-top: -70%;
   background-color: rgb(230, 230, 230);
 }
-.inner-right{
+.inner-right {
   margin-top: -70%;
   background-color: rgb(230, 230, 230);
   width: 90%;
@@ -268,22 +272,22 @@ body {
   margin-left: 3.5%;
   margin-right: 3.5%;
 }
-.line.is-visible{
+.line.is-visible {
   opacity: 1;
   animation: bounceAndRotate 1s 1 linear alternate;
 }
 @keyframes bounceAndRotate {
   0% {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   25% {
-     transform:rotate(00deg);
+    transform: rotate(00deg);
   }
   50% {
-     transform:rotate(-2deg);
+    transform: rotate(-2deg);
   }
   75% {
-     transform:rotate(1deg);
+    transform: rotate(1deg);
   }
   100% {
     transform: rotate(0deg);
@@ -291,7 +295,7 @@ body {
 }
 .card-right {
   background-color: transparent;
-  width: calc(100%/3);
+  width: calc(100% / 3);
   text-align: justify;
   text-indent: 40px;
   position: relative;
@@ -303,7 +307,7 @@ body {
 }
 
 .card-center {
-  width: calc(100%/3);
+  width: calc(100% / 3);
   background-color: transparent;
   text-align: justify;
   text-indent: 40px;
@@ -316,7 +320,7 @@ body {
 }
 
 .card-left {
-  width: calc(100%/3);
+  width: calc(100% / 3);
   background-color: transparent;
   text-align: justify;
   text-indent: 40px;
@@ -433,51 +437,50 @@ body {
   }
 }
 
-.text-cont-art p{
+.text-cont-art p {
   padding: 14px;
   margin: 0;
 }
-.text-cont-art{
+.text-cont-art {
   border-radius: 20px;
   width: 93%;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+  margin-left: 3.5%;
+  height: fit-content;
+  margin-right: 3.5%;
 }
-@media only screen and (max-width: 800px){
-  .text-cont-art{
-    height: 80%;
+@media only screen and (max-width: 800px) {
+  .text-cont-art {
     width: 95%;
     margin-left: 3.5%;
     margin-right: 3.5%;
   }
-  .inner-right{
+  .inner-right {
     margin-top: -25%;
   }
-  .inner-center{
-    margin-bottom: -5%
+  .inner-center {
+    margin-bottom: -5%;
   }
-  .inner-left{
+  .inner-left {
     margin-top: -25%;
   }
 }
-@media only screen and (min-width: 801px) and (max-width: 1050px){
-  .text-cont-art{
+@media only screen and (min-width: 801px) and (max-width: 1050px) {
+  .text-cont-art {
     width: 95%;
     margin-left: 2.5%;
     margin-right: 2.5%;
   }
 }
-@media only screen and (min-width: 601px) and (max-width: 799px){
-  .text-cont-art{
-    height: 80%;
+@media only screen and (min-width: 601px) and (max-width: 799px) {
+  .text-cont-art {
     width: 100%;
     margin: 0;
   }
-  .card{
+  .card {
     width: 80%;
     margin-left: 10%;
   }
-  .image-link-to-art{
+  .image-link-to-art {
     width: 80%;
     margin-left: 10%;
     max-height: 450px !important;
@@ -487,30 +490,29 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .line-img{
+  .line-img {
     width: 100%;
     object-fit: cover;
     margin: 0 !important;
   }
-  .title-art{
+  .title-art {
     padding-left: 10%;
   }
-  .right-title{
+  .right-title {
     padding-right: 10%;
     padding-left: 0;
   }
 }
-@media only screen and (min-width: 410px) and (max-width: 600px){
-  .text-cont-art{
-    height: 86%;
+@media only screen and (min-width: 410px) and (max-width: 600px) {
+  .text-cont-art {
     width: 100%;
     margin: 0;
   }
-  .card{
+  .card {
     width: 86%;
     margin-left: 7%;
   }
-  .image-link-to-art{
+  .image-link-to-art {
     width: 86%;
     margin-left: 7%;
     max-height: 400px !important;
@@ -520,34 +522,33 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .line-img{
+  .line-img {
     width: 100%;
     object-fit: cover;
     margin: 0 !important;
   }
-  .title-art{
+  .title-art {
     padding-left: 7%;
   }
-  .right-title{
+  .right-title {
     padding-right: 7%;
     padding-left: 0;
   }
 }
 
-@media only screen and (max-width: 409px){
-  .text-cont-art{
-    height: 100%;
+@media only screen and (max-width: 409px) {
+  .text-cont-art {
     width: 100%;
     margin: 0;
-  } 
-  .card{
+  }
+  .card {
     width: 92%;
     margin-left: 4%;
     margin-right: 0;
     margin-bottom: 3%;
     margin-top: 3%;
   }
-  .image-link-to-art{
+  .image-link-to-art {
     width: 92%;
     margin-left: 4%;
     max-height: 380px !important;
@@ -557,15 +558,15 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .line-img{
+  .line-img {
     width: 100%;
     object-fit: cover;
     margin: 0 !important;
   }
-  .title-art{
+  .title-art {
     padding-left: 4%;
   }
-  .right-title{
+  .right-title {
     padding-right: 4%;
     padding-left: 0;
   }

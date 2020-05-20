@@ -36,6 +36,8 @@ $(document).ready(function () {
 
     $('body').on('click', '#nav-bars', function () {
         $("#menu-items").fadeIn("slow");
+        $('html').css('overflow-y', 'hidden');
+        $('body').css('overflow-y', 'hidden');
         $('#footer').fadeOut();
     })
 
@@ -43,15 +45,13 @@ $(document).ready(function () {
         if ($('.table-contato').css('display') == 'none') {
             $("#menu-items").fadeOut("slow");
             $('#footer').fadeIn();
+            $('body').css('overflow-y', 'auto');
+            $('html').css('overflow-y', 'auto');
         }
         else {
             $('.table-contato').fadeOut('slow');
-            $('#container-menu').css({
-                "-webkit-filter": "blur(" + 0 + "px)",
-                "filter": "blur(" + 0 + "px)",
-                "-moz-filter": "blur(" + 0 + "px)",
-                "-o-filter": "blur(" + 0 + "px)",
-                "-ms-filter": "blur(" + 0 + "px)",
+            $('#menu-items').css({
+                "filter": "brightness(100%)",
             });
         }
     })
@@ -59,12 +59,8 @@ $(document).ready(function () {
     $(document.body).on('click', '.a-contact', function () {
 
         $('.table-contato').fadeIn("slow");
-        $('#container-menu').css({
-            "-webkit-filter": "blur(" + 10 + "px)",
-            "filter": "blur(" + 10 + "px)",
-            "-moz-filter": "blur(" + 10 + "px)",
-            "-o-filter": "blur(" + 10 + "px)",
-            "-ms-filter": "blur(" + 10 + "px)",
+        $('#menu-items').css({
+            "filter": "brightness(40%)",
         });
     })
 
@@ -144,42 +140,62 @@ $(document).ready(function () {
     $(document.body).on('click', '.img-artes-link', function () {
         if ($('#container-artes').length)
             $('#menu-items').fadeOut('slow');
-        else
+        else {
             document.location.href = '/#/artes'
+            $('body').css('overflow-y', 'auto');
+            $('html').css('overflow-y', 'auto');
+        }
     })
 
     $(document.body).on('click', '.img-home-link', function () {
         if ($('#container-home').length)
             $('#menu-items').fadeOut('slow');
-        else
+        else {
             document.location.href = '/#/home'
+            $('body').css('overflow-y', 'auto');
+            $('html').css('overflow-y', 'auto');
+        }
     })
 
     $(document.body).on('click', '.img-sobre-link', function () {
         if ($('#container-sobre').length)
             $('#menu-items').fadeOut('slow');
-        else
+        else {
             document.location.href = '/#/sobre'
+            $('body').css('overflow-y', 'auto');
+            $('html').css('overflow-y', 'auto');
+        }
     })
 
     $(document.body).on('click', '.img-eventos-link', function () {
         if ($('#container-eventos').length)
             $('#menu-items').fadeOut('slow');
-        else
+        else {
             document.location.href = '/#/eventos'
+            $('body').css('overflow-y', 'auto');
+            $('html').css('overflow-y', 'auto');
+        }
     })
 
     $(document.body).on('click', '.img-perfil-link', function () {
         if ($('#container-perfil').length)
             $('#menu-items').fadeOut('slow');
-        else
+        else {
             document.location.href = '/#/perfil'
+            $('body').css('overflow-y', 'auto');
+            $('html').css('overflow-y', 'auto');
+        }
     })
 
     $(document.body).on('click', '.artes-link', function () {
         if ($('#container-artes').length) {
             $('#menu-items').fadeOut('slow');
         }
+    })
+
+    $(document.body).on('click', '.menu-link', function () {
+        $('body').css('overflow-y', 'auto');
+        $('html').css('overflow-y', 'auto');
     })
 
     $(document.body).on('click', '.home-link', function () {
