@@ -11,7 +11,6 @@
 }
 
 .module {
-  /* Demo-Specific Styles */
   background: #eaeaea;
   display: flex;
   align-items: center;
@@ -24,8 +23,13 @@
   flex: 1 1 200px;
   border-radius: 20px;
   box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.18s all ease-in;
 }
-
+.module:hover{
+    background: #c9c9c9c9;
+    transform: scale(1.015);
+}
 /* If Grid is supported, remove the margin we set for the fallback */
 @supports (display: grid) {
   .module {
@@ -34,7 +38,9 @@
 }
 
 .wrapper-sec{
-    margin-top: 90px;
+    margin-top: 50px;
+    margin: 0.5em;
+    margin-bottom: 100px;
 }
 .img-wp {
   width: 120px;
@@ -44,7 +50,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: yellowgreen;
+  background: linear-gradient(
+    90deg,
+    #ccff33,
+    #d1f13e,
+    #d5e349,
+    #dad553,
+    #dfc75e,
+    #e3b969,
+    #e8ac74,
+    #ec9e7f,
+    #f1908a,
+    #f68294,
+    #fa749f,
+    #ff66aa
+  );
   margin-left: 10px;
 }
 .img-wp img {
@@ -73,11 +93,15 @@
     .title{
         margin-left: 30px;
     }
+    h1{
+        font-size: 1.5em;
+    }
 }
 @media only screen and (min-width: 725px) and (max-width: 900px){
     .title{
         margin-left: 30px;
     }
+
 }
 @media only screen and (min-width: 1090px) and (max-width: 1270px){
     .title{
@@ -96,4 +120,9 @@
     .title{
         font-size: 1.8em;
     }
+}
+h1{
+    margin-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+    text-indent: 1em;
 }
