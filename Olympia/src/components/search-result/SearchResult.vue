@@ -48,6 +48,9 @@
           <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-3">
             Postagens
           </div>
+          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-4">
+            Users
+          </div>
         </div>
 
         <form id="app-cover">
@@ -197,6 +200,11 @@
           <div class="slider__slide" data-slide="4">
             <img
               src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-1.2.1&w=1000&q=80"
+            />
+          </div>
+          <div class="slider__slide" data-slide="5">
+            <img
+              src="https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg"
             />
           </div>
           <div class="slider__indicators"></div>

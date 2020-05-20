@@ -8,6 +8,7 @@ setInterval(() => {
       $("#to-slide-1").removeClass("active-tab-p");
       $("#to-slide-2").removeClass("active-tab-p");
       $("#to-slide-3").removeClass("active-tab-p");
+      $("#to-slide-4").removeClass("active-tab-p");
       $("#page-name-on-tab").text("Principais");
       goToSlide(1);
     });
@@ -16,6 +17,7 @@ setInterval(() => {
       $("#to-slide-0").removeClass("active-tab-p");
       $("#to-slide-2").removeClass("active-tab-p");
       $("#to-slide-3").removeClass("active-tab-p");
+      $("#to-slide-4").removeClass("active-tab-p");
       $("#page-name-on-tab").text("Obras");
       goToSlide(2);
     });
@@ -24,6 +26,7 @@ setInterval(() => {
       $("#to-slide-1").removeClass("active-tab-p");
       $("#to-slide-0").removeClass("active-tab-p");
       $("#to-slide-3").removeClass("active-tab-p");
+      $("#to-slide-4").removeClass("active-tab-p");
       $("#page-name-on-tab").text("Serviços");
       goToSlide(3);
     });
@@ -32,8 +35,18 @@ setInterval(() => {
       $("#to-slide-1").removeClass("active-tab-p");
       $("#to-slide-2").removeClass("active-tab-p");
       $("#to-slide-0").removeClass("active-tab-p");
+      $("#to-slide-4").removeClass("active-tab-p");
       $("#page-name-on-tab").text("Postagens");
       goToSlide(4);
+    });
+    $(document).on("click", "#to-slide-4", function() {
+      $("#to-slide-3").removeClass("active-tab-p");
+      $("#to-slide-1").removeClass("active-tab-p");
+      $("#to-slide-2").removeClass("active-tab-p");
+      $("#to-slide-0").removeClass("active-tab-p");
+      $("#to-slide-4").addClass("active-tab-p");
+      $("#page-name-on-tab").text("Users");
+      goToSlide(5);
     });
     $(".search-button").click(function() {
       $(this).toggleClass("active");

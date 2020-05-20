@@ -762,7 +762,18 @@ input[type="radio"] {
   border-color: var(--hover);
   color: #fff;
 }
-
+@media only screen and (min-width: 1101px) and (max-width: 1170px){
+  .paginate-tab{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 1171px) and (max-width: 1300px){
+  .paginate-tab{
+    font-size: 1.3em;
+  }
+}
 /*-------------------------------------------------------*/
 
 /*Search Result*/
