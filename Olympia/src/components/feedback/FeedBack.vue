@@ -28,7 +28,7 @@
                 <img src="https://image.flaticon.com/icons/svg/25/25694.svg" />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title">Feed</h2></div>
+            <div class="flex-part"><h2 class="title black-to-white">Feed</h2></div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -39,7 +39,7 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title">Daily Contents</h2></div>
+            <div class="flex-part"><h2 class="title black-to-white">Daily Contents</h2></div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -50,7 +50,7 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title">Perfil</h2></div>
+            <div class="flex-part"><h2 class="title black-to-white">Perfil</h2></div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -61,7 +61,7 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title">Login</h2></div>
+            <div class="flex-part"><h2 class="title black-to-white">Login</h2></div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -72,7 +72,7 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title">Conteúdos</h2></div>
+            <div class="flex-part"><h2 class="title black-to-white">Conteúdos</h2></div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -81,7 +81,7 @@
                 <img src="https://img.icons8.com/all/500/settings.png" />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title">Configurações</h2></div>
+            <div class="flex-part"><h2 class="title black-to-white">Configurações</h2></div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -90,7 +90,7 @@
                 <img src="/src/assets/images/plus-sign.png" />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title">Postar</h2></div>
+            <div class="flex-part"><h2 class="title black-to-white">Postar</h2></div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -101,7 +101,7 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title">Eventos</h2></div>
+            <div class="flex-part"><h2 class="title black-to-white">Eventos</h2></div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -112,12 +112,13 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title">Outro</h2></div>
+            <div class="flex-part"><h2 class="title black-to-white">Outro</h2></div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
         </div>
       </section>
       <div class="wrapper-form">
+        <div class="return-btn filter-invert"></div>
         <svg version="1.1" id="Layer_1" xml:space="preserve">
           <circle class="shape" />
           <circle class="shape" />
@@ -126,15 +127,15 @@
           <circle class="shape" />
         </svg>
         <div class="frm-wrapper">
-          <div class="container">
-            <h2 class="title-form">Detalhe o Problema:</h2>
+          <div class="container white-7">
+            <h2 class="title-form black-to-white">Detalhe o Problema:</h2>
             <form>
-              <textarea class="email" placeholder="Detalhes..." id="det"/>
+              <textarea class="desc" placeholder="Detalhes..." id="det"/>
               <br />
               <label class="file-lb" for="file-input"
-                ><i class="fa fa-paperclip"></i>
+                ><i class="black-to-white fa fa-paperclip"></i>
               </label>
-              <i class="fa fa-close"></i>
+              <i class="black-to-white fa fa-close"></i>
               <input
                 type="file"
                 id="file-input"

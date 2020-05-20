@@ -226,3 +226,11 @@ input.dark{
 .dark-mode.dark-search-icon > .search-icon{
   border-color: #efefef !important;
 }
+.desc.dark{
+  background-color: #535353 !important;
+  color: #efefef !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.desc.dark::placeholder{
+  color: #efefef !important;
+}

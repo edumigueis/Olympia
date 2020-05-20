@@ -23,6 +23,8 @@ import ArtesDigitais from './components/artes-digitais/ArtesDigitais.vue';
 import SearchResult from './components/search-result/SearchResult.vue';
 import NotFound from './components/not-found/NotFound.vue';
 import FeedBack from './components/feedback/FeedBack.vue';
+import Sugestoes from './components/sugestoes/Sugestoes.vue';
+import Denuncia from './components/denuncia/Denuncia.vue';
 
 export const routes = [
 
@@ -47,7 +49,9 @@ export const routes = [
     { path: '/artes-cenicas', component: ArtesCenicas, titulo: 'A R T E S C E N I C A S'},
     { path: '/pintura', component: Pintura, titulo: 'P I N T U R A'},
     { path: '/fotografia', component: Fotografia, titulo: 'F O T O G R A F I A'},
+    { path: '/sugestoes', component: Sugestoes, titulo: 'S U G E R I R'},
     { path: '/feedback', component: FeedBack, titulo: 'F E E D B A C K'},
+    { path: '/denuncia', component: Denuncia, titulo: 'D E N U N C I A R'},
     { path: '/artes-digitais', component: ArtesDigitais, titulo: 'A R T E S D I G I T A I S'},
     { path: '/musica', component: Musica, titulo: 'M U S I C A'}
 
