@@ -17,7 +17,7 @@
                 <a class="menu-link artes-link" href="/#/artes">A R T E S</a>
             </div>
             <div class="menu-item">
-                <img class="ico img-contato-link" src="/src/assets/images/contact.png">
+                <img class="ico img-contato-link a-contact" src="/src/assets/images/contact.png">
                 <a class="menu-link a-contact">C O N T A T O</a>
             </div>
             <div class="menu-item">
