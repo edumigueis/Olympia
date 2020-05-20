@@ -204,7 +204,7 @@
           </div>
           <div class="slider__slide" data-slide="5">
             <img
-              src="https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg"
+              src="https://i.pinimg.com/originals/9f/84/08/9f840870827d675f49307c62609fbcaf.jpg"
             />
           </div>
           <div class="slider__indicators"></div>
