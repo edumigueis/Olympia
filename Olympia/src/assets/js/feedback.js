@@ -63,8 +63,22 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
     $("#file-input").on("change", function() {
       readURL(this);
     });
+    /*-----------------------------------------------------Final Verifications*/
+    setInterval(function () {
+        if ($("#det").val().length < 50) {
+          document.getElementById("registrar").disabled = true;
+          $("#registrar").css("opacity", "0.7");
+          $("#registrar").css("cursor", "unset");
+        } else{
+          document.getElementById("registrar").disabled = false;
+          $("#registrar").css("opacity", "1");
+          $("#registrar").css("cursor", "pointer");
+        }
+    }, 100);
+    /*-----------------------------------------------------/Final Verifications*/
   }
   else if (!$("#container-feedback").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
     jaFoiFB = false;
   }
 }, 100);
+

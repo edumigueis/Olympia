@@ -129,7 +129,7 @@
           <div class="container">
             <h2 class="title-form">Detalhe o Problema:</h2>
             <form>
-              <textarea class="email" placeholder="Detalhes..." />
+              <textarea class="email" placeholder="Detalhes..." id="det"/>
               <br />
               <label class="file-lb" for="file-input"
                 ><i class="fa fa-paperclip"></i>
@@ -144,7 +144,7 @@
               <br />
               <div class="img-mask"><img id="img-file" src=""></div>
               <div class="btn-cont">
-                <input type="submit" class="register" value="Registrar" />
+                <input type="submit" class="register" value="Registrar" id="registrar" />
               </div>
             </form>
           </div>
