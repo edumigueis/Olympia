@@ -201,7 +201,7 @@ svg {
   display: block;
   margin-bottom: 80px;
   width: 500px;
-  height: 360px;
+  height: 380px;
   background: #fff;
   border-radius: 20px;
   overflow: hidden;
@@ -249,6 +249,8 @@ textarea {
   border: none;
   max-height: 80px;
   max-width: 80%;
+  min-width: 79%;
+  min-height: 50px;
 }
 textarea::placeholder {
   -webkit-transform: translateY(0px);
@@ -398,4 +400,12 @@ input[type='file'] {
 .img-mask img{
   width: 100%;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 600px){
+  .container{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }

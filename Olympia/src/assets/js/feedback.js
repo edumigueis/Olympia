@@ -56,7 +56,7 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
 
     $(".fa-close").on("click", function(){
       $("#img-file").attr("src", "");
-      $(".container").css("height", "360px");
+      $(".container").css("height", "380px");
       $(".fa-close").css('opacity','0')
     });
 
