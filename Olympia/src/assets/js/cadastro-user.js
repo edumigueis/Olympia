@@ -47,10 +47,10 @@ var selectedImage;
 var isSelImg = false;
 setInterval(() => {
   if ($("#container-cad-user").length && jaFoiCadUser == false) {
-    $(function() {
+    $(function () {
       var firstLet = null;
 
-      $("#name").focusout(function() {
+      $("#name").focusout(function () {
         if (isSelImg == false) {
           if ($("#name").val() != "") {
             $(".zmdi.zmdi-palette").fadeIn();
@@ -98,19 +98,19 @@ setInterval(() => {
         for (var i = 0; i < colorList.length; i++) {
           $("#color-picker").append(
             '<li class="color-item" data-hex="' +
-              "#" +
-              colorList[i] +
-              '" style="background-color:' +
-              "#" +
-              colorList[i] +
-              ';"></li>'
+            "#" +
+            colorList[i] +
+            '" style="background-color:' +
+            "#" +
+            colorList[i] +
+            ';"></li>'
           );
         }
       });
-      $("body").on("click", function() {
+      $("body").on("click", function () {
         $("#color-picker").fadeOut();
       });
-      $(".ui-widget-overlay").on("click", function() {
+      $(".ui-widget-overlay").on("click", function () {
         if (selectedImage != null) {
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
@@ -118,8 +118,8 @@ setInterval(() => {
           $(".is-same-cont").css("background-color", "transparent");
           $(".signup-image").html(
             "<figure class='default-prof-user'><img src='" +
-              selectedImage +
-              "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            selectedImage +
+            "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           isSelImg = true;
           $(".bin").fadeIn();
@@ -149,7 +149,7 @@ setInterval(() => {
           $(".error-modal").css("opacity", "0");
         }
       });
-      $(".bin").on("click", function() {
+      $(".bin").on("click", function () {
         $(".zmdi.zmdi-palette").fadeIn();
         $("#hexcolor").fadeIn();
         if ($("#name").val() != "") {
@@ -182,14 +182,14 @@ setInterval(() => {
           $(".bin").fadeOut();
         }
       });
-      $(".hexcolor").on("click", function() {
+      $(".hexcolor").on("click", function () {
         $("#color-picker").css("display", "none");
       });
-      var readURL = function(input) {
+      var readURL = function (input) {
         if (input.files && input.files[0]) {
           var reader = new FileReader();
 
-          reader.onload = function(e) {
+          reader.onload = function (e) {
             $("#profile-pic").attr("src", e.target.result);
             selectedImage = e.target.result;
           };
@@ -198,16 +198,16 @@ setInterval(() => {
         }
       };
 
-      $("#file").on("change", function() {
+      $("#file").on("change", function () {
         readURL(this);
       });
 
-      $(".call-picker").click(function(event) {
+      $(".call-picker").click(function (event) {
         event.stopPropagation();
         $("#color-picker").fadeIn();
         $("#color-picker")
           .children("li")
-          .click(function() {
+          .click(function () {
             var codeHex = $(this).data("hex");
 
             $(".color-holder").css("background-color", codeHex);
@@ -215,7 +215,7 @@ setInterval(() => {
             $("#hexcolor").val(codeHex);
           });
       });
-      $("#name").focusin(function() {
+      $("#name").focusin(function () {
         if (
           $("#user-prof-image").attr("src") == "/src/assets/images/user-ico.png"
         ) {
@@ -233,28 +233,28 @@ setInterval(() => {
           return;
         }
       });
-      $("#tel").focusin(function() {
+      $("#tel").focusin(function () {
         $("#tel").css("border-radius", "0");
         $("#tel").css("border-top", 0);
         $("#tel").css("border-left", 0);
         $("#tel").css("border-right", 0);
         $("#tel").css("border-bottom", "1px solid #999");
       });
-      $("#pass").focusin(function() {
+      $("#pass").focusin(function () {
         $("#pass").css("border-radius", "0");
         $("#pass").css("border-top", 0);
         $("#pass").css("border-left", 0);
         $("#pass").css("border-right", 0);
         $("#pass").css("border-bottom", "1px solid #999");
       });
-      $("#re_pass").focusin(function() {
+      $("#re_pass").focusin(function () {
         $("#re_pass").css("border-radius", "0");
         $("#re_pass").css("border-top", 0);
         $("#re_pass").css("border-left", 0);
         $("#re_pass").css("border-right", 0);
         $("#re_pass").css("border-bottom", "1px solid #999");
       });
-      $("#email").focusin(function() {
+      $("#email").focusin(function () {
         $("#email").css("border-radius", "0");
         $("#email").css("border-top", 0);
         $("#email").css("border-left", 0);
@@ -262,15 +262,15 @@ setInterval(() => {
         $("#email").css("border-bottom", "1px solid #999");
       });
 
-      $("#hexcolor").on("click", function() {
+      $("#hexcolor").on("click", function () {
         $("#color-picker").css("display", "none");
         $("#user-let-img").css("background", this.value);
       });
 
-      $("#pass").on("keyup", function() {
+      $("#pass").on("keyup", function () {
         forcaSenha($(this).val());
       });
-      $("#user").on("keyup", function() {
+      $("#user").on("keyup", function () {
         var user = $("#user").val();
         if (user == "") {
           return;
@@ -285,7 +285,7 @@ setInterval(() => {
           $("#user").val("");
         }
       });
-      $("#name").on("focusout", function() {
+      $("#name").on("focusout", function () {
         var name = $("#name").val();
         var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
         if (name == "") {
@@ -299,7 +299,7 @@ setInterval(() => {
           $("#name").val("");
         }
       });
-      $("#tel").on("focusout", function() {
+      $("#tel").on("focusout", function () {
         var tele = $("#tel").val();
         var regName = /(([+][(]?[0-9]{1,3}[)]?)|([(]?[0-9]{4}[)]?))\s*[)]?[-\s\.]?[(]?[0-9]{1,3}[)]?([-\s\.]?[0-9]{3})([-\s\.]?[0-9]{3,4})/g;
         if (tele == "") {
@@ -315,7 +315,7 @@ setInterval(() => {
           $("#tel").val("");
         }
       });
-      $("#email").on("focusout", function() {
+      $("#email").on("focusout", function () {
         var email = $("#email").val();
         if (email == "") {
           return;
@@ -385,7 +385,7 @@ setInterval(() => {
 
         $(".locker-cont").css("background-color", color);
       }
-      $("#pass").on("focusout", function() {
+      $("#pass").on("focusout", function () {
         var color = $(".locker-cont").css("background-color");
         if ($("#pass").val() == "") {
           $(".locker-cont").css("background-color", "transparent");
@@ -413,10 +413,10 @@ setInterval(() => {
         }
       });
 
-      $("#re_pass").on("focusin", function() {
+      $("#re_pass").on("focusin", function () {
         $(".is-same-cont").css("background-color", "rgb(237, 41, 57)");
       });
-      $("#pass, #re_pass").on("keyup", function() {
+      $("#pass, #re_pass").on("keyup", function () {
         if ($("#pass").val() == $("#re_pass").val() && $("#pass").val() != "") {
           $(".is-same-cont").css("background-color", "#2eb82e");
         }
@@ -426,12 +426,12 @@ setInterval(() => {
           $(".is-same-cont").css("background-color", "transparent");
         }
       });
-      $(".signup-image-link").on("click", function() {
+      $(".signup-image-link").on("click", function () {
         $(".ui-widget-overlay").css("display", "block");
         $("#pick-image-modal").css("display", "block");
       });
       /*-----------------------------------------------------Final Verifications*/
-      setInterval(function() {
+      setInterval(function () {
         if ($("#container-cad-user").length && jaFoiCadUser == false) {
           if ($("#name").val() == "") {
             document.getElementById("signup").disabled = true;

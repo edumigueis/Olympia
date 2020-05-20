@@ -44,40 +44,56 @@ var colorList = [
 ];
 var JaFoiForCad = false;
 var selectedImage;
+var isSelImg = false;
 setInterval(() => {
   if ($("#container-perfil").length && jaFoiPerUser == false) {
     $(function () {
       var firstLet = null;
 
       $("#name").focusout(function () {
-        $(".zmdi.zmdi-palette").fadeIn();
-        $("#hexcolor").fadeIn();
-        if ($("#name").val() != "") {
-          $(".default-prof-user").empty();
-          firstLet = $("#name")
-            .val()
-            .charAt(0);
-          firstLet = firstLet.toUpperCase();
-          var vzs = 0;
-          vzs++;
-          if (vzs == 1) $("#user-let-img").css("display", "block");
-          $(".hexcolor").css("display", "block");
-          $(".color-holder").css("display", "block");
-          $("#user-let-img").html(
-            "<p class='prof-user-letter'>" + firstLet + "</p>"
-          );
-          $(".signup-image").css("margin-top", 0);
-          $("#user-let-img").css("margin-bottom", "60px");
-          firstLet = null;
-
+        if (isSelImg == false) {
+          if ($("#name").val() != "") {
+            $(".zmdi.zmdi-palette").fadeIn();
+            $("#hexcolor").fadeIn();
+            $(".default-prof-user").empty();
+            firstLet = $("#name")
+              .val()
+              .charAt(0);
+            firstLet = firstLet.toUpperCase();
+            $(".bin").css("display", "none");
+            var vzs = 0;
+            vzs++;
+            if (vzs == 1) $("#user-let-img").css("display", "block");
+            $(".hexcolor").css("display", "block");
+            $(".color-holder").css("display", "block");
+            $("#user-let-img").html(
+              "<p class='prof-user-letter'>" + firstLet + "</p>"
+            );
+            $(".signup-image").css("margin-top", 0);
+            $("#user-let-img").css("margin-bottom", "60px");
+            firstLet = null;
+          } else {
+            $("#user-let-img").css("display", "none");
+            $(".hexcolor").css("display", "none");
+            $(".color-holder").css("display", "none");
+            $(".signup-image").html(
+              "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            );
+            $(".bin").fadeOut();
+          }
         } else {
-          $("#user-let-img").css("display", "none");
-          $(".hexcolor").css("display", "none");
-          $(".color-holder").css("display", "none");
-          $(".signup-image").html(
-            "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
-          );
-          $(".bin").fadeOut();
+          var name = $("#name").val();
+          var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+          if (name == "") {
+            return;
+          }
+          if (!regName.test(name)) {
+            $(".error-modal").css("display", "block");
+            $(".error-modal").css("opacity", "1");
+            $(".ui-widget-overlay").css("display", "block");
+            $(".warn").html("Deve ser fornecido o nome completo.");
+            $("#name").val("");
+          }
         }
         for (var i = 0; i < colorList.length; i++) {
           $("#color-picker").append(
@@ -89,9 +105,7 @@ setInterval(() => {
             colorList[i] +
             ';"></li>'
           );
-
         }
-
       });
       $("body").on("click", function () {
         $("#color-picker").fadeOut();
@@ -108,6 +122,7 @@ setInterval(() => {
             "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           $(".bin").fadeIn();
+          isSelImg = true;
           $(".ui-widget-overlay").css('display', 'none');
           $("#pick-image-modal").css('display', 'none');
           $(".error-modal").css('display', 'none');
@@ -156,6 +171,7 @@ setInterval(() => {
           );
           $(".signup-image").css("margin-top", 0);
           $("#user-let-img").css("margin-bottom", "60px");
+          isSelImg = false;
           $(".bin").fadeOut();
           firstLet = null;
         } else {
@@ -165,6 +181,7 @@ setInterval(() => {
           $(".signup-image").html(
             "<figure class='default-prof-user'><img src='/src/assets/images/user-ico.png' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
+          isSelImg = false;
           $(".bin").fadeOut();
         }
       });
@@ -448,30 +465,42 @@ setInterval(() => {
       });
       /*-----------------------------------------------------Final Verifications*/
       setInterval(function () {
-        if ($("#name").val() == "") {
-          document.getElementById("signup").disabled = true;
-          $("#signup").css('opacity', '0.7');
-          $("#signup").css('cursor', 'unset');
-        } else if ($("#user").val() == "") {
-          document.getElementById("signup").disabled = true;
-          $("#signup").css('opacity', '0.7');
-          $("#signup").css('cursor', 'unset');
-        } else if ($("#email").val() == "") {
-          document.getElementById("signup").disabled = true;
-          $("#signup").css('opacity', '0.7');
-          $("#signup").css('cursor', 'unset');
-        } else if ($("#pass").val() == "") {
-          document.getElementById("signup").disabled = true;
-          $("#signup").css('opacity', '0.7');
-          $("#signup").css('cursor', 'unset');
-        } else if ($("#re_pass").val() == "") {
-          document.getElementById("signup").disabled = true;
-          $("#signup").css('opacity', '0.7');
-          $("#signup").css('cursor', 'unset');
-        } else if ($("#pass").val() != $("#re_pass").val()) {
-          document.getElementById("signup").disabled = true;
-          $("#signup").css('opacity', '0.7');
-          $("#signup").css('cursor', 'unset');
+        if ($("#container-cad-user").length && jaFoiCadUser == false) {
+          if ($("#name").val() == "") {
+            document.getElementById("signup").disabled = true;
+            $("#signup").css("opacity", "0.7");
+            $("#signup").css("cursor", "unset");
+          } else if ($("#user").val() == "") {
+            document.getElementById("signup").disabled = true;
+            $("#signup").css("opacity", "0.7");
+            $("#signup").css("cursor", "unset");
+          } else if ($("#email").val() == "") {
+            document.getElementById("signup").disabled = true;
+            $("#signup").css("opacity", "0.7");
+            $("#signup").css("cursor", "unset");
+          } else if ($("#pass").val() == "") {
+            document.getElementById("signup").disabled = true;
+            $("#signup").css("opacity", "0.7");
+            $("#signup").css("cursor", "unset");
+          } else if ($("#re_pass").val() == "") {
+            document.getElementById("signup").disabled = true;
+            $("#signup").css("opacity", "0.7");
+            $("#signup").css("cursor", "unset");
+          } else if ($("#pass").val() != $("#re_pass").val()) {
+            document.getElementById("signup").disabled = true;
+            $("#signup").css("opacity", "0.7");
+            $("#signup").css("cursor", "unset");
+          } else if ($("#agree-term").is(":checked") == false) {
+            document.getElementById("signup").disabled = true;
+            $("#signup").css("opacity", "0.7");
+            $("#signup").css("cursor", "unset");
+          } else {
+            document.getElementById("signup").disabled = false;
+            $("#signup").css("opacity", "1");
+            $("#signup").css("cursor", "pointer");
+          }
+        } else if (!$("#container-cad-user").length) {
+          jaFoiCadUser = false;
         }
       }, 100);
       /*-----------------------------------------------------/Final Verifications*/
@@ -491,3 +520,5 @@ setInterval(() => {
     }
   }
 }, 500);
+
+

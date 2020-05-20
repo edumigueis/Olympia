@@ -141,6 +141,41 @@ $(document).ready(function () {
         }
     })
 
+    $(document.body).on('click', '.img-artes-link', function () {
+        if ($('#container-artes').length)
+            $('#menu-items').fadeOut('slow');
+        else
+            document.location.href = '/#/artes'
+    })
+
+    $(document.body).on('click', '.img-home-link', function () {
+        if ($('#container-home').length)
+            $('#menu-items').fadeOut('slow');
+        else
+            document.location.href = '/#/home'
+    })
+
+    $(document.body).on('click', '.img-sobre-link', function () {
+        if ($('#container-sobre').length)
+            $('#menu-items').fadeOut('slow');
+        else
+            document.location.href = '/#/sobre'
+    })
+
+    $(document.body).on('click', '.img-eventos-link', function () {
+        if ($('#container-eventos').length)
+            $('#menu-items').fadeOut('slow');
+        else
+            document.location.href = '/#/eventos'
+    })
+
+    $(document.body).on('click', '.img-perfil-link', function () {
+        if ($('#container-perfil').length)
+            $('#menu-items').fadeOut('slow');
+        else
+            document.location.href = '/#/perfil'
+    })
+
     $(document.body).on('click', '.artes-link', function () {
         if ($('#container-artes').length) {
             $('#menu-items').fadeOut('slow');

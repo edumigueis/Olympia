@@ -1686,7 +1686,7 @@
                 <div class="signup-content bio-signup-content">
                   <div class="signup-form">
                     <h2 class="form-title black-to-white">
-                      Alterar bio/biografia
+                      Conte-nos mais...
                     </h2>
                     <form
                       class="register-form bio-register-form"

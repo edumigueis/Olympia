@@ -1051,7 +1051,7 @@ figure {
   );
   margin-left: 2%;
   padding-top: 3%;
-  padding-bottom: 3%;
+  padding-bottom: 4.5%;
   font-size: 16px;
   color: white;
   display: block;
@@ -1062,6 +1062,8 @@ figure {
   margin: auto;
   font-family: 'poppins';
 }
+
+
 .signup-image-link:hover {
   cursor: pointer;
   opacity: 0.7;
