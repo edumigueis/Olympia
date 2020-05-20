@@ -4,7 +4,7 @@
       <title>F E E D B A C K</title>
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
       <link rel="stylesheet" href="/src/assets/css/feedback.css" />
-      
+
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -118,11 +118,7 @@
         </div>
       </section>
       <div class="wrapper-form">
-        <svg
-          version="1.1"
-          id="Layer_1"
-          xml:space="preserve"
-        >
+        <svg version="1.1" id="Layer_1" xml:space="preserve">
           <circle class="shape" />
           <circle class="shape" />
           <circle class="shape" />
@@ -130,20 +126,28 @@
           <circle class="shape" />
         </svg>
         <div class="frm-wrapper">
-        <div class="container">
-          <h2 class="title-form">Detalhe o Problema:</h2>
-          <form>
-            <textarea class="email" placeholder="Detalhes..." />
-            <br />
-            <label class="file-lb" for='selecao-arquivo'><i class="fa fa-paperclip"></i></label>
-            <input type="file" id="selecao-arquivo"/>
-          </form>
-          <br />
-          <div class="btn-cont">
-              <input type="submit" class="register" value="Registrar">
+          <div class="container">
+            <h2 class="title-form">Detalhe o Problema:</h2>
+            <form>
+              <textarea class="email" placeholder="Detalhes..." />
+              <br />
+              <label class="file-lb" for="file-input"
+                ><i class="fa fa-paperclip"></i>
+              </label>
+              <i class="fa fa-close"></i>
+              <input
+                type="file"
+                id="file-input"
+                multiple
+                accept="image/*"
+              />
+              <br />
+              <div class="img-mask"><img id="img-file" src=""></div>
+              <div class="btn-cont">
+                <input type="submit" class="register" value="Registrar" />
+              </div>
+            </form>
           </div>
-          
-        </div>
         </div>
       </div>
 

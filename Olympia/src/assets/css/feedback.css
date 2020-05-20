@@ -207,6 +207,7 @@ svg {
   overflow: hidden;
   z-index: 1;
   box-shadow: 3px 3px 9px 9px lightgray;
+  transition: 0.3s all;
 }
 
 .title-form {
@@ -343,8 +344,58 @@ h3 {
 input[type='file'] {
   display: none
 }
-
+.register{
+  width: 180px;
+  font-size: 1.5em;
+  color: #222;
+  background: linear-gradient(
+    90deg,
+    #ccff33,
+    #d1f13e,
+    #d5e349,
+    #dad553,
+    #dfc75e,
+    #e3b969,
+    #e8ac74,
+    #ec9e7f,
+    #f1908a,
+    #f68294,
+    #fa749f,
+    #ff66aa
+  );
+  filter: blur(0.1px);
+  cursor: pointer;
+  border-radius: 18px;
+}
+.register:hover{
+  color: #222 !important;
+  border-bottom: none !important;
+  transform: scale(1.02);
+}
 .fa-paperclip{
   color: #222;
   font-size: 2em !important;
+}
+.fa-close{
+  color: #222;
+  font-size: 2em !important;
+  opacity: 0;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.img-mask{
+  overflow: hidden;
+  width: 160px;
+  max-height: 130px;
+  border-radius: 16px;
+  margin-left: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.img-mask img{
+  width: 100%;
+  object-fit: cover;
 }
