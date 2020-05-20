@@ -4,7 +4,14 @@
       <title>P E S Q U I S A</title>
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
       <link rel="stylesheet" href="/src/assets/css/searchResult.css" />
-
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      />
       <meu-menu-bar></meu-menu-bar>
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
@@ -23,7 +30,7 @@
             <div class="search-icon"></div>
           </div>
         </div>
-
+ 
         <h1 id="page-name-on-tab" class="black-to-white">Principais</h1>
         <div id="tab-pages-cont">
           <div
