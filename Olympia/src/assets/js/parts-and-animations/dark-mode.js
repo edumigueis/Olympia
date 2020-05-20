@@ -53,6 +53,7 @@ $(document).ready(function () {
             $(".border-bottom-7").removeClass("dark-mode");
             $(".dark-search-input").removeClass("dark-mode");
             $(".dark-search-icon").removeClass("dark-mode");
+            $(".module").removeClass("dark-mode");
             $(".filter-invert").removeClass("dark-mode");
             $(".masonry-item").removeClass("dark-mode");
             $(".background-white-to-darkgray").removeClass("dark-mode");
@@ -101,6 +102,7 @@ $(document).ready(function () {
             $(".border-bottom-7").addClass("dark-mode");
             $(".dark-search-input").addClass("dark-mode");
             $(".dark-search-icon").addClass("dark-mode");
+            $(".module").addClass("dark-mode");
             $(".filter-invert").addClass("dark-mode");
             $(".masonry-item").addClass("dark-mode");
             $(".background-white-to-darkgray").addClass("dark-mode");

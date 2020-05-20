@@ -1816,6 +1816,7 @@ input {
   width: 100%;
   border: none !important;
   font-family: "Poppins", sans-serif;
+  min-height: 35px;
 }
 /* Reset Select */
 select {
