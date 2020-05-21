@@ -42,7 +42,7 @@ function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
   x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
+  y = x[currentTab].getElementsByClassName("input");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
@@ -84,6 +84,14 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
         nextPrev(-1)
     });
 
+    $('#username').on('keypress', function (event) {
+        var regex = new RegExp("^[a-zA-Z0-9_]+$");
+        var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+        if (!regex.test(key)) {
+           event.preventDefault();
+           return false;
+        }
+    })
     
   }
   else if (!$("#container-denuncia").length) { //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL

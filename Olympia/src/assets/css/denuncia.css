@@ -26,8 +26,18 @@
     width: 100%;
     font-size: 17px;
     font-family: 'Montserrat', sans-serif;
-    border: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
     box-sizing: border-box;
+  }
+  input:focus {
+    border-bottom: 1px solid #888888;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    outline: 0;
   }
   
   /* Mark input boxes that gets an error on validation: */
@@ -38,6 +48,8 @@
   /* Hide all steps by default: */
   .tab {
     display: none;
+    font-size: 1.3em;
+    box-sizing: border-box;
   }
   
   button {
@@ -49,7 +61,7 @@
     color: #ffffff;
     border: none;
     padding: 10px 20px;
-    font-size: 17px;
+    font-size: 1.2em;
     font-family: 'Montserrat' sans-serif;
     cursor: pointer;
     border-radius: 12px;
@@ -114,7 +126,7 @@
   }
   
   label {
-    height: 100%;
+    height: 80%;
     display: block;
     background: white;
     border: 2px solid #20df80;
@@ -154,9 +166,12 @@
     font-weight: 900;
   }
   
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 900px) {
     section {
       flex-direction: column;
+    }
+    label{
+        height: 100%;
     }
   }
 

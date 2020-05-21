@@ -29,6 +29,8 @@
               placeholder="Username de quem deseja denunciar..."
               oninput="this.className = ''"
               name="fname"
+              id="username"
+              class="input"
             />
           </p>
           <p>
@@ -88,6 +90,7 @@
               placeholder="Descreva o que aconteceu, por favor."
               oninput="this.className = ''"
               name="desc"
+              class="input"
             />
           </p>
         </div>
