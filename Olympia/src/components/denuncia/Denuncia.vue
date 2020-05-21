@@ -18,11 +18,18 @@
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
-
-      <form id="regForm" action="/action_page.php">
-        <h1>Denunciar</h1>
-        <!-- One "tab" for each step in the form: -->
-        <div class="tab">
+      <div class="wrapper">
+        <svg version="1.1" id="Layer_1" xml:space="preserve">
+          <circle class="shape" />
+          <circle class="shape" />
+          <circle class="shape" />
+          <circle class="shape" />
+          <circle class="shape" />
+        </svg>
+      <form id="regForm" class="white-7 cont" action="post">
+        <h1 class="black-to-white">Denunciar</h1>
+        <!-- One "tab white-7 black-to-white" for each step in the form: -->
+        <div class="tab white-7 black-to-white">
           Identificação:
           <p>
             <input
@@ -41,7 +48,7 @@
             />
           </p>
         </div>
-        <div class="tab">
+        <div class="tab white-7 black-to-white">
           Por que você está denunciando essa publicação?
           <section class="radio-wrapper">
             <div>
@@ -52,7 +59,7 @@
                 value="1"
                 checked
               />
-              <label for="control_01">
+              <label class="white-2" for="control_01">
                 <h2>É span</h2>
                 <p>
                   A conta publica anúncios excessivos ou aparece de maneira
@@ -62,7 +69,7 @@
             </div>
             <div>
               <input type="radio" id="control_02" name="select" value="2" />
-              <label for="control_02">
+              <label class="white-2" for="control_02">
                 <h2>Apresenta dados falsos</h2>
                 <p>
                   É fraudulenta, compartilha dados falsos ou não apresenta
@@ -72,7 +79,7 @@
             </div>
             <div>
               <input type="radio" id="control_03" name="select" value="3" />
-              <label for="control_03">
+              <label class="white-2" for="control_03">
                 <h2>É imprópria</h2>
                 <p>
                   Apresenta conteúdo sensível, ilegal ou apresenta discurso de
@@ -82,7 +89,7 @@
             </div>
           </section>
         </div>
-        <div class="tab">
+        <div class="tab white-7 black-to-white">
           Descição:
           <p>
             <input
@@ -94,7 +101,7 @@
             />
           </p>
         </div>
-        <div class="tab">
+        <div class="tab white-7 black-to-white">
           <p class="confirmation">
             Clique em confirmar para sua denúncia ser registrada. Ela será
             analizada pelo Olympia, e se for pertinente as ações cabíveis serão
@@ -116,6 +123,7 @@
           <span class="step"></span>
         </div>
       </form>
+      </div>
 
       <meu-footer></meu-footer>
     </div>
