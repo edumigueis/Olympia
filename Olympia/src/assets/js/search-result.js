@@ -27,7 +27,7 @@ setInterval(() => {
       $("#to-slide-0").removeClass("active-tab-p");
       $("#to-slide-3").removeClass("active-tab-p");
       $("#to-slide-4").removeClass("active-tab-p");
-      $("#page-name-on-tab").text("Serviços");
+      $("#page-name-on-tab").text("Aulas");
       goToSlide(3);
     });
     $(document).on("click", "#to-slide-3", function() {

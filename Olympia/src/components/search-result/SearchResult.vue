@@ -30,7 +30,7 @@
             <div class="search-icon"></div>
           </div>
         </div>
- 
+
         <h1 id="page-name-on-tab" class="black-to-white">Principais</h1>
         <div id="tab-pages-cont">
           <div
@@ -43,7 +43,7 @@
             Obras
           </div>
           <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-2">
-            Serviços
+            Aulas
           </div>
           <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-3">
             Postagens
@@ -183,29 +183,58 @@
       <section id="search-result">
         <div class="slider">
           <div class="slider__slide slider__slide--active" data-slide="1">
-            <img
-              src="https://img.freepik.com/free-vector/abstract-dynamic-pattern-wallpaper-vector_53876-59131.jpg?size=338&ext=jpg"
-            />
+            <div class="bg"></div>
+            <h1 class="title-routes">Rotas:</h1>
+            <div class="routes">
+              <div class="1-route route">
+                <h1 class="title-route">Artes</h1>
+                <div class="img-wp">
+                  <div class="arrow"></div>
+                </div>
+              </div>
+              <div class="2-route route">
+                <h1 class="title-route">Arquitetura</h1>
+                <div class="img-wp">
+                  <div class="arrow"></div>
+                </div>
+              </div>
+              <div class="3-route route">
+                <h1 class="title-route">Cinema</h1>
+                <div class="img-wp">
+                  <div class="arrow"></div>
+                </div>
+              </div>
+              <div class="4-route route">
+                <h1 class="title-route">Home</h1>
+                <div class="img-wp">
+                  <div class="arrow"></div>
+                </div>
+              </div>
+              <div class="5-route route">
+                <h1 class="title-route">Home</h1>
+                <div class="img-wp">
+                  <div class="arrow"></div>
+                </div>
+              </div>
+              <div class="6-route route">
+                <h1 class="title-route">Home</h1>
+                <div class="img-wp">
+                  <div class="arrow"></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="slider__slide" data-slide="2">
-            <img
-              src="https://timeline.canaltech.com.br/305150.1400/voce-ja-pode-baixar-os-wallpapers-oficiais-dos-novos-iphones-xs-e-xr.jpg"
-            />
+            <div class="bg"></div>
           </div>
           <div class="slider__slide" data-slide="3">
-            <img
-              src="https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg"
-            />
+            <div class="bg"></div>
           </div>
           <div class="slider__slide" data-slide="4">
-            <img
-              src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-1.2.1&w=1000&q=80"
-            />
+            <div class="bg"></div>
           </div>
           <div class="slider__slide" data-slide="5">
-            <img
-              src="https://i.pinimg.com/originals/9f/84/08/9f840870827d675f49307c62609fbcaf.jpg"
-            />
+            <div class="bg"></div>
           </div>
           <div class="slider__indicators"></div>
         </div>
