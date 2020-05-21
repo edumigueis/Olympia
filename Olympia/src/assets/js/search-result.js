@@ -92,3 +92,17 @@ setInterval(() => {
     jaFoiSearch = false;
   }
 }, 100);
+
+setInterval(() => {
+
+  if ($("#container-search-result").length) {
+    var height = $('.container-content').css('height');
+    height = height.toString().substring(0, height.length - 2);
+    height = parseInt(height) + 100;
+    height = height + "px";
+    $('.slider').css('min-height', height )
+    $('.slider-1').css('min-height',height)
+    $('.slider__slide').css('min-height', height)
+  } 
+
+}, 100);
