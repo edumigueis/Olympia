@@ -31,6 +31,7 @@
     border-top: 0;
     border-right: 0;
     box-sizing: border-box;
+    background-color: inherit;
   }
   input:focus {
     border-bottom: 1px solid #888888;
@@ -38,6 +39,7 @@
     border-top: 0;
     border-right: 0;
     outline: 0;
+    background-color: inherit;
   }
   
   /* Mark input boxes that gets an error on validation: */
@@ -137,7 +139,9 @@
     box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
     position: relative;
   }
-  
+  label p{
+      font-weight: normal !important;
+  }
   input[type="radio"]:checked + label {
     background: #20df80;
     color: white;
@@ -180,5 +184,73 @@
       font-weight: normal !important;
       text-align: justify;
       text-indent: 1.6rem;
+  }
+  .dark-mode-page{
+    background-color: #2b2b2b;
+  } 
+  .white-7.cont.dark-mode{
+    box-shadow: 3px 3px 9px 9px #666666 !important;
+  }
+
+  :root {
+    --color-1: #ccff33;
+    --color-2: #dad553;
+    --color-3: #e3b969;
+    --color-4: #f1908a;
+    --color-5: #ff66aa;
+  }
+  
+  .shape {
+    r: 80;
+    animation: moveCircle 1550ms ease-in-out both infinite;
+  }
+  
+  .shape:nth-child(1) {
+    cx: 0;
+    fill: var(--color-1);
+  }
+  
+  .shape:nth-child(2) {
+    cx: 180;
+    fill: var(--color-2);
+    animation-delay: 150ms;
+  }
+  
+  .shape:nth-child(3) {
+    cx: 360;
+    fill: var(--color-3);
+    animation-delay: 250ms;
+  }
+  
+  .shape:nth-child(4) {
+    cx: 540;
+    fill: var(--color-4);
+    animation-delay: 350ms;
+  }
+  
+  .shape:nth-child(5) {
+    cx: 720;
+    fill: var(--color-5);
+    animation-delay: 450ms;
+  }
+  
+  @keyframes moveCircle {
+    50% {
+      cy: 150;
+    }
+  }
+  svg {
+    position: fixed;
+    top: 200px;
+    left: calc((100vw - 720px)/2);
+    display: block;
+    width: 720px;
+    height: 500px;
+    overflow: visible;
+    z-index: -2;
+  }
+  .wrapper{
+      width: 100vw;
+      height: 102vh;
   }
   
