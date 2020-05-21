@@ -37,7 +37,7 @@
             <p class="subtitulo text-gray">ALGUMA DENÚNCIA?</p>
             <p class="texto text-gray-2">
               Acesse a página de<br />
-              <a class='link-contact' href="/#/denuncias">denúncias</a>
+              <a class='link-contact' href="/#/denuncia">denúncias</a>
             </p>
           </div>
         </div>

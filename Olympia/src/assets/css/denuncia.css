@@ -41,9 +41,35 @@
     outline: 0;
     background-color: inherit;
   }
-  
+  textarea {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 1px solid #aaaaaa;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    box-sizing: border-box;
+    background-color: inherit;
+    max-width: 100%;
+    max-height: 250px;
+    min-height: 61px;
+    min-width: 99%;
+  }
+  textarea:focus {
+    border-bottom: 1px solid #888888;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    outline: 0;
+    background-color: inherit;
+  }
   /* Mark input boxes that gets an error on validation: */
   input.invalid {
+    background-color: #ffdddd;
+  }
+  textarea.invalid {
     background-color: #ffdddd;
   }
   
@@ -67,6 +93,7 @@
     font-family: 'Montserrat' sans-serif;
     cursor: pointer;
     border-radius: 12px;
+    outline: none;
   }
   
   button:hover {
@@ -251,7 +278,7 @@
   }
   .wrapper{
       width: 100vw;
-      height: 102vh;
+      min-height: 102vh;
   }
   .checkbox {
     --background: #fff;

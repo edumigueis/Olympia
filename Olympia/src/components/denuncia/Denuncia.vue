@@ -38,6 +38,7 @@
                 name="fname"
                 id="username"
                 class="input"
+                maxlength="30"
               />
             </p>
             <div class="choose">
@@ -98,12 +99,12 @@
           <div class="tab white-7 black-to-white">
             Descição:
             <p>
-              <input
-                type="text"
+              <textarea
                 placeholder="Descreva o que aconteceu, por favor."
                 oninput="this.className = ''"
                 name="desc"
                 class="input"
+                maxlength="1000"
               />
             </p>
           </div>
