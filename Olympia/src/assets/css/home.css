@@ -2655,19 +2655,16 @@ figure.snip1321:after {
   pointer-events: none;
 }
 
-figure.snip1321:hover figcaption,
-figure.snip1321.hover figcaption {
-  -webkit-transform: translateY(-50%);
+figure.snip1321:hover figcaption{
   transform: translateY(-50%);
   opacity: 1;
-  -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-figure.snip1321:hover:after,
-figure.snip1321.hover:after {
-  -webkit-transform: rotateX(0);
-  transform: rotateX(0);
-  opacity: 0.9;
+
+.snip1321 figcaption{
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .masonry-item {
   display: inline-block;
@@ -2757,6 +2754,25 @@ figure.snip1321.hover:after {
   -webkit-transition-duration: 0s;
           transition-duration: 0s;
 }
+
+.trigger{ 
+  float: left;
+  background: linear-gradient(to left,rgba(255, 233, 249, 0.623),rgba(165, 165, 165, 0.616));
+  color: inherit;
+  padding-left: 10px!important;
+  padding-right: 10px!important;
+  padding-top: 5px!important;
+  padding-bottom: 5px!important;
+  border-radius: 12px!important;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+  font-family: 'Poppins';
+  transform: translateX(-50px);
+}
+
 
 .heart:hover{
   opacity: 0.8;
