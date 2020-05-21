@@ -10,9 +10,12 @@
   margin: 20px auto;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: 200px!important;
 }
 
-
+.container-content{
+  height: fit-content;
+}
 .bg {
   background-image: url("/src/assets/images/circles.png");
   position: fixed;
@@ -60,8 +63,8 @@
   font-family: "Calibre-Regular";
   font-size: 2.2em;
   color: rgb(243, 240, 240);
-  margin: 30px;
-  margin-left: 80px;
+  margin-top: 80px;
+  margin-left: 180px;
 }
 
 .img-wp {
@@ -880,10 +883,22 @@ input[type="radio"] {
 }
 .slider {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   background: rgb(88, 88, 88);
   overflow: hidden;
+  z-index:-10;
+}
+.slider-1{
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+}
+.container-routes{
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 .slider__wrap {
   position: absolute;
@@ -913,24 +928,16 @@ input[type="radio"] {
 .slider__slide {
   position: absolute;
   left: 0;
-  height: 100vh;
+  height: 80vh;
+  bottom: 10px;
   width: 100vw;
-  -webkit-transition: -webkit-transform 600ms
-    cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: -webkit-transform 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: transform 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: transform 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86),
-    -webkit-transform 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -webkit-transition-delay: 600ms;
-  transition-delay: 600ms;
-  pointer-events: none;
-  z-index: 0;
+  z-index: 999;
   background: linear-gradient(to bottom,rgb(113, 54, 190),rgb(255, 245, 110))
 }
 .slider__slide--active {
   -webkit-transform: translatex(0%);
   transform: translatex(0%);
-  z-index: 99;
+  z-index: 9999;
 }
 .slider__slide--active .slider__wrap {
   -webkit-transform: translateX(0);

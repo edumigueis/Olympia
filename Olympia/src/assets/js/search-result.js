@@ -3,7 +3,7 @@ setInterval(() => {
   //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
   if ($("#container-search-result").length && jaFoiSearch == false) {
     jaFoiSearch = true;
-    $(document).on("click", "#to-slide-0", function() {
+    $(document).on("click", "#to-slide-0", function () {
       $("#to-slide-0").addClass("active-tab-p");
       $("#to-slide-1").removeClass("active-tab-p");
       $("#to-slide-2").removeClass("active-tab-p");
@@ -12,7 +12,7 @@ setInterval(() => {
       $("#page-name-on-tab").text("Principais");
       goToSlide(1);
     });
-    $(document).on("click", "#to-slide-1", function() {
+    $(document).on("click", "#to-slide-1", function () {
       $("#to-slide-1").addClass("active-tab-p");
       $("#to-slide-0").removeClass("active-tab-p");
       $("#to-slide-2").removeClass("active-tab-p");
@@ -21,7 +21,7 @@ setInterval(() => {
       $("#page-name-on-tab").text("Obras");
       goToSlide(2);
     });
-    $(document).on("click", "#to-slide-2", function() {
+    $(document).on("click", "#to-slide-2", function () {
       $("#to-slide-2").addClass("active-tab-p");
       $("#to-slide-1").removeClass("active-tab-p");
       $("#to-slide-0").removeClass("active-tab-p");
@@ -30,7 +30,7 @@ setInterval(() => {
       $("#page-name-on-tab").text("Aulas");
       goToSlide(3);
     });
-    $(document).on("click", "#to-slide-3", function() {
+    $(document).on("click", "#to-slide-3", function () {
       $("#to-slide-3").addClass("active-tab-p");
       $("#to-slide-1").removeClass("active-tab-p");
       $("#to-slide-2").removeClass("active-tab-p");
@@ -39,7 +39,7 @@ setInterval(() => {
       $("#page-name-on-tab").text("Postagens");
       goToSlide(4);
     });
-    $(document).on("click", "#to-slide-4", function() {
+    $(document).on("click", "#to-slide-4", function () {
       $("#to-slide-3").removeClass("active-tab-p");
       $("#to-slide-1").removeClass("active-tab-p");
       $("#to-slide-2").removeClass("active-tab-p");
@@ -48,7 +48,7 @@ setInterval(() => {
       $("#page-name-on-tab").text("Users");
       goToSlide(5);
     });
-    $(".search-button").click(function() {
+    $(".search-button").click(function () {
       $(this).toggleClass("active");
     });
     for (var i = 1; i <= $(".slider__slide").length; i++) {
@@ -56,7 +56,7 @@ setInterval(() => {
         '<div class="slider__indicator" data-slide="' + i + '"></div>'
       );
     }
-    setTimeout(function() {
+    setTimeout(function () {
       $(".slider__wrap").addClass("slider__wrap--hacked");
     }, 1000);
 
@@ -91,4 +91,18 @@ setInterval(() => {
     //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
     jaFoiSearch = false;
   }
+}, 100);
+
+setInterval(() => {
+
+  if ($("#container-search-result").length) {
+    var height = $('.container-content').css('height');
+    height = height.toString().substring(0, height.length - 2);
+    height = parseInt(height) + 100;
+    height = height + "px";
+    $('.slider').css('min-height', height )
+    $('.slider-1').css('min-height',height)
+    $('.slider__slide').css('min-height', height)
+  } 
+
 }, 100);
