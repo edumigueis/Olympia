@@ -127,7 +127,7 @@
     cursor: not-allowed;
   }
   
-  label {
+  label.white-2 {
     height: 80%;
     display: block;
     background: white;
@@ -193,11 +193,11 @@
   }
 
   :root {
-    --color-1: #ccff33;
-    --color-2: #dad553;
-    --color-3: #e3b969;
-    --color-4: #f1908a;
-    --color-5: #ff66aa;
+    --color-1: rgba(63, 94, 251, 1);
+    --color-2: #6e58d7;
+    --color-3: #ad50a7;
+    --color-4: #dd4a83;
+    --color-5: rgba(252, 70, 107, 1);
   }
   
   .shape {
@@ -211,25 +211,25 @@
   }
   
   .shape:nth-child(2) {
-    cx: 180;
+    cx: 240;
     fill: var(--color-2);
     animation-delay: 150ms;
   }
   
   .shape:nth-child(3) {
-    cx: 360;
+    cx: 480;
     fill: var(--color-3);
     animation-delay: 250ms;
   }
   
   .shape:nth-child(4) {
-    cx: 540;
+    cx: 720;
     fill: var(--color-4);
     animation-delay: 350ms;
   }
   
   .shape:nth-child(5) {
-    cx: 720;
+    cx: 960;
     fill: var(--color-5);
     animation-delay: 450ms;
   }
@@ -242,9 +242,9 @@
   svg {
     position: fixed;
     top: 200px;
-    left: calc((100vw - 720px)/2);
+    left: calc((100vw - 1000px)/2);
     display: block;
-    width: 720px;
+    width: 1000px;
     height: 500px;
     overflow: visible;
     z-index: -2;
@@ -252,5 +252,138 @@
   .wrapper{
       width: 100vw;
       height: 102vh;
+  }
+  .checkbox {
+    --background: #fff;
+    --border: #D1D6EE;
+    --border-hover: #BBC1E1;
+    --border-active: #1E2235;
+    --tick: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  .checkbox input,
+  .checkbox svg {
+    width: 21px;
+    height: 21px;
+    display: block;
+    margin: 0 !important;
+    float: unset !important;
+  }
+
+  .checkbox input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    outline: none;
+    background: var(--background);
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-transition: box-shadow .3s;
+    transition: box-shadow .3s;
+    box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+  }
+  .checkbox input:hover {
+    --s: 2px;
+    --b: var(--border-hover);
+  }
+  .checkbox input:checked {
+    --b: var(--border-active);
+  }
+  .checkbox svg {
+    pointer-events: none;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--stroke, var(--border-active));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    -webkit-transform: scale(var(--scale, 1)) translateZ(0);
+            transform: scale(var(--scale, 1)) translateZ(0);
+  }
+  .checkbox.path input:checked {
+    --s: 2px;
+    -webkit-transition-delay: .4s;
+            transition-delay: .4s;
+  }
+  .checkbox.path input:checked + svg {
+    --a: 16.1 86.12;
+    --o: 102.22;
+  }
+  .checkbox.path svg {
+    z-index: initial;
+    stroke-dasharray: var(--a, 86.12);
+    stroke-dashoffset: var(--o, 86.12);
+    -webkit-transition: stroke-dasharray .6s, stroke-dashoffset .6s;
+    transition: stroke-dasharray .6s, stroke-dashoffset .6s;
+  }
+  .checkbox.bounce {
+    --stroke: var(--tick);
+  }
+  .checkbox.bounce input:checked {
+    --s: 11px;
+  }
+  .checkbox.bounce input:checked + svg {
+    -webkit-animation: bounce .4s linear forwards .2s;
+            animation: bounce .4s linear forwards .2s;
+  }
+  .checkbox.bounce svg {
+    --scale: 0;
+  }
+  
+  @-webkit-keyframes bounce {
+    50% {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    75% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+  @keyframes bounce {
+    50% {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    75% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  .choose{
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    font-weight: normal !important;
+    font-size: 0.9em;
+    color: #555;
+  }
+  .choose-inner{
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    margin: 0 !important;
+  }
+  .statement{
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: inherit;
   }
   
