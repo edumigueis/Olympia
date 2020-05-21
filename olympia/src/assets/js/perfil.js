@@ -124,6 +124,101 @@ setInterval(() => {
         window.addEventListener("resize", resizeAllGridItems);
 
         allItems = document.getElementsByClassName("masonry-item");
+
+        $(document.body).on('mouseenter', '.snip1321', function () {
+            var index = parseInt($(this).attr('id').toString().substring(0, 1));
+            var tab = $(this).attr('id').toString().substring(1, 9);
+            if (tab == 'post-sal') {
+                var item = $('.div-scroll-salvos').find($("figcaption"))[index];
+                var after = $('.div-scroll-salvos').find($(".after"))[index];
+            }
+            else if (tab == 'post-cur') {
+                var item = $('.div-scroll-curtidas').find($("figcaption"))[index];
+                var after = $('.div-scroll-curtidas').find($(".after"))[index];
+            }
+            else {
+                var item = $('.div-scroll-sobre').find($("figcaption"))[index];
+                var after = $('.div-scroll-sobre').find($(".after"))[index];
+            }
+            $(this).find(item).css('transform', 'translateY(-50%)');
+            $(after).addClass('isAfter');
+            $(this).find(item).css('opacity', 1);
+            $(this).find(item).css('transition-delay', '0.2s');
+        })
+
+        $(document.body).on('mouseleave', '.snip1321', function () {
+            var index = parseInt($(this).attr('id').toString().substring(0, 1));
+            var tab = $(this).attr('id').toString().substring(1, 9);
+            if (tab == 'post-sal') {
+                var item = $('.div-scroll-salvos').find($("figcaption"))[index];
+                var after = $('.div-scroll-salvos').find($(".after"))[index];
+            }
+            else if (tab == 'post-cur') {
+                var item = $('.div-scroll-curtidas').find($("figcaption"))[index];
+                var after = $('.div-scroll-curtidas').find($(".after"))[index];
+            }
+            else {
+                var item = $('.div-scroll-sobre').find($("figcaption"))[index];
+                var after = $('.div-scroll-sobre').find($(".after"))[index];
+            }
+            $(this).find(item).css('transform', 'none');
+            $(this).find(item).css('opacity', 0);
+            $(this).find(item).css('transition-delay', '0');
+            $(after).removeClass('isAfter');
+        })
+
+        $(document.body).on('click', '.trigger', function () {
+            var elem = this.parentElement.parentElement.parentElement.getElementsByClassName("snip1321");
+            var index = parseInt($(elem).attr('id').toString().substring(0, 1));
+            var tab = $(elem).attr('id').toString().substring(1, 9);
+            if (tab == 'post-sal') {
+                var item = $('.div-scroll-salvos').find($("figcaption"))[index];
+                var after = $('.div-scroll-salvos').find($(".after"))[index];
+            }
+            else if (tab == 'post-cur') {
+                var item = $('.div-scroll-curtidas').find($("figcaption"))[index];
+                var after = $('.div-scroll-curtidas').find($(".after"))[index];
+            }
+            else {
+                var item = $('.div-scroll-sobre').find($("figcaption"))[index];
+                var after = $('.div-scroll-sobre').find($(".after"))[index];
+            }
+            if ($(elem).find(item).css('opacity') != 1) {
+                var elem = this.parentElement.parentElement.parentElement.getElementsByClassName("snip1321")
+                if (tab == 'post-sal') {
+                    var item = $('.div-scroll-salvos').find($("figcaption"))[index];
+                }
+                else if (tab == 'post-cur') {
+                    var item = $('.div-scroll-curtidas').find($("figcaption"))[index];
+                }
+                else {
+                    var item = $('.div-scroll-sobre').find($("figcaption"))[index];
+                }
+                $(after).addClass('isAfter');
+
+                $(item).css('transform', 'translateY(-50%)');
+                $(item).css('opacity', 1);
+                $(item).css('transition-delay', '0.2s');
+                $(this).parent().parent().parent().find('[class="snip1321"]').addClass('pseudo');
+            }
+            else {
+                var elem = this.parentElement.parentElement.parentElement.getElementsByClassName("snip1321")
+                if (tab == 'post-sal') {
+                    var item = $('.div-scroll-salvos').find($("figcaption"))[index];
+                }
+                else if (tab == 'post-cur') {
+                    var item = $('.div-scroll-curtidas').find($("figcaption"))[index];
+                }
+                else {
+                    var item = $('.div-scroll-sobre').find($("figcaption"))[index];
+                }
+                $(after).removeClass('isAfter');
+                $(item).css('transform', 'none');
+                $(item).css('opacity', 0);
+                $(item).css('transition-delay', '0');
+                $(this).parent().parent().parent().find('[class="snip1321"]').removeClass('pseudo');
+            }
+        });
     }
     else if (!$('#container-perfil').length) {
         jaFoiPerfil = false;
@@ -157,7 +252,7 @@ setInterval(() => {
         }
 
         if ($('.salvos-content').css('display') == 'block' && !clickStar) {
-            $('.div-scroll-salvos .heart-stage').css('display', 'none');
+            $('.div-scroll-salvos .heart-stage').css('display', 'none');           
             $('.div-scroll-salvos .magic').trigger('click');
             clickStar = true;
         }
