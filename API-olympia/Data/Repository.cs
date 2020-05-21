@@ -122,7 +122,7 @@ namespace API_olympia.Data
         {
             IQueryable<Obras> consultaObras = this.Context.Obras;
             consultaObras = consultaObras.OrderBy(p => p.IdObra)
-            .Where(obra => Obra.IdObra == id);
+            .Where(obra => obra.IdObra == id);
             return await consultaObras.FirstOrDefaultAsync();
         }
 

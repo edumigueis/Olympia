@@ -49,14 +49,14 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var Evento = await this.Repo.GetAllArtesAsyncById(idObra);
-                if (Evento == null) return NotFound(); //método do EF
+                var obra = await this.Repo.GetAllArtesAsyncById(idObra);
+                if (obra == null) return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Evento = await this.Repo.GetAllArtesAsyncById(idObra);
-                    return Created($"/api/Obras/{model.idObra}", Obras);
+                    obra = await this.Repo.GetAllArtesAsyncById(idObra);
+                    return Created($"/api/Obras/{model.IdObra}", obra);
                 }
             }
             catch
@@ -71,9 +71,9 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var Evento = await this.Repo.GetAllArtesAsyncById(idObra);
-                if (Evento == null) return NotFound();
-                this.Repo.Delete(Obras);
+                var obra = await this.Repo.GetAllArtesAsyncById(idObra);
+                if (obra == null) return NotFound();
+                this.Repo.Delete(obra);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {

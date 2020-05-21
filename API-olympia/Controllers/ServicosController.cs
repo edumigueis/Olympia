@@ -49,14 +49,14 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var Evento = await this.Repo.GetAllArtesAsyncById(idServico);
-                if (Evento == null) return NotFound(); //método do EF
+                var servico = await this.Repo.GetAllArtesAsyncById(idServico);
+                if (servico == null) return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Evento = await this.Repo.GetAllArtesAsyncById(idServico);
-                    return Created($"/api/Servicos/{model.idServico}", Servicos);
+                    servico = await this.Repo.GetAllArtesAsyncById(idServico);
+                    return Created($"/api/Servicos/{model.IdServico}", servico);
                 }
             }
             catch
@@ -71,9 +71,9 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var Evento = await this.Repo.GetAllArtesAsyncById(idServico);
-                if (Evento == null) return NotFound();
-                this.Repo.Delete(Servicos);
+                var servico = await this.Repo.GetAllArtesAsyncById(idServico);
+                if (servico == null) return NotFound();
+                this.Repo.Delete(servico);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
@@ -97,7 +97,7 @@ namespace API_olympia.Controllers
                 if (await this.Repo.SaveChangesAsync())
                 {
                     //return Ok();
-                    return Created($"/api/Servicos/{model.idServico}", model);
+                    return Created($"/api/Servicos/{model.IdServico}", model);
                 }
             }
             catch

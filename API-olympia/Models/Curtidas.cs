@@ -6,7 +6,7 @@ namespace API_olympia.Models
     public class Curtidas
     {
         [Key]
-        public int IdEvento { get; set; }
+        public int IdCurtida { get; set; }
 
         [Required]
         public int IdUsuario { get; set; }
