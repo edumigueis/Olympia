@@ -190,7 +190,7 @@
             <div class="container-routes">
               <h1 class="title-routes">Rotas:</h1>
               <div class="routes">
-                <a href="/#/artes">
+                <a href="/#/artes" class="link-route">
                 <div class="1-route route">
                   <h1 class="title-route">Artes</h1>
                   <div class="img-wp">
@@ -198,36 +198,46 @@
                   </div>
                 </div>
                 </a>
+                <a href="/#/artes" class="link-route">
                 <div class="2-route route">
                   <h1 class="title-route">Arquitetura</h1>
                   <div class="img-wp">
                     <div class="arrow"></div>
                   </div>
                 </div>
+                </a>
+                <a href="/#/artes" class="link-route">
                 <div class="3-route route">
                   <h1 class="title-route">Cinema</h1>
                   <div class="img-wp">
                     <div class="arrow"></div>
                   </div>
                 </div>
+                </a>
+                <a href="/#/artes" class="link-route">
                 <div class="4-route route">
                   <h1 class="title-route">Home</h1>
                   <div class="img-wp">
                     <div class="arrow"></div>
                   </div>
                 </div>
+                </a>
+                <a href="/#/artes" class="link-route">
                 <div class="5-route route">
                   <h1 class="title-route">Home</h1>
                   <div class="img-wp">
                     <div class="arrow"></div>
                   </div>
                 </div>
+                </a>
+                <a href="/#/artes" class="link-route">
                 <div class="6-route route">
                   <h1 class="title-route">Home</h1>
                   <div class="img-wp">
                     <div class="arrow"></div>
                   </div>
                 </div>
+                </a>
               </div>
             </div>
             
