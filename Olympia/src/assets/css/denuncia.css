@@ -15,6 +15,7 @@
     border-radius: 21px;
     box-shadow: 3px 3px 9px 9px lightgrey;
     box-sizing: border-box;
+    max-width: 920px;
   }
   
   h1 {
@@ -412,5 +413,10 @@
     box-sizing: border-box;
     position: relative;
     z-index: inherit;
+  }
+  @media only screen and (max-width: 550px) {
+    #regForm {
+      width: 95%;
+    }
   }
   

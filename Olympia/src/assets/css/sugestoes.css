@@ -475,3 +475,24 @@
       height: 30px !important;
     }
   }
+
+  @media only screen and (min-width: 1600px){
+    .container{
+      width: 700px;
+      height: fit-content !important;
+      top: 300px;
+    }
+    svg{
+      top: 310px;
+    }
+    textarea::placeholder {
+      font-weight: 1.5em;
+    }
+    .img-mask{
+      width: 310px;
+      max-height: 260px;
+    }
+    .btn-cont{
+      padding-bottom: 30px;
+    }
+  }
