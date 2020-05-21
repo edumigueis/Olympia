@@ -692,27 +692,34 @@ setInterval(() => {
 
     $(document.body).on('mouseenter', '.snip1321', function () {
       var index = parseInt($(this).attr('id').toString().substring(0,1));
+      var after = $(".after")[index];
       var item = $("figcaption")[index];
       $(this).find(item).css('transform', 'translateY(-50%)');
+      $(after).addClass('isAfter');
       $(this).find(item).css('opacity', 1);
       $(this).find(item).css('transition-delay', '0.2s');
     })
 
     $(document.body).on('mouseleave', '.snip1321', function () {
       var index = parseInt($(this).attr('id').toString().substring(0,1));
+      var after = $(".after")[index];
       var item = $("figcaption")[index];
       $(this).find(item).css('transform', 'none');
       $(this).find(item).css('opacity', 0);
       $(this).find(item).css('transition-delay', '0');
+      $(after).removeClass('isAfter');
     })
 
     $(document.body).on('click', '.trigger', function () {
       var elem = this.parentElement.parentElement.parentElement.getElementsByClassName("snip1321");
       var index = parseInt($(elem).attr('id').toString().substring(0,1));
       var item = $("figcaption")[index];
+      var after = $(".after")[index];
       if ($(elem).find(item).css('opacity') != 1) {
         var elem = this.parentElement.parentElement.parentElement.getElementsByClassName("snip1321")
         var item = $("figcaption")[index];
+        $(after).addClass('isAfter');
+
         $(elem).find(item).css('transform', 'translateY(-50%)');
         $(elem).find(item).css('opacity', 1);
         $(elem).find(item).css('transition-delay', '0.2s');
@@ -721,6 +728,7 @@ setInterval(() => {
       else {
         var elem = this.parentElement.parentElement.parentElement.getElementsByClassName("snip1321")
         var item = $("figcaption")[index];
+        $(after).removeClass('isAfter');
         $(elem).find(item).css('transform', 'none');
         $(elem).find(item).css('opacity', 0);
         $(elem).find(item).css('transition-delay', '0');

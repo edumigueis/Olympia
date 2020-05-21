@@ -480,7 +480,7 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="0post">
+                        <figure class="snip1321" id="0post"><div class="after"></div>
                           <img
                             src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
                             alt="sq-sample26"
@@ -541,7 +541,7 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="1post">
+                        <figure class="snip1321" id="1post"><div class="after"></div>
                           <img
                             src="https://www.tickpick.com/blog/wp-content/uploads/2019/02/audience-1835431_1280.jpg"
                             alt="sq-sample26"
@@ -619,7 +619,7 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="2post">
+                        <figure class="snip1321" id="2post"><div class="after"></div>
                           <img
                             src="https://paintingvalley.com/image/watercolor-art-pinterest-22.jpg"
                             alt="sq-sample26"
@@ -677,7 +677,7 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="3post">
+                        <figure class="snip1321" id="3post"><div class="after"></div>
                           <img
                             src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
                             alt="sq-sample26"
@@ -702,7 +702,7 @@
                               </div>
                             </div>
                           </figcaption>
-                        </figure>
+                      </figure>
                       </a>
                       <div class="interact-container">
                         <div class="stage stage-btn">
@@ -738,7 +738,7 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="4post">
+                        <figure class="snip1321" id="4post"><div class="after"></div>
                           <img
                             src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
                             alt="sq-sample26"
@@ -799,7 +799,7 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="5post">
+                        <figure class="snip1321" id="5post"><div class="after"></div>
                           <img
                             src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg"
                             alt="sq-sample26"
@@ -860,7 +860,7 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="6post">
+                        <figure class="snip1321" id="6post"><div class="after"></div>
                           <img
                             src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
                             alt="sq-sample26"

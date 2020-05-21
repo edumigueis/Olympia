@@ -2635,15 +2635,15 @@ figure.snip1321 a {
 figure.snip1321 i {
   font-size: 32px;
 }
-figure.snip1321:after {
+.after {
   background-color: #ffffff;
   position: absolute;
   content: "";
   display: block;
-  top: 50px;
-  left: 20px;
+  top: 30px;
+  height: 80%;
+  left: 25px;
   right: 25px;
-  bottom: 50px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   -webkit-transform: rotateX(-90deg);
@@ -2655,6 +2655,12 @@ figure.snip1321:after {
   pointer-events: none;
 }
 
+.after.isAfter{
+  -webkit-transform: rotateX(0);
+  transform: rotateX(0);
+  opacity: 0.9;
+}
+
 figure.snip1321:hover figcaption{
   transform: translateY(-50%);
   opacity: 1;
@@ -2662,7 +2668,7 @@ figure.snip1321:hover figcaption{
 }
 
 .snip1321 figcaption{
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -2772,7 +2778,6 @@ figure.snip1321:hover figcaption{
   font-family: 'Poppins';
   transform: translateX(-50px);
 }
-
 
 .heart:hover{
   opacity: 0.8;
