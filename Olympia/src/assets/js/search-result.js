@@ -3,6 +3,18 @@ setInterval(() => {
   //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
   if ($("#container-search-result").length && jaFoiSearch == false) {
     jaFoiSearch = true;
+    $(".arrow-1").click(function () {
+      var scrolled = $(".routes").scrollLeft();
+      var document_width = $(".routes").width();
+      $('.routes').animate({ scrollLeft: scrolled - (document_width / 5) });
+    });
+
+    $(".arrow-2").click(function () {
+      var scrolled = $(".routes").scrollLeft();
+      var document_width = $(".routes").width();
+      $('.routes').animate({ scrollLeft: scrolled + (document_width / 5) });
+    });
+
     $(document).on("click", "#to-slide-0", function () {
       $("#to-slide-0").addClass("active-tab-p");
       $("#to-slide-1").removeClass("active-tab-p");

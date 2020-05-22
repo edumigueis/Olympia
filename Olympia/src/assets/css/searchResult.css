@@ -5,17 +5,34 @@
 
 .routes {
   display: inline-flex;
-  width: 100vw;
+  width: 82vw;
   overflow-y: hidden;
   overflow-x: scroll;
   flex-wrap: nowrap;
   height: fit-content;
-  margin: 20px auto;
+  margin: 20px;
   z-index: inherit;
   margin-left: 30px;
+  margin-right: 30px;
 }
-.routes ::-webkit-scrollbar{
-  background-color: transparent;
+
+.routes::-webkit-scrollbar{
+  background-color: rgba(34, 34, 34, 0);
+  border-radius: 20px;
+}
+
+.routes::-webkit-scrollbar-track {
+  box-shadow: none;
+  border: none;
+}
+
+.routes::-webkit-scrollbar-thumb {
+  background-color: #40344d63;
+  border-radius: 10px;
+}
+
+.routes::-webkit-scrollbar-thumb:hover {
+  background-color: #4a375f85;
 }
 
 .container-content{
@@ -49,12 +66,13 @@
   width: 320px;
   border-radius: 18px;
   box-shadow: 0 0 10px rgba(48, 48, 48, 0.767);
-  margin: 10px;
+  margin: 15px;
   background-color: rgb(238, 236, 231);
+  transition: all 0.3s;
 }
 
 .route:hover {
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .title-route {
@@ -67,9 +85,28 @@
 .title-routes {
   font-family: "Calibre-Regular";
   font-size: 2.2em;
-  color: rgb(243, 240, 240);
+  color: rgb(235, 229, 229);
   margin-top: 80px;
   margin-left: 40px;
+  display: flex;
+}
+
+.arrow-1{
+  transform: rotate(180deg);
+  filter: invert(100%) brightness(130%);
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
+.arrow-2:hover{
+  transform: translateX(8px);
+}
+
+.arrow-1:hover{
+  transform: rotate(180deg) translateX(8px);
+}
+.arrow-2{
+  filter: invert(100%) brightness(130%);
 }
 
 .img-wp {
@@ -105,6 +142,7 @@
   width: 50px;
   height: 50px;
   background-size: cover;
+  transition: all 0.1s;
 }
 
 #tab-page {

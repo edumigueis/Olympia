@@ -188,7 +188,7 @@
           >
             <div class="bg"></div>
             <div class="container-routes">
-              <h1 class="title-routes">Rotas:</h1>
+              <h1 class="title-routes">Rotas<div class="arrow arrow-1"></div><div class="arrow arrow-2"></div></h1>
               <div class="routes">
                 <a href="/#/artes" class="link-route">
                 <div class="1-route route">
