@@ -119,13 +119,11 @@
                   </label>
                 </div>
                 <div class="form-group form-button">
-                  <input
-                    type="submit"
-                    name="signup"
+                  <button
                     id="signup"
                     class="form-submit"
-                    value="Registrar"
-                  />
+                  >Registrar
+                  </button>
                 </div>
               </form>
             </div>
