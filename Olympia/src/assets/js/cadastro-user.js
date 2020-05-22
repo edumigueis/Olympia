@@ -463,7 +463,7 @@ setInterval(() => {
           }
         })
           .done(function() {
-            alert("Enviado");
+            /*Aqui será redirecionado */
           })
           .fail(function() {
             alert("error");
