@@ -484,6 +484,7 @@ setInterval(() => {
           data: jsonInput,
           contentType:'application/json',
           success: function(){ document.location.href = "/#/login"},
+          fail: function(){ $(".error-modal").css("display", "block");$(".error-modal").css("opacity", "1");$(".ui-widget-overlay").css("display", "block");$(".warn").html("Algúm dado foi fornecido incorretamente. Ou ocorreu um problema com o servidor.");$("#name").val("");setTimeout(function(){location.reload();}, 2000)},
           dataType: "json"
         });
         }
