@@ -1,6 +1,7 @@
 var jaFoiCadUser = false;
 var senhaFoi = false;
-var hexcolor;
+var codeHex = '#fc6c85';
+var jaFoiPostCadUser = false;
 var colorList = [
   "f8b195",
   "f67280",
@@ -431,46 +432,62 @@ setInterval(() => {
         $(".ui-widget-overlay").css("display", "block");
         $("#pick-image-modal").css("display", "block");
       });
-      $("#signup").on("click", function(eve) {
-        eve.preventDefault();
+      $(document.body).on("click","#signup", function(eve) {
+
+        if(!jaFoiPostCadUser){
+          
+          eve.preventDefault();
+        var valorFoto;
+        
+        if ($("#name").val() == "") {
+          return;
+        } else if ($("#user").val() == "") {
+          return;
+        } else if ($("#email").val() == "") {
+          return;
+        } else if ($("#pass").val() == "") {
+          return;
+        } else if ($("#re_pass").val() == "") {
+          return;
+        } else if ($("#pass").val() != $("#re_pass").val()) {
+          return;
+        } else if ($("#agree-term").is(":checked") == false) {
+          return;
+        }
+
         if(isSelImg == true){
           valorFoto = $("#user-prof-image").attr("src");
         } else{
           valorFoto = codeHex;
         }
+
         var myObject = {
           nome: $('#name').val(),
-          username: $('#userName').val(),
+          userName: $('#user').val(),
           email: $('#email').val(),
           senha: $('#pass').val(),
           foto: ""+valorFoto,
-          biografia: "Adicione dados sobre você!",
-          bio: "Apreciando arte...",
-          configs: '"{"menu":0,"deslig":0,"login":1,"capa":3,"dark":0}"',
-          seguindo: '{1}',
-          seguidores: '{}',
+          biografia: ".",
+          bio: ".",
+          configs: "{'menu':0,'deslig':0,'login':0,'capa':0,'dark':0}",
+          seguindo: "{}",
+          seguidores: "{}"
       }
       
+      
       var jsonInput = JSON.stringify(myObject);
-      /*alert(jsonInput);*/
+
+      jaFoiPostCadUser = true;
         $.ajax({
-          url: "http://localhost:5000/api/usuarios",
           type: "POST",
-          data: jsonInput, //OBJETO QUE FOI GERADO NO LOOP
-          dataType: "json",
-          beforeSend: function() {
-            alert("carregando...");
-          }
-        })
-          .done(function() {
-            /*Aqui será redirecionado */
-          })
-          .fail(function() {
-            alert("error");
-          })
-          .always(function() {
-            alert("complete");
-          });
+          url: "https://localhost:5001/api/Usuarios",
+          data: jsonInput,
+          contentType:'application/json',
+          success: function(){ document.location.href = "/#/login"},
+          dataType: "json"
+        });
+        }
+        
       });
       /*-----------------------------------------------------Final Verifications*/
       setInterval(function() {
@@ -517,4 +534,4 @@ setInterval(() => {
   } else if (!$("#container-cad-user").length) {
     jaFoiCadUser = false;
   }
-}, 1500);
+}, 100);
