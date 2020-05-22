@@ -120,7 +120,6 @@
                 </div>
                 <div class="form-group form-button">
                   <button
-                    name="signup"
                     id="signup"
                     class="form-submit"
                   >Registrar

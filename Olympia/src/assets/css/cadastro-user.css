@@ -1029,6 +1029,8 @@ figure {
   font-size: 16px;
   font-family: 'poppins';
   transition: 0.4s all;
+  border: none;
+  outline: none;
 }
 .form-submit:hover {
   opacity: 0.7;
