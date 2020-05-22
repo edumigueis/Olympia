@@ -60,6 +60,9 @@
       font-size: 6em;
       max-width: 80%;
     }
+    #error-500 {
+      font-size: 4em !important;
+    }
   }
   @media only screen and (max-width: 400px) {
     h1 {
@@ -70,10 +73,17 @@
       width: 70%;
       font-size: 1.1em;
     }
+    #error-500 {
+      font-size: 3.5em !important;
+    }
   }
   @media only screen and (max-width: 970px) {
     header {
       margin-top: calc(20vh - 3em);
     }
+  }
+
+  #error-500 {
+    font-size: 6em;
   }
   
