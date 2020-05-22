@@ -6,13 +6,25 @@ setInterval(() => {
     $(".arrow-1").click(function () {
       var scrolled = $(".routes").scrollLeft();
       var document_width = $(".routes").width();
-      $('.routes').animate({ scrollLeft: scrolled - (document_width / 5) });
+      $('.routes').animate({ scrollLeft: scrolled - (document_width / 2) });
     });
 
     $(".arrow-2").click(function () {
       var scrolled = $(".routes").scrollLeft();
       var document_width = $(".routes").width();
-      $('.routes').animate({ scrollLeft: scrolled + (document_width / 5) });
+      $('.routes').animate({ scrollLeft: scrolled + (document_width / 2) });
+    });
+
+    $(".arrow-3").click(function () {
+      var scrolled = $(".destaques").scrollLeft();
+      var document_width = $(".destaques").width();
+      $('.destaques').animate({ scrollLeft: scrolled - (document_width / 2) });
+    });
+
+    $(".arrow-4").click(function () {
+      var scrolled = $(".destaques").scrollLeft();
+      var document_width = $(".destaques").width();
+      $('.destaques').animate({ scrollLeft: scrolled + (document_width / 2) });
     });
 
     $(document).on("click", "#to-slide-0", function () {
@@ -108,13 +120,14 @@ setInterval(() => {
 setInterval(() => {
 
   if ($("#container-search-result").length) {
+    /*
     var height = $('.container-content').css('height');
     height = height.toString().substring(0, height.length - 2);
     height = parseInt(height) + 100;
     height = height + "px";
     $('.slider').css('min-height', height )
     $('.slider-1').css('min-height',height)
-    $('.slider__slide').css('min-height', height)
+    $('.slider__slide').css('min-height', height)*/
   } 
 
 }, 100);
