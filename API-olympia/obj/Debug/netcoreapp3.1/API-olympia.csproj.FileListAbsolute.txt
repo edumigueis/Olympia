@@ -1,6 +1,5 @@
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\API-olympia.exe
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\API-olympia.deps.json
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\API-olympia.runtimeconfig.json

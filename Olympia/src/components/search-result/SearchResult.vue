@@ -188,59 +188,232 @@
           >
             <div class="bg"></div>
             <div class="container-routes">
-              <h1 class="title-routes">Rotas<div class="arrow arrow-1"></div><div class="arrow arrow-2"></div></h1>
+              <h1 class="title-routes">
+                Rotas
+                <div class="arrow arrow-1"></div>
+                <div class="arrow arrow-2"></div>
+              </h1>
               <div class="routes">
                 <a href="/#/artes" class="link-route">
-                <div class="1-route route">
-                  <h1 class="title-route">Artes</h1>
-                  <div class="img-wp">
-                    <div class="arrow"></div>
+                  <div class="1-route route">
+                    <h1 class="title-route">Artes</h1>
+                    <div class="img-wp">
+                      <div class="arrow"></div>
+                    </div>
                   </div>
-                </div>
                 </a>
                 <a href="/#/artes" class="link-route">
-                <div class="2-route route">
-                  <h1 class="title-route">Arquitetura</h1>
-                  <div class="img-wp">
-                    <div class="arrow"></div>
+                  <div class="2-route route">
+                    <h1 class="title-route">Arquitetura</h1>
+                    <div class="img-wp">
+                      <div class="arrow"></div>
+                    </div>
                   </div>
-                </div>
                 </a>
                 <a href="/#/artes" class="link-route">
-                <div class="3-route route">
-                  <h1 class="title-route">Cinema</h1>
-                  <div class="img-wp">
-                    <div class="arrow"></div>
+                  <div class="3-route route">
+                    <h1 class="title-route">Cinema</h1>
+                    <div class="img-wp">
+                      <div class="arrow"></div>
+                    </div>
                   </div>
-                </div>
                 </a>
                 <a href="/#/artes" class="link-route">
-                <div class="4-route route">
-                  <h1 class="title-route">Home</h1>
-                  <div class="img-wp">
-                    <div class="arrow"></div>
+                  <div class="4-route route">
+                    <h1 class="title-route">Home</h1>
+                    <div class="img-wp">
+                      <div class="arrow"></div>
+                    </div>
                   </div>
-                </div>
                 </a>
                 <a href="/#/artes" class="link-route">
-                <div class="5-route route">
-                  <h1 class="title-route">Home</h1>
-                  <div class="img-wp">
-                    <div class="arrow"></div>
+                  <div class="5-route route">
+                    <h1 class="title-route">Home</h1>
+                    <div class="img-wp">
+                      <div class="arrow"></div>
+                    </div>
                   </div>
-                </div>
                 </a>
                 <a href="/#/artes" class="link-route">
-                <div class="6-route route">
-                  <h1 class="title-route">Home</h1>
-                  <div class="img-wp">
-                    <div class="arrow"></div>
+                  <div class="6-route route">
+                    <h1 class="title-route">Home</h1>
+                    <div class="img-wp">
+                      <div class="arrow"></div>
+                    </div>
                   </div>
-                </div>
                 </a>
               </div>
+              <h1 class="title-routes title-destaques">
+                #Top12<img
+                  src="/src/assets/images/heart-image.png"
+                  class="heart-title"
+                />
+                <div class="arrow arrow-3"></div>
+                <div class="arrow arrow-4"></div>
+              </h1>
+              <div class="destaques">
+                <div class="1-container-destaque container-destaque">
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img
+                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                          class="img-destaque"
+                        />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">"El Cafetán"</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Célio Lima Barbosa
+                          </h1>
+                          <h1 class="top-obra-destaque">#1</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img
+                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                          class="img-destaque"
+                        />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">"El Cafetán"</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Célio Lima Barbosa
+                          </h1>
+                          <h1 class="top-obra-destaque">#2</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="2-container-destaque container-destaque">
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img
+                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                          class="img-destaque"
+                        />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">"El Cafetán"</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Célio Lima Barbosa
+                          </h1>
+                          <h1 class="top-obra-destaque">#3</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img
+                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                          class="img-destaque"
+                        />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">"El Cafetán"</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Célio Lima Barbosa
+                          </h1>
+                          <h1 class="top-obra-destaque">#4</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="3-container-destaque container-destaque">
+                  <div class="destaque-content">
+                    <div class="flex-image-destaque">
+                      <img
+                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
+                        class="img-destaque"
+                      />
+                    </div>
+                  </div>
+                  <div class="destaque-content">
+                    <div class="flex-image-destaque">
+                      <img
+                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
+                        class="img-destaque"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="4-container-destaque container-destaque">
+                  <div class="destaque-content">
+                    <div class="flex-image-destaque">
+                      <img
+                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
+                        class="img-destaque"
+                      />
+                    </div>
+                  </div>
+                  <div class="destaque-content">
+                    <div class="flex-image-destaque">
+                      <img
+                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
+                        class="img-destaque"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="5-container-destaque container-destaque">
+                  <div class="destaque-content">
+                    <div class="flex-image-destaque">
+                      <img
+                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
+                        class="img-destaque"
+                      />
+                    </div>
+                  </div>
+                  <div class="destaque-content">
+                    <div class="flex-image-destaque">
+                      <img
+                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
+                        class="img-destaque"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="6-container-destaque container-destaque">
+                  <div class="destaque-content">
+                    <div class="flex-image-destaque">
+                      <img
+                        src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/08/fotos-tumblr.png"
+                        class="img-destaque"
+                      />
+                    </div>
+                  </div>
+                  <div class="destaque-content">
+                    <div class="flex-image-destaque">
+                      <img
+                        src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg"
+                        class="img-destaque"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
           </div>
           <div class="slider__slide" data-slide="2">
             <div class="bg"></div>
