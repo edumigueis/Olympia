@@ -231,6 +231,7 @@
   .shape {
     r: 80;
     animation: moveCircle 1550ms ease-in-out both infinite;
+
   }
   
   .shape:nth-child(1) {
