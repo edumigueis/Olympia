@@ -669,9 +669,6 @@ textarea.question + label > span {
 .question {
   color: #444;
 }
-#submit:hover {
-  background: #eee;
-}
 
 #submit:active {
   background: #999;
@@ -1221,7 +1218,7 @@ textarea.question:invalid ~ #submit {
     #fc6ccd
   );
   padding: 4px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   display: block;
   text-align: center;

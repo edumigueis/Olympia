@@ -350,7 +350,13 @@ setInterval(() => {
           $("#plus-tag").css("display", "block");
         }
       });
+      $("#submit").on("click", function() {
+        event.preventDefault();
+        alert('foi');
+      });
     });
+
+    
   } else if (!$("#container-post").length) {
     //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
     jaFoiPost = false;

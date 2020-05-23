@@ -372,7 +372,7 @@
                     </div>
                   </div>
                   <div class="p-t-10">
-                    <button class="btn btn--pill btn--green" type="submit">
+                    <button class="btn btn--pill btn--green" type="submit" id="sub-obra">
                       Submit
                     </button>
                   </div>
@@ -533,7 +533,7 @@
                     </div>
                   </div>
                   <div class="p-t-10">
-                    <button class="btn btn--pill btn--green" type="submit">
+                    <button class="btn btn--pill btn--green" id="sub-serv">
                       Submit
                     </button>
                   </div>
