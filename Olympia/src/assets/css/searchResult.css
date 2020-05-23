@@ -3,6 +3,87 @@
   src: url("/src/assets/fonts/calibri-7.ttf");
 }
 
+.container-obras-search,
+.container-aulas-search,
+.container-post-search,
+.container-users-search{
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.obra-user-service-post-content{
+  width: 55vw!important;
+  margin-bottom: 20px!important;
+}
+
+.title-obra-post-service{
+  font-size: 2em!important;
+  max-width: 100%!important;
+}
+.pessoa-obra-post-service{
+  max-width: 100%!important;
+  margin-left: 0!important;
+}
+
+@media only screen and (min-width:0px) and (max-width:500px){
+  .title-obra-post-service{
+    font-size: 1.2em!important;
+  }
+  .pessoa-obra-post-service{
+    font-size: 0.7em!important;
+  }
+  .obra-user-service-post-content{
+    width: 90vw!important;
+  }
+}
+
+@media only screen and (min-width:500px) and (max-width:749px){
+  .title-obra-post-service{
+    font-size: 1.3em!important;
+  }
+  .pessoa-obra-post-service{
+    font-size: 0.8em!important;
+  }
+  .obra-user-service-post-content{
+    width: 90vw!important;
+  }
+}
+
+@media only screen and (min-width:750px) and (max-width:1000px){
+  .title-obra-post-service{
+    font-size: 1.7em!important;
+  }
+  .pessoa-obra-post-service{
+    font-size: 1em!important;
+  }
+}
+
+.inline-div-obra-post-service{
+  width: 90%!important;
+  margin: 0 auto!important;
+}
+
+.info-obra-post-service{
+  width: 80%!important;
+}
+
+.load-arrow{
+  transform: rotate(90deg);
+  transition: all 0.2s;
+}
+
+.load-arrow:hover{
+  transform: rotate(90deg) translateX(5px);
+  cursor: pointer;
+}
+
 .routes,
 .destaques {
   display: inline-flex;
@@ -1091,7 +1172,6 @@ input[type="radio"] {
 }
 .slider {
   position: relative;
-  height: 140vh;
   width: 100vw;
   background: rgb(88, 88, 88);
   overflow: hidden;
@@ -1101,8 +1181,11 @@ input[type="radio"] {
   overflow-x: scroll;
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 140vh;
   overflow: hidden;
+}
+.slide-2{
+  height: fit-content!important;
 }
 .container-routes {
   height: fit-content;
@@ -1138,6 +1221,7 @@ input[type="radio"] {
   position: absolute;
   left: 0;
   bottom: 10px;
+  top: 0;
   width: 100vw;
   z-index: 999;
   background: linear-gradient(to bottom, rgb(113, 54, 190), rgb(255, 245, 110));

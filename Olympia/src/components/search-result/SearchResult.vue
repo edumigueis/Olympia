@@ -415,11 +415,183 @@
               </div>
             </div>
           </div>
-          <div class="slider__slide" data-slide="2">
+          <div class="slider__slide slide-2" data-slide="2">
             <div class="bg"></div>
+            <div class="container-obras-search">
+              <a href="/#/detalhes" class="link-route">
+                <div class="destaque-content obra-user-service-post-content">
+                  <div class="flex-image-destaque">
+                    <img
+                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      class="img-destaque"
+                    />
+                  </div>
+                  <div class="info-obra-destaque info-obra-post-service">
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafesssss ssstán"</h1>
+                    </div>
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
+                        por Célio Lima Barbosasdddd sdsdsdsdsdsd ddddddddddsd sdsdsdsdsds
+                      </h1>
+                    
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/#/detalhes" class="link-route">
+                <div class="destaque-content obra-user-service-post-content">
+                  <div class="flex-image-destaque">
+                    <img
+                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      class="img-destaque"
+                    />
+                  </div>
+                  <div class="info-obra-destaque info-obra-post-service">
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                    </div>
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
+                        por Célio Lima Barbosa
+                      </h1>
+            
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/#/detalhes" class="link-route">
+                <div class="destaque-content obra-user-service-post-content">
+                  <div class="flex-image-destaque">
+                    <img
+                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      class="img-destaque"
+                    />
+                  </div>
+                  <div class="info-obra-destaque info-obra-post-service">
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                    </div>
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
+                        por Célio Lima Barbosa
+                      </h1>
+              
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/#/detalhes" class="link-route">
+                <div class="destaque-content obra-user-service-post-content">
+                  <div class="flex-image-destaque">
+                    <img
+                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      class="img-destaque"
+                    />
+                  </div>
+                  <div class="info-obra-destaque info-obra-post-service">
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                    </div>
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
+                        por Célio Lima Barbosa
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </a>     
+              <div class="arrow load-arrow arrow-obras-search"></div>
+            </div>
           </div>
           <div class="slider__slide" data-slide="3">
             <div class="bg"></div>
+            <div class="container-aulas-search">
+            <a href="/#/detalhes" class="link-route">
+                <div class="destaque-content obra-user-service-post-content">
+                  <div class="flex-image-destaque">
+                    <img
+                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      class="img-destaque"
+                    />
+                  </div>
+                  <div class="info-obra-destaque info-obra-post-service">
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafesssss ssstán"</h1>
+                    </div>
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
+                        por Célio Lima Barbosasdddd sdsdsdsdsdsd ddddddddddsd sdsdsdsdsds
+                      </h1>
+                    
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/#/detalhes" class="link-route">
+                <div class="destaque-content obra-user-service-post-content">
+                  <div class="flex-image-destaque">
+                    <img
+                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      class="img-destaque"
+                    />
+                  </div>
+                  <div class="info-obra-destaque info-obra-post-service">
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                    </div>
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
+                        por Célio Lima Barbosa
+                      </h1>
+            
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/#/detalhes" class="link-route">
+                <div class="destaque-content obra-user-service-post-content">
+                  <div class="flex-image-destaque">
+                    <img
+                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      class="img-destaque"
+                    />
+                  </div>
+                  <div class="info-obra-destaque info-obra-post-service">
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                    </div>
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
+                        por Célio Lima Barbosa
+                      </h1>
+              
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="/#/detalhes" class="link-route">
+                <div class="destaque-content obra-user-service-post-content">
+                  <div class="flex-image-destaque">
+                    <img
+                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
+                      class="img-destaque"
+                    />
+                  </div>
+                  <div class="info-obra-destaque info-obra-post-service">
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                    </div>
+                    <div class="inline-div inline-div-obra-post-service">
+                      <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
+                        por Célio Lima Barbosa
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </a>   
+              <div class="arrow load-arrow arrow-aulas-search"></div>
+          </div>
           </div>
           <div class="slider__slide" data-slide="4">
             <div class="bg"></div>
