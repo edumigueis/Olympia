@@ -378,7 +378,7 @@
                   </div>
                 </form>
               </div>
-            </div>
+            </div> 
           </div>
         </section>
         <section id="post-serv" class="white-6">
@@ -556,7 +556,7 @@
               <label for="msg"
                 ><span class="question black-to-white">O que te inspira?</span></label
               >
-              <input type="submit" value="Postar" id="submit" />
+              <button id="submit">Postar</button>
             </form>
             <div class="img-pick-cont">
               <img id="image-picked" />
