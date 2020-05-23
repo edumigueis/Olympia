@@ -415,8 +415,6 @@ setInterval(() => {
       $("#sub-obra").on("click", function(event) {
         event.preventDefault();
 
-        var valorFotoObra;
-
         if ($("#titulo").val() == "" || $("#titulo").val().length < 2) {
           $("#titulo").addClass("wrong");
           return;
@@ -521,7 +519,9 @@ setInterval(() => {
             $(".success-msg").css("left", "40px");
           },
           fail: function() {
-            alert("deu bosta");
+            $('#small-footer').css('margin-bottom', '-100px')
+            var erro = "<p>Algo deu errado. Tente postar novamente mais tarde.</p>"
+            $(".p-t-10").append(erro);
           },
           dataType: "json"
         });
