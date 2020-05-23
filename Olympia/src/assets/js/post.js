@@ -43,6 +43,7 @@ var contImg = 0;
 var contImgServ = 0;
 var jaFoiPost = false;
 var selectedImage;
+var isSelImgPostagem = false;
 setInterval(() => {
   //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
   if ($("#container-post").length && jaFoiPost == false) {
@@ -55,6 +56,7 @@ setInterval(() => {
 
           reader.onload = function(e) {
             $("#image-picked").attr("src", e.target.result);
+            isSelImgPostagem = true;
             selectedImage = e.target.result;
           };
 
@@ -350,9 +352,39 @@ setInterval(() => {
           $("#plus-tag").css("display", "block");
         }
       });
-      $("#submit").on("click", function() {
+      $("#submit").on("click", function(event) {
         event.preventDefault();
-        alert('foi');
+
+        var valorFoto;
+        
+        if ($("#msg").val() == "") {
+          var erro = '<p class="error">Adicione um texto a sua postagem!</p>'
+          $('.insp-post-cont').append(erro);
+          return;
+        }
+        if(!isSelImgPostagem){
+          valorFoto = selectedImage;
+        }
+        var d = new Date();
+        var strDate = d.getFullYear() + "/" + (d.getMonth()+1) + "/" + d.getDate();
+
+        var myObjectPubli = {
+          texto: $('#msg').val(),
+          foto: ""+valorFoto,
+          dataPost: strDate
+      }
+      var jsonInput = JSON.stringify(myObjectPubli);
+      console.log(jsonInput);
+      jaFoiPostCadUser = true;
+        $.ajax({
+          type: "POST",
+          url: "https://localhost:5001/api/Postagens",
+          data: jsonInput,
+          contentType:'application/json',
+          success: function(){ alert('ui')},
+          fail: function(){ var erro = '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';$('.insp-post-cont').append(erro);},
+          dataType: "json"
+        });
       });
     });
 
