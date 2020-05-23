@@ -7,6 +7,10 @@
   font-family: "Poppins";
   src: url("../fonts/poppins-light.otf");
 }
+html, body{
+  width: 100%;
+  height: auto;
+}
 body {
   height: 100%;
   width: 100%;
@@ -2138,9 +2142,10 @@ select {
   transform: scale(0.8);
 }
 #small-footer {
-  margin-bottom: -60px !important;
+  margin-bottom: -80px !important;
   margin-top: 20px !important;
   display: none;
+  z-index: -3;
 }
 
 .dark-mode-page {
