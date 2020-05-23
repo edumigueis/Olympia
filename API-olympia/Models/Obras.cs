@@ -16,7 +16,7 @@ namespace API_olympia.Models
         public string Nome { get; set; }
 
         [Required]
-        [StringLength(800, ErrorMessage = "A descrição não deve ter menos do que 300 caracteres e mais do que 800 caracteres.", MinimumLength = 300)]
+        [StringLength(800, ErrorMessage = "A descrição não deve ter menos do que 150 caracteres e mais do que 800 caracteres.", MinimumLength = 150)]
         public string Descricao { get; set; }
  
         [Required]
