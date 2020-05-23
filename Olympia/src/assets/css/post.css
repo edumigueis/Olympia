@@ -168,7 +168,7 @@ body {
 }
 @media only screen and (max-width: 900px) {
   body {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   .cont-major {
     width: 100%;
@@ -2207,4 +2207,21 @@ textarea.dark::placeholder {
 
 .dark-mode.white-7 {
   box-shadow: 3px 3px 9px 9px #686868 !important;
+}
+
+.success-msg{
+  position: fixed;
+  bottom: 20px;
+  padding: 20px 30px;
+  border-radius: 19px;
+  display: none;
+  background: #eee;
+  font-size: 1.5em;
+  box-shadow: 2px 2px 6px 6px #bbbbbb;
+  left: 40px;
+}
+.wrong{
+  border-bottom: 2px solid rgb(255, 38, 129) !important;
+  transition: 0.4s all ease-in;
+  transform: scale(1.01);
 }

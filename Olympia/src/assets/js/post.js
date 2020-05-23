@@ -39,6 +39,7 @@ function scrollDownPlus() {
     700
   );
 }
+var arteNm;
 var contImg = 0;
 var contImgServ = 0;
 var jaFoiPost = false;
@@ -356,39 +357,147 @@ setInterval(() => {
         event.preventDefault();
 
         var valorFoto;
-        
+
         if ($("#msg").val() == "") {
-          var erro = '<p class="error">Adicione um texto a sua postagem!</p>'
-          $('.insp-post-cont').append(erro);
+          var erro = '<p class="error">Adicione um texto a sua postagem!</p>';
+          $(".insp-post-cont").append(erro);
           return;
         }
-        if(!isSelImgPostagem){
+        if (!isSelImgPostagem) {
           valorFoto = selectedImage;
         }
-        var d = new Date();
-        var strDate = d.getFullYear() + "/" + (d.getMonth()+1) + "/" + d.getDate();
+
+        var finalDate = new Date().toISOString().slice(0, 19);
 
         var myObjectPubli = {
-          texto: $('#msg').val(),
-          foto: ""+valorFoto,
-          dataPost: strDate
-      }
-      var jsonInput = JSON.stringify(myObjectPubli);
-      console.log(jsonInput);
-      jaFoiPostCadUser = true;
+          texto: $("#msg").val(),
+          tags: "",
+          foto: "" + valorFoto,
+          dataPost: finalDate
+        };
+        var jsonInput = JSON.stringify(myObjectPubli);
+
+        jaFoiPostCadUser = true;
         $.ajax({
           type: "POST",
-          url: "https://localhost:5001/api/Postagens",
+          url: "https://localhost:5001/api/Publicacoes",
           data: jsonInput,
-          contentType:'application/json',
-          success: function(){ alert('ui')},
-          fail: function(){ var erro = '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';$('.insp-post-cont').append(erro);},
+          contentType: "application/json",
+          success: function() {
+            $(".success-msg").fadeIn();
+            setTimeout(function() {
+              $(".success-msg").animate({ left: -300 });
+              $(".success-msg").fadeOut();
+            }, 4000);
+            $(".success-msg").css("left", "40px");
+          },
+          fail: function() {
+            var erro =
+              '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+            $(".insp-post-cont").append(erro);
+          },
+          dataType: "json"
+        });
+      });
+
+      $("#slct").on("change", function() {
+        arteNm = $("#slct option:selected").text();
+      });
+
+      $("#sub-obra").on("click", function(event) {
+        event.preventDefault();
+
+        var valorFotoObra;
+
+        if ($("#titulo").val() == "") {
+          $("#titulo").addClass("wrong");
+          return;
+        } else if ($("#desc").val() == "") {
+          $("#desc").addClass("wrong");
+          return;
+        } else if ($("#dadosTec").val() == "") {
+          $("#dadosTec").addClass("wrong");
+          return;
+        } else if ($("#myInput").val() == "") {
+          $("#search-select").addClass("wrong");
+          return;
+        }
+        var arteSel = 0;
+        switch (arteNm) {
+          case "Arte Digital":
+            arteSel = 1;
+            break;
+          case "Arquitetura":
+            arteSel = 2;
+            break;
+          case "Artes Cenicas":
+            arteSel = 3;
+            break;
+          case "Cinema":
+            arteSel = 4;
+            break;
+          case "Escultura":
+            arteSel = 5;
+            break;
+          case "Fotografia":
+            arteSel = 6;
+            break;
+          case "Literatura":
+            arteSel = 7;
+            break;
+          case "Música":
+            arteSel = 8;
+            break;
+          case "Pintura":
+            arteSel = 9;
+            break;
+        }
+
+        var foto1 = $("#obra-1").attr("src");
+        var foto1 = $("#obra-1").attr("src");
+        var foto1 = $("#obra-1").attr("src");
+        var foto1 = $("#obra-1").attr("src");
+        var foto1 = $("#obra-1").attr("src");
+        var foto1 = $("#obra-1").attr("src");
+        var foto1 = $("#obra-1").attr("src");
+        var foto1 = $("#obra-1").attr("src");
+        var foto1 = $("#obra-1").attr("src");
+
+        var finalDate = new Date().toISOString().slice(0, 19);
+
+        var myObjectPubli = {
+          nome: $("#titulo").val(),
+          descricao: $("#desc").val(),
+          idArte: arteSel,
+          tags: "",
+          foto: "" + valorFotoObra,
+          dataPost: finalDate
+        };
+        var jsonInput = JSON.stringify(myObjectPubli);
+
+        jaFoiPostCadUser = true;
+        $.ajax({
+          type: "POST",
+          url: "https://localhost:5001/api/Publicacoes",
+          data: jsonInput,
+          contentType: "application/json",
+          success: function() {
+            $(".success-msg").fadeIn();
+            setTimeout(function() {
+              $(".success-msg").animate({ left: -300 });
+              $(".success-msg").fadeOut();
+            }, 4000);
+            $(".success-msg").css("left", "40px");
+          },
+          fail: function() {
+            var erro =
+              '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+            $(".insp-post-cont").append(erro);
+          },
           dataType: "json"
         });
       });
     });
-
-    
   } else if (!$("#container-post").length) {
     //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
     jaFoiPost = false;

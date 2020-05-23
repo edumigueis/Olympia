@@ -227,6 +227,7 @@
                   <div class="input-group">
                     <input
                       class="input--style-3 black-to-white"
+                      id="titulo"
                       type="text"
                       placeholder="Título"
                       name="name"
@@ -237,6 +238,7 @@
                   <div class="input-group">
                     <input
                       class="input--style-3 js-datepicker black-to-white"
+                      id="dadostec"
                       type="text"
                       placeholder="Dados Técnicos"
                       name="birthday"
@@ -249,6 +251,7 @@
                   </div>
                   <div class="input-group black-to-white">
                     <textarea
+                      id="desc"
                       class="input--style-3 text-area-desc"
                       placeholder="Descrição"
                       rows="1"
@@ -315,6 +318,7 @@
                             type="text"
                             placeholder="Tag 1"
                             maxlength="40"
+                            id="tag1"
                           />
                           <span></span>
                         </span>
@@ -325,6 +329,7 @@
                             type="text"
                             placeholder="Tag 2"
                             maxlength="40"
+                            id="tag2"
                           />
                           <span></span>
                         </span>
@@ -335,6 +340,7 @@
                             type="text"
                             placeholder="Tag 3"
                             maxlength="40"
+                            id="tag3"
                           />
                           <span></span>
                         </span>
@@ -345,6 +351,7 @@
                             type="text"
                             placeholder="Tag 4"
                             maxlength="40"
+                            id="tag4"
                           />
                           <span></span>
                         </span>
@@ -355,6 +362,7 @@
                             type="text"
                             placeholder="Tag 5"
                             maxlength="40"
+                            id="tag5"
                           />
                           <span></span>
                         </span>
@@ -594,6 +602,7 @@
             <div class="bubble x20"></div>
           </div>
         </section>
+        <div class="success-msg">Post feio com sucesso ;)</div>
         <meu-small-footer></meu-small-footer>
       </div>
     </div>
