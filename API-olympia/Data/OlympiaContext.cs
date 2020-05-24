@@ -16,5 +16,8 @@ namespace API_olympia.Data
         public DbSet<Servicos> Servicos { get; set; }
         public DbSet<Obras> Obras { get; set; }
         public DbSet<Curtidas> Curtidas { get; set; }
+        public DbSet<Feedbacks> FeedBacks { get; set; }
+        public DbSet<Sugestoes> Sugestoes { get; set; }
+        public DbSet<Denuncias> Denuncias { get; set; }
     }
 }

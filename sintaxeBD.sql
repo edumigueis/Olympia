@@ -117,3 +117,28 @@ nome varchar(30) not null
 
 select * from Artes
 
+create table Feedbacks(
+idFeedback int identity primary key not null,
+idUsuario int not null,
+descricao varchar(1000) not null,
+categoria varchar(100) not null,
+foto varchar(max) not null,
+constraint fkFeedbackUsuario foreign key (idUsuario) references Usuarios (idUsuario)
+)
+
+create table Sugestoes(
+idSugestao int identity primary key not null,
+idUsuario int not null,
+descricao varchar(1000) not null,
+categoria varchar(100) not null,
+foto varchar(max) not null,
+constraint fkSugestaoUsuario foreign key (idUsuario) references Usuarios (idUsuario)
+)
+
+create table Denuncias(
+idDenuncia int identity primary key not null,
+idUsuario int not null,
+tipoDenuncia varchar(100) not null,
+descricao varchar(1000) not null,
+constraint fkDenunciaUsuario foreign key (idUsuario) references Usuarios (idUsuario)
+)

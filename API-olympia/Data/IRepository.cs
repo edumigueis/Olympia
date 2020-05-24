@@ -36,5 +36,8 @@ namespace API_olympia.Data
         Task<Servicos[]> GetAllServicosAsync();
         Task<Servicos> GetAllServicosAsyncById(int idServico);
 
+        Task<Sugestoes[]> GetAllSugestoesAsync();
+        Task<Sugestoes> GetAllSugestoesAsyncById(int idSugestao);
+
     }
 }
