@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace API_olympia.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : Controller

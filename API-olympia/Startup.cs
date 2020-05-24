@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using API_olympia.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace API_olympia
 {
@@ -23,6 +27,22 @@ namespace API_olympia
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "myPolicy",
+                                    builder =>
+                                    {
+                                        builder.AllowAnyOrigin()
+                                               .AllowAnyMethod()
+                                               .AllowAnyHeader();
+                                    });
+            });
+
+            services.AddDbContext<OlympiaContext>(
+                x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
+            );
+            services.AddControllers();
+            services.AddScoped<IRepository, Repository>();
             services.AddControllersWithViews();
         }
 
@@ -45,9 +65,11 @@ namespace API_olympia
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseCors("myPolicy");
+            
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
