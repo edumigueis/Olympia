@@ -155,5 +155,20 @@ namespace API_olympia.Data
             .Where(servico => servico.IdServico == id);
             return await consultaServicos.FirstOrDefaultAsync();
         }
+
+        public async Task<Sugestoes[]> GetAllSugestoesAsync()
+        {
+            IQueryable<Sugestoes> consultaSugestoes = this.Context.Sugestoes;
+            consultaSugestoes = consultaSugestoes.OrderBy(p => p.IdSugestao);
+            return await consultaSugestoes.ToArrayAsync();
+        }
+
+        public async Task<Sugestoes> GetAllSugestoesAsyncById(int id)
+        {
+            IQueryable<Sugestoes> consultaSugestoes = this.Context.Sugestoes;
+            consultaSugestoes = consultaSugestoes.OrderBy(p => p.IdSugestao)
+            .Where(sugestao => sugestao.IdSugestao == id);
+            return await consultaSugestoes.FirstOrDefaultAsync();
+        }
     }
 }
