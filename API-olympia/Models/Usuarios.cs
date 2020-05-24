@@ -13,6 +13,7 @@ namespace API_olympia.Models
 
         [Required]
         [StringLength(30, ErrorMessage = "O user name não deve ter mais do que 30 caracteres.")]
+        /*Regex: a-z 0-9 + _ + .*/
         public string UserName { get; set; }
 
         [Required]
