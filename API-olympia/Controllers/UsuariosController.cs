@@ -50,13 +50,13 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var Usuario = await this.Repo.GetAllArtesAsyncById(idUsuario);
+                var Usuario = await this.Repo.GetAllUsuariosAsyncById(idUsuario);
                 if (Usuario == null) return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Usuario = await this.Repo.GetAllArtesAsyncById(idUsuario);
+                    Usuario = await this.Repo.GetAllUsuariosAsyncById(idUsuario);
                     return Created($"/api/Usuarios/{model.IdUsuario}", Usuario);
                 }
             }
@@ -72,7 +72,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var Usuario = await this.Repo.GetAllArtesAsyncById(idUsuario);
+                var Usuario = await this.Repo.GetAllUsuariosAsyncById(idUsuario);
                 if (Usuario == null) return NotFound();
                 this.Repo.Delete(Usuario);
                 //

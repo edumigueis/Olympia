@@ -83,6 +83,7 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
     });
     /*-----------------------------------------------------Final Verifications*/
     setInterval(function () {
+      if ($("#container-sugestoes").length){
         if ($("#det").val().length < 50) {
           document.getElementById("registrar").disabled = true;
           $("#registrar").css("opacity", "0.7");
@@ -92,6 +93,7 @@ setInterval(() => {  //REASTREADOR, VERIFICA TUDO A TODO MOMENTO
           $("#registrar").css("opacity", "1");
           $("#registrar").css("cursor", "pointer");
         }
+      }
     }, 100);
     /*-----------------------------------------------------/Final Verifications*/
   }

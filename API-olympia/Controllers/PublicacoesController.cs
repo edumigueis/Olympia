@@ -49,13 +49,13 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var Publicacao = await this.Repo.GetAllArtesAsyncById(idPublicacao);
+                var Publicacao = await this.Repo.GetAllPublicacoesAsyncById(idPublicacao);
                 if (Publicacao == null) return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Publicacao = await this.Repo.GetAllArtesAsyncById(idPublicacao);
+                    Publicacao = await this.Repo.GetAllPublicacoesAsyncById(idPublicacao);
                     return Created($"/api/Publicacoes/{model.IdPublicacao}", Publicacao);
                 }
             }
@@ -71,7 +71,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var Publicacao = await this.Repo.GetAllArtesAsyncById(idPublicacao);
+                var Publicacao = await this.Repo.GetAllPublicacoesAsyncById(idPublicacao);
                 if (Publicacao == null) return NotFound();
                 this.Repo.Delete(Publicacao);
                 //

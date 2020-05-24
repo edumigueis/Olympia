@@ -49,13 +49,13 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var foto = await this.Repo.GetAllArtesAsyncById(idFoto);
+                var foto = await this.Repo.GetAllFotosAsyncById(idFoto);
                 if (foto == null) return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    foto = await this.Repo.GetAllArtesAsyncById(idFoto);
+                    foto = await this.Repo.GetAllFotosAsyncById(idFoto);
                     return Created($"/api/fotos/{model.IdFoto}", foto);
                 }
             }
@@ -71,7 +71,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var foto = await this.Repo.GetAllArtesAsyncById(idFoto);
+                var foto = await this.Repo.GetAllFotosAsyncById(idFoto);
                 if (foto == null) return NotFound();
                 this.Repo.Delete(foto);
                 //

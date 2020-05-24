@@ -49,13 +49,13 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var Curtida = await this.Repo.GetAllArtesAsyncById(idCurtida);
+                var Curtida = await this.Repo.GetAllCurtidasAsyncById(idCurtida);
                 if (Curtida == null) return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Curtida = await this.Repo.GetAllArtesAsyncById(idCurtida);
+                    Curtida = await this.Repo.GetAllCurtidasAsyncById(idCurtida);
                     return Created($"/api/Curtidas/{model.IdCurtida}", Curtida);
                 }
             }
@@ -71,7 +71,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var Curtida = await this.Repo.GetAllArtesAsyncById(idCurtida);
+                var Curtida = await this.Repo.GetAllCurtidasAsyncById(idCurtida);
                 if (Curtida == null) return NotFound();
                 this.Repo.Delete(Curtida);
                 //
