@@ -238,10 +238,10 @@
                   <div class="input-group">
                     <input
                       class="input--style-3 js-datepicker black-to-white"
-                      id="dadostec"
+                      id="dadosTec"
                       type="text"
                       placeholder="Dados Técnicos"
-                      name="birthday"
+                      name="dadosTec"
                       maxlength="140"
                       required
                     />
@@ -317,7 +317,7 @@
                           <input
                             type="text"
                             placeholder="Tag 1"
-                            maxlength="40"
+                            maxlength="30"
                             id="tag1"
                           />
                           <span></span>
@@ -328,7 +328,7 @@
                           <input
                             type="text"
                             placeholder="Tag 2"
-                            maxlength="40"
+                            maxlength="30"
                             id="tag2"
                           />
                           <span></span>
@@ -339,7 +339,7 @@
                           <input
                             type="text"
                             placeholder="Tag 3"
-                            maxlength="40"
+                            maxlength="30"
                             id="tag3"
                           />
                           <span></span>
@@ -350,7 +350,7 @@
                           <input
                             type="text"
                             placeholder="Tag 4"
-                            maxlength="40"
+                            maxlength="30"
                             id="tag4"
                           />
                           <span></span>
@@ -361,7 +361,7 @@
                           <input
                             type="text"
                             placeholder="Tag 5"
-                            maxlength="40"
+                            maxlength="30"
                             id="tag5"
                           />
                           <span></span>

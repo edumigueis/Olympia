@@ -399,7 +399,15 @@ setInterval(() => {
           dataType: "json"
         });
       });
-
+      $("#titulo").on("keyup", function() {
+        if ($("#titulo").val().length >= 2) $(this).removeClass("wrong");
+      });
+      $("#desc").on("keyup", function() {
+        if ($("#desc").val().length >= 150) $(this).removeClass("wrong");
+      });
+      $("#dadosTec").on("keyup", function() {
+        if ($("#dadosTec").val().length >= 4) $(this).removeClass("wrong");
+      });
       $("#slct").on("change", function() {
         arteNm = $("#slct option:selected").text();
       });
@@ -407,21 +415,27 @@ setInterval(() => {
       $("#sub-obra").on("click", function(event) {
         event.preventDefault();
 
-        var valorFotoObra;
-
-        if ($("#titulo").val() == "") {
+        if ($("#titulo").val() == "" || $("#titulo").val().length < 2) {
           $("#titulo").addClass("wrong");
           return;
-        } else if ($("#desc").val() == "") {
-          $("#desc").addClass("wrong");
-          return;
-        } else if ($("#dadosTec").val() == "") {
+        } else if (
+          $("#dadosTec").val() == "" ||
+          $("#dadosTec").val().length < 4
+        ) {
           $("#dadosTec").addClass("wrong");
           return;
-        } else if ($("#myInput").val() == "") {
+        } else if ($("#desc").val() == "" || $("#desc").val().length < 150) {
+          $("#desc").addClass("wrong");
+          return;
+        } else if (
+          $("#search-select")
+            .text()
+            .trim() === "Selecione Categorias"
+        ) {
           $("#search-select").addClass("wrong");
           return;
         }
+
         var arteSel = 0;
         switch (arteNm) {
           case "Arte Digital":
@@ -452,7 +466,8 @@ setInterval(() => {
             arteSel = 9;
             break;
         }
-
+        alert($("#search-select").text());
+        /*var foto1 = $("#obra-1").attr("src");
         var foto1 = $("#obra-1").attr("src");
         var foto1 = $("#obra-1").attr("src");
         var foto1 = $("#obra-1").attr("src");
@@ -460,25 +475,39 @@ setInterval(() => {
         var foto1 = $("#obra-1").attr("src");
         var foto1 = $("#obra-1").attr("src");
         var foto1 = $("#obra-1").attr("src");
-        var foto1 = $("#obra-1").attr("src");
-        var foto1 = $("#obra-1").attr("src");
+        var foto1 = $("#obra-1").attr("src");*/
 
         var finalDate = new Date().toISOString().slice(0, 19);
 
         var myObjectPubli = {
+          idUsuario: 1,
           nome: $("#titulo").val(),
           descricao: $("#desc").val(),
+          categorias: $("#search-select")
+            .text()
+            .trim(),
+          tags:
+            "{" +
+            $("#tag1").val() +
+            "," +
+            $("#tag2").val() +
+            "," +
+            $("#tag3").val() +
+            "," +
+            $("#tag4").val() +
+            "," +
+            $("#tag5").val() +
+            "}",
           idArte: arteSel,
-          tags: "",
-          foto: "" + valorFotoObra,
-          dataPost: finalDate
+          dataPost: finalDate,
+          dadosTecnicos: $("#dadosTec").val()
         };
         var jsonInput = JSON.stringify(myObjectPubli);
-
+        console.log(jsonInput);
         jaFoiPostCadUser = true;
         $.ajax({
           type: "POST",
-          url: "https://localhost:5001/api/Publicacoes",
+          url: "https://localhost:5001/api/Obras",
           data: jsonInput,
           contentType: "application/json",
           success: function() {
@@ -490,9 +519,9 @@ setInterval(() => {
             $(".success-msg").css("left", "40px");
           },
           fail: function() {
-            var erro =
-              '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
-            $(".insp-post-cont").append(erro);
+            $('#small-footer').css('margin-bottom', '-100px')
+            var erro = "<p>Algo deu errado. Tente postar novamente mais tarde.</p>"
+            $(".p-t-10").append(erro);
           },
           dataType: "json"
         });
