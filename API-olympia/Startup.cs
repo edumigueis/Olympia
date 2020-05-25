@@ -74,7 +74,8 @@ namespace API_olympia
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddScoped<IServiceProvider, ServiceProvider>();
+            services.AddMvc().AddControllersAsServices();
 
             services.AddCors(options =>
             {
@@ -107,8 +108,6 @@ namespace API_olympia
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["jwt:key"])),
                 ClockSkew = TimeSpan.Zero
             });
-            services.AddScoped<IServiceProvider, ServiceProvider>();
-            
 
             services.AddIdentityCore<IdentityUser>()
                     .AddRoles<IdentityRole>() // <--------
@@ -116,11 +115,11 @@ namespace API_olympia
 
             services.AddControllersWithViews();
             services.AddRazorPages();
-            // Build the intermediate service provider then return it
+
             services.BuildServiceProvider();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -138,7 +137,7 @@ namespace API_olympia
 
             app.UseAuthorization();
             app.UseCors("myPolicy");
-             app.UseMvc();
+            app.UseMvc();
 
             app.UseEndpoints(endpoints =>
             {
