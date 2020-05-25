@@ -149,3 +149,12 @@ userName varchar(100) not null,
 senha varchar(500) not null,
 email varchar(255) not null
 )
+
+alter proc sp_ValidateAdmin
+@Username varchar(100),
+@Password varchar(500)
+
+as
+Begin
+    Select count(*) from Admins where userName=@Username and senha=@Password
+End

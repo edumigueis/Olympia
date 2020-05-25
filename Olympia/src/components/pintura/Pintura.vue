@@ -68,15 +68,15 @@
                 colori-la, atribuindo-lhe matizes, tons e texturas. Em um
                 sentido mais específico, é a arte de pintar uma superfície, tais
                 como papel, tela, ou uma parede (pintura mural ou afrescos).
-                Devido ao fato de grandes obras de arte, tais como a Mona Lisa e
-                A Última Ceia, do renascentista Leonardo Da Vinci, serem
+                Devido ao fato de grandes obras de arte, tais como a "Mona Lisa" e
+                "A Última Ceia", do renascentista Leonardo Da Vinci, serem
                 pinturas a óleo, a técnica é historicamente considerada uma das
                 mais tradicionais das artes plásticas. Com o desenvolvimento
                 tecnológico dos materiais, outras técnicas tornaram-se
                 igualmente importantes como, por exemplo, a tinta acrílica.
                 Diferencia-se do desenho pelo uso dos pigmentos líquidos e do
                 uso constante da cor, enquanto aquele apropria-se principalmente
-                de materiais secos.
+                de materiais secos. A seguir mostraremos algumas das principais obras.
               </td>
             </tr>
           </table>
@@ -117,8 +117,8 @@
             <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-linha">
-                <h1 class="text-title">A noite estrelada,van Gogh</h1>
-                A noite estrelada foi pintada em 1889. A peça é uma pintura a
+                <h1 class="text-title">A noite estrelada, Van Gogh</h1>
+                "A Noite Estrelada" foi pintada em 1889. A peça é uma pintura a
                 óleo em tela que mede 73,7 cm × 92,1 cm e se encontra atualmente
                 no MoMA, em Nova Iorque.Internado voluntariamente após decepar a
                 sua própria orelha durante uma crise psicótica, o pintor
@@ -164,7 +164,7 @@
           <table>
             <tr>
               <td class="texto-linha">
-                <h1 class="text-title">Guernica,de Pablo Picasso</h1>
+                <h1 class="text-title">Guernica, de Pablo Picasso</h1>
                 O painel pintado a óleo pelo espanhol Pablo Picasso, em 1937, é
                 enorme (349 cm × 776 cm) e tem como tema o bombardeamento
                 ocorrido no dia 26 de abril de 1937, na cidade Guernica, país
@@ -188,7 +188,7 @@
               <td class="texto-linha">
                 <h1 class="text-title">Abaporu, de Tarsila do Amaral</h1>
                 A obra mais conhecida do universo das artes visuais brasileira é
-                Abaporu. A tela foi pintada por Tarsila do Amaral em 1929 para
+                "Abaporu". A tela foi pintada por Tarsila do Amaral em 1929 para
                 ser oferecida de presente de aniversário ao seu então marido, o
                 escritor Oswald de Andrade. A imagem é um ícone da fase
                 antropofágica da artista. Símbolo do modernismo brasileiro, o

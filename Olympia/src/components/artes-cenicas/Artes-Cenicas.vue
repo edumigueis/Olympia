@@ -23,7 +23,7 @@
         </div>
         <h1 class="art-title">Artes Cênicas</h1>
         <h2 class="art-subtitle">
-          O amor ao movimento, à dinâmica e às ideias.
+          Do amor ao movimento, à dinâmica e às ideias.
         </h2>
       </div>
 
@@ -73,14 +73,15 @@
             <tr>
               <td class="texto-principal">
                 <h1 class="text-title-principal">Teatro</h1>
-                Teatro, do grego θέατρον (théatron), é uma forma de arte em que
-                um ator ou conjunto de atores, interpreta uma história ou
-                atividades para o público em um determinado lugar. Com o auxílio
-                de dramaturgos ou de situações improvisadas, de diretores e
-                técnicos, o espetáculo tem como objetivo apresentar uma situação
-                e despertar sentimentos no público. Também denomina-se teatro o
-                edifício onde se desenvolve esta forma de arte, podendo também
-                ser local de apresentações para a dança, recitais, etc.
+                O teatro é uma das duas artes cênicas, ao lado da dança. É uma
+                forma de arte em que um ator ou conjunto de atores interpreta
+                uma história, ou atividades, para um público, em um determinado
+                lugar. Com o auxílio de dramaturgos ou de situações
+                improvisadas, de diretores e técnicos, o espetáculo tem como
+                objetivo apresentar uma situação e despertar sentimentos no
+                público. Também denomina-se teatro o edifício onde se desenvolve
+                esta forma de arte, podendo também ser local de apresentações
+                para a dança, recitais, etc.
               </td>
             </tr>
           </table>
@@ -93,19 +94,18 @@
             <tr>
               <td class="texto-principal">
                 <h1 class="text-title-principal">dança</h1>
-                A dança é uma das três principais artes cênicas da antiguidade,
-                ao lado do teatro e da música. No antigo Egito já se realizavam
-                as chamadas danças astro-teológicas em homenagem a Osíris. Na
-                Grécia, a dança era frequentemente vinculada aos jogos, em
-                especial aos olímpicos.[1] A dança caracteriza-se pelo uso do
-                corpo seguindo movimentos previamente estabelecidos
-                (coreografia) ou improvisados (dança livre).[2] Na maior parte
-                dos casos, a dança, com passos ritmados ao som e compasso de
-                música e envolve a expressão de sentimentos potenciados por ela.
-                A dança pode existir como manifestação artística ou como forma
-                de divertimento ou cerimónia. Atualmente, a dança manifesta-se
-                nas ruas, em eventos como vídeo-clip ou em qualquer outro
-                ambiente em que for contextualizado o propósito artístico.
+                A dança é uma das mais antigas artes que se tem conhecimento. No
+                antigo Egito já se realizavam as chamadas danças
+                astro-teológicas em homenagem a Osíris. Na Grécia, a dança era
+                frequentemente vinculada aos jogos, em especial aos olímpicos. A
+                dança caracteriza-se pelo uso do corpo seguindo movimentos
+                previamente estabelecidos ou improvisados. Na maior parte dos
+                casos, a dança acompanha passos ritmados a música, e envolve a
+                expressão de sentimentos potencializados por ela. A dança pode
+                existir como manifestação artística, como forma de divertimento
+                ou cerimônia. Atualmente, a dança é muito manifestada, desde em
+                festas até em clipes de música muito bem elaborados. Mostraremos
+                alguns destaques destas artes a seguir.
               </td>
               <td class="td-imagem">
                 <img
@@ -124,25 +124,26 @@
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">Romeu e Julieta</h1>
-                Romeu e Julieta (no original em inglês Romeo and Juliet) é uma
-                tragédia escrita entre 1591 e 1595, nos primórdios da carreira
-                literária de William Shakespeare, sobre dois adolescentes cuja
-                morte acaba unindo suas famílias, outrora em pé de guerra. A
-                peça ficou entre as mais populares na época de Shakespeare e, ao
-                lado de Hamlet, é uma das suas obras mais levadas aos palcos do
-                mundo inteiro. Hoje, o relacionamento dos dois jovens é
-                considerado como o arquétipo do amor juvenil. Romeu e Julieta
-                pertence a uma tradição de romances trágicos que remonta à
-                antiguidade. Seu enredo é baseado em um conto da Itália,
-                traduzido em versos como A Trágica História de Romeu e Julieta
-                por Arthur Brooke em 1562, e retomado em prosa como Palácio do
-                Prazer por William Painter em 1582. Shakespeare baseou-se em
-                ambos, mas reforçou a ação de personagens secundários,
-                especialmente Mercúcio e Páris, a fim de expandir o enredo. O
-                texto foi publicado pela primeira vez em um quarto[a] de 1597,
+                Romeu e Julieta é uma tragédia escrita entre 1591 e 1595, nos
+                primórdios da carreira literária de William Shakespeare, sobre
+                dois adolescentes cuja morte acaba unindo suas famílias, outrora
+                em pé de guerra. A peça ficou entre as mais populares na época
+                de Shakespeare e, ao lado de Hamlet, é uma das suas obras mais
+                levadas aos palcos do mundo inteiro. Hoje, o relacionamento dos
+                dois jovens é considerado como o paradigma do amor juvenil.
+                Romeu e Julieta pertence a uma tradição de romances trágicos que
+                remonta à antiguidade. Seu enredo é baseado em um conto da
+                Itália, traduzido em versos como "A Trágica História de Romeu e
+                Julieta", por Arthur Brooke em 1562; e retomado em prosa como
+                "Palácio do Prazer", por William Painter em 1582. Shakespeare
+                baseou-se em ambos, mas reforçou a ação de personagens
+                secundários. O texto foi publicado pela primeira vez em 1597,
                 mas essa versão foi considerada como de péssima qualidade, o que
                 estimulou muitas outras edições posteriores que trouxeram
-                consonância com o texto original shakespeariano.
+                consonância com o texto original shakespeariano. A tragédia não
+                ficou apenas conhecida pelo seu livro, mas pelas suas
+                <b>representações teatrais</b>, feitas desde antigamente, até
+                como trabalhos escolares.
               </td>
               <td class="td-imagem">
                 <img
@@ -304,15 +305,15 @@
                 Revelations é o trabalho mais conhecido do coreógrafo de
                 jazz-dança Alvin Ailey. É também o trabalho de assinatura do
                 Alvin Ailey American Dance Theatre, que estreou uma versão
-                estendida do trabalho (com duração de mais de uma hora) em
-                1960, quando Ailey tinha 29 anos. Definido como música
-                espiritual, gospel e blues e influenciado pela própria educação
-                cristã do coreógrafo, apresenta uma visão da experiência
-                histórica afro-americana a partir de uma perspectiva inspirada
-                na igreja. As três seções da versão final revisada de 36 minutos
-                retratam o sofrimento da escravidão ("Peregrino da tristeza"),
-                alegria batismal ("Leve-me para a água") e uma celebração da
-                igreja coral ("Mover, Membros, Mover") .
+                estendida do trabalho (com duração de mais de uma hora) em 1960,
+                quando Ailey tinha 29 anos. Definido como música espiritual,
+                gospel e blues e influenciado pela própria educação cristã do
+                coreógrafo, apresenta uma visão da experiência histórica
+                afro-americana a partir de uma perspectiva inspirada na igreja.
+                As três seções da versão final revisada de 36 minutos retratam o
+                sofrimento da escravidão ("Peregrino da tristeza"), alegria
+                batismal ("Leve-me para a água") e uma celebração da igreja
+                coral ("Mover, Membros, Mover") .
               </td>
               <td class="td-imagem">
                 <img
