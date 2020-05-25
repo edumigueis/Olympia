@@ -8,6 +8,7 @@ namespace API_olympia.Data
         public OlympiaContext(DbContextOptions<OlympiaContext> options) : base(options)
         {
         }
+
         public DbSet<Artes> Artes { get; set; }
         public DbSet<Fotos> Fotos { get; set; }
         public DbSet<Eventos> Eventos { get; set; }
@@ -19,5 +20,6 @@ namespace API_olympia.Data
         public DbSet<Feedbacks> FeedBacks { get; set; }
         public DbSet<Sugestoes> Sugestoes { get; set; }
         public DbSet<Denuncias> Denuncias { get; set; }
+        public DbSet<UserInfo> Users { get; set; }
     }
 }

@@ -1,8 +1,17 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Bem-vindo!</h1>
+    <p>Você está no servidor do Olympia! <br> Feito em ASP.NET. Leia mais em <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+    <form class="form-signin" style="width: 40%;margin:auto;margin-top:60px;">
+  <h1 class="h3 mb-3 font-weight-normal">Entre para avançar</h1>
+  <label for="inputEmail" class="sr-only">User</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="User" required autofocus style="margin-top:10px;">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top:30px;">Sign in</button>
+</form>
