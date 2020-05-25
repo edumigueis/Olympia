@@ -176,12 +176,23 @@ namespace API_olympia.Data
         }
 
         public bool VerfificarSpAdmins(Admins model){
-            var admins = Context.Admins.FromSqlRaw("sp_ValidateAdmin"+model.User+""+model.Password+"").ToList();
-            if(admins.Count == 1){
-                return true;
-            }else{
-                return false;
-            }
+            var admins = Context.Admins.FromSqlRaw("sp_ValidateAdmin '" + model.UserName + "','" + model.Senha + "'").ToList();
+            return (admins.Count == 1);
+        }
+
+        public async Task<Admins[]> GetAllAdminsAsync()
+        {
+            IQueryable<Admins> consultaAdmins = this.Context.Admins;
+            consultaAdmins = consultaAdmins.OrderBy(p => p.IdAdmin);
+            return await consultaAdmins.ToArrayAsync();
+        }
+
+        public async Task<Admins> GetAllAdminsAsyncById(int id)
+        {
+            IQueryable<Admins> consultaAdmins = this.Context.Admins;
+            consultaAdmins = consultaAdmins.OrderBy(p => p.IdAdmin)
+            .Where(Admins => Admins.IdAdmin == id);
+            return await consultaAdmins.FirstOrDefaultAsync();
         }
     }
 }

@@ -15,17 +15,18 @@
   <input type="email" id="inputEmail" class="form-control" placeholder="User" required autofocus style="margin-top:10px;">
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-  <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top:30px;" id="sign-in">Sign in</button>
+  <button class="btn btn-lg btn-primary btn-block" style="margin-top:30px;" id="sign-in">Sign in</button>
 </form>
+<script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js'></script>
 <script>
     $(document).ready(function(){
         
         $('#sign-in').on('click', function(event){
             event.preventDefault()
-        var myObject = {
-        userName: $('#inputEmail').val(),
-        senha: $('#inputPassword').val()
-        }
+            var myObject = {
+            userName: $('#inputEmail').val(),
+            senha: $('#inputPassword').val()
+            }
 
         var jsonInput = JSON.stringify(myObject);
 
@@ -34,8 +35,6 @@
           url: "https://localhost:5001/api/Admins",
           data: jsonInput,
           contentType:'application/json',
-          success: function(){ alert("foi");},
-          fail: function(){ alert("ixi meo");},
           dataType: "json"
         });
 

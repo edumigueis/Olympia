@@ -22,32 +22,62 @@ namespace API_olympia.Controllers
     [ApiController]
     public class AdminsController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
         private readonly IConfiguration _configuration;
         public IRepository Repo { get; }
-        public AdminsController(UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
+        public AdminsController(UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager, IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
-        }
+        }   
 
-        /*[HttpPost("Login")]
-        public async Task<ActionResult> Login(UserInfo userInfo)
+        [HttpPost]
+        public async Task<IActionResult> post(Admins model)
         {
-
-            Claim claim = new Claim(userInfo.User, userInfo.Password);
-            IList<Claim> Claims = new List<Claim>() {claim};
-            ClaimsIdentity identity = new ClaimsIdentity(Claims);
-            ClaimsPrincipal principal = new ClaimsPrincipal(identity);
-            Thread.CurrentPrincipal = principal;
-
-            return View();
+            try
+            {
+                var result = this.Repo.VerfificarSpAdmins(model);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
         }
 
-        private UserToken BuildToken(UserInfo userInfo)
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            try
+            {
+                var result = await this.Repo.GetAllAdminsAsync();
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get().");
+            }
+        }
+
+        [HttpGet("{idAdmin}")]
+        public async Task<IActionResult> Get(int AdminsId)
+        {
+            try
+            {
+                var result = await this.Repo.GetAllAdminsAsyncById(AdminsId);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
+
+
+        /* private UserToken BuildToken(UserInfo userInfo)
         {
             var claims = new[]
             {
@@ -72,19 +102,5 @@ namespace API_olympia.Controllers
                 Expiration = expiration
             };
         }*/
-
-        [HttpPost]
-        public async Task<IActionResult> post(Admins model)
-        {
-            try
-            {
-                var result = this.Repo.VerfificarSpAdmins(model);
-                return Ok(result);
-            }
-            catch
-            {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
-            }
-        }
     }
 }

@@ -34,7 +34,7 @@ namespace API_olympia
     {
         //initializing custom roles 
         var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-        var UserManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+        var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
         string[] roleNames = { "Admin"};
         IdentityResult roleResult;
 
@@ -56,7 +56,7 @@ namespace API_olympia
        if(_user == null)
        {
             //Here you could create the super admin who will maintain the web app
-            var poweruser = new ApplicationUser
+            var poweruser = new IdentityUser
             {
                 UserName = "Admin",
                 Email = "admin@email.com",

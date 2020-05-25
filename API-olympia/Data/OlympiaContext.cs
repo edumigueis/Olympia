@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using API_olympia.Models;
 
 namespace API_olympia.Data
 {
-    public class OlympiaContext : DbContext
+    public class OlympiaContext : IdentityDbContext<IdentityUser,IdentityRole, string>
     {
         public OlympiaContext(DbContextOptions<OlympiaContext> options) : base(options)
         {
