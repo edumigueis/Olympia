@@ -2,6 +2,10 @@ using System.Threading.Tasks;
 using API_olympia.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System;
+using System.Data;
+
+
 
 namespace API_olympia.Data
 {
@@ -169,6 +173,15 @@ namespace API_olympia.Data
             consultaSugestoes = consultaSugestoes.OrderBy(p => p.IdSugestao)
             .Where(sugestao => sugestao.IdSugestao == id);
             return await consultaSugestoes.FirstOrDefaultAsync();
+        }
+
+        public bool VerfificarSpAdmins(Admins model){
+            var admins = Context.Admins.FromSqlRaw("sp_ValidateAdmin"+model.User+""+model.Password+"").ToList();
+            if(admins.Count == 1){
+                return true;
+            }else{
+                return false;
+            }
         }
     }
 }

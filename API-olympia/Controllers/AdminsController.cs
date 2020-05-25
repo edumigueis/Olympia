@@ -11,7 +11,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading;
-using System.Collections.Generic;  
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
@@ -78,19 +78,13 @@ namespace API_olympia.Controllers
         {
             try
             {
-                this.Repo.Add(model);
-                //
-                if (await this.Repo.SaveChangesAsync())
-                {
-                    //return Ok();
-                    /*return Created($"/api/artes/{model.IdArte}", model);*/
-                }
+                var result = this.Repo.VerfificarSpAdmins(model);
+                return Ok(result);
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no post().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
-            return BadRequest();
         }
     }
 }

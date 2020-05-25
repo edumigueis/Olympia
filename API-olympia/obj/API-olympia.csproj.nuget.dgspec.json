@@ -76,6 +76,10 @@
               "target": "Package",
               "version": "[4.1.0, )"
             },
+            "SqlCommand": {
+              "target": "Package",
+              "version": "[*, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.6.0, )"
