@@ -26,16 +26,17 @@ namespace API_olympia.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly IConfiguration _configuration;
         public IRepository Repo { get; }
-        public AdminsController(UserManager<IdentityUser> userManager,
+        public AdminsController(IRepository repo, UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager, IConfiguration configuration)
         {
+            this.Repo = repo;
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
         }   
 
         [HttpPost]
-        public async Task<IActionResult> post(Admins model)
+       public async Task<IActionResult> post(Admins model)
         {
             try
             {
