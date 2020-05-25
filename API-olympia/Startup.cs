@@ -12,6 +12,13 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using API_olympia.Data;
 using Microsoft.AspNetCore.Mvc;
+using API_olympia.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 
 namespace API_olympia
 {
@@ -24,7 +31,6 @@ namespace API_olympia
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors(options =>
@@ -32,21 +38,32 @@ namespace API_olympia
                 options.AddPolicy(name: "myPolicy",
                                     builder =>
                                     {
-                                        builder.AllowAnyOrigin()
-                                               .AllowAnyMethod()
-                                               .AllowAnyHeader();
+                                        builder.WithOrigins("https://localhost:5001","https://localhost:5000")
+                                               .WithMethods("PUT", "DELETE", "GET", "POST");
                                     });
             });
 
             services.AddDbContext<OlympiaContext>(
                 x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
             );
+
             services.AddControllers();
             services.AddScoped<IRepository, Repository>();
             services.AddControllersWithViews();
-        }
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["jwt:key"])),
+                ClockSkew = TimeSpan.Zero
+            });
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+        }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -56,7 +73,6 @@ namespace API_olympia
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
@@ -66,7 +82,7 @@ namespace API_olympia
 
             app.UseAuthorization();
             app.UseCors("myPolicy");
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -77,3 +93,9 @@ namespace API_olympia
         }
     }
 }
+
+
+
+
+
+
