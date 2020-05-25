@@ -26,6 +26,7 @@ namespace API_olympia.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly IConfiguration _configuration;
         public IRepository Repo { get; }
+
         public AdminsController(IRepository repo, UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager, IConfiguration configuration)
         {
@@ -36,18 +37,22 @@ namespace API_olympia.Controllers
         }   
 
         [HttpPost]
-       public async Task<IActionResult> post(Admins model)
+       /*public async Task<IActionResult> Login(Admins model)
         {
             try
             {
                 var result = this.Repo.VerfificarSpAdmins(model);
-                return Ok(result);
+                if(result == true){
+                    var user = new IdentityUser {UserName = model.UserName, Senha = model.senha};
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    return RedirectToAction("areaAdmin","areaAdmin");
+                }
             }
             catch
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
-        }
+        }*/
 
         [HttpGet]
         public async Task<IActionResult> Get()

@@ -8,36 +8,3 @@
     <h1 class="display-4">Bem-vindo!</h1>
     <p>Você está no servidor do Olympia! <br> Feito em ASP.NET. Leia mais em <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-
-    <form class="form-signin" style="width: 40%;margin:auto;margin-top:60px;" action="/api/Admins" method="post">
-  <h1 class="h3 mb-3 font-weight-normal">Entre para avançar</h1>
-  <label for="inputEmail" class="sr-only">User</label>
-  <input type="text" name="userName" id="inputEmail" class="form-control" placeholder="User" required autofocus style="margin-top:10px;">
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Password" required>
-  <button class="btn btn-lg btn-primary btn-block" style="margin-top:30px;" id="sign-in" type="submit">Sign in</button>
-</form>
-<script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js'></script>
-<script>
-   /*$(document).ready(function(){
-        
-        $('#sign-in').on('click', function(event){
-            event.preventDefault()
-            var myObject = {
-            userName: $('#inputEmail').val(),
-            senha: $('#inputPassword').val()
-            }
-
-        var jsonInput = JSON.stringify(myObject);
-
-        $.ajax({
-          type: "POST",
-          url: "https://localhost:5001/api/Admins",
-          data: jsonInput,
-          contentType:'application/json',
-          dataType: "json"
-        });
-
-        })
-    });*/
-</script>

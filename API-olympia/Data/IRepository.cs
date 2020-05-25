@@ -39,7 +39,8 @@ namespace API_olympia.Data
         Task<Sugestoes[]> GetAllSugestoesAsync();
         Task<Sugestoes> GetAllSugestoesAsyncById(int idSugestao);
 
-        bool VerfificarSpAdmins(Admins model);
+        bool VerfificarSpAdmins(LoginViewModel model);
+
         Task<Admins[]> GetAllAdminsAsync();
         Task<Admins> GetAllAdminsAsyncById(int idAdmin);
     }

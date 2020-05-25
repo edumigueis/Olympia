@@ -175,7 +175,7 @@ namespace API_olympia.Data
             return await consultaSugestoes.FirstOrDefaultAsync();
         }
 
-        public bool VerfificarSpAdmins(Admins model){
+        public bool VerfificarSpAdmins(LoginViewModel model){
             var admins = Context.Admins.FromSqlRaw("sp_ValidateAdmin '" + model.UserName + "','" + model.Senha + "'").ToList();
             return (admins.Count == 1);
         }

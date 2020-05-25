@@ -189,3 +189,5 @@ D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\De
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Owin.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
