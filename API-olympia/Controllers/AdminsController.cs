@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using API_olympia.Data;
 using API_olympia.Models;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -11,19 +12,21 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading;
 using System.Collections.Generic;  
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
 {
 
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : Controller
+    public class AdminsController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IConfiguration _configuration;
         public IRepository Repo { get; }
-        public UsersController(UserManager<ApplicationUser> userManager,
+        public AdminsController(UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
         {
             _userManager = userManager;
@@ -31,7 +34,7 @@ namespace API_olympia.Controllers
             _configuration = configuration;
         }
 
-        [HttpPost("Login")]
+        /*[HttpPost("Login")]
         public async Task<ActionResult> Login(UserInfo userInfo)
         {
 
@@ -68,6 +71,26 @@ namespace API_olympia.Controllers
                 Token = new JwtSecurityTokenHandler().WriteToken(token),
                 Expiration = expiration
             };
+        }*/
+
+        [HttpPost]
+        public async Task<IActionResult> post(Admins model)
+        {
+            try
+            {
+                this.Repo.Add(model);
+                //
+                if (await this.Repo.SaveChangesAsync())
+                {
+                    //return Ok();
+                    /*return Created($"/api/artes/{model.IdArte}", model);*/
+                }
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no post().");
+            }
+            return BadRequest();
         }
     }
 }

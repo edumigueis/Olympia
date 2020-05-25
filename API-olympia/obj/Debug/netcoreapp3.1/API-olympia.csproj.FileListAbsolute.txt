@@ -163,3 +163,28 @@ C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Mi
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\EntityFramework.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.Core.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\System.Web.Http.Owin.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Owin.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Owin.Host.SystemWeb.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.OAuth.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Owin.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
