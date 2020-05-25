@@ -142,3 +142,10 @@ tipoDenuncia varchar(100) not null,
 descricao varchar(1000) not null,
 constraint fkDenunciaUsuario foreign key (idUsuario) references Usuarios (idUsuario)
 )
+
+create table Admins(
+idAdmin int identity primary key not null,
+userName varchar(100) not null,
+senha varchar(500) not null,
+email varchar(255) not null
+)
