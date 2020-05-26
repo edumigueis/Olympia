@@ -177,8 +177,7 @@ namespace API_olympia.Data
         public bool VerfificarSpAdmins(LoginViewModel model){
             SqlConnection conn = new SqlConnection("Data Source = regulus.cotuca.unicamp.br; Initial Catalog = BD19197; Persist Security Info = True; User ID = BD19197; Password= Glausilvinhamor10");
             conn.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand("comando", conn);
             cmd.CommandText = "sp_ValidateAdmin '" + model.UserName + "','" + model.Senha + "'";
             SqlDataReader leitor = cmd.ExecuteReader();
 

@@ -156,5 +156,6 @@ alter proc sp_ValidateAdmin
 
 as
 Begin
-    Select count(*) from Admins where userName=@Username and senha=@Password
+    Select * from Admins where userName=@Username and senha=@Password
 End
+
