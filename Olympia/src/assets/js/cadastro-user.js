@@ -199,7 +199,7 @@ setInterval(() => {
 
           reader.readAsDataURL(input.files[0]);
         }
-      };
+      }; 
 
       $("#file").on("change", function() {
         readURL(this);
@@ -434,10 +434,8 @@ setInterval(() => {
         $("#pick-image-modal").css("display", "block");
       });
       $(document.body).on("click","#signup", function(eve) {
-
+        eve.preventDefault();
         if(!jaFoiPostCadUser){
-          
-          eve.preventDefault();
         var valorFoto;
         
         if ($("#name").val() == "") {
@@ -457,7 +455,7 @@ setInterval(() => {
         }
 
         if(isSelImg == true){
-          valorFoto = $("#user-prof-image").attr("src");
+          valorFoto = LZString.compress(selectedImage);
         } else{
           valorFoto = codeHex;
         }
