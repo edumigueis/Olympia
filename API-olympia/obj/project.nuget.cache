@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "qZANUUtuwzZSyLKhcCI3yJFGfcM8BttYh5Lr4W16OT0umMsfXR3UBZvgWPEdA0anryRzJcp5Q1YKPD2huz0USA==",
+  "dgSpecHash": "HFD53ILE/vkn/n+oJVVP10UtlLs1oVjMlXI13OVev2EnrSc6uodOtx1cGLym/fapXbl//IyJ2y+pcOoiIWotHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\API-olympia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rodrigo\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512",
+    "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnet.identity.owin\\2.2.3\\microsoft.aspnet.identity.owin.2.2.3.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.7\\microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnet.webapi.owin\\5.2.7\\microsoft.aspnet.webapi.owin.5.2.7.nupkg.sha512",
@@ -64,6 +65,7 @@
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.owin\\4.1.0\\microsoft.owin.4.1.0.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.owin.host.systemweb\\4.1.0\\microsoft.owin.host.systemweb.4.1.0.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.owin.security\\4.1.0\\microsoft.owin.security.4.1.0.nupkg.sha512",
+    "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.owin.security.cookies\\3.0.1\\microsoft.owin.security.cookies.3.0.1.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.owin.security.oauth\\4.1.0\\microsoft.owin.security.oauth.4.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
@@ -208,6 +210,16 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.Identity.Owin 2.2.3' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.Identity.Owin",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "O pacote 'Microsoft.AspNet.WebApi.Core 5.2.7' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
@@ -250,6 +262,16 @@
       "warningLevel": 1,
       "message": "O pacote 'Microsoft.Owin.Security 4.1.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "Microsoft.Owin.Security",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Owin.Security.Cookies 3.0.1' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Owin.Security.Cookies",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

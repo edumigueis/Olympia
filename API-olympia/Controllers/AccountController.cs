@@ -4,6 +4,14 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
+using System.Security.Claims;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using System.Collections.Generic;
+using System;
+using Microsoft.Extensions.Logging;
 
 namespace API_olympia.Controllers
 {
@@ -40,10 +48,13 @@ namespace API_olympia.Controllers
             try
             {
                 var resultSp = this.Repo.VerfificarSpAdmins(model);
-                if (resultSp == true)
+                if (!resultSp)
                 {
                     var result = await signInManager.PasswordSignInAsync(
                         model.UserName, model.Senha, false, false);
+
+                    /*var user = new UserManager();
+                    user.AddClaimAsync(1, new Claim(ClaimTypes.Role, "Admin"));*/
 
                     if (result.Succeeded)
                     {
@@ -62,7 +73,7 @@ namespace API_olympia.Controllers
 
         }
 
-        
+
         /* private UserToken BuildToken(UserInfo userInfo)
         {
             var claims = new[]
