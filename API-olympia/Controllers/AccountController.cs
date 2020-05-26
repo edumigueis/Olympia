@@ -4,14 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
-using System.Security.Claims;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using System.Collections.Generic;
 using System;
-using Microsoft.Extensions.Logging;
 
 namespace API_olympia.Controllers
 {
@@ -22,10 +15,14 @@ namespace API_olympia.Controllers
     {
 
         private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<IdentityUser> userManager;
+        private readonly RoleManager<IdentityRole> roleManager;
         public IRepository Repo { get; }
-        public AccountController(SignInManager<IdentityUser> signInManager, IRepository repo)
+        public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IRepository repo)
         {
             this.signInManager = signInManager;
+            this.userManager = userManager;
+            this.roleManager = roleManager;
             this.Repo = repo;
         }
 
@@ -48,27 +45,32 @@ namespace API_olympia.Controllers
             try
             {
                 var resultSp = this.Repo.VerfificarSpAdmins(model);
-                if (!resultSp)
+
+                if (resultSp)
                 {
-                    var result = await signInManager.PasswordSignInAsync(
-                        model.UserName, model.Senha, false, false);
+                    var user = new IdentityUser { UserName = model.UserName };
 
-                    /*var user = new UserManager();
-                    user.AddClaimAsync(1, new Claim(ClaimTypes.Role, "Admin"));*/
+                    await userManager.CreateAsync(user);
 
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("index", "home");
-                    }
+                    var role = new IdentityRole { Name = "Admin" };
 
-                    return View(model);
+                    await roleManager.CreateAsync(role);
+
+                    await userManager.CreateAsync(user, model.Senha);
+
+                    await signInManager.SignInAsync(user, false, "");
+
+                    await userManager.AddToRoleAsync(user, role.Name);
+
+                    return RedirectToAction("admin", "home");
+
                 }
                 else
-                    return View(model);
+                    return View("Views/Home/Login.cshtml");
             }
-            catch
+            catch (Exception e)
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
             }
 
         }

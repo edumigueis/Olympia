@@ -16,6 +16,8 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Owin;
 using Owin;
 using Microsoft.Owin.Security;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API_olympia
 {
@@ -48,7 +50,10 @@ namespace API_olympia
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IServiceProvider, Service>();
-            services.AddMvc(option => option.EnableEndpointRouting = false);
+            services.AddMvc(option => {
+                option.EnableEndpointRouting = false;
+                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                });
 
             services.AddCors(options =>
             {
@@ -65,6 +70,19 @@ namespace API_olympia
                 options.AddPolicy("RequireAdminRole",
                  policy => policy.RequireRole("Admin"));
             });
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                    .AddCookie(options =>
+                    {
+                        options.Events.OnRedirectToLogin = context =>
+                        {
+                            context.Response.Headers["Location"] = context.RedirectUri;
+                            context.Response.StatusCode = 401;
+                            return Task.CompletedTask;
+                        };
+                    })
+                    .AddIdentityCookies();
+
             services.AddDbContext<OlympiaContext>(
                 x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
             );
@@ -106,7 +124,7 @@ namespace API_olympia
             services.TryAddScoped<RoleManager<IdentityRole>>();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -125,6 +143,8 @@ namespace API_olympia
             app.UseAuthorization();
             app.UseCors("myPolicy");
             app.UseMvc();
+
+            serviceProvider.GetService<OlympiaContext>().Database.EnsureCreated();
 
             app.UseEndpoints(endpoints =>
             {
