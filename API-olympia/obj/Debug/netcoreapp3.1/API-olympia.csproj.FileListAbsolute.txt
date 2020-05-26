@@ -47,7 +47,6 @@ C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\ru
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.csproj.CopyComplete
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.csproj.CoreCompileInputs.cache
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\API-olympia.exe

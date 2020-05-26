@@ -1,24 +1,17 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using API_olympia.Data;
-using Microsoft.AspNetCore.Mvc;
-using API_olympia.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace API_olympia
 {
@@ -41,41 +34,17 @@ namespace API_olympia
             foreach (var roleName in roleNames)
             {
                 var roleExist = await RoleManager.RoleExistsAsync(roleName);
-                // ensure that the role does not exist
                 if (!roleExist)
                 {
-                    //create the roles and seed them to the database: 
                     roleResult = await RoleManager.CreateAsync(new IdentityRole(roleName));
                 }
             }
 
-            // find the user with the admin email 
-            var _user = await UserManager.FindByEmailAsync("admin@email.com");
-
-            // check if the user exists
-            if (_user == null)
-            {
-                //Here you could create the super admin who will maintain the web app
-                var poweruser = new IdentityUser
-                {
-                    UserName = "Admin",
-                    Email = "admin@email.com",
-                };
-                string adminPassword = "p@$$w0rd";
-
-                var createPowerUser = await UserManager.CreateAsync(poweruser, adminPassword);
-                if (createPowerUser.Succeeded)
-                {
-                    //here we tie the new user to the role
-                    await UserManager.AddToRoleAsync(poweruser, "Admin");
-
-                }
-            }
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IServiceProvider, ServiceProvider>();
-            services.AddMvc().AddControllersAsServices();
+            services.AddScoped<IServiceProvider, Service>();
+            services.AddMvc(option => option.EnableEndpointRouting = false);
 
             services.AddCors(options =>
             {
@@ -110,13 +79,27 @@ namespace API_olympia
             });
 
             services.AddIdentityCore<IdentityUser>()
-                    .AddRoles<IdentityRole>() // <--------
-                    .AddEntityFrameworkStores<OlympiaContext>();
+                    .AddRoles<IdentityRole>()
+                    .AddEntityFrameworkStores<OlympiaContext>()
+                    .AddDefaultTokenProviders();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            services.BuildServiceProvider();
+            services.AddHttpContextAccessor();
+
+            services.TryAddScoped<IUserValidator<IdentityUser>, UserValidator<IdentityUser>>();
+            services.TryAddScoped<IPasswordValidator<IdentityUser>, PasswordValidator<IdentityUser>>();
+            services.TryAddScoped<IPasswordHasher<IdentityUser>, PasswordHasher<IdentityUser>>();
+            services.TryAddScoped<ILookupNormalizer, UpperInvariantLookupNormalizer>();
+            services.TryAddScoped<IRoleValidator<IdentityRole>, RoleValidator<IdentityRole>>();
+            services.TryAddScoped<IdentityErrorDescriber>();
+            services.TryAddScoped<ISecurityStampValidator, SecurityStampValidator<IdentityUser>>();
+            services.TryAddScoped<ITwoFactorSecurityStampValidator, TwoFactorSecurityStampValidator<IdentityUser>>();
+            services.TryAddScoped<IUserClaimsPrincipalFactory<IdentityUser>, UserClaimsPrincipalFactory<IdentityUser, IdentityRole>>();
+            services.TryAddScoped<UserManager<IdentityUser>>();
+            services.TryAddScoped<SignInManager<IdentityUser>>();
+            services.TryAddScoped<RoleManager<IdentityRole>>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -4,8 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System;
 using System.Data;
-
-
+using Microsoft.Data.SqlClient;
 
 namespace API_olympia.Data
 {
@@ -176,8 +175,24 @@ namespace API_olympia.Data
         }
 
         public bool VerfificarSpAdmins(LoginViewModel model){
-            var admins = Context.Admins.FromSqlRaw("sp_ValidateAdmin '" + model.UserName + "','" + model.Senha + "'").ToList();
-            return (admins.Count == 1);
+            SqlConnection conn = new SqlConnection("Data Source = regulus.cotuca.unicamp.br; Initial Catalog = BD19197; Persist Security Info = True; User ID = BD19197; Password= Glausilvinhamor10");
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_ValidateAdmin '" + model.UserName + "','" + model.Senha + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            int count = 0;
+            while (leitor.Read())
+            {
+                count++;
+            }
+            conn.Close();
+
+            if (count == 0)
+                return false;
+            else
+                return true;
         }
 
         public async Task<Admins[]> GetAllAdminsAsync()

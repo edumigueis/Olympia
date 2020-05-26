@@ -20,7 +20,7 @@ namespace API_olympia.Controllers
             this.signInManager = signInManager;
             this.Repo = repo;
         }
-        
+
         /*[HttpPost]
         public async Task<IActionResult> Logout()
         {
@@ -35,27 +35,25 @@ namespace API_olympia.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login([FromForm]LoginViewModel model)
         {
             try
             {
                 var resultSp = this.Repo.VerfificarSpAdmins(model);
                 if (resultSp == true)
                 {
-                    if (ModelState.IsValid)
+                    var result = await signInManager.PasswordSignInAsync(
+                        model.UserName, model.Senha, false, false);
+
+                    if (result.Succeeded)
                     {
-                        var result = await signInManager.PasswordSignInAsync(
-                            model.UserName, model.Senha, false, false);
-
-                        if (result.Succeeded)
-                        {
-                            return RedirectToAction("index", "home");
-                        }
-
-                        ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
+                        return RedirectToAction("index", "home");
                     }
+
+                    return View(model);
                 }
-                return View(model);
+                else
+                    return View(model);
             }
             catch
             {
@@ -63,5 +61,32 @@ namespace API_olympia.Controllers
             }
 
         }
+
+        
+        /* private UserToken BuildToken(UserInfo userInfo)
+        {
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.UniqueName, userInfo.User),
+                new Claim("meuValor", "oque voce quiser"),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:key"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var expiration = DateTime.UtcNow.AddHours(1);
+            JwtSecurityToken token = new JwtSecurityToken(
+               issuer: null,
+               audience: null,
+               claims: claims,
+               expires: expiration,
+               signingCredentials: creds);
+
+            return new UserToken()
+            {
+                Token = new JwtSecurityTokenHandler().WriteToken(token),
+                Expiration = expiration
+            };
+        }*/
     }
 }
