@@ -10,7 +10,8 @@ namespace API_olympia.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Policy="RequireAdminRole")]
+    /*[Authorize(Policy="RequireAdminRole")]*/
+
     public class EventosController : Controller
     {
         public IRepository Repo { get; }

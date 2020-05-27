@@ -60,7 +60,7 @@ namespace API_olympia
                 options.AddPolicy(name: "myPolicy",
                                     builder =>
                                     {
-                                        builder.WithOrigins("https://localhost:5001", "https://localhost:5000")
+                                        builder.WithOrigins("https://localhost:5001", "https://localhost:5000", "http://localhost:8080")
                                                .WithMethods("PUT", "DELETE", "GET", "POST");
                                     });
             });
