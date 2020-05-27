@@ -180,7 +180,7 @@ export default {
   methods: {
     getMarkers() {
       var codigo = 1;
-      $.getJSON("https://localhost:5001/api/Eventos/"+codigo, function(result) 
+      $.getJSON("https://localhost:5001/api/Eventos/1", function(result) 
       {
         $.each(result, function(i, field) {
           $("#event-name").text(field.nome);
@@ -225,7 +225,7 @@ export default {
         return day + "/" + month + "/" + year;
     }
   },
-  created () {
+  mounted () {
     this.getMarkers()
   }
 }
