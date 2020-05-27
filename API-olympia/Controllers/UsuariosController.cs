@@ -19,7 +19,6 @@ namespace API_olympia.Controllers
         public UsuariosController(IRepository repo)
         {
             this.Repo = repo;
-            /*this.hasher = new PasswordHasher();*/
         }
 
         [HttpGet]
@@ -98,7 +97,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                /*model.Senha = Aqui vem o hashing*/
+                model.Senha = PasswordHasher.Hash(model.Senha);
                 this.Repo.Add(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
