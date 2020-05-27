@@ -17,7 +17,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
 {
-    [Authorize(Policy="RequireAdminRole")]
     [Route("api/[controller]")]
     [ApiController]
     public class AdminsController : Controller

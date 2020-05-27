@@ -6,10 +6,13 @@ using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Server.HttpSys;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API_olympia.Controllers
 {
-
+    [Authorize(Policy = "RequireAdminRole")]
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : Controller
@@ -27,20 +30,21 @@ namespace API_olympia.Controllers
             this.Repo = repo;
         }
 
-        /*[HttpPost]
+        [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
             return RedirectToAction("index", "home");
-        }*/
+        }
 
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpPost("Login")]
         public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
             try
@@ -57,7 +61,7 @@ namespace API_olympia.Controllers
 
                         if (userManager.IsInRoleAsync(userExistente, "Admin").Result)
                         {
-                            await signInManager.SignInAsync(userExistente, false, "");
+                            await signInManager.SignInAsync(userExistente, isPersistent:false);
 
                             return RedirectToAction("admin", "home");
                         }
@@ -70,7 +74,7 @@ namespace API_olympia.Controllers
 
                             role = await roleManager.FindByNameAsync("Admin");
 
-                            await signInManager.SignInAsync(userExistente, false, "");
+                            await signInManager.SignInAsync(userExistente, isPersistent: false);
 
                             await userManager.AddToRoleAsync(userExistente, role.Name);
 
@@ -92,7 +96,7 @@ namespace API_olympia.Controllers
 
                         await userManager.CreateAsync(user, model.Senha);
 
-                        await signInManager.SignInAsync(user, false, "");
+                        await signInManager.SignInAsync(user, isPersistent: false);
 
                         await userManager.AddToRoleAsync(user, role.Name);
 

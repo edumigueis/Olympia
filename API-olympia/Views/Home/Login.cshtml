@@ -3,7 +3,7 @@
     ViewData["Title"] = "Login";
 }
 <h1>@ViewData["Title"]</h1>
-<form class="form-signin" style="width: 40%;margin:auto;margin-top:60px;" method="post" action="/api/Account">
+<form class="form-signin" style="width: 40%;margin:auto;margin-top:60px;" method="post" action="/Account/Login">
   <h1 class="h3 mb-3 font-weight-normal">Entre para avançar</h1>
   <label asp-for="UserName" for="inputEmail" class="sr-only">User</label>
   <input type="text" asp-for="UserName" name="userName" id="inputEmail" class="form-control" placeholder="User" required autofocus style="margin-top:10px;">
