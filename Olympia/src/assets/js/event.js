@@ -122,21 +122,20 @@ $('#to-ab-tb').click(function(ev){
         return day + "/" + month + "/" + year;
       }
       var codigo = 1;
-      $.getJSON("https://localhost:5001/api/Eventos/" + codigo, function(
-        result
-      ) {
+      $.getJSON("https://localhost:5001/api/Eventos/"+codigo, function(result) 
+      {
         $.each(result, function(i, field) {
           $("#event-name").text(field.nome);
           $("#event-info-nome").text(field.nome);
           $("#event-info-local").text("Endereço:" + field.endereco);
           $("#event-info-datas").text(
-            "Data:" + formatDate(field.data.substring(0, 10).replace("-", "/"))
+            "Data:" + formatDate(field.dataEvento.substring(0, 10).replace("-", "/"))
           );
           $("#event-info-horarios").text("Horários:" + field.horarios);
           $("#of-web-link-eve").href = field.linkSiteOficial;
-          $(".day").text(field.data.toString().substring(8, 10));
+          $(".day").text(field.dataEvento.toString().substring(8, 10));
           $(".month").text(
-            monthNames[parseInt(field.data.substring(5, 7)) - 1]
+            monthNames[parseInt(field.dataEvento.substring(5, 7)) - 1]
               .substring(0, 3)
               .toUpperCase()
           );
