@@ -44,8 +44,19 @@
     });
 });*/
 //VARIÁVEIS AUXILIARES
-const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
 ];
 
 var vzs = 0;
@@ -102,33 +113,50 @@ $('#to-ab-tb').click(function(ev){
         //   'max-width' : '100%'
         // });
       });
-      function formatDate (input) {
+      function formatDate(input) {
         var datePart = input.match(/\d+/g),
-        year = datePart[0], // get only two digits
-        month = datePart[1], day = datePart[2];
-      
-        return day+'/'+month+'/'+year;
+          year = datePart[0], // get only two digits
+          month = datePart[1],
+          day = datePart[2];
+
+        return day + "/" + month + "/" + year;
       }
       var codigo = 1;
-      $.getJSON("https://localhost:5001/api/Eventos/"+codigo, function(result){
-      $.each(result, function(i, field){
-
-            $('#event-name').text(field.nome);
-            $('#event-info-nome').text(field.nome);
-            $('#event-info-local').text("Endereço:"+field.endereco);
-            $('#event-info-datas').text("Data:"+ formatDate(field.data.substring(0,10).replace('-','/')));
-            $('#event-info-horarios').text("Horários:"+field.horarios);
-            $('#of-web-link-eve').href = field.linkSiteOficial;
-            $('.day').text(field.data.toString().substring(8,10));
-            $('.month').text(monthNames[parseInt(field.data.substring(5,7)) - 1].substring(0,3).toUpperCase());
-            $('#event-name').text(field.nome);
-            $('#adress-pt-1').text(field.endereco.substring(0, field.endereco.indexOf('Cidade:', 3)));
-            $('#adress-pt-2').text(field.endereco.substring(field.endereco.indexOf('Cidade:', 3), field.endereco.indexOf('País:', 6)));
-            $('#adress-pt-3').text(field.endereco.substring(field.endereco.indexOf('País:', 6)));
-            $('#desc-ev-wrapper').text(field.descricao);
-            $('#event-map').attr('src', field.localizacaoCoord);
+      $.getJSON("https://localhost:5001/api/Eventos/" + codigo, function(
+        result
+      ) {
+        $.each(result, function(i, field) {
+          $("#event-name").text(field.nome);
+          $("#event-info-nome").text(field.nome);
+          $("#event-info-local").text("Endereço:" + field.endereco);
+          $("#event-info-datas").text(
+            "Data:" + formatDate(field.data.substring(0, 10).replace("-", "/"))
+          );
+          $("#event-info-horarios").text("Horários:" + field.horarios);
+          $("#of-web-link-eve").href = field.linkSiteOficial;
+          $(".day").text(field.data.toString().substring(8, 10));
+          $(".month").text(
+            monthNames[parseInt(field.data.substring(5, 7)) - 1]
+              .substring(0, 3)
+              .toUpperCase()
+          );
+          $("#event-name").text(field.nome);
+          $("#adress-pt-1").text(
+            field.endereco.substring(0, field.endereco.indexOf("Cidade:", 3))
+          );
+          $("#adress-pt-2").text(
+            field.endereco.substring(
+              field.endereco.indexOf("Cidade:", 3),
+              field.endereco.indexOf("País:", 6)
+            )
+          );
+          $("#adress-pt-3").text(
+            field.endereco.substring(field.endereco.indexOf("País:", 6))
+          );
+          $("#desc-ev-wrapper").text(field.descricao);
+          $("#event-map").attr("src", field.localizacaoCoord);
+        });
       });
-    });
     });
   } else if (!$("#container-evento").length) {
     //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
