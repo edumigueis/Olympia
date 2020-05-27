@@ -34,7 +34,6 @@ namespace API_olympia.Controllers
             return View();
         }
 
-        [Authorize(Policy = "RequireAdminRole")]
         public IActionResult Admin()
         {
             return View();

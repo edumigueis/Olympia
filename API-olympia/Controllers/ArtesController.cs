@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
 {
-    [Authorize(Policy="RequireAdminRole")]
     [Route("api/[controller]")]
     [ApiController]
     public class ArtesController : Controller
@@ -19,6 +18,7 @@ namespace API_olympia.Controllers
             this.Repo = repo;
         }
 
+        [Authorize(Policy = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -33,6 +33,7 @@ namespace API_olympia.Controllers
             }
         }
 
+        [Authorize(Policy = "Admin")]
         [HttpGet("{idArte}")]
         public async Task<IActionResult> Get(int ArtesId)
         {
@@ -47,6 +48,7 @@ namespace API_olympia.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("{idArte}")]
         public async Task<IActionResult> put(int ArtesId, Artes model)
         {
@@ -69,6 +71,7 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{idArte}")]
         public async Task<IActionResult> delete(int ArtesId)
         {
@@ -91,6 +94,7 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> post(Artes model)
         {
