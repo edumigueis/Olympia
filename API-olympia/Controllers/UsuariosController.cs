@@ -10,12 +10,12 @@ namespace API_olympia.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Policy="RequireAdminRole")]
     public class UsuariosController : Controller
     {
         public IRepository Repo { get; }
 
-        private PasswordHasher hasher;
+       /* private PasswordHasher hasher;*/
         public UsuariosController(IRepository repo)
         {
             this.Repo = repo;

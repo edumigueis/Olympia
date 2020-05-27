@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
 {
-    [Authorize(Roles="Admin")]
+    [Authorize(Policy="RequireAdminRole")]
     [Route("api/[controller]")]
     [ApiController]
     public class ArtesController : Controller

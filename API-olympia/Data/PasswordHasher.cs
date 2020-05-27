@@ -1,4 +1,4 @@
-namespace API_olympia.Data
+/*namespace API_olympia.Data
 {
     public class PasswordHasher
     {
@@ -60,4 +60,4 @@ namespace API_olympia.Data
   }
 }
     }
-}
+}*/

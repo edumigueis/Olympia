@@ -10,7 +10,7 @@ namespace API_olympia.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles="Admin")]
+    [Authorize(Policy="RequireAdminRole")]
     public class SugestoesController : Controller
     {
         public IRepository Repo { get; }

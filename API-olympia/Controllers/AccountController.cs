@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using System;
+using System.Collections.Generic;
 
 namespace API_olympia.Controllers
 {
@@ -40,7 +41,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([FromForm]LoginViewModel model)
+        public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
             try
             {
@@ -48,29 +49,63 @@ namespace API_olympia.Controllers
 
                 if (resultSp)
                 {
-                    var user = new IdentityUser { UserName = model.UserName };
+                    var existeUser = await userManager.FindByNameAsync(model.UserName);
 
-                    await userManager.CreateAsync(user);
+                    if (existeUser != null)
+                    {
+                        IdentityUser userExistente = await userManager.FindByNameAsync(model.UserName);
 
-                    var role = new IdentityRole { Name = "Admin" };
+                        if (userManager.IsInRoleAsync(userExistente, "Admin").Result)
+                        {
+                            await signInManager.SignInAsync(userExistente, false, "");
 
-                    await roleManager.CreateAsync(role);
+                            return RedirectToAction("admin", "home");
+                        }
+                        else
+                        {
+                            var role = await roleManager.FindByNameAsync("Admin");
 
-                    await userManager.CreateAsync(user, model.Senha);
+                            if (role == null)
+                                await roleManager.CreateAsync(new IdentityRole() { Name = "Admin" });
 
-                    await signInManager.SignInAsync(user, false, "");
+                            role = await roleManager.FindByNameAsync("Admin");
 
-                    await userManager.AddToRoleAsync(user, role.Name);
+                            await signInManager.SignInAsync(userExistente, false, "");
 
-                    return RedirectToAction("admin", "home");
+                            await userManager.AddToRoleAsync(userExistente, role.Name);
 
+                            return RedirectToAction("admin", "home");
+                        }
+                    }
+                    else
+                    {
+                        var user = new IdentityUser { UserName = model.UserName };
+
+                        await userManager.CreateAsync(user);
+
+                        var role = await roleManager.FindByNameAsync("Admin");
+
+                        if (role == null)
+                            await roleManager.CreateAsync(new IdentityRole() { Name = "Admin" });
+
+                        role = await roleManager.FindByNameAsync("Admin");
+
+                        await userManager.CreateAsync(user, model.Senha);
+
+                        await signInManager.SignInAsync(user, false, "");
+
+                        await userManager.AddToRoleAsync(user, role.Name);
+
+                        return RedirectToAction("admin", "home");
+                    }
                 }
-                else
-                    return View("Views/Home/Login.cshtml");
+
+                return View("Views/Home/Login.cshtml");
+
             }
-            catch (Exception e)
+            catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
             }
 
         }
