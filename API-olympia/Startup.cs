@@ -18,6 +18,7 @@ using Owin;
 using Microsoft.Owin.Security;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace API_olympia
 {
@@ -50,10 +51,13 @@ namespace API_olympia
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IServiceProvider, Service>();
-            services.AddMvc(option => {
+            services.AddScoped<DbContext, OlympiaContext>();
+
+            services.AddMvc(option =>
+            {
                 option.EnableEndpointRouting = false;
                 var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-                });
+            });
 
             services.AddCors(options =>
             {
@@ -71,17 +75,15 @@ namespace API_olympia
                  policy => policy.RequireRole("Admin"));
             });
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                    .AddCookie(options =>
-                    {
-                        options.Events.OnRedirectToLogin = context =>
-                        {
-                            context.Response.Headers["Location"] = context.RedirectUri;
-                            context.Response.StatusCode = 401;
-                            return Task.CompletedTask;
-                        };
-                    })
-                    .AddIdentityCookies();
+            services.AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
+                    options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
+                    options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+                }
+            )
+                .AddIdentityCookies();
+
 
             services.AddDbContext<OlympiaContext>(
                 x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
@@ -103,7 +105,10 @@ namespace API_olympia
             services.AddIdentityCore<IdentityUser>()
                     .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<OlympiaContext>()
-                    .AddDefaultTokenProviders();
+                    .AddDefaultTokenProviders()
+                    .AddDefaultTokenProviders()
+                    .AddSignInManager<SignInManager<IdentityUser>>();
+
 
             services.AddControllersWithViews();
             services.AddRazorPages();
@@ -140,9 +145,11 @@ namespace API_olympia
 
             app.UseRouting();
 
+            app.UseMvc();
+
             app.UseAuthorization();
             app.UseCors("myPolicy");
-            app.UseMvc();
+            app.UseAuthentication();
 
             serviceProvider.GetService<OlympiaContext>().Database.EnsureCreated();
 
