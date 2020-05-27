@@ -14,6 +14,7 @@ Vue.use(VueResource);
 Vue.use(VueRouter);
 Vue.use(VueSession);
 Vue.use(VuePageTransition)
+window.$ = window.jQuery = require('jquery')
 
 new Vue({
 
