@@ -1,4 +1,3 @@
-
 var slideshowDuration;
 var slideshow;
 
@@ -23,15 +22,15 @@ function slideshowSwitch(slideshow, index, auto) {
   if (transition == "fade") {
     newSlide.css({
       display: "block",
-      zIndex: 2,
+      zIndex: 2
     });
     newSlideImage.css({
-      opacity: 0,
+      opacity: 0
     });
 
     TweenMax.to(newSlideImage, 1, {
       alpha: 1,
-      onComplete: function () {
+      onComplete: function() {
         newSlide.addClass("is-active").removeClass("is-new");
         activeSlide.removeClass("is-active");
         newSlide.css({ display: "", zIndex: "" });
@@ -39,12 +38,12 @@ function slideshowSwitch(slideshow, index, auto) {
         slideshow.find(".pagination").trigger("check");
         slideshow.data("wait", false);
         if (auto) {
-          timeout = setTimeout(function () {
+          timeout = setTimeout(function() {
             slideshowNext(slideshow, false, true);
           }, slideshowDuration);
           slideshow.data("timeout", timeout);
         }
-      },
+      }
     });
   } else {
     if (newSlide.index() > activeSlide.index()) {
@@ -74,40 +73,40 @@ function slideshowSwitch(slideshow, index, auto) {
       width: 0,
       right: newSlideRight,
       left: newSlideLeft,
-      zIndex: 2,
+      zIndex: 2
     });
 
     newSlideImage.css({
       width: slideshow.width(),
       right: newSlideImageRight,
-      left: newSlideImageLeft,
+      left: newSlideImageLeft
     });
 
     newSlideContent.css({
       width: slideshow.width(),
       left: newSlideContentLeft,
-      right: newSlideContentRight,
+      right: newSlideContentRight
     });
 
     activeSlideImage.css({
-      left: 0,
+      left: 0
     });
 
     TweenMax.set(newSlideElements, { y: 20, force3D: true });
     TweenMax.to(activeSlideImage, 1, {
       left: activeSlideImageLeft,
-      ease: Power3.easeInOut,
+      ease: Power3.easeInOut
     });
 
     TweenMax.to(newSlide, 1, {
       width: slideshow.width(),
-      ease: Power3.easeInOut,
+      ease: Power3.easeInOut
     });
 
     TweenMax.to(newSlideImage, 1, {
       right: newSlideImageToRight,
       left: newSlideImageToLeft,
-      ease: Power3.easeInOut,
+      ease: Power3.easeInOut
     });
 
     TweenMax.staggerFromTo(
@@ -116,40 +115,40 @@ function slideshowSwitch(slideshow, index, auto) {
       { alpha: 0, y: 60 },
       { alpha: 1, y: 0, ease: Power3.easeOut, force3D: true, delay: 0.6 },
       0.1,
-      function () {
+      function() {
         newSlide.addClass("is-active").removeClass("is-new");
         activeSlide.removeClass("is-active");
         newSlide.css({
           display: "",
           width: "",
           left: "",
-          zIndex: "",
+          zIndex: ""
         });
 
         newSlideImage.css({
           width: "",
           right: "",
-          left: "",
+          left: ""
         });
 
         newSlideContent.css({
           width: "",
-          left: "",
+          left: ""
         });
 
         newSlideElements.css({
           opacity: "",
-          transform: "",
+          transform: ""
         });
 
         activeSlideImage.css({
-          left: "",
+          left: ""
         });
 
         slideshow.find(".pagination").trigger("check");
         slideshow.data("wait", false);
         if (auto) {
-          timeout = setTimeout(function () {
+          timeout = setTimeout(function() {
             slideshowNext(slideshow, false, true);
           }, slideshowDuration);
           slideshow.data("timeout", timeout);
@@ -185,7 +184,7 @@ function homeSlideshowParallax() {
 
   inner.css({
     transform: "translateY(" + newTop + "px)",
-    height: newHeight,
+    height: newHeight
   });
 }
 //VARIÁVEIS AUXILIARES
@@ -197,11 +196,11 @@ setInterval(() => {
 
   if ($("#container-eventos").length && jaFoi == false) {
     jaFoi = true;
-    $(function () {
+    $(function() {
       if (!iniciouAnimacaoSlider) {
         //SE NÃO INICIOU A ANIMAÇÃO
 
-        slideshow = $('.main-content .slideshow');
+        slideshow = $(".main-content .slideshow");
         slideshowDuration = 4000;
 
         $(".slide").addClass("is-loaded");
@@ -215,7 +214,7 @@ setInterval(() => {
         slide.addClass('is-loaded');
         });
         */
-        var timeout = setTimeout(function () {
+        var timeout = setTimeout(function() {
           slideshowNext(slideshow, false, true);
         }, slideshowDuration);
 
@@ -229,19 +228,15 @@ setInterval(() => {
       $(window).on("scroll", homeSlideshowParallax);
     }
 
-
-    $(".slideshow .arrows .arrow").on("click", function () {
-      slideshowNext(
-        $(this).closest(".slideshow"),
-        $(this).hasClass("prev")
-      );
+    $(".slideshow .arrows .arrow").on("click", function() {
+      slideshowNext($(this).closest(".slideshow"), $(this).hasClass("prev"));
     });
 
-    $(".slideshow .pagination .item").on("click", function () {
+    $(".slideshow .pagination .item").on("click", function() {
       slideshowSwitch($(this).closest(".slideshow"), $(this).index());
     });
 
-    $(".slideshow .pagination").on("check", function () {
+    $(".slideshow .pagination").on("check", function() {
       var slideshow = $(this).closest(".slideshow");
       var pages = $(this).find(".item");
       var index = slideshow.find(".slides .is-active").index();
@@ -249,6 +244,25 @@ setInterval(() => {
       pages.eq(index).addClass("is-active");
     });
 
+    $.getJSON("https://localhost:5001/api/Eventos", function(result) {
+      $.each(result, function(i, field) {
+        conteudoDiv =
+          '<div class="event-card-container border-black"><ul class="card-table white"><li class="card-item white"><div class="event-image-container"><div class="image-mask-event"><img class="event-image" src="' +
+          field.imagem +
+          '"/></div></div></li>';
+        conteudoDiv +=
+          '<div class="btn-wrap"><a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a></div><li class="card-item-2 white"><div class="event-date-container"><p class="expo-name">' +
+          field.nome +
+          '</p><p class="date">' +
+          field.data.substring(0, 10) +
+          '</p></div></li><li class="card-item-last white"><div class="event-location-container">';
+        conteudoDiv +=
+          '<iframe src="' +
+          field.localizacaoCoord +
+          '" width="400" height="264" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe></div></li></ul></div>';
+        $("#events-container").append(conteudoDiv);
+      });
+    });
   } else if (!$("#container-eventos").length) {
     //SE SAIU DA ROTA, TUDO VOLTA PARA O NORMAL
     jaFoi = false;
