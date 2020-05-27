@@ -154,7 +154,7 @@
             easing: 'ease-in-out-sine'
         });
     </script>-->
-    <script>
+<script>
 import MenuBar from "../shared/menu-bar/Menu-bar.vue";
 import MenuItems from "../shared/menu-items/Menu-items.vue";
 import Contatos from "../shared/contatos/Contatos.vue";
@@ -163,6 +163,7 @@ import Footer from "../shared/footer/Footer.vue";
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
 
 export default {
+  name: 'HelloWorld',
   components: {
     "meu-menu-bar": MenuBar,
     "meu-menu-items": MenuItems,
@@ -170,6 +171,62 @@ export default {
     "meu-mouse": Mouse,
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
+  },
+  data () {
+    return {
+      data: null
+    }
+  },
+  methods: {
+    getMarkers() {
+      var codigo = 1;
+      $.getJSON("https://localhost:5001/api/Eventos/"+codigo, function(result) 
+      {
+        $.each(result, function(i, field) {
+          $("#event-name").text(field.nome);
+          alert(field.name);
+          $("#event-info-nome").text(field.nome);
+          $("#event-info-local").text("Endereço:" + field.endereco);
+          $("#event-info-datas").text(
+            "Data:" + this.formatDate(field.dataEvento.substring(0, 10).replace("-", "/"))
+          );
+          $("#event-info-horarios").text("Horários:" + field.horarios);
+          $("#of-web-link-eve").href = field.linkSiteOficial;
+          $(".day").text(field.dataEvento.toString().substring(8, 10));
+          $(".month").text(
+            monthNames[parseInt(field.dataEvento.substring(5, 7)) - 1]
+              .substring(0, 3)
+              .toUpperCase()
+          );
+          $("#event-name").text(field.nome);
+          $("#adress-pt-1").text(
+            field.endereco.substring(0, field.endereco.indexOf("Cidade:", 3))
+          );
+          $("#adress-pt-2").text(
+            field.endereco.substring(
+              field.endereco.indexOf("Cidade:", 3),
+              field.endereco.indexOf("País:", 6)
+            )
+          );
+          $("#adress-pt-3").text(
+            field.endereco.substring(field.endereco.indexOf("País:", 6))
+          );
+          $("#desc-ev-wrapper").text(field.descricao);
+          $("#event-map").attr("src", field.localizacaoCoord);
+        });
+      });
+    },
+    formatDate(){
+      var datePart = input.match(/\d+/g),
+          year = datePart[0], // get only two digits
+          month = datePart[1],
+          day = datePart[2];
+
+        return day + "/" + month + "/" + year;
+    }
+  },
+  created () {
+    this.getMarkers()
   }
-};
+}
 </script>
