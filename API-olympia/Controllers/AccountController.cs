@@ -9,10 +9,10 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Server.HttpSys;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace API_olympia.Controllers
 {
-    [Authorize(Policy = "RequireAdminRole")]
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : Controller
@@ -30,14 +30,13 @@ namespace API_olympia.Controllers
             this.Repo = repo;
         }
 
-        [HttpPost("Logout")]
+       [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
             return RedirectToAction("index", "home");
         }
 
-        [AllowAnonymous]
         [HttpGet]
         public IActionResult Login()
         {
@@ -53,6 +52,7 @@ namespace API_olympia.Controllers
 
                 if (resultSp)
                 {
+
                     var existeUser = await userManager.FindByNameAsync(model.UserName);
 
                     if (existeUser != null)
@@ -61,9 +61,18 @@ namespace API_olympia.Controllers
 
                         if (userManager.IsInRoleAsync(userExistente, "Admin").Result)
                         {
-                            await signInManager.SignInAsync(userExistente, isPersistent:false);
 
-                            return RedirectToAction("admin", "home");
+                            /*ClaimsIdentity identity = new ClaimsIdentity("Admin");
+                            identity.AddClaim(new Claim(ClaimTypes.Name, userExistente.UserName));
+                            identity.AddClaim(new Claim(ClaimTypes.Role, "Admin"));
+                            ClaimsPrincipal principal = new ClaimsPrincipal(identity);
+
+                            await HttpContext.SignInAsync("Administrador", principal);*/
+                            await userManager.AddClaimAsync(userExistente,new Claim(ClaimTypes.Role,"Admin"));
+
+                            await signInManager.SignInAsync(userExistente,false);
+
+                            return View("Views/Home/Admin.cshtml");
                         }
                         else
                         {
@@ -78,7 +87,7 @@ namespace API_olympia.Controllers
 
                             await userManager.AddToRoleAsync(userExistente, role.Name);
 
-                            return RedirectToAction("admin", "home");
+                            return View("Views/Home/Admin.cshtml");
                         }
                     }
                     else
@@ -100,7 +109,7 @@ namespace API_olympia.Controllers
 
                         await userManager.AddToRoleAsync(user, role.Name);
 
-                        return RedirectToAction("admin", "home");
+                        return View("Views/Home/Admin.cshtml");
                     }
                 }
 

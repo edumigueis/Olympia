@@ -10,7 +10,6 @@ namespace API_olympia.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Policy="RequireAdminRole")]
     public class CurtidasController : Controller
     {
         public IRepository Repo { get; }

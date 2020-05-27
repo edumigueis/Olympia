@@ -48,6 +48,14 @@ namespace API_olympia
             }
 
         }
+
+        public void ConfigureAuth(IAppBuilder app)
+        {
+            app.UseCookieAuthentication(new Microsoft.Owin.Security.Cookies.CookieAuthenticationOptions
+            {
+                ExpireTimeSpan = TimeSpan.FromSeconds(30),
+            });
+        }
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IServiceProvider, Service>();
@@ -71,9 +79,20 @@ namespace API_olympia
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("RequireAdminRole",
-                 policy => policy.RequireRole("Admin"));
+                options.AddPolicy("Admin",
+                 policy => policy.RequireClaim("Admin"));
             });
+
+             services.AddDistributedMemoryCache();
+
+            if (Configuration.GetSection("AppSettings")["RedisConnectionString"] != "")
+                {
+                services.AddStackExchangeRedisCache(options =>
+                {
+                    options.Configuration = Configuration.GetSection("AppSettings")["RedisConnectionString"];
+                    options.InstanceName = "Fotbollstabeller:";
+                });
+            }
 
             services.AddAuthentication(options =>
                 {
@@ -82,8 +101,36 @@ namespace API_olympia
                     options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
                 }
             )
-                .AddIdentityCookies();
+            .AddCookie("Administrador", options =>
+            {
+                options.ExpireTimeSpan = TimeSpan.FromSeconds(30);
+                options.Cookie.MaxAge = TimeSpan.FromDays(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax;
+                options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest;
+                options.Events.OnRedirectToLogin = (context) =>
+                {
+                    context.Response.StatusCode = Microsoft.AspNetCore.Http.StatusCodes.Status401Unauthorized;
+                    context.Response.Redirect("/Home/Login");
+                    return Task.CompletedTask;
+                };
+            })
+            .AddIdentityCookies();
 
+             services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(20d);
+                options.Cookie.Name = ".Fotbollstabeller";
+                options.Cookie.Path = "/";
+                options.Cookie.HttpOnly = true;
+                options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax;
+                options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest;
+            });
+
+            services.Configure<CookieAuthenticationOptions>(options =>
+            {
+                options.ExpireTimeSpan = TimeSpan.FromSeconds(30);
+            });
 
             services.AddDbContext<OlympiaContext>(
                 x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
@@ -91,6 +138,7 @@ namespace API_olympia
 
             services.AddControllers();
             services.AddScoped<IRepository, Repository>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
             options.TokenValidationParameters = new TokenValidationParameters
             {
@@ -105,7 +153,6 @@ namespace API_olympia
             services.AddIdentityCore<IdentityUser>()
                     .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<OlympiaContext>()
-                    .AddDefaultTokenProviders()
                     .AddDefaultTokenProviders()
                     .AddSignInManager<SignInManager<IdentityUser>>();
 
@@ -131,6 +178,8 @@ namespace API_olympia
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
+            app.UseMvc();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -145,11 +194,10 @@ namespace API_olympia
 
             app.UseRouting();
 
-            app.UseMvc();
-
             app.UseAuthorization();
             app.UseCors("myPolicy");
             app.UseAuthentication();
+            app.UseSession();
 
             serviceProvider.GetService<OlympiaContext>().Database.EnsureCreated();
 
