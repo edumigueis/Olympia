@@ -44,7 +44,7 @@
               <p id="event-info-horarios" class="event-info-item black-to-white">Horários: 9:00-16:00</p>
               <p id="event-info-precominimo" class="event-info-item black-to-white">Preço mínimo: USD $20</p>
               <p id="event-info-website" class="event-info-item">
-                <a href="wwww.moma.org" class="tickets-link black-to-white">Compre Ingressos</a>
+                <a href="https://www.moma.org" target="_blank" id="of-web-link-eve" class="tickets-link black-to-white">Compre Ingressos</a>
               </p>
             </div>
           </div>
@@ -73,7 +73,7 @@
               <div>SOBRE</div>
             </div>
             <p class="about-event-text-in">
-              <span>
+              <span id="desc-ev-wrapper">
                 Lorem ipsum dolor sit amet,
                 <a class="underlined underlined--reverse black-to-white">consectetur adipiscing elit</a>. Nunc tincidunt velit nulla, id pharetra ex pellentesque et. Ut at ante malesuada neque vulputate fringilla a eget leo. Nam ultrices diam eu metus tristique, vel faucibus lacus sollicitudin. Aliquam metus urna, elementum eu finibus eu, hendrerit maximus nunc. Sed id massa et nibh scelerisque semper in at magna. Suspendisse sed ultrices felis. Praesent felis leo, elementum id maximus eget, blandit vitae eros. Proin vel lacus lacus. Maecenas mauris purus, finibus a efficitur sed, lobortis sit amet augue. Morbi elementum massa at pulvinar tempus. Nullam suscipit nisl eu erat faucibus pretium. Aliquam sodales eget dolor vestibulum facilisis. Praesent consectetur, justo vitae molestie ullamcorper, nisl sapien iaculis mi, sit amet accumsan lorem felis non tellus.
                 Praesent vitae mollis sapien. Sed id neque sem. Aenean purus nunc, fermentum varius risus ut, porttitor blandit tellus. Sed fermentum consectetur lectus, nec iaculis nisi molestie eget. Vestibulum rutrum tincidunt arcu, sed malesuada nisi. Curabitur libero urna, pulvinar quis faucibus sit amet, venenatis nec odio. Ut vel nibh vehicula, porttitor mi nec, laoreet justo. Duis euismod pharetra leo, et ultrices lacus placerat at. Vestibulum lorem erat, euismod ac dolor luctus, pharetra pretium eros. Nulla sit amet consequat arcu, et aliquam ante. Integer iaculis, turpis at venenatis tincidunt, dolor purus tristique massa, id tincidunt ante lorem porttitor purus. Duis felis sapien, ullamcorper sit amet suscipit eu, tristique id nulla. Duis tristique dolor non consectetur ultrices. Curabitur eget libero lobortis, posuere erat sed, rhoncus mauris.
@@ -92,6 +92,7 @@
             <div id="bottom-location">
               <div class="map-container">
                 <iframe
+                  id="event-map"
                   class="map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.026733576006!2d-73.97981028509388!3d40.761436742527366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f97bdb102b%3A0xea9f8fc0b3ffff55!2sThe%20Museum%20of%20Modern%20Art!5e0!3m2!1spt-BR!2sbr!4v1586369480301!5m2!1spt-BR!2sbr"
                   frameborder="0"
@@ -109,11 +110,11 @@
               
               <div class="address-cont">
                 <p class="popout black-to-white">
-                  <span>11 W 53rd St,</span>
+                  <span id="adress-pt-1">11 W 53rd St,</span>
                   <br />
-                  <span>New York, NY,</span>
+                  <span id="adress-pt-2">New York, NY,</span>
                   <br />
-                  <span>10019, Estados Unidos</span>
+                  <span id="adress-pt-3">10019, Estados Unidos</span>
                 </p>
               </div>
               </div>

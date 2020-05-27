@@ -251,12 +251,10 @@ setInterval(() => {
 
     $.getJSON("https://localhost:5001/api/Eventos", function(result){
       $.each(result, function(i, field){
-        var latitude = field.localizacaoCoord.substring(1,field.localizacaoCoord.indexOf(','));
-        var longitude = field.localizacaoCoord.substring(field.localizacaoCoord.indexOf(',') + 1);
 
             conteudoDiv = '<div class="event-card-container border-black"><ul class="card-table white"><li class="card-item white"><div class="event-image-container"><div class="image-mask-event"><img class="event-image" src="'+field.imagem+'"/></div></div></li>';
             conteudoDiv += '<div class="btn-wrap"><a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a></div><li class="card-item-2 white"><div class="event-date-container"><p class="expo-name">'+field.nome+'</p><p class="date">'+field.data.substring(0,10)+'</p></div></li><li class="card-item-last white"><div class="event-location-container">';
-            conteudoDiv += '<iframe src="https://maps.google.com/maps?q='+latitude+', '+longitude+'&z=15&output=embed" width="400" height="264" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe></div></li></ul></div>'
+            conteudoDiv += '<iframe src="'+field.localizacaoCoord+'" width="400" height="264" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe></div></li></ul></div>'
           $("#events-container").append(conteudoDiv);
       });
     });

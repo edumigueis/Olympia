@@ -44,6 +44,10 @@
     });
 });*/
 //VARIÁVEIS AUXILIARES
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
 var vzs = 0;
 var jaFoiEvento = false;
 setInterval(() => {
@@ -98,15 +102,31 @@ $('#to-ab-tb').click(function(ev){
         //   'max-width' : '100%'
         // });
       });
-      $.getJSON("https://localhost:5001/api/Eventos/1", function(result){
+      function formatDate (input) {
+        var datePart = input.match(/\d+/g),
+        year = datePart[0], // get only two digits
+        month = datePart[1], day = datePart[2];
+      
+        return day+'/'+month+'/'+year;
+      }
+      var codigo = 1;
+      $.getJSON("https://localhost:5001/api/Eventos/"+codigo, function(result){
       $.each(result, function(i, field){
-        var latitude = field.localizacaoCoord.substring(1,field.localizacaoCoord.indexOf(','));
-        var longitude = field.localizacaoCoord.substring(field.localizacaoCoord.indexOf(',') + 1);
 
-            conteudoDiv1 = '';
-            conteudoDiv += '<div class="btn-wrap"><a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a></div><li class="card-item-2 white"><div class="event-date-container"><p class="expo-name">'+field.nome+'</p><p class="date">'+field.data.substring(0,10)+'</p></div></li><li class="card-item-last white"><div class="event-location-container">';
-            conteudoDiv += '<iframe src="https://maps.google.com/maps?q='+latitude+', '+longitude+'&z=15&output=embed" width="400" height="264" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe></div></li></ul></div>'
-          $("#events-container").append(conteudoDiv);
+            $('#event-name').text(field.nome);
+            $('#event-info-nome').text(field.nome);
+            $('#event-info-local').text("Endereço:"+field.endereco);
+            $('#event-info-datas').text("Data:"+ formatDate(field.data.substring(0,10).replace('-','/')));
+            $('#event-info-horarios').text("Horários:"+field.horarios);
+            $('#of-web-link-eve').href = field.linkSiteOficial;
+            $('.day').text(field.data.toString().substring(8,10));
+            $('.month').text(monthNames[parseInt(field.data.substring(5,7)) - 1].substring(0,3).toUpperCase());
+            $('#event-name').text(field.nome);
+            $('#adress-pt-1').text(field.endereco.substring(0, field.endereco.indexOf('Cidade:', 3)));
+            $('#adress-pt-2').text(field.endereco.substring(field.endereco.indexOf('Cidade:', 3), field.endereco.indexOf('País:', 6)));
+            $('#adress-pt-3').text(field.endereco.substring(field.endereco.indexOf('País:', 6)));
+            $('#desc-ev-wrapper').text(field.descricao);
+            $('#event-map').attr('src', field.localizacaoCoord);
       });
     });
     });
