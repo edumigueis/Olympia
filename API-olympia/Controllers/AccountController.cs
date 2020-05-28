@@ -22,13 +22,16 @@ namespace API_olympia.Controllers
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
+        private readonly IHttpContextAccessor httpContextAccessor;
         public IRepository Repo { get; }
-        public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IRepository repo)
+        public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, 
+            RoleManager<IdentityRole> roleManager, IRepository repo, IHttpContextAccessor httpContextAccessor)
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
             this.roleManager = roleManager;
-            this.Repo = repo;
+            Repo = repo;
+            this.httpContextAccessor = httpContextAccessor;
         }
 
        [HttpPost("Logout")]
@@ -70,6 +73,7 @@ namespace API_olympia.Controllers
 
                             await HttpContext.SignInAsync("Administrador", principal);
 
+                            var userId = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
                             return View("Views/Home/Admin.cshtml");
                         }

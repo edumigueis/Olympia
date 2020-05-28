@@ -3,6 +3,7 @@ using System.Net;
 using System.Security.Claims;
 using System.Web.Http;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 
@@ -13,9 +14,8 @@ namespace API_olympia.Data
     {
         public void OnAuthorization(AuthorizationFilterContext filterContext)
         {
-            HttpContextAccessor httpContextAccessor = new HttpContextAccessor();;
 
-            if (httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Role).Value.Equals("Admin"))
+            if (ClaimsPrincipal.Current.Identity.Name.Equals("Admin"))
             {
 
                 filterContext.HttpContext.Response.Headers.Add("AuthStatus", "Authorized");

@@ -21,6 +21,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Umbraco.Core.Persistence.Repositories;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
+using Umbraco.Core.Services;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Umbraco.Core.Services.Implement;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Hosting.Internal;
 
 namespace API_olympia
 {
@@ -60,14 +67,19 @@ namespace API_olympia
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IServiceProvider, Service>();
-            services.AddScoped<DbContext, OlympiaContext>();
 
             services.AddMvc(option =>
             {
                 option.EnableEndpointRouting = false;
                 var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
             });
+            services.AddControllers();
+            services.AddScoped<IRepository, Repository>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddDbContext<OlympiaContext>(
+                x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
+            );
 
             services.AddCors(options =>
             {
@@ -79,22 +91,12 @@ namespace API_olympia
                                     });
             });
 
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("Admin",
-                 policy => policy.RequireClaim("Admin"));
-            });
+            services.AddIdentityCore<IdentityUser>()
+                    .AddRoles<IdentityRole>()
+                    .AddEntityFrameworkStores<OlympiaContext>()
+                    .AddDefaultTokenProviders()
+                    .AddSignInManager<SignInManager<IdentityUser>>();
 
-            services.AddMemoryCache();
-
-            if (Configuration.GetSection("AppSettings")["RedisConnectionString"] != "")
-            {
-                services.AddStackExchangeRedisCache(options =>
-                {
-                    options.Configuration = Configuration.GetSection("AppSettings")["RedisConnectionString"];
-                    options.InstanceName = "Fotbollstabeller:";
-                });
-            }
 
             services.AddAuthentication()
             .AddCookie("Administrador", options =>
@@ -112,45 +114,52 @@ namespace API_olympia
             })
             .AddIdentityCookies();
 
+            services.AddHttpClient();
+            services.AddHttpContextAccessor();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["jwt:key"])),
+                        ClockSkew = TimeSpan.Zero
+                    });
+
             services.AddSession(options =>
-           {
-               options.IdleTimeout = TimeSpan.FromSeconds(30);
-               options.Cookie.Name = "Administrador";
-               options.Cookie.Path = "/";
-               options.Cookie.HttpOnly = true;
-               options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax;
-               options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest;
-           });
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(30);
+                options.Cookie.Name = "Administrador";
+                options.Cookie.Path = "/";
+                options.Cookie.HttpOnly = true;
+                options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax;
+                options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest;
+            });
 
             services.Configure<CookieAuthenticationOptions>(options =>
             {
                 options.ExpireTimeSpan = TimeSpan.FromSeconds(30);
             });
-
-            services.AddDbContext<OlympiaContext>(
-                x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
-            );
-
-            services.AddControllers();
-            services.AddScoped<IRepository, Repository>();
-
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-            options.TokenValidationParameters = new TokenValidationParameters
+            services.AddAuthorization(options =>
             {
-                ValidateIssuer = false,
-                ValidateAudience = false,
-                ValidateLifetime = true,
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["jwt:key"])),
-                ClockSkew = TimeSpan.Zero
+                options.AddPolicy("Admin",
+                 policy => policy.RequireClaim("Admin"));
             });
 
-            services.AddIdentityCore<IdentityUser>()
-                    .AddRoles<IdentityRole>()
-                    .AddEntityFrameworkStores<OlympiaContext>()
-                    .AddDefaultTokenProviders()
-                    .AddSignInManager<SignInManager<IdentityUser>>();
+            services.AddMemoryCache();
 
+            if (Configuration.GetSection("AppSettings")["RedisConnectionString"] != "")
+            {
+                services.AddStackExchangeRedisCache(options =>
+                {
+                    options.Configuration = Configuration.GetSection("AppSettings")["RedisConnectionString"];
+                    options.InstanceName = "Fotbollstabeller:";
+                });
+            }
+
+            services.AddScoped<IServiceProvider, Service>();
             services.TryAddScoped<IUserValidator<IdentityUser>, UserValidator<IdentityUser>>();
             services.TryAddScoped<IPasswordValidator<IdentityUser>, PasswordValidator<IdentityUser>>();
             services.TryAddScoped<IPasswordHasher<IdentityUser>, PasswordHasher<IdentityUser>>();
@@ -163,16 +172,13 @@ namespace API_olympia
             services.TryAddScoped<UserManager<IdentityUser>>();
             services.TryAddScoped<SignInManager<IdentityUser>>();
             services.TryAddScoped<RoleManager<IdentityRole>>();
-            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
             services.AddControllersWithViews();
             services.AddRazorPages();
-
-            services.AddHttpContextAccessor();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider)
         {
+            app.ApplicationServices.GetRequiredService<IHttpContextAccessor>();
 
             if (env.IsDevelopment())
             {
@@ -187,7 +193,6 @@ namespace API_olympia
             app.UseStaticFiles();
 
             app.UseRouting();
-
             app.UseAuthorization();
             app.UseCors("myPolicy");
             app.UseAuthentication();
@@ -205,6 +210,7 @@ namespace API_olympia
             });
 
             app.UseMvc();
+           
         }
     }
 }

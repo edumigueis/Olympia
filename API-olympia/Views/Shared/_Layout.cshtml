@@ -1,5 +1,4 @@
-﻿@using Microsoft.AspNetCore.Identity;
-@inject SignInManager<IdentityUser> signInManager;
+﻿
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,20 +30,10 @@
                     <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                @if (!signInManager.IsSignedIn(User))
-                                {
+                        
+                                
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
-                                }
-                                else
-                                {
-
-                                    <form method="post" action="/api/Account/Logout">
-                                        <button type="submit" class="nav-link btn btn-link py-0" style="width:auto">
-                                            Logout @User.Identity.Name
-                                        </button>
-                                    </form>
-
-                                }
+                           
                             </li>
                         </ul>
                     </div>

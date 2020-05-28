@@ -8,8 +8,7 @@ namespace API_olympia.Data
     public class OlympiaContext : IdentityDbContext<IdentityUser,IdentityRole, string>
     {
         public OlympiaContext(DbContextOptions<OlympiaContext> options) : base(options)
-        {
-        }
+        {}
 
         public DbSet<Artes> Artes { get; set; }
         public DbSet<Fotos> Fotos { get; set; }
