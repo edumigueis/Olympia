@@ -19,6 +19,8 @@ using Microsoft.Owin.Security;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Umbraco.Core.Persistence.Repositories;
+using Microsoft.AspNetCore.Http;
 
 namespace API_olympia
 {
@@ -83,10 +85,10 @@ namespace API_olympia
                  policy => policy.RequireClaim("Admin"));
             });
 
-             services.AddDistributedMemoryCache();
+            services.AddMemoryCache();
 
             if (Configuration.GetSection("AppSettings")["RedisConnectionString"] != "")
-                {
+            {
                 services.AddStackExchangeRedisCache(options =>
                 {
                     options.Configuration = Configuration.GetSection("AppSettings")["RedisConnectionString"];
@@ -94,17 +96,10 @@ namespace API_olympia
                 });
             }
 
-            services.AddAuthentication(options =>
-                {
-                    options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
-                    options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
-                    options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
-                }
-            )
+            services.AddAuthentication()
             .AddCookie("Administrador", options =>
             {
-                options.ExpireTimeSpan = TimeSpan.FromSeconds(30);
-                options.Cookie.MaxAge = TimeSpan.FromDays(10);
+
                 options.Cookie.HttpOnly = true;
                 options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax;
                 options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest;
@@ -117,15 +112,15 @@ namespace API_olympia
             })
             .AddIdentityCookies();
 
-             services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(20d);
-                options.Cookie.Name = ".Fotbollstabeller";
-                options.Cookie.Path = "/";
-                options.Cookie.HttpOnly = true;
-                options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax;
-                options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest;
-            });
+            services.AddSession(options =>
+           {
+               options.IdleTimeout = TimeSpan.FromSeconds(30);
+               options.Cookie.Name = "Administrador";
+               options.Cookie.Path = "/";
+               options.Cookie.HttpOnly = true;
+               options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax;
+               options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest;
+           });
 
             services.Configure<CookieAuthenticationOptions>(options =>
             {
@@ -156,12 +151,6 @@ namespace API_olympia
                     .AddDefaultTokenProviders()
                     .AddSignInManager<SignInManager<IdentityUser>>();
 
-
-            services.AddControllersWithViews();
-            services.AddRazorPages();
-
-            services.AddHttpContextAccessor();
-
             services.TryAddScoped<IUserValidator<IdentityUser>, UserValidator<IdentityUser>>();
             services.TryAddScoped<IPasswordValidator<IdentityUser>, PasswordValidator<IdentityUser>>();
             services.TryAddScoped<IPasswordHasher<IdentityUser>, PasswordHasher<IdentityUser>>();
@@ -174,11 +163,16 @@ namespace API_olympia
             services.TryAddScoped<UserManager<IdentityUser>>();
             services.TryAddScoped<SignInManager<IdentityUser>>();
             services.TryAddScoped<RoleManager<IdentityRole>>();
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+
+            services.AddHttpContextAccessor();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
-            app.UseMvc();
 
             if (env.IsDevelopment())
             {
@@ -198,6 +192,7 @@ namespace API_olympia
             app.UseCors("myPolicy");
             app.UseAuthentication();
             app.UseSession();
+            app.UseCookiePolicy();
 
             serviceProvider.GetService<OlympiaContext>().Database.EnsureCreated();
 
@@ -208,6 +203,8 @@ namespace API_olympia
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseMvc();
         }
     }
 }

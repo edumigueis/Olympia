@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
-{
+
+{   [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class ArtesController : Controller
@@ -18,7 +19,6 @@ namespace API_olympia.Controllers
             this.Repo = repo;
         }
 
-        [Authorize(Policy = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -33,7 +33,6 @@ namespace API_olympia.Controllers
             }
         }
 
-        [Authorize(Policy = "Admin")]
         [HttpGet("{idArte}")]
         public async Task<IActionResult> Get(int ArtesId)
         {

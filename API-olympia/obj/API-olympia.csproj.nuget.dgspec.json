@@ -65,6 +65,10 @@
               "target": "Package",
               "version": "[3.1.4, )"
             },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -118,6 +122,10 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.6.0, )"
+            },
+            "UmbracoCms.Core": {
+              "target": "Package",
+              "version": "[8.6.1, )"
             }
           },
           "imports": [

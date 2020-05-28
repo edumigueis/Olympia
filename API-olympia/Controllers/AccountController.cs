@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Server.HttpSys;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace API_olympia.Controllers
 {
@@ -62,15 +63,13 @@ namespace API_olympia.Controllers
                         if (userManager.IsInRoleAsync(userExistente, "Admin").Result)
                         {
 
-                            /*ClaimsIdentity identity = new ClaimsIdentity("Admin");
+                            ClaimsIdentity identity = new ClaimsIdentity("Admin");
                             identity.AddClaim(new Claim(ClaimTypes.Name, userExistente.UserName));
                             identity.AddClaim(new Claim(ClaimTypes.Role, "Admin"));
                             ClaimsPrincipal principal = new ClaimsPrincipal(identity);
 
-                            await HttpContext.SignInAsync("Administrador", principal);*/
-                            await userManager.AddClaimAsync(userExistente,new Claim(ClaimTypes.Role,"Admin"));
+                            await HttpContext.SignInAsync("Administrador", principal);
 
-                            await signInManager.SignInAsync(userExistente,false);
 
                             return View("Views/Home/Admin.cshtml");
                         }
@@ -88,6 +87,7 @@ namespace API_olympia.Controllers
                             await userManager.AddToRoleAsync(userExistente, role.Name);
 
                             return View("Views/Home/Admin.cshtml");
+
                         }
                     }
                     else
