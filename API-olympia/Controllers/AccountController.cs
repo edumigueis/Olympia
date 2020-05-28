@@ -17,6 +17,7 @@ using System.Web;
 
 namespace API_olympia.Controllers
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : Controller
@@ -27,7 +28,7 @@ namespace API_olympia.Controllers
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly OlympiaContext context;
         public IRepository Repo { get; }
-        public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, 
+        public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager,
             RoleManager<IdentityRole> roleManager, IRepository repo, OlympiaContext context)
         {
             this.signInManager = signInManager;
@@ -37,12 +38,18 @@ namespace API_olympia.Controllers
             this.context = context;
         }
 
-       [HttpPost("Logout")]
+
+        [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
-            await HttpContext.SignOutAsync();
-            Armazenador.StringValueNome = null;
-            Armazenador.StringValueRole = null;
+            if (Armazenador.StringValueName != null)
+            {
+                await HttpContext.SignOutAsync();
+                Armazenador.StringValueNome = null;
+                Armazenador.StringValueRole = null;
+                return RedirectToAction("index", "home");
+            }
+
             return RedirectToAction("index", "home");
         }
 
@@ -51,7 +58,7 @@ namespace API_olympia.Controllers
         {
             return View();
         }
-
+        
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
@@ -93,7 +100,7 @@ namespace API_olympia.Controllers
                             Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
                             Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 
-                            return View("Views/Home/Admin.cshtml");
+                            return View("Views/Admin/Admin.cshtml");
                         }
                         else
                         {
@@ -121,7 +128,7 @@ namespace API_olympia.Controllers
                             Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
                             Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 
-                            return View("Views/Home/Admin.cshtml");
+                            return View("Views/Admin/Admin.cshtml");
 
                         }
                     }
@@ -158,14 +165,14 @@ namespace API_olympia.Controllers
                         Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
                         Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 
-                        return View("Views/Home/Admin.cshtml");
+                        return View("Views/Admin/Admin.cshtml");
                     }
                 }
 
                 return View("Views/Home/Login.cshtml");
 
             }
-            catch 
+            catch
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError);
             }

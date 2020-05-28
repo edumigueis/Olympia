@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
 {
+    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class SugestoesController : Controller

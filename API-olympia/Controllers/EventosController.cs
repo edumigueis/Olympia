@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
 {
+    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
-    /*[Authorize(Policy="RequireAdminRole")]*/
 
     public class EventosController : Controller
     {
