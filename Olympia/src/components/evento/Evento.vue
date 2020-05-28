@@ -182,6 +182,7 @@ export default {
       var codigo = 1;
       $.getJSON("https://localhost:5001/api/Eventos/1", function(result) 
       {
+        alert("cu");
         $.each(result, function(i, field) {
           $("#event-name").text(field.nome);
           alert(field.name);
