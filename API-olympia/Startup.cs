@@ -91,9 +91,10 @@ namespace API_olympia
                     .AddSignInManager<SignInManager<IdentityUser>>();
 
 
-            services.AddAuthentication(options => 
+            services.AddAuthentication(o =>
             {
-                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddCookie("Administrador", options =>
             {
