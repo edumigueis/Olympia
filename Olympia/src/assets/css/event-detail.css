@@ -154,7 +154,7 @@ body {
 #calendar-red {
   background-color: red;
   height: 160px;
-  width: 151px;
+  width: 148px;
   position: relative;
   margin-top: -80px;
   left: 15%;
@@ -233,10 +233,10 @@ body {
   transition: 0.6s all;
 }
 #title {
-  margin-right: 25%;
+  margin-right: 5%;
+  width: 50%;
   float: right;
   transition: 0.6s all;
-  
   position: relative;
   margin-top: -120px;
 }
@@ -1576,7 +1576,7 @@ ul {
     width: 50%;
   }
 }
-@media only screen and (min-width: 0) and (max-width: 499px) {
+@media only screen and (min-width: 0) and (max-width: 500px) {
   #calendar-red {
     width: 101px;
     height: 80px;
@@ -1681,7 +1681,7 @@ ul {
     margin-top: 200px;
   }
   #event-name {
-    font-size: 1em;
+    font-size: 1.7em;
   }
   #second-part-eve{
     margin: 0;
@@ -1704,7 +1704,6 @@ ul {
     text-indent: 0.5em;
   }
   #title {
-    font-size: 2em;
     margin-top: -60px;
   }
   #event-name{
@@ -1715,10 +1714,9 @@ ul {
   }
   #title{
     height: 100px;
-    width: 350px;
+    width: 60%;
     float: right;
     margin: 0;
-    margin-right: 24%;
     margin-top: -70px;
   }
 }
@@ -1731,12 +1729,11 @@ ul {
     margin: 0;
     width: 100%;
     z-index: 100;
+    font-size: 2.3em;
   }
   #title{
     height: 100px;
-    width: 350px;
     float: right;
-    margin-right: 28%;
     margin-top: -140px;
   }
 }
@@ -1745,10 +1742,10 @@ ul {
     margin-top: 90px;
   }
   #event-name {
-    font-size: 1em;
+    font-size: 1.9em;
   }
   #title {
-    font-size: 2.6em;
+    font-size: 2.3em;
     margin-left: 45%;
     width: 450px;
     margin-top: -100px;
@@ -1817,19 +1814,31 @@ ul {
     margin-top: -70px;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 380px) {
+  #event-name{
+    font-size: 2.6em !important;
+    width: 160px !important;
+    margin-left: 30px !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #title{
+    margin-right: -15px !important;
+  }
+}
+@media only screen and (max-width: 501px) {
   #event-name{
     position: absolute;
     margin: 0;
     width: 100%;
     z-index: 100;
-    font-size: 3em;
+    font-size: 2.7em;
   }
   #title{
     height: 100px;
     width: 200px;
     float: right;
-    margin-right: 1%;
+    margin-right: 0;
     margin-top: -70px;
   }
 }
