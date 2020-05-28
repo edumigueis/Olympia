@@ -58,13 +58,6 @@ namespace API_olympia
 
         }
 
-        public void ConfigureAuth(IAppBuilder app)
-        {
-            app.UseCookieAuthentication(new Microsoft.Owin.Security.Cookies.CookieAuthenticationOptions
-            {
-                ExpireTimeSpan = TimeSpan.FromSeconds(30),
-            });
-        }
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -98,10 +91,13 @@ namespace API_olympia
                     .AddSignInManager<SignInManager<IdentityUser>>();
 
 
-            services.AddAuthentication()
+            services.AddAuthentication(options => 
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            })
             .AddCookie("Administrador", options =>
             {
-
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                 options.Cookie.HttpOnly = true;
                 options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Lax;
                 options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest;
@@ -112,12 +108,12 @@ namespace API_olympia
                     return Task.CompletedTask;
                 };
             })
-            .AddIdentityCookies();
+            .AddJwtBearer();
 
             services.AddHttpClient();
             services.AddHttpContextAccessor();
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            /*services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = false,
@@ -126,11 +122,11 @@ namespace API_olympia
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["jwt:key"])),
                         ClockSkew = TimeSpan.Zero
-                    });
+                    });*/
 
             services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromSeconds(30);
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
                 options.Cookie.Name = "Administrador";
                 options.Cookie.Path = "/";
                 options.Cookie.HttpOnly = true;
@@ -138,10 +134,6 @@ namespace API_olympia
                 options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest;
             });
 
-            services.Configure<CookieAuthenticationOptions>(options =>
-            {
-                options.ExpireTimeSpan = TimeSpan.FromSeconds(30);
-            });
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("Admin",
@@ -174,6 +166,7 @@ namespace API_olympia
             services.TryAddScoped<RoleManager<IdentityRole>>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider)
@@ -210,7 +203,7 @@ namespace API_olympia
             });
 
             app.UseMvc();
-           
+
         }
     }
 }

@@ -5,10 +5,11 @@ using API_olympia.Models;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Security.Claims;
 
 namespace API_olympia.Controllers
-
-{   [CustomAuthorizeAttribute]
+{   
+    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class ArtesController : Controller

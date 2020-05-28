@@ -5,7 +5,7 @@ using System.Web.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-
+using API_olympia.Controllers;
 
 namespace API_olympia.Data
 {
@@ -14,18 +14,20 @@ namespace API_olympia.Data
     {
         public void OnAuthorization(AuthorizationFilterContext filterContext)
         {
-
-            if (ClaimsPrincipal.Current.Identity.Name.Equals("Admin"))
+            if (Armazenador.StringValueRole != null)
             {
-
-                filterContext.HttpContext.Response.Headers.Add("AuthStatus", "Authorized");
-
-                filterContext.HttpContext.Response.Headers.Add("storeAccessiblity", "Authorized");
-
+                if (Armazenador.StringValueRole.Equals("Admin"))
+                {
+                    return;
+                }
+                else
+                {
+                    filterContext.Result = new RedirectResult("/Home/Login");
+                }
             }
             else
             {
-                filterContext.HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                filterContext.Result = new RedirectResult("/Home/Login");
             }
         }
     }

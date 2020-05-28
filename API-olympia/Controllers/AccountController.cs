@@ -11,6 +11,9 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.Owin.Security;
+using Microsoft.Owin.Host.SystemWeb;
+using System.Web;
 
 namespace API_olympia.Controllers
 {
@@ -22,22 +25,24 @@ namespace API_olympia.Controllers
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
-        private readonly IHttpContextAccessor httpContextAccessor;
+        private readonly OlympiaContext context;
         public IRepository Repo { get; }
         public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, 
-            RoleManager<IdentityRole> roleManager, IRepository repo, IHttpContextAccessor httpContextAccessor)
+            RoleManager<IdentityRole> roleManager, IRepository repo, OlympiaContext context)
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
             this.roleManager = roleManager;
             Repo = repo;
-            this.httpContextAccessor = httpContextAccessor;
+            this.context = context;
         }
 
        [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
-            await signInManager.SignOutAsync();
+            await HttpContext.SignOutAsync();
+            Armazenador.StringValueNome = null;
+            Armazenador.StringValueRole = null;
             return RedirectToAction("index", "home");
         }
 
@@ -66,29 +71,55 @@ namespace API_olympia.Controllers
                         if (userManager.IsInRoleAsync(userExistente, "Admin").Result)
                         {
 
-                            ClaimsIdentity identity = new ClaimsIdentity("Admin");
-                            identity.AddClaim(new Claim(ClaimTypes.Name, userExistente.UserName));
-                            identity.AddClaim(new Claim(ClaimTypes.Role, "Admin"));
-                            ClaimsPrincipal principal = new ClaimsPrincipal(identity);
+                            var claims = new List<Claim> {
+                                new Claim(ClaimTypes.Name, userExistente.UserName, ClaimValueTypes.String),
+                                new Claim(ClaimTypes.Role, "Admin", ClaimValueTypes.String)
+                            };
 
-                            await HttpContext.SignInAsync("Administrador", principal);
+                            var userIdentity = new ClaimsIdentity(claims, "Admin");
 
-                            var userId = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+                            var userPrincipal = new ClaimsPrincipal(userIdentity);
+
+                            HttpContext.User = userPrincipal;
+
+                            await HttpContext.SignInAsync("Administrador", userPrincipal,
+                                new Microsoft.AspNetCore.Authentication.AuthenticationProperties
+                                {
+                                    ExpiresUtc = DateTime.UtcNow.AddMinutes(20),
+                                    IsPersistent = false,
+                                    AllowRefresh = false
+                                });
+
+                            Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
+                            Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 
                             return View("Views/Home/Admin.cshtml");
                         }
                         else
                         {
-                            var role = await roleManager.FindByNameAsync("Admin");
+                            await roleManager.CreateAsync(new IdentityRole() { Name = "Admin" });
 
-                            if (role == null)
-                                await roleManager.CreateAsync(new IdentityRole() { Name = "Admin" });
+                            var claims = new List<Claim> {
+                                new Claim(ClaimTypes.Name, userExistente.UserName, ClaimValueTypes.String),
+                                new Claim(ClaimTypes.Role, "Admin", ClaimValueTypes.String)
+                            };
 
-                            role = await roleManager.FindByNameAsync("Admin");
+                            var userIdentity = new ClaimsIdentity(claims, "Admin");
 
-                            await signInManager.SignInAsync(userExistente, isPersistent: false);
+                            var userPrincipal = new ClaimsPrincipal(userIdentity);
 
-                            await userManager.AddToRoleAsync(userExistente, role.Name);
+                            HttpContext.User = userPrincipal;
+
+                            await HttpContext.SignInAsync("Administrador", userPrincipal,
+                                new Microsoft.AspNetCore.Authentication.AuthenticationProperties
+                                {
+                                    ExpiresUtc = DateTime.UtcNow.AddMinutes(20),
+                                    IsPersistent = false,
+                                    AllowRefresh = false
+                                });
+
+                            Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
+                            Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 
                             return View("Views/Home/Admin.cshtml");
 
@@ -105,13 +136,27 @@ namespace API_olympia.Controllers
                         if (role == null)
                             await roleManager.CreateAsync(new IdentityRole() { Name = "Admin" });
 
-                        role = await roleManager.FindByNameAsync("Admin");
+                        var claims = new List<Claim> {
+                                new Claim(ClaimTypes.Name, user.UserName, ClaimValueTypes.String),
+                                new Claim(ClaimTypes.Role, "Admin", ClaimValueTypes.String)
+                            };
 
-                        await userManager.CreateAsync(user, model.Senha);
+                        var userIdentity = new ClaimsIdentity(claims, "Admin");
 
-                        await signInManager.SignInAsync(user, isPersistent: false);
+                        var userPrincipal = new ClaimsPrincipal(userIdentity);
 
-                        await userManager.AddToRoleAsync(user, role.Name);
+                        HttpContext.User = userPrincipal;
+
+                        await HttpContext.SignInAsync("Administrador", userPrincipal,
+                            new Microsoft.AspNetCore.Authentication.AuthenticationProperties
+                            {
+                                ExpiresUtc = DateTime.UtcNow.AddMinutes(20),
+                                IsPersistent = false,
+                                AllowRefresh = false
+                            });
+
+                        Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
+                        Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 
                         return View("Views/Home/Admin.cshtml");
                     }
@@ -120,7 +165,7 @@ namespace API_olympia.Controllers
                 return View("Views/Home/Login.cshtml");
 
             }
-            catch
+            catch 
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError);
             }
