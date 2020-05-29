@@ -20521,11 +20521,6 @@
   "RootNamespace": "API_olympia",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\Views\\Home\\Admin.cshtml",
-      "TargetPath": "Views\\Home\\Admin.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -20538,6 +20533,11 @@
     {
       "FilePath": "c:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\Views\\Admin\\Admin.cshtml",
+      "TargetPath": "Views\\Admin\\Admin.cshtml",
       "FileKind": "mvc"
     },
     {

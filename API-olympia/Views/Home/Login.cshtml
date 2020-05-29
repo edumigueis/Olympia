@@ -6,9 +6,9 @@
 <form class="form-signin" style="width: 40%;margin:auto;margin-top:60px;" method="post" action="/api/Account/Login">
   <h1 class="h3 mb-3 font-weight-normal">Entre para avançar</h1>
   <label asp-for="UserName" for="inputEmail" class="sr-only">User</label>
-  <input type="text" asp-for="UserName" name="userName" id="inputEmail" class="form-control" placeholder="User" required autofocus style="margin-top:10px;">
+  <input type="text" asp-for="UserName" name="userName" id="inputEmail" class="form-control" placeholder="Username" required autofocus style="margin-top:10px;">
   <label for="inputPassword" asp-for="Senha" class="sr-only">Password</label>
-  <input type="password" asp-for="Senha" name="senha" id="inputPassword" class="form-control" placeholder="Password" required>
+  <input type="password" asp-for="Senha" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required style="margin-top:10px">
   
   <button class="btn btn-lg btn-primary btn-block" style="margin-top:30px;" id="sign-in" type="submit">Sign in</button>
 </form>
