@@ -96,7 +96,6 @@ D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\De
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.pdb
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.genruntimeconfig.cache
-D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Web.config
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\API-olympia.Views.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\API-olympia.Views.pdb
@@ -341,7 +340,6 @@ D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\De
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Home\Admin.cshtml.g.cs
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.SqlServer.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
@@ -351,3 +349,11 @@ C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\ru
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Umbraco.Core.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Admin.cshtml.g.cs
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.SqlServer.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\StackExchange.Redis.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Umbraco.Core.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Admin.cshtml.g.cs
