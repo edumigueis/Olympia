@@ -240,9 +240,10 @@ export default {
   methods: {
     getMarkers() {
       var codigo = 1;
-      /*$("#event-name").text("jquery loaded"); isso deu certo*/
-      $.getJSON("https://localhost:5001/api/Eventos/1", function(result) {
-        /*alert("entrou aq"); deu certo so dps do login na api*/
+      /*$("#event-name").text("jquery loaded");
+      alert("ai");*/
+      /*$.getJSON("https://localhost:5001/api/Eventos/1", function(result) {
+        alert("entrou aq");
         $.each(result, function(i, field) {
           alert("entrou aq");
           $("#event-name").text(field.nome);
@@ -279,7 +280,24 @@ export default {
           $("#desc-ev-wrapper").text(field.descricao);
           $("#event-map").attr("src", field.localizacaoCoord);
         });
-      });
+      });*/
+      alert("ya");
+      $.ajax({
+     url: "https://localhost:5001/api/Eventos/1",
+     type: "GET",
+     dataType: "json",
+     xhrFields: {
+         withCredentials: true
+    },
+     contentType: "application/json",
+     success: function () {
+         alert("success");
+     },
+     error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
+         console.log(xhr.status);
+         console.log(xhr.responseText);
+     },
+ });
     },
     formatDate() {
       var datePart = input.match(/\d+/g),
