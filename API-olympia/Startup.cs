@@ -191,6 +191,7 @@ namespace API_olympia
 
             app.UseMvc();
 
+            app.UseDeveloperExceptionPage();
         }
     }
 }
