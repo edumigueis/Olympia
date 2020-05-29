@@ -42,7 +42,7 @@ namespace API_olympia.Controllers
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
-            if (Armazenador.StringValueName != null)
+            if (Armazenador.StringValueNome != null)
             {
                 await HttpContext.SignOutAsync();
                 Armazenador.StringValueNome = null;
