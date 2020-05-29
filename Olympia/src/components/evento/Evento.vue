@@ -180,9 +180,12 @@ export default {
   methods: {
     getMarkers() {
       var codigo = 1;
+       /*$("#event-name").text("jquery loaded"); isso deu certo*/
       $.getJSON("https://localhost:5001/api/Eventos/1", function(result) 
       {
+        /*alert("entrou aq"); deu certo so dps do login na api*/
         $.each(result, function(i, field) {
+          alert("entrou aq");
           $("#event-name").text(field.nome);
           alert(field.name);
           $("#event-info-nome").text(field.nome);

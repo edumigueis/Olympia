@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 namespace API_olympia.Controllers
 {
     [CustomAuthorizeAttribute]
+    //[EnableCors("myPolicy")]
     [Route("api/[controller]")]
     [ApiController]
 
