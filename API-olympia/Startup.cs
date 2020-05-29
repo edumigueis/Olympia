@@ -7,27 +7,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using API_olympia.Data;
-using API_olympia.Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Microsoft.Owin;
-using Owin;
-using Microsoft.Owin.Security;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Umbraco.Core.Persistence.Repositories;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.AspNetCore.Mvc;
-using Umbraco.Core.Services;
-using Microsoft.AspNetCore.Mvc.Routing;
-using Umbraco.Core.Services.Implement;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Hosting.Internal;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace API_olympia
 {
@@ -91,10 +77,10 @@ namespace API_olympia
                     .AddSignInManager<SignInManager<IdentityUser>>();
 
 
-            services.AddAuthentication(o =>
+            services.AddAuthentication(options =>
             {
-                o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = "Administrador";
+                options.DefaultSignInScheme = "Administrador";
             })
             .AddCookie("Administrador", options =>
             {
