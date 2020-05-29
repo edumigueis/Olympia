@@ -5,7 +5,6 @@ import VueResource from 'vue-resource'
 import VueSession from 'vue-session'
 import VuePageTransition from 'vue-page-transition'
 
-
 // tem que vir entre chaves, porque não é default
 import { routes } from './routes';
 

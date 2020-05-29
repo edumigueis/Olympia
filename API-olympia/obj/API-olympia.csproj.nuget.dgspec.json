@@ -126,6 +126,10 @@
               "target": "Package",
               "version": "[6.6.0, )"
             },
+            "System.Web.Http.Cors": {
+              "target": "Package",
+              "version": "[*, )"
+            },
             "UmbracoCms.Core": {
               "target": "Package",
               "version": "[8.6.1, )"
