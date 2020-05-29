@@ -48,7 +48,6 @@ C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Release\netcoreapp3.1\
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Release\netcoreapp3.1\API-olympia.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Release\netcoreapp3.1\API-olympia.pdb
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Release\netcoreapp3.1\API-olympia.genruntimeconfig.cache
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\web.config
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\API-olympia.Views.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\API-olympia.Views.pdb
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\System.Collections.Immutable.dll
