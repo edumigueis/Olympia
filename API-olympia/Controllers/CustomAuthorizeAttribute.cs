@@ -9,7 +9,7 @@ using API_olympia.Controllers;
 
 namespace API_olympia.Data
 {
-    [AttributeUsage(AttributeTargets.Class)]
+    [AttributeUsage(AttributeTargets.All)]
     public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
         public void OnAuthorization(AuthorizationFilterContext filterContext)

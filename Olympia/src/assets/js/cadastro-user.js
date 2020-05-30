@@ -479,7 +479,7 @@ setInterval(() => {
       jaFoiPostCadUser = true;
         $.ajax({
           type: "POST",
-          url: "https://localhost:5001/api/Usuarios",
+          url: "https://localhost:5001/api/Redirect/CadastroUser",
           data: jsonInput,
           contentType:'application/json',
           success: function(){ document.location.href = "/#/login"},

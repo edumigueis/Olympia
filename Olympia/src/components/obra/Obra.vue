@@ -7,7 +7,7 @@
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
-
+      <title id="page-det-name"></title>
       <div id="col-container">
         <div id="img-col-d" class="transparent">
           <div class="bg"></div>
@@ -238,6 +238,7 @@ export default {
           $("#art-detail-p").text(field.dadosTecnicos);
           $("#art-data").text(field.descricao);
           $("#art-name").text(field.nome);
+          $("#page-det-name").text(field.nome);
         },
         error: function(thrownError) {
           //Add these parameters to display the required response

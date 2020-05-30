@@ -21,8 +21,8 @@ namespace API_olympia.Controllers
             this.Repo = repo;
         }
 
-        [HttpPost("Cadastro")]
-        public async Task<IActionResult> Post(Usuarios model)
+        [HttpPost("CadastroUser")]
+        public async Task<IActionResult> PostUsuarios(Usuarios model)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace API_olympia.Controllers
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 Armazenador.StringValueRoute = listagem[7];
-                return RedirectToAction("post", "usuarios", model);
+                return RedirectToRoute(new { controller = "Usuarios", action = "/api/Usuarios", model });
             }
             catch
             {
@@ -39,7 +39,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("Eventos/{idEvento}")]
-        public async Task<IActionResult> Get(int idEvento)
+        public async Task<IActionResult> GetEventos(int idEvento)
         {
             try
             {
@@ -56,7 +56,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("Obras/{idObra}")]
-        public async Task<IActionResult> Get(int idObra)
+        public async Task<IActionResult> GetObras(int idObra)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace API_olympia.Controllers
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 Armazenador.StringValueRoute = listagem[7];
-                return Redirect("/api/Obras/" + idEvento);
+                return Redirect("/api/Obras/" + idObra);
             }
             catch
             {
@@ -73,7 +73,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("Usuarios/{idUsuario}")]
-        public async Task<IActionResult> Get(int idUsuario)
+        public async Task<IActionResult> GetUsuarios(int idUsuario)
         {
             try
             {
@@ -90,7 +90,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("Servicos/{idServico}")]
-        public async Task<IActionResult> Get(int idServico)
+        public async Task<IActionResult> GetServicos(int idServico)
         {
             try
             {
@@ -107,7 +107,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("Publicacoes/{idPublicacao}")]
-        public async Task<IActionResult> Get(int idPublicacao)
+        public async Task<IActionResult> GetPublicacoes(int idPublicacao)
         {
             try
             {

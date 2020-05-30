@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : Controller
@@ -21,6 +20,7 @@ namespace API_olympia.Controllers
             this.Repo = repo;
         }
 
+        [CustomAuthorizeAttribute]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -34,7 +34,8 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get().");
             }
         }
-
+        
+        [CustomAuthorizeAttribute]
         [HttpGet("{idUsuario}")]
         public async Task<IActionResult> Get(int idUsuario)
         {
@@ -49,6 +50,22 @@ namespace API_olympia.Controllers
             }
         }
 
+        [CustomAuthorizeAttribute]
+        [HttpGet("{model}")]
+        public async Task<IActionResult> RedirectToPost(Usuarios model)
+        {
+            try
+            {
+                await post(model);
+                return Ok();
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
+
+        [CustomAuthorizeAttribute]
         [HttpPut("{idUsuario}")]
         public async Task<IActionResult> put(int idUsuario, Usuarios model)
         {
@@ -71,6 +88,7 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
+        [CustomAuthorizeAttribute]
         [HttpDelete("{idUsuario}")]
         public async Task<IActionResult> delete(int idUsuario)
         {
@@ -92,6 +110,7 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
+        [CustomAuthorizeAttribute]
         [HttpPost]
         public async Task<IActionResult> post(Usuarios model)
         {
