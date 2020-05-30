@@ -14,27 +14,33 @@ namespace API_olympia.Data
     {
         public void OnAuthorization(AuthorizationFilterContext filterContext)
         {
-            if (Armazenador.StringValueRoute.Equals("olympia.art.br") ||
-                Armazenador.StringValueRoute.Equals("localhost:5000") ||
-                Armazenador.StringValueRoute.Equals("localhost:5001") ||
-                Armazenador.StringValueRoute.Equals("localhost:8080"))
-                return;
-
-                if (Armazenador.StringValueRole != null)
-                {
-                    if (Armazenador.StringValueRole.Equals("Admin"))
-                    {
+            if (Armazenador.StringValueRoute != null)
+            {
+                
+                if (Armazenador.StringValueRoute.Equals("olympia.art.br") ||
+                    Armazenador.StringValueRoute.Equals("http://localhost:8080")){
+                        Armazenador.StringValueRoute = null;
                         return;
                     }
-                    else
-                    {
-                        filterContext.Result = new RedirectResult("/Home/Login");
-                    }
+                        Armazenador.StringValueRoute = null;
+                    
+            }
+
+            if (Armazenador.StringValueRole != null)
+            {
+                if (Armazenador.StringValueRole.Equals("Admin"))
+                {
+                    return;
                 }
                 else
                 {
                     filterContext.Result = new RedirectResult("/Home/Login");
                 }
+            }
+            else
+            {
+                filterContext.Result = new RedirectResult("/Home/Login");
+            }
         }
     }
 }
