@@ -49,10 +49,10 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
             }
         }
-
+        
         [CustomAuthorizeAttribute]
-        [HttpGet("{model}")]
-        public async Task<IActionResult> RedirectToPost(Usuarios model)
+        [HttpGet("RedirectToPost/{model}")]
+        public async Task<IActionResult> RedirectToPost([FromForm]Usuarios model)
         {
             try
             {

@@ -475,7 +475,7 @@ setInterval(() => {
       
       
       var jsonInput = JSON.stringify(myObject);
-
+      console.log(jsonInput);
       jaFoiPostCadUser = true;
         $.ajax({
           type: "POST",

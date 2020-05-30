@@ -30,7 +30,7 @@ namespace API_olympia.Controllers
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 Armazenador.StringValueRoute = listagem[7];
-                return RedirectToRoute(new { controller = "Usuarios", action = "/api/Usuarios", model });
+                return Redirect("/api/Usuarios/RedirectToPost/" + model);
             }
             catch
             {
