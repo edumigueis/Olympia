@@ -12,19 +12,31 @@
         <div id="img-col-d" class="transparent">
           <div class="bg"></div>
           <div class="masonry">
-        <div class="brick">
-          <img class="img-col" src="https://i.pinimg.com/originals/2a/81/ab/2a81abef24a1630ef86ac1c74b0ec947.jpg">
-        </div>
-        <div class="brick">
-          <img class="img-col" src="https://i.pinimg.com/originals/92/2b/fd/922bfd8e4dceef87cce0aeaa017d0211.jpg">
-        </div>
-        <div class="brick">
-          <img class="img-col" src="https://blogscdn.thehut.net/wp-content/uploads/sites/7/2016/06/12184902/Matthew-Cusick-Featured.jpg">
-        </div>
-        <div class="brick">
-        <img class="img-col" src="https://i.pinimg.com/originals/d1/ba/98/d1ba981705ec9ca3b567d2093146e9aa.jpg">
-        </div>
-      </div>
+            <div class="brick">
+              <img
+                class="img-col"
+                src="https://i.pinimg.com/originals/2a/81/ab/2a81abef24a1630ef86ac1c74b0ec947.jpg"
+              />
+            </div>
+            <div class="brick">
+              <img
+                class="img-col"
+                src="https://i.pinimg.com/originals/92/2b/fd/922bfd8e4dceef87cce0aeaa017d0211.jpg"
+              />
+            </div>
+            <div class="brick">
+              <img
+                class="img-col"
+                src="https://blogscdn.thehut.net/wp-content/uploads/sites/7/2016/06/12184902/Matthew-Cusick-Featured.jpg"
+              />
+            </div>
+            <div class="brick">
+              <img
+                class="img-col"
+                src="https://i.pinimg.com/originals/d1/ba/98/d1ba981705ec9ca3b567d2093146e9aa.jpg"
+              />
+            </div>
+          </div>
         </div>
         <div id="info-col-d" class="white-6">
           <ul id="info-list" class="white-6">
@@ -33,10 +45,10 @@
                 <div id="simple-art-info">
                   <p id="art-name" class="black-to-white">N. 17a</p>
                   <p id="art-detail-p" class="black-to-white">
-                    <span id="art-local">Nova York,</span>
-                    <span id="art-year">1948.</span>
-                    <span id="art-dim">1,38 m x 1,38 m.</span>
-                    <span id="art-mat">Tela, Tinta a óleo.</span>
+                    Nova York,
+                    1948.
+                    1,38 m x 1,38 m.
+                    Tela, Tinta a óleo.
                   </p>
                 </div>
                 <div class="fine-line white-6"></div>
@@ -58,12 +70,17 @@
               </div>
             </li>
             <li class="info-item white-6" id="info-2">
-              <div class="inner-list" >
+              <div class="inner-list">
                 <div id="simple-artist-info">
                   <p id="artist-user">
                     <b>
                       User:
-                      <a id="user-link" href="/user/pollock" class="black-to-white">@pollock</a>
+                      <a
+                        id="user-link"
+                        href="/user/pollock"
+                        class="black-to-white"
+                        >@pollock</a
+                      >
                     </b>
                   </p>
                   <p id="artist-name" class="black-to-white">
@@ -81,48 +98,50 @@
                   />
                 </div>
                 <p id="artist-profile" class="black-to-white">
-                  <a href="/profile/klimt" class="link black-to-white">Visitar o perfil</a>
+                  <a href="/profile/klimt" class="link black-to-white"
+                    >Visitar o perfil</a
+                  >
                 </p>
               </div>
             </li>
           </ul>
         </div>
       </div>
-        <div id="paginate-detail">
-          <div id="arrows-pag-det">
-              <svg id="more-arrows" class='arrow'>
-                <polygon
-                  class="arrow-top black-to-white-pol"
-                  points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
-                />
-                <polygon
-                  class="arrow-middle black-to-white-pol"
-                  points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "
-                />
-                <polygon
-                  class="arrow-bottom black-to-white-pol"
-                  points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
-                />
-              </svg>
-          </div>
-          <div id="arrows-pag-det-2">
-              <svg id="more-arrows-2" class="more-arrows-2 arrow">
-                <polygon
-                  class="arrow-top-2 black-to-white-pol"
-                  points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
-                />
-                <polygon
-                  class="arrow-middle-2 black-to-white-pol"
-                  points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "
-                />
-                <polygon
-                  class="arrow-bottom-2 black-to-white-pol"
-                  points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
-                />
-              </svg>
-          </div>
+      <div id="paginate-detail">
+        <div id="arrows-pag-det">
+          <svg id="more-arrows" class="arrow">
+            <polygon
+              class="arrow-top black-to-white-pol"
+              points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
+            />
+            <polygon
+              class="arrow-middle black-to-white-pol"
+              points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "
+            />
+            <polygon
+              class="arrow-bottom black-to-white-pol"
+              points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
+            />
+          </svg>
         </div>
-        
+        <div id="arrows-pag-det-2">
+          <svg id="more-arrows-2" class="more-arrows-2 arrow">
+            <polygon
+              class="arrow-top-2 black-to-white-pol"
+              points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
+            />
+            <polygon
+              class="arrow-middle-2 black-to-white-pol"
+              points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "
+            />
+            <polygon
+              class="arrow-bottom-2 black-to-white-pol"
+              points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
+            />
+          </svg>
+        </div>
+      </div>
+
       <div class="bg-det"></div>
       <div class="bg-det bg-det2"></div>
       <div class="bg-det bg-det3"></div>
@@ -135,7 +154,7 @@
         <span class="close-mod">&times;</span>
         <img class="modal-content" id="img01" />
         <div id="caption"></div>
-              <meu-mouse></meu-mouse>
+        <meu-mouse></meu-mouse>
       </div>
       <meu-footer></meu-footer>
     </div>
@@ -157,6 +176,78 @@ export default {
     "meu-mouse": Mouse,
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
+  },
+  data() {
+    return {
+      data: null
+    };
+  },
+  methods: {
+    formatDate(input) {},
+    getMarkers() {
+      var codigo = 1;
+      /*$("#event-name").text("jquery loaded");
+      alert("ai");*/
+      /*$.getJSON("https://localhost:5001/api/Eventos/1", function(result) {
+        alert("entrou aq");
+        $.each(result, function(i, field) {
+          alert("entrou aq");
+          $("#event-name").text(field.nome);
+          alert(field.name);
+          $("#event-info-nome").text(field.nome);
+          $("#event-info-local").text("Endereço:" + field.endereco);
+          $("#event-info-datas").text(
+            "Data:" +
+              this.formatDate(
+                field.dataEvento.substring(0, 10).replace("-", "/")
+              )
+          );
+          $("#event-info-horarios").text("Horários:" + field.horarios);
+          $("#of-web-link-eve").href = field.linkSiteOficial;
+          $(".day").text(field.dataEvento.toString().substring(8, 10));
+          $(".month").text(
+            monthNames[parseInt(field.dataEvento.substring(5, 7)) - 1]
+              .substring(0, 3)
+              .toUpperCase()
+          );
+          $("#event-name").text(field.nome);
+          $("#adress-pt-1").text(
+            field.endereco.substring(0, field.endereco.indexOf("Cidade:", 3))
+          );
+          $("#adress-pt-2").text(
+            field.endereco.substring(
+              field.endereco.indexOf("Cidade:", 3),
+              field.endereco.indexOf("País:", 6)
+            )
+          );
+          $("#adress-pt-3").text(
+            field.endereco.substring(field.endereco.indexOf("País:", 6))
+          );
+          $("#desc-ev-wrapper").text(field.descricao);
+          $("#event-map").attr("src", field.localizacaoCoord);
+        });
+      });*/
+      /*alert("ya");*/
+      var codigo = 1;
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/Obras/" + codigo,
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        success: function(field) {
+          $("#art-detail-p").text(field.dadosTecnicos);
+          $("#art-data").text(field.descricao);
+          $("#art-name").text(field.nome);
+        },
+        error: function(thrownError) {
+          //Add these parameters to display the required response
+          console.log(thrownError);
+        }
+      });
+    }
+  },
+  mounted() {
+    this.getMarkers();
   }
 };
 </script>

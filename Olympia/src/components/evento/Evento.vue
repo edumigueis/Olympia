@@ -282,7 +282,7 @@ export default {
           $("#event-map").attr("src", field.localizacaoCoord);
         });
       });*/
-      alert("ya");
+      /*alert("ya");*/
       $.ajax({
         url: "https://localhost:5001/api/redirect/Eventos/1",
         type: "GET",

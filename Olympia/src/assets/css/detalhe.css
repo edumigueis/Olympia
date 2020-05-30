@@ -405,7 +405,7 @@ ul li {
   color: #fff;
 }
 .art-icon {
-  width: 100%;  
+  object-fit: contain;
 }
 .transparent{
   background-color: transparent !important;
@@ -721,14 +721,11 @@ ul li {
     width: 70%;
   }
   #info-2{
-    width: 90%;
+    width: 22%;
   }
   #artist-pic{
     width: 150px;
     height: 150px;
-    float: right;
-    margin-right: -30%;
-    margin-top: -35%;
   }
 }
 @media only screen and (min-width: 1201px) and (max-width: 1500px) {
