@@ -283,7 +283,7 @@ export default {
       });*/
       alert("ya");
       $.ajax({
-     url: "https://localhost:5001/api/Eventos/1",
+     url: "https://localhost:5001/api/redirect/Eventos/1",
      type: "GET",
      dataType: "json",
      xhrFields: {
