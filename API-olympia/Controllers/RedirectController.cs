@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Security.Claims;
+using System.Collections.Generic;
+using Microsoft.Extensions.Primitives;
 
 namespace API_olympia.Controllers
 {
@@ -24,7 +26,10 @@ namespace API_olympia.Controllers
         {
             try
             {
-                Armazenador.StringValueRoute = HttpContext.Request.Host.Value;
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[7];
                 return RedirectToAction("post", "usuarios", model);
             }
             catch
@@ -38,7 +43,10 @@ namespace API_olympia.Controllers
         {
             try
             {
-                Armazenador.StringValueRoute = HttpContext.Request.Host.Value;
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[7];
                 return Redirect("/api/Eventos/"+idEvento);
             }
             catch
