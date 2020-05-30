@@ -283,19 +283,21 @@ export default {
       });*/
       alert("ya");
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Eventos/1",
-        type: "GET",
-        dataType: "json",
-        contentType: "application/json",
-        success: function(result) {
-          console.log(result);
-        },
-        error: function(ex) {
-          //Add these parameters to display the required response
-          console.log(ex);
-          alert("deu pau");
-        }
-      });
+     url: "https://localhost:5001/api/redirect/Eventos/1",
+     type: "GET",
+     dataType: "json",
+     xhrFields: {
+         withCredentials: true
+    },
+     contentType: "application/json",
+     success: function () {
+         alert("success");
+     },
+     error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
+         console.log(xhr.status);
+         console.log(xhr.responseText);
+     },
+ });
     },
     formatDate() {
       var datePart = input.match(/\d+/g),
