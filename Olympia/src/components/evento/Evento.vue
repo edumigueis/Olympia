@@ -238,6 +238,7 @@ export default {
     };
   },
   methods: {
+    formatDate(input) {},
     getMarkers() {
       var codigo = 1;
       /*$("#event-name").text("jquery loaded");
@@ -283,29 +284,55 @@ export default {
       });*/
       alert("ya");
       $.ajax({
-     url: "https://localhost:5001/api/redirect/Eventos/1",
-     type: "GET",
-     dataType: "json",
-     xhrFields: {
-         withCredentials: true
-    },
-     contentType: "application/json",
-     success: function () {
-         alert("success");
-     },
-     error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
-         console.log(xhr.status);
-         console.log(xhr.responseText);
-     },
- });
-    },
-    formatDate() {
-      var datePart = input.match(/\d+/g),
-        year = datePart[0], // get only two digits
-        month = datePart[1],
-        day = datePart[2];
+        url: "https://localhost:5001/api/redirect/Eventos/1",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        success: function(field) {
+          alert("entrou aq");
+          $("#event-name").text(field.nome);
+          alert(field.name);
+          $("#event-info-nome").text(field.nome);
+          $("#event-info-local").text("Endereço:" + field.endereco);
+          var datePart = field.dataEvento
+              .substring(0, 10)
+              .replace("-", "/")
+              .match(/\d+/g),
+            year = datePart[0], // get only two digits
+            month = datePart[1],
+            day = datePart[2];
 
-      return day + "/" + month + "/" + year;
+          var dataFin = day + "/" + month + "/" + year;
+          $("#event-info-datas").text("Data: " + dataFin);
+          $("#event-info-horarios").text("Horários:" + field.horarios);
+          $("#of-web-link-eve").href = field.linkSiteOficial;
+          $(".day").text(field.dataEvento.toString().substring(8, 10));
+          $(".month").text(
+            monthNames[parseInt(field.dataEvento.substring(5, 7)) - 1]
+              .substring(0, 3)
+              .toUpperCase()
+          );
+          $("#event-name").text(field.nome);
+          $("#adress-pt-1").text(
+            field.endereco.substring(0, field.endereco.indexOf("Cidade:", 3))
+          );
+          $("#adress-pt-2").text(
+            field.endereco.substring(
+              field.endereco.indexOf("Cidade:", 3),
+              field.endereco.indexOf("País:", 6)
+            )
+          );
+          $("#adress-pt-3").text(
+            field.endereco.substring(field.endereco.indexOf("País:", 6))
+          );
+          $("#desc-ev-wrapper").text(field.descricao);
+          $("#event-map").attr("src", field.localizacaoCoord);
+        },
+        error: function(thrownError) {
+          //Add these parameters to display the required response
+          console.log(thrownError);
+        }
+      });
     }
   },
   mounted() {
