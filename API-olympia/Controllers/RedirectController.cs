@@ -55,5 +55,73 @@ namespace API_olympia.Controllers
             }
         }
 
+        [HttpGet("Obras/{idObra}")]
+        public async Task<IActionResult> Get(int idObra)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[7];
+                return Redirect("/api/Obras/" + idEvento);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("Usuarios/{idUsuario}")]
+        public async Task<IActionResult> Get(int idUsuario)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[7];
+                return Redirect("/api/Usuarios/" + idUsuario);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("Servicos/{idServico}")]
+        public async Task<IActionResult> Get(int idServico)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[7];
+                return Redirect("/api/Servicos/" + idServico);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("Publicacoes/{idPublicacao}")]
+        public async Task<IActionResult> Get(int idPublicacao)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[7];
+                return Redirect("/api/Publicacoes/" + idPublicacao);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
     }
 }
