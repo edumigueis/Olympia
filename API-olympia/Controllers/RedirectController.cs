@@ -24,8 +24,8 @@ namespace API_olympia.Controllers
             this.Repo = repo;
         }
 
-        [HttpPost("CadastroUser")]
-        public async Task<IActionResult> PostUsuarios(Usuarios model)
+        [HttpPost("Cadastro")]
+        public async Task<IActionResult> PostUsuario(Usuarios model)
         {
             try
             {
@@ -51,8 +51,8 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("Eventos/{idEvento}")]
-        public async Task<IActionResult> GetEventos(int idEvento)
+        [HttpGet("Evento/{idEvento}")]
+        public async Task<IActionResult> GetEvento(int idEvento)
         {
             try
             {
@@ -68,8 +68,8 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("Obras/{idObra}")]
-        public async Task<IActionResult> GetObras(int idObra)
+        [HttpGet("Obra/{idObra}")]
+        public async Task<IActionResult> GetObra(int idObra)
         {
             try
             {
@@ -85,8 +85,8 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("Usuarios/{idUsuario}")]
-        public async Task<IActionResult> GetUsuarios(int idUsuario)
+        [HttpGet("Usuario/{idUsuario}")]
+        public async Task<IActionResult> GetUsuario(int idUsuario)
         {
             try
             {
@@ -102,8 +102,8 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("Servicos/{idServico}")]
-        public async Task<IActionResult> GetServicos(int idServico)
+        [HttpGet("Servico/{idServico}")]
+        public async Task<IActionResult> GetServico(int idServico)
         {
             try
             {
@@ -119,8 +119,8 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("Publicacoes/{idPublicacao}")]
-        public async Task<IActionResult> GetPublicacoes(int idPublicacao)
+        [HttpGet("Publicacao/{idPublicacao}")]
+        public async Task<IActionResult> GetPublicacao(int idPublicacao)
         {
             try
             {
@@ -136,5 +136,72 @@ namespace API_olympia.Controllers
             }
         }
 
+        [HttpGet("Publicacoes")]
+        public async Task<IActionResult> GetPublicacoes(int idPublicacao)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Publicacoes");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("Eventos")]
+        public async Task<IActionResult> GetEventos(int idPublicacao)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Eventos");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("Usuarios")]
+        public async Task<IActionResult> GetUsuarios(int idPublicacao)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuarios");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("Servicos")]
+        public async Task<IActionResult> GetServicos(int idPublicacao)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Servicos");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
     }
 }

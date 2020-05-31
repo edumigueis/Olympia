@@ -58,9 +58,7 @@ namespace API_olympia.Controllers
         public async Task<IActionResult> RedirectToPost(string json)
         {
             try
-            {
-                json = "{\"IdUsuario\":0,\"Nome\":\"er ertert\",\"UserName\":\"vivianetasca\",\"Email\":\"smithrodrigues08 @gmail.com\",\"Senha\":\"Rei1\",\"Foto\":\"assa\"}";
-
+            { 
                 Usuarios usuario = JsonConvert.DeserializeObject<Usuarios>(json);
 
                 await post(usuario);
@@ -125,7 +123,7 @@ namespace API_olympia.Controllers
             {
                 model.Senha = PasswordHasher.Hash(model.Senha);
                 this.Repo.Add(model);
-                //
+
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
