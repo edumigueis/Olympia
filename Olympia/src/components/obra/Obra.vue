@@ -84,7 +84,10 @@
                     <b>Nome:</b> <span id="name"> Jackson Pollock</span>
                   </p>
                   <p id="artist-nac" class="black-to-white">
-                    <b>Bio:</b> <span id="bio"> Art is inspiring people and telling stories</span>
+                    <b>Bio:</b>
+                    <span id="bio">
+                      Art is inspiring people and telling stories</span
+                    >
                   </p>
                 </div>
                 <div id="artist-pic" class="black-to-white">
@@ -240,17 +243,37 @@ export default {
           $("#art-name").text(field.nome);
           $("#page-det-name").text(field.nome);
           $.ajax({
-            url: "https://localhost:5001/api/redirect/Sp/UserObra/" + codigo,
+            url:
+              "https://localhost:5001/api/redirect/Usuarios/UserObra/" + codigo,
             type: "GET",
             dataType: "json",
             contentType: "application/json",
             success: function(field) {
-              $("#user-link").text("@" + field.userName);
-              $("#user-link").attr("href", "/perfil/" + field.idUser);
-              $("#bio").text(field.bio);
-              $("#name").text(field.nome);
-              $("#artist-profile-pic").attr("src", "" + LZString.decompress(field.foto));
-              $("#visit-profile-link").attr("href", "/perfil/" + field.idUser);
+              var codigoUser = field.codigo;
+              $.ajax({
+                url: "https://localhost:5001/api/Redirect/Usuarios/" + codigo,
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json",
+                success: function(field) {
+                  $("#user-link").text("@" + field.userName);
+                  $("#user-link").attr("href", "/perfil/" + field.idUser);
+                  $("#bio").text(field.bio);
+                  $("#name").text(field.nome);
+                  $("#artist-profile-pic").attr(
+                    "src",
+                    "" + LZString.decompress(field.foto)
+                  );
+                  $("#visit-profile-link").attr(
+                    "href",
+                    "/perfil/" + field.idUser
+                  );
+                },
+                error: function(thrownError) {
+                  //Add these parameters to display the required response
+                  console.log(thrownError);
+                }
+              });
             },
             error: function(thrownError) {
               //Add these parameters to display the required response
