@@ -205,6 +205,7 @@
         <div class="bubble x20"></div>
       </div>
       <meu-footer></meu-footer>
+      <meu-loading></meu-loading>
     </div>
   </main>
 </template>
@@ -221,6 +222,7 @@ import Contatos from "../shared/contatos/Contatos.vue";
 import Mouse from "../shared/mouse/Mouse.vue";
 import Footer from "../shared/footer/Footer.vue";
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+import Loading from "../shared/loading/Loading.vue";
 
 export default {
   name: "HelloWorld",
@@ -230,7 +232,8 @@ export default {
     "meus-contatos": Contatos,
     "meu-mouse": Mouse,
     "meu-footer": Footer,
-    "meu-dark-mode": DarkMode
+    "meu-dark-mode": DarkMode,
+    "meu-loading": Loading
   },
   data() {
     return {
@@ -288,8 +291,12 @@ export default {
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        beforeSend: function(){
+            $('#load-modal').addClass('loading'); 
+        },
         success: function(field) {
           alert("entrou aq");
+          $('#load-modal').fadeOut(); 
           $("#event-name").text(field.nome);
           alert(field.name);
           $("#event-info-nome").text(field.nome);
@@ -331,6 +338,7 @@ export default {
         error: function(thrownError) {
           //Add these parameters to display the required response
           console.log(thrownError);
+          $('#load-modal').fadeOut(); 
         }
       });
     }
