@@ -1,5 +1,5 @@
 <template>
-  <div id="load-modal">
+  <div id="load-modal" class="white-7">
     <div id="preloader">
       <div id="loader"></div>
     </div>
@@ -10,7 +10,7 @@
   position: absolute;
   width: 100vw;
   height: 100%;
-  background-color: #ffeeff;
+  background-color: #ffffff;
   display: none;
   top: 0;
   left: 0;
