@@ -160,6 +160,7 @@
         <meu-mouse></meu-mouse>
       </div>
       <meu-footer></meu-footer>
+      <meu-loading></meu-loading>
     </div>
   </main>
 </template>
@@ -170,6 +171,7 @@ import Contatos from "../shared/contatos/Contatos.vue";
 import Mouse from "../shared/mouse/Mouse.vue";
 import Footer from "../shared/footer/Footer.vue";
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+import Loading from "../shared/loading/Loading.vue";
 
 export default {
   components: {
@@ -178,7 +180,8 @@ export default {
     "meus-contatos": Contatos,
     "meu-mouse": Mouse,
     "meu-footer": Footer,
-    "meu-dark-mode": DarkMode
+    "meu-dark-mode": DarkMode,
+    "meu-loading": Loading
   },
   data() {
     return {
@@ -195,7 +198,11 @@ export default {
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        beforeSend: function(){
+            $('#load-modal').addClass('loading'); 
+        },
         success: function(field) {
+          $('#load-modal').fadeOut(); 
           $("#art-detail-p").text(field.dadosTecnicos);
           $("#art-data").text(field.descricao);
           $("#art-name").text(field.nome);
@@ -230,18 +237,21 @@ export default {
                 error: function(thrownError) {
                   //Add these parameters to display the required response
                   console.log(thrownError);
+                  $('#load-modal').fadeOut(); 
                 }
               });
             },
             error: function(thrownError) {
               //Add these parameters to display the required response
               console.log(thrownError);
+              $('#load-modal').fadeOut(); 
             }
           });
         },
         error: function(thrownError) {
           //Add these parameters to display the required response
           console.log(thrownError);
+          $('#load-modal').fadeOut(); 
         }
       });
     }
