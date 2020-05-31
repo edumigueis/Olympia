@@ -45,10 +45,7 @@
                 <div id="simple-art-info">
                   <p id="art-name" class="black-to-white">N. 17a</p>
                   <p id="art-detail-p" class="black-to-white">
-                    Nova York,
-                    1948.
-                    1,38 m x 1,38 m.
-                    Tela, Tinta a óleo.
+                    Nova York, 1948. 1,38 m x 1,38 m. Tela, Tinta a óleo.
                   </p>
                 </div>
                 <div class="fine-line white-6"></div>
@@ -84,21 +81,24 @@
                     </b>
                   </p>
                   <p id="artist-name" class="black-to-white">
-                    <b>Nome:</b> Jakson Pollock
+                    <b>Nome:</b> <span id="name"> Jackson Pollock</span>
                   </p>
                   <p id="artist-nac" class="black-to-white">
-                    <b>Nacionalidade:</b> Americano
+                    <b>Bio:</b> <span id="bio"> Art is inspiring people and telling stories</span>
                   </p>
                 </div>
                 <div id="artist-pic" class="black-to-white">
                   <img
                     src="https://static.todamateria.com.br/upload/po/ll/pollockarte-cke.jpg"
-                    alt
                     class="art-icon"
+                    id="artist-profile-pic"
                   />
                 </div>
                 <p id="artist-profile" class="black-to-white">
-                  <a href="/profile/klimt" class="link black-to-white"
+                  <a
+                    href="/profile/klimt"
+                    id="visit-profile-link"
+                    class="link black-to-white"
                     >Visitar o perfil</a
                   >
                 </p>
@@ -239,6 +239,24 @@ export default {
           $("#art-data").text(field.descricao);
           $("#art-name").text(field.nome);
           $("#page-det-name").text(field.nome);
+          $.ajax({
+            url: "https://localhost:5001/api/redirect/Sp/UserObra/" + codigo,
+            type: "GET",
+            dataType: "json",
+            contentType: "application/json",
+            success: function(field) {
+              $("#user-link").text("@" + field.userName);
+              $("#user-link").attr("href", "/perfil/" + field.idUser);
+              $("#bio").text(field.bio);
+              $("#name").text(field.nome);
+              $("#artist-profile-pic").attr("src", "" + LZString.decompress(field.foto));
+              $("#visit-profile-link").attr("href", "/perfil/" + field.idUser);
+            },
+            error: function(thrownError) {
+              //Add these parameters to display the required response
+              console.log(thrownError);
+            }
+          });
         },
         error: function(thrownError) {
           //Add these parameters to display the required response
