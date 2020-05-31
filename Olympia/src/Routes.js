@@ -37,7 +37,7 @@ export const routes = [
     { path: '/artes', component: Artes, titulo: 'A R T E S' },
     { path: '/obra/:id', component: Obra, titulo: 'O B R A' },
     { path: '/servico/:id', component: Servico, titulo: 'S E R V I Ç O' },
-    { path: '/evento', component: Evento, titulo: 'E V E N T O' },
+    { path: '/evento/:id', component: Evento, titulo: 'E V E N T O' },
     { path: '/eventos', component: Eventos, titulo: 'E V E N T O S' },
     { path: '/pesquisar', component: SearchResult, titulo: 'P E S Q U I S A', meta: { transition: 'zoom' } },
     { path: '/sobre', component: Sobre, titulo: 'S O B R E' },
