@@ -426,13 +426,13 @@ ul li {
   font-size: 3.5em;
   margin-bottom: 10px;
   margin-top: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
 }
 #art-detail-p{
   font-size: 1.1em;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 560;
 }
 #art-data {
@@ -598,23 +598,28 @@ ul li {
   -ms-overflow-style: none;
 }
 #artist-user{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
 }
 #artist-name{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
 }
 #artist-nac{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
+  max-width: 200px;
 }
 #simple-artist-info{
   margin: 0;
   width: 200%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
-
+@media only screen and (min-width: 1300px) {
+  #artist-nac{
+    max-width: 300px;
+  }
+}
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
   .modal-content {
