@@ -7,7 +7,7 @@
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
-      <title id="page-det-name">O B R A</title>
+      <title id="page-det-name">S E R V I C O</title>
       <div id="col-container">
         <div id="img-col-d" class="transparent">
           <div class="bg"></div>
@@ -188,53 +188,10 @@ export default {
   methods: {
     formatDate(input) {},
     getMarkers() {
-      var codigo = 1;
-      /*$("#event-name").text("jquery loaded");
-      alert("ai");*/
-      /*$.getJSON("https://localhost:5001/api/Eventos/1", function(result) {
-        alert("entrou aq");
-        $.each(result, function(i, field) {
-          alert("entrou aq");
-          $("#event-name").text(field.nome);
-          alert(field.name);
-          $("#event-info-nome").text(field.nome);
-          $("#event-info-local").text("Endereço:" + field.endereco);
-          $("#event-info-datas").text(
-            "Data:" +
-              this.formatDate(
-                field.dataEvento.substring(0, 10).replace("-", "/")
-              )
-          );
-          $("#event-info-horarios").text("Horários:" + field.horarios);
-          $("#of-web-link-eve").href = field.linkSiteOficial;
-          $(".day").text(field.dataEvento.toString().substring(8, 10));
-          $(".month").text(
-            monthNames[parseInt(field.dataEvento.substring(5, 7)) - 1]
-              .substring(0, 3)
-              .toUpperCase()
-          );
-          $("#event-name").text(field.nome);
-          $("#adress-pt-1").text(
-            field.endereco.substring(0, field.endereco.indexOf("Cidade:", 3))
-          );
-          $("#adress-pt-2").text(
-            field.endereco.substring(
-              field.endereco.indexOf("Cidade:", 3),
-              field.endereco.indexOf("País:", 6)
-            )
-          );
-          $("#adress-pt-3").text(
-            field.endereco.substring(field.endereco.indexOf("País:", 6))
-          );
-          $("#desc-ev-wrapper").text(field.descricao);
-          $("#event-map").attr("src", field.localizacaoCoord);
-        });
-      });*/
-      /*alert("ya");*/
       var url = window.location.href;
-      var codigo = url.substring(29);
+      var codigo = url.substring(32);
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Obras/" + codigo,
+        url: "https://localhost:5001/api/redirect/Servico/" + codigo,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -245,7 +202,7 @@ export default {
           $("#page-det-name").text(field.nome);
           $.ajax({
             url:
-              "https://localhost:5001/api/redirect/Usuarios/UserObra/" + codigo,
+              "https://localhost:5001/api/redirect/Usuarios/UserServico/" + codigo,
             type: "GET",
             dataType: "json",
             contentType: "application/json",
