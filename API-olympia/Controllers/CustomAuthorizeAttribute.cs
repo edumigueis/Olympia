@@ -18,7 +18,7 @@ namespace API_olympia.Data
             {
 
                 if (Armazenador.StringValueRoute.Equals("olympia.art.br") ||
-                    Armazenador.StringValueRoute.Equals("http://localhost:8080"))
+                    Armazenador.StringValueRoute.Equals("http://localhost:8080/"))
                 {
                     Armazenador.StringValueRoute = null;
                     return;

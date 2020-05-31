@@ -5,6 +5,9 @@ using API_olympia.Models;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace API_olympia.Controllers
 {
@@ -51,12 +54,16 @@ namespace API_olympia.Controllers
         }
         
         [CustomAuthorizeAttribute]
-        [HttpGet("RedirectToPost/{model}")]
-        public async Task<IActionResult> RedirectToPost([FromForm]Usuarios model)
+        [HttpGet("RedirectToPost/{json}")]
+        public async Task<IActionResult> RedirectToPost(string json)
         {
             try
             {
-                await post(model);
+                json = "{\"IdUsuario\":0,\"Nome\":\"er ertert\",\"UserName\":\"vivianetasca\",\"Email\":\"smithrodrigues08 @gmail.com\",\"Senha\":\"Rei1\",\"Foto\":\"assa\"}";
+
+                Usuarios usuario = JsonConvert.DeserializeObject<Usuarios>(json);
+
+                await post(usuario);
                 return Ok();
             }
             catch
@@ -77,8 +84,8 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Usuario = await this.Repo.GetAllUsuariosAsyncById(idUsuario);
-                    return Created($"/api/Usuarios/{model.IdUsuario}", Usuario);
+                    return Ok();
+
                 }
             }
             catch
@@ -121,8 +128,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    //return Ok();
-                    return Created($"/api/Usuarios/{model.IdUsuario}", model);
+                    return Ok();
                 }
             }
             catch
