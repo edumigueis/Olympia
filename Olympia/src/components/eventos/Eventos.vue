@@ -1,9 +1,12 @@
-
 <template>
   <main class="main-content white-6">
     <div id="container-eventos" class="white-6">
       <title>E V E N T O S</title>
-      <link rel="stylesheet" type="text/css" href="/src/assets/css/events-slider.css" />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="/src/assets/css/events-slider.css"
+      />
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
       <link rel="stylesheet" href="/src/assets/css/events.css" />
 
@@ -21,9 +24,9 @@
                 <div class="caption">
                   <div class="title">Hilma af Klint</div>
                   <div class="text">
-                    <p
-                      class="text-in-itself"
-                    >Visual, colorido, esplêndido: Pinturas Para O Futuro</p>
+                    <p class="text-in-itself">
+                      Visual, colorido, esplêndido: Pinturas Para O Futuro
+                    </p>
                   </div>
                   <a href="#" class="btn">
                     <span class="btn-inner">Saber Mais</span>
@@ -43,7 +46,9 @@
                 <div class="caption">
                   <div class="title">Sydney Rock Festival</div>
                   <div class="text">
-                    <p class="text-in-itself">Amando Sydney? Só espere até ver esse festival.</p>
+                    <p class="text-in-itself">
+                      Amando Sydney? Só espere até ver esse festival.
+                    </p>
                   </div>
                   <a href="#" class="btn">
                     <span class="btn-inner">Saber Mais</span>
@@ -63,7 +68,9 @@
                 <div class="caption">
                   <div class="title">Bienal Do Livro 2020</div>
                   <div class="text">
-                    <p class="text-in-itself">Aproveite a bienal do livro: Um paraíso literário.</p>
+                    <p class="text-in-itself">
+                      Aproveite a bienal do livro: Um paraíso literário.
+                    </p>
                   </div>
                   <a href="#" class="btn">
                     <span class="btn-inner">Saber Mais</span>
@@ -83,7 +90,9 @@
                 <div class="caption">
                   <div class="title">World Expo 2020</div>
                   <div class="text">
-                    <p class="text-in-itself">Arquitetura em sua melhor forma: em comunidade.</p>
+                    <p class="text-in-itself">
+                      Arquitetura em sua melhor forma: em comunidade.
+                    </p>
                   </div>
                   <a href="#" class="btn">
                     <span class="btn-inner">Saber Mais</span>
@@ -193,8 +202,7 @@
               <div class="card__content">
                 <p class="card__category">Categoria</p>
                 <h3 class="card__heading">
-                  Arqui
-                  tetura
+                  Arqui tetura
                 </h3>
               </div>
             </button>
@@ -206,8 +214,7 @@
               <div class="card__content">
                 <p class="card__category">Categoria</p>
                 <h3 class="card__heading">
-                  Litera
-                  tura
+                  Litera tura
                 </h3>
               </div>
             </button>
@@ -239,8 +246,7 @@
               <div class="card__content">
                 <p class="card__category">Categoria</p>
                 <h3 class="card__heading">
-                  Escul
-                  tura
+                  Escul tura
                 </h3>
               </div>
             </button>
@@ -261,8 +267,7 @@
               ></div>
               <div class="card__content">
                 <p class="card__category">Categoria</p>
-                <h3 class="card__heading">Fotogra
-                  fia</h3>
+                <h3 class="card__heading">Fotogra fia</h3>
               </div>
             </button>
             <button class="card" href="#">
@@ -272,8 +277,7 @@
               ></div>
               <div class="card__content">
                 <p class="card__category">Categoria</p>
-                <h3 class="card__heading">Arte
-                  Digital</h3>
+                <h3 class="card__heading">Arte Digital</h3>
               </div>
             </button>
           </div>
@@ -341,7 +345,10 @@
       </div>
 
       <div id="events-container" class="white-6">
-        <div class="event-card-container border-black" id="first-card-container">
+        <div
+          class="event-card-container border-black"
+          id="first-card-container"
+        >
           <ul class="card-table white">
             <li class="card-item white">
               <div class="event-image-container">
@@ -464,7 +471,7 @@
   </main>
 </template>
 
-  <script>
+<script>
 import MenuBar from "../shared/menu-bar/Menu-bar.vue";
 import MenuItems from "../shared/menu-items/Menu-items.vue";
 import Contatos from "../shared/contatos/Contatos.vue";
@@ -480,6 +487,68 @@ export default {
     "meu-mouse": Mouse,
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
+  },
+  data() {
+    return {
+      data: null
+    };
+  },
+  methods: {
+    getMarkers() {
+      var codigo = 1;
+
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/Eventos",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
+        },
+        success: function(data) {
+          console.log(data);
+          jQuery.each(data, function(index, item) {
+            var conteudoDiv =
+              '<div class="event-card-container border-black"><ul class="card-table white"><li class="card-item white"><div class="event-image-container"><div class="image-mask-event"><img class="event-image" id="event-image-feed" src=""/></div></div></li>';
+            conteudoDiv +=
+              '<div class="btn-wrap"><a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a></div><li class="card-item-2 white"><div class="event-date-container"><p class="expo-name">' +
+              item.nome +
+              '</p><p class="date">' +
+              item.dataEvento.substring(0, 10) +
+              '</p></div></li><li class="card-item-last white"><div class="event-location-container">';
+            conteudoDiv +=
+              '<iframe src="' +
+              item.localizacaoCoord +
+              '" width="400" height="264" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe></div></li></ul></div>';
+            $("#events-container").append(conteudoDiv);
+            $.ajax({
+              url: "https://localhost:5001/api/redirect/FotosEventos/"+item.idEvento,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              beforeSend: function() {
+                $("#load-modal").addClass("loading");
+              },
+              success: function(data) {
+                console.log(data);
+                var foiImg = false;
+                jQuery.each(data, function(index, fotos) {
+                  if(foiImg == false){
+                    $('#event-image-feed').attr('src', fotos.foto);
+                    foiImg = true;
+                  } else{
+                    return;
+                  }
+                });
+              }
+            });
+          });
+        }
+      });
+    }
+  },
+  mounted() {
+    this.getMarkers();
   }
 };
 </script>
