@@ -275,10 +275,10 @@ setInterval(() => {
       });
       $("#user").on("keyup", function() {
         var user = $("#user").val();
-        if(user.length > 29){
+        if (user == "") {
           return;
         }
-        if (user == "") {
+        if(user.length > 29){
           return;
         }
         if (!user.match(/^[a-z0-9_-]{1,30}$/igm)) {
@@ -290,6 +290,20 @@ setInterval(() => {
           );
           $("#user").val("");
         }
+        $.ajax({
+          type: "GET",
+          url: "https://localhost:5001/api/Redirect/ExisteUser/"+ $("#user").val(),
+          dataType: "json",
+          contentType: "application/json",
+          success: function(result){ if(result.existe == true){
+            $("#user").css('border-bottom','red');
+          }else{
+            $("#user").css('border-bottom','1px solid #999;');
+          }},
+          fail: function(){ 
+            
+          }
+        });
       });
       $("#name").on("focusout", function() {
         var name = $("#name").val();
