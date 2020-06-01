@@ -9,15 +9,17 @@ namespace API_olympia.Models
 
         [Required]
         [StringLength(40, ErrorMessage = "O Nome não deve ter menos do que 5 caracteres e mais do que 40 caracteres.", MinimumLength = 5)]
+        [RegularExpression("^[a-zA-Z][a-zA-Z\\s]+$", ErrorMessage = "Nome deve ter ao menos um espaço e só pode conter caracteres do tipo letra.")]
         public string Nome { get; set; }
 
         [Required]
-        [StringLength(30, ErrorMessage = "O user name não deve ter mais do que 30 caracteres.")]
-        /*Regex: a-z 0-9 + _ + .*/
+        [StringLength(30, ErrorMessage = "O user name não deve ter mais do que 30 caracteres e menos que 5.", MinimumLength = 5)]
+        [RegularExpression("^(?=.{5,30}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$", ErrorMessage = "Username nao pode começar ou terminar com . e _ , e eles não podem vir um seguido do outro.Só pode conter letras,ponto e _ ")]
         public string UserName { get; set; }
 
         [Required]
         [StringLength(255, ErrorMessage = "O email não deve ter mais do que 255 caracteres.")]
+        [RegularExpression(@"\A(?:[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z",ErrorMessage = "Endereço de email deve conter ao menos um @ e um ponto.")]
         public string Email { get; set; }
 
         [Required]
