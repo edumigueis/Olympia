@@ -281,7 +281,7 @@ setInterval(() => {
         if (user == "") {
           return;
         }
-        if (!user.match(/^[a-z0-9_-.]{1,30}$/igm)) {
+        if (!user.match(/^[a-z0-9_-]{1,30}$/igm)) {
           $(".error-modal").css("display", "block");
           $(".error-modal").css("opacity", "1");
           $(".ui-widget-overlay").css("display", "block");

@@ -14,7 +14,7 @@ namespace API_olympia.Models
 
         [Required]
         [StringLength(30, ErrorMessage = "O user name não deve ter mais do que 30 caracteres.")]
-        [RegularExpression("/^[a-z0-9_-.]{1,30}$/igm", ErrorMessage = "Username nao pode começar ou terminar com . e _ , e eles não podem vir um seguido do outro.Só pode conter letras,ponto e _ ")]
+        [RegularExpression("/^[a-z0-9_-]{1,30}$/igm", ErrorMessage = "Username nao pode começar ou terminar com . e _ , e eles não podem vir um seguido do outro.Só pode conter letras,ponto e _ ")]
         public string UserName { get; set; }
 
         [Required]
