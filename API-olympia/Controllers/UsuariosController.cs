@@ -5,10 +5,12 @@ using API_olympia.Models;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : Controller
@@ -21,6 +23,7 @@ namespace API_olympia.Controllers
             this.Repo = repo;
         }
 
+        [CustomAuthorizeAttribute]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -34,7 +37,8 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get().");
             }
         }
-
+        
+        [CustomAuthorizeAttribute]
         [HttpGet("{idUsuario}")]
         public async Task<IActionResult> Get(int idUsuario)
         {
@@ -48,7 +52,25 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
             }
         }
+        
+        [CustomAuthorizeAttribute]
+        [HttpGet("RedirectToPost/{json}")]
+        public async Task<IActionResult> RedirectToPost(string json)
+        {
+            try
+            { 
+                Usuarios usuario = JsonConvert.DeserializeObject<Usuarios>(json);
 
+                await post(usuario);
+                return Ok();
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
+
+        [CustomAuthorizeAttribute]
         [HttpPut("{idUsuario}")]
         public async Task<IActionResult> put(int idUsuario, Usuarios model)
         {
@@ -60,8 +82,8 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Usuario = await this.Repo.GetAllUsuariosAsyncById(idUsuario);
-                    return Created($"/api/Usuarios/{model.IdUsuario}", Usuario);
+                    return Ok();
+
                 }
             }
             catch
@@ -71,6 +93,7 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
+        [CustomAuthorizeAttribute]
         [HttpDelete("{idUsuario}")]
         public async Task<IActionResult> delete(int idUsuario)
         {
@@ -92,6 +115,7 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
+        [CustomAuthorizeAttribute]
         [HttpPost]
         public async Task<IActionResult> post(Usuarios model)
         {
@@ -99,11 +123,10 @@ namespace API_olympia.Controllers
             {
                 model.Senha = PasswordHasher.Hash(model.Senha);
                 this.Repo.Add(model);
-                //
+
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    //return Ok();
-                    return Created($"/api/Usuarios/{model.IdUsuario}", model);
+                    return Ok();
                 }
             }
             catch

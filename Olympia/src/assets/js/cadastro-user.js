@@ -475,11 +475,11 @@ setInterval(() => {
       
       
       var jsonInput = JSON.stringify(myObject);
-
+      console.log(jsonInput);
       jaFoiPostCadUser = true;
         $.ajax({
           type: "POST",
-          url: "https://localhost:5001/api/Usuarios",
+          url: "https://localhost:5001/api/Redirect/CadastroUser",
           data: jsonInput,
           contentType:'application/json',
           success: function(){ document.location.href = "/#/login"},

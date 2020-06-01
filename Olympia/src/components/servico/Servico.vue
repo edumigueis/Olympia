@@ -7,7 +7,7 @@
       <meu-menu-items></meu-menu-items>
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
-      <title id="page-det-name">O B R A</title>
+      <title id="page-det-name">S E R V I C O</title>
       <div id="col-container">
         <div id="img-col-d" class="transparent">
           <div class="bg"></div>
@@ -160,7 +160,6 @@
         <meu-mouse></meu-mouse>
       </div>
       <meu-footer></meu-footer>
-      <meu-loading></meu-loading>
     </div>
   </main>
 </template>
@@ -171,7 +170,6 @@ import Contatos from "../shared/contatos/Contatos.vue";
 import Mouse from "../shared/mouse/Mouse.vue";
 import Footer from "../shared/footer/Footer.vue";
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
-import Loading from "../shared/loading/Loading.vue";
 
 export default {
   components: {
@@ -180,8 +178,7 @@ export default {
     "meus-contatos": Contatos,
     "meu-mouse": Mouse,
     "meu-footer": Footer,
-    "meu-dark-mode": DarkMode,
-    "meu-loading": Loading
+    "meu-dark-mode": DarkMode
   },
   data() {
     return {
@@ -192,24 +189,20 @@ export default {
     formatDate(input) {},
     getMarkers() {
       var url = window.location.href;
-      var codigo = url.substring(29);
+      var codigo = url.substring(32);
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Obras/" + codigo,
+        url: "https://localhost:5001/api/redirect/Servico/" + codigo,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
-        beforeSend: function(){
-            $('#load-modal').addClass('loading'); 
-        },
         success: function(field) {
-          $('#load-modal').fadeOut(); 
           $("#art-detail-p").text(field.dadosTecnicos);
           $("#art-data").text(field.descricao);
           $("#art-name").text(field.nome);
           $("#page-det-name").text(field.nome);
           $.ajax({
             url:
-              "https://localhost:5001/api/redirect/Usuarios/UserObra/" + codigo,
+              "https://localhost:5001/api/redirect/Usuarios/UserServico/" + codigo,
             type: "GET",
             dataType: "json",
             contentType: "application/json",
@@ -237,21 +230,18 @@ export default {
                 error: function(thrownError) {
                   //Add these parameters to display the required response
                   console.log(thrownError);
-                  $('#load-modal').fadeOut(); 
                 }
               });
             },
             error: function(thrownError) {
               //Add these parameters to display the required response
               console.log(thrownError);
-              $('#load-modal').fadeOut(); 
             }
           });
         },
         error: function(thrownError) {
           //Add these parameters to display the required response
           console.log(thrownError);
-          $('#load-modal').fadeOut(); 
         }
       });
     }

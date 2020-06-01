@@ -26,6 +26,7 @@ import FeedBack from './components/feedback/FeedBack.vue';
 import Sugestoes from './components/sugestoes/Sugestoes.vue';
 import Denuncia from './components/denuncia/Denuncia.vue';
 import IntServ from './components/intServ/IntServ.vue';
+import Servico from './components/servico/Servico.vue';
 
 export const routes = [
 
@@ -34,8 +35,9 @@ export const routes = [
     { path: '/InternalServerError', component: IntServ, titulo: '5 0 0' },
     { path: '/home', component: Home, titulo: 'H O M E', meta: { transition: 'zoom' }  },
     { path: '/artes', component: Artes, titulo: 'A R T E S' },
-    { path: '/detalhes', component: Obra, titulo: 'O B R A' },
-    { path: '/evento', component: Evento, titulo: 'E V E N T O' },
+    { path: '/obra/:id', component: Obra, titulo: 'O B R A' },
+    { path: '/servico/:id', component: Servico, titulo: 'S E R V I Ç O' },
+    { path: '/evento/:id', component: Evento, titulo: 'E V E N T O' },
     { path: '/eventos', component: Eventos, titulo: 'E V E N T O S' },
     { path: '/pesquisar', component: SearchResult, titulo: 'P E S Q U I S A', meta: { transition: 'zoom' } },
     { path: '/sobre', component: Sobre, titulo: 'S O B R E' },

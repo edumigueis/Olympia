@@ -56,6 +56,7 @@ namespace API_olympia.Controllers
         [HttpGet]
         public IActionResult Login()
         {
+            Armazenador.StringValueRoute = HttpContext.Request.Host.Value;
             return View();
         }
         
