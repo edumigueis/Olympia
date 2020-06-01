@@ -11,9 +11,12 @@ namespace API_olympia.Data
     public class Repository : IRepository
     {
         public OlympiaContext Context { get; }
+
+        private readonly string stringConnection;
         public Repository(OlympiaContext context)
         {
             this.Context = context;
+            stringConnection = "Data Source = regulus.cotuca.unicamp.br; Initial Catalog = BD19197; Persist Security Info = True; User ID = BD19197; Password= Glausilvinhamor10";
         }
 
         public void Add<T>(T entity) where T : class
@@ -175,7 +178,7 @@ namespace API_olympia.Data
         }
 
         public bool VerfificarSpAdmins(LoginViewModel model){
-            SqlConnection conn = new SqlConnection("Data Source = regulus.cotuca.unicamp.br; Initial Catalog = BD19197; Persist Security Info = True; User ID = BD19197; Password= Glausilvinhamor10");
+            SqlConnection conn = new SqlConnection(stringConnection);
             conn.Open();
             SqlCommand cmd = new SqlCommand("comando", conn);
             cmd.CommandText = "sp_ValidateAdmin '" + model.UserName + "','" + model.Senha + "'";

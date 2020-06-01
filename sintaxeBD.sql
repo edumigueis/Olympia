@@ -37,7 +37,10 @@ descricao varchar(800) not null,
 idArte int not null,
 dataPost date not null,
 dataEvento date not null,
-localizacaoCoord varchar(100) not null,  /*{"Lat":-29.02929292929,"Long":13.423222}*/
+localizacaoCoord varchar(1000) not null,  /*{"Lat":-29.02929292929,"Long":13.423222}*/
+endereco varchar(300) null,
+horario varchar (300) null,
+linkSite varchar(300) null
 constraint fkUsuarioEvento foreign key (idUsuario) references Usuarios (idUsuario),
 constraint fkArteEvento foreign key (idArte) references Artes (idArte)
 )
@@ -156,6 +159,77 @@ alter proc sp_ValidateAdmin
 
 as
 Begin
-    Select * from Admins where userName=@Username and senha=@Password
+    select * from Admins where userName=@Username and senha=@Password
 End
 
+create proc sp_FotosObra /*retorna todas as fotos de uma obra*/
+@idObra int
+as
+Begin
+    select * from Fotos where idObra=@idObra
+End
+
+create proc sp_FotosServico /*retorna todas as fotos de um serviço*/
+@idServico int
+as
+Begin
+    select * from Fotos where idServico=@idServico
+End
+
+
+create proc sp_FotosEvento /*retorna todas as fotos de um evento*/
+@idEvento int
+as
+Begin
+    select * from Fotos where idEvento=@idEvento
+End
+
+create proc sp_UserObra /*retorna o id do usuario que postou a obra*/
+@idObra int
+as
+Begin
+    select u.idUsuario from Usuarios u, Obras o where 
+	o.idUsuario = u.idUsuario and
+	o.idObra = @idObra
+End
+
+create proc sp_UserServico /*retorna o id do usuario que postou o serviço*/
+@idServico int
+as
+Begin
+    select u.idUsuario from Usuarios u, Servicos s where 
+	s.idUsuario = u.idUsuario and
+	s.idServico = @idServico
+End
+
+create proc sp_ExisteUsername /*retorna os usuarios cadastrados com certo username*/
+@userName varchar(30)
+as
+Begin
+    select * from Usuarios where userName = @userName
+End
+
+create proc sp_AllObrasUser /*retorna as obras que um usuario possui*/
+@idUsuario int
+as
+Begin
+    select o.idObra from Usuarios u, Obras o where 
+	o.idUsuario = u.idUsuario and
+	u.idUsuario = @idUsuario
+End
+
+create proc sp_AllServicosUser /*retorna os servicos que um usuario possui*/
+@idUsuario int
+as
+Begin
+    select s.idServico from Usuarios u, Servicos s where 
+	s.idUsuario = u.idUsuario and
+	u.idUsuario = @idUsuario
+End
+
+create proc sp_AllEventosArte /*retorna os eventos pertencentes a uma arte*/
+@idArte int
+as
+Begin
+    select * from Eventos where idArte = @idArte
+End
