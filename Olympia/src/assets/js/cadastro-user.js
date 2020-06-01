@@ -1,6 +1,6 @@
 var jaFoiCadUser = false;
 var senhaFoi = false;
-var codeHex = '#fc6c85';
+var codeHex = 'fc6c85';
 var jaFoiPostCadUser = false;
 var colorList = [
   "f8b195",
@@ -278,7 +278,10 @@ setInterval(() => {
         if (user == "") {
           return;
         }
-        if (!user.match(/^[A-Za-z0-9 ]+$/)) {
+        if(user.length > 29){
+          return;
+        }
+        if (!user.match(/^[a-z0-9_-]{1,30}$/igm)) {
           $(".error-modal").css("display", "block");
           $(".error-modal").css("opacity", "1");
           $(".ui-widget-overlay").css("display", "block");
@@ -287,10 +290,27 @@ setInterval(() => {
           );
           $("#user").val("");
         }
+        $.ajax({
+          type: "GET",
+          url: "https://localhost:5001/api/Redirect/ExisteUser/"+ $("#user").val(),
+          dataType: "json",
+          contentType: "application/json",
+          success: function(result){ if(result.existe == true){
+            $("#user").css('border-bottom','red');
+          }else{
+            $("#user").css('border-bottom','1px solid #999;');
+          }},
+          fail: function(){ 
+            
+          }
+        });
       });
       $("#name").on("focusout", function() {
         var name = $("#name").val();
-        var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+        if(name.length > 39){
+          return;
+        }
+        var regName = /^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$/;
         if (name == "") {
           return;
         }
@@ -300,6 +320,11 @@ setInterval(() => {
           $(".ui-widget-overlay").css("display", "block");
           $(".warn").html("Deve ser fornecido o nome completo.");
           $("#name").val("");
+        }
+      });
+      $("#name").on("keyup", function() {
+        if($("#name").val().toString().length > 39){
+          return;
         }
       });
       $("#tel").on("focusout", function() {
@@ -394,6 +419,16 @@ setInterval(() => {
           $(".locker-cont").css("background-color", "transparent");
           color = "rgb(255, 255, 255)";
         }
+        if ($("#pass").val().length < 8) {
+          $(".ui-widget-overlay").css("display", "block");
+          $(".error-modal").css("display", "block");
+          $(".error-modal").css("opacity", "1");
+          $("#pass").val("");
+          $(".is-same-cont").css("background-color", "transparent");
+          $(".warn").text(
+            "A senha deve ter pelo menos 8 caracteres e um número. Letras maiúsculas e minúsculas são obrigatórias. Evite repetições!"
+          );
+        }
         if (color == "rgb(237, 41, 57)") {
           $(".ui-widget-overlay").css("display", "block");
           $(".error-modal").css("display", "block");
@@ -479,7 +514,7 @@ setInterval(() => {
       jaFoiPostCadUser = true;
         $.ajax({
           type: "POST",
-          url: "https://localhost:5001/api/Redirect/CadastroUser",
+          url: "https://localhost:5001/api/Redirect/Cadastro",
           data: jsonInput,
           contentType:'application/json',
           success: function(){ document.location.href = "/#/login"},
