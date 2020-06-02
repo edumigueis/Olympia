@@ -6,15 +6,9 @@ using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Server.HttpSys;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.Owin.Security;
-using Microsoft.Owin.Host.SystemWeb;
-using System.Web;
-using Microsoft.EntityFrameworkCore;
 
 namespace API_olympia.Controllers
 {
@@ -24,38 +18,17 @@ namespace API_olympia.Controllers
     public class AccountController : Controller
     {
 
-        private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
-<<<<<<< HEAD
-        private readonly OlympiaContext context;
-<<<<<<< HEAD
-        private readonly IHttpContextAccessor httpContextAccessor;
-=======
->>>>>>> parent of 831c112... ooi
-=======
-        private readonly OlympiaContext context = ;
->>>>>>> parent of 9bb520e... cul
         public IRepository Repo { get; }
-        public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager,
-            RoleManager<IdentityRole> roleManager, IRepository repo, OlympiaContext context)
+        public AccountController(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IRepository repo)
         {
-            this.signInManager = signInManager;
             this.userManager = userManager;
             this.roleManager = roleManager;
             Repo = repo;
-            this.context = context;
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         [CustomAuthorizeAttribute]
->>>>>>> parent of 831c112... ooi
-=======
-        [CustomAuthorize(new OlympiaContext(new DbContextOptions<OlympiaContext>()))]
->>>>>>> parent of 9bb520e... cul
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
@@ -76,7 +49,7 @@ namespace API_olympia.Controllers
             Armazenador.StringValueRoute = HttpContext.Request.Host.Value;
             return View();
         }
-        
+
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
@@ -115,18 +88,8 @@ namespace API_olympia.Controllers
                                     AllowRefresh = false
                                 });
 
-<<<<<<< HEAD
-                            context.armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
-                            context.armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
-<<<<<<< HEAD
-                            var cu = httpContextAccessor.HttpContext;
-
-=======
                             Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
                             Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
->>>>>>> parent of 1dc3ba6... Ajustes
-=======
->>>>>>> parent of 9bb520e... cul
 
                             return View("Views/Admin/Admin.cshtml");
                         }

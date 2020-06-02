@@ -12,7 +12,6 @@ using API_olympia.Data;
 
 namespace API_olympia.Controllers
 {
-    [AllowAnonymous]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -37,6 +36,7 @@ namespace API_olympia.Controllers
             return View();
         }
 
+        [CustomAuthorizeAttribute]
         public IActionResult Admin()
         {
             return View();
