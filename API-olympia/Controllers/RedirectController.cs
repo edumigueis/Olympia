@@ -51,6 +51,12 @@ namespace API_olympia.Controllers
             }
         }
 
+        [HttpGet("Cadastro")]
+        public async Task<IActionResult> GetUsuarioCad()
+        {
+            return Ok();
+        }
+
         [HttpGet("Evento/{idEvento}")]
         public async Task<IActionResult> GetEvento(int idEvento)
         {

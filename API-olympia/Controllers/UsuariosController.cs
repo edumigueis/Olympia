@@ -61,8 +61,7 @@ namespace API_olympia.Controllers
             { 
                 Usuarios usuario = JsonConvert.DeserializeObject<Usuarios>(json);
 
-                await post(usuario);
-                return Ok();
+                return await post(usuario);
             }
             catch
             {

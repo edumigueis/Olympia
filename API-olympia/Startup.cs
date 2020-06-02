@@ -181,8 +181,6 @@ namespace API_olympia
             app.UseSession();
             app.UseCookiePolicy();
 
-            /*serviceProvider.GetService<OlympiaContext>().Database.EnsureCreated();*/
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

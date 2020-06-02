@@ -49,10 +49,10 @@ var selectedImage;
 var isSelImg = false;
 setInterval(() => {
   if ($("#container-cad-user").length && jaFoiCadUser == false) {
-    $(function() {
+    $(function () {
       var firstLet = null;
 
-      $("#name").focusout(function() {
+      $("#name").focusout(function () {
         if (isSelImg == false) {
           if ($("#name").val() != "") {
             $(".zmdi.zmdi-palette").fadeIn();
@@ -100,19 +100,19 @@ setInterval(() => {
         for (var i = 0; i < colorList.length; i++) {
           $("#color-picker").append(
             '<li class="color-item" data-hex="' +
-              "#" +
-              colorList[i] +
-              '" style="background-color:' +
-              "#" +
-              colorList[i] +
-              ';"></li>'
+            "#" +
+            colorList[i] +
+            '" style="background-color:' +
+            "#" +
+            colorList[i] +
+            ';"></li>'
           );
         }
       });
-      $("body").on("click", function() {
+      $("body").on("click", function () {
         $("#color-picker").fadeOut();
       });
-      $(".ui-widget-overlay").on("click", function() {
+      $(".ui-widget-overlay").on("click", function () {
         if (selectedImage != null) {
           $(".hexcolor").css("display", "none");
           $(".color-holder").css("display", "none");
@@ -120,8 +120,8 @@ setInterval(() => {
           $(".is-same-cont").css("background-color", "transparent");
           $(".signup-image").html(
             "<figure class='default-prof-user'><img src='" +
-              selectedImage +
-              "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
+            selectedImage +
+            "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           isSelImg = true;
           $(".bin").fadeIn();
@@ -151,7 +151,7 @@ setInterval(() => {
           $(".error-modal").css("opacity", "0");
         }
       });
-      $(".bin").on("click", function() {
+      $(".bin").on("click", function () {
         $(".zmdi.zmdi-palette").fadeIn();
         $("#hexcolor").fadeIn();
         if ($("#name").val() != "") {
@@ -184,14 +184,14 @@ setInterval(() => {
           $(".bin").fadeOut();
         }
       });
-      $(".hexcolor").on("click", function() {
+      $(".hexcolor").on("click", function () {
         $("#color-picker").css("display", "none");
       });
-      var readURL = function(input) {
+      var readURL = function (input) {
         if (input.files && input.files[0]) {
           var reader = new FileReader();
 
-          reader.onload = function(e) {
+          reader.onload = function (e) {
             $("#profile-pic").attr("src", e.target.result);
             selectedImage = e.target.result;
 
@@ -199,18 +199,18 @@ setInterval(() => {
 
           reader.readAsDataURL(input.files[0]);
         }
-      }; 
+      };
 
-      $("#file").on("change", function() {
+      $("#file").on("change", function () {
         readURL(this);
       });
 
-      $(".call-picker").click(function(event) {
+      $(".call-picker").click(function (event) {
         event.stopPropagation();
         $("#color-picker").fadeIn();
         $("#color-picker")
           .children("li")
-          .click(function() {
+          .click(function () {
             codeHex = $(this).data("hex");
 
             $(".color-holder").css("background-color", codeHex);
@@ -218,7 +218,7 @@ setInterval(() => {
             $("#hexcolor").val(codeHex);
           });
       });
-      $("#name").focusin(function() {
+      $("#name").focusin(function () {
         if (
           $("#user-prof-image").attr("src") == "/src/assets/images/user-ico.png"
         ) {
@@ -236,28 +236,28 @@ setInterval(() => {
           return;
         }
       });
-      $("#tel").focusin(function() {
+      $("#tel").focusin(function () {
         $("#tel").css("border-radius", "0");
         $("#tel").css("border-top", 0);
         $("#tel").css("border-left", 0);
         $("#tel").css("border-right", 0);
         $("#tel").css("border-bottom", "1px solid #999");
       });
-      $("#pass").focusin(function() {
+      $("#pass").focusin(function () {
         $("#pass").css("border-radius", "0");
         $("#pass").css("border-top", 0);
         $("#pass").css("border-left", 0);
         $("#pass").css("border-right", 0);
         $("#pass").css("border-bottom", "1px solid #999");
       });
-      $("#re_pass").focusin(function() {
+      $("#re_pass").focusin(function () {
         $("#re_pass").css("border-radius", "0");
         $("#re_pass").css("border-top", 0);
         $("#re_pass").css("border-left", 0);
         $("#re_pass").css("border-right", 0);
         $("#re_pass").css("border-bottom", "1px solid #999");
       });
-      $("#email").focusin(function() {
+      $("#email").focusin(function () {
         $("#email").css("border-radius", "0");
         $("#email").css("border-top", 0);
         $("#email").css("border-left", 0);
@@ -265,20 +265,20 @@ setInterval(() => {
         $("#email").css("border-bottom", "1px solid #999");
       });
 
-      $("#hexcolor").on("click", function() {
+      $("#hexcolor").on("click", function () {
         $("#color-picker").css("display", "none");
         $("#user-let-img").css("background", this.value);
       });
 
-      $("#pass").on("keyup", function() {
+      $("#pass").on("keyup", function () {
         forcaSenha($(this).val());
       });
-      $("#user").on("keyup", function() {
+      $("#user").on("keyup", function () {
         var user = $("#user").val();
         if (user == "") {
           return;
         }
-        if(user.length > 29){
+        if (user.length > 29) {
           return;
         }
         if (!user.match(/^[a-z0-9_-]{1,30}$/igm)) {
@@ -292,22 +292,24 @@ setInterval(() => {
         }
         $.ajax({
           type: "GET",
-          url: "https://localhost:5001/api/Redirect/ExisteUser/"+ $("#user").val(),
+          url: "https://localhost:5001/api/Redirect/ExisteUser/" + $("#user").val(),
           dataType: "json",
           contentType: "application/json",
-          success: function(result){ if(result.existe == true){
-            $("#user").css('border-bottom','red');
-          }else{
-            $("#user").css('border-bottom','1px solid #999;');
-          }},
-          fail: function(){ 
-            
+          success: function (result) {
+            if (result.existe == true) {
+              $("#user").css('border-bottom', 'red');
+            } else {
+              $("#user").css('border-bottom', '1px solid #999;');
+            }
+          },
+          fail: function () {
+
           }
         });
       });
-      $("#name").on("focusout", function() {
+      $("#name").on("focusout", function () {
         var name = $("#name").val();
-        if(name.length > 39){
+        if (name.length > 39) {
           return;
         }
         var regName = /^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$/;
@@ -322,12 +324,12 @@ setInterval(() => {
           $("#name").val("");
         }
       });
-      $("#name").on("keyup", function() {
-        if($("#name").val().toString().length > 39){
+      $("#name").on("keyup", function () {
+        if ($("#name").val().toString().length > 39) {
           return;
         }
       });
-      $("#tel").on("focusout", function() {
+      $("#tel").on("focusout", function () {
         var tele = $("#tel").val();
         var regName = /(([+][(]?[0-9]{1,3}[)]?)|([(]?[0-9]{4}[)]?))\s*[)]?[-\s\.]?[(]?[0-9]{1,3}[)]?([-\s\.]?[0-9]{3})([-\s\.]?[0-9]{3,4})/g;
         if (tele == "") {
@@ -343,7 +345,7 @@ setInterval(() => {
           $("#tel").val("");
         }
       });
-      $("#email").on("focusout", function() {
+      $("#email").on("focusout", function () {
         var email = $("#email").val();
         if (email == "") {
           return;
@@ -413,7 +415,7 @@ setInterval(() => {
 
         $(".locker-cont").css("background-color", color);
       }
-      $("#pass").on("focusout", function() {
+      $("#pass").on("focusout", function () {
         var color = $(".locker-cont").css("background-color");
         if ($("#pass").val() == "") {
           $(".locker-cont").css("background-color", "transparent");
@@ -451,10 +453,10 @@ setInterval(() => {
         }
       });
 
-      $("#re_pass").on("focusin", function() {
+      $("#re_pass").on("focusin", function () {
         $(".is-same-cont").css("background-color", "rgb(237, 41, 57)");
       });
-      $("#pass, #re_pass").on("keyup", function() {
+      $("#pass, #re_pass").on("keyup", function () {
         if ($("#pass").val() == $("#re_pass").val() && $("#pass").val() != "") {
           $(".is-same-cont").css("background-color", "#2eb82e");
         }
@@ -464,68 +466,81 @@ setInterval(() => {
           $(".is-same-cont").css("background-color", "transparent");
         }
       });
-      $(".signup-image-link").on("click", function() {
+      $(".signup-image-link").on("click", function () {
         $(".ui-widget-overlay").css("display", "block");
         $("#pick-image-modal").css("display", "block");
       });
-      $(document.body).on("click","#signup", function(eve) {
+
+      $(document.body).on("click", "#signup", function (eve) {
         eve.preventDefault();
-        if(!jaFoiPostCadUser){
-        var valorFoto;
-        
-        if ($("#name").val() == "") {
-          return;
-        } else if ($("#user").val() == "") {
-          return;
-        } else if ($("#email").val() == "") {
-          return;
-        } else if ($("#pass").val() == "") {
-          return;
-        } else if ($("#re_pass").val() == "") {
-          return;
-        } else if ($("#pass").val() != $("#re_pass").val()) {
-          return;
-        } else if ($("#agree-term").is(":checked") == false) {
-          return;
-        }
+        if (!jaFoiPostCadUser) {
+          var valorFoto;
 
-        if(isSelImg == true){
-          valorFoto = LZString.compress(selectedImage);
-        } else{
-          valorFoto = codeHex;
-        }
+          if ($("#name").val() == "") {
+            return;
+          } else if ($("#user").val() == "") {
+            return;
+          } else if ($("#email").val() == "") {
+            return;
+          } else if ($("#pass").val() == "") {
+            return;
+          } else if ($("#re_pass").val() == "") {
+            return;
+          } else if ($("#pass").val() != $("#re_pass").val()) {
+            return;
+          } else if ($("#agree-term").is(":checked") == false) {
+            return;
+          }
 
-        var myObject = {
-          nome: $('#name').val(),
-          userName: $('#user').val(),
-          email: $('#email').val(),
-          senha: $('#pass').val(),
-          foto: ""+valorFoto,
-          biografia: ".",
-          bio: ".",
-          configs: "{'menu':0,'deslig':0,'login':0,'capa':0,'dark':0}",
-          seguindo: "{}",
-          seguidores: "{}"
-      }
-      
-      
-      var jsonInput = JSON.stringify(myObject);
-      console.log(jsonInput);
-      jaFoiPostCadUser = true;
-        $.ajax({
-          type: "POST",
-          url: "https://localhost:5001/api/Redirect/Cadastro",
-          data: jsonInput,
-          contentType:'application/json',
-          success: function(){ document.location.href = "/#/login"},
-          fail: function(){ $(".error-modal").css("display", "block");$(".error-modal").css("opacity", "1");$(".ui-widget-overlay").css("display", "block");$(".warn").html("Algúm dado foi fornecido incorretamente. Ou ocorreu um problema com o servidor. Tente novamente.");$("#name").val("");setTimeout(function(){location.reload();}, 2000)},
-          dataType: "json"
-        });
+          if (isSelImg == true) {
+            valorFoto = LZString.compress(selectedImage);
+          } else {
+            valorFoto = codeHex;
+          }
+
+          var myObject = {
+            nome: $('#name').val(),
+            userName: $('#user').val(),
+            email: $('#email').val(),
+            senha: $('#pass').val(),
+            foto: "" + valorFoto,
+            biografia: ".",
+            bio: ".",
+            configs: "{'menu':0,'deslig':0,'login':0,'capa':0,'dark':0}",
+            seguindo: "{}",
+            seguidores: "{}"
+          }
+
+
+          var jsonInput = JSON.stringify(myObject);
+          console.log(jsonInput);
+          jaFoiPostCadUser = true;
+
+          $.ajax({
+            type: "POST",
+            data: jsonInput,
+            dataType: "json",
+            contentType: 'application/json',
+            url: "https://localhost:5001/api/Redirect/Cadastro",
+            complete: function (code) {
+              if (code.status === 200) {
+                document.location.href = "/#/login";
+              } else {
+                $(".error-modal").css("display", "block");
+                $(".error-modal").css("opacity", "1");
+                $(".ui-widget-overlay").css("display", "block");
+                $(".warn").html("Algúm dado foi fornecido incorretamente. Ou ocorreu um problema com o servidor. Tente novamente.");
+                $("#name").val("");
+                setTimeout(function () {
+                  location.reload();
+                }, 2000)
+              }
+            }
+          });
         }
-        
       });
       /*-----------------------------------------------------Final Verifications*/
-      setInterval(function() {
+      setInterval(function () {
         if ($("#container-cad-user").length && jaFoiCadUser == false) {
           if ($("#name").val() == "") {
             document.getElementById("signup").disabled = true;
