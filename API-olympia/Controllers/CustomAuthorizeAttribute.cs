@@ -1,8 +1,4 @@
 using System;
-using System.Net;
-using System.Security.Claims;
-using System.Web.Http;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using API_olympia.Controllers;
@@ -12,24 +8,29 @@ namespace API_olympia.Data
     [AttributeUsage(AttributeTargets.All)]
     public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
+        private readonly OlympiaContext context;
+        public CustomAuthorizeAttribute() 
+        {
+            this.context = context;
+        }
         public void OnAuthorization(AuthorizationFilterContext filterContext)
         {
-            if (Armazenador.StringValueRoute != null)
+            if (context.armazenador.StringValueRoute != null)
             {
 
-                if (Armazenador.StringValueRoute.Equals("olympia.art.br") ||
-                    Armazenador.StringValueRoute.Equals("http://localhost:8080/"))
+                if (context.armazenador.StringValueRoute.Equals("olympia.art.br") ||
+                    context.armazenador.StringValueRoute.Equals("http://localhost:8080/"))
                 {
-                    Armazenador.StringValueRoute = null;
+                    context.armazenador.StringValueRoute = null;
                     return;
                 }
 
-                Armazenador.StringValueRoute = null;
+                context.armazenador.StringValueRoute = null;
             }
 
-                if (Armazenador.StringValueRole != null)
+                if (context.armazenador.StringValueRole != null)
                 {
-                    if (Armazenador.StringValueRole.Equals("Admin"))
+                    if (context.armazenador.StringValueRole.Equals("Admin"))
                     {
                         return;
                     }
