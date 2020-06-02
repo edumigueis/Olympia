@@ -12,8 +12,16 @@ namespace API_olympia.Data
     public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         public void OnAuthorization(AuthorizationFilterArmazenador filterArmazenador)
 =======
+=======
+        private readonly OlympiaContext context;
+        public CustomAuthorizeAttribute() 
+        {
+            this.context = context;
+        }
+>>>>>>> parent of 831c112... ooi
         public void OnAuthorization(AuthorizationFilterContext filterContext)
 >>>>>>> parent of 1dc3ba6... Ajustes
         {

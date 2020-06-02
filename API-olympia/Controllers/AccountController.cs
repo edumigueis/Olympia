@@ -27,7 +27,10 @@ namespace API_olympia.Controllers
         private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly OlympiaContext context;
+<<<<<<< HEAD
         private readonly IHttpContextAccessor httpContextAccessor;
+=======
+>>>>>>> parent of 831c112... ooi
         public IRepository Repo { get; }
         public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager,
             RoleManager<IdentityRole> roleManager, IRepository repo, OlympiaContext context, IHttpContextAccessor httpContextAccessor)
@@ -40,7 +43,11 @@ namespace API_olympia.Controllers
             this.httpContextAccessor = httpContextAccessor;
         }
 
+<<<<<<< HEAD
 
+=======
+        [CustomAuthorizeAttribute]
+>>>>>>> parent of 831c112... ooi
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
