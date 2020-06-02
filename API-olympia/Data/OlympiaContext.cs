@@ -2,17 +2,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using API_olympia.Models;
-using API_olympia.Controllers;
+using Microsoft.AspNetCore.Http;
 
 namespace API_olympia.Data
 {
     public class OlympiaContext : IdentityDbContext<IdentityUser,IdentityRole, string>
     {
-        public Armazenador armazenador;
         public OlympiaContext(DbContextOptions<OlympiaContext> options) : base(options)
-        {
-            armazenador = new Armazenador();
-        }
+        {}
 
         public DbSet<Artes> Artes { get; set; }
         public DbSet<Fotos> Fotos { get; set; }
