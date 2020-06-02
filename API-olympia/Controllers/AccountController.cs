@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Host.SystemWeb;
 using System.Web;
+using Microsoft.EntityFrameworkCore;
 
 namespace API_olympia.Controllers
 {
@@ -25,7 +26,7 @@ namespace API_olympia.Controllers
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
-        private readonly OlympiaContext context;
+        private readonly OlympiaContext context = ;
         public IRepository Repo { get; }
         public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager,
             RoleManager<IdentityRole> roleManager, IRepository repo, OlympiaContext context)
@@ -37,7 +38,7 @@ namespace API_olympia.Controllers
             this.context = context;
         }
 
-        [CustomAuthorizeAttribute]
+        [CustomAuthorize(new OlympiaContext(new DbContextOptions<OlympiaContext>()))]
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {

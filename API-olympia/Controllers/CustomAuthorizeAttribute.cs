@@ -9,7 +9,7 @@ namespace API_olympia.Data
     public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
         private readonly OlympiaContext context;
-        public CustomAuthorizeAttribute() 
+        public CustomAuthorizeAttribute(OlympiaContext context) 
         {
             this.context = context;
         }
