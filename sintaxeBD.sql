@@ -1,3 +1,5 @@
+DBCC CHECKIDENT('Eventos', RESEED, -1) /*zerador de identity*/
+
 create table Obras(
 idObra int identity primary key not null,
 idUsuario int not null,
@@ -38,9 +40,9 @@ idArte int not null,
 dataPost date not null,
 dataEvento date not null,
 localizacaoCoord varchar(1000) not null,  /*{"Lat":-29.02929292929,"Long":13.423222}*/
-endereco varchar(300) null,
-horario varchar (300) null,
-linkSite varchar(300) null
+endereco varchar(300) not null,
+horario varchar (300) not null,
+linkSite varchar(300) not null
 constraint fkUsuarioEvento foreign key (idUsuario) references Usuarios (idUsuario),
 constraint fkArteEvento foreign key (idArte) references Artes (idArte)
 )
@@ -88,8 +90,6 @@ constraint fkServicoCurtida foreign key (idServico) references Servicos (idServi
 constraint fkPublicacaoCurtida foreign key (idPublicacao) references Publicacoes (idPublicacao),
 constraint fkEventoCurtida foreign key (idEvento) references Eventos (idEvento)
 )
-
-select * from Curtidas
 
 create table Fotos(
 idFoto int identity primary key not null,
