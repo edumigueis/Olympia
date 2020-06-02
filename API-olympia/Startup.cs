@@ -46,7 +46,6 @@ namespace API_olympia
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<OlympiaContext>();
 
             services.AddMvc(option =>
             {

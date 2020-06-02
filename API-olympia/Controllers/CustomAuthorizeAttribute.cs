@@ -5,12 +5,14 @@ using System.Web.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using API_olympia.Controllers;
 
 namespace API_olympia.Data
 {
     [AttributeUsage(AttributeTargets.All)]
     public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         public void OnAuthorization(AuthorizationFilterArmazenador filterArmazenador)
@@ -24,20 +26,29 @@ namespace API_olympia.Data
 >>>>>>> parent of 831c112... ooi
         public void OnAuthorization(AuthorizationFilterContext filterContext)
 >>>>>>> parent of 1dc3ba6... Ajustes
+=======
+        private readonly OlympiaContext context;
+        public CustomAuthorizeAttribute(OlympiaContext context) 
+>>>>>>> parent of 9bb520e... cul
         {
-            if (Armazenador.StringValueRoute != null)
+            this.context = context;
+        }
+        public void OnAuthorization(AuthorizationFilterContext filterContext)
+        {
+            if (context.armazenador.StringValueRoute != null)
             {
 
-                if (Armazenador.StringValueRoute.Equals("olympia.art.br") ||
-                    Armazenador.StringValueRoute.Equals("http://localhost:8080/"))
+                if (context.armazenador.StringValueRoute.Equals("olympia.art.br") ||
+                    context.armazenador.StringValueRoute.Equals("http://localhost:8080/"))
                 {
-                    Armazenador.StringValueRoute = null;
+                    context.armazenador.StringValueRoute = null;
                     return;
                 }
 
-                Armazenador.StringValueRoute = null;
+                context.armazenador.StringValueRoute = null;
             }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (Armazenador.StringValueRole != null)
             {
@@ -48,6 +59,11 @@ namespace API_olympia.Data
                 if (Armazenador.StringValueRole != null)
                 {
                     if (Armazenador.StringValueRole.Equals("Admin"))
+=======
+                if (context.armazenador.StringValueRole != null)
+                {
+                    if (context.armazenador.StringValueRole.Equals("Admin"))
+>>>>>>> parent of 9bb520e... cul
                     {
                         return;
                     }
@@ -55,17 +71,15 @@ namespace API_olympia.Data
                     {
                         filterContext.Result = new RedirectResult("/Home/Login");
                     }
+<<<<<<< HEAD
 >>>>>>> parent of 1dc3ba6... Ajustes
+=======
+>>>>>>> parent of 9bb520e... cul
                 }
                 else
                 {
-                    filterArmazenador.Result = new RedirectResult("/Home/Login");
+                    filterContext.Result = new RedirectResult("/Home/Login");
                 }
-            }
-            else
-            {
-                filterArmazenador.Result = new RedirectResult("/Home/Login");
-            }
         }
     }
 }

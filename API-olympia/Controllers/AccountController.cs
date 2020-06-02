@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Host.SystemWeb;
 using System.Web;
+using Microsoft.EntityFrameworkCore;
 
 namespace API_olympia.Controllers
 {
@@ -26,28 +27,35 @@ namespace API_olympia.Controllers
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
+<<<<<<< HEAD
         private readonly OlympiaContext context;
 <<<<<<< HEAD
         private readonly IHttpContextAccessor httpContextAccessor;
 =======
 >>>>>>> parent of 831c112... ooi
+=======
+        private readonly OlympiaContext context = ;
+>>>>>>> parent of 9bb520e... cul
         public IRepository Repo { get; }
         public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager,
-            RoleManager<IdentityRole> roleManager, IRepository repo, OlympiaContext context, IHttpContextAccessor httpContextAccessor)
+            RoleManager<IdentityRole> roleManager, IRepository repo, OlympiaContext context)
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
             this.roleManager = roleManager;
             Repo = repo;
             this.context = context;
-            this.httpContextAccessor = httpContextAccessor;
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
         [CustomAuthorizeAttribute]
 >>>>>>> parent of 831c112... ooi
+=======
+        [CustomAuthorize(new OlympiaContext(new DbContextOptions<OlympiaContext>()))]
+>>>>>>> parent of 9bb520e... cul
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
@@ -110,12 +118,15 @@ namespace API_olympia.Controllers
 <<<<<<< HEAD
                             context.armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
                             context.armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
+<<<<<<< HEAD
                             var cu = httpContextAccessor.HttpContext;
 
 =======
                             Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
                             Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 >>>>>>> parent of 1dc3ba6... Ajustes
+=======
+>>>>>>> parent of 9bb520e... cul
 
                             return View("Views/Admin/Admin.cshtml");
                         }
