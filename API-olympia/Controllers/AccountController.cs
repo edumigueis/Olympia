@@ -14,7 +14,6 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Host.SystemWeb;
 using System.Web;
-using Microsoft.EntityFrameworkCore;
 
 namespace API_olympia.Controllers
 {
@@ -26,19 +25,21 @@ namespace API_olympia.Controllers
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
-        private readonly OlympiaContext context = ;
+        private readonly OlympiaContext context;
+        private readonly IHttpContextAccessor httpContextAccessor;
         public IRepository Repo { get; }
         public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager,
-            RoleManager<IdentityRole> roleManager, IRepository repo, OlympiaContext context)
+            RoleManager<IdentityRole> roleManager, IRepository repo, OlympiaContext context, IHttpContextAccessor httpContextAccessor)
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
             this.roleManager = roleManager;
             Repo = repo;
             this.context = context;
+            this.httpContextAccessor = httpContextAccessor;
         }
 
-        [CustomAuthorize(new OlympiaContext(new DbContextOptions<OlympiaContext>()))]
+        [CustomAuthorizeAttribute]
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
@@ -102,6 +103,8 @@ namespace API_olympia.Controllers
 
                             context.armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
                             context.armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
+                            var cu = httpContextAccessor.HttpContext;
+
 
                             return View("Views/Admin/Admin.cshtml");
                         }
