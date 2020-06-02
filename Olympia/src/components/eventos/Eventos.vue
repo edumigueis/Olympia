@@ -495,7 +495,6 @@ export default {
   },
   methods: {
     getMarkers() {
-      var codigo = 1;
 
       $.ajax({
         url: "https://localhost:5001/api/redirect/Eventos",
