@@ -51,11 +51,6 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("Cadastro")]
-        public async Task<IActionResult> GetUsuarioCad()
-        {
-            return Ok();
-        }
 
         [HttpGet("Evento/{idEvento}")]
         public async Task<IActionResult> GetEvento(int idEvento)
@@ -143,7 +138,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("Publicacoes")]
-        public async Task<IActionResult> GetPublicacoes(int idPublicacao)
+        public async Task<IActionResult> GetPublicacoes()
         {
             try
             {
@@ -160,7 +155,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("Eventos")]
-        public async Task<IActionResult> GetEventos(int idPublicacao)
+        public async Task<IActionResult> GetEventos()
         {
             try
             {
@@ -177,7 +172,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("Usuarios")]
-        public async Task<IActionResult> GetUsuarios(int idPublicacao)
+        public async Task<IActionResult> GetUsuarios()
         {
             try
             {
@@ -194,7 +189,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("Servicos")]
-        public async Task<IActionResult> GetServicos(int idPublicacao)
+        public async Task<IActionResult> GetServicos()
         {
             try
             {
@@ -203,6 +198,93 @@ namespace API_olympia.Controllers
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 Armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Servicos");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        /****************************Storeds procedures****************************/
+
+        [HttpGet("FotosDoServico/{idServico}")]
+        public async Task<IActionResult> GetFotosServico(int idServico)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Fotos/Servico/" + idServico);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("FotosDaObra/{idObra}")]
+        public async Task<IActionResult> GetFotosObra(int idObra)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Fotos/Obra/" + idObra);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("FotosDoEvento/{idEvento}")]
+        public async Task<IActionResult> GetFotosEvento(int idEvento)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Fotos/Evento/" + idEvento);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("UserObra/{idObra}")]
+        public async Task<IActionResult> GetUserObra(int idObra)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuario/Obra/" + idObra);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("UserServico/{idServico}")]
+        public async Task<IActionResult> GetUserServico(int idServico)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuario/Servico/" + idServico);
             }
             catch
             {

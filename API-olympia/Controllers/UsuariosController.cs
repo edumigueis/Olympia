@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 
 namespace API_olympia.Controllers
 {
+    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : Controller
@@ -23,7 +24,6 @@ namespace API_olympia.Controllers
             this.Repo = repo;
         }
 
-        [CustomAuthorizeAttribute]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -37,8 +37,7 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get().");
             }
         }
-        
-        [CustomAuthorizeAttribute]
+       
         [HttpGet("{idUsuario}")]
         public async Task<IActionResult> Get(int idUsuario)
         {
@@ -53,7 +52,6 @@ namespace API_olympia.Controllers
             }
         }
         
-        [CustomAuthorizeAttribute]
         [HttpGet("RedirectToPost/{json}")]
         public async Task<IActionResult> RedirectToPost(string json)
         {
@@ -69,7 +67,6 @@ namespace API_olympia.Controllers
             }
         }
 
-        [CustomAuthorizeAttribute]
         [HttpPut("{idUsuario}")]
         public async Task<IActionResult> put(int idUsuario, Usuarios model)
         {
@@ -92,7 +89,6 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
-        [CustomAuthorizeAttribute]
         [HttpDelete("{idUsuario}")]
         public async Task<IActionResult> delete(int idUsuario)
         {
@@ -114,7 +110,6 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
-        [CustomAuthorizeAttribute]
         [HttpPost]
         public async Task<IActionResult> post(Usuarios model)
         {
@@ -133,6 +128,34 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no post().");
             }
             return BadRequest();
+        }
+
+        [HttpGet("Obra/{idObra}")]
+        public async Task<IActionResult> GetUsuariobyObra(int idObra)
+        {
+            try
+            {
+                var result = this.Repo.SpUserObra(idObra);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
+
+        [HttpGet("Obra/{idServico}")]
+        public async Task<IActionResult> GetUsuariobyServico(int idServico)
+        {
+            try
+            {
+                var result = this.Repo.SpUserServico(idServico);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
         }
 
     }

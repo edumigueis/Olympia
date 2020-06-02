@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using API_olympia.Models;
 
@@ -39,9 +40,16 @@ namespace API_olympia.Data
         Task<Sugestoes[]> GetAllSugestoesAsync();
         Task<Sugestoes> GetAllSugestoesAsyncById(int idSugestao);
 
-        bool VerfificarSpAdmins(LoginViewModel model);
-
         Task<Admins[]> GetAllAdminsAsync();
         Task<Admins> GetAllAdminsAsyncById(int idAdmin);
+
+        /******************Storeds Procedures*****************/
+
+        bool VerfificarSpAdmins(LoginViewModel model);
+        List<string> SpFotosServico(int idServico);
+        List<string> SpFotosObra(int idObra);
+        List<string> SpFotosEvento(int idEvento);
+        int SpUserObra(int idObra);
+        int SpUserServico(int idServico);
     }
 }

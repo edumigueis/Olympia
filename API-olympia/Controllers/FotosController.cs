@@ -108,5 +108,47 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
+        [HttpGet("Servico/{idServico}")]
+        public async Task<IActionResult> GetFotosServico(int idServico)
+        {
+            try
+            {
+                var result = this.Repo.SpFotosServico(idServico);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
+
+        [HttpGet("Obra/{idObra}")]
+        public async Task<IActionResult> GetFotosObra(int idObra)
+        {
+            try
+            {
+                var result = this.Repo.SpFotosObra(idObra);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
+
+        [HttpGet("Evento/{idEvento}")]
+        public async Task<IActionResult> GetFotosEvento(int idEvento)
+        {
+            try
+            {
+                var result = this.Repo.SpFotosEvento(idEvento);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
+
     }
 }

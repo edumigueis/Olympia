@@ -5,6 +5,7 @@ using System.Linq;
 using System;
 using System.Data;
 using Microsoft.Data.SqlClient;
+using System.Collections.Generic;
 
 namespace API_olympia.Data
 {
@@ -177,7 +178,25 @@ namespace API_olympia.Data
             return await consultaSugestoes.FirstOrDefaultAsync();
         }
 
-        public bool VerfificarSpAdmins(LoginViewModel model){
+        public async Task<Admins[]> GetAllAdminsAsync()
+        {
+            IQueryable<Admins> consultaAdmins = this.Context.Admins;
+            consultaAdmins = consultaAdmins.OrderBy(p => p.IdAdmin);
+            return await consultaAdmins.ToArrayAsync();
+        }
+
+        public async Task<Admins> GetAllAdminsAsyncById(int id)
+        {
+            IQueryable<Admins> consultaAdmins = this.Context.Admins;
+            consultaAdmins = consultaAdmins.OrderBy(p => p.IdAdmin)
+            .Where(Admins => Admins.IdAdmin == id);
+            return await consultaAdmins.FirstOrDefaultAsync();
+        }
+
+        /**************************Storeds Procedures*****************/
+
+        public bool VerfificarSpAdmins(LoginViewModel model)
+        {
             SqlConnection conn = new SqlConnection(stringConnection);
             conn.Open();
             SqlCommand cmd = new SqlCommand("comando", conn);
@@ -197,19 +216,99 @@ namespace API_olympia.Data
                 return true;
         }
 
-        public async Task<Admins[]> GetAllAdminsAsync()
+        public List<string> SpFotosServico(int idServico)
         {
-            IQueryable<Admins> consultaAdmins = this.Context.Admins;
-            consultaAdmins = consultaAdmins.OrderBy(p => p.IdAdmin);
-            return await consultaAdmins.ToArrayAsync();
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_FotosServico '" + idServico + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<string>();
+
+            while (leitor.Read())
+            {
+                result.Add(leitor["foto"].ToString());
+            }
+            conn.Close();
+
+            return result;
         }
 
-        public async Task<Admins> GetAllAdminsAsyncById(int id)
+        public List<string> SpFotosObra(int idObra)
         {
-            IQueryable<Admins> consultaAdmins = this.Context.Admins;
-            consultaAdmins = consultaAdmins.OrderBy(p => p.IdAdmin)
-            .Where(Admins => Admins.IdAdmin == id);
-            return await consultaAdmins.FirstOrDefaultAsync();
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_FotosObra '" + idObra + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<string>();
+
+            while (leitor.Read())
+            {
+                result.Add(leitor["foto"].ToString());
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<string> SpFotosEvento(int idEvento)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_FotosEvento '" + idEvento + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<string>();
+
+            while (leitor.Read())
+            {
+                result.Add(leitor["foto"].ToString());
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public int SpUserObra(int idObra)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_UserObra '" + idObra + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            int result = 0;
+
+            while (leitor.Read())
+            {
+                result = Convert.ToInt32(leitor["idUsuario"]);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public int SpUserServico(int idServico)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_UserObra '" + idServico + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            int result = 0;
+
+            while (leitor.Read())
+            {
+                result = Convert.ToInt32(leitor["idUsuario"]);
+            }
+            conn.Close();
+
+            return result;
         }
     }
 }
