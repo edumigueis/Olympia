@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\API-olympia.csproj": {}
+    "D:\\Técnico\\3º semestre\\Prática Profissional II\\Projeto-git\\API-olympia\\API-olympia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\API-olympia.csproj": {
+    "D:\\Técnico\\3º semestre\\Prática Profissional II\\Projeto-git\\API-olympia\\API-olympia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\API-olympia.csproj",
+        "projectUniqueName": "D:\\Técnico\\3º semestre\\Prática Profissional II\\Projeto-git\\API-olympia\\API-olympia.csproj",
         "projectName": "API-olympia",
-        "projectPath": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\API-olympia.csproj",
-        "packagesPath": "C:\\Users\\Rodrigo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\obj\\",
+        "projectPath": "D:\\Técnico\\3º semestre\\Prática Profissional II\\Projeto-git\\API-olympia\\API-olympia.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\Técnico\\3º semestre\\Prática Profissional II\\Projeto-git\\API-olympia\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Rodrigo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,6 +143,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -154,7 +157,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
