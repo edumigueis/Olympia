@@ -51,5 +51,6 @@ namespace API_olympia.Data
         List<string> SpFotosEvento(int idEvento);
         int SpUserObra(int idObra);
         int SpUserServico(int idServico);
+        bool SpExisteUsername(string username);
     }
 }

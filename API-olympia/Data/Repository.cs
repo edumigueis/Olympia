@@ -310,5 +310,27 @@ namespace API_olympia.Data
 
             return result;
         }
+
+        public bool SpExisteUsername(string username)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ExisteUsername '" + username + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            int count = 0;
+
+            while (leitor.Read())
+            {
+                count++;
+            }
+            conn.Close();
+
+            if (count == 0)
+                return false;
+            else
+                return true;
+        }
     }
 }

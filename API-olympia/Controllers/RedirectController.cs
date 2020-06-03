@@ -267,7 +267,7 @@ namespace API_olympia.Controllers
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 Armazenador.StringValueRoute = listagem[5];
-                return Redirect("/api/Usuario/Obra/" + idObra);
+                return Redirect("/api/Usuarios/Obra/" + idObra);
             }
             catch
             {
@@ -284,7 +284,24 @@ namespace API_olympia.Controllers
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 Armazenador.StringValueRoute = listagem[5];
-                return Redirect("/api/Usuario/Servico/" + idServico);
+                return Redirect("/api/Usuarios/Servico/" + idServico);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("UserNameIsUsado/{username}")]
+        public async Task<IActionResult> GetExisteUsername(string username)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuarios/Username/" + username);
             }
             catch
             {
