@@ -508,10 +508,10 @@ export default {
           $("#load-modal").addClass("loading");
         },
         success: function(data) {
-          console.log(data);
+          
           jQuery.each(data, function(index, item) {
             var conteudoDiv =
-              '<div class="event-card-container border-black"><ul class="card-table white"><li class="card-item white"><div class="event-image-container"><div class="image-mask-event"><img class="event-image" id="event-image-feed-'+item.idEvento+'" src=""/></div></div></li>';
+              '<div id="event-on-feed-"'+index+' class="event-card-container border-black arte-'+item.idArte+'"><ul class="card-table white"><li class="card-item white"><div class="event-image-container"><div class="image-mask-event"><img class="event-image" id="event-image-feed-'+item.idEvento+'" src=""/></div></div></li>';
             conteudoDiv +=
               '<div class="btn-wrap"><a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a></div><li class="card-item-2 white"><div class="event-date-container"><p class="expo-name">' +
               item.nome +
@@ -533,7 +533,7 @@ export default {
                 $("#load-modal").addClass("loading");
               },
               success: function(data) {
-                console.log(data[0]);
+               
                 var foiImg = false;
                   $('#event-image-feed-'+item.idEvento).attr('src', data[0]);
                   
