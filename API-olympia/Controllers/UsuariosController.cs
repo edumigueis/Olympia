@@ -163,7 +163,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var result = this.Repo.SpExisteUsername(username);
+                var result = this.Repo.SpExisteUsername(username) ;
                 return Ok(result);
             }
             catch
