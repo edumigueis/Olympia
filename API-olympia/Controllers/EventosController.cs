@@ -61,8 +61,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Evento = await this.Repo.GetAllEventosAsyncById(idEvento);
-                    return Created($"/api/Eventos/{model.IdEvento}", Evento);
+                    return Ok();
                 }
             }
             catch
@@ -102,8 +101,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    //return Ok();
-                    return Created($"/api/Eventos/{model.IdEvento}", model);
+                    return Ok();
                 }
             }
             catch(Exception ex)
@@ -111,6 +109,20 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no post().");
             }
             return BadRequest();
+        }
+
+        [HttpGet("Arte/{idArte}")]
+        public async Task<IActionResult> GetAllObrasByUser(int idArte)
+        {
+            try
+            {
+                var result = this.Repo.SpAllEventosArte(idArte);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
         }
 
     }
