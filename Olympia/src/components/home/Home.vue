@@ -1973,6 +1973,7 @@
         <meu-mouse></meu-mouse>
       </div>
       <meu-footer></meu-footer>
+      <meu-loading></meu-loading>
     </div>
   </main>
 </template>
@@ -1984,6 +1985,7 @@ import Contatos from "../shared/contatos/Contatos.vue";
 import Mouse from "../shared/mouse/Mouse.vue";
 import Footer from "../shared/footer/Footer.vue";
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+import Loading from "../shared/loading/Loading.vue";
 import Vue from "vue";
 
 export default {
@@ -1993,7 +1995,8 @@ export default {
     "meus-contatos": Contatos,
     "meu-mouse": Mouse,
     "meu-footer": Footer,
-    "meu-dark-mode": DarkMode
+    "meu-dark-mode": DarkMode,
+    "meu-loading": Loading
   },
   data() {
     return {
@@ -2009,24 +2012,81 @@ export default {
         contentType: "application/json",
         beforeSend: function() {
           $("#load-modal").addClass("loading");
+          $("body").addClass("loading");
         },
         success: function(data) {
           console.log(data);
           jQuery.each(data, function(index, item) {
-            var conteudoDiv = "";
-            conteudoDiv += "";
-            conteudoDiv += "";
+            var thereismore;
+            if (item.descricao.length > 330) {
+              thereismore = "...";
+            } else {
+              thereismore = "";
+            }
+            var conteudoDiv =
+              '<div class="masonry-item"><div class="masonry-content">';
+            conteudoDiv +=
+              '<a class="link-to-serv" href="' +
+              "/#/servico/" +
+              item.idServico +
+              '"><img id="img-serv-' +
+              index +
+              '" src="https://picsum.photos/450/380?image=65" class="img-serv"/></a>';
+            conteudoDiv +=
+              '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
+            conteudoDiv +=
+              '<h3 class="masonry-title">' +
+              item.nome +
+              '</h3><a href="/#/perfil/"' +
+              item.idUsuario +
+              ' id="name-prof-link-on-serv-' +
+              index +
+              '" class="name-of-prof-link on-2-link"></a>';
+            conteudoDiv +=
+              '<p class="masonry-description">' +
+              item.descricao.substring(0, 330) +
+              thereismore +
+              "</p></div></div>";
             $("#events-container").append(conteudoDiv);
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/FotosEventos/" +
-                item.idEvento,
+                "https://localhost:5001/api/redirect/Usuarios/" +
+                item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
-              success: function(data) {}
+              success: function(result) {
+                $("name-prof-link-on-serv-" + index).text(result.nome);
+              }
+            });
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/FotosServico/" +
+                item.idServico,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              beforeSend: function() {
+                $("#load-modal").addClass("loading");
+              },
+              success: function(data) {
+                console.log(data);
+                var foiImg = false;
+                jQuery.each(data, function(index, fotos) {
+                  if (foiImg == false) {
+                    $("img-serv-" + index).attr("src", fotos.foto);
+                    foiImg = true;
+                  } else {
+                    return;
+                  }
+                });
+              }
             });
           });
+        },
+        error: function(){
+          $("body").removeClass("loading");
+          $('#load-modal').fadeOut(); 
         }
       });
       $.ajax({
@@ -2074,8 +2134,7 @@ export default {
             $.ajax({
               url:
                 "https://localhost:5001/api/redirect/Usuarios/" +
-                item.idUsuario +
-                item.idEvento,
+                item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2094,6 +2153,7 @@ export default {
                 $("#load-modal").addClass("loading");
               },
               success: function(data) {
+                $('#load-modal').fadeOut(); 
                 console.log(data);
                 var foiImg = false;
                 jQuery.each(data, function(index, fotos) {
@@ -2107,6 +2167,10 @@ export default {
               }
             });
           });
+        },
+        error: function(){
+          $("body").removeClass("loading");
+          $('#load-modal').fadeOut(); 
         }
       });
       $.ajax({
@@ -2156,9 +2220,14 @@ export default {
                 );
                 $("#prof-name-link-" + index).text(result.nome + "");
                 $("#prof-bio-det-" + index).text(result.bio + "");
+                $('#load-modal').fadeOut(); 
               }
             });
           });
+        },
+        error: function(){
+          $("body").removeClass("loading");
+          $('#load-modal').fadeOut(); 
         }
       });
     }

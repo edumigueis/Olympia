@@ -467,6 +467,7 @@
         </div>
       </div>
       <meu-footer></meu-footer>
+      <meu-loading></meu-loading>
     </div>
   </main>
 </template>
