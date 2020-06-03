@@ -467,6 +467,7 @@
         </div>
       </div>
       <meu-footer></meu-footer>
+      <meu-loading></meu-loading>
     </div>
   </main>
 </template>
@@ -478,6 +479,7 @@ import Contatos from "../shared/contatos/Contatos.vue";
 import Mouse from "../shared/mouse/Mouse.vue";
 import Footer from "../shared/footer/Footer.vue";
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+import Loading from "../shared/loading/Loading.vue";
 
 export default {
   components: {
@@ -486,7 +488,8 @@ export default {
     "meus-contatos": Contatos,
     "meu-mouse": Mouse,
     "meu-footer": Footer,
-    "meu-dark-mode": DarkMode
+    "meu-dark-mode": DarkMode,
+    "meu-loading": Loading
   },
   data() {
     return {

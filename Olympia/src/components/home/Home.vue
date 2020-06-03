@@ -480,7 +480,8 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="0post"><div class="after"></div>
+                        <figure class="snip1321" id="0post">
+                          <div class="after"></div>
                           <img
                             src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
                             alt="sq-sample26"
@@ -541,7 +542,8 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="1post"><div class="after"></div>
+                        <figure class="snip1321" id="1post">
+                          <div class="after"></div>
                           <img
                             src="https://www.tickpick.com/blog/wp-content/uploads/2019/02/audience-1835431_1280.jpg"
                             alt="sq-sample26"
@@ -619,7 +621,8 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="2post"><div class="after"></div>
+                        <figure class="snip1321" id="2post">
+                          <div class="after"></div>
                           <img
                             src="https://paintingvalley.com/image/watercolor-art-pinterest-22.jpg"
                             alt="sq-sample26"
@@ -677,7 +680,8 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="3post"><div class="after"></div>
+                        <figure class="snip1321" id="3post">
+                          <div class="after"></div>
                           <img
                             src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
                             alt="sq-sample26"
@@ -702,7 +706,7 @@
                               </div>
                             </div>
                           </figcaption>
-                      </figure>
+                        </figure>
                       </a>
                       <div class="interact-container">
                         <div class="stage stage-btn">
@@ -738,7 +742,8 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="4post"><div class="after"></div>
+                        <figure class="snip1321" id="4post">
+                          <div class="after"></div>
                           <img
                             src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
                             alt="sq-sample26"
@@ -799,7 +804,8 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="5post"><div class="after"></div>
+                        <figure class="snip1321" id="5post">
+                          <div class="after"></div>
                           <img
                             src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg"
                             alt="sq-sample26"
@@ -860,7 +866,8 @@
                     </div>
                     <div class="post-img-cont">
                       <a href="/#/detalhes">
-                        <figure class="snip1321" id="6post"><div class="after"></div>
+                        <figure class="snip1321" id="6post">
+                          <div class="after"></div>
                           <img
                             src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
                             alt="sq-sample26"
@@ -1966,6 +1973,7 @@
         <meu-mouse></meu-mouse>
       </div>
       <meu-footer></meu-footer>
+      <meu-loading></meu-loading>
     </div>
   </main>
 </template>
@@ -1977,6 +1985,7 @@ import Contatos from "../shared/contatos/Contatos.vue";
 import Mouse from "../shared/mouse/Mouse.vue";
 import Footer from "../shared/footer/Footer.vue";
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
+import Loading from "../shared/loading/Loading.vue";
 import Vue from "vue";
 
 export default {
@@ -1986,7 +1995,245 @@ export default {
     "meus-contatos": Contatos,
     "meu-mouse": Mouse,
     "meu-footer": Footer,
-    "meu-dark-mode": DarkMode
+    "meu-dark-mode": DarkMode,
+    "meu-loading": Loading
+  },
+  data() {
+    return {
+      data: null
+    };
+  },
+  methods: {
+    getMarkers() {
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/Obras",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
+          $("body").addClass("loading");
+        },
+        success: function(data) {
+          console.log(data);
+          jQuery.each(data, function(index, item) {
+            var thereismore;
+            if (item.descricao.length > 330) {
+              thereismore = "...";
+            } else {
+              thereismore = "";
+            }
+            var conteudoDiv =
+              '<div class="masonry-item"><div class="masonry-content">';
+            conteudoDiv +=
+              '<a class="link-to-serv" href="' +
+              "/#/servico/" +
+              item.idServico +
+              '"><img id="img-serv-' +
+              index +
+              '" src="https://picsum.photos/450/380?image=65" class="img-serv"/></a>';
+            conteudoDiv +=
+              '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
+            conteudoDiv +=
+              '<h3 class="masonry-title">' +
+              item.nome +
+              '</h3><a href="/#/perfil/"' +
+              item.idUsuario +
+              ' id="name-prof-link-on-serv-' +
+              index +
+              '" class="name-of-prof-link on-2-link"></a>';
+            conteudoDiv +=
+              '<p class="masonry-description">' +
+              item.descricao.substring(0, 330) +
+              thereismore +
+              "</p></div></div>";
+            $("#events-container").append(conteudoDiv);
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/Usuarios/" +
+                item.idUsuario,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(result) {
+                $("name-prof-link-on-serv-" + index).text(result.nome);
+              }
+            });
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/FotosServico/" +
+                item.idServico,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              beforeSend: function() {
+                $("#load-modal").addClass("loading");
+              },
+              success: function(data) {
+                console.log(data);
+                var foiImg = false;
+                jQuery.each(data, function(index, fotos) {
+                  if (foiImg == false) {
+                    $("img-serv-" + index).attr("src", fotos.foto);
+                    foiImg = true;
+                  } else {
+                    return;
+                  }
+                });
+              }
+            });
+          });
+        },
+        error: function(){
+          $("body").removeClass("loading");
+          $('#load-modal').fadeOut(); 
+        }
+      });
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/Servicos",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
+        },
+        success: function(data) {
+          console.log(data);
+          jQuery.each(data, function(index, item) {
+            var thereismore;
+            if (item.descricao.length > 330) {
+              thereismore = "...";
+            } else {
+              thereismore = "";
+            }
+            var conteudoDiv =
+              '<div class="masonry-item"><div class="masonry-content">';
+            conteudoDiv +=
+              '<a class="link-to-serv" href="' +
+              "/#/servico/" +
+              item.idServico +
+              '"><img id="img-serv-' +
+              index +
+              '" src="https://picsum.photos/450/380?image=65" class="img-serv"/></a>';
+            conteudoDiv +=
+              '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
+            conteudoDiv +=
+              '<h3 class="masonry-title">' +
+              item.nome +
+              '</h3><a href="/#/perfil/"' +
+              item.idUsuario +
+              ' id="name-prof-link-on-serv-' +
+              index +
+              '" class="name-of-prof-link on-2-link"></a>';
+            conteudoDiv +=
+              '<p class="masonry-description">' +
+              item.descricao.substring(0, 330) +
+              thereismore +
+              "</p></div></div>";
+            $("#events-container").append(conteudoDiv);
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/Usuarios/" +
+                item.idUsuario,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(result) {
+                $("name-prof-link-on-serv-" + index).text(result.nome);
+              }
+            });
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/FotosServico/" +
+                item.idServico,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              beforeSend: function() {
+                $("#load-modal").addClass("loading");
+              },
+              success: function(data) {
+                $('#load-modal').fadeOut(); 
+                console.log(data);
+                var foiImg = false;
+                jQuery.each(data, function(index, fotos) {
+                  if (foiImg == false) {
+                    $("img-serv-" + index).attr("src", fotos.foto);
+                    foiImg = true;
+                  } else {
+                    return;
+                  }
+                });
+              }
+            });
+          });
+        },
+        error: function(){
+          $("body").removeClass("loading");
+          $('#load-modal').fadeOut(); 
+        }
+      });
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/Publicacoes",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
+        },
+        success: function(data) {
+          console.log(data);
+          jQuery.each(data, function(index, item) {
+            var conteudoDiv =
+              '<div class="insp-item"><div class="inner-insp-item white-7"><div class="prof-cont-feed white-7 prof-insp"><div class="prof-img-cont"><img class="prof-img-prop" id="prof-inner-prop-img-' +
+              index +
+              '" src="" /></div><a id="prof-name-link-' +
+              index +
+              '" href="/#/perfil" class="prof-name-det black-to-white">Luna Dias</a><div id="prof-bio-det-' +
+              index +
+              '" class="prof-bio-det text-gray"> What would our lives be without art?</div></div>';
+            conteudoDiv +=
+              '<div class="insp-post-cont black-to-white">' +
+              item.texto +
+              '</div> <img src="' +
+              item.foto +
+              '" class="img-insp"/>';
+            conteudoDiv +=
+              '<div class="interact-container insp-inte"><div class="stage insp-stage"><div class="heart"></div></div> </div></div></div>';
+            $("#content-3").append(conteudoDiv);
+
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/Usuarios/" +
+                item.idUsuario,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(result) {
+                $("#prof-inner-prop-img-" + index).attr(
+                  "src",
+                  result.foto + ""
+                );
+                $("#prof-name-link-" + index).attr(
+                  "href",
+                  "/#/perfil/" + result.idUsuario
+                );
+                $("#prof-name-link-" + index).text(result.nome + "");
+                $("#prof-bio-det-" + index).text(result.bio + "");
+                $('#load-modal').fadeOut(); 
+              }
+            });
+          });
+        },
+        error: function(){
+          $("body").removeClass("loading");
+          $('#load-modal').fadeOut(); 
+        }
+      });
+    }
+  },
+  mounted() {
+    this.getMarkers();
   }
 };
 
