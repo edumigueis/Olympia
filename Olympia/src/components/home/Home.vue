@@ -2026,7 +2026,7 @@ export default {
         }
       });
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Publicacoes",
+        url: "https://localhost:5001/api/redirect/Servicos",
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -2055,7 +2055,7 @@ export default {
         }
       });
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Servicos",
+        url: "https://localhost:5001/api/redirect/Publicacoes",
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -2064,20 +2064,22 @@ export default {
         },
         success: function(data) {
           console.log(data);
-          jQuery.each(data, function(index, item) {
+          jQuery.each(data, function(index, item) {    
             var conteudoDiv =
-              '';
+              '<div class="insp-item"><div class="inner-insp-item white-7"><div class="prof-cont-feed white-7 prof-insp"><div class="prof-img-cont"><img class="prof-img-prop" id="prof-inner-prop-img-'+index+'" src="" /></div><a href="/#/perfil" class="prof-name-det black-to-white">Luna Dias</a><div class="prof-bio-det text-gray"> What would our lives be without art?</div></div>';
             conteudoDiv +=
-              '';
+              '<div class="insp-post-cont black-to-white">'+item.texto+'</div> <img src="'+item.foto+'" class="img-insp"/>';
             conteudoDiv +=
-              '';
-            $("#events-container").append(conteudoDiv);
+              '<div class="interact-container insp-inte"><div class="stage insp-stage"><div class="heart"></div></div> </div></div></div>';
+            $("#content-3").append(conteudoDiv);
+            
             $.ajax({
-              url: "https://localhost:5001/api/redirect/FotosEventos/"+item.idEvento,
+              url: "https://localhost:5001/api/redirect/PublicacaoUser/"+item.idEvento,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
               success: function(data) {
+                $('#prof-inner-prop-img-'+index).attr('src','')
               }
             });
           });
