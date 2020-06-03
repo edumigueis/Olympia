@@ -33,5 +33,17 @@ namespace API_olympia.Models
         [Required]
         [StringLength(900, ErrorMessage = "A localização não deve ter mais do que 900 caracteres.")]
         public string LocalizacaoCoord { get; set; }
+
+        [Required]
+        [StringLength(300, ErrorMessage = "O endereço não deve ter mais do que 300 caracteres.")]
+        public string Endereco { get; set; }
+
+        [Required]
+        [StringLength(300, ErrorMessage = "O horário não deve ter mais do que 300 caracteres.")]
+        public string Horario { get; set; }
+
+        [Required]
+        [StringLength(300, ErrorMessage = "O link do site oficial não deve ter mais do que 300 caracteres.")]
+        public string LinkSite { get; set; }
     }
 }

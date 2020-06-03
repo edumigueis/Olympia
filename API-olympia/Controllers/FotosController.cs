@@ -5,6 +5,7 @@ using API_olympia.Models;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System;
 
 namespace API_olympia.Controllers
 {
@@ -101,7 +102,7 @@ namespace API_olympia.Controllers
                     return Created($"/api/fotos/{model.IdFoto}", model);
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no post().");
             }

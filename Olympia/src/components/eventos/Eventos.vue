@@ -524,7 +524,7 @@ export default {
               '" width="400" height="264" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe></div></li></ul></div>';
             $("#events-container").append(conteudoDiv);
             $.ajax({
-              url: "https://localhost:5001/api/redirect/FotosEventos/"+item.idEvento,
+              url: "https://localhost:5001/api/redirect/FotosDoEvento/"+item.idEvento,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -535,16 +535,23 @@ export default {
                 console.log(data);
                 var foiImg = false;
                 jQuery.each(data, function(index, fotos) {
-                  if(foiImg == false){
-                    $('#event-image-feed').attr('src', fotos.foto);
-                    foiImg = true;
-                  } else{
-                    return;
+                  if(index != 0){
+                    $('#event-image-feed').attr('src', fotos);
                   }
+                  $("body").removeClass("loading");
+                  $('#load-modal').fadeOut(); 
                 });
+              },
+              error: function(){
+                $("body").removeClass("loading");
+                $('#load-modal').fadeOut(); 
               }
             });
           });
+        },
+        error: function(){
+          $("body").removeClass("loading");
+          $('#load-modal').fadeOut(); 
         }
       });
     }
