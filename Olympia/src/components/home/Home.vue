@@ -2040,18 +2040,71 @@ export default {
         success: function(data) {
           console.log(data);
           jQuery.each(data, function(index, item) {
-            var conteudoDiv = "";
-            conteudoDiv += "";
-            conteudoDiv += "";
+            var thereismore;
+            if (item.descricao.length > 330) {
+              thereismore = "...";
+            } else {
+              thereismore = "";
+            }
+            var conteudoDiv =
+              '<div class="masonry-item"><div class="masonry-content">';
+            conteudoDiv +=
+              '<a class="link-to-serv" href="' +
+              "/#/servico/" +
+              item.idServico +
+              '"><img id="img-serv-' +
+              index +
+              '" src="https://picsum.photos/450/380?image=65" class="img-serv"/></a>';
+            conteudoDiv +=
+              '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
+            conteudoDiv +=
+              '<h3 class="masonry-title">' +
+              item.nome +
+              '</h3><a href="/#/perfil/"' +
+              item.idUsuario +
+              ' id="name-prof-link-on-serv-' +
+              index +
+              '" class="name-of-prof-link on-2-link"></a>';
+            conteudoDiv +=
+              '<p class="masonry-description">' +
+              item.descricao.substring(0, 330) +
+              thereismore +
+              "</p></div></div>";
             $("#events-container").append(conteudoDiv);
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/FotosEventos/" +
+                "https://localhost:5001/api/redirect/Usuarios/" +
+                item.idUsuario +
                 item.idEvento,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
-              success: function(data) {}
+              success: function(result) {
+                $("name-prof-link-on-serv-" + index).text(result.nome);
+              }
+            });
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/FotosServico/" +
+                item.idServico,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              beforeSend: function() {
+                $("#load-modal").addClass("loading");
+              },
+              success: function(data) {
+                console.log(data);
+                var foiImg = false;
+                jQuery.each(data, function(index, fotos) {
+                  if (foiImg == false) {
+                    $("img-serv-" + index).attr("src", fotos.foto);
+                    foiImg = true;
+                  } else {
+                    return;
+                  }
+                });
+              }
             });
           });
         }
@@ -2093,8 +2146,14 @@ export default {
               dataType: "json",
               contentType: "application/json",
               success: function(result) {
-                $("#prof-inner-prop-img-" + index).attr("src", result.foto +"");
-                $("#prof-name-link-" + index).attr("href", "/#/perfil/"+result.idUsuario);
+                $("#prof-inner-prop-img-" + index).attr(
+                  "src",
+                  result.foto + ""
+                );
+                $("#prof-name-link-" + index).attr(
+                  "href",
+                  "/#/perfil/" + result.idUsuario
+                );
                 $("#prof-name-link-" + index).text(result.nome + "");
                 $("#prof-bio-det-" + index).text(result.bio + "");
               }
