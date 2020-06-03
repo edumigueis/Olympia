@@ -1987,6 +1987,106 @@ export default {
     "meu-mouse": Mouse,
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
+  },
+  data() {
+    return {
+      data: null
+    };
+  },
+  methods: {
+    getMarkers() {
+
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/Obras",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
+        },
+        success: function(data) {
+          console.log(data);
+          jQuery.each(data, function(index, item) {
+            var conteudoDiv =
+              '';
+            conteudoDiv +=
+              '';
+            conteudoDiv +=
+              '';
+            $("#events-container").append(conteudoDiv);
+            $.ajax({
+              url: "https://localhost:5001/api/redirect/FotosEventos/"+item.idEvento,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(data) {
+              }
+            });
+          });
+        }
+      });
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/Publicacoes",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
+        },
+        success: function(data) {
+          console.log(data);
+          jQuery.each(data, function(index, item) {
+            var conteudoDiv =
+              '';
+            conteudoDiv +=
+              '';
+            conteudoDiv +=
+              '';
+            $("#events-container").append(conteudoDiv);
+            $.ajax({
+              url: "https://localhost:5001/api/redirect/FotosEventos/"+item.idEvento,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(data) {
+              }
+            });
+          });
+        }
+      });
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/Servicos",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
+        },
+        success: function(data) {
+          console.log(data);
+          jQuery.each(data, function(index, item) {
+            var conteudoDiv =
+              '';
+            conteudoDiv +=
+              '';
+            conteudoDiv +=
+              '';
+            $("#events-container").append(conteudoDiv);
+            $.ajax({
+              url: "https://localhost:5001/api/redirect/FotosEventos/"+item.idEvento,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(data) {
+              }
+            });
+          });
+        }
+      });
+    }
+  },
+  mounted() {
+    this.getMarkers();
   }
 };
 
