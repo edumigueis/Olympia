@@ -58,8 +58,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Publicacao = await this.Repo.GetAllPublicacoesAsyncById(idPublicacao);
-                    return Created($"/api/Publicacoes/{model.IdPublicacao}", Publicacao);
+                    return Ok();
                 }
             }
             catch
@@ -99,8 +98,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    //return Ok();
-                    return Created($"/api/Publicacoes/{model.IdPublicacao}", model);
+                    return Ok();
                 }
             }
             catch

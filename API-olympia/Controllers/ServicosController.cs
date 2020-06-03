@@ -58,8 +58,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    servico = await this.Repo.GetAllServicosAsyncById(idServico);
-                    return Created($"/api/Servicos/{model.IdServico}", servico);
+                    return Ok();
                 }
             }
             catch
@@ -99,8 +98,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    //return Ok();
-                    return Created($"/api/Servicos/{model.IdServico}", model);
+                    return Ok();
                 }
             }
             catch
@@ -110,5 +108,18 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
+        [HttpGet("Usuario/{idUsuario}")]
+        public async Task<IActionResult> GetAllObrasByUser(int idUsuario)
+        {
+            try
+            {
+                var result = this.Repo.SpAllServicosUser(idUsuario);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
     }
 }

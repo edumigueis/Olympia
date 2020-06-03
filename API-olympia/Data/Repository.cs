@@ -332,5 +332,90 @@ namespace API_olympia.Data
             else
                 return true;
         }
+
+        public List<object> SpAllObrasUser(int idUsuario)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_AllObrasUser '" + idUsuario + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["categoria"],
+                                   leitor["tags"],
+                                   leitor["dataPost"],
+                                   leitor["dadosTecnicos"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpAllServicosUser(int idUsuario)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_AllServicosUser '" + idUsuario + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["categoria"],
+                                   leitor["tags"],
+                                   leitor["dataPost"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpAllEventosArte(int idArte)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_AllEventosArte '" + idArte + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["dataPost"],
+                                   leitor["dataEvento"],
+                                   leitor["localizacaoCoord"],
+                                   leitor["endereco"],
+                                   leitor["horario"],
+                                   leitor["linkSite"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
     }
 }

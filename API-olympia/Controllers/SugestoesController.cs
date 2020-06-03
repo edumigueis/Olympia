@@ -30,8 +30,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    sugestao = await this.Repo.GetAllSugestoesAsyncById(idSugestao);
-                    return Created($"/api/Sugestoes/{model.IdSugestao}", sugestao);
+                    return Ok();
                 }
             }
             catch
@@ -71,8 +70,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    //return Ok();
-                    return Created($"/api/Sugestoes/{model.IdSugestao}", model);
+                    return Ok();
                 }
             }
             catch

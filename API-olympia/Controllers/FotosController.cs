@@ -58,8 +58,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    foto = await this.Repo.GetAllFotosAsyncById(idFoto);
-                    return Created($"/api/fotos/{model.IdFoto}", foto);
+                    return Ok();
                 }
             }
             catch
@@ -98,7 +97,7 @@ namespace API_olympia.Controllers
                 this.Repo.Add(model);
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    return Created($"/api/fotos/{model.IdFoto}", model);
+                    return Ok();
                 }
             }
             catch

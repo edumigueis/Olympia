@@ -60,8 +60,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
-                    return Created($"/api/artes/{model.IdArte}", arte);
+                    return Ok();
                 }
             }
             catch
@@ -104,8 +103,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    //return Ok();
-                    return Created($"/api/artes/{model.IdArte}", model);
+                    return Ok();
                 }
             }
             catch

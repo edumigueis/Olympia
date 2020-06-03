@@ -58,8 +58,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    Curtida = await this.Repo.GetAllCurtidasAsyncById(idCurtida);
-                    return Created($"/api/Curtidas/{model.IdCurtida}", Curtida);
+                    return Ok();
                 }
             }
             catch
@@ -99,8 +98,7 @@ namespace API_olympia.Controllers
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    //return Ok();
-                    return Created($"/api/Curtidas/{model.IdCurtida}", model);
+                    return Ok();
                 }
             }
             catch
