@@ -194,7 +194,7 @@ export default {
       var url = window.location.href;
       var codigo = url.substring(29);
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Obras/" + codigo,
+        url: "https://localhost:5001/api/redirect/Obra/" + codigo,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -202,6 +202,7 @@ export default {
             $('#load-modal').addClass('loading'); 
         },
         success: function(field) {
+          console.log(field);
           $('#load-modal').fadeOut(); 
           $("#art-detail-p").text(field.dadosTecnicos);
           $("#art-data").text(field.descricao);
@@ -252,6 +253,7 @@ export default {
           //Add these parameters to display the required response
           console.log(thrownError);
           $('#load-modal').fadeOut(); 
+          alert("oops");
         }
       });
     }
