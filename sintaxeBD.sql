@@ -233,3 +233,71 @@ as
 Begin
     select * from Eventos where idArte = @idArte
 End
+
+create proc sp_ObrasCurtidas /*retorna o ID das obras. Ordenados pelas mais curtidas*/
+as
+Begin
+	select o.idObra
+	from Obras o, Curtidas c 
+	where c.idObra = o.idObra 
+	group by o.idObra 
+	order by 
+	(select count(*) from Obras o, Curtidas c 
+	where c.idObra = o.idObra) 
+End
+
+alter proc sp_ObrasNaoCurtidas /*retorna as obras não curtidas. Ordenados alfabeticamente*/
+as
+Begin
+	select a.* from Obras as a 
+	left join Curtidas as b
+	on a.idObra = b.idObra 
+	where b.idObra  is null
+	order by nome
+End
+
+create proc sp_PublicacoesCurtidas /*retorna o ID das publicações. Ordenados pelas mais curtidas*/
+as
+Begin
+	select o.idPublicacao
+	from Publicacoes o, Curtidas c 
+	where c.idPublicacao = o.idPublicacao 
+	group by o.idPublicacao 
+	order by 
+	(select count(*) from Publicacoes o, Curtidas c 
+	where c.idPublicacao = o.idPublicacao) 
+End
+
+create proc sp_PublicacoesNaoCurtidas /*retorna as publicações não curtidas. Ordenados por data*/
+as
+Begin
+	select a.* from Publicacoes as a 
+	left join Curtidas as b
+	on a.idPublicacao = b.idPublicacao 
+	where b.idPublicacao  is null
+	order by dataPost
+End
+
+create proc sp_ServicosCurtidas /*retorna o ID dos serviços. Ordenados pelos mais curtidos*/
+as
+Begin
+	select o.idServico
+	from Servicos o, Curtidas c 
+	where c.idServico = o.idServico 
+	group by o.idServico 
+	order by 
+	(select count(*) from Servicos o, Curtidas c 
+	where c.idServico = o.idServico) 
+End
+
+create proc sp_ServicosNaoCurtidos /*retorna os serviços não curtidos. Ordenados alfabeticamente*/
+as
+Begin
+	select a.* from Servicos as a 
+	left join Curtidas as b
+	on a.idServico = b.idServico 
+	where b.idServico  is null
+	order by nome
+End
+
+delete from curtidas
