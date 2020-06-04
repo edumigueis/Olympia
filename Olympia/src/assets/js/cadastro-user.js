@@ -47,6 +47,7 @@ var colorList = [
 var JaFoiForCad = false;
 var selectedImage;
 var isSelImg = false;
+var userValidado;
 setInterval(() => {
   if ($("#container-cad-user").length && jaFoiCadUser == false) {
     $(function () {
@@ -273,8 +274,9 @@ setInterval(() => {
       $("#pass").on("keyup", function () {
         forcaSenha($(this).val());
       });
-      $("#user").on("keyup", function () {
+      $("#user").on("change", function () {
         var user = $("#user").val();
+        
         if (user == "") {
           return;
         }
@@ -292,20 +294,28 @@ setInterval(() => {
         }
         $.ajax({
           type: "GET",
-          url: "https://localhost:5001/api/Redirect/ExisteUser/" + $("#user").val(),
+          url: "https://localhost:5001/api/Redirect/UserNameIsUsado/" + $("#user").val() + "",
           dataType: "json",
           contentType: "application/json",
           success: function (result) {
-            if (result.existe == true) {
-              $("#user").css('border-bottom', 'red');
+            console.log(result);
+            if (result == true) {
+              $("#user").css('border-bottom', '1px solid red');
+              userValidado = false;
             } else {
-              $("#user").css('border-bottom', '1px solid #999;');
+              $("#user").css('border-bottom', '1px solid #999');
+              userValidado = true;
             }
           },
           fail: function () {
 
           }
         });
+
+      });
+      $("#user").on("focusout", function () {
+          if(userValidado == false)
+          $("#user").val("");
       });
       $("#name").on("focusout", function () {
         var name = $("#name").val();
