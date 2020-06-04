@@ -498,7 +498,6 @@ export default {
   },
   methods: {
     getMarkers() {
-
       $.ajax({
         url: "https://localhost:5001/api/redirect/Eventos",
         type: "GET",
@@ -508,10 +507,15 @@ export default {
           $("#load-modal").addClass("loading");
         },
         success: function(data) {
-          
           jQuery.each(data, function(index, item) {
             var conteudoDiv =
-              '<div id="event-on-feed-"'+index+' class="event-card-container border-black arte-'+item.idArte+'"><ul class="card-table white"><li class="card-item white"><div class="event-image-container"><div class="image-mask-event"><img class="event-image" id="event-image-feed-'+item.idEvento+'" src=""/></div></div></li>';
+              '<div id="event-on-feed-' +
+              index +
+              '" class="event-card-container border-black arte-' +
+              item.idArte +
+              '"><ul class="card-table white"><li class="card-item white"><div class="event-image-container"><div class="image-mask-event"><img class="event-image" id="event-image-feed-' +
+              item.idEvento +
+              '" src=""/></div></div></li>';
             conteudoDiv +=
               '<div class="btn-wrap"><a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a></div><li class="card-item-2 white"><div class="event-date-container"><p class="expo-name">' +
               item.nome +
@@ -525,7 +529,9 @@ export default {
             $("#events-container").append(conteudoDiv);
 
             $.ajax({
-              url: "https://localhost:5001/api/redirect/FotosDoEvento/"+item.idEvento,
+              url:
+                "https://localhost:5001/api/redirect/FotosDoEvento/" +
+                item.idEvento,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -533,33 +539,68 @@ export default {
                 $("#load-modal").addClass("loading");
               },
               success: function(data) {
-               
                 var foiImg = false;
-                  $('#event-image-feed-'+item.idEvento).attr('src', data[0]);
-                  
-                  $("body").removeClass("loading");
-                  $('#load-modal').fadeOut(); 
-              },
-              error: function(){
+                $("#event-image-feed-" + item.idEvento).attr("src", data[0]);
+
                 $("body").removeClass("loading");
-                $('#load-modal').fadeOut(); 
+                $("#load-modal").fadeOut();
+              },
+              error: function() {
+                $("body").removeClass("loading");
+                $("#load-modal").fadeOut();
                 alert("ops2");
               }
             });
           });
         },
-        error: function(){
+        error: function() {
           $("body").removeClass("loading");
-          $('#load-modal').fadeOut(); 
+          $("#load-modal").fadeOut();
           alert("ops");
         }
       });
     },
-    filterArt: function (selArt) {
-      switch(selArt){
-        case 'all':{
-
-        }
+    filterArt: function(selArt) {
+      switch (selArt) {
+        case "all":
+          $(".event-card-container").css("display", "block");
+          break;
+        case "cin":
+          $(".event-card-container").css("display", "none");
+          $(".arte-1").css("display", "block");
+          break;
+        case "artes-dig":
+          $(".event-card-container").css("display", "none");
+          $(".arte-2").css("display", "block");
+          break;
+        case "artes-cen":
+          $(".event-card-container").css("display", "none");
+          $(".arte-3").css("display", "block");
+          break;
+        case "esc":
+          $(".event-card-container").css("display", "none");
+          $(".arte-4").css("display", "block");
+          break;
+        case "arq":
+          $(".event-card-container").css("display", "none");
+          $(".arte-5").css("display", "block");
+          break;
+        case "lit":
+          $(".event-card-container").css("display", "none");
+          $(".arte-6").css("display", "block");
+          break;
+        case "music":
+          $(".event-card-container").css("display", "none");
+          $(".arte-7").css("display", "block");
+          break;
+        case "pin":
+          $(".event-card-container").css("display", "none");
+          $(".arte-8").css("display", "block");
+          break;
+        case "foto":
+          $(".event-card-container").css("display", "none");
+          $(".arte-9").css("display", "block");
+          break;
       }
     }
   },
