@@ -1,9 +1,7 @@
 <template>
   <main>
     <div>
-      <h1>A cítara</h1>
-      <img src="/src/assets/images/baixados.jfif" style="width:70vw">
-      <div id="container-home" style="visibility:hidden">
+      <div id="container-home">
         <link rel="stylesheet" href="/src/assets/css/home.css" />
         <link rel="stylesheet" href="/src/assets/css/palaces.css" />
         <link
