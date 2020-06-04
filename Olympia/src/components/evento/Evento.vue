@@ -151,7 +151,7 @@
                 <iframe
                   id="event-map"
                   class="map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.026733576006!2d-73.97981028509388!3d40.761436742527366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f97bdb102b%3A0xea9f8fc0b3ffff55!2sThe%20Museum%20of%20Modern%20Art!5e0!3m2!1spt-BR!2sbr!4v1586369480301!5m2!1spt-BR!2sbr"
+                  src=""
                   frameborder="0"
                   style="border:0;"
                   allowfullscreen
@@ -243,7 +243,7 @@ export default {
   methods: {
     formatDate(input) {},
     getMarkers() {
-      var codigo = 1;
+      var codigoEvento = window.location.href.substring(31);
       /*$("#event-name").text("jquery loaded");
       alert("ai");*/
       /*$.getJSON("https://localhost:5001/api/Eventos/1", function(result) {
@@ -287,18 +287,17 @@ export default {
       });*/
       /*alert("ya");*/
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Eventos/1",
+        url: "https://localhost:5001/api/redirect/Evento/" + codigoEvento,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
-        beforeSend: function(){
-            $('#load-modal').addClass('loading'); 
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
         },
         success: function(field) {
           alert("entrou aq");
-          $('#load-modal').fadeOut(); 
+          $("#load-modal").fadeOut();
           $("#event-name").text(field.nome);
-          alert(field.name);
           $("#event-info-nome").text(field.nome);
           $("#event-info-local").text("Endereço:" + field.endereco);
           var datePart = field.dataEvento
@@ -311,7 +310,7 @@ export default {
 
           var dataFin = day + "/" + month + "/" + year;
           $("#event-info-datas").text("Data: " + dataFin);
-          $("#event-info-horarios").text("Horários:" + field.horarios);
+          $("#event-info-horarios").text("Horários: " + field.horario);
           $("#of-web-link-eve").href = field.linkSiteOficial;
           $(".day").text(field.dataEvento.toString().substring(8, 10));
           $(".month").text(
@@ -333,12 +332,53 @@ export default {
             field.endereco.substring(field.endereco.indexOf("País:", 6))
           );
           $("#desc-ev-wrapper").text(field.descricao);
+
           $("#event-map").attr("src", field.localizacaoCoord);
+
+          $.ajax({
+            url:
+              "https://localhost:5001/api/redirect/FotosDoEvento/" +
+              field.idEvento,
+            type: "GET",
+            dataType: "json",
+            contentType: "application/json",
+            beforeSend: function() {
+              $("#load-modal").addClass("loading");
+            },
+            success: function(data) {
+              alert("foi");
+
+              var current;
+              var final;
+
+              for (var i = 0; i < 9; i++) {
+                current = i+1
+                if(data[i] != undefined)
+                $(".box-"+ current).css("background", "url("+ data[i] +")");
+                else{
+                  final = i;
+                  break;
+                }
+              }
+              alert(final);
+              for (var f = final + 1; f < 9; f++) {
+                $(".box-"+ f).css("display", "none");
+              }
+
+              $("body").removeClass("loading");
+              $("#load-modal").fadeOut();
+            },
+            error: function() {
+              $("body").removeClass("loading");
+              $("#load-modal").fadeOut();
+              alert("ops2");
+            }
+          });
         },
         error: function(thrownError) {
           //Add these parameters to display the required response
           console.log(thrownError);
-          $('#load-modal').fadeOut(); 
+          $("#load-modal").fadeOut();
         }
       });
     }
