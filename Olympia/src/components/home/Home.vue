@@ -2067,36 +2067,14 @@ export default {
         success: function(data) {
           console.log(data);
           jQuery.each(data, function(index, item) {
-            var thereismore;
-            if (item.descricao.length > 330) {
-              thereismore = "...";
-            } else {
-              thereismore = "";
-            }
             var conteudoDiv =
-              '<div class="masonry-item"><div class="masonry-content">';
+              '<div class="masonry-item" id="'+index+'-obra"><div class="masonry-content"><div class="prof-cont-feed white-7"><div class="prof-img-cont"><img class="prof-img-prop" id="prof-img-prop-obra-'+item.idObra+'" src=""/></div> <a href="/#/profile/'+item.idUsuario+'" class="prof-name-det black-to-white" id="obra-prof-name-link-'+item.idObra+'"></a><div class="prof-bio-det text-gray" id="obra-prof-bio-'+item.idObra+'">Bio</div></div>';
             conteudoDiv +=
-              '<a class="link-to-serv" href="' +
-              "/#/servico/" +
-              item.idServico +
-              '"><img id="img-serv-' +
-              index +
-              '" src="https://picsum.photos/450/380?image=65" class="img-serv"/></a>';
+              '<div class="post-img-cont"><a href="/#/obra/'+item.idObra+'"><figure class="snip1321" id="'+index+'-post"><div class="after"></div> <img id="obra-img-'+item.idObra+'" src="https://paintingvalley.com/image/watercolor-art-pinterest-22.jpg"/>';
             conteudoDiv +=
-              '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
+              '<figcaption><i class="fas fa-arrow-right"></i><div class="name-of-prof"><a href="/#/perfil/'+item.idUsuario+'" class="name-of-prof-link">Name</a></div><h2>'+item.nome+'</h2><div class="categories-cont-on-feed"><div class="cat-on-feed paint">'+item.categorias[0]+'</div><div class="cat-on-feed paint">'+item.categorias[1]+'</div><div class="cat-on-feed pers">'+item.categorias[2]+'</div><div class="cat-on-feed pers">Azul</div><div class="cat-on-feed paint">'+item.categorias[3]+'</div><div class="cat-on-feed pers">'+item.categorias[5]+'</div></div></figcaption></figure></a>';
             conteudoDiv +=
-              '<h3 class="masonry-title">' +
-              item.nome +
-              '</h3><a href="/#/perfil/"' +
-              item.idUsuario +
-              ' id="name-prof-link-on-serv-' +
-              index +
-              '" class="name-of-prof-link on-2-link"></a>';
-            conteudoDiv +=
-              '<p class="masonry-description">' +
-              item.descricao.substring(0, 330) +
-              thereismore +
-              "</p></div></div>";
+              '<div class="interact-container"><div class="stage stage-btn"><button class="trigger">ver mais...</button></div><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div></div> </div></div>';
             $("#events-container").append(conteudoDiv);
             $.ajax({
               url:
@@ -2106,7 +2084,12 @@ export default {
               dataType: "json",
               contentType: "application/json",
               success: function(result) {
-                $("name-prof-link-on-serv-" + index).text(result.nome);
+                $('#prof-img-prop-obra-'+ item.idObra).attr('src', result.foto + "");
+                $('#obra-prof-name-link-'+ item.idObra).text(result.nome);
+                if(result.bio.length > 90)
+                $('#obra-prof-bio-'+ item.idObra).text(result.bio.substring(0, 90) +"...");
+                else
+                $('#obra-prof-bio-'+ item.idObra).text(result.bio);
               }
             });
             $.ajax({
