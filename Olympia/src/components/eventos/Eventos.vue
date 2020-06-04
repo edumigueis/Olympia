@@ -174,7 +174,7 @@
       <div id="filter-container" class="white-6">
         <section class="hero-section white-6">
           <div class="card-grid">
-            <button class="card" href="#">
+            <button class="card" v-on:click="filterArt('all')">
               <div
                 class="card__background"
                 style="background-image: url(/src/assets/images/all-btn.jfif)"
@@ -184,7 +184,7 @@
                 <h3 class="card__heading">Todos</h3>
               </div>
             </button>
-            <button class="card" href="#">
+            <button class="card" v-on:click="filterArt('pin')" href="#">
               <div
                 class="card__background"
                 style="background-image: url(/src/assets/images/paint-btn.png)"
@@ -194,7 +194,7 @@
                 <h3 class="card__heading">Pintura</h3>
               </div>
             </button>
-            <button class="card" href="#">
+            <button class="card" v-on:click="filterArt('arq')" href="#">
               <div
                 class="card__background"
                 style="background-image: url(/src/assets/images/arq-btn.jfif)"
@@ -206,7 +206,7 @@
                 </h3>
               </div>
             </button>
-            <button class="card" href="#">
+            <button class="card" v-on:click="filterArt('lit')" href="#">
               <div
                 class="card__background"
                 style="background-image: url(/src/assets/images/lit-btn.jfif)"
@@ -218,7 +218,7 @@
                 </h3>
               </div>
             </button>
-            <button class="card" href="#">
+            <button class="card" v-on:click="filterArt('artes-cen')" href="#">
               <div
                 class="card__background"
                 style="background-image: url(/src/assets/images/dnc-btn.jpg)"
@@ -228,7 +228,7 @@
                 <h3 class="card__heading">Artes Cênicas</h3>
               </div>
             </button>
-            <button class="card" href="#">
+            <button class="card" v-on:click="filterArt('cin')" href="#">
               <div
                 class="card__background"
                 style="background-image: url(/src/assets/images/cin-btn.jpg)"
@@ -238,7 +238,7 @@
                 <h3 class="card__heading">Cinema</h3>
               </div>
             </button>
-            <button class="card" href="#">
+            <button class="card" v-on:click="filterArt('esc')" href="#">
               <div
                 class="card__background"
                 style="background-image: url(/src/assets/images/sc-btn.jfif)"
@@ -250,7 +250,7 @@
                 </h3>
               </div>
             </button>
-            <button class="card" href="#">
+            <button class="card" v-on:click="filterArt('music')" href="#">
               <div
                 class="card__background"
                 style="background-image: url(/src/assets/images/msc-btn.jpg)"
@@ -260,7 +260,7 @@
                 <h3 class="card__heading">Música</h3>
               </div>
             </button>
-            <button class="card" href="#">
+            <button class="card" v-on:click="filterArt('foto')" href="#">
               <div
                 class="card__background"
                 style="background-image: url(/src/assets/images/photo-art.jpg)"
@@ -270,7 +270,7 @@
                 <h3 class="card__heading">Fotogra fia</h3>
               </div>
             </button>
-            <button class="card" href="#">
+            <button class="card" v-on:click="filterArt('arte-dig')" href="#">
               <div
                 class="card__background"
                 style="background-image: url(/src/assets/images/digital-art-2.jpg)"
@@ -554,6 +554,10 @@ export default {
           alert("ops");
         }
       });
+    },
+    filterArt: function (selArt) {
+      // `this` inside methods point to the Vue instance
+      alert(selArt);
     }
   },
   mounted() {

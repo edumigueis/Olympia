@@ -210,7 +210,7 @@ export default {
           $("#page-det-name").text(field.nome);
           $.ajax({
             url:
-              "https://localhost:5001/api/redirect/Usuarios/UserObra/" + codigo,
+              "https://localhost:5001/api/redirect/UserObra/" + codigo,
             type: "GET",
             dataType: "json",
             contentType: "application/json",
