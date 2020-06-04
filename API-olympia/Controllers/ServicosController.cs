@@ -121,5 +121,47 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
             }
         }
+
+        [HttpGet("Curtidas")]
+        public async Task<IActionResult> GetServicosCurtidosOrderByCurtidas()
+        {
+            try
+            {
+                var result = this.Repo.SpServicosCurtidas();
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
+
+        [HttpGet("CurtidasDesc")]
+        public async Task<IActionResult> GetServicosCurtidosOrderByCurtidasDesc()
+        {
+            try
+            {
+                var result = this.Repo.SpServicosCurtidasDesc();
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
+
+        [HttpGet("NaoCurtidos")]
+        public async Task<IActionResult> GetServicosNaoCurtidos()
+        {
+            try
+            {
+                var result = this.Repo.SpServicosNaoCurtidos();
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
     }
 }

@@ -5,6 +5,7 @@ using API_olympia.Models;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System;
 
 namespace API_olympia.Controllers
 {
@@ -29,7 +30,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
         }
 
@@ -43,7 +44,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
         }
 
@@ -63,7 +64,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no put().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
             return BadRequest();
         }
@@ -84,7 +85,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no delete().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
             return BadRequest();
         }
@@ -103,7 +104,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no post().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
             return BadRequest();
         }
@@ -118,7 +119,49 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpGet("Curtidas")]
+        public async Task<IActionResult> GetObrasCurtidasOrderByCurtidas()
+        {
+            try
+            {
+                var result = this.Repo.SpObrasCurtidas();
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpGet("CurtidasDesc")]
+        public async Task<IActionResult> GetObrasCurtidasOrderByCurtidasDesc()
+        {
+            try
+            {
+                var result = this.Repo.SpObrasCurtidasDesc();
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpGet("NaoCurtidas")]
+        public async Task<IActionResult> GetObrasNaoCurtidas()
+        {
+            try
+            {
+                var result = this.Repo.SpObrasNaoCurtidas();
+                return Ok(result);
+            }
+            catch(Exception e)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
             }
         }
     }
