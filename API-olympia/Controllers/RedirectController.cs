@@ -359,5 +359,158 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+
+        [HttpGet("OrdenarObrasCurtidas")]
+        public async Task<IActionResult> GetObrasCurtidasOrderByCurtidas()
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Obras/Curtidas/");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("OrdenarServicosCurtidos")]
+        public async Task<IActionResult> GetServicosCurtidosOrderByCurtidas()
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Servicos/Curtidas/");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("OrdenarPublicacoesCurtidas")]
+        public async Task<IActionResult> GetPublicacoesCurtidasOrderByCurtidas()
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Publicacoes/Curtidas/");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("OrdenarObrasCurtidasDesc")]
+        public async Task<IActionResult> GetObrasCurtidasOrderByCurtidasDesc()
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Obras/CurtidasDesc/");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("OrdenarServicosCurtidosDesc")]
+        public async Task<IActionResult> GetServicosCurtidosOrderByCurtidasDesc()
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Servicos/CurtidasDesc/");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("OrdenarPublicacoesCurtidasDesc")]
+        public async Task<IActionResult> GetPublicacoesCurtidasOrderByCurtidasDesc()
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Publicacoes/CurtidasDesc/");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("ObrasSemCurtidas")]
+        public async Task<IActionResult> GetObrasSemCurtidas()
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Obras/NaoCurtidas/");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("PublicacoesSemCurtidas")]
+        public async Task<IActionResult> GetPublicacoesSemCurtidas()
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Publicacoes/NaoCurtidas/");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("ServicosSemCurtidas")]
+        public async Task<IActionResult> GetServicosSemCurtidas()
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Servicos/NaoCurtidos/");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
     }
 }

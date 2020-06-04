@@ -55,5 +55,14 @@ namespace API_olympia.Data
         List<object> SpAllObrasUser(int idUsuario);
         List<object> SpAllServicosUser(int idUsuario);
         List<object> SpAllEventosArte(int idArte);
+        List<int> SpObrasCurtidas();
+        List<int> SpPublicacoesCurtidas();
+        List<int> SpServicosCurtidas();
+        List<int> SpObrasCurtidasDesc();
+        List<int> SpPublicacoesCurtidasDesc();
+        List<int> SpServicosCurtidasDesc();
+        List<object> SpObrasNaoCurtidas();
+        List<object> SpPublicacoesNaoCurtidas();
+        List<object> SpServicosNaoCurtidos();
     }
 }

@@ -156,7 +156,6 @@ email varchar(255) not null
 alter proc sp_ValidateAdmin
 @Username varchar(100),
 @Password varchar(500)
-
 as
 Begin
     select * from Admins where userName=@Username and senha=@Password
@@ -246,14 +245,14 @@ Begin
 	where c.idObra = o.idObra) 
 End
 
-alter proc sp_ObrasNaoCurtidas /*retorna as obras não curtidas. Ordenados alfabeticamente*/
+create proc sp_ObrasNaoCurtidas /*retorna as obras não curtidas. Ordenados por data*/
 as
 Begin
 	select a.* from Obras as a 
 	left join Curtidas as b
 	on a.idObra = b.idObra 
 	where b.idObra  is null
-	order by nome
+	order by dataPost
 End
 
 create proc sp_PublicacoesCurtidas /*retorna o ID das publicações. Ordenados pelas mais curtidas*/
@@ -290,14 +289,12 @@ Begin
 	where c.idServico = o.idServico) 
 End
 
-create proc sp_ServicosNaoCurtidos /*retorna os serviços não curtidos. Ordenados alfabeticamente*/
+create proc sp_ServicosNaoCurtidos /*retorna os serviços não curtidos. Ordenados por data*/
 as
 Begin
 	select a.* from Servicos as a 
 	left join Curtidas as b
 	on a.idServico = b.idServico 
 	where b.idServico  is null
-	order by nome
+	order by dataPost
 End
-
-delete from curtidas

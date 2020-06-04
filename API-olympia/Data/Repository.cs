@@ -349,7 +349,7 @@ namespace API_olympia.Data
                                    leitor["nome"],
                                    leitor["descricao"],
                                    leitor["idArte"],
-                                   leitor["categoria"],
+                                   leitor["categorias"],
                                    leitor["tags"],
                                    leitor["dataPost"],
                                    leitor["dadosTecnicos"]};
@@ -410,6 +410,206 @@ namespace API_olympia.Data
                                    leitor["endereco"],
                                    leitor["horario"],
                                    leitor["linkSite"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<int> SpObrasCurtidas()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ObrasCurtidas";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<int>();
+
+            while (leitor.Read())
+            {
+                result.Add(Convert.ToInt32(leitor["idObra"]));
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<int> SpPublicacoesCurtidas()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_PublicacoesCurtidas";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<int>();
+
+            while (leitor.Read())
+            {
+                result.Add(Convert.ToInt32(leitor["idPublicacao"]));
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<int> SpServicosCurtidas()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ServicosCurtidas";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<int>();
+
+            while (leitor.Read())
+            {
+                result.Add(Convert.ToInt32(leitor["idServico"]));
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<int> SpObrasCurtidasDesc()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ObrasCurtidas";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<int>();
+
+            while (leitor.Read())
+            {
+                result.Add(Convert.ToInt32(leitor["idObra"]));
+            }
+            conn.Close();
+
+            result.Reverse();
+
+            return result;
+        }
+
+        public List<int> SpPublicacoesCurtidasDesc()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_PublicacoesCurtidas";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<int>();
+
+            while (leitor.Read())
+            {
+                result.Add(Convert.ToInt32(leitor["idPublicacao"]));
+            }
+            conn.Close();
+
+            result.Reverse();
+
+            return result;
+        }
+
+        public List<int> SpServicosCurtidasDesc()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ServicosCurtidas";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<int>();
+
+            while (leitor.Read())
+            {
+                result.Add(Convert.ToInt32(leitor["idServico"]));
+            }
+            conn.Close();
+
+            result.Reverse();
+
+            return result;
+        }
+
+        public List<object> SpObrasNaoCurtidas()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ObrasNaoCurtidas";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["categorias"],
+                                   leitor["tags"],
+                                   leitor["dataPost"],
+                                   leitor["dadosTecnicos"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpPublicacoesNaoCurtidas()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_PublicacoesNaoCurtidas";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["texto"],
+                                   leitor["tags"],
+                                   leitor["foto"],
+                                   leitor["dataPost"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpServicosNaoCurtidos()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ServicosNaoCurtidos";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["categorias"],
+                                   leitor["tags"],
+                                   leitor["dataPost"]};
 
                 result.Add(dados);
             }
