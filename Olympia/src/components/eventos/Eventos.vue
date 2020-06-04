@@ -556,8 +556,11 @@ export default {
       });
     },
     filterArt: function (selArt) {
-      // `this` inside methods point to the Vue instance
-      alert(selArt);
+      switch(selArt){
+        case 'all':{
+
+        }
+      }
     }
   },
   mounted() {
