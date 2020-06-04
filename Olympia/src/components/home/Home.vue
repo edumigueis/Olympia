@@ -2094,8 +2094,8 @@ export default {
             });
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/FotosServico/" +
-                item.idServico,
+                "https://localhost:5001/api/redirect/GetFotosObra/" +
+                item.idObra,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2104,15 +2104,7 @@ export default {
               },
               success: function(data) {
                 console.log(data);
-                var foiImg = false;
-                jQuery.each(data, function(index, fotos) {
-                  if (foiImg == false) {
-                    $("img-serv-" + index).attr("src", fotos.foto);
-                    foiImg = true;
-                  } else {
-                    return;
-                  }
-                });
+                $("obra-img-" + item.idObra).attr("src", data[0]);
               }
             });
           });
