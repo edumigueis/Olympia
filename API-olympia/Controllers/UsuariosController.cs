@@ -144,7 +144,7 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("Obra/{idServico}")]
+        [HttpGet("Servico/{idServico}")]
         public async Task<IActionResult> GetUsuariobyServico(int idServico)
         {
             try
