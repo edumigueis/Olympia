@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors;
+using System;
 
 namespace API_olympia.Controllers
 {
@@ -103,7 +104,7 @@ namespace API_olympia.Controllers
                     return Ok();
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no post().");
             }
