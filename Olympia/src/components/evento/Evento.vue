@@ -295,7 +295,6 @@ export default {
           $("#load-modal").addClass("loading");
         },
         success: function(field) {
-          alert("entrou aq");
           $("#load-modal").fadeOut();
           $("#event-name").text(field.nome);
           $("#event-info-nome").text(field.nome);
@@ -311,7 +310,7 @@ export default {
           var dataFin = day + "/" + month + "/" + year;
           $("#event-info-datas").text("Data: " + dataFin);
           $("#event-info-horarios").text("Horários: " + field.horario);
-          $("#of-web-link-eve").href = field.linkSiteOficial;
+          $("#of-web-link-eve").attr('href', field.linkSite);
           $(".day").text(field.dataEvento.toString().substring(8, 10));
           $(".month").text(
             monthNames[parseInt(field.dataEvento.substring(5, 7)) - 1]
@@ -346,7 +345,6 @@ export default {
               $("#load-modal").addClass("loading");
             },
             success: function(data) {
-              alert("foi");
 
               var current;
               var final;
@@ -354,7 +352,7 @@ export default {
               for (var i = 0; i < 9; i++) {
                 current = i+1
                 if(data[i] != undefined)
-                $(".box-"+ current).css("background", "url("+ data[i] +")");
+                $(".box-"+ current).css("background-image", "url("+ data[i] +")");
                 else{
                   final = i;
                   break;
