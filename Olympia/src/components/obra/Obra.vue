@@ -12,28 +12,10 @@
         <div id="img-col-d" class="transparent">
           <div class="bg"></div>
           <div class="masonry">
-            <div class="brick">
+            <div class="brick" style="display: none">
               <img
                 class="img-col"
                 src="https://i.pinimg.com/originals/2a/81/ab/2a81abef24a1630ef86ac1c74b0ec947.jpg"
-              />
-            </div>
-            <div class="brick">
-              <img
-                class="img-col"
-                src="https://i.pinimg.com/originals/92/2b/fd/922bfd8e4dceef87cce0aeaa017d0211.jpg"
-              />
-            </div>
-            <div class="brick">
-              <img
-                class="img-col"
-                src="https://blogscdn.thehut.net/wp-content/uploads/sites/7/2016/06/12184902/Matthew-Cusick-Featured.jpg"
-              />
-            </div>
-            <div class="brick">
-              <img
-                class="img-col"
-                src="https://i.pinimg.com/originals/d1/ba/98/d1ba981705ec9ca3b567d2093146e9aa.jpg"
               />
             </div>
           </div>
@@ -202,51 +184,58 @@ export default {
             $('#load-modal').addClass('loading'); 
         },
         success: function(field) {
-          console.log(field);
           $('#load-modal').fadeOut(); 
           $("#art-detail-p").text(field.dadosTecnicos);
           $("#art-data").text(field.descricao);
           $("#art-name").text(field.nome);
           $("#page-det-name").text(field.nome);
-          $.ajax({
-            url:
-              "https://localhost:5001/api/redirect/UserObra/" + codigo,
-            type: "GET",
-            dataType: "json",
-            contentType: "application/json",
-            success: function(field) {
-              var codigoUser = field.codigo;
               $.ajax({
-                url: "https://localhost:5001/api/Redirect/Usuarios/" + codigo,
+                url: "https://localhost:5001/api/Redirect/Usuario/" + field.idUsuario,
                 type: "GET",
                 dataType: "json",
                 contentType: "application/json",
-                success: function(field) {
-                  $("#user-link").text("@" + field.userName);
-                  $("#user-link").attr("href", "/#/perfil/" + field.idUser);
-                  $("#bio").text(field.bio);
-                  $("#name").text(field.nome);
-                  $("#artist-profile-pic").attr(
-                    "src",
-                    "" + LZString.decompress(field.foto)
+                success: function(resul) {
+                  $("#user-link").text("@" + resul.userName);
+                  alert(resul.userName);
+                  $("#user-link").attr("href", "/#/perfil/"+ resul.userName);
+                  $("#visit-profile-link").attr("href", "/#/perfil/"+ resul.userName);
+                  $("#bio").text(resul.bio);
+                  $("#name").text(resul.nome);
+                  if(resul.foto.length > 20){
+                      $("#artist-profile-pic").attr(
+                    "src", resul.foto
                   );
-                  $("#visit-profile-link").attr(
-                    "href",
-                    "/#/perfil/" + field.idUser
-                  );
+                  } else{
+                    $("#artist-pic").css('background-color',resul.foto);
+                    $("#artist-pic").append('<span class="letter-prof">'+resul.nome.substring(0,1)+'</span>');
+                    $("#artist-profile-pic").attr('src',"");
+                  }
                 },
-                error: function(thrownError) {
-                  //Add these parameters to display the required response
-                  console.log(thrownError);
-                  $('#load-modal').fadeOut(); 
-                }
-              });
-            },
             error: function(thrownError) {
               //Add these parameters to display the required response
               console.log(thrownError);
               $('#load-modal').fadeOut(); 
             }
+          });
+        },
+        error: function(thrownError) {
+          //Add these parameters to display the required response
+          console.log(thrownError);
+          $('#load-modal').fadeOut(); 
+          alert("oops");
+        }
+      });
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/FotosDaObra/" + codigo,
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function(){
+            $('#load-modal').addClass('loading'); 
+        },
+        success: function(result) {
+          result.forEach(element => {
+            $('.masonry').append('<div class="brick"> <img class="img-col" src="'+element+'" /></div>');
           });
         },
         error: function(thrownError) {

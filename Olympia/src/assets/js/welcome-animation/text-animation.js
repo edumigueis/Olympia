@@ -19,7 +19,6 @@ setInterval(() => {
     TextSlider.prototype = {
 
       init: function () {
-        console.log('init');
 
         this.bind();
 
@@ -28,7 +27,6 @@ setInterval(() => {
       },
 
       bind: function () {
-        console.log('bind');
 
         var self = this;
 
@@ -62,7 +60,6 @@ setInterval(() => {
       },
 
       initSvg: function () {
-        console.log('initSvg');
 
         this.bubblesRandomColors();
         this.setTexts();
@@ -73,7 +70,6 @@ setInterval(() => {
       },
 
       setTexts: function () {
-        console.log('setTexts');
 
         var texts = this.container.find('#svg-texts');
 
@@ -94,7 +90,6 @@ setInterval(() => {
       },
 
       bubblesRandomColors: function () {
-        console.log('bubblesRandomColors');
 
         var bubblesGroup = this.container.find('#bubbles'),
           // colors = ['#03ee93','#ff0700','#ffe700','#5306de'];
@@ -107,7 +102,6 @@ setInterval(() => {
       },
 
       triggerSlide: function () {
-        console.log('triggerSlide');
 
         // Container loads invisible, needs this to be shown on the first iteration
         TweenMax.set(this.container, { autoAlpha: 1 });
@@ -120,7 +114,6 @@ setInterval(() => {
       },
 
       resetSlide: function () {
-        console.log('hideSlide');
 
         var self = this;
 
