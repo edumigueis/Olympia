@@ -5,7 +5,10 @@ $(document).ready(function () {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         $('#menu-bar').css('transform', 'none');
     })
-
+    const style = 'color: #333; font-size:22px; font-family: "Montserrat", sans-serif; font-weight: bold;'
+    const style2 = 'color: #444; font-size:15px; font-family: "Montserrat", sans-serif; font-weight: 600;'
+    console.log("%c Bem vindo ao Olympia!", style);
+    console.log("%c   Feito com VueJS, CSS, TweenMax, SCSS, Stylus, jQuery e muito amor!", style2);
     var body = document.getElementsByTagName("body")[0];
 
     function detectarDirecaoRolagem(e) {
