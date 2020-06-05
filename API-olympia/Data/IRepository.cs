@@ -70,5 +70,6 @@ namespace API_olympia.Data
         List<object> SpObrasOrderByDataDesc();
         List<object> SpPublicacoesOrderByDataDesc();
         List<object> SpServicosOrderByDataDesc();
+        int SpUserNameId(string username);
     }
 }

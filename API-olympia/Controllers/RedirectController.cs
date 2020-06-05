@@ -614,5 +614,22 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+
+        [HttpGet("IdUsuarioPeloUsername/{username}")]
+        public async Task<IActionResult> GetIdUsuarioByUserName(string username)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuarios/IdByUserName/" + username);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
     }
 }

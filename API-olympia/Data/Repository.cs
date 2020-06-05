@@ -783,5 +783,25 @@ namespace API_olympia.Data
 
             return result;
         }
+
+        public int SpUserNameId(string username)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_UserNameId '" + username + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = 0;
+
+            while (leitor.Read())
+            {
+                result = Convert.ToInt32(leitor["idUsuario"]);
+            }
+            conn.Close();
+
+            return result;
+        }
+
     }
 }
