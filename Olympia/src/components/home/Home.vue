@@ -1,6 +1,5 @@
 <template>
   <main>
-    <div>
       <div id="container-home">
         <link rel="stylesheet" href="/src/assets/css/home.css" />
         <link rel="stylesheet" href="/src/assets/css/palaces.css" />
@@ -2024,7 +2023,6 @@
         <meu-footer></meu-footer>
         <meu-loading></meu-loading>
       </div>
-    </div>
   </main>
 </template>
 

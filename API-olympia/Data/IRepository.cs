@@ -64,5 +64,11 @@ namespace API_olympia.Data
         List<object> SpObrasNaoCurtidas();
         List<object> SpPublicacoesNaoCurtidas();
         List<object> SpServicosNaoCurtidos();
+        List<object> SpObrasOrderByData();
+        List<object> SpPublicacoesOrderByData();
+        List<object> SpServicosOrderByData();
+        List<object> SpObrasOrderByDataDesc();
+        List<object> SpPublicacoesOrderByDataDesc();
+        List<object> SpServicosOrderByDataDesc();
     }
 }

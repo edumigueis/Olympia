@@ -159,9 +159,37 @@ namespace API_olympia.Controllers
                 var result = this.Repo.SpObrasNaoCurtidas();
                 return Ok(result);
             }
-            catch(Exception e)
+            catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpGet("MaisRecentes")]
+        public async Task<IActionResult> GetObrasOrderByData()
+        {
+            try
+            {
+                var result = this.Repo.SpObrasOrderByData();
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpGet("MenosRecentes")]
+        public async Task<IActionResult> GetObrasOrderByDataDesc()
+        {
+            try
+            {
+                var result = this.Repo.SpObrasOrderByDataDesc();
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
         }
     }
