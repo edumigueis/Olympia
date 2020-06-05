@@ -298,3 +298,21 @@ Begin
 	where b.idServico  is null
 	order by dataPost
 End
+
+alter proc sp_ObrasOrderByData /*retorna todas as obras ordenadas pela data*/
+as
+Begin
+	select * from Obras order by dataPost
+End
+
+create proc sp_ServicosOrderByData /*retorna todos os serviços ordenados pela data*/
+as
+Begin
+	select * from Servicos order by dataPost
+End
+
+create proc sp_PublicacoesOrderByData /*retorna todas as publicações ordenadas pela data*/
+as
+Begin
+	select * from publicacoes order by dataPost
+End
