@@ -475,7 +475,7 @@
             <div class="slider">
               <div class="slide slide-0 active activo">
                 <div class="slide__bg"></div>
-                <div class="slide__content">
+                <div class="slide__content" id="content-1">
                   <div class="masonry-item">
                     <div class="masonry-content">
                       <div class="prof-cont-feed white-7">
@@ -954,7 +954,7 @@
               </div>
               <div class="slide slide-1">
                 <div class="slide__bg"></div>
-                <div class="slide__content">
+                <div class="slide__content" id="content-2">
                   <div class="masonry-item">
                     <div class="masonry-content">
                       <a class="link-to-serv" href="/#/detalhes"
@@ -2056,149 +2056,6 @@ export default {
   methods: {
     getMarkers() {
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Obras",
-        type: "GET",
-        dataType: "json",
-        contentType: "application/json",
-        beforeSend: function() {
-          $("#load-modal").addClass("loading");
-          $("body").addClass("loading");
-        },
-        success: function(data) {
-          console.log(data);
-          jQuery.each(data, function(index, item) {
-            var conteudoDiv =
-              '<div class="masonry-item" id="'+index+'-obra"><div class="masonry-content"><div class="prof-cont-feed white-7"><div class="prof-img-cont"><img class="prof-img-prop" id="prof-img-prop-obra-'+item.idObra+'" src=""/></div> <a href="/#/profile/'+item.idUsuario+'" class="prof-name-det black-to-white" id="obra-prof-name-link-'+item.idObra+'"></a><div class="prof-bio-det text-gray" id="obra-prof-bio-'+item.idObra+'">Bio</div></div>';
-            conteudoDiv +=
-              '<div class="post-img-cont"><a href="/#/obra/'+item.idObra+'"><figure class="snip1321" id="'+index+'-post"><div class="after"></div> <img id="obra-img-'+item.idObra+'" src="https://paintingvalley.com/image/watercolor-art-pinterest-22.jpg"/>';
-            conteudoDiv +=
-              '<figcaption><i class="fas fa-arrow-right"></i><div class="name-of-prof"><a href="/#/perfil/'+item.idUsuario+'" class="name-of-prof-link">Name</a></div><h2>'+item.nome+'</h2><div class="categories-cont-on-feed"><div class="cat-on-feed paint">'+item.categorias[0]+'</div><div class="cat-on-feed paint">'+item.categorias[1]+'</div><div class="cat-on-feed pers">'+item.categorias[2]+'</div><div class="cat-on-feed pers">Azul</div><div class="cat-on-feed paint">'+item.categorias[3]+'</div><div class="cat-on-feed pers">'+item.categorias[5]+'</div></div></figcaption></figure></a>';
-            conteudoDiv +=
-              '<div class="interact-container"><div class="stage stage-btn"><button class="trigger">ver mais...</button></div><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div></div> </div></div>';
-            $("#events-container").append(conteudoDiv);
-            $.ajax({
-              url:
-                "https://localhost:5001/api/redirect/Usuarios/" +
-                item.idUsuario,
-              type: "GET",
-              dataType: "json",
-              contentType: "application/json",
-              success: function(result) {
-                $('#prof-img-prop-obra-'+ item.idObra).attr('src', result.foto + "");
-                $('#obra-prof-name-link-'+ item.idObra).text(result.nome);
-                if(result.bio.length > 90)
-                $('#obra-prof-bio-'+ item.idObra).text(result.bio.substring(0, 90) +"...");
-                else
-                $('#obra-prof-bio-'+ item.idObra).text(result.bio);
-              }
-            });
-            $.ajax({
-              url:
-                "https://localhost:5001/api/redirect/GetFotosObra/" +
-                item.idObra,
-              type: "GET",
-              dataType: "json",
-              contentType: "application/json",
-              beforeSend: function() {
-                $("#load-modal").addClass("loading");
-              },
-              success: function(data) {
-                console.log(data);
-                $("obra-img-" + item.idObra).attr("src", data[0]);
-              }
-            });
-          });
-        },
-        error: function() {
-          $("body").removeClass("loading");
-          $("#load-modal").fadeOut();
-        }
-      });
-      $.ajax({
-        url: "https://localhost:5001/api/redirect/Servicos",
-        type: "GET",
-        dataType: "json",
-        contentType: "application/json",
-        beforeSend: function() {
-          $("#load-modal").addClass("loading");
-        },
-        success: function(data) {
-          console.log(data);
-          jQuery.each(data, function(index, item) {
-            var thereismore;
-            if (item.descricao.length > 330) {
-              thereismore = "...";
-            } else {
-              thereismore = "";
-            }
-            var conteudoDiv =
-              '<div class="masonry-item"><div class="masonry-content">';
-            conteudoDiv +=
-              '<a class="link-to-serv" href="' +
-              "/#/servico/" +
-              item.idServico +
-              '"><img id="img-serv-' +
-              index +
-              '" src="https://picsum.photos/450/380?image=65" class="img-serv"/></a>';
-            conteudoDiv +=
-              '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
-            conteudoDiv +=
-              '<h3 class="masonry-title">' +
-              item.nome +
-              '</h3><a href="/#/perfil/"' +
-              item.idUsuario +
-              ' id="name-prof-link-on-serv-' +
-              index +
-              '" class="name-of-prof-link on-2-link"></a>';
-            conteudoDiv +=
-              '<p class="masonry-description">' +
-              item.descricao.substring(0, 330) +
-              thereismore +
-              "</p></div></div>";
-            $("#events-container").append(conteudoDiv);
-            $.ajax({
-              url:
-                "https://localhost:5001/api/redirect/Usuarios/" +
-                item.idUsuario,
-              type: "GET",
-              dataType: "json",
-              contentType: "application/json",
-              success: function(result) {
-                $("name-prof-link-on-serv-" + index).text(result.nome);
-              }
-            });
-            $.ajax({
-              url:
-                "https://localhost:5001/api/redirect/FotosServico/" +
-                item.idServico,
-              type: "GET",
-              dataType: "json",
-              contentType: "application/json",
-              beforeSend: function() {
-                $("#load-modal").addClass("loading");
-              },
-              success: function(data) {
-                $("#load-modal").fadeOut();
-                console.log(data);
-                var foiImg = false;
-                jQuery.each(data, function(index, fotos) {
-                  if (foiImg == false) {
-                    $("img-serv-" + index).attr("src", fotos.foto);
-                    foiImg = true;
-                  } else {
-                    return;
-                  }
-                });
-              }
-            });
-          });
-        },
-        error: function() {
-          $("body").removeClass("loading");
-          $("#load-modal").fadeOut();
-        }
-      });
-      $.ajax({
         url: "https://localhost:5001/api/redirect/Publicacoes",
         type: "GET",
         dataType: "json",
@@ -2207,7 +2064,6 @@ export default {
           $("#load-modal").addClass("loading");
         },
         success: function(data) {
-          console.log(data);
           jQuery.each(data, function(index, item) {
             var conteudoDiv =
               '<div class="insp-item"><div class="inner-insp-item white-7"><div class="prof-cont-feed white-7 prof-insp"><div class="prof-img-cont"><img class="prof-img-prop" id="prof-inner-prop-img-' +
@@ -2229,8 +2085,7 @@ export default {
 
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/Usuarios/" +
-                item.idUsuario,
+                "https://localhost:5001/api/redirect/Usuario/" + item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2250,7 +2105,207 @@ export default {
             });
           });
         },
+        error: function(thrownError) {
+          $("body").removeClass("loading");
+          $("#load-modal").fadeOut();
+        }
+      });
+    },
+    getServicos() {
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/Servicos",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
+        },
+        success: function(data) {
+          jQuery.each(data, function(index, item) {
+            var thereismore;
+            if (item.descricao.length > 320) {
+              thereismore = "...";
+            } else {
+              thereismore = "";
+            }
+            var conteudoDiv =
+              '<div class="masonry-item"><div class="masonry-content">';
+            conteudoDiv +=
+              '<a class="link-to-serv" href="' +
+              "/#/servico/" +
+              item.idServico +
+              '"><img id="img-serv-' +
+              index +
+              '" src="a" class="img-serv"/></a>';
+            conteudoDiv +=
+              '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
+            conteudoDiv +=
+              '<h3 class="masonry-title">' +
+              item.nome +
+              '</h3><a href="#" id="name-prof-link-on-serv-' +
+              index +
+              '" class="name-of-prof-link on-2-link"></a>';
+            conteudoDiv +=
+              '<p class="masonry-description">' +
+              item.descricao.substring(0, 320) +
+              thereismore +
+              "</p></div></div>";
+            var idUser = item.idUsuario;
+            $("#content-2").append(conteudoDiv);
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/Usuario/" + item.idUsuario,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(result) {
+                if (result.idUsuario != 0) {
+                  $("#name-prof-link-on-serv-" + index).text(result.nome);
+                  $("#name-prof-link-on-serv-" + index).attr(
+                    "href",
+                    "/#/perfil/" + result.userName
+                  );
+                  $("body").removeClass("loading");
+                  $("#load-modal").fadeOut();
+                }
+              },
+              error: function() {
+                $("body").removeClass("loading");
+                $("#load-modal").fadeOut();
+              }
+            });
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/FotosDoServico/" +
+                item.idServico,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              beforeSend: function() {
+                $("#load-modal").addClass("loading");
+              },
+              success: function(fotos) {
+                $("#load-modal").fadeOut();
+                $("#img-serv-" + index).attr("src", fotos[0] + "");
+              }
+            });
+          });
+        },
         error: function() {
+          $("body").removeClass("loading");
+          $("#load-modal").fadeOut();
+        }
+      });
+    },
+    getObras() {
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/Obras",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
+          $("body").addClass("loading");
+        },
+        success: function(data) {
+          jQuery.each(data, function(index, item) {
+            var conteudoDiv =
+              '<div class="masonry-item" id="' +
+              index +
+              '-obra"><div class="masonry-content"><div class="prof-cont-feed white-7"><div class="prof-img-cont"><img class="prof-img-prop" id="prof-img-prop-obra-' +
+              index +
+              '" src=""/></div> <a href="/#/profile/" class="prof-name-det black-to-white" id="obra-prof-name-link-' +
+              index +
+              '"></a><div class="prof-bio-det text-gray" id="obra-prof-bio-' +
+              index +
+              '">Bio</div></div>';
+            conteudoDiv +=
+              '<div class="post-img-cont"><a href="/#/obra/' +
+              item.idObra +
+              '"><figure class="snip1321" id="' +
+              index +
+              '-post"><div class="after"></div> <img id="obra-img-' +
+              index +
+              '" src="/src/assets/images/unloaded-img.jpeg"/>';
+            conteudoDiv +=
+              '<figcaption><i class="fas fa-arrow-right"></i><div class="name-of-prof"><a href="/#/perfil/" id="name-of-prof-link-' +
+              index +
+              '" class="name-of-prof-link">Name</a></div><h2>' +
+              item.nome +
+              '</h2><div class="categories-cont-on-feed"><div class="cat-on-feed paint">' +
+              item.categorias[0] +
+              '</div><div class="cat-on-feed paint">' +
+              item.categorias[1] +
+              '</div><div class="cat-on-feed pers">' +
+              item.categorias[2] +
+              '</div><div class="cat-on-feed pers">Azul</div><div class="cat-on-feed paint">' +
+              item.categorias[3] +
+              '</div><div class="cat-on-feed pers">' +
+              item.categorias[5] +
+              "</div></div></figcaption></figure></a>";
+            conteudoDiv +=
+              '<div class="interact-container"><div class="stage stage-btn"><button class="trigger">ver mais...</button></div><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div></div> </div></div>';
+            $("#content-1").append(conteudoDiv);
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/Usuario/" + item.idUsuario,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(result) {
+                if (result.idUsuario != 0) {
+                  if (result.foto.length > 20) {
+                    $("#prof-img-prop-obra-" + index).attr(
+                      "src",
+                      result.foto + ""
+                    );
+                  } else {
+                    $("#prof-img-prop-obra-" + index)
+                      .parent()
+                      .css("background-color", result.foto);
+                    $("#prof-img-prop-obra-" + index)
+                      .parent()
+                      .append(
+                        '<span class="letter-prof">' +
+                          result.nome.substring(0, 1) +
+                          "</span>"
+                      );
+                    $("#artist-profile-pic").attr("src", "");
+                  }
+
+                  $("#obra-prof-name-link-" + index).text(result.nome);
+
+                  if (result.bio.length > 90) {
+                    $("#obra-prof-bio-" + index).text(
+                      result.bio.substring(0, 90) + "..."
+                    );
+                  } else {
+                    $("#obra-prof-bio-" + index).text(result.bio);
+                  }
+
+                  $("#name-of-prof-link-" + index).text(result.nome);
+
+                  $.ajax({
+                    url:
+                      "https://localhost:5001/api/redirect/FotosDaObra/" +
+                      item.idObra,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json",
+                    beforeSend: function() {
+                      $("#load-modal").addClass("loading");
+                    },
+                    success: function(data) {
+                      $("#obra-img-" + index).attr("src", data[0]);
+                    },
+                    error: function() {}
+                  });
+                }
+              }
+            });
+          });
+        },
+        error: function(thrownError) {
           $("body").removeClass("loading");
           $("#load-modal").fadeOut();
         }
@@ -2259,6 +2314,8 @@ export default {
   },
   mounted() {
     this.getMarkers();
+    this.getServicos();
+    this.getObras();
   }
 };
 

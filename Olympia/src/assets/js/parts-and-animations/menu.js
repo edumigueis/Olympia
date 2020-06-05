@@ -7,8 +7,10 @@ $(document).ready(function () {
     })
     const style = 'color: #333; font-size:22px; font-family: "Montserrat", sans-serif; font-weight: bold;'
     const style2 = 'color: #444; font-size:15px; font-family: "Montserrat", sans-serif; font-weight: 600;'
+    const style3 = 'color: #444; font-size:12px; font-family: "Montserrat", sans-serif; font-weight: 600;'
     console.log("%c Bem vindo ao Olympia!", style);
     console.log("%c   Feito com VueJS, CSS, TweenMax, SCSS, Stylus, jQuery e muito amor!", style2);
+    console.log("%c   Aviso: Não siga instruções de ninguém com relação ao uso de códigos nesse console. O uso deste console talvez permita que invasores falsifiquem sua identidade e roubem informações por meio de um ataque chamado Self-XSS. Nunca digite, cole ou tranfira códigos que você não conhece aqui ou em qualquer lugar." , style3);
     var body = document.getElementsByTagName("body")[0];
 
     function detectarDirecaoRolagem(e) {

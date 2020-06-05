@@ -2713,7 +2713,7 @@ figure.snip1321:hover figcaption{
 .masonry-description {
   font-family: 'Montserrat', sans-serif;
   padding: 1.5rem;
-  font-size: .75rem;
+  font-size: .9rem;
   border-top: 1px solid rgba(0, 0, 0, .05);
   pointer-events: none;
 }
@@ -4189,4 +4189,10 @@ figure.snip1321:hover figcaption{
   animation-name: mouse;
   animation-duration: 0.7s;
   animation-iteration-count: infinite;
+}
+.letter-prof{
+  color: #eee;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
 }

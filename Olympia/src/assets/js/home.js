@@ -17,7 +17,7 @@ setInterval(() => {
   }
 }, 500);
 
-setInterval(() => {
+/*setInterval(() => {
   if ($('#container-home').length && $('.modal-slider').css('display') == 'none') {
     var classe = $('.m--active-control').attr('class');
     classe = classe.split(" ")[1];
@@ -50,7 +50,7 @@ setInterval(() => {
   else if (!$('#container-home').length) {
     jaFoiHome3 = false;
   }
-}, 500);
+}, 500);*/
 
 setInterval(() => {
   if ($('#container-home').length && jaFoiHome == false) {

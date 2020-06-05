@@ -44,6 +44,19 @@ var colorList = [
   "CCFF00",
   "CC04FF"
 ];
+var sentences= [
+  'Temos a arte para não morrer da verdade. -Friedrich Nietzsche',
+  'A arte é a autoexpressão lutando para ser absoluta. -Fernando Pessoa',
+  'A arte diz o indizível; exprime o inexprimível, traduz o intraduzível. -Leonardo da Vinci',
+  'A música é o tipo de arte mais perfeita: nunca revela o seu último segredo. -Oscar Wilde',
+  'A arte é a mentira que nos permite conhecer a verdade. -Pablo Picasso',
+  'A arte é uma forma de crescimento para a liberdade, um caminho para a vida. -Fayga Ostrower',
+  'O trabalho do artista é aprofundar sempre no mistério. -Francis Bacon',
+  'Arte não se trata de arte. Arte é sobre vida. E isso a resume. - Louise Bourgeois',
+  'Penso que não há nada mais artístico do que amar verdadeiramente as pessoas. -Vincent van Gogh'
+],
+
+maxSentences = sentences.length;
 var JaFoiForCad = false;
 var selectedImage;
 var isSelImg = false;
@@ -52,8 +65,8 @@ setInterval(() => {
   if ($("#container-cad-user").length && jaFoiCadUser == false) {
     $(function () {
       var firstLet = null;
-
-      $("#name").focusout(function () {
+      
+      $("#name").on('focusout', function() {
         if (isSelImg == false) {
           if ($("#name").val() != "") {
             $(".zmdi.zmdi-palette").fadeIn();
@@ -480,7 +493,10 @@ setInterval(() => {
         $(".ui-widget-overlay").css("display", "block");
         $("#pick-image-modal").css("display", "block");
       });
-
+      function getRandomSentence(){
+        var index= Math.floor(Math.random() * (sentences.length));
+        return sentences[index];
+      }
       $(document.body).on("click", "#signup", function (eve) {
         eve.preventDefault();
         if (!jaFoiPostCadUser) {
@@ -507,6 +523,7 @@ setInterval(() => {
           } else {
             valorFoto = codeHex;
           }
+        var sentence = getRandomSentence();
 
           var myObject = {
             nome: $('#name').val(),
@@ -515,7 +532,7 @@ setInterval(() => {
             senha: $('#pass').val(),
             foto: "" + valorFoto,
             biografia: ".",
-            bio: ".",
+            bio: sentence + "",
             configs: "{'menu':0,'deslig':0,'login':0,'capa':0,'dark':0}",
             seguindo: "{}",
             seguidores: "{}"

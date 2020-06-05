@@ -188,6 +188,23 @@ namespace API_olympia.Controllers
             }
         }
 
+        [HttpGet("Obras")]
+        public async Task<IActionResult> GetObras()
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Obras");
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
         [HttpGet("Servicos")]
         public async Task<IActionResult> GetServicos()
         {
