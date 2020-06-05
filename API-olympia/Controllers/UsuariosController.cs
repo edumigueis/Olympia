@@ -172,5 +172,18 @@ namespace API_olympia.Controllers
             }
         }
 
+        [HttpGet("IdByUserName/{username}")]
+        public async Task<IActionResult> GetIdByUsername(string username)
+        {
+            try
+            {
+                var result = this.Repo.SpUserNameId(username);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+            }
+        }
     }
 }

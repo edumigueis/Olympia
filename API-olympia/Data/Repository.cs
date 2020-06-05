@@ -617,5 +617,191 @@ namespace API_olympia.Data
 
             return result;
         }
+
+        public List<object> SpObrasOrderByData()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ObrasOrderByData";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["categorias"],
+                                   leitor["tags"],
+                                   leitor["dataPost"],
+                                   leitor["dadosTecnicos"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpPublicacoesOrderByData()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_PublicacoesOrderByData";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["texto"],
+                                   leitor["tags"],
+                                   leitor["foto"],
+                                   leitor["dataPost"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpServicosOrderByData()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ServicosOrderByData";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["categorias"],
+                                   leitor["tags"],
+                                   leitor["dataPost"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpObrasOrderByDataDesc()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ObrasOrderByData";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["categorias"],
+                                   leitor["tags"],
+                                   leitor["dataPost"],
+                                   leitor["dadosTecnicos"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            result.Reverse();
+
+            return result;
+        }
+
+        public List<object> SpPublicacoesOrderByDataDesc()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_PublicacoesOrderByData";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["texto"],
+                                   leitor["tags"],
+                                   leitor["foto"],
+                                   leitor["dataPost"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            result.Reverse();
+
+            return result;
+        }
+
+        public List<object> SpServicosOrderByDataDesc()
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ServicosOrderByData";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["categorias"],
+                                   leitor["tags"],
+                                   leitor["dataPost"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            result.Reverse();
+
+            return result;
+        }
+
+        public int SpUserNameId(string username)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_UserNameId '" + username + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = 0;
+
+            while (leitor.Read())
+            {
+                result = Convert.ToInt32(leitor["idUsuario"]);
+            }
+            conn.Close();
+
+            return result;
+        }
+
     }
 }

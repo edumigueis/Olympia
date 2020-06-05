@@ -316,3 +316,10 @@ as
 Begin
 	select * from publicacoes order by dataPost
 End
+
+create proc sp_UserNameId /*retorna o ID do usuário, baseado no username*/
+@userName varchar(30)
+as
+Begin
+	select idUsuario from Usuarios where username = @userName
+End
