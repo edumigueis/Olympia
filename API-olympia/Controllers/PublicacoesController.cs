@@ -5,6 +5,7 @@ using API_olympia.Models;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Newtonsoft.Json;
 
 namespace API_olympia.Controllers
 {
@@ -176,6 +177,21 @@ namespace API_olympia.Controllers
             catch
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpGet("RedirectToPost/{json}")]
+        public async Task<IActionResult> RedirectToPost(string json)
+        {
+            try
+            {
+                Publicacoes publicacoes = JsonConvert.DeserializeObject<Publicacoes>(json);
+
+                return await post(publicacoes);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
             }
         }
     }

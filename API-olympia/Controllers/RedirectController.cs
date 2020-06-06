@@ -51,6 +51,87 @@ namespace API_olympia.Controllers
             }
         }
 
+        [HttpPost("Obra")]
+        public async Task<IActionResult> PostObra(Obras model)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+
+                IDictionary<string, object> result = new Dictionary<string, object>();
+                var properties = TypeDescriptor.GetProperties(model);
+                foreach (PropertyDescriptor property in properties)
+                {
+                    result.Add(property.Name, property.GetValue(model));
+                }
+
+                JsonSerializerSettings settings = new JsonSerializerSettings { Converters = new[] { new MyConverter() } };
+                string json = JsonConvert.SerializeObject(result, settings);
+                return Redirect("/api/Obras/RedirectToPost/" + json);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpPost("Servico")]
+        public async Task<IActionResult> PostServico(Servicos model)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+
+                IDictionary<string, object> result = new Dictionary<string, object>();
+                var properties = TypeDescriptor.GetProperties(model);
+                foreach (PropertyDescriptor property in properties)
+                {
+                    result.Add(property.Name, property.GetValue(model));
+                }
+
+                JsonSerializerSettings settings = new JsonSerializerSettings { Converters = new[] { new MyConverter() } };
+                string json = JsonConvert.SerializeObject(result, settings);
+                return Redirect("/api/Servicos/RedirectToPost/" + json);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpPost("Publicacao")]
+        public async Task<IActionResult> PostPublicacao(Publicacoes model)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+
+                IDictionary<string, object> result = new Dictionary<string, object>();
+                var properties = TypeDescriptor.GetProperties(model);
+                foreach (PropertyDescriptor property in properties)
+                {
+                    result.Add(property.Name, property.GetValue(model));
+                }
+
+                JsonSerializerSettings settings = new JsonSerializerSettings { Converters = new[] { new MyConverter() } };
+                string json = JsonConvert.SerializeObject(result, settings);
+                return Redirect("/api/Publicacoes/RedirectToPost/" + json);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
 
         [HttpGet("Evento/{idEvento}")]
         public async Task<IActionResult> GetEvento(int idEvento)
@@ -58,9 +139,6 @@ namespace API_olympia.Controllers
             try
             {
                 ICollection <StringValues> lista;
-                lista = HttpContext.Request.Headers.Values;
-                IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Eventos/" + idEvento);
             }
             catch
@@ -642,6 +720,23 @@ namespace API_olympia.Controllers
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 Armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios/IdByUserName/" + username);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpPost("MudarBio")]
+        public async Task<IActionResult> MudarBio(string json)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuarios/RedirectToPostBio/" + json);
             }
             catch
             {

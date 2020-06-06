@@ -330,3 +330,13 @@ as
 Begin
 	select codObra from Obras where codObra = @codObra
 End
+
+create proc sp_MudarBio
+@bio varchar(50),
+@biografia varchar(1200),
+@idUsuario int
+as
+Begin
+	update Usuarios set bio = @bio, biografia = @biografia where idusuario = @idUsuario
+End
+

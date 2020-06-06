@@ -824,5 +824,15 @@ namespace API_olympia.Data
             else
                 return true;
         }
+
+        public void SpMudarBio(string bio, string biografia, int idUsuario)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_MudarBio '" + bio + "','" + biografia + "'," + idUsuario;
+            cmd.ExecuteReader();
+            conn.Close();
+        }
     }
 }

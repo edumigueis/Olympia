@@ -72,5 +72,6 @@ namespace API_olympia.Data
         List<object> SpServicosOrderByDataDesc();
         int SpUserNameId(string username);
         bool SpExisteCodigoObra(string codObra);
+        void SpMudarBio(string bio, string biografia, int idUsuario);
     }
 }
