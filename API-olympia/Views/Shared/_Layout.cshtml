@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
+<body style="background:url(https://img.wallpapersafari.com/desktop/1920/1080/91/75/wfpsHF.jpg)">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light mb-5">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">API_olympia</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -29,18 +29,18 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
                             </li>
                         }
-                        </ul>
+                    </ul>
                     <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                               @if (Armazenador.StringValueNome == null)
+                                @if (Armazenador.StringValueNome == null)
                                 {
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
                                 }
                                 else
                                 {
                                     <form method="post" action="/api/Account/Logout">
-                                        <button type="submit" class="nav-link btn btn-link py-0" style="width:auto">
+                                        <button type="submit" class="nav-link btn btn-link" style="width:auto;margin:-1px;">
                                             Logout @Armazenador.StringValueNome
                                         </button>
                                     </form>
@@ -57,9 +57,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-muted  bg-light ">
         <div class="container">
-            &copy; 2020 - API_olympia - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
+            &copy; 2020 - API_olympia - <a asp-area="" asp-controller="Home" asp-action="Privacy" style="color:#299ec7">Privacidade</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

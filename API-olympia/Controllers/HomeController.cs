@@ -36,12 +36,6 @@ namespace API_olympia.Controllers
             return View();
         }
 
-        [CustomAuthorizeAttribute]
-        public IActionResult Admin()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
