@@ -180,48 +180,54 @@ export default {
         type: "GET",
         dataType: "json",
         contentType: "application/json",
-        beforeSend: function(){
-            $('#load-modal').addClass('loading'); 
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
         },
         success: function(field) {
-          $('#load-modal').fadeOut(); 
+          $("#load-modal").fadeOut();
           $("#art-detail-p").text(field.dadosTecnicos);
           $("#art-data").text(field.descricao);
           $("#art-name").text(field.nome);
           $("#page-det-name").text(field.nome);
-              $.ajax({
-                url: "https://localhost:5001/api/Redirect/Usuario/" + field.idUsuario,
-                type: "GET",
-                dataType: "json",
-                contentType: "application/json",
-                success: function(resul) {
-                  $("#user-link").text("@" + resul.userName);
-                  alert(resul.userName);
-                  $("#user-link").attr("href", "/#/perfil/"+ resul.userName);
-                  $("#visit-profile-link").attr("href", "/#/perfil/"+ resul.userName);
-                  $("#bio").text(resul.bio);
-                  $("#name").text(resul.nome);
-                  if(resul.foto.length > 20){
-                      $("#artist-profile-pic").attr(
-                    "src", resul.foto
-                  );
-                  } else{
-                    $("#artist-pic").css('background-color',resul.foto);
-                    $("#artist-pic").append('<span class="letter-prof">'+resul.nome.substring(0,1)+'</span>');
-                    $("#artist-profile-pic").attr('src',"");
-                  }
-                },
+          $.ajax({
+            url:
+              "https://localhost:5001/api/Redirect/Usuario/" + field.idUsuario,
+            type: "GET",
+            dataType: "json",
+            contentType: "application/json",
+            success: function(resul) {
+              $("#user-link").text("@" + resul.userName);
+              alert(resul.userName);
+              $("#user-link").attr("href", "/#/perfil/" + resul.userName);
+              $("#visit-profile-link").attr(
+                "href",
+                "/#/perfil/" + resul.userName
+              );
+              $("#bio").text(resul.bio);
+              $("#name").text(resul.nome);
+              if (resul.foto.length > 20) {
+                $("#artist-profile-pic").attr("src", resul.foto);
+              } else {
+                $("#artist-pic").css("background-color", resul.foto);
+                $("#artist-pic").append(
+                  '<span class="letter-prof">' +
+                    resul.nome.substring(0, 1) +
+                    "</span>"
+                );
+                $("#artist-profile-pic").attr("src", "");
+              }
+            },
             error: function(thrownError) {
               //Add these parameters to display the required response
               console.log(thrownError);
-              $('#load-modal').fadeOut(); 
+              $("#load-modal").fadeOut();
             }
           });
         },
         error: function(thrownError) {
           //Add these parameters to display the required response
           console.log(thrownError);
-          $('#load-modal').fadeOut(); 
+          $("#load-modal").fadeOut();
           alert("oops");
         }
       });
@@ -230,18 +236,22 @@ export default {
         type: "GET",
         dataType: "json",
         contentType: "application/json",
-        beforeSend: function(){
-            $('#load-modal').addClass('loading'); 
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
         },
         success: function(result) {
           result.forEach(element => {
-            $('.masonry').append('<div class="brick"> <img class="img-col" src="'+element+'" /></div>');
+            $(".masonry").append(
+              '<div class="brick"> <img class="img-col" src="' +
+                element +
+                '" /></div>'
+            );
           });
         },
         error: function(thrownError) {
           //Add these parameters to display the required response
           console.log(thrownError);
-          $('#load-modal').fadeOut(); 
+          $("#load-modal").fadeOut();
           alert("oops");
         }
       });

@@ -38,7 +38,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var result = await this.Repo.GetAllEventosAsyncById(idServico);
+                var result = await this.Repo.GetAllServicosAsyncById(idServico);
                 return Ok(result);
             }
             catch
