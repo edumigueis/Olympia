@@ -770,14 +770,13 @@ export default {
           url: "https://localhost:5001/api/Redirect/Obras",
           data: jsonInput,
           contentType: "application/json",
-          success: function() {
-            $(".success-msg").fadeIn();
-            setTimeout(function() {
-              $(".success-msg").animate({ left: -300 });
-              $(".success-msg").fadeOut();
-            }, 4000);
-            $(".success-msg").css("left", "40px");
-          },
+          complete: function (code, data) {
+              if (code.status === 201) {
+                console.log(data);
+              } else {
+                console.log(data);
+              }
+            },
           fail: function() {
             $('#small-footer').css('margin-bottom', '-100px')
             var erro = "<p>Algo deu errado. Tente postar novamente mais tarde.</p>"

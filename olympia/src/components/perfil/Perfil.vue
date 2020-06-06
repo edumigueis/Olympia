@@ -685,6 +685,8 @@
                           name="signup"
                           class="form-submit"
                           value="Salvar"
+                          id="submit-bio"
+                          v-on:click="altBio()"
                         />
                       </div>
                     </form>
@@ -723,6 +725,43 @@ export default {
     "meu-mouse": Mouse,
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
+  },
+  data() {
+    return {
+      data: null
+    };
+  },
+  methods: {
+    altBio(){
+      var myObjectPubli = {
+          bio: $('#bio').val(),
+          biografia: $('#biografia').val(),
+        };
+        var jsonInput = JSON.stringify(myObjectPubli);
+
+        jaFoiPostCadUser = true;
+        $.ajax({
+          type: "POST",
+          url: "https://localhost:5001/api/Redirect/MudarBio",
+          data: jsonInput,
+          contentType: "application/json",
+          success: function() {
+            $(".success-msg").fadeIn();
+            setTimeout(function() {
+              $(".success-msg").animate({ left: -300 });
+              $(".success-msg").fadeOut();
+            }, 4000);
+            $(".success-msg").css("left", "40px");
+          },
+          fail: function() {
+            alert("deu erro");
+          },
+          dataType: "json"
+        });
+    },
+    altProf(){
+
+    }
   }
 };
 </script>
