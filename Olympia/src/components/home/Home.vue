@@ -2206,6 +2206,7 @@ export default {
           $("body").addClass("loading");
         },
         success: function(data) {
+          
           jQuery.each(data, function(index, item) {
             var conteudoDiv =
               '<div class="masonry-item" id="' +
@@ -2296,7 +2297,9 @@ export default {
                     success: function(data) {
                       $("#obra-img-" + index).attr("src", data[0]);
                     },
-                    error: function() {}
+                    error: function(thrownError) {
+
+                    }
                   });
                 }
               }

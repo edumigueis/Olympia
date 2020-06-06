@@ -192,7 +192,7 @@ namespace API_olympia.Controllers
         public async Task<IActionResult> GetObras()
         {
             try
-            {
+           {
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
