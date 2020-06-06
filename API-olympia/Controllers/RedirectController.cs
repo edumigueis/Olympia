@@ -57,7 +57,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                ICollection <StringValues> lista;
+                ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 Armazenador.StringValueRoute = listagem[5];

@@ -770,8 +770,11 @@ export default {
           url: "https://localhost:5001/api/Redirect/Obra",
           data: jsonInput,
           contentType: "application/json",
-          complete: function (code, data) {
+          succes: function (code, data) {
             alert("cu");
+            alert(code);
+            alert(code.status);
+            alert(data);
               if (code.status === 201) {
                 console.log(data);
               } else {
