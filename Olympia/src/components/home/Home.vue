@@ -2286,7 +2286,7 @@ export default {
                   $.ajax({
                     url:
                       "https://localhost:5001/api/redirect/FotosDaObra/" +
-                      item.idObra,
+                      item.codObra,
                     type: "GET",
                     dataType: "json",
                     contentType: "application/json",

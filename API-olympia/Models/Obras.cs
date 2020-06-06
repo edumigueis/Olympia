@@ -36,5 +36,8 @@ namespace API_olympia.Models
         [Required]
         [StringLength(200, ErrorMessage = " O campo dados técnicos não deve ter mais do que 200 caracteres.")]
         public string DadosTecnicos { get; set; }
+
+        [StringLength(50)]
+        public string CodObra { get; set; }
     }
 }

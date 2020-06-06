@@ -94,17 +94,32 @@ namespace API_olympia.Controllers
         public async Task<IActionResult> post(Obras model)
         {
             try
-            {
+            {            
+                var cod = GeradorDeCodigo.alfanumericoAleatorio(50);
+                if (Repo.SpExisteCodigoObra(cod))
+                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
+                if (Repo.SpExisteCodigoObra(cod))
+                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
+                if (Repo.SpExisteCodigoObra(cod))
+                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
+                if (Repo.SpExisteCodigoObra(cod))
+                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
+                if (Repo.SpExisteCodigoObra(cod))
+                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
+
+                model.CodObra = cod;
+
+                
                 this.Repo.Add(model);
-                //
+  
                 if (await this.Repo.SaveChangesAsync())
                 {
-                    return Ok();
+                    return Created($"/api/Obras/{model.IdObra}", model);
                 }
             }
-            catch
+            catch (Exception e)
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
             }
             return BadRequest();
         }
