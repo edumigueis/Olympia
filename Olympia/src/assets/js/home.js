@@ -15,9 +15,9 @@ setInterval(() => {
     $('.slider-container').css('height', num + "px");
     resizeAllGridItems();
   }
-}, 500);
+}, 700);
 
-/*setInterval(() => {
+setInterval(() => {
   if ($('#container-home').length && $('.modal-slider').css('display') == 'none') {
     var classe = $('.m--active-control').attr('class');
     classe = classe.split(" ")[1];
@@ -50,7 +50,7 @@ setInterval(() => {
   else if (!$('#container-home').length) {
     jaFoiHome3 = false;
   }
-}, 500);*/
+}, 500);
 
 setInterval(() => {
   if ($('#container-home').length && jaFoiHome == false) {
@@ -739,7 +739,7 @@ setInterval(() => {
   else if (!$('#container-home').length) {
     jaFoiHome = false;
   }
-}, 100);
+}, 500);
 
 function resizeAllGridItems() {
   allItems = document.getElementsByClassName("masonry-item");
