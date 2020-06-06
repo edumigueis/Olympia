@@ -78,7 +78,6 @@ C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
