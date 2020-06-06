@@ -767,10 +767,11 @@ export default {
         jaFoiPostCadUser = true;
         $.ajax({
           type: "POST",
-          url: "https://localhost:5001/api/Redirect/Obras",
+          url: "https://localhost:5001/api/Redirect/Obra",
           data: jsonInput,
           contentType: "application/json",
           complete: function (code, data) {
+            alert("cu");
               if (code.status === 201) {
                 console.log(data);
               } else {
