@@ -404,6 +404,7 @@
                       placeholder="Título"
                       name="name"
                       maxlength="40"
+                      id="titulo-serv"
                       required
                     />
                   </div>
@@ -413,6 +414,7 @@
                       type="text"
                       placeholder="Curta Descrição"
                       name="birthday"
+                      id="short-desc-serv"
                       maxlength="370"
                       required
                     />
@@ -421,12 +423,13 @@
                     <textarea
                       class="input--style-3 text-area-desc"
                       placeholder="Descrição"
+                      id="desc-serv"
                       rows="1"
                     ></textarea>
                   </div>
                   <div class="input-group">
                     <div class="select">
-                      <select name="slct" id="slct">
+                      <select name="slct" id="slct-serv">
                         <option
                           title="Arte Digital"
                           value="Arte Digital"
@@ -831,7 +834,148 @@ export default {
         }
     },
     postServ(){
+      event.preventDefault();
 
+        if ($("#titulo-serv").val() == "" || $("#titulo-serv").val().length < 2) {
+          $("#titulo-serv").addClass("wrong");
+          return;
+        } else if ($("#desc-serv").val() == "" || $("#desc-serv").val().length < 150) {
+          $("#desc-serv").addClass("wrong");
+          return;
+        } else if (
+          $("#search-select-serv")
+            .text()
+            .trim() === "Selecione Categorias"
+        ) {
+          $("#search-select-serv").addClass("wrong");
+          return;
+        }
+
+        var arteNm = $("#slct-serv option:selected").text();
+        var arteSel = 0;
+        switch (arteNm) {
+          case "Arte Digital":
+            arteSel = 1;
+            break;
+          case "Arquitetura":
+            arteSel = 2;
+            break;
+          case "Artes Cenicas":
+            arteSel = 3;
+            break;
+          case "Cinema":
+            arteSel = 4;
+            break;
+          case "Escultura":
+            arteSel = 5;
+            break;
+          case "Fotografia":
+            arteSel = 6;
+            break;
+          case "Literatura":
+            arteSel = 7;
+            break;
+          case "Música":
+            arteSel = 8;
+            break;
+          case "Pintura":
+            arteSel = 9;
+            break;
+        }
+        alert($("#search-select-serv").text());
+
+
+        var finalDate = new Date().toISOString().slice(0, 19);
+
+        var myObjectPubli = {
+          idUsuario: 1,
+          nome: $("#titulo").val(),
+          descricao: $("#desc").val(),
+          categorias: $("#search-select-serv")
+            .text()
+            .trim(),
+          tags:
+            "{" +
+            $("#tag-serv-1").val() +
+            "," +
+            $("#tag-serv-2").val() +
+            "," +
+            $("#tag-serv-3").val() +
+            "," +
+            $("#tag-serv-4").val() +
+            "," +
+            $("#tag-serv-5").val() +
+            "}",
+          idArte: arteSel,
+          dataPost: finalDate
+        };
+        var jsonInput = JSON.stringify(myObjectPubli);
+        console.log(jsonInput);
+        jaFoiPostCadUser = true;
+        $.ajax({
+          type: "POST",
+          url: "https://localhost:5001/api/Redirect/Servico",
+          data: jsonInput,
+          contentType: "application/json",
+          succes: function (code, data) {
+            alert("cu");
+            alert(code);
+            alert(code.status);
+            alert(data);
+              if (code.status === 201) {
+                console.log(data);
+              } else {
+                console.log(data);
+              }
+            },
+          fail: function() {
+            $('#small-footer').css('margin-bottom', '-100px')
+            var erro = "<p>Algo deu errado. Tente postar novamente mais tarde.</p>"
+            $(".p-t-10").append(erro);
+          },
+          dataType: "json"
+        });
+
+        var vetorFotos = [$("#serv-1").attr("src"),$("#serv-2").attr("src"),$("#serv-3").attr("src"),$("#serv-4").attr("src"), $("#serv-5").attr("src"),$("#serv-6").attr("src"),$("#serv-7").attr("src"),$("#serv-8").attr("src")];
+        console.log(vetorFotos);
+        var nVetorFotos;
+        var contador = 0;
+        for(var i = 0; i < 9; i++){
+          if(vetorFotos[i].toString().substring(0,4) != "/src"){
+            nVetorFotos[contador] = vetorFotos[i];
+            contador++
+          }
+        }
+        for(var f = 0; f < nVetorFotos.length; f++){
+          var jsonVetorFotos = {
+          foto: nVetorFotos[f] + "",
+          idEvento: 0,
+          idObra: 0,
+          idServico: 0 /*Aqui vem o id do serv*/ 
+          };
+          var jsonInputFotosServ = JSON.stringify(jsonVetorFotos);
+
+          $.ajax({
+          type: "POST",
+          url: "https://localhost:5001/api/Redirect/Fotos",
+          data: jsonInputFotosServ,
+          contentType: "application/json",
+          success: function() {
+            $(".success-msg").fadeIn();
+            setTimeout(function() {
+              $(".success-msg").animate({ left: -300 });
+              $(".success-msg").fadeOut();
+            }, 4000);
+            $(".success-msg").css("left", "40px");
+          },
+          fail: function() {
+            $('#small-footer').css('margin-bottom', '-100px')
+            var erro = "<p>Algo deu errado. Tente postar novamente mais tarde.</p>"
+            $(".p-t-10").append(erro);
+          },
+          dataType: "json"
+        });
+        }
     }
   },
   mounted() {
