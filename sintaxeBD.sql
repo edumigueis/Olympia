@@ -323,3 +323,10 @@ as
 Begin
 	select idUsuario from Usuarios where username = @userName
 End
+
+create proc sp_ExisteCodigoObra /*as obras existentes com certo código*/
+@codObra varchar(50)
+as
+Begin
+	select codObra from Obras where codObra = @codObra
+End
