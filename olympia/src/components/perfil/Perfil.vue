@@ -736,6 +736,7 @@ export default {
       var myObjectPubli = {
           bio: $('#bio').val(),
           biografia: $('#biografia').val(),
+          idUsuario: 1
         };
         var jsonInput = JSON.stringify(myObjectPubli);
 
