@@ -531,7 +531,7 @@ setInterval(() => {
             email: $('#email').val(),
             senha: $('#pass').val(),
             foto: "" + valorFoto,
-            biografia: ".",
+            biografia: "nossa que legal",
             bio: sentence + "",
             configs: "{'menu':0,'deslig':0,'login':0,'capa':0,'dark':0}",
             seguindo: "{}",
@@ -542,7 +542,7 @@ setInterval(() => {
           var jsonInput = JSON.stringify(myObject);
 
           jaFoiPostCadUser = true;
-
+          console.log(jsonInput);
           $.ajax({
             type: "POST",
             data: jsonInput,
@@ -558,10 +558,12 @@ setInterval(() => {
                 $(".ui-widget-overlay").css("display", "block");
                 $(".warn").html("Algúm dado foi fornecido incorretamente. Ou ocorreu um problema com o servidor. Tente novamente.");
                 $("#name").val("");
-                setTimeout(function () {
+                /*setTimeout(function () {
                   location.reload();
-                }, 2000)
+                }, 2000)*/
               }
+            }, error: function(er){
+              console.log(er);
             }
           });
         }
