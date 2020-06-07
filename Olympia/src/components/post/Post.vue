@@ -653,8 +653,9 @@ export default {
         var finalDate = new Date().toISOString().slice(0, 19);
 
         var myObjectPubli = {
+          idUsuario: 1,
           texto: $("#msg").val(),
-          tags: "",
+          tags: "{tag1}",
           foto: "" + valorFoto,
           dataPost: finalDate
         };
@@ -663,7 +664,7 @@ export default {
         jaFoiPostCadUser = true;
         $.ajax({
           type: "POST",
-          url: "https://localhost:5001/api/Redirect/Publicacoes",
+          url: "https://localhost:5001/api/Redirect/Publicacao",
           data: jsonInput,
           contentType: "application/json",
           success: function() {
@@ -674,7 +675,8 @@ export default {
             }, 4000);
             $(".success-msg").css("left", "40px");
           },
-          fail: function() {
+          fail: function(error) {
+            console.log(error);
             var erro =
               '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
             $(".insp-post-cont").append(erro);
