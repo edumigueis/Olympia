@@ -11,6 +11,8 @@ using Microsoft.Extensions.Primitives;
 using System;
 using System.ComponentModel;
 using Newtonsoft.Json;
+using System.Collections;
+using System.Linq;
 
 namespace API_olympia.Controllers
 {
@@ -737,6 +739,48 @@ namespace API_olympia.Controllers
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 Armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios/RedirectToPostBio/" + json);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpPost("VerificarDados")]
+        public async Task<IActionResult> VerificarDados(Dados json)
+        {
+            try
+            {
+                IDictionary<string, object> result = new Dictionary<string, object>();
+                var properties = TypeDescriptor.GetProperties(json);
+                foreach (PropertyDescriptor property in properties)
+                {
+                    result.Add(property.Name, property.GetValue(json));
+                }
+                var user = result.First().Value;
+                var senha = result.Last().Value;
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuarios/RedirectToPostVerificarDados/" + user + "," + senha );
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("UserByLoginData/{info}")]
+        public async Task<IActionResult> UserByLoginData(string info)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                Armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuarios/UserByLoginData/" + info);
             }
             catch
             {

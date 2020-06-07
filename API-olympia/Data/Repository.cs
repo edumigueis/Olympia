@@ -118,7 +118,7 @@ namespace API_olympia.Data
             return await consultaPublicacoes.FirstOrDefaultAsync();
         }
 
-         public async Task<Obras[]> GetAllObrasAsync()
+        public async Task<Obras[]> GetAllObrasAsync()
         {
             IQueryable<Obras> consultaObras = this.Context.Obras;
             consultaObras = consultaObras.OrderBy(p => p.IdObra);
@@ -133,7 +133,7 @@ namespace API_olympia.Data
             return await consultaObras.FirstOrDefaultAsync();
         }
 
-         public async Task<Curtidas[]> GetAllCurtidasAsync()
+        public async Task<Curtidas[]> GetAllCurtidasAsync()
         {
             IQueryable<Curtidas> consultaCurtidas = this.Context.Curtidas;
             consultaCurtidas = consultaCurtidas.OrderBy(p => p.IdCurtida);
@@ -148,7 +148,7 @@ namespace API_olympia.Data
             return await consultaCurtidas.FirstOrDefaultAsync();
         }
 
-         public async Task<Servicos[]> GetAllServicosAsync()
+        public async Task<Servicos[]> GetAllServicosAsync()
         {
             IQueryable<Servicos> consultaServicos = this.Context.Servicos;
             consultaServicos = consultaServicos.OrderBy(p => p.IdServico);
@@ -833,6 +833,110 @@ namespace API_olympia.Data
             cmd.CommandText = "sp_MudarBio '" + bio + "','" + biografia + "'," + idUsuario;
             cmd.ExecuteReader();
             conn.Close();
+        }
+
+        public string SpVerificarDadosByUser(string username)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_VerificarDadosByUser '" + username.Replace("@", "") + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            string result = null;
+
+            while (leitor.Read())
+            {
+                result = leitor["senha"].ToString();
+            }
+
+            conn.Close();
+
+            return result;
+        }
+
+        public string SpVerificarDadosByEmail(string email)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_VerificarDadosByEmail '" + email + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            string result = null;
+
+            while (leitor.Read())
+            {
+                result = leitor["senha"].ToString();
+            }
+
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpUserByUsername(string username)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_UserByUsername '" + username.Replace("@", "") + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["userName"],
+                                   leitor["email"],
+                                   leitor["senha"],
+                                   leitor["foto"],
+                                   leitor["foto"],
+                                   leitor["biografia"],
+                                   leitor["bio"],
+                                   leitor["configs"],
+                                   leitor["seguindo"],
+                                   leitor["seguidores"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpUserByEmail(string email)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_UserByEmail '" + email + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["userName"],
+                                   leitor["email"],
+                                   leitor["senha"],
+                                   leitor["foto"],
+                                   leitor["foto"],
+                                   leitor["biografia"],
+                                   leitor["bio"],
+                                   leitor["configs"],
+                                   leitor["seguindo"],
+                                   leitor["seguidores"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
         }
     }
 }

@@ -73,5 +73,9 @@ namespace API_olympia.Data
         int SpUserNameId(string username);
         bool SpExisteCodigoObra(string codObra);
         void SpMudarBio(string bio, string biografia, int idUsuario);
+        string SpVerificarDadosByUser(string user);
+        string SpVerificarDadosByEmail(string email);
+        List<object> SpUserByUsername(string email);
+        List<object> SpUserByEmail(string email);
     }
 }

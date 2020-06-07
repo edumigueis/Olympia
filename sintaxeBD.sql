@@ -340,3 +340,31 @@ Begin
 	update Usuarios set bio = @bio, biografia = @biografia where idusuario = @idUsuario
 End
 
+alter proc sp_VerificarDadosByUser
+@Username varchar(30)
+as
+Begin
+    select * from Usuarios where userName=@Username
+End
+
+alter proc sp_VerificarDadosByEmail
+@Email varchar(255)
+as
+Begin
+    select * from Usuarios where email=@Email
+End
+
+create proc sp_UserByUsername
+@Username varchar(30)
+as
+Begin
+    select * from Usuarios where userName=@Username
+End
+
+create proc sp_UserByEmail
+@Email varchar(255)
+as
+Begin
+    select * from Usuarios where email=@Email
+End
+
