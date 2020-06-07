@@ -9,6 +9,7 @@ using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System;
+using System.Linq;
 
 namespace API_olympia.Controllers
 {
@@ -19,7 +20,7 @@ namespace API_olympia.Controllers
     {
         public IRepository Repo { get; }
 
-       /* private PasswordHasher hasher;*/
+        /* private PasswordHasher hasher;*/
         public UsuariosController(IRepository repo)
         {
             this.Repo = repo;
@@ -38,7 +39,7 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
         }
-       
+
         [HttpGet("{idUsuario}")]
         public async Task<IActionResult> Get(int idUsuario)
         {
@@ -52,12 +53,12 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
         }
-        
+
         [HttpGet("RedirectToPost/{json}")]
         public async Task<IActionResult> RedirectToPost(string json)
         {
             try
-            { 
+            {
                 Usuarios usuario = JsonConvert.DeserializeObject<Usuarios>(json);
 
                 return await post(usuario);
@@ -164,7 +165,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                var result = this.Repo.SpExisteUsername(username) ;
+                var result = this.Repo.SpExisteUsername(username);
                 return Ok(result);
             }
             catch
@@ -207,7 +208,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                this.Repo.SpMudarBio(bio[0].ToString(),bio[1].ToString(), Convert.ToInt32(bio[2]));
+                this.Repo.SpMudarBio(bio[0].ToString(), bio[1].ToString(), Convert.ToInt32(bio[2]));
                 return Ok();
             }
             catch
@@ -221,7 +222,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                List<string> dados = JsonConvert.DeserializeObject<List<string>>(json);
+                var dados = json.Split(',').Select(item => item).ToList();
 
                 return await postVerificarDados(dados);
             }
@@ -236,21 +237,43 @@ namespace API_olympia.Controllers
         {
             try
             {
-                if (dados[0].Substring(0,1).Equals("@"))
+                if (dados[0].Substring(0, 1).Equals("@"))
                 {
-                    var result = this.Repo.SpVerificarDadosByUser(dados[0].ToString(),dados[1].ToString());
-                    if (result)
+                    var result = this.Repo.SpVerificarDadosByUser(dados[0].ToString());
+                    var senhaIgual = false;
+
+                    if (result != null)
+                    {
+                        senhaIgual = PasswordHasher.Verify(dados[1].ToString(), result.ToString());
+                    }
+
+                    else
+                        return this.StatusCode(StatusCodes.Status406NotAcceptable, "Não foram encontrados dados que atendam a sua requisição");
+
+                    if (senhaIgual)
                         return Ok();
+
                     return this.StatusCode(StatusCodes.Status406NotAcceptable, "Não foram encontrados dados que atendam a sua requisição");
                 }
                 else
                 {
-                    var result = this.Repo.SpVerificarDadosByEmail(dados[0], dados[1]);
-                    if (result)
+                    var result = this.Repo.SpVerificarDadosByEmail(dados[0].ToString());
+                    var senhaIgual = false;
+
+                    if (result != null)
+                    {
+                        senhaIgual = PasswordHasher.Verify(dados[1].ToString(), result.ToString());
+                    }
+
+                    else
+                        return this.StatusCode(StatusCodes.Status406NotAcceptable, "Não foram encontrados dados que atendam a sua requisição");
+
+                    if (senhaIgual)
                         return Ok();
+
                     return this.StatusCode(StatusCodes.Status406NotAcceptable, "Não foram encontrados dados que atendam a sua requisição");
                 }
-                
+
             }
             catch
             {

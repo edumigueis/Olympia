@@ -340,20 +340,18 @@ Begin
 	update Usuarios set bio = @bio, biografia = @biografia where idusuario = @idUsuario
 End
 
-create proc sp_VerificarDadosByUser
-@Username varchar(30),
-@Password varchar(500)
+alter proc sp_VerificarDadosByUser
+@Username varchar(30)
 as
 Begin
-    select * from Usuarios where userName=@Username and senha=@Password
+    select * from Usuarios where userName=@Username
 End
 
-create proc sp_VerificarDadosByEmail
-@Email varchar(255),
-@Password varchar(500)
+alter proc sp_VerificarDadosByEmail
+@Email varchar(255)
 as
 Begin
-    select * from Usuarios where email=@Email and senha=@Password
+    select * from Usuarios where email=@Email
 End
 
 create proc sp_UserByUsername

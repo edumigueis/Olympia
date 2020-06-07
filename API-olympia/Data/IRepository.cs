@@ -73,8 +73,8 @@ namespace API_olympia.Data
         int SpUserNameId(string username);
         bool SpExisteCodigoObra(string codObra);
         void SpMudarBio(string bio, string biografia, int idUsuario);
-        bool SpVerificarDadosByUser(string user, string senha);
-        bool SpVerificarDadosByEmail(string email, string senha);
+        string SpVerificarDadosByUser(string user);
+        string SpVerificarDadosByEmail(string email);
         List<object> SpUserByUsername(string email);
         List<object> SpUserByEmail(string email);
     }

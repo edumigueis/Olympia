@@ -7,7 +7,7 @@ namespace API_olympia.Models
 {
     public class Dados
     {
-        public int User { get; set; }
-        public int Password { get; set; }
+        public string User { get; set; }
+        public string Senha { get; set; }
     }
 }

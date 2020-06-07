@@ -757,12 +757,13 @@ namespace API_olympia.Controllers
                 {
                     result.Add(property.Name, property.GetValue(json));
                 }
-                var cu = result;
+                var user = result.First().Value;
+                var senha = result.Last().Value;
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 Armazenador.StringValueRoute = listagem[5];
-                return Redirect("/api/Usuarios/RedirectToPostVerificarDados/");
+                return Redirect("/api/Usuarios/RedirectToPostVerificarDados/" + user + "," + senha );
             }
             catch
             {

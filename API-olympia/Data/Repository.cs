@@ -835,46 +835,44 @@ namespace API_olympia.Data
             conn.Close();
         }
 
-        public bool SpVerificarDadosByUser(string username, string senha)
+        public string SpVerificarDadosByUser(string username)
         {
             SqlConnection conn = new SqlConnection(stringConnection);
             conn.Open();
             SqlCommand cmd = new SqlCommand("comando", conn);
-            cmd.CommandText = "sp_VerificarDadosByUser '" + username.Replace("@", "") + "','" + senha + "'";
+            cmd.CommandText = "sp_VerificarDadosByUser '" + username.Replace("@", "") + "'";
             SqlDataReader leitor = cmd.ExecuteReader();
 
-            int count = 0;
+            string result = null;
+
             while (leitor.Read())
             {
-                count++;
+                result = leitor["senha"].ToString();
             }
+
             conn.Close();
 
-            if (count == 0)
-                return false;
-            else
-                return true;
+            return result;
         }
 
-        public bool SpVerificarDadosByEmail(string email, string senha)
+        public string SpVerificarDadosByEmail(string email)
         {
             SqlConnection conn = new SqlConnection(stringConnection);
             conn.Open();
             SqlCommand cmd = new SqlCommand("comando", conn);
-            cmd.CommandText = "sp_VerificarDadosByEmail '" + email + "','" + senha + "'";
+            cmd.CommandText = "sp_VerificarDadosByEmail '" + email + "'";
             SqlDataReader leitor = cmd.ExecuteReader();
 
-            int count = 0;
+            string result = null;
+
             while (leitor.Read())
             {
-                count++;
+                result = leitor["senha"].ToString();
             }
+
             conn.Close();
 
-            if (count == 0)
-                return false;
-            else
-                return true;
+            return result;
         }
 
         public List<object> SpUserByUsername(string username)
