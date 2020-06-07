@@ -215,5 +215,71 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
         }
+
+        [HttpGet("RedirectToPostVerificarDados/{json}")]
+        public async Task<IActionResult> RedirectToPostVerificarDados(string json)
+        {
+            try
+            {
+                List<string> dados = JsonConvert.DeserializeObject<List<string>>(json);
+
+                return await postVerificarDados(dados);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpPost("VerificarDados")]
+        public async Task<IActionResult> postVerificarDados(List<string> dados)
+        {
+            try
+            {
+                if (dados[0].Substring(0,1).Equals("@"))
+                {
+                    var result = this.Repo.SpVerificarDadosByUser(dados[0].ToString(),dados[1].ToString());
+                    if (result)
+                        return Ok();
+                    return this.StatusCode(StatusCodes.Status406NotAcceptable, "Não foram encontrados dados que atendam a sua requisição");
+                }
+                else
+                {
+                    var result = this.Repo.SpVerificarDadosByEmail(dados[0], dados[1]);
+                    if (result)
+                        return Ok();
+                    return this.StatusCode(StatusCodes.Status406NotAcceptable, "Não foram encontrados dados que atendam a sua requisição");
+                }
+                
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpGet("UserByLoginData/{info}")]
+        public async Task<IActionResult> GetUserByLoginData(string info)
+        {
+            try
+            {
+                if (info.Substring(0, 1).Equals("@"))
+                {
+                    var result = this.Repo.SpUserByUsername(info);
+                    return Ok(result);
+                }
+                else
+                {
+                    var result = this.Repo.SpUserByEmail(info);
+                    return Ok(result);
+                }
+
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
     }
 }

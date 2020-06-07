@@ -2317,33 +2317,11 @@ export default {
     this.getMarkers();
     this.getServicos();
     this.getObras();
+  },
+  beforeCreate: function () {
+    if (!this.$session.exists()) {
+      this.$router.push('/login')
+    }
   }
 };
-
-/*var vm = new Vue({
-  el:"#app",
-  mounted:function(){
-        this.resizeAllGridItems() //method1 will execute at pageload
-  },
-  methods:{
-        resizeAllGridItems:function(){
-          let _this = this
-          this.
-              setTimeout(function(){
-              var allItems = document.getElementsByClassName("masonry-item");
-        for(var x=0;x<allItems.length;x++){
-          _this.resizeGridItem(allItems[x]);
-        }
-            }, 1000)
-        },
-        resizeGridItem:function(item){
-        grid = document.getElementsByClassName("slide__content")[0];
-        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-        rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-        rowSpan = Math.ceil((item.querySelector('.masonry-content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap));
-          item.style.gridRowEnd = "span "+rowSpan;
-      }
-     },
-})
-global.vm = vm; //Define you app variable globally*/
 </script>

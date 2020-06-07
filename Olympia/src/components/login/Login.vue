@@ -16,7 +16,10 @@
                 <div class="form-group">
                   <label for="user">
                     <div class="gray-n-imp">
-                    <i class="zmdi dark-register-ico zmdi-sign-in" style="margin-top: 5.5px"></i>
+                      <i
+                        class="zmdi dark-register-ico zmdi-sign-in"
+                        style="margin-top: 5.5px"
+                      ></i>
                     </div>
                   </label>
                   <input
@@ -31,7 +34,10 @@
                 <div class="form-group">
                   <label for="pass">
                     <div class="locker-cont gray-n-imp">
-                    <i class="zmdi dark-register-ico zmdi-lock" style="margin-top: 5.5px"></i>
+                      <i
+                        class="zmdi dark-register-ico zmdi-lock"
+                        style="margin-top: 5.5px"
+                      ></i>
                     </div>
                   </label>
                   <input
@@ -50,17 +56,20 @@
                     id="login"
                     class="form-submit"
                     value="Login"
+                    v-on:click="login()"
                   />
                 </div>
               </form>
-            </div>    
+            </div>
           </div>
         </div>
       </section>
-      <canvas id=c></canvas>
+      <canvas id="c"></canvas>
       <div class="ui-widget-overlay"></div>
       <div class="error-modal">
-        <div class="warn-image"><img class="warning-pic" src="/src/assets/images/warn-ico.png" /></div>
+        <div class="warn-image">
+          <img class="warning-pic" src="/src/assets/images/warn-ico.png" />
+        </div>
         <P class="warn"></P>
       </div>
       <meu-small-footer></meu-small-footer>
@@ -71,28 +80,60 @@
 <script>
 import DarkMode from "../shared/dark-mode/Dark-mode.vue";
 import SmallFooter from "../shared/small-footer/SmallFooter.vue";
+import Vue from "vue";
 export default {
   components: {
     "meu-dark-mode": DarkMode,
-    "meu-small-footer": SmallFooter,
+    "meu-small-footer": SmallFooter
   },
-  name: 'login',
-    methods: {
-        login: function () {
-          this.$http.post('http://localhost:5001/api/login', {
-            password: this.password,
-            email: this.email
-          }).then(function (response) {
-            if (response.status === 200 && 'token' in response.body) {
-              this.$session.start()
-              this.$session.set('jwt', response.body.token)
-              Vue.http.headers.common['Authorization'] = 'Bearer ' + response.body.token
-              this.$router.push('/panel/search')
-            }
-          }, function (err) {
-            console.log('err', err)
-          })
+  name: "login",
+  methods: {
+    login() {
+      var myObject = {
+        user: $("#user").val(),
+        senha: $("#password").val()
+      };
+
+      var jsonInput = JSON.stringify(myObject);
+      var idUser;
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/VerificarDados",
+        type: "POST",
+        data: jsonInput,
+        dataType: "json",
+        contentType: "application/json",
+        beforeSend: function() {
+          $("#load-modal").addClass("loading");
+        },
+        complete: function(code) {
+          if (code.status === 200) {
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/UserByLoginData/" +
+                $("#user").val(),
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              beforeSend: function() {
+                $("#load-modal").addClass("loading");
+              },
+              success: function(data) {
+                idUser = data.idUsuario;
+              }
+            });
+            this.$session.start();
+            this.$session.set("jwt", response.body.token);
+            Vue.http.headers.common["Authorization"] =
+              "Bearer " + response.body.token;
+            localStorage.user = this.idUser;
+            document.location.href = "/#/home";
+          } 
+          else {
+            alert("user n existe");
+          }
         }
+      });
     }
+  }
 };
 </script>
