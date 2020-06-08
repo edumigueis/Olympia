@@ -259,6 +259,11 @@ export default {
   },
   mounted() {
     this.getMarkers();
+  },
+  beforeCreate(){
+    if(!window.$cookies.isKey('user_session')){
+      document.location.href = "/#/login";
+    }
   }
 };
 </script>
