@@ -34,7 +34,7 @@ namespace API_olympia.Models
         public string Biografia { get; set; }
 
         [Required]
-        [StringLength(50, ErrorMessage = "A bio não pode ter mais de 50 caracteres.")]
+        [StringLength(130, ErrorMessage = "A bio não pode ter mais de 130 caracteres.")]
         public string Bio { get; set; }
 
         [Required]
