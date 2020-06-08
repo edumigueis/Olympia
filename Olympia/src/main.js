@@ -2,17 +2,21 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import VueCookies from 'vue-cookies'
 import VueSession from 'vue-session'
 import VuePageTransition from 'vue-page-transition'
-
-// tem que vir entre chaves, porque não é default
 import { routes } from './routes';
 
-// registrando o módulo/plugin no global view object
+Vue.use(VueCookies)
+
+var options = {
+  persist: true
+}
+Vue.use(VueSession, options)
 Vue.use(VueResource);
 Vue.use(VueRouter);
-Vue.use(VueSession);
 Vue.use(VuePageTransition)
+
 window.$ = window.jQuery = require('jquery')
 
 new Vue({

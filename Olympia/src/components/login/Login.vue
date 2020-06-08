@@ -51,7 +51,7 @@
                 </div>
                 <div class="form-group form-button">
                   <input
-                    type="submit"
+                    type="button"
                     name="login"
                     id="login"
                     class="form-submit"
@@ -88,14 +88,14 @@ export default {
   },
   name: "login",
   methods: {
-    login() {
+    login: function() {
       var myObject = {
         user: $("#user").val(),
         senha: $("#password").val()
       };
 
       var jsonInput = JSON.stringify(myObject);
-      var idUser;
+
       $.ajax({
         url: "https://localhost:5001/api/redirect/VerificarDados",
         type: "POST",
@@ -117,18 +117,21 @@ export default {
               beforeSend: function() {
                 $("#load-modal").addClass("loading");
               },
-              success: function(data) {
-                idUser = data.idUsuario;
+              complete: function(jqXHR, status) {
+                if (status == "success") {
+                  var string = $.parseJSON(jqXHR.responseText) + "";
+                  var pos = string.indexOf(",");
+                  var id = parseInt(string.substring(0, pos));
+                  this.$session.start();
+                  this.$session.set("jwt", response.body.token);
+                  Vue.http.headers.common["Authorization"] =
+                    "Bearer " + response.body.token;
+                  localStorage.user = id;
+                  document.location.href = "/#/home";
+                }
               }
             });
-            this.$session.start();
-            this.$session.set("jwt", response.body.token);
-            Vue.http.headers.common["Authorization"] =
-              "Bearer " + response.body.token;
-            localStorage.user = this.idUser;
-            document.location.href = "/#/home";
-          } 
-          else {
+          } else {
             alert("user n existe");
           }
         }
