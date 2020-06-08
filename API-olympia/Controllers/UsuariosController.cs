@@ -63,7 +63,7 @@ namespace API_olympia.Controllers
 
                 return await post(usuario);
             }
-            catch
+            catch(Exception e)
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }

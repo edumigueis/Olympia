@@ -32,7 +32,7 @@ namespace API_olympia.Controllers
         {
             try
             {
-                model.Bio = "cu";
+                /*model.Bio = "cu";*/
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
@@ -47,7 +47,7 @@ namespace API_olympia.Controllers
 
                 JsonSerializerSettings settings = new JsonSerializerSettings { Converters = new[] { new MyConverter() } };
                 string json = JsonConvert.SerializeObject(result, settings);
-                string teste = HttpUtility.UrlEncode(json);
+                json = HttpUtility.UrlEncode(json);
                 return Redirect("/api/Usuarios/RedirectToPost/" + json);
             }
             catch
