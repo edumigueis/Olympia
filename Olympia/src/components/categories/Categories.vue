@@ -137,6 +137,10 @@ export default {
     "meu-small-footer": SmallFooter,
     "meu-dark-mode": DarkMode
   },
-  
+   beforeCreate(){
+    if(window.$cookies.isKey('user_session')){
+      document.location.href = "/#/home";
+    }
+  } 
 };
 </script>

@@ -228,6 +228,11 @@ export default {
   components: {
     "meu-dark-mode": DarkMode,
     "meu-small-footer": SmallFooter
+  },
+   beforeCreate(){
+    if(window.$cookies.isKey('user_session')){
+      document.location.href = "/#/home";
+    }
   }
 };
 </script>

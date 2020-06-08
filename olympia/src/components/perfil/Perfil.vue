@@ -763,6 +763,11 @@ export default {
     altProf(){
 
     }
-  }
+  }/*,
+  beforeCreate(){
+    if(!window.$cookies.isKey('user_session')){
+      document.location.href = "/#/login";
+    }
+  }*/
 };
 </script>

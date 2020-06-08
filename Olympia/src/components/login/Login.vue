@@ -120,22 +120,28 @@ export default {
               complete: function(jqXHR, status) {
                 if (status == "success") {
                   var string = $.parseJSON(jqXHR.responseText) + "";
-                  var pos = string.indexOf(",");
-                  var id = parseInt(string.substring(0, pos));
-                  this.$session.start();
-                  this.$session.set("jwt", response.body.token);
-                  Vue.http.headers.common["Authorization"] =
-                    "Bearer " + response.body.token;
-                  localStorage.user = id;
+                  var split = string.split(',', 20);
+                  var id = split[0];
+                  var config = split[8] + split[9] + split[10] + split[11] + split[12] + ""; 
+
+                  window.$cookies.set("user_session", "user_session", "4m");
+                  localStorage.userId = id;
+                  localStorage.config = config;
                   document.location.href = "/#/home";
                 }
               }
             });
-          } else {
+          } 
+          else {
             alert("user n existe");
           }
         }
       });
+    }
+  },
+   beforeCreate(){
+    if(window.$cookies.isKey('user_session')){
+      document.location.href = "/#/home";
     }
   }
 };
