@@ -551,7 +551,7 @@ setInterval(() => {
             url: "https://localhost:5001/api/Redirect/Cadastro",
             complete: function (code) {
               if (code.status === 200) {
-                window.$cookies.set("user_cadastro", "", "3m");
+                window.$cookies.set("user_cadastro", "", Infinity);
                 document.location.href = "/#/categorias";
               } else {
                 $(".error-modal").css("display", "block");

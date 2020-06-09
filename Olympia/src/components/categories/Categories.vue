@@ -243,7 +243,7 @@ export default {
   },
   methods: {
     cookie: function() {
-      window.$cookies.set("user_login", "", "3m");
+      window.$cookies.set("user_login", "", Infinity);
       window.$cookies.remove("user_cadastro");
     }
   }
