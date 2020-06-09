@@ -3,16 +3,13 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import VueCookies from 'vue-cookies'
-import VueSession from 'vue-session'
 import VuePageTransition from 'vue-page-transition'
 import { routes } from './routes';
 
 Vue.use(VueCookies)
 
-var options = {
-  persist: true
-}
-Vue.use(VueSession, options)
+Vue.prototype.$welcome = 0
+
 Vue.use(VueResource);
 Vue.use(VueRouter);
 Vue.use(VuePageTransition)

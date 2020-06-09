@@ -231,6 +231,10 @@ export default {
     } else if (window.$cookies.isKey("user_session")) {
       document.location.href = "/#/home";
     }
+  },
+  mounted(){
+     localStorage.clear();
+    this.$cookies.keys().forEach(cookie => this.$cookies.remove(cookie));
   }
 };
 </script>
