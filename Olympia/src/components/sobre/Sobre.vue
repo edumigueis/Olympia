@@ -10,35 +10,33 @@
       <meu-mouse></meu-mouse>
       <meu-dark-mode></meu-dark-mode>
 
-      <span id="fundo">
+      <!-- <span id="fundo">
         <div class="part-2 white-4">
           <div class="gradient gradient-sobre"></div>
           <div class="bg"></div>
           <div class="title">
             <h1 class="page-title">SOBRE<br />NÓS</h1>
           </div>
+          <div class="bg"></div> -->
+      <!--BACKGROUND-->
+      <div style="position:relative">
+        <div class="image-container">
+          <img src="/src/assets/images/sede.jpg" alt class="image" />
+        </div>
+        <h1 class="art-title">SOBRE<br />NÓS</h1>
+        <h2 class="art-subtitle">
+          Conheça um pouco mais sobre nós
+        </h2>
+      </div>
 
           <div class="container-left show-on-scroll black-to-white white-7 first">
           <table>
             <tr>
               <td class="texto-principal">
                 <h1 class="text-title-principal">QUEM SOMOS?</h1>
-                Cinema (do em grego: κίνημα, kinema "movimentos" e γράφειν,
-                graphein "registrar"), também chamada sétima arte, ou, em certos
-                contextos cinematografia, pode ser definida como a técnica e a
-                arte de fixar e de reproduzir imagens que suscitam impressão de
-                movimento, assim como a indústria que produz estas imagens. As
-                obras cinematográficas (mais conhecidas como filmes) são
-                produzidas através da gravação de imagens do mundo com câmeras
-                (câmaras) adequadas, ou pela sua criação utilizando técnicas de
-                animação ou efeitos visuais específicos. Mais especificamente,
-                pode ser descrita como o "conjunto de princípios, processos e
-                técnicas utilizados para captar e projetar numa tela imagens
-                estáticas sequenciais (fotogramas) obtidas com uma câmera
-                especial, dando impressão ao espectador de estarem em
-                movimento". O diretor de arte pode ser descrito como o principal
-                colaborador visual de um diretor de cinema.Também se usa a
-                palavra 'cinegrafia', estando dicionarizada.
+                Olympia: somos uma corporação que valoriza a arte sua completa e em todas as suas formas.
+                Acreditamos em tudo que a arte representa: como ela embeleza a vida, trazendo mais cor e sentido, e também como
+                ela pode representar resistência em momentos tão dificeis na humanidade.
               </td>
             </tr>
           </table>
@@ -50,32 +48,17 @@
           <table>
             <tr>
               <td class="texto-linha">
-                <h1 class="text-title">HISTÓRIA</h1>
-                Louis e Auguste eram filhos e colaboradores do industrial
-                Antoine Lumière, fotógrafo e fabricante de películas
-                fotográficas, proprietário da Fábrica Lumière (Usine Lumière),
-                instalada na cidade francesa de Lyon. Antoine reformou-se em
-                1892, deixando a fábrica entregue aos filhos. O cinematógrafo
-                era uma máquina de filmar e projetor de cinema, invento que lhes
-                tem sido atribuído mas que na verdade foi inventado por Léon
-                Bouly no ano de 1892, o qual teria perdido o registro dessa
-                patente, sendo então de novo registrado pelos irmãos Lumiere em
-                13 de fevereiro de 1895. São considerados os inventores da
-                Sétima Arte junto com Georges Méliès, também francês, sendo este
-                visto como o pai do cinema de ficção.
+                <h1 class="text-title">SEDE</h1>
+                Nossa sede se encontra na cidade de Stuttgart na Alemanha, projeto é de James Stirling e antes abrigava um museu.
+                Temos muito orgulho de ter esse projeto arquitetônico como nosso patrimônio.
+               
               </td>
-              <td class="td-imagem">
-                <img
-                  class="imagem"
-                  margin-right:100px
-                  src="https://upload.wikimedia.org/wikipedia/commons/9/93/Fratelli_Lumiere.jpg"
-                />
-              </td>
+              
             </tr>
           </table>
         </div>
         </div>
-      </span>
+      <!-- </span> -->
 
       <!--<div id="text" class='text-sobre'>
         <p id="title">NOSSA HISTÓRIA</p>
@@ -138,7 +121,7 @@
         <div class="linha linha-sobre"></div>
       </div>-->
       <meu-footer></meu-footer>
-    </div>
+    
   </main>
 </template>
 <script>
@@ -157,13 +140,6 @@ export default {
     "meu-mouse": Mouse,
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
-  },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
   }
 };
 </script>
