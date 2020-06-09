@@ -120,28 +120,36 @@ export default {
               complete: function(jqXHR, status) {
                 if (status == "success") {
                   var string = $.parseJSON(jqXHR.responseText) + "";
-                  var split = string.split(',', 20);
+                  var split = string.split(",", 20);
                   var id = split[0];
-                  var config = split[8] + split[9] + split[10] + split[11] + split[12] + ""; 
+                  var config =
+                    split[8] +
+                    split[9] +
+                    split[10] +
+                    split[11] +
+                    split[12] +
+                    "";
 
-                  window.$cookies.set("user_session", "user_session", "4m");
+                  window.$cookies.set("user_session", "", "3m");
+                  window.$cookies.remove("user_login");
                   localStorage.userId = id;
                   localStorage.config = config;
                   document.location.href = "/#/home";
                 }
               }
             });
-          } 
-          else {
+          } else {
             alert("user n existe");
           }
         }
       });
     }
   },
-   beforeCreate(){
-    if(window.$cookies.isKey('user_session')){
+  beforeCreate() {
+    if (window.$cookies.isKey("user_session")) {
       document.location.href = "/#/home";
+    } else if (window.$cookies.isKey("user_cadastro")) {
+      document.location.href = "/#/categorias";
     }
   }
 };
