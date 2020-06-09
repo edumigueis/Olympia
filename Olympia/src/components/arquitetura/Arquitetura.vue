@@ -65,11 +65,8 @@
                 Arquitetura refere-se a toda construção e modelagem artificial
                 do ambiente físico, incluindo seu processo de projeto e o
                 produto deste, sendo a palavra também usada para definir os
-                estilos e métodos de projeto das construções de uma época. Em
-                outras áreas, como, por exemplo, ciência da computação, o termo
-                arquitetura se refere à estrutura geral de um sistema, sendo
-                como um sinônimo de algo que projetado ou a forma como
-                funciona.O interior do Panteão, obra icônica da arquitetura
+                estilos e métodos de projeto das construções de uma época. 
+                O interior do Panteão, obra icônica da arquitetura
                 romana que inovou nas técnicas construtivas e resistiu ao
                 tempo.O prédio da Fundação Iberê Camargo, projetado por Álvaro
                 Siza, é um exemplo de arquitetura contemporânea.A principal
