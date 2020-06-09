@@ -1,156 +1,156 @@
 @font-face {
-    font-family: "Open Sans";
-    src: url("../fonts/OpenSans-Regular.ttf");
-  }
-  @font-face {
-    font-family: "Open Sans Bold";
-    src: url("../fonts/OpenSans-Bold.ttf");
-  }
-  @font-face {
-    font-family: "Open Sans ExtraBold";
-    src: url("../fonts/OpenSans-ExtraBold.ttf");
-  }
-  @font-face {
-    font-family: "Open Sans Light";
-    src: url("../fonts/OpenSans-Light.ttf");
-  }
-  @font-face {
-    font-family: "Open Sans Semibold";
-    src: url("../fonts/OpenSans-Semibold.ttf");
-  }
-  @font-face {
-    font-family: "Bruzh";
-    src: url("../fonts/Bruzh.ttf");
-  }
-  @font-face {
-    font-family: "Bebas";
-    src: url("../fonts/BebasNeue.ttf");
-  }
-  @font-face {
-    font-family: "Calibre-Bold";
-    src: url("../fonts/calibri-bold-2.ttf");
-    font-weight: bold;
-  }
-  @font-face {
-    font-family: "Calibre-Regular";
-    src: url("../fonts/calibri-7.ttf");
-  }
-  @font-face {
-    font-family: "Bebas-Neue-Bold";
-    src: url("../fonts/BebasNeue-Bold.ttf");
-    font-weight: bold;
-  }
-  @font-face {
-    font-family: "Bebas-Neue-Regular";
-    src: url("../fonts/BebasNeue-Regular.ttf");
-  }
-  @font-face {
-    font-family: "Bebas-Neue-Light";
-    src: url("../fonts/BebasNeue-Light.ttf");
-  }
-  @font-face {
-    font-family: "Bebas-Neue-Book";
-    src: url("../fonts/BebasNeue-Book.ttf");
-  }
-  @font-face {
-    font-family: "Bebas-Neue-Thin";
-    src: url("../fonts/BebasNeue-Thin.ttf");
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url("../fonts/poppins-light.otf");
-  }
-  @font-face {
-    font-family: "Bebas";
-    src: url("../fonts/BebasNeue.ttf");
-  }
-#titles{
-    width: 100%;
-    height: fit-content;
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
 }
-.main-title{
-    font-size: 2.2em;
-    margin-bottom: 10px;
-    margin-left: 3vw;
-    background: linear-gradient(to left,#eb3349  0%, #ff6952 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/OpenSans-Bold.ttf");
 }
-.sub-title{
-    font-size: 1.55em;
-    margin-top: 15px;
-    margin-left: 3vw;
-    color: #555;
+@font-face {
+  font-family: "Open Sans ExtraBold";
+  src: url("../fonts/OpenSans-ExtraBold.ttf");
 }
-#categories{
-    width: 100%;
-    height: fit-content;
-    padding: 3%;
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("../fonts/OpenSans-Light.ttf");
 }
-#cat-list-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    column-gap: 30px;
-    row-gap: 30px;
-    height: 100%;
-    width: 94%;
-    transition: 0.7s all;
+@font-face {
+  font-family: "Open Sans Semibold";
+  src: url("../fonts/OpenSans-Semibold.ttf");
 }
-.cat-card{
-    height: 150px;
-    border-radius: 12px;
+@font-face {
+  font-family: "Bruzh";
+  src: url("../fonts/Bruzh.ttf");
 }
-.cat-card:hover{
-    cursor: pointer;
+@font-face {
+  font-family: "Bebas";
+  src: url("../fonts/BebasNeue.ttf");
 }
-.cat-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-    filter: brightness(96%);
-    transition: 0.6s all;
+@font-face {
+  font-family: "Calibre-Bold";
+  src: url("../fonts/calibri-bold-2.ttf");
+  font-weight: bold;
 }
-.cat-img:hover{
-    border-radius: 24px;
-    filter: brightness(70%) !important;
+@font-face {
+  font-family: "Calibre-Regular";
+  src: url("../fonts/calibri-7.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Bold";
+  src: url("../fonts/BebasNeue-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Bebas-Neue-Regular";
+  src: url("../fonts/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Light";
+  src: url("../fonts/BebasNeue-Light.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Book";
+  src: url("../fonts/BebasNeue-Book.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue-Thin";
+  src: url("../fonts/BebasNeue-Thin.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins-light.otf");
+}
+@font-face {
+  font-family: "Bebas";
+  src: url("../fonts/BebasNeue.ttf");
+}
+#titles {
+  width: 100%;
+  height: fit-content;
+  font-family: "Montserrat", sans-serif;
+}
+.main-title {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  margin-left: 3vw;
+  background: linear-gradient(to left, #eb3349 0%, #ff6952 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.sub-title {
+  font-size: 1.55em;
+  margin-top: 15px;
+  margin-left: 3vw;
+  color: #555;
+}
+#categories {
+  width: 100%;
+  height: fit-content;
+  padding: 3%;
+}
+#cat-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 30px;
+  row-gap: 30px;
+  height: 100%;
+  width: 94%;
+  transition: 0.7s all;
+}
+.cat-card {
+  height: 150px;
+  border-radius: 12px;
+}
+.cat-card:hover {
+  cursor: pointer;
+}
+.cat-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  filter: brightness(96%);
+  transition: 0.6s all;
+}
+.cat-img:hover {
+  border-radius: 24px;
+  filter: brightness(70%) !important;
 }
 
-#how-many-cat{
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 9px;
-    padding-right: 9px;
-    border: 2px solid #555;
-    position: fixed;
-    z-index: 3;
-    bottom: 3vh;
-    right: 2vw;
-    border-radius: 9px;
-    font-family: 'Bebas';
-    font-size: 1.5em;
-    background-color: white;
+#how-many-cat {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border: 2px solid #555;
+  position: fixed;
+  z-index: 3;
+  bottom: 2vh;
+  right: 2vw;
+  border-radius: 9px;
+  font-family: "Bebas";
+  font-size: 1.5em;
+  background-color: white;
 }
-#go-btn{
+#go-btn {
   margin-top: 4vh;
-    width: 100%;
-    height: 80px;
+  width: 100%;
+  height: 80px;
 }
-.btn-wrap{
-    position: relative;
-    top: 10%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    float: left;
-    margin-left: 49.5vw;
-    display: none;
+.btn-wrap {
+  position: relative;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  float: left;
+  margin-left: 49.5vw;
+  display: none;
 }
-.know-more-btn-inner{
-    background-color: transparent;
+.know-more-btn-inner {
+  background-color: transparent;
 }
-.know-more-btn{
+.know-more-btn {
   display: block;
   width: 200px;
   height: 40px;
@@ -164,46 +164,47 @@
   letter-spacing: 2px;
   text-align: center;
   position: relative;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
-.know-more-btn .know-more-btn-inner{
+.know-more-btn .know-more-btn-inner {
   position: relative;
   border-radius: 12px;
   z-index: 2000;
 }
-.know-more-btn-inner{
-    background-color: transparent;
+.know-more-btn-inner {
+  background-color: transparent;
 }
 
-.know-more-btn:after{
+.know-more-btn:after {
   position: absolute;
   border-radius: 8.7px;
   color: #373737;
   content: "";
   top: 0;
   left: 0;
+  margin: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(to left,#eb3349  0%, #ff6952 100%);
-  transition: all .35s;
+  background: linear-gradient(to left, #e95868 0%, #f78270 100%);
+  transition: all 0.35s;
 }
-.know-more-btn:hover{
-    color: #373737;
-    font-weight: bold;
-  }
-  
-.know-more-btn:hover:after{
-    width: 100%;
+.know-more-btn:hover {
+  color: #373737;
+  font-weight: bold;
 }
-.darkned-clicked{
+
+.know-more-btn:hover:after {
+  width: 100%;
+}
+.darkned-clicked {
   filter: brightness(30%);
 }
-.checked-img{
+.checked-img {
   width: 90px;
   height: 90px;
   margin-left: 31%;
-  background-image: url('../images/checkmark.png');
+  background-image: url("../images/checkmark.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -215,13 +216,13 @@
   display: none;
   pointer-events: none;
 }
-h3{
+h3 {
   position: relative;
   margin-top: -37px;
   margin-left: 1vw;
   z-index: 2;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
   text-shadow: 1px 1px 3px black;
   z-index: 2;
@@ -263,7 +264,7 @@ h3{
     top: 6px;
   }
 }
-#small-footer{
+#small-footer {
   position: relative !important;
   margin-top: 3vh !important;
 }

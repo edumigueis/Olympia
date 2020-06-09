@@ -982,6 +982,13 @@ export default {
   },
   mounted() {
     
-  }
+  }/*,
+  beforeCreate(){
+    if (window.$cookies.isKey("user_cadastro")) {
+      document.location.href = "/#/categorias";
+    } else if (!window.$cookies.isKey("user_session")) {
+      document.location.href = "/#/login";
+    }
+  }*/
 };
 </script>

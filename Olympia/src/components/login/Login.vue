@@ -51,7 +51,7 @@
                 </div>
                 <div class="form-group form-button">
                   <input
-                    type="submit"
+                    type="button"
                     name="login"
                     id="login"
                     class="form-submit"
@@ -88,14 +88,14 @@ export default {
   },
   name: "login",
   methods: {
-    login() {
+    login: function() {
       var myObject = {
         user: $("#user").val(),
         senha: $("#password").val()
       };
 
       var jsonInput = JSON.stringify(myObject);
-      var idUser;
+
       $.ajax({
         url: "https://localhost:5001/api/redirect/VerificarDados",
         type: "POST",
@@ -117,22 +117,39 @@ export default {
               beforeSend: function() {
                 $("#load-modal").addClass("loading");
               },
-              success: function(data) {
-                idUser = data.idUsuario;
+              complete: function(jqXHR, status) {
+                if (status == "success") {
+                  var string = $.parseJSON(jqXHR.responseText) + "";
+                  var split = string.split(",", 20);
+                  var id = split[0];
+                  var config =
+                    split[8] +
+                    split[9] +
+                    split[10] +
+                    split[11] +
+                    split[12] +
+                    "";
+
+                  window.$cookies.set("user_session", "", "3m");
+                  window.$cookies.remove("user_login");
+                  localStorage.userId = id;
+                  localStorage.config = config;
+                  document.location.href = "/#/home";
+                }
               }
             });
-            this.$session.start();
-            this.$session.set("jwt", response.body.token);
-            Vue.http.headers.common["Authorization"] =
-              "Bearer " + response.body.token;
-            localStorage.user = this.idUser;
-            document.location.href = "/#/home";
-          } 
-          else {
+          } else {
             alert("user n existe");
           }
         }
       });
+    }
+  },
+  beforeCreate() {
+    if (window.$cookies.isKey("user_session")) {
+      document.location.href = "/#/home";
+    } else if (window.$cookies.isKey("user_cadastro")) {
+      document.location.href = "/#/categorias";
     }
   }
 };

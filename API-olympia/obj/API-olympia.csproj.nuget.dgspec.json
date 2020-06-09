@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Técnico\\3º semestre\\Prática Profissional II\\Projeto-git\\API-olympia\\API-olympia.csproj": {}
+    "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\API-olympia.csproj": {}
   },
   "projects": {
-    "D:\\Técnico\\3º semestre\\Prática Profissional II\\Projeto-git\\API-olympia\\API-olympia.csproj": {
+    "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\API-olympia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Técnico\\3º semestre\\Prática Profissional II\\Projeto-git\\API-olympia\\API-olympia.csproj",
+        "projectUniqueName": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\API-olympia.csproj",
         "projectName": "API-olympia",
-        "projectPath": "D:\\Técnico\\3º semestre\\Prática Profissional II\\Projeto-git\\API-olympia\\API-olympia.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\Técnico\\3º semestre\\Prática Profissional II\\Projeto-git\\API-olympia\\obj\\",
+        "projectPath": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\API-olympia.csproj",
+        "packagesPath": "C:\\Users\\Rodrigo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rodrigo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -80,7 +83,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[*, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -151,7 +154,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

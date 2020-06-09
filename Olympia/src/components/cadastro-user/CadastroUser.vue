@@ -119,11 +119,7 @@
                   </label>
                 </div>
                 <div class="form-group form-button">
-                  <button
-                    id="signup"
-                    class="form-submit"
-                  >Registrar
-                  </button>
+                  <button id="signup" class="form-submit">Registrar</button>
                 </div>
               </form>
             </div>
@@ -138,7 +134,7 @@
                 <i class="zmdi dark-register-ico zmdi-palette"></i>
               </label>
               <input
-              class="dark-register-input"
+                class="dark-register-input"
                 type="text"
                 name="custom_color"
                 placeholder="#FFFFFF"
@@ -228,6 +224,17 @@ export default {
   components: {
     "meu-dark-mode": DarkMode,
     "meu-small-footer": SmallFooter
+  },
+  beforeCreate() {
+    if (window.$cookies.isKey("user_cadastro")) {
+      document.location.href = "/#/categorias";
+    } else if (window.$cookies.isKey("user_session")) {
+      document.location.href = "/#/home";
+    }
+  },
+  mounted(){
+     localStorage.clear();
+    this.$cookies.keys().forEach(cookie => this.$cookies.remove(cookie));
   }
 };
 </script>

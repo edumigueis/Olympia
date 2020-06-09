@@ -2318,9 +2318,11 @@ export default {
     this.getServicos();
     this.getObras();
   },
-  beforeCreate: function () {
-    if (!this.$session.exists()) {
-      this.$router.push('/login')
+  beforeCreate(){
+    if (window.$cookies.isKey("user_cadastro")) {
+      document.location.href = "/#/categorias";
+    } else if (!window.$cookies.isKey("user_session")) {
+      document.location.href = "/#/login";
     }
   }
 };

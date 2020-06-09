@@ -63,7 +63,7 @@ namespace API_olympia.Controllers
 
                 return await post(usuario);
             }
-            catch
+            catch(Exception e)
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
@@ -244,9 +244,8 @@ namespace API_olympia.Controllers
 
                     if (result != null)
                     {
-                        senhaIgual = PasswordHasher.Verify(dados[1].ToString(), result.ToString());
+                        senhaIgual = PasswordHasher.Verify(dados[1].ToString(), result);
                     }
-
                     else
                         return this.StatusCode(StatusCodes.Status406NotAcceptable, "Não foram encontrados dados que atendam a sua requisição");
 
@@ -262,7 +261,7 @@ namespace API_olympia.Controllers
 
                     if (result != null)
                     {
-                        senhaIgual = PasswordHasher.Verify(dados[1].ToString(), result.ToString());
+                        senhaIgual = PasswordHasher.Verify(dados[1].ToString(), result);
                     }
 
                     else
