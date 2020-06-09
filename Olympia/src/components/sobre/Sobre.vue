@@ -58,6 +58,16 @@
           </table>
         </div>
         </div>
+        <div class="container-left show-on-scroll black-to-white white-7 first">
+          <table>
+            <tr>
+              <td class="texto-linha">
+                Nenhum artista suporta o real. Qualquer artista, olhando para trás, tem a sincera opinião de que o verdadeiro valor de uma coisa é uma «sombra» que pode ser fixada nas cores, na forma, no som, no pensamento.
+                -Friedrich Wilhelm Nietzsche
+              </td>
+            </tr>
+          </table>
+        </div>
       <!-- </span> -->
 
       <!--<div id="text" class='text-sobre'>
@@ -74,6 +84,7 @@
           Interdisciplinjjjjjjjar de Investigación en Envejecimiento y Sociedad
           (RIIIES). E-mail: beltrinac
         </p>
+        
         <p id="texto2">
            Essa é a nossa sede lalala ecialização e Mestrado em Planejamento e
           Administração do Desenvolvimento Regós.doc em Ciências da
