@@ -15,6 +15,7 @@ namespace API_olympia.Models
         [StringLength(200, ErrorMessage = "O texto da publicação não deve ter mais do que 200 caracteres.")]
         public string Texto { get; set; }
 
+        [Required]
         [StringLength(150, ErrorMessage = "As tags não devem ter mais de 150 caracteres.")]
         public string Tags { get; set; }
 

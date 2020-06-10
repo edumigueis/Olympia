@@ -10,7 +10,7 @@
       <meu-mouse></meu-mouse>
       <meu-dark-mode></meu-dark-mode>
 
-      <!-- <span id="fundo">
+       <span id="fundo">
         <div class="part-2 white-4">
           <div class="gradient gradient-sobre"></div>
           <div class="bg"></div>
@@ -18,16 +18,17 @@
             <h1 class="page-title">SOBRE<br />NÓS</h1>
           </div>
           <div class="bg"></div> -->
-      <!--BACKGROUND-->
-      <div style="position:relative">
-        <div class="image-container">
-          <img src="/src/assets/images/sede.jpg" alt class="image" />
-        </div>
-        <h1 class="art-title">SOBRE<br />NÓS</h1>
-        <h2 class="art-subtitle">
-          Conheça um pouco mais sobre nós
-        </h2>
-      </div>
+
+                            <!--BACKGROUND-->
+                            <!-- <div style="position:relative">
+                              <div class="image-container">
+                                <img src="/src/assets/images/sede.jpg" alt class="image" />
+                              </div>
+                              <h1 class="art-title">SOBRE<br />NÓS</h1>
+                              <h2 class="art-subtitle">
+                                Conheça um pouco mais sobre nós
+                              </h2>
+                            </div> -->
 
           <div class="container-left show-on-scroll black-to-white white-7 first">
           <table>
@@ -68,7 +69,10 @@
             </tr>
           </table>
         </div>
-      <!-- </span> -->
+        
+       
+      </span> 
+    </div>
 
       <!--<div id="text" class='text-sobre'>
         <p id="title">NOSSA HISTÓRIA</p>
