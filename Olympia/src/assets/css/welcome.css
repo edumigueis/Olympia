@@ -35,8 +35,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #90d5ec;
-background-image: linear-gradient(315deg, #2cdada 0%, #fc576d 70%);
+  background-color: #ff8ec3;
+background-image: linear-gradient(25deg, #e66ba4d7 0%, #4a7ddb 51%, #49e2a7d7 100%);
+
 
 }
 .canvas-wrap {
