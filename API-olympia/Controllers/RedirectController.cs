@@ -74,6 +74,7 @@ namespace API_olympia.Controllers
 
                 JsonSerializerSettings settings = new JsonSerializerSettings { Converters = new[] { new MyConverter() } };
                 string json = JsonConvert.SerializeObject(result, settings);
+                json = HttpUtility.UrlEncode(json);
                 return Redirect("/api/Obras/RedirectToPost/" + json);
             }
             catch
@@ -101,6 +102,7 @@ namespace API_olympia.Controllers
 
                 JsonSerializerSettings settings = new JsonSerializerSettings { Converters = new[] { new MyConverter() } };
                 string json = JsonConvert.SerializeObject(result, settings);
+                json = HttpUtility.UrlEncode(json);
                 return Redirect("/api/Servicos/RedirectToPost/" + json);
             }
             catch

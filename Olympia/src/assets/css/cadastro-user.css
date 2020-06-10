@@ -1829,6 +1829,14 @@ img{
     transform: translateX(0);
   }
 }
+.err-msg{
+  color: #e72734;
+  display: none;
+  margin-bottom: 15px;
+  text-indent: 10px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
 /*-----------------------------------------------*/
 @font-face {
   font-family: Material-Design-Iconic-Font;

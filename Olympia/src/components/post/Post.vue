@@ -710,7 +710,7 @@ export default {
 
         var arteNm = $("#slct option:selected").text();
         var arteSel = 0;
-        switch (arteNm) {
+        /*switch (arteNm) {
           case "Arte Digital":
             arteSel = 1;
             break;
@@ -738,7 +738,7 @@ export default {
           case "Pintura":
             arteSel = 9;
             break;
-        }
+        }*/
         alert($("#search-select").text());
 
 
@@ -775,11 +775,7 @@ export default {
           url: "https://localhost:5001/api/Redirect/Obra",
           data: jsonInput,
           contentType: "application/json",
-          succes: function (code, data) {
-            alert("cu");
-            alert(code);
-            alert(code.status);
-            alert(data);
+          succes: function (data) {
               if (code.status === 201) {
                 console.log(data);
               } else {
