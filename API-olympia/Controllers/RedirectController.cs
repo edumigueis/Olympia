@@ -125,9 +125,9 @@ namespace API_olympia.Controllers
                 {
                     result.Add(property.Name, property.GetValue(model));
                 }
-
                 JsonSerializerSettings settings = new JsonSerializerSettings { Converters = new[] { new MyConverter() } };
                 string json = JsonConvert.SerializeObject(result, settings);
+                json = HttpUtility.UrlEncode(json);
                 return Redirect("/api/Publicacoes/RedirectToPost/" + json);
             }
             catch
