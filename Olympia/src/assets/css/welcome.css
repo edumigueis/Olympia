@@ -86,41 +86,31 @@ text {
 
 .title {
   font-size: 45px;
-  margin-bottom: 2% !important;
   color: white;
   opacity: 0.4;
-  transition: 1s all;
+  transition: 0.8s all;
+  margin: 0;
 }
 
 .info {
   color: rgba(255, 255, 255, 0.801);
-  font-family: "Gooseberry Juice";
-  text-align: center;
+  font-family: 'Poppins';
   position: fixed;
   padding: 2%;
   border-radius: 10px;
   top: 15%;
   width: 96%;
   transition: all 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .start,
 .artista,
 .usuario {
-  transition: 0.8s all;
+  transition: 0.8s font-size;
   font-size: 80px;
-  color: rgba(255, 255, 255, 0.801);
-}
-
-.usuario {
-  display: none;
-  opacity: 0;
-  transition: 1.2s all;
-  position: absolute;
-  top: 40%;
-  z-index: -10;
-  margin-bottom: 0;
-  margin-left: 6em;
   color: rgba(255, 255, 255, 0.801);
 }
 
@@ -136,9 +126,10 @@ a {
 }
 
 .login {
-  transition: 0.8s all;
+  transition: 0.8s font-size;
   font-size: 45px;
   color: rgba(255, 255, 255, 0.801);
+  transform: translateY(-50px);
 }
 
 .login:hover {
@@ -147,9 +138,10 @@ a {
 }
 
 .sobre {
-  transition: 0.8s all;
+  transition: 0.8s font-size;
   font-size: 25px;
   color: rgba(255, 255, 255, 0.801);
+  transform: translateY(-80px);
 }
 
 .sobre:hover {
@@ -243,7 +235,7 @@ polygon.arrow-top {
 }
 
 #text-modal{
-  font-family: 'Calibre-Regular';
+  font-family: 'Poppins';
   font-size: 0.9em;
   text-align: justify;
   text-indent: 1em;
@@ -284,7 +276,7 @@ polygon.arrow-top {
   }
   
   #text-modal{
-    font-size: 1.45em;
+    font-size: 1.25em;
   }
 }
 
@@ -294,7 +286,7 @@ polygon.arrow-top {
     }
   
   #text-modal{
-    font-size: 1.8em;
+    font-size: 1.4em;
   }
 }
 
