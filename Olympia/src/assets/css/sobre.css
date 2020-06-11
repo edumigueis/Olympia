@@ -532,7 +532,7 @@ video {
   text-align: center;
   height: 10vh;
   line-height: 2.6;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .box:hover {
@@ -550,6 +550,7 @@ video {
   z-index: 4;
   display: inline-flex;
   flex-wrap: wrap;
+  height: fit-content !important;
 }
 .newsroom-title {
   width: 100%;
@@ -743,7 +744,7 @@ figcaption {
   font-size: 0.8em;
   color: grey;
   line-height: 1.4;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .grid {
@@ -792,40 +793,190 @@ figcaption {
   letter-spacing: 0.06em;
   color: #232323;
   text-transform: uppercase;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   width: fit-content;
   margin-bottom: 0 !important;
 }
 
-.grid-inline{
+.grid-inline {
   display: inline-flex;
   flex-wrap: nowrap;
   margin-top: 155px;
 }
-.grid-inline li{
+.grid-inline li {
   margin-right: 40px;
 }
 
-@media only screen and (min-width: 1565px){
-  .grid-inline{
+@media only screen and (min-width: 1565px) {
+  .grid-inline {
     display: none;
   }
-  .divi{
+  .divi {
     display: block !important;
   }
-  .iphone-1{
+  .iphone-1 {
     margin-left: 200px !important;
   }
-  .iphone-2{
+  .iphone-2 {
     margin-left: 350px !important;
   }
 }
-.divi{
+.divi {
   display: none;
 }
-.stories-title{
+.stories-title {
   margin-left: 2em;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 600;
   font-size: 2em;
 }
+.double-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.col {
+  width: 50%;
+  flex: 50%;
+  height: 100%;
+}
+.col img {
+  width: 100%;
+  min-height: 100%;
+}
+.col:nth-child(1) {
+  overflow: hidden;
+}
+.pink-col {
+  background-color: #ffdcd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-sb.local {
+  position: sticky;
+  z-index: 4;
+}
+.sub-title-sb {
+  font-family: "Poppins";
+  font-weight: 800 !important;
+  font-size: 19px;
+  line-height: 27px;
+  letter-spacing: 3.6px !important;
+  text-transform: uppercase;
+  color: #e7907e;
+}
+.local-title {
+  color: rgb(243, 132, 151);
+  font-family: "Poppins";
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: 1.8px !important;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.local-description {
+  color: #e7907e;
+  font-weight: 400 !important;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.36px !important;
+  font-family: "Poppins";
+}
+.inner-pink-col {
+  padding-left: 65px;
+  padding-left: 65px;
+  width: calc(100% - 130px);
+}
+.wrapper-sb.our-values {
+  position: sticky;
+  z-index: 4;
+  height: fit-content !important;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.masonry-gallery {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.masonry-gallery img {
+  display: block;
+  width: 100%;
+  height: 80%;
+  max-width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.masonry-gallery figure figcaption {
+  height: 20%;
+  background-color: #d8dcd6;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  margin-top: -20px;
+}
+.masonry-gallery figure {
+  margin: 16px;
+}
+.cell-1 {
+  grid-column: 1 / 6;
+  grid-row: 1 / 4;
+}
+.cell-2 {
+  grid-column: 6 / 9;
+  grid-row: 1 / 9;
+}
+.cell-3 {
+  grid-column: 1 / 4;
+  grid-row: 4 / 6;
+}
+.cell-4 {
+  grid-column: 4 / 6;
+  grid-row: 4 / 6;
+}
+.cell-3 img{
+  height: 240px !important;
+}
+.cell-4 img{
+  height: 200px !important;
+}
+.cell-4 figcaption{
+  height: calc(45% + 10px) !important;
+}
+.cell-3 figcaption{
+  height: 45% !important;
+}
+.our-values-double-wrapper {
+  width: fit-content;
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+.uk-card-title {
+  font-family: "Poppins";
+  font-weight: 400 !important;
+  font-size: 14px;
+  line-height: 29px;
+  letter-spacing: 1.1px !important;
+  text-decoration: none !important;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.uk-card-title a{
+  text-decoration: none !important;
+  color: #232322;
+}
+.card-date{
+  padding-bottom: 10px;
+  padding-left: 20px;
+  font-family: 'Poppins';
+}
+

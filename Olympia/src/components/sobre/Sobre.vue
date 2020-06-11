@@ -212,24 +212,105 @@
               </div>
             </div>
           </div>
-
-          <!--<img class="linha" src="https://img.pngio.com/black-line-png-just-pink-about-it-black-line-png-900_150.png"/>-->
-
-          <div class="container-right show-on-scroll black-to-white white-7">
-            <table>
-              <tr>
-                <td class="texto-linha">
-                  <h1 class="text-title">SEDE</h1>
-                  Nossa sede se encontra na cidade de Stuttgart na Alemanha,
-                  projeto é de James Stirling e antes abrigava um museu. Temos
-                  muito orgulho de ter esse projeto arquitetônico como nosso
-                  patrimônio.
-                </td>
-              </tr>
-            </table>
+          <div class="wrapper-sb local">
+            <div class="double-container">
+              <div class="col">
+                <img src="/src/assets/images/sede.jpg" />
+              </div>
+              <div class="col pink-col">
+                <div class="inner-pink-col">
+                  <h2 class="sub-title-sb">Onde Nós Estamos</h2>
+                  <h1 class="local-title">Nossa Sede</h1>
+                  <p class="local-description">
+                    Nossa sede se encontra na cidade de Stuttgart na Alemanha,
+                    projeto é de James Stirling e antes abrigava um museu. Temos
+                    muito orgulho de ter esse projeto arquitetônico como nosso
+                    patrimônio.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="wrapper-sb our-values">
+            <div class="our-values-double-wrapper">
+              <section id="img-div" class="masonry-gallery">
+                <figure class="cell-1">
+                  <img id="image" src="/src/assets/images/chip-4.jpg" />
+                  <figcaption>
+                    <div class="uk-card-body">
+                      <div>
+                        <h3 class="uk-card-title ui-heading2">
+                          <a href="/#/" target="_blank"
+                            >Defendemos o meio-ambiente, as comunidades locais e
+                            ajudamos iniciativas nesse sentido. Projeto: OForGreen.</a
+                          >
+                        </h3>
+                        <div class="card-date ui-body4" >
+                          May 7, 2020
+                        </div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <figure class="cell-2">
+                  <img src="/src/assets/images/chip-2.jpg" />
+                  <figcaption>
+                    <div class="uk-card-body">
+                      <div>
+                        <h3 class="uk-card-title ui-heading2">
+                          <a href="/#/" target="_blank"
+                            >Defendemos a pluralidade da arte e somos contra
+                            qualquer tipo de censura. Projeto: O-FreeArtMovement</a
+                          >
+                        </h3>
+                        <div class="card-date ui-body4" >
+                          May 7, 2020
+                        </div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <figure class="cell-3">
+                  <img src="/src/assets/images/chip-3.jpg" />
+                  <figcaption>
+                    <div class="uk-card-body">
+                      <div>
+                        <h3 class="uk-card-title ui-heading2">
+                          <a href="/#/" target="_blank"
+                            >Incentivamos o trabalho em equipe, livre e
+                            inovador. Projeto: Revex-Olympia</a
+                          >
+                        </h3>
+                        <div class="card-date ui-body4" >
+                          May 7, 2020
+                        </div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <figure class="cell-4">
+                  <img src="/src/assets/images/chip-1.jpeg" />
+                  <figcaption>
+                    <div class="uk-card-body">
+                      <div>
+                        <h3 class="uk-card-title ui-heading2">
+                          <a href="/#/" target="_blank"
+                            >Nós defendemos a diversidade e a pluralidade. Projeto: Plural!</a
+                          >
+                        </h3>
+                        <div class="card-date ui-body4" >
+                          May 7, 2020
+                        </div>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+              </section>
+            </div>
+          </div>
+          <!--<img class="linha" src="https://img.pngio.com/black-line-png-just-pink-about-it-black-line-png-900_150.png"/>-->
         </div>
-        <div class="container-left show-on-scroll black-to-white white-7 first">
+        <!--<div class="container-left show-on-scroll black-to-white white-7 first">
           <table>
             <tr>
               <td class="texto-linha">
@@ -240,7 +321,7 @@
               </td>
             </tr>
           </table>
-        </div>
+        </div>-->
       </span>
     </div>
 
