@@ -3331,7 +3331,6 @@ export default {
         .css("margin-bottom", "25px");
     },
     verificarPass() {
-      this.forcaSenha($(this).val());
       var color = $(".locker-cont").css("background-color");
       if ($("#pass").val() == "") {
         $(".locker-cont").css("background-color", "transparent");
@@ -3348,6 +3347,7 @@ export default {
       }
     },
     verificarPassKey() {
+      this.forcaSenha($("#pass").val());
       var color = $(".locker-cont").css("background-color");
       if (color == "rgb(230, 230, 0)" && $("#pass").val().length > 7) {
         this.remError("#pass-err-msg");
@@ -3385,7 +3385,7 @@ export default {
       var numero = false;
       var especial = false;
 
-      if (senha.length >= 6) tam = true;
+      if (senha.length >= 8) tam = true;
       if (senha.length >= 10) tamM = true;
       if (regLetrasMa.exec(senha)) letrasMa = true;
       if (regLetrasMi.exec(senha)) letrasMi = true;
@@ -3400,10 +3400,7 @@ export default {
       if (numero) forca += 20;
       if (especial) forca += 20;
 
-      this.exibeForca(forca);
-    },
-
-    exibeForca(forca) {
+      /*this.exibeForca(forca);*/
       var color,
         percent = 0;
 

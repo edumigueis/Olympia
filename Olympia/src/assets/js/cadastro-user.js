@@ -264,9 +264,6 @@ setInterval(() => {
         $("#user-let-img").css("background", this.value);
       });
 
-      $("#pass").on("keyup", function() {
-        forcaSenha($(this).val());
-      });
       $("#name").on("focusout", function() {
         var name = $("#name").val();
         if (name == "") {
