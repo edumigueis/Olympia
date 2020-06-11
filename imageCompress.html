@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      lang="javascript"
+      src="lz-string-master/libs/lz-string.min.js"
+    ></script>
+    <iframe src="https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed" width="360" height="270" frameborder="0" style="border:0"></iframe>
+    <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js'></script>
+    <style>
+      img{
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" id="input"/>
+    <script>
+      var selectedImage;
+      var readURL = function(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function(e) {
+            selectedImage = e.target.result;
+            console.log(selectedImage);
+            console.log(LZString.compress(selectedImage));
+            var compressed = LZString.compress(selectedImage);
+            compressed = LZString.decompress(compressed);
+            $('body').append('<img src='+compressed+'>')
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $("#input").on("change", function() {
+        readURL(this);
+      });
+      /*var string = "This is my compression test.";
+      alert("Size of sample is: " + string.length);
+      var compressed = LZString.compress(string);
+      alert("Size of compressed sample is: " + compressed.length);
+      string = LZString.decompress(compressed);
+      alert("Sample is: " + string);*/
+      const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+      $(document).ready(function(){
+        var data = "2008-11-14 13:23:44"
+        /*alert(data.substring(8,10));
+        alert(data.substring(5,7));
+        alert(monthNames[parseInt(data.substring(5,7)) - 1]);*/
+        var tst = "/src/assets"
+        alert(tst.toString().substring(0,4));
+        function formatDate (input) {
+        var datePart = input.match(/\d+/g),
+        year = datePart[0], // get only two digits
+        month = datePart[1], day = datePart[2];
+      
+        return day+'/'+month+'/'+year;
+      }
+      alert(formatDate(data.substring(0,10).replace('-','/')))
+      });
+    </script>
+  </body>
+</html>
