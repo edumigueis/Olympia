@@ -306,7 +306,7 @@ setInterval(() => {
           $("#tel").val("");
         }
       });*/
-      
+
       $(".signup-image-link").on("click", function() {
         $(".ui-widget-overlay").css("display", "block");
         $("#pick-image-modal").css("display", "block");
@@ -319,7 +319,10 @@ setInterval(() => {
           .css("border-color", "red");
         $("" + elem)
           .prev()
-          .css("margin-bottom", "15px");
+          .css("margin-bottom", "5px");
+        $("" + elem)
+          .next()
+          .css("margin-top", "15px");
       }
       function remError(elem) {
         $("" + elem).fadeOut();
@@ -330,6 +333,9 @@ setInterval(() => {
         $("" + elem)
           .prev()
           .css("margin-bottom", "25px");
+        $("" + elem)
+          .next()
+          .css("margin-top", "0");
       }
       function getRandomSentence() {
         var index = Math.floor(Math.random() * sentences.length);

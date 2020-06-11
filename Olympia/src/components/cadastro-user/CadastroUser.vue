@@ -3318,7 +3318,10 @@ export default {
         .css("border-color", "red");
       $("" + elem)
         .prev()
-        .css("margin-bottom", "15px");
+        .css("margin-bottom", "5px");
+      $("" + elem)
+        .next()
+        .css("margin-top", "15px");
     },
     remError(elem) {
       $("" + elem).fadeOut();
@@ -3329,6 +3332,9 @@ export default {
       $("" + elem)
         .prev()
         .css("margin-bottom", "25px");
+      $("" + elem)
+        .next()
+        .css("margin-top", "0");
     },
     verificarPass() {
       var color = $(".locker-cont").css("background-color");
