@@ -7,6 +7,7 @@
 
       <meu-dark-mode></meu-dark-mode>
 
+      <div class="bg"></div>
       <section class="signup">
         <div class="container dark-register-div">
           <div class="signup-content">
@@ -54,7 +55,7 @@
                     type="button"
                     name="login"
                     id="login"
-                    class="form-submit"
+                    class="form-submit black-to-white"
                     value="Login"
                     v-on:click="login()"
                   />
@@ -64,7 +65,7 @@
           </div>
         </div>
       </section>
-      <canvas id="c"></canvas>
+      <!--<canvas id="c"></canvas>-->
       <div class="ui-widget-overlay"></div>
       <div class="error-modal">
         <div class="warn-image">
