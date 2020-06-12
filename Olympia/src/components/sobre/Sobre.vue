@@ -2,6 +2,10 @@
   <main>
     <div id="container-sobre">
       <link rel="stylesheet" href="/src/assets/css/sobre.css" />
+      <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        />
       <title>S O B R E</title>
 
       <meu-menu-bar></meu-menu-bar>
@@ -233,6 +237,7 @@
           </div>
           <div class="wrapper-sb our-values">
             <div class="our-values-double-wrapper">
+              <h1 class="our-values-title">Projetos & Comunidade</h1>
               <section id="img-div" class="masonry-gallery">
                 <figure class="cell-1">
                   <img id="image" src="/src/assets/images/chip-4.jpg" />
@@ -242,10 +247,11 @@
                         <h3 class="uk-card-title ui-heading2">
                           <a href="/#/" target="_blank"
                             >Defendemos o meio-ambiente, as comunidades locais e
-                            ajudamos iniciativas nesse sentido. Projeto: OForGreen.</a
+                            ajudamos iniciativas nesse sentido. Projeto:
+                            OForGreen.</a
                           >
                         </h3>
-                        <div class="card-date ui-body4" >
+                        <div class="card-date ui-body4">
                           May 7, 2020
                         </div>
                       </div>
@@ -260,10 +266,11 @@
                         <h3 class="uk-card-title ui-heading2">
                           <a href="/#/" target="_blank"
                             >Defendemos a pluralidade da arte e somos contra
-                            qualquer tipo de censura. Projeto: O-FreeArtMovement</a
+                            qualquer tipo de censura. Projeto:
+                            O-FreeArtMovement</a
                           >
                         </h3>
-                        <div class="card-date ui-body4" >
+                        <div class="card-date ui-body4">
                           May 7, 2020
                         </div>
                       </div>
@@ -281,7 +288,7 @@
                             inovador. Projeto: Revex-Olympia</a
                           >
                         </h3>
-                        <div class="card-date ui-body4" >
+                        <div class="card-date ui-body4">
                           May 7, 2020
                         </div>
                       </div>
@@ -295,10 +302,11 @@
                       <div>
                         <h3 class="uk-card-title ui-heading2">
                           <a href="/#/" target="_blank"
-                            >Nós defendemos a diversidade e a pluralidade. Projeto: Plural!</a
+                            >Nós defendemos a diversidade e a pluralidade.
+                            Projeto: Plural!</a
                           >
                         </h3>
-                        <div class="card-date ui-body4" >
+                        <div class="card-date ui-body4">
                           May 7, 2020
                         </div>
                       </div>
@@ -306,6 +314,32 @@
                   </figcaption>
                 </figure>
               </section>
+            </div>
+          </div>
+          <div class="wrapper-sb last-div">
+            <div class="double-container">
+              <div class="col">
+                <img src="/src/assets/images/last-header-sb.jpg" />
+              </div>
+              <div class="col pink-col">
+                <div class="inner-pink-col">
+                  <h2 class="sub-title-sb">E, Finalmente:</h2>
+                  <h1 class="local-title">Nossa Mensagem</h1>
+                  <p class="local-description">
+                    Nos orgulhamos de trazer sempre o mundo da arte ainda mais
+                    perto de você. Valorizamos a arte, a individualidade, a
+                    liberdade, a diversidade, a sustentabilidade e a
+                    pluralidade. Estamos sempre tentando concientizar as pessoas
+                    sobre a importância desses conceitos. Nós do Olympia, com nossos
+                    projetos, sempre tentamos tornar o mundo mais sustentável,
+                    mais acolhedor e bonito. Esperamos que goste muito de usar
+                    nossa rede social. Você é muito especial por estar aqui.
+                  </p>
+                  <a href="/#/">
+                  <i class="fas fa-arrow-right pink"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <!--<img class="linha" src="https://img.pngio.com/black-line-png-just-pink-about-it-black-line-png-900_150.png"/>-->
