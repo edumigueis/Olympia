@@ -6,10 +6,10 @@
 
       <section class="canvas-wrap">
         <div class="canvas-content"></div>
-        <div id="canvas" class="gradiente"></div>
+        <div id="canvas-o" class="gradiente"></div>
       </section>
-
-      <!--<div id="home-animation-wrapper" style="opacity: 0">
+      <!--
+      <div id="home-animation-wrapper" style="opacity: 0">
         <div class="slides">
           <div
             class="slide"
@@ -225,56 +225,124 @@
         
       </div>-->
       <div class="landing-top-bar">
+        <div class="col">
+          <img class="landing-logo" src="/src/assets/images/page-ico.png" />
+          <div class="landing-nav">
+            <ul>
+              <li><a href="/#/">Início</a></li>
+              <li><a href="/#/sobre">Sobre</a></li>
+              <li><a href="/#/news">News</a></li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"
+                  >Aprender<span class="arrow"><span></span><span></span></span
+                ></a>
+                <div class="dropdown-content">
+                  <a href="/#/blog" class="link-title">Blog</a>
+                  <a href="/#/blog">Fotografia</a>
+                  <a href="/#/blog">Design</a>
+                  <a href="/#/blog">Desenho</a>
+                  <a href="/#/blog">Pintura</a>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"
+                  >Inspirar-se<span class="arrow"
+                    ><span></span><span></span></span
+                ></a>
+                <div class="dropdown-content">
+                  <a href="#" class="link-title">Get to Know</a>
+                  <a href="#">Projetos</a>
+                  <a href="#">O-Artists</a>
+                  <a href="#">Destaques</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col right-to-left">
+          <a href="/#/login" class="login-top-btn">Entrar</a>
+          <a href="/#/cadastro" class="signup-top-btn">Registrar-se</a>
+        </div>
+        <div id="hidden-menu" v-on:click="showMenu()">
+          <img src="/src/assets/images/bars-ico.png">
+        </div>
+      </div>
+      <div class="menu-ld">
 
+      </div>
+      <div class="ui-hide">
+        
       </div>
       <div class="wrapper-main">
         <div class="colunm-1">
-      <div class="phone-container">
-        <div class="iphone iphone-1">
-          <div class="iphone-top">
-            <span class="camera"></span>
-            <span class="sensor"></span>
-            <span class="speaker"></span>
-          </div>
-          <div class="top-bar"></div>
-          <div class="iphone-screen"></div>
-          <div class="buttons">
-            <span class="on-off"></span>
-            <span class="sleep"></span>
-            <span class="up"></span>
-            <span class="down"></span>
-          </div>
-          <div class="bottom-bar"></div>
-          <div class="iphone-bottom">
-            <span></span>
+          <div class="phone-container">
+            <div class="iphone iphone-1">
+              <div class="iphone-top">
+                <span class="camera"></span>
+                <span class="sensor"></span>
+                <span class="speaker"></span>
+              </div>
+              <div class="top-bar"></div>
+              <div class="iphone-screen"></div>
+              <div class="buttons">
+                <span class="on-off"></span>
+                <span class="sleep"></span>
+                <span class="up"></span>
+                <span class="down"></span>
+              </div>
+              <div class="bottom-bar"></div>
+              <div class="iphone-bottom">
+                <span></span>
+              </div>
+            </div>
+            <div class="iphone-2">
+              <div class="marvel-device iphone-x">
+                <div class="notch">
+                  <div class="camera"></div>
+                  <div class="speaker"></div>
+                </div>
+                <div class="top-bar"></div>
+                <div class="sleep"></div>
+                <div class="bottom-bar"></div>
+                <div class="volume"></div>
+                <div class="overflow">
+                  <div class="shadow shadow--tr"></div>
+                  <div class="shadow shadow--tl"></div>
+                  <div class="shadow shadow--br"></div>
+                  <div class="shadow shadow--bl"></div>
+                </div>
+                <div class="inner-shadow"></div>
+                <div class="screen">
+                  <img src="/src/assets/images/land-1.jpg" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="iphone iphone-2">
-          <div class="iphone-top">
-            <span class="camera"></span>
-            <span class="sensor"></span>
-            <span class="speaker"></span>
-          </div>
-          <div class="top-bar"></div>
-          <div class="iphone-screen"></div>
-          <div class="buttons">
-            <span class="on-off"></span>
-            <span class="sleep"></span>
-            <span class="up"></span>
-            <span class="down"></span>
-          </div>
-          <div class="bottom-bar"></div>
-          <div class="iphone-bottom">
-            <span></span>
+        <div class="colunm-2">
+          <div class="signup-or-signin-form">
+            <div class="inner-signup-or-signin-form">
+              <h1>Comece a explorar</h1>
+              <ul class="check-list">
+                <li>
+                  Conecte-se com seus amigos e veja o que eles estão produzindo.
+                </li>
+                <li>Mergulhe no mundo da arte e se inspire.</li>
+                <li>Divulgue seu trabalho e o seu amor pela arte.</li>
+                <li>Apoveite um ambiente para todas as artes.</li>
+              </ul>
+              <div class="bottom-link button2">
+              <a href="/#/cadastro" class="register-link">Registrar-se</a>
+              </div>
+              <p class="">
+                Já tem uma conta?
+                <a class="inner-text-link" href="/#/login">Faça login</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-        </div>
-        <div class="colunm-2">
-          <div class="signup-or-signin-form"></div>
-        </div>
-        </div>
-        <!--</div>
+      <!--</div>
       <div class="info">
         <p class="title">Bem vindo!</p>
         <a href="/#/cadastro" class="link start">Começar!</a><br /><br />
@@ -331,6 +399,11 @@
 
 <script>
 export default {
+  methods:{
+    showMenu(){
+      $('.menu-ld').addClass('visible');
+    }
+  },
   beforeCreate() {
     if (window.$cookies.isKey("user_cadastro")) {
       document.location.href = "/#/categorias";
