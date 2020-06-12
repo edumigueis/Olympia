@@ -726,7 +726,14 @@ input[type="file"] {
 /* Aparência que terá o seletor de arquivo */
 .file-label {
   transition: 0.2s all;
-  background-color: rgb(158, 228, 93);
+  background: linear-gradient(136deg,
+  #fc6c85,
+  #fc6c6d,
+  #fc836c,
+  #fc9b6c,
+  #fc6c9d,
+  #fc6cb5,
+  #fc6ccd);
   border-radius: 5px;
   color: #fff;
   cursor: pointer;

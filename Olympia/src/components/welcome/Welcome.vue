@@ -3,7 +3,10 @@
     <div id="container-welcome">
       <title>W E L C O M E</title>
       <link rel="stylesheet" href="/src/assets/css/welcome.css" />
-
+      <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        />
       <section class="canvas-wrap">
         <div class="canvas-content"></div>
         <div id="canvas-o" class="gradiente"></div>
@@ -264,15 +267,35 @@
           <a href="/#/cadastro" class="signup-top-btn">Registrar-se</a>
         </div>
         <div id="hidden-menu" v-on:click="showMenu()">
-          <img src="/src/assets/images/bars-ico.png">
+          <img src="/src/assets/images/bars-ico.png" />
         </div>
       </div>
       <div class="menu-ld">
-
-      </div>
-      <div class="ui-hide">
         
+      <div class="top-menu">
+          <ul class="menu-itens-ld">
+          <li><a href="/#/">Início</a></li>
+          <li><a href="/#/">Sobre</a></li>
+          <li><a href="/#/">News</a></li>
+          <li><a href="/#/">Blog</a></li>
+          <li><a href="/#/">Get to Know</a></li>
+          <li><a href="/#/">Política de Privacidade</a></li>
+        </ul>
       </div>
+      <div class="bottom-menu">
+        <div class="bottom-top-menu">
+          <a href="/#/help">Ajuda</a>
+          <br>
+          <i class="fas fa-globe"></i>Português (Brasil)
+        </div>
+        <div class="bottom-down-menu">
+          <a href="/#/login">Entrar</a>
+          <br>
+          <a href="/#/cadastro">Registrar-se</a>
+        </div>
+      </div>
+      </div>
+      <div class="ui-hide" v-on:click="hideMenu()"></div>
       <div class="wrapper-main">
         <div class="colunm-1">
           <div class="phone-container">
@@ -332,7 +355,7 @@
                 <li>Apoveite um ambiente para todas as artes.</li>
               </ul>
               <div class="bottom-link button2">
-              <a href="/#/cadastro" class="register-link">Registrar-se</a>
+                <a href="/#/cadastro" class="register-link">Registrar-se</a>
               </div>
               <p class="">
                 Já tem uma conta?
@@ -399,9 +422,12 @@
 
 <script>
 export default {
-  methods:{
-    showMenu(){
-      $('.menu-ld').addClass('visible');
+  methods: {
+    showMenu() {
+      $(".menu-ld").addClass("visible");
+    },
+    hideMenu() {
+      $(".menu-ld").removeClass("visible");
     }
   },
   beforeCreate() {

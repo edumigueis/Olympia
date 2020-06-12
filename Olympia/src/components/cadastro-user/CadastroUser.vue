@@ -117,6 +117,7 @@
                     name="re_pass"
                     id="re_pass"
                     v-on:keyup="verificarRePass()"
+                    v-on:focusout="verificarRePassLeave()"
                     placeholder="Confirme sua senha"
                     required
                   />
@@ -3241,7 +3242,8 @@ export default {
   },
   methods: {
     verificarCampos() {
-      if ($("#name").val() == "") {
+      setInterval(function(){
+          if ($("#name").val() == "") {
         document.getElementById("signup").disabled = true;
         $("#signup").css("opacity", "0.7");
         $("#signup").css("cursor", "unset");
@@ -3274,6 +3276,7 @@ export default {
         $("#signup").css("opacity", "1");
         $("#signup").css("cursor", "pointer");
       }
+      }, 1000)
     },
     verificarUser() {
       var user = $("#user").val();
@@ -3375,6 +3378,20 @@ export default {
       if ($("#pass").val() == "") {
         $(".is-same-cont").css("background-color", "transparent");
       }
+    },
+    verificarRePassLeave() {
+      if ($("#pass").val() == "") {
+        this.remError('#repass-err-msg');
+      }
+      if ($("#pass").val() != $("#re_pass").val()) {
+        this.error('#repass-err-msg');
+      }
+      if ($("#pass").val() == $("#re_pass").val() && $("#pass").val() != "") {
+        this.remError('#repass-err-msg');
+      }
+      if ($("#pass").val() != $("#re_pass").val() && $("#pass").val() != "")
+         this.error('#repass-err-msg');
+      
     },
     forcaSenha(senha) {
       var forca = 0;

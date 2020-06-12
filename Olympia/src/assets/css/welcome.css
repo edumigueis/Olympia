@@ -1685,7 +1685,18 @@ a:hover > .arrow span:last-of-type {
     display: none;
   }
   #hidden-menu{
-    display: block;
+    display: block !important;
+  }
+}
+@media only screen and (min-width: 637px){
+  .menu-ld.visible{
+    width: 0 !important;
+  }
+  .menu-ld{
+    width: 0 !important;
+  }
+  .menu-ld.visible + .ui-hide{
+    width: 0 !important;
   }
 }
 .menu-ld{
@@ -1702,14 +1713,46 @@ a:hover > .arrow span:last-of-type {
 .menu-ld.visible{
   width: 300px;
 }
+.ui-hide{
+  width: 0;
+  transition: all 0.6s ease-out;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
 .menu-ld.visible + .ui-hide{
-  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 30, 30, 0.8),
+    rgba(30, 30, 30, 0.6),
+    rgba(30, 30, 30, 0.7)
+  );
+  
 }
 #hidden-menu{
   height: 60px;
   width: 60px;
+  display: none;
 }
 #hidden-menu img{
   height: 60px;
   width: 60px;
+}
+.bottom-menu{
+  height: 50%;
+  border-top: 1px solid rgba(201, 200, 200, 0.9);
+}
+.bottom-down-menu{
+  width: 100%;
+  height: 15%;
+}
+.bottom-top-menu{
+  width: 100%;
+  height: 85%;
+}
+.top-menu{
+  width: 100%;
+  height: 50%;
 }
