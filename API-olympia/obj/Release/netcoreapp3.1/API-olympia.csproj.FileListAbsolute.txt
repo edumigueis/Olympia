@@ -176,3 +176,5 @@ C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Release\netcoreapp3.1\Razor\Views\Admin\Admin.cshtml.g.cs
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Release\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Release\netcoreapp3.1\API_olympia.Properties.Resources.resources
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Release\netcoreapp3.1\API-olympia.csproj.GenerateResource.cache

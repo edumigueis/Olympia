@@ -345,7 +345,6 @@ C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\St
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Umbraco.Core.dll
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Admin.cshtml.g.cs
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.SqlServer.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.StackExchangeRedis.dll
@@ -355,3 +354,6 @@ D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\De
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Umbraco.Core.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Admin.cshtml.g.cs
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API_olympia.Properties.Resources.resources
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.csproj.GenerateResource.cache
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.MvcApplicationPartsAssemblyInfo.cache

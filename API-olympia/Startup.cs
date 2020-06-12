@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using API_olympia.Data;
+using API_olympia.Controllers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -129,8 +130,6 @@ namespace API_olympia
                  policy => policy.RequireClaim("Admin"));
             });
 
-            services.AddMemoryCache();
-
             if (Configuration.GetSection("AppSettings")["RedisConnectionString"] != "")
             {
                 services.AddStackExchangeRedisCache(options =>
@@ -153,6 +152,8 @@ namespace API_olympia
             services.TryAddScoped<UserManager<IdentityUser>>();
             services.TryAddScoped<SignInManager<IdentityUser>>();
             services.TryAddScoped<RoleManager<IdentityRole>>();
+            services.AddSingleton(new DataArmazenador());
+            services.AddMemoryCache();
             services.AddControllersWithViews();
             services.AddRazorPages();
 

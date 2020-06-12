@@ -14,10 +14,12 @@ namespace API_olympia.Controllers
     [ApiController]
     public class PublicacoesController : Controller
     {
+        public DataArmazenador dataArmazenador { get; set; }
         public IRepository Repo { get; }
-        public PublicacoesController(IRepository repo)
+        public PublicacoesController(IRepository repo, DataArmazenador dataArmazenador)
         {
             this.Repo = repo;
+            this.dataArmazenador = dataArmazenador;
         }
 
         [HttpGet]
@@ -85,7 +87,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no delete().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
             return BadRequest();
         }
@@ -104,7 +106,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no post().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
             return BadRequest();
         }
@@ -180,11 +182,12 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("RedirectToPost/{json}")]
-        public async Task<IActionResult> RedirectToPost(string json)
+        [HttpGet("RedirectToPost")]
+        public async Task<IActionResult> RedirectToPost()
         {
             try
             {
+                string json = dataArmazenador.JsonPublicacao;
                 Publicacoes publicacoes = JsonConvert.DeserializeObject<Publicacoes>(json);
 
                 return await post(publicacoes);

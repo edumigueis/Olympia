@@ -14,6 +14,7 @@ using Newtonsoft.Json;
 using System.Collections;
 using System.Linq;
 using System.Web;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace API_olympia.Controllers
 {
@@ -21,10 +22,12 @@ namespace API_olympia.Controllers
     [ApiController]
     public class RedirectController : Controller
     {
+        public DataArmazenador dataArmazenador { get; set; }
         public IRepository Repo { get; }
-        public RedirectController(IRepository repo)
+        public RedirectController(IRepository repo, DataArmazenador dataArmazenador)
         {
             this.Repo = repo;
+            this.dataArmazenador = dataArmazenador;
         }
 
         [HttpPost("Cadastro")]
@@ -129,8 +132,8 @@ namespace API_olympia.Controllers
                 }
                 JsonSerializerSettings settings = new JsonSerializerSettings { Converters = new[] { new MyConverter() } };
                 string json = JsonConvert.SerializeObject(result, settings);
-                json = HttpUtility.UrlEncode(json);
-                return Redirect("/api/Publicacoes/RedirectToPost/" + json);
+                dataArmazenador.JsonPublicacao = json;
+                return Redirect("/api/Publicacoes/RedirectToPost/");
             }
             catch
             {
