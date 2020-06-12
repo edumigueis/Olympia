@@ -33,7 +33,7 @@
             data-3="+able"
           ></div>
         </div>
-
+<!--
         <svg
           version="1.1"
           id="home-animation"
@@ -44,7 +44,6 @@
           viewBox="0 0 2371.2 841.1"
           xml:space="preserve"
         >
-          <!-- TEXTS -->
           <mask
             maskUnits="userSpaceOnUse"
             x="-273"
@@ -61,7 +60,7 @@
             </g>
           </mask>
 
-          <!-- BUBBLES -->
+
           <g id="bubbles" style="mask:url(#bubbles-1);">
             <path
               d="M1915.1-195.3c-87.9,90.4-16.3,268,122.9,331.9S2339,73.2,2365.6,15.3
@@ -223,6 +222,47 @@
             />
           </g>
         </svg>
+        -->
+      </div>
+      <div class="phone-container">
+        <div class="iphone iphone-1">
+                  <div class="iphone-top">
+                    <span class="camera"></span>
+                    <span class="sensor"></span>
+                    <span class="speaker"></span>
+                  </div>
+                  <div class="top-bar"></div>
+                  <div class="iphone-screen"></div>
+                  <div class="buttons">
+                    <span class="on-off"></span>
+                    <span class="sleep"></span>
+                    <span class="up"></span>
+                    <span class="down"></span>
+                  </div>
+                  <div class="bottom-bar"></div>
+                  <div class="iphone-bottom">
+                    <span></span>
+                  </div>
+                </div>
+                <div class="iphone iphone-2">
+                  <div class="iphone-top">
+                    <span class="camera"></span>
+                    <span class="sensor"></span>
+                    <span class="speaker"></span>
+                  </div>
+                  <div class="top-bar"></div>
+                  <div class="iphone-screen"></div>
+                  <div class="buttons">
+                    <span class="on-off"></span>
+                    <span class="sleep"></span>
+                    <span class="up"></span>
+                    <span class="down"></span>
+                  </div>
+                  <div class="bottom-bar"></div>
+                  <div class="iphone-bottom">
+                    <span></span>
+                  </div>
+                </div>
       </div>
       <div class="info">
         <p class="title">Bem vindo!</p>

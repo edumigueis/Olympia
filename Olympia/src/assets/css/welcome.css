@@ -98,6 +98,7 @@ text {
   position: fixed;
   padding: 2%;
   border-radius: 10px;
+  font-weight: bold !important;
   top: 15%;
   width: 96%;
   transition: all 1s;
@@ -232,10 +233,12 @@ polygon.arrow-top {
 #title-modal{
   font-family: 'Poppins';
   font-size: 2.4em;
+  font-weight: bold;
 }
 
 #text-modal{
   font-family: 'Poppins';
+  font-weight: bold;
   font-size: 0.9em;
   text-align: justify;
   text-indent: 1em;
@@ -710,5 +713,260 @@ polygon.arrow-top {
     cursor: pointer;
   }
 }
+.iphone {
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999,
+    0 0 30px 0px rgba(0, 0, 0, 0.7);
+  border: 5px solid #d9dbdc;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 50px;
+  height: 877px;
+  width: 423px;
+  position: relative;
+  margin: 30px auto;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
 
+.iphone-top {
+  padding: 5px 110px 40px;
+  position: relative;
+}
+.iphone-top .speaker {
+  display: block;
+  width: 70px;
+  height: 6px;
+  margin: 0 auto;
+  border-radius: 6px;
+  background: #292728;
+}
+.iphone-top .camera {
+  display: block;
+  margin: 0 auto;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-bottom: 13px;
+  background: #333;
+}
+.iphone-top .sensor {
+  display: block;
+  width: 15px;
+  height: 15px;
+  float: left;
+  background: #333;
+  margin-top: -5px;
+  border-radius: 50%;
+}
 
+.top-bar,
+.bottom-bar {
+  display: block;
+  width: 423px;
+  height: 15px;
+  border-left: 5px solid #bbb;
+  border-right: 5px solid #bbb;
+  position: absolute;
+  left: -5px;
+}
+
+.top-bar {
+  top: 65px;
+}
+
+.bottom-bar {
+  bottom: 65px;
+}
+
+.iphone-screen {
+  background: #eee;
+  border: 1px solid #fff;
+  height: 677px;
+  width: 375px;
+  margin: 0 auto;
+  border: 2px solid rgba(0, 0, 0, 0.9);
+  border-radius: 3px;
+  overflow: hidden;
+  background-image: url("https://assets.codepen.io/285131/paintbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.iphone-screen img {
+  width: 100%;
+}
+
+.buttons .on-off,
+.buttons .up,
+.buttons .down,
+.buttons .sleep {
+  display: block;
+  background: #ccc;
+  position: absolute;
+  border-radius: 2px 0px 0px 2px;
+}
+.buttons .on-off {
+  height: 40px;
+  width: 3px;
+  top: 100px;
+  left: -8px;
+}
+.buttons .up,
+.buttons .down,
+.buttons .sleep {
+  height: 60px;
+  width: 5px;
+  left: -10px;
+}
+.buttons .up {
+  top: 170px;
+}
+.buttons .down {
+  top: 250px;
+}
+.buttons .sleep {
+  left: auto;
+  right: -10px;
+  top: 170px;
+  border-radius: 0px 2px 2px 0px;
+}
+
+.iphone-bottom {
+  padding: 10px 0 0;
+}
+.iphone-bottom span {
+  display: block;
+  margin: 0 auto;
+  width: 68px;
+  height: 68px;
+  background: #ccc;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #303233 0%,
+    #b5b7b9 50%,
+    #f0f2f2 69%,
+    #303233 100%
+  );
+  position: relative;
+}
+.iphone-bottom span:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+}
+* {
+  box-sizing: border-box;
+}
+.colunm {
+  width: 50vw;
+  min-width: 400px;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+}
+.bottom-wrapper-sb {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+.iphone-2 {
+  margin-top: 210px;
+  margin-right: 150px;
+}
+.iphone-1 {
+  margin-right: -380px !important;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+  color: grey;
+  line-height: 1.4;
+  font-family: "Poppins";
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 90%;
+  grid-gap: 1em;
+  -webkit-overflow-scrolling: touch;
+  padding: 2em 1em;
+  background: white;
+}
+@media all and (min-width: 600px) {
+  .grid {
+    grid-auto-flow: initial;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 23em));
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+}
+.grid__figure {
+  display: grid;
+  grid-template-rows: 16em 1fr;
+  grid-row-gap: 1em;
+  grid-column-gap: 1.2em;
+}
+.grid__figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 16px;
+}
+@media only screen and (max-width: 700px) {
+  .colunm {
+    width: 100%;
+  }
+}
+
+.action-taker-p {
+  border-bottom-color: #677b8c;
+  display: inline-block;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #3a3a3a;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #232323;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  width: fit-content;
+  margin-bottom: 0 !important;
+}
+
+.grid-inline {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  margin-top: 155px;
+}
+.grid-inline li {
+  margin-right: 40px;
+}
+.phone-container{
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  left: 10vw;
+  top: 0;
+  position: absolute;
+  transform: scale(0.65);
+}

@@ -49,9 +49,9 @@
             <div class="main-text">
               <h1 class="text-title-principal">Olympia</h1>
               <p class="sb-mission">
-                Somos uma corporação que valoriza a arte sua completa e em todas
+                Somos uma corporação que valoriza a arte em todas
                 as suas formas. Acreditamos em tudo que a arte representa: como
-                ela embeleza a vida, trazendo mais cor e sentido, e também como
+                ela embeleza a vida, como mostra a realidade, como denuncia, como alegra, como traz mais cor e sentido, e também como
                 ela pode representar resistência em momentos tão dificeis na
                 humanidade.
               </p>
@@ -168,6 +168,11 @@
                   <div class="iphone-bottom">
                     <span></span>
                   </div>
+                </div>
+                <div class="colunm-2">
+                    <div class="signup-or-signin-form">
+                      
+                    </div>
                 </div>
                 <ul class="grid-inline">
                   <li>
