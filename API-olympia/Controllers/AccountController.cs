@@ -30,7 +30,7 @@ namespace API_olympia.Controllers
             this.armazenador = armazenador;
         }
 
-        [CustomAuthorizeAttribute(typeof(AttributeArgument))]
+
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {

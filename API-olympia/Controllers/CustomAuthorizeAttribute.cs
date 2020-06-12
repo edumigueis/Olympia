@@ -8,7 +8,7 @@ namespace API_olympia.Data
     [AttributeUsage(AttributeTargets.All)]
     public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
-        public Type attributeArgument;
+       public Type attributeArgument;
         public Armazenador Armazenador 
         {
             get

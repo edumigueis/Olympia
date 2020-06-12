@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 namespace API_olympia.Controllers
 {
+    [ApiController]
     class AttributeArgument : IAttributeArgument
     {
         private readonly Armazenador armazenador;
-        public AttributeArgument(Armazenador armazenador)
+        public AttributeArgument()
         {
-            this.armazenador = armazenador;
+            armazenador = ArmazenadorDeArmazenadores.getArmazenador("dskamrdsdm34534546rofsifdfdgdfgtbrtdfg");
         }
-        public Armazenador Armazenador { get { return armazenador; } }
+
+        public Armazenador Armazenador => armazenador;
     }
 }
