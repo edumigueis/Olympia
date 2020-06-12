@@ -227,6 +227,7 @@
         </svg>
         
       </div>-->
+
       <div class="landing-top-bar">
         <div class="col">
           <img class="landing-logo" src="/src/assets/images/page-ico.png" />
@@ -271,7 +272,7 @@
         </div>
       </div>
       <div class="menu-ld">
-        
+        <div id="close-menu" v-on:click="hideMenu()"></div>
       <div class="top-menu">
           <ul class="menu-itens-ld">
           <li><a href="/#/">Início</a></li>
@@ -296,6 +297,7 @@
         </div>
       </div>
       </div>
+      
       <div class="ui-hide" v-on:click="hideMenu()"></div>
       <div class="wrapper-main">
         <div class="colunm-1">
@@ -307,7 +309,9 @@
                 <span class="speaker"></span>
               </div>
               <div class="top-bar"></div>
-              <div class="iphone-screen"></div>
+              <div class="iphone-screen">
+                <img src="https://www.instagram.com/static/images/homepage/screenshot5-2x.jpg/5e04169b9308.jpg">
+              </div>
               <div class="buttons">
                 <span class="on-off"></span>
                 <span class="sleep"></span>
@@ -337,7 +341,7 @@
                 </div>
                 <div class="inner-shadow"></div>
                 <div class="screen">
-                  <img src="/src/assets/images/land-1.jpg" />
+                  <img src="https://www.instagram.com/static/images/homepage/screenshot1-2x.jpg/9144d6673849.jpg" />
                 </div>
               </div>
             </div>
@@ -360,7 +364,7 @@
               </div>
               <p class="">
                 Já tem uma conta?
-                <a class="inner-text-link" href="/#/login">Faça login</a>
+                <a class="inner-text-link" href="/#/login"><span class="underline--magical"> Faça login</span></a>
               </p>
             </div>
           </div>

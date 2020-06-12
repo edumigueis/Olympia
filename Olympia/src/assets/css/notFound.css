@@ -104,7 +104,7 @@
   }
   .oops-header{
     position: absolute !important;
-    top: 25vh !important;
+    top: 20vh !important;
     margin: 0 !important;
     width: 100% !important;
     text-align: center !important;
@@ -112,7 +112,7 @@
   }
   .oops-header + .exp-wrapper{
     position: absolute !important;
-    top: 55vh !important;
+    top: 50vh !important;
     margin: 0 !important;
     left: 0% !important;
     font-family: 'Poppins Bold' !important;

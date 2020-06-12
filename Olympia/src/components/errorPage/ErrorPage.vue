@@ -1,7 +1,7 @@
 <template>
   <div id="not-found-container">
     <div class="oops-fullpage-blur oops-bg"></div>
-    <title>5 0 0</title>
+    <title>E R R O R</title>
     <link rel="stylesheet" href="/src/assets/css/notFound.css" />
     <header class="oops-header">
       <h1 class="gradient-text" id="error-oops">Oops</h1>
