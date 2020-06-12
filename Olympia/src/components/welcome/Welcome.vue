@@ -279,14 +279,15 @@
           <li><a href="/#/">News</a></li>
           <li><a href="/#/">Blog</a></li>
           <li><a href="/#/">Get to Know</a></li>
-          <li><a href="/#/">Política de Privacidade</a></li>
+          <li><a href="/#/">Ajuda</a></li>
         </ul>
       </div>
       <div class="bottom-menu">
         <div class="bottom-top-menu">
-          <a href="/#/help">Ajuda</a>
+          <a href="/#/help">Política de Privacidade</a>
           <br>
-          <i class="fas fa-globe"></i>Português (Brasil)
+          <br>
+          <span class="language"><i class="fas fa-globe"></i>Português (Brasil)</span>
         </div>
         <div class="bottom-down-menu">
           <a href="/#/login">Entrar</a>

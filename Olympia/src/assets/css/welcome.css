@@ -17,6 +17,10 @@
   font-family: "Poppins";
   src: url("../fonts/poppins-light.otf");
 }
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("../fonts/Poppins-Bold.otf");
+}
 
 @font-face {
   font-family: "Calibre-Regular";
@@ -1746,13 +1750,120 @@ a:hover > .arrow span:last-of-type {
 }
 .bottom-down-menu{
   width: 100%;
-  height: 15%;
+  height: 20%;
+}
+.bottom-down-menu > a{
+  padding: 20px 32px;
+  color: #232323;
+  font-size: 1.2em;
+  font-family: 'Poppins Bold' !important;
 }
 .bottom-top-menu{
   width: 100%;
-  height: 85%;
+  height: 75%;
+  margin-top: 5%;
+}
+.bottom-top-menu a{
+  padding: 20px 32px;
+  color: #555555;
+  font-size: 1.2em;
 }
 .top-menu{
   width: 100%;
   height: 50%;
+}
+.top-menu ul li a{
+  padding: 10px 32px;
+  color: #222;
+  font-size: 1.2em;
+}
+.top-menu ul{
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 32px 0;
+}
+.top-menu ul > li{
+  width: 100%;
+}
+.language{
+  color: #777777;
+  padding: 20px 32px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+.fa-globe{
+  margin-right: 7px;
+}
+@media only screen and (max-width: 400px){
+  .signup-or-signin-form{
+    width: 100%;
+    border-radius: unset;
+    position: absolute;
+    left: 0;
+    margin-top: 100px;
+  }
+  .colunm-2{
+    margin-bottom: -20vh;
+  }
+  .phone-container{
+    position: relative;
+    margin-top: 60px !important;
+  }
+}
+@media only screen and (max-width: 350px){
+  .register-link{
+    margin-left: 140px !important;
+  }
+  .colunm-2{
+    margin-bottom: -40vh;
+  }
+  .signup-or-signin-form h1{
+    font-size: 1.4em;
+  }
+}
+@media only screen and (min-height: 550px) and (max-height: 600px) and (max-width: 340px){
+  .phone-container{
+    z-index: 2;
+    margin-top: auto;
+  }
+  .colunm-1{
+    margin-bottom: -160px;
+  }
+  .colunm-2{
+    margin-bottom: unset !important;
+    height: auto;
+  }
+  .signup-or-signin-form{
+    position: absolute;
+    top: 0;
+  }
+}
+@media only screen and (min-height: 900px){
+  .colunm-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .signup-or-signin-form {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+}
+
+@media only screen and (min-width: 1800px){
+  body{
+    font-size: 1.4rem;
+  }
+  .signup-or-signin-form{
+    width: 460px;
+  }
+  .register-link{
+    margin-left: 207px;
+  }
+  .iphone-1{
+    transform: scale(1) !important;
+  }
+  .iphone-2{
+    transform: scale(1) !important;
+  }
 }
