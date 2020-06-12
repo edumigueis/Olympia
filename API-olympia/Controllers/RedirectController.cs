@@ -3,18 +3,13 @@ using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using API_olympia.Models;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.Security.Claims;
 using System.Collections.Generic;
 using Microsoft.Extensions.Primitives;
 using System;
 using System.ComponentModel;
 using Newtonsoft.Json;
-using System.Collections;
 using System.Linq;
 using System.Web;
-using Microsoft.Extensions.Caching.Memory;
 
 namespace API_olympia.Controllers
 {
@@ -23,11 +18,13 @@ namespace API_olympia.Controllers
     public class RedirectController : Controller
     {
         public DataArmazenador dataArmazenador { get; set; }
+        public Armazenador armazenador { get; set; }
         public IRepository Repo { get; }
-        public RedirectController(IRepository repo, DataArmazenador dataArmazenador)
+        public RedirectController(IRepository repo, DataArmazenador dataArmazenador, Armazenador armazenador)
         {
             this.Repo = repo;
             this.dataArmazenador = dataArmazenador;
+            this.armazenador = armazenador;
         }
 
         [HttpPost("Cadastro")]
@@ -38,7 +35,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
 
                 IDictionary<string, object> result = new Dictionary<string, object>();
                 var properties = TypeDescriptor.GetProperties(model);
@@ -66,7 +63,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
 
                 IDictionary<string, object> result = new Dictionary<string, object>();
                 var properties = TypeDescriptor.GetProperties(model);
@@ -94,7 +91,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
 
                 IDictionary<string, object> result = new Dictionary<string, object>();
                 var properties = TypeDescriptor.GetProperties(model);
@@ -122,7 +119,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
 
                 IDictionary<string, object> result = new Dictionary<string, object>();
                 var properties = TypeDescriptor.GetProperties(model);
@@ -164,7 +161,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Obras/" + idObra);
             }
             catch
@@ -181,7 +178,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios/" + idUsuario);
             }
             catch
@@ -198,7 +195,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Servicos/" + idServico);
             }
             catch
@@ -215,7 +212,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Publicacoes/" + idPublicacao);
             }
             catch
@@ -232,7 +229,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Publicacoes");
             }
             catch
@@ -249,7 +246,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Eventos");
             }
             catch
@@ -266,7 +263,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios");
             }
             catch
@@ -283,7 +280,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Obras");
             }
             catch
@@ -300,7 +297,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Servicos");
             }
             catch
@@ -319,7 +316,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Fotos/Servico/" + idServico);
             }
             catch
@@ -336,7 +333,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Fotos/Obra/" + idObra);
             }
             catch
@@ -353,7 +350,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Fotos/Evento/" + idEvento);
             }
             catch
@@ -370,7 +367,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios/Obra/" + idObra);
             }
             catch
@@ -387,7 +384,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios/Servico/" + idServico);
             }
             catch
@@ -404,7 +401,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios/Username/" + username);
             }
             catch
@@ -421,7 +418,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Obras/Usuario/" + idUsuario);
             }
             catch
@@ -438,7 +435,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Servicos/Usuario/" + idServico);
             }
             catch
@@ -455,7 +452,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Eventos/Arte/" + idArte);
             }
             catch
@@ -472,7 +469,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Obras/Curtidas/");
             }
             catch
@@ -489,7 +486,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Servicos/Curtidas/");
             }
             catch
@@ -506,7 +503,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Publicacoes/Curtidas/");
             }
             catch
@@ -523,7 +520,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Obras/CurtidasDesc/");
             }
             catch
@@ -540,7 +537,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Servicos/CurtidasDesc/");
             }
             catch
@@ -557,7 +554,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Publicacoes/CurtidasDesc/");
             }
             catch
@@ -574,7 +571,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Obras/NaoCurtidas/");
             }
             catch
@@ -591,7 +588,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Publicacoes/NaoCurtidas/");
             }
             catch
@@ -608,7 +605,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Servicos/NaoCurtidos/");
             }
             catch
@@ -625,7 +622,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Servicos/MaisRecentes/");
             }
             catch
@@ -642,7 +639,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Obras/MaisRecentes/");
             }
             catch
@@ -659,7 +656,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Publicacoes/MaisRecentes/");
             }
             catch
@@ -676,7 +673,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Servicos/MenosRecentes/");
             }
             catch
@@ -693,7 +690,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Obras/MenosRecentes/");
             }
             catch
@@ -710,7 +707,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Publicacoes/MenosRecentes/");
             }
             catch
@@ -727,7 +724,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios/IdByUserName/" + username);
             }
             catch
@@ -744,7 +741,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios/RedirectToPostBio/" + json);
             }
             catch
@@ -769,7 +766,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios/RedirectToPostVerificarDados/" + user + "," + senha );
             }
             catch
@@ -786,7 +783,7 @@ namespace API_olympia.Controllers
                 ICollection<StringValues> lista;
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
-                Armazenador.StringValueRoute = listagem[5];
+                armazenador.StringValueRoute = listagem[5];
                 return Redirect("/api/Usuarios/UserByLoginData/" + info);
             }
             catch

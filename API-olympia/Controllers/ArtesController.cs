@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Security.Claims;
 
 namespace API_olympia.Controllers
-{   
-    [CustomAuthorizeAttribute]
+{
+    [CustomAuthorizeAttribute(typeof(AttributeArgument))]
     [Route("api/[controller]")]
     [ApiController]
     public class ArtesController : Controller

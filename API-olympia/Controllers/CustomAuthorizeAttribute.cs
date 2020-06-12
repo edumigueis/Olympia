@@ -8,6 +8,18 @@ namespace API_olympia.Data
     [AttributeUsage(AttributeTargets.All)]
     public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
+        public Type attributeArgument;
+        public Armazenador Armazenador 
+        {
+            get
+            {
+              return ((IAttributeArgument)Activator.CreateInstance(attributeArgument)).Armazenador;
+            }
+        }
+        public CustomAuthorizeAttribute(Type attributeArgument)
+        {
+            this.attributeArgument = attributeArgument;
+        }
         public void OnAuthorization(AuthorizationFilterContext filterContext)
         {
             if (Armazenador.StringValueRoute != null)

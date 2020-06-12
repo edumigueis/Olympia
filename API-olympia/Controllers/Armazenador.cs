@@ -5,18 +5,19 @@ using System.Threading.Tasks;
 
 namespace API_olympia.Controllers
 {
-    public static class Armazenador
+    public class Armazenador
     {
+        private string stringValueRole;
+        private int intValue;
+        private string stringValueNome;
+        private string stringValueRoute;
 
-        private static string stringValueRole;
-        private static int intValue;
-        private static string stringValueNome;
-        private static string stringValueRoute;
+        public string StringValueRole { get => stringValueRole; set => stringValueRole = value; }
+        public int IntValue { get => intValue; set => intValue = value; }
+        public string StringValueNome { get => stringValueNome; set => stringValueNome = value; }
+        public string StringValueRoute { get => stringValueRoute; set => stringValueRoute = value; }
 
-        public static string StringValueRole { get => stringValueRole; set => stringValueRole = value; }
-        public static int IntValue { get => intValue; set => intValue = value; }
-        public static string StringValueNome { get => stringValueNome; set => stringValueNome = value; }
-        public static string StringValueRoute { get => stringValueRoute; set => stringValueRoute = value; }
-
+        public Armazenador()
+        { }
     }
 }

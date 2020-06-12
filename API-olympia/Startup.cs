@@ -101,7 +101,6 @@ namespace API_olympia
             .AddJwtBearer();
 
             services.AddHttpClient();
-            services.AddHttpContextAccessor();
 
             /*services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
                     options.TokenValidationParameters = new TokenValidationParameters
@@ -153,6 +152,8 @@ namespace API_olympia
             services.TryAddScoped<SignInManager<IdentityUser>>();
             services.TryAddScoped<RoleManager<IdentityRole>>();
             services.AddSingleton(new DataArmazenador());
+            services.AddSingleton(new Armazenador());
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMemoryCache();
             services.AddControllersWithViews();
             services.AddRazorPages();

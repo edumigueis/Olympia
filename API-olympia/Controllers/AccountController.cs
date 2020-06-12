@@ -15,28 +15,30 @@ namespace API_olympia.Controllers
     [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
+
     public class AccountController : Controller
     {
-
         private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
+        private readonly Armazenador armazenador;
         public IRepository Repo { get; }
-        public AccountController(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IRepository repo)
+        public AccountController(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IRepository repo, Armazenador armazenador)
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
             Repo = repo;
+            this.armazenador = armazenador;
         }
 
-        [CustomAuthorizeAttribute]
+        [CustomAuthorizeAttribute(typeof(AttributeArgument))]
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
-            if (Armazenador.StringValueNome != null)
+            if (armazenador.StringValueNome != null)
             {
                 await HttpContext.SignOutAsync();
-                Armazenador.StringValueNome = null;
-                Armazenador.StringValueRole = null;
+                armazenador.StringValueNome = null;
+                armazenador.StringValueRole = null;
                 return RedirectToAction("index", "home");
             }
 
@@ -46,7 +48,7 @@ namespace API_olympia.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            Armazenador.StringValueRoute = HttpContext.Request.Host.Value;
+            armazenador.StringValueRoute = HttpContext.Request.Host.Value;
             return View();
         }
 
@@ -88,8 +90,8 @@ namespace API_olympia.Controllers
                                     AllowRefresh = false
                                 });
 
-                            Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
-                            Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
+                            armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
+                            armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 
                             return View("Views/Admin/Admin.cshtml");
                         }
@@ -116,8 +118,8 @@ namespace API_olympia.Controllers
                                     AllowRefresh = false
                                 });
 
-                            Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
-                            Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
+                            armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
+                            armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 
                             return View("Views/Admin/Admin.cshtml");
 
@@ -153,8 +155,8 @@ namespace API_olympia.Controllers
                                 AllowRefresh = false
                             });
 
-                        Armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
-                        Armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
+                        armazenador.StringValueRole = HttpContext.User.FindFirst(ClaimTypes.Role).Value;
+                        armazenador.StringValueNome = HttpContext.User.FindFirst(ClaimTypes.Name).Value;
 
                         return View("Views/Admin/Admin.cshtml");
                     }

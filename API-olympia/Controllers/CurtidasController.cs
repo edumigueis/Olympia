@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute]
+    [CustomAuthorizeAttribute(typeof(AttributeArgument))]
     [Route("api/[controller]")]
     [ApiController]
     public class CurtidasController : Controller
