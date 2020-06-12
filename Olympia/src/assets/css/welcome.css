@@ -931,11 +931,22 @@ polygon.arrow-top {
 .iphone-1 {
   margin-right: -300px !important;
   margin-top: -140px;
+  transition: 0.3s transform ease-out;
 }
+@media only screen and (max-width: 1800px){
+  .iphone-1:hover {
+    transform: scale(0.83);
+  }
+  .iphone-2:hover {
+    transform: scale(0.83);
+  }
+}
+
 .iphone-2 {
   margin-top: 50px;
   margin-right: 0px;
   transform: scale(0.8);
+  transition: 0.3s transform ease-out;
 }
 ul {
   list-style: none;
@@ -1891,14 +1902,21 @@ a:hover > .arrow span:last-of-type {
   }
   .signup-or-signin-form{
     width: 460px;
+    border-radius: 18px;
   }
   .register-link{
     margin-left: 207px;
   }
   .iphone-1{
-    transform: scale(1) !important;
+    transform: scale(1);
   }
   .iphone-2{
-    transform: scale(1) !important;
+    transform: scale(1);
+  }
+  .iphone-1:hover {
+    transform: scale(1.03);
+  }
+  .iphone-2:hover {
+    transform: scale(1.03);
   }
 }
