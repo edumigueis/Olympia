@@ -27,12 +27,14 @@ import Sugestoes from './components/sugestoes/Sugestoes.vue';
 import Denuncia from './components/denuncia/Denuncia.vue';
 import IntServ from './components/intServ/IntServ.vue';
 import Servico from './components/servico/Servico.vue';
+import ErrorPage from './components/errorPage/ErrorPage.vue';
 
 export const routes = [
 
     { path: '/', component: Welcome, titulo: ' W E L C O M E' },
     { path: '*', component: NotFound, titulo: '4 0 4' },
     { path: '/InternalServerError', component: IntServ, titulo: '5 0 0' },
+    { path: '/error', component: ErrorPage, titulo: 'Oops' },
     { path: '/home', component: Home, titulo: 'H O M E', meta: { transition: 'zoom' }  },
     { path: '/artes', component: Artes, titulo: 'A R T E S' },
     { path: '/obra/:id', component: Obra, titulo: 'O B R A' },

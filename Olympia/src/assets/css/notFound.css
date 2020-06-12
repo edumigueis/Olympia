@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("../fonts/Poppins-Bold.otf");
+}
 
 .gradient-text {
     /* Fallback: Set a background color. */
@@ -85,5 +89,37 @@
 
   #error-500 {
     font-size: 6em;
+  }
+
+  #error-oops{
+    font-size: 7em;
+  }
+  .oops-bg{
+    height: 100vh !important;
+    width: 100vw !important;
+    background-image: url('../images/error-page-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .oops-header{
+    position: absolute !important;
+    top: 25vh !important;
+    margin: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-family: 'Poppins Bold' !important;
+  }
+  .oops-header + .exp-wrapper{
+    position: absolute !important;
+    top: 55vh !important;
+    margin: 0 !important;
+    left: 0% !important;
+    font-family: 'Poppins Bold' !important;
+    color: #232323 !important;
+    font-size: 1.5em !important;
+  }
+  .oops-fullpage-blur{
+    filter: blur(4px);
   }
   
