@@ -964,9 +964,28 @@ figcaption {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
-  left: 10vw;
+  height: 100vh;
   top: 0;
-  position: absolute;
+  position: relative;
   transform: scale(0.65);
+}
+.colunm-1{
+  position: relative;
+  width: 50vw;
+  height: 100%;
+}
+.colunm-2{
+  position: relative;
+  width: 50vw;
+  height: 100%;
+}
+.wrapper-main{
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.landing-top-bar{
+  width: 100vw;
 }

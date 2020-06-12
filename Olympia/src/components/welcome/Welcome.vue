@@ -9,7 +9,7 @@
         <div id="canvas" class="gradiente"></div>
       </section>
 
-      <div id="home-animation-wrapper" style="opacity: 0">
+      <!--<div id="home-animation-wrapper" style="opacity: 0">
         <div class="slides">
           <div
             class="slide"
@@ -33,7 +33,7 @@
             data-3="+able"
           ></div>
         </div>
-<!--
+
         <svg
           version="1.1"
           id="home-animation"
@@ -222,48 +222,59 @@
             />
           </g>
         </svg>
-        -->
+        
+      </div>-->
+      <div class="landing-top-bar">
+
       </div>
+      <div class="wrapper-main">
+        <div class="colunm-1">
       <div class="phone-container">
         <div class="iphone iphone-1">
-                  <div class="iphone-top">
-                    <span class="camera"></span>
-                    <span class="sensor"></span>
-                    <span class="speaker"></span>
-                  </div>
-                  <div class="top-bar"></div>
-                  <div class="iphone-screen"></div>
-                  <div class="buttons">
-                    <span class="on-off"></span>
-                    <span class="sleep"></span>
-                    <span class="up"></span>
-                    <span class="down"></span>
-                  </div>
-                  <div class="bottom-bar"></div>
-                  <div class="iphone-bottom">
-                    <span></span>
-                  </div>
-                </div>
-                <div class="iphone iphone-2">
-                  <div class="iphone-top">
-                    <span class="camera"></span>
-                    <span class="sensor"></span>
-                    <span class="speaker"></span>
-                  </div>
-                  <div class="top-bar"></div>
-                  <div class="iphone-screen"></div>
-                  <div class="buttons">
-                    <span class="on-off"></span>
-                    <span class="sleep"></span>
-                    <span class="up"></span>
-                    <span class="down"></span>
-                  </div>
-                  <div class="bottom-bar"></div>
-                  <div class="iphone-bottom">
-                    <span></span>
-                  </div>
-                </div>
+          <div class="iphone-top">
+            <span class="camera"></span>
+            <span class="sensor"></span>
+            <span class="speaker"></span>
+          </div>
+          <div class="top-bar"></div>
+          <div class="iphone-screen"></div>
+          <div class="buttons">
+            <span class="on-off"></span>
+            <span class="sleep"></span>
+            <span class="up"></span>
+            <span class="down"></span>
+          </div>
+          <div class="bottom-bar"></div>
+          <div class="iphone-bottom">
+            <span></span>
+          </div>
+        </div>
+        <div class="iphone iphone-2">
+          <div class="iphone-top">
+            <span class="camera"></span>
+            <span class="sensor"></span>
+            <span class="speaker"></span>
+          </div>
+          <div class="top-bar"></div>
+          <div class="iphone-screen"></div>
+          <div class="buttons">
+            <span class="on-off"></span>
+            <span class="sleep"></span>
+            <span class="up"></span>
+            <span class="down"></span>
+          </div>
+          <div class="bottom-bar"></div>
+          <div class="iphone-bottom">
+            <span></span>
+          </div>
+        </div>
       </div>
+        </div>
+        <div class="colunm-2">
+          <div class="signup-or-signin-form"></div>
+        </div>
+        </div>
+        <!--</div>
       <div class="info">
         <p class="title">Bem vindo!</p>
         <a href="/#/cadastro" class="link start">Começar!</a><br /><br />
@@ -313,7 +324,7 @@
             </table>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
   </main>
 </template>

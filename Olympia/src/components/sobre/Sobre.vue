@@ -169,11 +169,6 @@
                     <span></span>
                   </div>
                 </div>
-                <div class="colunm-2">
-                    <div class="signup-or-signin-form">
-                      
-                    </div>
-                </div>
                 <ul class="grid-inline">
                   <li>
                     <figure class="grid__figure">
