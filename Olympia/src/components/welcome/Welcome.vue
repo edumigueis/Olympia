@@ -594,22 +594,22 @@ body {
   -webkit-animation-name: imgFade;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 80s;
+  -webkit-animation-duration: 76s;
 
   -moz-animation-name: imgFade;
   -moz-animation-timing-function: ease-in-out;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-duration: 80s;
+  -moz-animation-duration: 76s;
 
   -o-animation-name: imgFade;
   -o-animation-timing-function: ease-in-out;
   -o-animation-iteration-count: infinite;
-  -o-animation-duration: 80s;
+  -o-animation-duration: 76s;
 
   animation-name: imgFade;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 80s;
+  animation-duration: 76s;
 }
 #container div:nth-of-type(1) {
   -webkit-animation-delay: 70s;
