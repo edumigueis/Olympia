@@ -10,71 +10,54 @@
         <div id="container">
           <div
             style='background-image: url("/src/assets/images/land-14.jpg");'
-            rel="preload"
           ></div>
           <div
             style='background-image: url("/src/assets/images/land-13.jpg");'
-            rel="preload"
           ></div>
           <div
             style='background-image: url("/src/assets/images/land-12.jpg");'
-            rel="preload"
           ></div>
           <div
             style='background-image: url("/src/assets/images/land-11.jpg");'
-            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-10.jpg");'
-            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-9.jpg");'
-            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-8.jpg");'
-            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-7.jpg");'
-            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-6.jpg");'
-            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-5.jpg");'
-            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-4.jpg");'
-            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-3.jpg");'
-            rel="preload"
           ></div>
           <div
             style='background-image: url("/src/assets/images/land-2.jpg");'
-            rel="preload"
           ></div>
           <div
             style='background-image: url("/src/assets/images/land-1.jpg");'
-            rel="preload"
           ></div>
-
-
-          
         </div>
         <div class="canvas-content"></div>
         <div id="canvas-o" class="gradiente"></div>
@@ -539,7 +522,7 @@ body {
   0% {
     opacity: 1;
   }
-  17% {
+  20% {
     opacity: 1;
   }
   35% {
@@ -557,10 +540,10 @@ body {
   0% {
     opacity: 1;
   }
-  17% {
+  20% {
     opacity: 1;
   }
-  35% {
+  25% {
     opacity: 0;
   }
   92% {
@@ -575,10 +558,10 @@ body {
   0% {
     opacity: 1;
   }
-  17% {
+  20% {
     opacity: 1;
   }
-  35% {
+  25% {
     opacity: 0;
   }
   92% {
@@ -593,10 +576,10 @@ body {
   0% {
     opacity: 1;
   }
-  17% {
+  20% {
     opacity: 1;
   }
-  35% {
+  25% {
     opacity: 0;
   }
   92% {
@@ -611,113 +594,108 @@ body {
   -webkit-animation-name: imgFade;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 75s;
+  -webkit-animation-duration: 80s;
 
   -moz-animation-name: imgFade;
   -moz-animation-timing-function: ease-in-out;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-duration: 75s;
+  -moz-animation-duration: 80s;
 
   -o-animation-name: imgFade;
   -o-animation-timing-function: ease-in-out;
   -o-animation-iteration-count: infinite;
-  -o-animation-duration: 75s;
+  -o-animation-duration: 80s;
 
   animation-name: imgFade;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 75s;
+  animation-duration: 80s;
 }
-#container div:nth-of-type(12) {
-  -webkit-animation-delay: 60s;
-  -moz-animation-delay: 60s;
-  -o-animation-delay: 60s;
-  animation-delay: 60s;
-}
-#container div:nth-of-type(13) {
-  -webkit-animation-delay: 65s;
-  -moz-animation-delay: 65s;
-  -o-animation-delay: 65s;
-  animation-delay: 65s;
-}
-#container div:nth-of-type(14) {
+#container div:nth-of-type(1) {
   -webkit-animation-delay: 70s;
   -moz-animation-delay: 70s;
   -o-animation-delay: 70s;
   animation-delay: 70s;
 }
-#container div:nth-of-type(0) {
+#container div:nth-of-type(2) {
+  -webkit-animation-delay: 65s;
+  -moz-animation-delay: 65s;
+  -o-animation-delay: 65s;
+  animation-delay: 65s;
+}
+#container div:nth-of-type(3) {
+  -webkit-animation-delay: 60s;
+  -moz-animation-delay: 60s;
+  -o-animation-delay: 60s;
+  animation-delay: 60s;
+}
+#container div:nth-of-type(4) {
   -webkit-animation-delay: 55s;
   -moz-animation-delay: 55s;
   -o-animation-delay: 55s;
   animation-delay: 55s;
 }
-#container div:nth-of-type(1) {
+#container div:nth-of-type(5) {
   -webkit-animation-delay: 50s;
   -moz-animation-delay: 50s;
   -o-animation-delay: 50s;
   animation-delay: 50s;
 }
-#container div:nth-of-type(2) {
+#container div:nth-of-type(6) {
   -webkit-animation-delay: 45s;
   -moz-animation-delay: 45s;
   -o-animation-delay: 45s;
   animation-delay: 45s;
 }
-#container div:nth-of-type(3) {
+#container div:nth-of-type(7) {
   -webkit-animation-delay: 40s;
   -moz-animation-delay: 40s;
   -o-animation-delay: 40s;
   animation-delay: 40s;
 }
-#container div:nth-of-type(4) {
+#container div:nth-of-type(8) {
   -webkit-animation-delay: 35s;
   -moz-animation-delay: 35s;
   -o-animation-delay: 35s;
   animation-delay: 35s;
 }
-#container div:nth-of-type(5) {
+#container div:nth-of-type(9) {
   -webkit-animation-delay: 30s;
   -moz-animation-delay: 30s;
   -o-animation-delay: 30s;
   animation-delay: 30s;
 }
-#container div:nth-of-type(6) {
+#container div:nth-of-type(10) {
   -webkit-animation-delay: 25s;
   -moz-animation-delay: 25s;
   -o-animation-delay: 25s;
   animation-delay: 25s;
 }
-#container div:nth-of-type(7) {
+#container div:nth-of-type(11) {
   -webkit-animation-delay: 20s;
   -moz-animation-delay: 20s;
   -o-animation-delay: 20s;
   animation-delay: 20s;
 }
-#container div:nth-of-type(8) {
+#container div:nth-of-type(12) {
   -webkit-animation-delay: 15s;
   -moz-animation-delay: 15s;
   -o-animation-delay: 15s;
   animation-delay: 15s;
 }
-#container div:nth-of-type(9) {
+#container div:nth-of-type(13) {
   -webkit-animation-delay: 10s;
   -moz-animation-delay: 10s;
   -o-animation-delay: 10s;
   animation-delay: 10s;
 }
-#container div:nth-of-type(10) {
+#container div:nth-of-type(14) {
   -webkit-animation-delay: 5s;
   -moz-animation-delay: 5s;
   -o-animation-delay: 5s;
   animation-delay: 5s;
 }
-#container div:nth-of-type(11) {
-  -webkit-animation-delay: 0;
-  -moz-animation-delay: 0;
-  -o-animation-delay: 0;
-  animation-delay: 0;
-}
+
 #canvas-o {
   width: 100%;
   height: 100%;
@@ -1762,7 +1740,7 @@ a.active {
   cursor: pointer;
   transition: 0.2s all;
 }
-#hidden-menu :hover{
+#hidden-menu :hover {
   transform: scale(0.95);
 }
 #hidden-menu img {
@@ -1847,7 +1825,7 @@ a.active {
   cursor: pointer;
   transition: 0.2s all;
 }
-#close-menu:hover{
+#close-menu:hover {
   transform: scale(0.95);
 }
 @media only screen and (max-width: 400px) {
@@ -1930,7 +1908,6 @@ a.active {
     transform: scale(1.03);
   }
 }
-
 </style>
 <script>
 export default {
