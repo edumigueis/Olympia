@@ -1,4 +1,4 @@
-var mouseX = 0, mouseY = 0,
+/*var mouseX = 0, mouseY = 0,
 
     windowHalfX = window.innerWidth / 2,
     windowHalfY = window.innerHeight / 2,
@@ -11,9 +11,7 @@ var mouseX = 0, mouseY = 0,
 
 
 function init2() {
-    /*
-     *   Define variables
-     */
+
     var container, separation = 1000, amountX = 50, amountY = 50, color = 0xffffff,
         particles, particle;
 
@@ -50,9 +48,7 @@ function init2() {
 
     var geometry = new THREE.Geometry();
 
-    /*
-     *   Number of particles
-     */
+    
     for (var i = 0; i < 150; i++) {
 
         particle = new THREE.Sprite(material);
@@ -69,9 +65,7 @@ function init2() {
 
     }
 
-    /*
-     *   Lines
-     */
+    
 
     var line = new THREE.Line(geometry, new THREE.LineBasicMaterial({ color: color, opacity: 0.2 }));
     scene.add(line);
@@ -169,4 +163,4 @@ setInterval(() => {
   else if (!$('#container-welcome').length) {
     jaFoi3 = false;
   }
-}, 1);
+}, 1);*/
