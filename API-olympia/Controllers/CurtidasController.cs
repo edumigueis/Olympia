@@ -3,12 +3,10 @@ using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using API_olympia.Models;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute(typeof(AttributeArgument))]
+    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class CurtidasController : Controller

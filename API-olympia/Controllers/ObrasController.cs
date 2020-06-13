@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute(typeof(AttributeArgument))]
+    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class ObrasController : Controller

@@ -3,13 +3,10 @@ using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using API_olympia.Models;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.Security.Claims;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute(typeof(AttributeArgument))]
+    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class ArtesController : Controller
@@ -48,7 +45,6 @@ namespace API_olympia.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpPut("{idArte}")]
         public async Task<IActionResult> put(int ArtesId, Artes model)
         {
@@ -70,7 +66,6 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpDelete("{idArte}")]
         public async Task<IActionResult> delete(int ArtesId)
         {
@@ -93,7 +88,6 @@ namespace API_olympia.Controllers
             return BadRequest();
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> post(Artes model)
         {

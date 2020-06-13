@@ -153,7 +153,7 @@ namespace API_olympia
             services.TryAddScoped<RoleManager<IdentityRole>>();
             services.AddSingleton(new DataArmazenador());
             services.AddSingleton(new Armazenador());
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
             services.AddMemoryCache();
             services.AddControllersWithViews();
             services.AddRazorPages();

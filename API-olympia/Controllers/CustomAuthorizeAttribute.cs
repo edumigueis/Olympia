@@ -8,20 +8,13 @@ namespace API_olympia.Data
     [AttributeUsage(AttributeTargets.All)]
     public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
-       public Type attributeArgument;
-        public Armazenador Armazenador 
+        public Armazenador Armazenador { get; set; }
+
+        public async void OnAuthorization(AuthorizationFilterContext filterContext)
         {
-            get
-            {
-              return ((IAttributeArgument)Activator.CreateInstance(attributeArgument)).Armazenador;
-            }
-        }
-        public CustomAuthorizeAttribute(Type attributeArgument)
-        {
-            this.attributeArgument = attributeArgument;
-        }
-        public void OnAuthorization(AuthorizationFilterContext filterContext)
-        {
+            var controller = new ArmazenadorController();
+            await controller.RedirectToGet();
+
             if (Armazenador.StringValueRoute != null)
             {
                 if (Armazenador.StringValueRoute.Equals("olympia.art.br") ||
@@ -51,6 +44,7 @@ namespace API_olympia.Data
                 filterContext.Result = new RedirectResult("/Home/Login");
             }
         }
+
     }
 
 

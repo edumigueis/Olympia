@@ -357,3 +357,10 @@ D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\De
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API_olympia.Properties.Resources.resources
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.csproj.GenerateResource.cache
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll

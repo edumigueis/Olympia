@@ -13,14 +13,12 @@ using System.Linq;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute(typeof(AttributeArgument))]
+    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : Controller
     {
         public IRepository Repo { get; }
-
-        /* private PasswordHasher hasher;*/
         public UsuariosController(IRepository repo)
         {
             this.Repo = repo;
