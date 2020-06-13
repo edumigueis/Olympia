@@ -545,7 +545,7 @@ body {
   z-index: -2;
 }
 #container div {
-  position: absolute;
+  position: fixed;
   min-width: 100%;
   bottom: 0;
   top: 0;
@@ -554,11 +554,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-@media only screen and (max-width: 900px) {
-  #container div {
-    left: -50%;
-  }
 }
 @media only screen and (min-width: 1600px) {
 }
@@ -2491,6 +2486,11 @@ a.active {
   height: 60px;
   width: 60px;
   display: none;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+#hidden-menu :hover{
+  transform: scale(0.95);
 }
 #hidden-menu img {
   height: 60px;
@@ -2570,6 +2570,11 @@ a.active {
   background-image: url("/src/assets/images/x.png");
   background-position: center;
   background-size: cover;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+#close-menu:hover{
+  transform: scale(0.95);
 }
 @media only screen and (max-width: 400px) {
   .signup-or-signin-form {
