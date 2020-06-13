@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "Poppins";
+            src: url("Poppins-Medium.otf");
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #adadad;
+        }
+
+        /*
+        .module-wrapper {
+            display: inline-flex;
+            flex-wrap: wrap;
+            height: fit-content;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+        }
+
+        .module {
+            width: 300px;
+            height: 300px;
+            border-radius: 22.37%;
+            background-color: #444444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            z-index: -10;
+        }
+*/
+        h1 {
+            font-size: 18rem;
+            position: absolute;
+            top: -270px;
+            left: 37%;
+
+            background:
+                linear-gradient(135deg, #ff8800 0%, hsla(0.09, 98.56%, 43.93%, 0) 70%),
+                linear-gradient(25deg, #00fff2, 50%, hsla(312.86, 91.8%, 42.92%, 0) 80%),
+                linear-gradient(315deg, #ff00aa 100%, hsla(187.27, 95.99%, 41.85%, 0) 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: "Poppins";
+            font-weight: 700;
+        }
+
+        h1::after {
+            background: none;
+            content: "o";
+            left: 0;
+            top: 0;
+            z-index: -1;
+            position: absolute;
+            text-shadow: 5px 5px 0px #242424, 10px 10px 0px #333333,
+                15px 15px 0px #494949, 20px 20px 0px #666666, 25px 25px 0px #858585,
+                40px 40px 0px transparent, 45px 45px 0px transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="module-wrapper">
+        <div class="module module-1">
+            <h1>o</h1>
+        </div>
+    </div>
+</body>
+
+</html>
