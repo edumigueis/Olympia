@@ -9,47 +9,72 @@
       <section class="canvas-wrap">
         <div id="container">
           <div
+            style='background-image: url("/src/assets/images/land-14.jpg");'
+            rel="preload"
+          ></div>
+          <div
+            style='background-image: url("/src/assets/images/land-13.jpg");'
+            rel="preload"
+          ></div>
+          <div
+            style='background-image: url("/src/assets/images/land-12.jpg");'
+            rel="preload"
+          ></div>
+          <div
             style='background-image: url("/src/assets/images/land-11.jpg");'
+            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-10.jpg");'
+            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-9.jpg");'
+            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-8.jpg");'
+            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-7.jpg");'
+            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-6.jpg");'
+            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-5.jpg");'
+            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-4.jpg");'
+            rel="preload"
           ></div>
 
           <div
             style='background-image: url("/src/assets/images/land-3.jpg");'
+            rel="preload"
           ></div>
           <div
             style='background-image: url("/src/assets/images/land-2.jpg");'
+            rel="preload"
           ></div>
-
           <div
             style='background-image: url("/src/assets/images/land-1.jpg");'
+            rel="preload"
           ></div>
+
+
+          
         </div>
         <div class="canvas-content"></div>
         <div id="canvas-o" class="gradiente"></div>
@@ -613,22 +638,40 @@ body {
   -webkit-animation-name: imgFade;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 60s;
+  -webkit-animation-duration: 75s;
 
   -moz-animation-name: imgFade;
   -moz-animation-timing-function: ease-in-out;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-duration: 60s;
+  -moz-animation-duration: 75s;
 
   -o-animation-name: imgFade;
   -o-animation-timing-function: ease-in-out;
   -o-animation-iteration-count: infinite;
-  -o-animation-duration: 60s;
+  -o-animation-duration: 75s;
 
   animation-name: imgFade;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 60s;
+  animation-duration: 75s;
+}
+#container div:nth-of-type(12) {
+  -webkit-animation-delay: 60s;
+  -moz-animation-delay: 60s;
+  -o-animation-delay: 60s;
+  animation-delay: 60s;
+}
+#container div:nth-of-type(13) {
+  -webkit-animation-delay: 65s;
+  -moz-animation-delay: 65s;
+  -o-animation-delay: 65s;
+  animation-delay: 65s;
+}
+#container div:nth-of-type(14) {
+  -webkit-animation-delay: 70s;
+  -moz-animation-delay: 70s;
+  -o-animation-delay: 70s;
+  animation-delay: 70s;
 }
 #container div:nth-of-type(0) {
   -webkit-animation-delay: 55s;
