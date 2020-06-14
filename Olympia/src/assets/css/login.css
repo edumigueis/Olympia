@@ -874,7 +874,7 @@ figure {
 }
 .form-submit {
   display: inline-block;
-  border: 1px solid rgb(110, 110, 110);
+  border: 1.5px solid rgb(92, 92, 92);
   background-color: white;
   color: rgb(88, 88, 88);
   width: auto;
@@ -886,12 +886,14 @@ figure {
   -ms-border-radius: 6px;
   margin-top: 25px;
   font-size: 16px;
-  transition: all 0.2s;
   margin-bottom: 5px;
   margin-left: 5px;
+  transition: none!important;
 }
+
 .form-submit:hover {
-  opacity: 0.6;
+  border: 1.5px solid #424242;
+  transform: scale(1.02);
   cursor: pointer;
 }
 #signin {
