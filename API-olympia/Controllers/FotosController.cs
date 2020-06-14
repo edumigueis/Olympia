@@ -9,7 +9,6 @@ using System;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute]
     [Route("api/[controller]")]
     [ApiController]
     public class FotosController : Controller

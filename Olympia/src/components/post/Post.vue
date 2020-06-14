@@ -638,7 +638,7 @@ export default {
   methods:{
     postInsp(){
       event.preventDefault();
-
+        alert("uhu");
         var valorFoto;
 
         if ($("#msg").val() == "") {
@@ -664,10 +664,11 @@ export default {
         jaFoiPostCadUser = true;
         $.ajax({
           type: "POST",
-          url: "https://localhost:5001/api/Redirect/Publicacao",
+          url: "https://localhost:5001/api/Publicacoes",
           data: jsonInput,
           contentType: "application/json",
           success: function() {
+            alert("deu certo")
             $(".success-msg").fadeIn();
             setTimeout(function() {
               $(".success-msg").animate({ left: -300 });
@@ -776,11 +777,8 @@ export default {
           data: jsonInput,
           contentType: "application/json",
           succes: function (data) {
-              if (code.status === 201) {
-                console.log(data);
-              } else {
-                console.log(data);
-              }
+              alert("deu certo")
+              console.log(data);
             },
           fail: function() {
             $('#small-footer').css('margin-bottom', '-100px')
@@ -792,10 +790,11 @@ export default {
 
         var vetorFotos = [$("#obra-1").attr("src"),$("#obra-2").attr("src"),$("#obra-3").attr("src"),$("#obra-4").attr("src"), $("#obra-5").attr("src"),$("#obra-6").attr("src"),$("#obra-7").attr("src"),$("#obra-8").attr("src")];
         console.log(vetorFotos);
-        var nVetorFotos;
+        var nVetorFotos = [''];
         var contador = 0;
-        for(var i = 0; i < 9; i++){
-          if(vetorFotos[i].toString().substring(0,4) != "/src"){
+        for(var i = 0; i < 8; i++){
+          console.log(vetorFotos[i]);
+          if(vetorFotos[i].substring(0,4) != "/src"){
             nVetorFotos[contador] = vetorFotos[i];
             contador++
           }
@@ -804,14 +803,14 @@ export default {
           var jsonVetorFotos = {
           foto: nVetorFotos[f] + "",
           idEvento: 0,
-          idObra: 0/*Aqui vem o id da obra*/ ,
+          idObra: 17,
           idServico: 0
           };
           var jsonInputFotosObra = JSON.stringify(jsonVetorFotos);
-
+          console.log(jsonInputFotosObra)
           $.ajax({
           type: "POST",
-          url: "https://localhost:5001/api/Redirect/Fotos",
+          url: "https://localhost:5001/api/Fotos",
           data: jsonInputFotosObra,
           contentType: "application/json",
           success: function() {
@@ -887,8 +886,8 @@ export default {
 
         var myObjectPubli = {
           idUsuario: 1,
-          nome: $("#titulo").val(),
-          descricao: $("#desc").val(),
+          nome: $("#titulo-serv").val(),
+          descricao: $("#desc-serv").val(),
           categorias: $("#search-select-serv")
             .text()
             .trim(),
@@ -915,16 +914,8 @@ export default {
           url: "https://localhost:5001/api/Redirect/Servico",
           data: jsonInput,
           contentType: "application/json",
-          succes: function (code, data) {
+          succes: function () {
             alert("cu");
-            alert(code);
-            alert(code.status);
-            alert(data);
-              if (code.status === 201) {
-                console.log(data);
-              } else {
-                console.log(data);
-              }
             },
           fail: function() {
             $('#small-footer').css('margin-bottom', '-100px')
@@ -936,9 +927,9 @@ export default {
 
         var vetorFotos = [$("#serv-1").attr("src"),$("#serv-2").attr("src"),$("#serv-3").attr("src"),$("#serv-4").attr("src"), $("#serv-5").attr("src"),$("#serv-6").attr("src"),$("#serv-7").attr("src"),$("#serv-8").attr("src")];
         console.log(vetorFotos);
-        var nVetorFotos;
+        var nVetorFotos = [''];
         var contador = 0;
-        for(var i = 0; i < 9; i++){
+        for(var i = 0; i < 8; i++){
           if(vetorFotos[i].toString().substring(0,4) != "/src"){
             nVetorFotos[contador] = vetorFotos[i];
             contador++
@@ -955,7 +946,7 @@ export default {
 
           $.ajax({
           type: "POST",
-          url: "https://localhost:5001/api/Redirect/Fotos",
+          url: "https://localhost:5001/api/Fotos",
           data: jsonInputFotosServ,
           contentType: "application/json",
           success: function() {
