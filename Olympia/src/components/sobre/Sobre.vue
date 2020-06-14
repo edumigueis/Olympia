@@ -19,7 +19,7 @@
             <h1 class="page-title">SOBRE<br />NÓS</h1>
           </div>
           <div class="bg"></div>
-
+          -->
 
           <!--BACKGROUND-->
           <!-- <div style="position:relative">
@@ -420,7 +420,6 @@
     <meu-footer></meu-footer>
   </main>
 </template>
-
 <script>
 import MenuBar from "../shared/menu-bar/Menu-bar.vue";
 import MenuItems from "../shared/menu-items/Menu-items.vue";
