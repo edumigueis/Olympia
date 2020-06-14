@@ -2,14 +2,9 @@
   <main>
     <div id="container-sobre">
       <link rel="stylesheet" href="/src/assets/css/sobre.css" />
-      <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-        />
+      <link rel="preload" as="image" href="/src/assets/images/last-header-sb.jpg">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
       <title>S O B R E</title>
-
-      <meu-mouse></meu-mouse>
-      <meu-dark-mode></meu-dark-mode>
 
       <span id="fundo">
         <div class="part-2 white-4">
@@ -19,18 +14,6 @@
             <h1 class="page-title">SOBRE<br />NÓS</h1>
           </div>
           <div class="bg"></div>
-          -->
-
-          <!--BACKGROUND-->
-          <!-- <div style="position:relative">
-                              <div class="image-container">
-                                <img src="/src/assets/images/sede.jpg" alt class="image" />
-                              </div>
-                              <h1 class="art-title">SOBRE<br />NÓS</h1>
-                              <h2 class="art-subtitle">
-                                Conheça um pouco mais sobre nós
-                              </h2>
-                            </div> -->
           <div class="wrapper-sb white-7" style="overflow: hidden;">
             <video
               src="/src/assets/videos/sb-video1.mp4"
@@ -46,11 +29,11 @@
             <div class="main-text">
               <h1 class="text-title-principal">Olympia</h1>
               <p class="sb-mission">
-                Somos uma corporação que valoriza a arte em todas
-                as suas formas. Acreditamos em tudo que a arte representa: como
-                ela embeleza a vida, como mostra a realidade, como denuncia, como alegra, como traz mais cor e sentido, e também como
-                ela pode representar resistência em momentos tão dificeis na
-                humanidade.
+                Somos uma corporação que valoriza a arte em todas as suas
+                formas. Acreditamos em tudo que a arte representa: como ela
+                embeleza a vida, como mostra a realidade, como denuncia, como
+                alegra, como traz mais cor e sentido, e também como ela pode
+                representar resistência em momentos tão dificeis na humanidade.
               </p>
             </div>
             <div class="bottom-wrapper-sb">
@@ -327,115 +310,21 @@
                     perto de você. Valorizamos a arte, a individualidade, a
                     liberdade, a diversidade, a sustentabilidade e a
                     pluralidade. Estamos sempre tentando concientizar as pessoas
-                    sobre a importância desses conceitos. Nós do Olympia, com nossos
-                    projetos, sempre tentamos tornar o mundo mais sustentável,
-                    mais acolhedor e bonito. Esperamos que goste muito de usar
-                    nossa rede social. Você é muito especial por estar aqui.
+                    sobre a importância desses conceitos. Nós do Olympia, com
+                    nossos projetos, sempre tentamos tornar o mundo mais
+                    sustentável, mais acolhedor e bonito. Esperamos que goste
+                    muito de usar nossa rede social. Você é muito especial por
+                    estar aqui.
                   </p>
                   <a href="/#/">
-                  <i class="fas fa-arrow-right pink"></i>
+                    <i class="fas fa-arrow-right pink"></i>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          <!--<img class="linha" src="https://img.pngio.com/black-line-png-just-pink-about-it-black-line-png-900_150.png"/>-->
         </div>
-        <!--<div class="container-left show-on-scroll black-to-white white-7 first">
-          <table>
-            <tr>
-              <td class="texto-linha">
-                Nenhum artista suporta o real. Qualquer artista, olhando para
-                trás, tem a sincera opinião de que o verdadeiro valor de uma
-                coisa é uma «sombra» que pode ser fixada nas cores, na forma, no
-                som, no pensamento. -Friedrich Wilhelm Nietzsche
-              </td>
-            </tr>
-          </table>
-        </div>-->
       </span>
     </div>
-
-    <!--<div id="text" class='text-sobre'>
-        <p id="title">NOSSA HISTÓRIA</p>
-        <div class="linha linha-sobre"></div>
-        <p id="texto1">
-          Essa é a nossa sede lalala ecialização e Mestrado em Planejamento e
-          Administração do Desenvolvimento Regós.doc em Ciências da
-          Comunicaçãcimento e Comunicação. CEO do Portal do Envelhecimento,
-          Portal Edições e Espaço Longeviver. Integrou o banco de avaliadores do
-          Sistema Nacionajjjjjl de Avaliação da Educação Superior –
-          Basis/Inep/MEC até 2018. Integra a Rede Iberoamericana de
-          Psicogerontologia (Redip) e a Red Iberoamericana
-          Interdisciplinjjjjjjjar de Investigación en Envejecimiento y Sociedad
-          (RIIIES). E-mail: beltrinac
-        </p>
-        
-        <p id="texto2">
-           Essa é a nossa sede lalala ecialização e Mestrado em Planejamento e
-          Administração do Desenvolvimento Regós.doc em Ciências da
-          Comunicaçãcimento e Comunicação. CEO do Portal do Envelhecimento,
-          Portal Edições e Espaço Longeviver. Integrou o banco de avaliadores do
-          Sistema Nacionajjjjjl de Avaliação da Educação Superior –
-          Basis/Inep/MEC até 2018. Integra a Rede Iberoamericana de
-          Psicogerontologia (Redip) e a Red Iberoamericana
-          Interdisciplinjjjjjjjar de Investigación en Envejecimiento y Sociedad
-          (RIIIES). E-mail: beltrinac
-        </p>
-        <p id="texto3">
-           Essa é a nossa sede lalala ecialização e Mestrado em Planejamento e
-          Administração do Desenvolvimento Regós.doc em Ciências da
-          Comunicaçãcimento e Comunicação. CEO do Portal do Envelhecimento,
-          Portal Edições e Espaço Longeviver. Integrou o banco de avaliadores do
-          Sistema Nacionajjjjjl de Avaliação da Educação Superior –
-          Basis/Inep/MEC até 2018. Integra a Rede Iberoamericana de
-          Psicogerontologia (Redip) e a Red Iberoamericana
-          Interdisciplinjjjjjjjar de Investigación en Envejecimiento y Sociedad
-          (RIIIES). E-mail: beltrinac
-        </p>
-        <p id="texto4">
-           Essa é a nossa sede lalala ecialização e Mestrado em Planejamento e
-          Administração do Desenvolvimento Regós.doc em Ciências da
-          Comunicaçãcimento e Comunicação. CEO do Portal do Envelhecimento,
-          Portal Edições e Espaço Longeviver. Integrou o banco de avaliadores do
-          Sistema Nacionajjjjjl de Avaliação da Educação Superior –
-          Basis/Inep/MEC até 2018. Integra a Rede Iberoamericana de
-          Psicogerontologia (Redip) e a Red Iberoamericana
-          Interdisciplinjjjjjjjar de Investigación en Envejecimiento y Sociedad
-          (RIIIES). E-mail: beltrinac
-        </p>
-        <p id="texto5">
-           Essa é a nossa sede lalala ecialização e Mestrado em Planejamento e
-          Administração do Desenvolvimento Regós.doc em Ciências da
-          Comunicaçãcimento e Comunicação. CEO do Portal do Envelhecimento,
-          Portal Edições e Espaço Longeviver. Integrou o banco de avaliadores do
-          Sistema Nacionajjjjjl de Avaliação da Educação Superior –
-          Basis/Inep/MEC até 2018. Integra a Rede Iberoamericana de
-          Psicogerontologia (Redip) e a Red Iberoamericana
-          Interdisciplinjjjjjjjar de Investigación en Envejecimiento y Sociedad
-          (RIIIES). E-mail: beltrinac
-        </p>
-        <div class="linha linha-sobre"></div>
-      </div>-->
-    <meu-footer></meu-footer>
   </main>
 </template>
-<script>
-import MenuBar from "../shared/menu-bar/Menu-bar.vue";
-import MenuItems from "../shared/menu-items/Menu-items.vue";
-import Contatos from "../shared/contatos/Contatos.vue";
-import Mouse from "../shared/mouse/Mouse.vue";
-import Footer from "../shared/footer/Footer.vue";
-import DarkMode from "../shared/dark-mode/Dark-mode.vue";
-
-export default {
-  components: {
-    "meu-menu-bar": MenuBar,
-    "meu-menu-items": MenuItems,
-    "meus-contatos": Contatos,
-    "meu-mouse": Mouse,
-    "meu-footer": Footer,
-    "meu-dark-mode": DarkMode
-  }
-};
-</script>

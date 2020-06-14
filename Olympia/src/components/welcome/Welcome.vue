@@ -2,10 +2,20 @@
   <main>
     <div id="container-welcome">
       <title>W E L C O M E</title>
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-      />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
+      <link rel="preload" as="image" href="/src/assets/images/land-1.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-2.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-3.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-4.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-5.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-6.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-7.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-8.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-9.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-10.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-11.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-12.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/land-13.jpg">
       <link rel="stylesheet" href="/src/assets/css/welcome.css" />
       <section class="canvas-wrap">
         <div id="container">

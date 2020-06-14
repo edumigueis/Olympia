@@ -991,11 +991,11 @@
     transform: rotate(-45deg);
   }
   .button2 a:hover::after {
-    box-shadow: 40px -20px 0px #024768, 41px -20px 8px rgba(0, 0, 0, 0.3),
-      80px 20px 0px #04b0bc, 81px 20px 8px rgba(0, 0, 0, 0.3),
-      120px 60px 0px #22cbcb, 121px 60px 8px rgba(0, 0, 0, 0.3),
-      160px 100px 0px #94dfdd, 161px 100px 8px rgba(0, 0, 0, 0.3),
-      200px 120px 0px #97d3d3;
+    box-shadow: 40px -20px 0px rgb(240,180,76), 41px -20px 8px rgba(0, 0, 0, 0.3),
+      80px 20px 0px rgb(240,142,118), 81px 20px 8px rgba(0, 0, 0, 0.3),
+      120px 60px 0px rgb(240,104,160), 121px 60px 8px rgba(0, 0, 0, 0.3),
+      160px 100px 0px rgb(210,105,189), 161px 100px 8px rgba(0, 0, 0, 0.3),
+      200px 120px 0px rgb(75,240,180);
   }
   .button2 a:hover {
     color: white;
@@ -1402,18 +1402,7 @@
   .fa-globe {
     margin-right: 7px;
   }
-  .underline--magical {
-    background-image: linear-gradient(120deg, #f2709c 0%, #ff9472 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.2em;
-    background-position: 0 88%;
-    transition: background-size 0.25s ease-in;
-    color: #232323 !important;
-    padding-bottom: 4.5px !important;
-  }
-  .underline--magical:hover {
-    background-size: 100% 88%;
-  }
+
   .menu-ld.visible #close-menu {
     display: block;
   }
