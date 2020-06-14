@@ -3,7 +3,28 @@
     <div id="container-post">
       <link rel="stylesheet" href="/src/assets/css/post.css" />
       <title>P O S T</title>
-      <div id="fullpage"  style="display: none;"><div class="section"><div class="time-circle"><div class="sun"></div> <div class="moon"><div></div> <div></div> <div></div></div> <div class="stars"><div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div></div> <div class="water"></div></div></div></div>
+      <div id="fullpage" style="display: none;">
+        <div class="section">
+          <div class="time-circle">
+            <div class="sun"></div>
+            <div class="moon">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="stars">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="water"></div>
+          </div>
+        </div>
+      </div>
       <div class="buttons-cont">
         <div class="cont-major" id="cont-major-1">
           <div class="btn-cont">
@@ -53,7 +74,10 @@
       </div>
       <div class="section">
         <section id="post-obra-img" class="white-6">
-          <div class="return-btn filter-invert" id="to-btn-cont-from-obra"></div>
+          <div
+            class="return-btn filter-invert"
+            id="to-btn-cont-from-obra"
+          ></div>
           <ul class="img-list">
             <li class="img-list-item">
               <img
@@ -128,14 +152,22 @@
           </ul>
           <div class="pick-file-cont">
             <div class="fileUpload">
-              <input type="file" class="upload" id="obra-picker"/>
+              <input type="file" class="upload" id="obra-picker" />
               <span>Escolher Imagens</span>
             </div>
-            <div id="go-on-btn-obra" class="go-on-btn black-to-white active-tab-p border-bottom-wh">Continuar</div>
+            <div
+              id="go-on-btn-obra"
+              class="go-on-btn black-to-white active-tab-p border-bottom-wh"
+            >
+              Continuar
+            </div>
           </div>
         </section>
         <section id="post-serv-img" class="white-6">
-          <div class="return-btn filter-invert" id="to-btn-cont-from-serv"></div>
+          <div
+            class="return-btn filter-invert"
+            id="to-btn-cont-from-serv"
+          ></div>
           <ul class="img-list">
             <li class="img-list-item">
               <img
@@ -209,15 +241,23 @@
             </li>
           </ul>
           <div class="pick-file-cont">
-            <div class="fileUpload"> 
-              <input type="file" class="upload" id="serv-picker"/>
+            <div class="fileUpload">
+              <input type="file" class="upload" id="serv-picker" />
               <span>Escolher Imagens</span>
             </div>
-            <div id="go-on-btn-serv" class="go-on-btn black-to-white active-tab-p border-bottom-wh">Continuar</div>
+            <div
+              id="go-on-btn-serv"
+              class="go-on-btn black-to-white active-tab-p border-bottom-wh"
+            >
+              Continuar
+            </div>
           </div>
         </section>
         <section id="post-obra" class="white-6">
-          <div class="return-btn filter-invert" id="to-pick-img-from-obra"></div>
+          <div
+            class="return-btn filter-invert"
+            id="to-pick-img-from-obra"
+          ></div>
           <div class="wrapper wrapper--w780">
             <div class="card card-3 white-7">
               <div class="card-heading"></div>
@@ -310,7 +350,10 @@
                       </div>
                     </div>
                   </div>
-                  <div class="input-group border-bottom-7" id="inp-gp-no-border-3">
+                  <div
+                    class="input-group border-bottom-7"
+                    id="inp-gp-no-border-3"
+                  >
                     <div class="add-tags-cont">
                       <p id="tag-1">
                         <span class="input">
@@ -369,28 +412,42 @@
                       </p>
                       <p id="plus-tag">
                         <span class="input">
-                          <img src="/src/assets/images/plus-sign.png" class="plus-ico">
+                          <img
+                            src="/src/assets/images/plus-sign.png"
+                            class="plus-ico"
+                          />
                         </span>
                       </p>
                       <p id="minus-tag">
                         <span class="input">
-                          <img src="/src/assets/images/minus-icon.svg" class="plus-ico">
+                          <img
+                            src="/src/assets/images/minus-icon.svg"
+                            class="plus-ico"
+                          />
                         </span>
                       </p>
                     </div>
                   </div>
                   <div class="p-t-10">
-                    <button class="btn btn--pill btn--green" type="submit" v-on:click="postObra()" id="sub-obra">
+                    <button
+                      class="btn btn--pill btn--green"
+                      type="submit"
+                      v-on:click="postObra()"
+                      id="sub-obra"
+                    >
                       Submit
                     </button>
                   </div>
                 </form>
               </div>
-            </div> 
+            </div>
           </div>
         </section>
         <section id="post-serv" class="white-6">
-          <div class="return-btn filter-invert" id="to-pick-img-from-serv"></div>
+          <div
+            class="return-btn filter-invert"
+            id="to-pick-img-from-serv"
+          ></div>
           <div class="wrapper wrapper--w780">
             <div class="card card-3 white-7">
               <div class="card-heading"></div>
@@ -459,7 +516,10 @@
                   <div class="input-group" id="inp-gp-no-border">
                     <div class="dropdown">
                       <div class="input-group" id="inp-gp-no-border-2">
-                        <div class="select black-to-white" id="search-select-serv">
+                        <div
+                          class="select black-to-white"
+                          id="search-select-serv"
+                        >
                           Selecione Categorias
                         </div>
                       </div>
@@ -479,7 +539,10 @@
                       </div>
                     </div>
                   </div>
-                  <div class="input-group border-bottom-7" id="inp-gp-no-border-3">
+                  <div
+                    class="input-group border-bottom-7"
+                    id="inp-gp-no-border-3"
+                  >
                     <div class="add-tags-cont">
                       <p id="tag-serv-1">
                         <span class="input">
@@ -533,18 +596,28 @@
                       </p>
                       <p id="plus-tag-serv">
                         <span class="input">
-                          <img src="/src/assets/images/plus-sign.png" class="plus-ico">
+                          <img
+                            src="/src/assets/images/plus-sign.png"
+                            class="plus-ico"
+                          />
                         </span>
                       </p>
                       <p id="minus-tag-serv">
                         <span class="input">
-                          <img src="/src/assets/images/minus-icon.svg" class="plus-ico">
+                          <img
+                            src="/src/assets/images/minus-icon.svg"
+                            class="plus-ico"
+                          />
                         </span>
                       </p>
                     </div>
                   </div>
                   <div class="p-t-10">
-                    <button class="btn btn--pill btn--green" id="sub-serv" v-on:click="postServ()">
+                    <button
+                      class="btn btn--pill btn--green"
+                      id="sub-serv"
+                      v-on:click="postServ()"
+                    >
                       Submit
                     </button>
                   </div>
@@ -565,7 +638,9 @@
                 autocomplete="off"
               ></textarea>
               <label for="msg"
-                ><span class="question black-to-white">O que te inspira?</span></label
+                ><span class="question black-to-white"
+                  >O que te inspira?</span
+                ></label
               >
               <button id="submit" v-on:click="postInsp()">Postar</button>
             </form>
@@ -574,10 +649,10 @@
               <div class="pick-file-cont-insp">
                 <div class="image-upload">
                   <label for="file-input">
-                    <img src="/src/assets/images/clip.svg"/>
+                    <img src="/src/assets/images/clip.svg" />
                   </label>
 
-                  <input id="file-input" type="file"/>
+                  <input id="file-input" type="file" />
                 </div>
               </div>
             </div>
@@ -630,88 +705,88 @@ export default {
     "meu-small-footer": SmallFooter,
     "meu-dark-mode": DarkMode
   },
-  data(){
+  data() {
     return {
       data: null
     };
   },
-  methods:{
-    postInsp(){
+  methods: {
+    postInsp() {
       event.preventDefault();
-        alert("uhu");
-        var valorFoto;
+      alert("uhu");
+      var valorFoto;
 
-        if ($("#msg").val() == "") {
-          var erro = '<p class="error">Adicione um texto a sua postagem!</p>';
+      if ($("#msg").val() == "") {
+        var erro = '<p class="error">Adicione um texto a sua postagem!</p>';
+        $(".insp-post-cont").append(erro);
+        return;
+      }
+      if (isSelImgPostagem) {
+        valorFoto = selectedImage;
+      }
+
+      var finalDate = new Date().toISOString().slice(0, 19);
+
+      var myObjectPubli = {
+        idUsuario: 1,
+        texto: $("#msg").val(),
+        tags: "{tag1}",
+        foto: "" + valorFoto,
+        dataPost: finalDate
+      };
+      var jsonInput = JSON.stringify(myObjectPubli);
+
+      jaFoiPostCadUser = true;
+      $.ajax({
+        type: "POST",
+        url: "https://localhost:5001/api/Publicacoes",
+        data: jsonInput,
+        contentType: "application/json",
+        success: function() {
+          alert("deu certo");
+          $(".success-msg").fadeIn();
+          setTimeout(function() {
+            $(".success-msg").animate({ left: -300 });
+            $(".success-msg").fadeOut();
+          }, 4000);
+          $(".success-msg").css("left", "40px");
+        },
+        fail: function(error) {
+          console.log(error);
+          var erro =
+            '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
           $(".insp-post-cont").append(erro);
-          return;
-        }
-        if (isSelImgPostagem) {
-          valorFoto = selectedImage;
-        }
-
-        var finalDate = new Date().toISOString().slice(0, 19);
-
-        var myObjectPubli = {
-          idUsuario: 1,
-          texto: $("#msg").val(),
-          tags: "{tag1}",
-          foto: "" + valorFoto,
-          dataPost: finalDate
-        };
-        var jsonInput = JSON.stringify(myObjectPubli);
-
-        jaFoiPostCadUser = true;
-        $.ajax({
-          type: "POST",
-          url: "https://localhost:5001/api/Publicacoes",
-          data: jsonInput,
-          contentType: "application/json",
-          success: function() {
-            alert("deu certo")
-            $(".success-msg").fadeIn();
-            setTimeout(function() {
-              $(".success-msg").animate({ left: -300 });
-              $(".success-msg").fadeOut();
-            }, 4000);
-            $(".success-msg").css("left", "40px");
-          },
-          fail: function(error) {
-            console.log(error);
-            var erro =
-              '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
-            $(".insp-post-cont").append(erro);
-          },
-          dataType: "json"
-        });
+        },
+        dataType: "json"
+      });
     },
-    postObra(){
+    postObra() {
       event.preventDefault();
 
-        if ($("#titulo").val() == "" || $("#titulo").val().length < 2) {
-          $("#titulo").addClass("wrong");
-          return;
-        } else if (
-          $("#dadosTec").val() == "" ||
-          $("#dadosTec").val().length < 4
-        ) {
-          $("#dadosTec").addClass("wrong");
-          return;
-        } else if ($("#desc").val() == "" || $("#desc").val().length < 150) {
-          $("#desc").addClass("wrong");
-          return;
-        } else if (
-          $("#search-select")
-            .text()
-            .trim() === "Selecione Categorias"
-        ) {
-          $("#search-select").addClass("wrong");
-          return;
-        }
+      if ($("#titulo").val() == "" || $("#titulo").val().length < 2) {
+        $("#titulo").addClass("wrong");
+        return;
+      } else if (
+        $("#dadosTec").val() == "" ||
+        $("#dadosTec").val().length < 4
+      ) {
+        $("#dadosTec").addClass("wrong");
+        return;
+      } else if ($("#desc").val() == "" || $("#desc").val().length < 150) {
+        $("#desc").addClass("wrong");
+        return;
+      } else if (
+        $("#search-select")
+          .text()
+          .trim() === "Selecione Categorias"
+      ) {
+        $("#search-select").addClass("wrong");
+        return;
+      }
 
-        var arteNm = $("#slct option:selected").text();
-        var arteSel = 0;
-        /*switch (arteNm) {
+      var arteNm = $("#slct option:selected").text();
+      var arteSel = 0;
+      /*switch (arteNm) {
           case "Arte Digital":
             arteSel = 1;
             break;
@@ -740,236 +815,257 @@ export default {
             arteSel = 9;
             break;
         }*/
-        alert($("#search-select").text());
 
+      var finalDate = new Date().toISOString().slice(0, 19);
 
-        var finalDate = new Date().toISOString().slice(0, 19);
+      var myObjectPubli = {
+        idUsuario: 1,
+        nome: $("#titulo").val(),
+        descricao: $("#desc").val(),
+        categorias: $("#search-select")
+          .text()
+          .trim(),
+        tags:
+          "{" +
+          $("#tag1").val() +
+          "," +
+          $("#tag2").val() +
+          "," +
+          $("#tag3").val() +
+          "," +
+          $("#tag4").val() +
+          "," +
+          $("#tag5").val() +
+          "}",
+        idArte: arteSel,
+        dataPost: finalDate,
+        dadosTecnicos: $("#dadosTec").val()
+      };
+      var jsonInput = JSON.stringify(myObjectPubli);
+      console.log(jsonInput);
+      jaFoiPostCadUser = true;
+      $.ajax({
+        type: "POST",
+        url: "https://localhost:5001/api/Redirect/Obra",
+        data: jsonInput,
+        contentType: "application/json",
+        complete: function(jqXHR, status) {
+          if (status == "success" || status == "notmodified") {
+            var asset = $.parseJSON(jqXHR.responseText);
 
-        var myObjectPubli = {
-          idUsuario: 1,
-          nome: $("#titulo").val(),
-          descricao: $("#desc").val(),
-          categorias: $("#search-select")
-            .text()
-            .trim(),
-          tags:
-            "{" +
-            $("#tag1").val() +
-            "," +
-            $("#tag2").val() +
-            "," +
-            $("#tag3").val() +
-            "," +
-            $("#tag4").val() +
-            "," +
-            $("#tag5").val() +
-            "}",
-          idArte: arteSel,
-          dataPost: finalDate,
-          dadosTecnicos: $("#dadosTec").val()
-        };
-        var jsonInput = JSON.stringify(myObjectPubli);
-        console.log(jsonInput);
-        jaFoiPostCadUser = true;
-        $.ajax({
-          type: "POST",
-          url: "https://localhost:5001/api/Redirect/Obra",
-          data: jsonInput,
-          contentType: "application/json",
-          succes: function (data) {
-              alert("deu certo")
-              console.log(data);
-            },
-          fail: function() {
-            $('#small-footer').css('margin-bottom', '-100px')
-            var erro = "<p>Algo deu errado. Tente postar novamente mais tarde.</p>"
-            $(".p-t-10").append(erro);
-          },
-          dataType: "json"
-        });
-
-        var vetorFotos = [$("#obra-1").attr("src"),$("#obra-2").attr("src"),$("#obra-3").attr("src"),$("#obra-4").attr("src"), $("#obra-5").attr("src"),$("#obra-6").attr("src"),$("#obra-7").attr("src"),$("#obra-8").attr("src")];
-        console.log(vetorFotos);
-        var nVetorFotos = [''];
-        var contador = 0;
-        for(var i = 0; i < 8; i++){
-          console.log(vetorFotos[i]);
-          if(vetorFotos[i].substring(0,4) != "/src"){
-            nVetorFotos[contador] = vetorFotos[i];
-            contador++
+            var vetorFotos = [
+              $("#obra-1").attr("src"),
+              $("#obra-2").attr("src"),
+              $("#obra-3").attr("src"),
+              $("#obra-4").attr("src"),
+              $("#obra-5").attr("src"),
+              $("#obra-6").attr("src"),
+              $("#obra-7").attr("src"),
+              $("#obra-8").attr("src")
+            ];
+            console.log(vetorFotos);
+            var nVetorFotos = [""];
+            var contador = 0;
+            for (var i = 0; i < 8; i++) {
+              console.log(vetorFotos[i]);
+              if (vetorFotos[i].substring(0, 4) != "/src") {
+                nVetorFotos[contador] = vetorFotos[i];
+                contador++;
+              }
+            }
+            for (var f = 0; f < nVetorFotos.length; f++) {
+              var jsonVetorFotos = {
+                foto: nVetorFotos[f] + "",
+                idEvento: 0,
+                idObra: asset.idObra,
+                idServico: 0
+              };
+              var jsonInputFotosObra = JSON.stringify(jsonVetorFotos);
+              console.log(jsonInputFotosObra);
+              $.ajax({
+                type: "POST",
+                url: "https://localhost:5001/api/Fotos",
+                data: jsonInputFotosObra,
+                contentType: "application/json",
+                success: function() {
+                  $(".success-msg").fadeIn();
+                  setTimeout(function() {
+                    $(".success-msg").animate({ left: -300 });
+                    $(".success-msg").fadeOut();
+                  }, 4000);
+                  $(".success-msg").css("left", "40px");
+                },
+                fail: function() {
+                  $("#small-footer").css("margin-bottom", "-100px");
+                  var erro =
+                    "<p>Algo deu errado. Tente postar novamente mais tarde.</p>";
+                  $(".p-t-10").append(erro);
+                },
+                dataType: "json"
+              });
+            }
           }
-        }
-        for(var f = 0; f < nVetorFotos.length; f++){
-          var jsonVetorFotos = {
-          foto: nVetorFotos[f] + "",
-          idEvento: 0,
-          idObra: 17,
-          idServico: 0
-          };
-          var jsonInputFotosObra = JSON.stringify(jsonVetorFotos);
-          console.log(jsonInputFotosObra)
-          $.ajax({
-          type: "POST",
-          url: "https://localhost:5001/api/Fotos",
-          data: jsonInputFotosObra,
-          contentType: "application/json",
-          success: function() {
-            $(".success-msg").fadeIn();
-            setTimeout(function() {
-              $(".success-msg").animate({ left: -300 });
-              $(".success-msg").fadeOut();
-            }, 4000);
-            $(".success-msg").css("left", "40px");
-          },
-          fail: function() {
-            $('#small-footer').css('margin-bottom', '-100px')
-            var erro = "<p>Algo deu errado. Tente postar novamente mais tarde.</p>"
-            $(".p-t-10").append(erro);
-          },
-          dataType: "json"
-        });
-        }
+        },
+        fail: function() {
+          $("#small-footer").css("margin-bottom", "-100px");
+          var erro =
+            "<p>Algo deu errado. Tente postar novamente mais tarde.</p>";
+          $(".p-t-10").append(erro);
+        },
+        dataType: "json"
+      });
     },
-    postServ(){
+    postServ() {
       event.preventDefault();
 
-        if ($("#titulo-serv").val() == "" || $("#titulo-serv").val().length < 2) {
-          $("#titulo-serv").addClass("wrong");
-          return;
-        } else if ($("#desc-serv").val() == "" || $("#desc-serv").val().length < 150) {
-          $("#desc-serv").addClass("wrong");
-          return;
-        } else if (
-          $("#search-select-serv")
-            .text()
-            .trim() === "Selecione Categorias"
-        ) {
-          $("#search-select-serv").addClass("wrong");
-          return;
-        }
+      if ($("#titulo-serv").val() == "" || $("#titulo-serv").val().length < 2) {
+        $("#titulo-serv").addClass("wrong");
+        return;
+      } else if (
+        $("#desc-serv").val() == "" ||
+        $("#desc-serv").val().length < 150
+      ) {
+        $("#desc-serv").addClass("wrong");
+        return;
+      } else if (
+        $("#search-select-serv")
+          .text()
+          .trim() === "Selecione Categorias"
+      ) {
+        $("#search-select-serv").addClass("wrong");
+        return;
+      }
 
-        var arteNm = $("#slct-serv option:selected").text();
-        var arteSel = 0;
-        switch (arteNm) {
-          case "Arte Digital":
-            arteSel = 1;
-            break;
-          case "Arquitetura":
-            arteSel = 2;
-            break;
-          case "Artes Cenicas":
-            arteSel = 3;
-            break;
-          case "Cinema":
-            arteSel = 4;
-            break;
-          case "Escultura":
-            arteSel = 5;
-            break;
-          case "Fotografia":
-            arteSel = 6;
-            break;
-          case "Literatura":
-            arteSel = 7;
-            break;
-          case "Música":
-            arteSel = 8;
-            break;
-          case "Pintura":
-            arteSel = 9;
-            break;
-        }
-        alert($("#search-select-serv").text());
+      var arteNm = $("#slct-serv option:selected").text();
+      var arteSel = 0;
+      /*switch (arteNm) {
+        case "Arte Digital":
+          arteSel = 1;
+          break;
+        case "Arquitetura":
+          arteSel = 2;
+          break;
+        case "Artes Cenicas":
+          arteSel = 3;
+          break;
+        case "Cinema":
+          arteSel = 4;
+          break;
+        case "Escultura":
+          arteSel = 5;
+          break;
+        case "Fotografia":
+          arteSel = 6;
+          break;
+        case "Literatura":
+          arteSel = 7;
+          break;
+        case "Música":
+          arteSel = 8;
+          break;
+        case "Pintura":
+          arteSel = 9;
+          break;
+      }*/
 
+      var finalDate = new Date().toISOString().slice(0, 19);
 
-        var finalDate = new Date().toISOString().slice(0, 19);
+      var myObjectPubli = {
+        idUsuario: 1,
+        nome: $("#titulo-serv").val(),
+        descricao: $("#desc-serv").val(),
+        categorias: $("#search-select-serv")
+          .text()
+          .trim(),
+        tags:
+          "{" +
+          $("#tag-serv-1").val() +
+          "," +
+          $("#tag-serv-2").val() +
+          "," +
+          $("#tag-serv-3").val() +
+          "," +
+          $("#tag-serv-4").val() +
+          "," +
+          $("#tag-serv-5").val() +
+          "}",
+        idArte: arteSel,
+        dataPost: finalDate
+      };
+      var jsonInput = JSON.stringify(myObjectPubli);
+      console.log(jsonInput);
+      jaFoiPostCadUser = true;
+      $.ajax({
+        type: "POST",
+        url: "https://localhost:5001/api/Redirect/Servico",
+        data: jsonInput,
+        contentType: "application/json",
+        complete: function(jqXHR, status) {
+          if (status == "success" || status == "notmodified") {
+            var asset = $.parseJSON(jqXHR.responseText);
+            var vetorFotos = [
+              $("#serv-1").attr("src"),
+              $("#serv-2").attr("src"),
+              $("#serv-3").attr("src"),
+              $("#serv-4").attr("src"),
+              $("#serv-5").attr("src"),
+              $("#serv-6").attr("src"),
+              $("#serv-7").attr("src"),
+              $("#serv-8").attr("src")
+            ];
+            console.log(vetorFotos);
+            var nVetorFotos = [""];
+            var contador = 0;
+            for (var i = 0; i < 8; i++) {
+              if (vetorFotos[i].toString().substring(0, 4) != "/src") {
+                nVetorFotos[contador] = vetorFotos[i];
+                contador++;
+              }
+            }
+            for (var f = 0; f < nVetorFotos.length; f++) {
+              var jsonVetorFotos = {
+                foto: nVetorFotos[f] + "",
+                idEvento: 0,
+                idObra: 0,
+                idServico: asset.idServico
+              };
+              var jsonInputFotosServ = JSON.stringify(jsonVetorFotos);
 
-        var myObjectPubli = {
-          idUsuario: 1,
-          nome: $("#titulo-serv").val(),
-          descricao: $("#desc-serv").val(),
-          categorias: $("#search-select-serv")
-            .text()
-            .trim(),
-          tags:
-            "{" +
-            $("#tag-serv-1").val() +
-            "," +
-            $("#tag-serv-2").val() +
-            "," +
-            $("#tag-serv-3").val() +
-            "," +
-            $("#tag-serv-4").val() +
-            "," +
-            $("#tag-serv-5").val() +
-            "}",
-          idArte: arteSel,
-          dataPost: finalDate
-        };
-        var jsonInput = JSON.stringify(myObjectPubli);
-        console.log(jsonInput);
-        jaFoiPostCadUser = true;
-        $.ajax({
-          type: "POST",
-          url: "https://localhost:5001/api/Redirect/Servico",
-          data: jsonInput,
-          contentType: "application/json",
-          succes: function () {
-            alert("cu");
-            },
-          fail: function() {
-            $('#small-footer').css('margin-bottom', '-100px')
-            var erro = "<p>Algo deu errado. Tente postar novamente mais tarde.</p>"
-            $(".p-t-10").append(erro);
-          },
-          dataType: "json"
-        });
-
-        var vetorFotos = [$("#serv-1").attr("src"),$("#serv-2").attr("src"),$("#serv-3").attr("src"),$("#serv-4").attr("src"), $("#serv-5").attr("src"),$("#serv-6").attr("src"),$("#serv-7").attr("src"),$("#serv-8").attr("src")];
-        console.log(vetorFotos);
-        var nVetorFotos = [''];
-        var contador = 0;
-        for(var i = 0; i < 8; i++){
-          if(vetorFotos[i].toString().substring(0,4) != "/src"){
-            nVetorFotos[contador] = vetorFotos[i];
-            contador++
+              $.ajax({
+                type: "POST",
+                url: "https://localhost:5001/api/Fotos",
+                data: jsonInputFotosServ,
+                contentType: "application/json",
+                success: function() {
+                  $(".success-msg").fadeIn();
+                  setTimeout(function() {
+                    $(".success-msg").animate({ left: -300 });
+                    $(".success-msg").fadeOut();
+                  }, 4000);
+                  $(".success-msg").css("left", "40px");
+                },
+                fail: function() {
+                  $("#small-footer").css("margin-bottom", "-100px");
+                  var erro =
+                    "<p>Algo deu errado. Tente postar novamente mais tarde.</p>";
+                  $(".p-t-10").append(erro);
+                },
+                dataType: "json"
+              });
+            }
           }
-        }
-        for(var f = 0; f < nVetorFotos.length; f++){
-          var jsonVetorFotos = {
-          foto: nVetorFotos[f] + "",
-          idEvento: 0,
-          idObra: 0,
-          idServico: 0 /*Aqui vem o id do serv*/ 
-          };
-          var jsonInputFotosServ = JSON.stringify(jsonVetorFotos);
-
-          $.ajax({
-          type: "POST",
-          url: "https://localhost:5001/api/Fotos",
-          data: jsonInputFotosServ,
-          contentType: "application/json",
-          success: function() {
-            $(".success-msg").fadeIn();
-            setTimeout(function() {
-              $(".success-msg").animate({ left: -300 });
-              $(".success-msg").fadeOut();
-            }, 4000);
-            $(".success-msg").css("left", "40px");
-          },
-          fail: function() {
-            $('#small-footer').css('margin-bottom', '-100px')
-            var erro = "<p>Algo deu errado. Tente postar novamente mais tarde.</p>"
-            $(".p-t-10").append(erro);
-          },
-          dataType: "json"
-        });
-        }
+        },
+        fail: function() {
+          $("#small-footer").css("margin-bottom", "-100px");
+          var erro =
+            "<p>Algo deu errado. Tente postar novamente mais tarde.</p>";
+          $(".p-t-10").append(erro);
+        },
+        dataType: "json"
+      });
     }
   },
-  mounted() {
-    
-  }/*,
+  mounted() {} /*,
   beforeCreate(){
     if (window.$cookies.isKey("user_cadastro")) {
       document.location.href = "/#/categorias";
