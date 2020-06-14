@@ -79,7 +79,7 @@
 
       <div class="landing-top-bar">
         <div class="col">
-          <img class="landing-logo" src="/src/assets/images/page-ico.png" />
+          <img class="landing-logo" src="/src/assets/images/Logos/gradient-transparent-back-logo.png" />
           <div class="landing-nav">
             <ul>
               <li><a href="/#/" class="active">Início</a></li>
@@ -217,7 +217,7 @@
               <div class="bottom-link button2">
                 <a href="/#/cadastro" class="register-link">Registrar-se</a>
               </div>
-              <p class="">
+              <p class="paragraph">
                 Já tem uma conta?
                 <a class="inner-text-link" href="/#/login"
                   ><span class="underline--magical"> Faça login</span></a
@@ -702,6 +702,63 @@
     flex-wrap: nowrap;
     padding: 8px 0;
   }
+
+.check-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.check-list li {
+  position: relative;
+  list-style-type: none;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.check-list li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 5px;
+  height: 11px;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: #00a8a8;
+  transform-origin: bottom left;
+  transform: rotate(45deg);
+}
+.screen img {
+  min-height: 100%;
+  width: 100%;
+}
+.iphone-screen img {
+  min-height: 100%;
+  width: 100%;
+}
+.register-link {
+  padding: 10px 20px;
+  border: 1px solid #232323;
+  border-radius: 12px;
+  margin-left: 163px;
+  margin-top: 35px;
+}
+.paragraph{
+  margin-top: 25px!important;
+}
+.bottom-link {
+  margin-top: 12px;
+  height: 50px;
+}
+.bottom-link + p {
+  margin: 0;
+}
+a.active {
+  text-decoration: underline !important;
+  color: rgb(221, 207, 212);
+}
+@media only screen and (max-width: 980px) {
   .col {
     width: 50%;
     display: inline-flex;
@@ -788,26 +845,146 @@
     border-bottom-right-radius: 16px;
     border-bottom-left-radius: 16px;
   }
-  .dropdown:hover .dropdown-content {
-    display: block;
+  #close-menu {
+    display: none !important;
   }
-  .landing-logo {
-    width: 60px;
-    height: 60px;
-    z-index: 3;
-    position: relative;
-    margin-right: 12px;
-  }
-  .arrow {
-    margin-bottom: -5px;
-    width: 1.25rem;
-    height: 1.25rem;
-    display: inline-block;
-    position: relative;
-    margin-left: 0.8rem;
-  }
-  .arrow span {
-    top: 0.5rem;
+}
+.menu-ld {
+  background-color: #efefef;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  display: block;
+  z-index: 6;
+  transition: all 0.6s ease-out;
+}
+.menu-ld.visible {
+  width: 300px;
+}
+.ui-hide {
+  width: 0;
+  transition: all 0.6s ease-out;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
+.menu-ld.visible + .ui-hide {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 30, 30, 0.8),
+    rgba(30, 30, 30, 0.6),
+    rgba(30, 30, 30, 0.7)
+  );
+}
+#hidden-menu {
+  height: 60px;
+  width: 60px;
+  display: none;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+#hidden-menu :hover {
+  transform: scale(0.95);
+}
+#hidden-menu img {
+  height: 60px;
+  width: 60px;
+}
+.bottom-menu {
+  height: 50%;
+  border-top: 1px solid rgba(201, 200, 200, 0.9);
+}
+.bottom-down-menu {
+  width: 100%;
+  height: 20%;
+}
+.bottom-down-menu > a {
+  padding: 20px 32px;
+  color: #232323;
+  font-size: 1.2em;
+  font-family: "Poppins Bold" !important;
+}
+.bottom-top-menu {
+  width: 100%;
+  height: 75%;
+  margin-top: 5%;
+}
+.bottom-top-menu a {
+  padding: 20px 32px;
+  color: #555555;
+  font-size: 1.2em;
+}
+.top-menu {
+  width: 100%;
+  height: 50%;
+}
+.top-menu ul li a {
+  padding: 10px 32px;
+  color: #222;
+  font-size: 1.2em;
+}
+.top-menu ul {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 32px 0;
+}
+.top-menu ul > li {
+  width: 100%;
+}
+.language {
+  color: #777777;
+  padding: 20px 32px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+.fa-globe {
+  margin-right: 7px;
+}
+.underline--magical {
+  background: linear-gradient(
+          90deg, 
+          rgb(240,180,76) 0%,
+          rgb(240,132,128) 50%,
+          rgb(240,85,181) 100%
+        );
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  color: #232323 !important;
+  padding: 4.5px !important;
+  border-radius: 8px;
+}
+.underline--magical:hover {
+  background-size: 100% 100%;
+}
+.menu-ld.visible #close-menu {
+  display: block;
+}
+#close-menu {
+  display: none;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  background-image: url("/src/assets/images/x.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+#close-menu:hover {
+  transform: scale(0.95);
+}
+@media only screen and (max-width: 400px) {
+  .signup-or-signin-form {
+    width: 100%;
+    border-radius: unset;
     position: absolute;
     width: 0.75rem;
     height: 0.1rem;
