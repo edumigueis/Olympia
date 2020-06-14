@@ -3,6 +3,7 @@
     <div id="container-sobre">
       <link rel="stylesheet" href="/src/assets/css/sobre.css" />
       <link rel="preload" as="image" href="/src/assets/images/last-header-sb.jpg">
+      <link rel="preload" as="image" href="/src/assets/images/sede.jpg">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
       <title>S O B R E</title>
 
