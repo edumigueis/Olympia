@@ -79,7 +79,7 @@
 
       <div class="landing-top-bar">
         <div class="col">
-          <img class="landing-logo" src="/src/assets/images/page-ico.png" />
+          <img class="landing-logo" src="/src/assets/images/Logos/gradient-transparent-back-logo.png" />
           <div class="landing-nav">
             <ul>
               <li><a href="/#/" class="active">Início</a></li>
@@ -217,7 +217,7 @@
               <div class="bottom-link button2">
                 <a href="/#/cadastro" class="register-link">Registrar-se</a>
               </div>
-              <p class="">
+              <p class="paragraph">
                 Já tem uma conta?
                 <a class="inner-text-link" href="/#/login"
                   ><span class="underline--magical"> Faça login</span></a
@@ -1195,7 +1195,7 @@ a:hover > .arrow span:last-of-type {
   background-color: #efefef;
 }
 .inner-signup-or-signin-form {
-  padding: 32px 16px;
+  padding: 32px 20px;
 }
 .inner-signup-or-signin-form h1 {
   text-align: center;
@@ -1224,15 +1224,15 @@ a:hover > .arrow span:last-of-type {
   transform: rotate(-45deg);
 }
 .button2 a:hover::after {
-  box-shadow: 40px -20px 0px #024768, 41px -20px 8px rgba(0, 0, 0, 0.3),
-    80px 20px 0px #04b0bc, 81px 20px 8px rgba(0, 0, 0, 0.3),
-    120px 60px 0px #22cbcb, 121px 60px 8px rgba(0, 0, 0, 0.3),
-    160px 100px 0px #94dfdd, 161px 100px 8px rgba(0, 0, 0, 0.3),
-    200px 120px 0px #97d3d3;
+  box-shadow: 40px -20px 0px rgb(240,180,76), 41px -20px 8px rgba(0, 0, 0, 0.3),
+    80px 20px 0px rgb(240,132,128), 81px 20px 8px rgba(0, 0, 0, 0.3),
+    120px 60px 0px rgb(240,85,181), 121px 60px 8px rgba(0, 0, 0, 0.3),
+    160px 100px 0px rgb(165,150,186), 161px 100px 8px rgba(0, 0, 0, 0.3),
+    200px 120px 0px rgb(75,240,180);
 }
 .button2 a:hover {
   color: white;
-  box-shadow: 4px 20px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.3);
 }
 @media only screen and (max-width: 900px) {
   .register-link {
@@ -1331,10 +1331,13 @@ a:hover > .arrow span:last-of-type {
 }
 .register-link {
   padding: 10px 20px;
-  margin: 15px 35px;
   border: 1px solid #232323;
   border-radius: 12px;
   margin-left: 163px;
+  margin-top: 35px;
+}
+.paragraph{
+  margin-top: 25px!important;
 }
 .bottom-link {
   margin-top: 12px;
@@ -1473,16 +1476,22 @@ a.active {
   margin-right: 7px;
 }
 .underline--magical {
-  background-image: linear-gradient(120deg, #f2709c 0%, #ff9472 100%);
+  background: linear-gradient(
+          90deg, 
+          rgb(240,180,76) 0%,
+          rgb(240,132,128) 50%,
+          rgb(240,85,181) 100%
+        );
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: 0 88%;
   transition: background-size 0.25s ease-in;
   color: #232323 !important;
-  padding-bottom: 4.5px !important;
+  padding: 4.5px !important;
+  border-radius: 8px;
 }
 .underline--magical:hover {
-  background-size: 100% 88%;
+  background-size: 100% 100%;
 }
 .menu-ld.visible #close-menu {
   display: block;
