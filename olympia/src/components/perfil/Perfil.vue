@@ -154,7 +154,7 @@
               Suas publicações...
             </h1>
             <div class="div-scroll div-scroll-sobre">
-              <div class="slide__content">
+              <div class="slide__content" id="pub-prof-wrapper">
                 <div class="masonry-item">
                   <div class="masonry-content">
                     <div class="prof-cont-feed white-7">
@@ -4000,7 +4000,120 @@ export default {
         },
         dataType: "json"
       });
+    },
+    getPublicacoes(){
+      var codigo = location.href.substring(30);
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/AllObrasUser/"+ codigo,
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        success: function(data) {
+          jQuery.each(data, function(index, item) {
+            var conteudoDiv =
+              '<div class="masonry-item" id="' +
+              index +
+              '-obra"><div class="masonry-content"><div class="prof-cont-feed white-7"><div class="prof-img-cont"><img class="prof-img-prop" id="prof-img-prop-obra-' +
+              index +
+              '" src=""/></div> <a href="/#/profile/" class="prof-name-det black-to-white" id="obra-prof-name-link-' +
+              index +
+              '"></a><div class="prof-bio-det text-gray" id="obra-prof-bio-' +
+              index +
+              '">Bio</div></div>';
+            conteudoDiv +=
+              '<div class="post-img-cont"><a href="/#/obra/' +
+              item.idObra +
+              '"><figure class="snip1321" id="' +
+              index +
+              '-post"><div class="after"></div> <img id="obra-img-' +
+              index +
+              '" src="/src/assets/images/unloaded-img.jpeg"/>';
+            conteudoDiv +=
+              '<figcaption><i class="fas fa-arrow-right"></i><div class="name-of-prof"><a href="/#/perfil/" id="name-of-prof-link-' +
+              index +
+              '" class="name-of-prof-link">Name</a></div><h2>' +
+              item.nome +
+              '</h2><div class="categories-cont-on-feed"><div class="cat-on-feed paint">' +
+              item.categorias[0] +
+              '</div><div class="cat-on-feed paint">' +
+              item.categorias[1] +
+              '</div><div class="cat-on-feed pers">' +
+              item.categorias[2] +
+              '</div><div class="cat-on-feed pers">Azul</div><div class="cat-on-feed paint">' +
+              item.categorias[3] +
+              '</div><div class="cat-on-feed pers">' +
+              item.categorias[5] +
+              "</div></div></figcaption></figure></a>";
+            conteudoDiv +=
+              '<div class="interact-container"><div class="stage stage-btn"><button class="trigger">ver mais...</button></div><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div></div> </div></div>';
+            $("#pub-prof-wrapper").append(conteudoDiv);
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/Usuario/" + item.idUsuario,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(result) {
+                if (result.idUsuario != 0) {
+                  if (result.foto.length > 20) {
+                    $("#prof-img-prop-obra-" + index).attr(
+                      "src",
+                      result.foto + ""
+                    );
+                  } else {
+                    $("#prof-img-prop-obra-" + index)
+                      .parent()
+                      .css("background-color", result.foto);
+                    $("#prof-img-prop-obra-" + index)
+                      .parent()
+                      .append(
+                        '<span class="letter-prof">' +
+                          result.nome.substring(0, 1) +
+                          "</span>"
+                      );
+                    $("#artist-profile-pic").attr("src", "");
+                  }
+
+                  $("#obra-prof-name-link-" + index).text(result.nome);
+
+                  if (result.bio.length > 90) {
+                    $("#obra-prof-bio-" + index).text(
+                      result.bio.substring(0, 90) + "..."
+                    );
+                  } else {
+                    $("#obra-prof-bio-" + index).text(result.bio);
+                  }
+
+                  $("#name-of-prof-link-" + index).text(result.nome);
+
+                  $.ajax({
+                    url:
+                      "https://localhost:5001/api/redirect/FotosDaObra/" +
+                      item.idObra,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json",
+                    beforeSend: function() {
+                      $("#load-modal").addClass("loading");
+                    },
+                    success: function(data) {
+                      $("#obra-img-" + index).attr("src", data[0]);
+                    },
+                    error: function(thrownError) {
+
+                    }
+                  });
+                }
+              }
+            });
+          });
+        }
+    });
     }
+  },
+  mounted() {
+    this.verificarCampos();
+    this.getPublicacoes();
   } /*,
   beforeCreate(){
     if (window.$cookies.isKey("user_cadastro")) {
