@@ -6,8 +6,7 @@ namespace API_olympia.Models
     public class Publicacoes
     {
         [Key]
-        public int IdPublicacao { get; 
-            set; }
+        public int IdPublicacao { get; set; }
 
         [Required]
         public int IdUsuario { get; set; }

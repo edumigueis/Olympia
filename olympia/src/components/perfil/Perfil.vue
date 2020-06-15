@@ -3669,7 +3669,6 @@
                         <textarea
                           rows="8"
                           style="resize: none"
-                          onkeydown="return limitLines(this, event)"
                           class="dark-register-input"
                           name="biografia"
                           id="biografia"
@@ -3679,14 +3678,13 @@
                         ></textarea>
                       </div>
                       <div class="form-group form-button">
-                        <input
+                        <button
                           type="submit"
                           name="signup"
                           class="form-submit"
-                          value="Salvar"
                           id="submit-bio"
                           v-on:click="altBio()"
-                        />
+                        >Salvar</button>
                       </div>
                     </form>
                   </div>
@@ -3951,13 +3949,17 @@ export default {
       return re.test(emailp);
     },
     altBio() {
+      event.preventDefault();
       var myObjectPubli = {
         bio: $("#bio").val(),
         biografia: $("#biografia").val(),
-        idUsuario: 1
+        idUsuario: parseInt(localStorage.userId)
       };
+      alert($("#bio").val());
+      alert($("#biografia").val());
+      console.log(myObjectPubli);
       var jsonInput = JSON.stringify(myObjectPubli);
-
+      console.log(jsonInput);
       jaFoiPostCadUser = true;
       $.ajax({
         type: "POST",
