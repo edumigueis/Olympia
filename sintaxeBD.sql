@@ -368,3 +368,16 @@ Begin
     select * from Usuarios where email=@Email
 End
 
+create proc sp_BiografiaByIdUser
+@idUsuario int
+as
+Begin
+    select biografia from Usuarios where idUsuario=@idUsuario
+End
+
+create proc sp_BioByIdUser
+@idUsuario int
+as
+Begin
+    select bio from Usuarios where idUsuario=@idUsuario
+End
