@@ -3684,7 +3684,9 @@
                           class="form-submit"
                           id="submit-bio"
                           v-on:click="altBio()"
-                        >Salvar</button>
+                        >
+                          Salvar
+                        </button>
                       </div>
                     </form>
                   </div>
@@ -4031,48 +4033,19 @@ export default {
         dataType: "json",
         contentType: "application/json",
         url:
-          "https://localhost:5001/api/Redirect/Usuario" + localStorage.userId,
-        complete: function(code, data) {
-          if (code.status === "success") {
-            var result = $.parseJSON(data.responseText);
-            $("#name").val(result.nome + "");
-            $("#user").val(result.userName + "");
-            $("#email").val(result.email + "");
-            if ((result.foto + "").length > 10) {
-              $("#user-prof-image").val(result.foto);
-              $("#user-prof-image").css("display", "block");
-              $("#user-let-img").css("display", "none");
-            } else {
-              $("#user-prof-image").css("background", result.foto);
-              $(".prof-user-letter").text((result.nome + "").substring(0,1));
-              $("#user-prof-image").css("display", "none");
-              $("#user-let-img").css("display", "block");
-            }
+          "https://localhost:5001/api/Redirect/Biografia" + localStorage.userId,
+        complete: function(jqXHR, status) {
+          if (status == "success") {
+            biografiaAtual = $.parseJSON(jqXHR.responseText);
             $.ajax({
               type: "GET",
               dataType: "json",
               contentType: "application/json",
               url:
-                "https://localhost:5001/api/Redirect/Biografia" +
-                localStorage.userId,
-              complete: function(code, data) {
-                if (code.status === "success") {
-                  biografiaAtual = $.parseJSON(data.responseText);
-                  $.ajax({
-                    type: "GET",
-                    dataType: "json",
-                    contentType: "application/json",
-                    url:
-                      "https://localhost:5001/api/Redirect/Bio" +
-                      localStorage.userId,
-                    complete: function(code, data) {
-                      if (code.status === "success") {
-                        bioAtual = $.parseJSON(data.responseText);
-                      } else {
-                        location.href = "/#/error";
-                      }
-                    }
-                  });
+                "https://localhost:5001/api/Redirect/Bio" + localStorage.userId,
+              complete: function(jqXHR, status) {
+                if (status == "success") {
+                  bioAtual = $.parseJSON(jqXHR.responseText);
                 } else {
                   location.href = "/#/error";
                 }
@@ -4236,6 +4209,37 @@ export default {
   mounted() {
     this.verificarCampos();
     this.getPublicacoes();
+
+    $.ajax({
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      url: "https://localhost:5001/api/Usuarios/" + localStorage.userId,
+      complete: function(jqXHR, status) {
+        if (status == 'success') {
+          var result = $.parseJSON(jqXHR.responseText);
+          $("#name").val(result.nome + "");
+          $("#user").val(result.userName + "");
+          $("#email").val(result.email + "");
+
+          if ((result.foto + "").length > 10) {
+            $("#user-prof-image").val(result.foto);
+            $("#user-prof-image").css("display", "block");
+            $("#user-let-img").css("display", "none");
+          } 
+          else {
+            $("#user-prof-image").css("background", result.foto);
+            $(".prof-user-letter").text((result.nome + "").substring(0, 1));
+            $("#user-prof-image").css("display", "none");
+            $("#user-let-img").css("display", "block");
+          }
+
+
+        } else {
+          location.href = "/#/error";
+        }
+      }
+    });
   },
   beforeCreate() {
     if (window.$cookies.isKey("user_cadastro")) {
