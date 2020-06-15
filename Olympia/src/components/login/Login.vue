@@ -50,6 +50,7 @@
                     required
                   />
                 </div>
+                <p class="err-msg-p">Seu nome de usuário, email ou senha estão incorretos.</p>
                 <div class="form-group form-button">
                   <input
                     type="button"
@@ -140,7 +141,7 @@ export default {
               }
             });
           } else {
-            alert("user n existe");
+            $('.err-msg-p').fadeIn();
           }
         }
       });

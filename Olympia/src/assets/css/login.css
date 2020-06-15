@@ -1284,7 +1284,12 @@ label.valid:after {
     margin-left: 6%;
   }
 }
-
+.err-msg-p{
+  font-family: 'Poppins', sans-serif;
+  color: #e72734;
+  margin-top: 20px;
+  display: none;
+}
 /*-----------------------------------------------*/
 @font-face {
   font-family: Material-Design-Iconic-Font;
