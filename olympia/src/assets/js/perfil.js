@@ -126,7 +126,8 @@ setInterval(() => {
         allItems = document.getElementsByClassName("masonry-item");
 
         $(document.body).on('mouseenter', '.snip1321', function () {
-            var index = parseInt($(this).attr('id').toString().substring(0, 1));
+            var hifen = $(this).attr('id').toString().indexOf("-");
+            var index = parseInt($(this).attr('id').toString().substring(0, hifen));
             var tab = $(this).attr('id').toString().substring(1, 9);
             if (tab == 'post-sal') {
                 var item = $('.div-scroll-salvos').find($("figcaption"))[index];
@@ -147,7 +148,8 @@ setInterval(() => {
         })
 
         $(document.body).on('mouseleave', '.snip1321', function () {
-            var index = parseInt($(this).attr('id').toString().substring(0, 1));
+            var hifen = $(this).attr('id').toString().indexOf("-");
+            var index = parseInt($(this).attr('id').toString().substring(0, hifen));
             var tab = $(this).attr('id').toString().substring(1, 9);
             if (tab == 'post-sal') {
                 var item = $('.div-scroll-salvos').find($("figcaption"))[index];
@@ -169,7 +171,8 @@ setInterval(() => {
 
         $(document.body).on('click', '.trigger', function () {
             var elem = this.parentElement.parentElement.parentElement.getElementsByClassName("snip1321");
-            var index = parseInt($(elem).attr('id').toString().substring(0, 1));
+            var hifen = $(elem).attr('id').toString().indexOf("-");
+            var index = parseInt($(elem).attr('id').toString().substring(0, hifen));
             var tab = $(elem).attr('id').toString().substring(1, 9);
             if (tab == 'post-sal') {
                 var item = $('.div-scroll-salvos').find($("figcaption"))[index];

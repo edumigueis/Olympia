@@ -691,7 +691,8 @@ setInterval(() => {
     })
 
     $(document.body).on('mouseenter', '.snip1321', function () {
-      var index = parseInt($(this).attr('id').toString().substring(0,1));
+      var hifen = $(this).attr('id').toString().indexOf("-");
+      var index = parseInt($(this).attr('id').toString().substring(0,hifen));
       var after = $(".after")[index];
       var item = $("figcaption")[index];
       $(this).find(item).css('transform', 'translateY(-50%)');
@@ -701,7 +702,8 @@ setInterval(() => {
     })
 
     $(document.body).on('mouseleave', '.snip1321', function () {
-      var index = parseInt($(this).attr('id').toString().substring(0,1));
+      var hifen = $(this).attr('id').toString().indexOf("-");
+      var index = parseInt($(this).attr('id').toString().substring(0,hifen));
       var after = $(".after")[index];
       var item = $("figcaption")[index];
       $(this).find(item).css('transform', 'none');
@@ -712,7 +714,8 @@ setInterval(() => {
 
     $(document.body).on('click', '.trigger', function () {
       var elem = this.parentElement.parentElement.parentElement.getElementsByClassName("snip1321");
-      var index = parseInt($(elem).attr('id').toString().substring(0,1));
+      var hifen = $(elem).attr('id').toString().indexOf("-");
+      var index = parseInt($(elem).attr('id').toString().substring(0,hifen));
       var item = $("figcaption")[index];
       var after = $(".after")[index];
       if ($(elem).find(item).css('opacity') != 1) {
