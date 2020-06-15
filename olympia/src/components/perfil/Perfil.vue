@@ -42,11 +42,17 @@
                 Essa ação não pode ser desfeita.
               </p>
               <div class="btn-conf-wrapper">
-                <button id="cancel-conf" v-on:click="cancelAction()">
+                <button id="cancel-conf" class="btn-del" v-on:click="cancelAction()">
                   Cancelar
                 </button>
-                <button id="confirm-prof-alt" v-on:click="apagarConta()">
+                <button id="confirm-prof-alt" class="btn-del" v-on:click="apagarConta()">
                   Deletar
+                </button>
+                <button id="cancel-conf" class="btn-leave" style="display: none" v-on:click="cancelAction()">
+                  Cancelar
+                </button>
+                <button id="confirm-prof-alt" class="btn-leave" style="display: none" v-on:click="apagarConta()">
+                  Sair
                 </button>
               </div>
             </div>
@@ -81,12 +87,12 @@
               </div>
             </div>
           </div>
-          <main ontouchstart class="tab-bar">
+          <main ontouchstart class="tab-bar" style="width: 23vw !important">
             <nav class="tab-link">
-              <a class="tab-link-a sobre-mim">Sobre mim</a>
-              <a class="tab-link-a curtidas">Curtidas</a>
-              <a class="tab-link-a salvos">Salvos</a>
-              <a class="tab-link-a configuracoes">Configurações</a>
+              <a class="tab-link-a sobre-mim" style="width: 50%!important">Sobre mim</a>
+              <a class="tab-link-a curtidas" style="display: none">Curtidas</a>
+              <a class="tab-link-a salvos" style="display: none">Salvos</a>
+              <a class="tab-link-a configuracoes" style="width: 50%!important">Configurações</a>
               <hr />
             </nav>
           </main>
@@ -3794,6 +3800,9 @@ export default {
   methods: {
     verificarCampos() {
       setInterval(function() {
+        if(!$("#container-cad-user").length)
+        return;
+
         if ($("#name").val() == "") {
           document.getElementById("signup").disabled = true;
           $("#signup").css("opacity", "0.7");
@@ -4045,7 +4054,8 @@ export default {
         $("#conf-message").text("Você deseja mesmo sair? Esperamos que volte logo.");
         $(".confirm-del div").html('<img src="/src/assets/images/leave-session.png" style="width: 100%">');
         $(".confirm-del div").css('border', 'none');
-        $("#confirm-prof-alt").text("Sair");
+        $('.btn-leave').css("display", "block");
+        $('.btn-del').css("display", "none");
       }
       if (which == "del") {
         $("#footer").css("display", "none");
@@ -4063,14 +4073,15 @@ export default {
       $("#confirm-prof-alt").text("Deletar");
     },
     apagarConta() {
-      var codigoSecao  = 
+      /*var codigoSecao  = 
       $.ajax({
         url: "https://localhost:5001/api/Usuarios/" + codigoSecao,
         type: "DELETE",
         success: function(data) {
 
         }
-      });
+      });*/
+      location.href = "/#/"
     },
     getPublicacoes() {
       var codigo = location.href.substring(30);

@@ -70,6 +70,10 @@
 }
 .modal-img-conf img{
   width: 100%;
+  transition: 0.3s all;
+}
+.modal-img-conf img:hover{
+  transform: scale(1.03);
 }
 .conf-modal-part{
   width: 60%;
@@ -155,12 +159,23 @@
 }
 .confirm-del div{
   width: 60px;
+  transition: 0.3s all;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid rgb(206, 48, 82);
   height: 60px;
+}
+.confirm-del div:hover{
+  width: 63px;
+  height: 63px;
+}
+.confirm-del div:hover > .close-mod-conf:before{
+  height: 36px;
+}
+.confirm-del div:hover > .close-mod-conf:after{
+  height: 36px;
 }
 .close {
   width: 32px;
