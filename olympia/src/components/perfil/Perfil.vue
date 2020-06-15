@@ -42,16 +42,34 @@
                 Essa ação não pode ser desfeita.
               </p>
               <div class="btn-conf-wrapper">
-                <button id="cancel-conf" class="btn-del" v-on:click="cancelAction()">
+                <button
+                  id="cancel-conf"
+                  class="btn-del"
+                  v-on:click="cancelAction()"
+                >
                   Cancelar
                 </button>
-                <button id="confirm-prof-alt" class="btn-del" v-on:click="apagarConta()">
+                <button
+                  id="confirm-prof-alt"
+                  class="btn-del"
+                  v-on:click="apagarConta()"
+                >
                   Deletar
                 </button>
-                <button id="cancel-conf" class="btn-leave" style="display: none" v-on:click="cancelAction()">
+                <button
+                  id="cancel-conf"
+                  class="btn-leave"
+                  style="display: none"
+                  v-on:click="cancelAction()"
+                >
                   Cancelar
                 </button>
-                <button id="confirm-prof-alt" class="btn-leave" style="display: none" v-on:click="sair()">
+                <button
+                  id="confirm-prof-alt"
+                  class="btn-leave"
+                  style="display: none"
+                  v-on:click="sair()"
+                >
                   Sair
                 </button>
               </div>
@@ -64,20 +82,16 @@
           </div>
           <div class="info-profile white-2 black-to-white">
             <div class="user-pic">
-              <img
-                src="/src/assets/images/perfil.jpeg"
-                alt
-                class="img-profile"
-              />
+              <img class="img-profile" />
             </div>
             <div class="info-user">
               <div class="info-1">
-                <h1 class="name-user">José Marques Costa</h1>
-                <h2 class="user">@jose.costa</h2>
+                <h1 class="name-user"></h1>
+                <h2 class="user"></h2>
                 <div class="info-estatisticas">
-                  <p class="seguindo">1.2k seguindo</p>
-                  <p class="seguidores">53.9k seguidores</p>
-                  <p class="publicacoes">13 publicações</p>
+                  <p class="seguindo"></p>
+                  <p class="seguidores"></p>
+                  <p class="publicacoes"></p>
                 </div>
               </div>
               <div class="info-2">
@@ -89,10 +103,14 @@
           </div>
           <main ontouchstart class="tab-bar" style="width: 23vw !important">
             <nav class="tab-link">
-              <a class="tab-link-a sobre-mim" style="width: 50%!important">Sobre mim</a>
+              <a class="tab-link-a sobre-mim" style="width: 50%!important"
+                >Sobre mim</a
+              >
               <a class="tab-link-a curtidas" style="display: none">Curtidas</a>
               <a class="tab-link-a salvos" style="display: none">Salvos</a>
-              <a class="tab-link-a configuracoes" style="width: 50%!important">Configurações</a>
+              <a class="tab-link-a configuracoes" style="width: 50%!important"
+                >Configurações</a
+              >
               <hr />
             </nav>
           </main>
@@ -153,102 +171,14 @@
               Mais sobre mim...
             </h1>
             <div class="div-info-perfil">
-              <p class="bio black-to-white">
-                Oi tudo bem?? Meu nome e jose marques costa
-              </p>
-              <p class="biografia black-to-white">
-                My name is Karl Kristiansen. I was born in Connecticut. I spent
-                most of my childhood in Stonington, a small, seaside town on the
-                Connecticut-Rhode Island border. My father was a commercial
-                fisherman and since he was from Norway, life on the sea was a
-                natural for him. My mother was a housewife. We were the typical
-                '50's family. Much of my childhood was spent around the docks
-                and fishing boats of Stonington. In 1954, my father and a few of
-                the other fishermen decided to try their luck at shrimping in
-                Brownsville, Texas. After a few months, and very little success,
-                we returned to Stonington. Most of the Stonington boats were
-                selling their catches in New Bedford, MA, so it was no surprise
-                that in 1959, we packed up and moved.New Bedford remained my
-                home through my secondary school years. I graduated from New
-                Bedford High School in 1965. I had the opportunity to go to
-                college, but I opted for a hitch in the Navy. If you recall, at
-                that time, you only had a few choices: go to college, wait to be
-                drafted, enlist or After an exciting ten weeks at NTCkes and a
-                couple of weeks leave, I flew to Subic Bay in the Philippines,
-                to catch my ship, the USS Mansfield DD-728. Our main mission was
-                p
-              </p>
+              <p class="bio black-to-white"></p>
+              <p class="biografia black-to-white"></p>
               <button class="alterar btnPerfil">Alterar biografia</button>
             </div>
             <h1 class="title-content-config black-to-white">
               Suas publicações...
             </h1>
-            <div class="div-scroll div-scroll-sobre">
-              <div class="slide__content" id="pub-prof-wrapper">
-                <div class="masonry-item">
-                  <div class="masonry-content">
-                    <div class="prof-cont-feed white-7">
-                      <div class="prof-img-cont">
-                        <img
-                          class="prof-img-prop"
-                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                        />
-                      </div>
-                      <a href="/#/perfil" class="prof-name-det black-to-white"
-                        >Luna Dias</a
-                      >
-                      <div class="prof-bio-det text-gray">
-                        What would our lives be without art?
-                      </div>
-                    </div>
-                    <div class="post-img-cont">
-                      <a href="/#/detalhes">
-                        <figure class="snip1321" id="0post">
-                          <div class="after"></div>
-                          <img
-                            src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
-                            alt="sq-sample26"
-                          />
-                          <figcaption class="figcaption">
-                            <i class="fas fa-arrow-right"></i>
-                            <div class="name-of-prof">
-                              <a href="/#/perfil" class="name-of-prof-link"
-                                >Luna Dias</a
-                              >
-                            </div>
-                            <h2>Outter Seas</h2>
-                            <div class="categories-cont-on-feed">
-                              <div class="cat-on-feed paint">Pintura</div>
-                              <div class="cat-on-feed paint">Tinta Óleo</div>
-                              <div class="cat-on-feed paint">Arte Moderna</div>
-                              <div class="cat-on-feed pers">Oceano</div>
-                              <div class="cat-on-feed pers">Azul</div>
-                              <div class="cat-on-feed paint">Brushed</div>
-                              <div class="cat-on-feed pers">
-                                Fantasy Landscape
-                              </div>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <div class="interact-container">
-                        <div class="stage stage-btn">
-                          <button class="trigger">ver mais...</button>
-                        </div>
-                        <div class="stage star-stage">
-                          <a class="magic">
-                            <i class="fas fa-star"></i>
-                          </a>
-                        </div>
-                        <div class="stage heart-stage">
-                          <div class="heart"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="div-scroll div-scroll-sobre"></div>
           </div>
           <div class="curtidas-content content-perfil white-6 black-to-white">
             <hr class="color-verify curtidas-hr" />
@@ -467,6 +397,9 @@
                   <div class="signup-content">
                     <div class="signup-form">
                       <h2 class="form-title black-to-white">Alterar dados</h2>
+                      <p class="complete-p-alt-perfil">
+                        Seus dados foram alterados com sucesso!
+                      </p>
                       <form class="register-form">
                         <div class="form-group">
                           <label for="name">
@@ -3800,8 +3733,7 @@ export default {
   methods: {
     verificarCampos() {
       setInterval(function() {
-        if(!$("#container-cad-user").length)
-        return;
+        if (!$("#container-cad-user").length) return;
 
         if ($("#name").val() == "") {
           document.getElementById("signup").disabled = true;
@@ -4051,11 +3983,15 @@ export default {
         $("#footer").css("display", "none");
         $("#menu-bar").css("display", "none");
         $("#conf-modal").css("display", "block");
-        $("#conf-message").text("Você deseja mesmo sair? Esperamos que volte logo.");
-        $(".confirm-del div").html('<img src="/src/assets/images/leave-session.png" style="width: 100%">');
-        $(".confirm-del div").css('border', 'none');
-        $('.btn-leave').css("display", "block");
-        $('.btn-del').css("display", "none");
+        $("#conf-message").text(
+          "Você deseja mesmo sair? Esperamos que volte logo."
+        );
+        $(".confirm-del div").html(
+          '<img src="/src/assets/images/leave-session.png" style="width: 100%">'
+        );
+        $(".confirm-del div").css("border", "none");
+        $(".btn-leave").css("display", "block");
+        $(".btn-del").css("display", "none");
       }
       if (which == "del") {
         $("#footer").css("display", "none");
@@ -4067,20 +4003,95 @@ export default {
       $("#footer").css("display", "block");
       $("#menu-bar").css("display", "block");
       $("#conf-modal").css("display", "none");
-      $(".confirm-del div").css('border', '2px solid rgb(206, 48, 82)');
+      $(".confirm-del div").css("border", "2px solid rgb(206, 48, 82)");
       $(".confirm-del div").html('<a class="close-mod-conf"></a>');
-      $("#conf-message").text("Ahh não se vá! Você tem certeza que deseja deletar sua conta? Essa ação não pode ser desfeita.");
+      $("#conf-message").text(
+        "Ahh não se vá! Você tem certeza que deseja deletar sua conta? Essa ação não pode ser desfeita."
+      );
       $("#confirm-prof-alt").text("Deletar");
     },
     apagarConta() {
       localStorage.clear();
-      window.$cookies.remove('user_session');
-      location.href = "/#/"
+      window.$cookies.remove("user_session");
+      location.href = "/#/";
     },
     sair() {
       localStorage.clear();
-      window.$cookies.remove('user_session');
-      location.href = "/#/login"
+      window.$cookies.remove("user_session");
+      location.href = "/#/login";
+    },
+    alterarConta() {
+      var biografiaAtual;
+      var bioAtual;
+
+      $.ajax({
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        url: "https://localhost:5001/api/Redirect/Biografia" + localStorage.userId,
+        complete: function(code, data) {
+          if (code.status === "success") {
+            biografiaAtual = $.parseJSON(data.responseText);
+            $.ajax({
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              url: "https://localhost:5001/api/Redirect/Bio" + localStorage.userId,
+              complete: function(code, data) {
+                if (code.status === "success") {
+                  bioAtual = $.parseJSON(data.responseText);
+                } else {
+                  location.href = "/#/error";
+                }
+              }
+            });
+          } else {
+            location.href = "/#/error";
+          }
+        }
+      });
+
+      var myObject = {
+        idUsuario: localStorage.userId,
+        nome: $("#name").val(),
+        userName: $("#user").val(),
+        email: $("#email").val(),
+        senha: $("#pass").val(),
+        foto: "" + valorFoto,
+        biografia: biografiaAtual + "",
+        bio: bioAtual + "",
+        configs: "{'menu':0,'deslig':0,'login':0,'capa':0,'dark':0}",
+        seguindo: "{}",
+        seguidores: "{}"
+      };
+
+      var jsonInput = JSON.stringify(myObject);
+
+      jaFoiPostCadUser = true;
+
+      $.ajax({
+        type: "PUT",
+        data: jsonInput,
+        dataType: "json",
+        contentType: "application/json",
+        url: "https://localhost:5001/api/Redirect/AlterarDados",
+        complete: function(code) {
+          if (code.status === 200) {
+            $("complete-p-alt-perfil").fadeIn();
+            setTimeout(() => {
+              $("complete-p-alt-perfil").fadeOut();
+            }, 2000);
+          } else {
+            $(".error-modal").css("display", "block");
+            $(".error-modal").css("opacity", "1");
+            $(".ui-widget-overlay").css("display", "block");
+            $(".warn").html(
+              "Algúm dado foi fornecido incorretamente. Ou ocorreu um problema com o servidor. Tente novamente."
+            );
+            $("#name").val("");
+          }
+        }
+      });
     },
     getPublicacoes() {
       var codigo = location.href.substring(30);
@@ -4193,7 +4204,7 @@ export default {
     this.verificarCampos();
     this.getPublicacoes();
   },
-  beforeCreate(){
+  beforeCreate() {
     if (window.$cookies.isKey("user_cadastro")) {
       document.location.href = "/#/categorias";
     } else if (!window.$cookies.isKey("user_session")) {

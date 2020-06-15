@@ -791,5 +791,39 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+
+        [HttpGet("Biografia/{idUsuario}")]
+        public async Task<IActionResult> GetBiografia(int idUsuario)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuarios/Biografia/" + idUsuario);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("Bio/{idUsuario}")]
+        public async Task<IActionResult> GetBio(int idUsuario)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuarios/Bio/" + idUsuario);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
     }
 }
