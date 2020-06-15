@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Calibre-Regular";
-  src: url("/src/assets/fonts/calibri-7.ttf");
+  src: url("/src/assets/fonts/calibri-7.ttf"); 
 }
 
 @media only screen and (min-width: 0) and (max-width: 480px){
@@ -3836,6 +3836,14 @@ img{
     -moz-transform: translateX(0);
     transform: translateX(0);
   }
+}
+.err-msg{
+  color: #e72734;
+  display: none;
+  margin-bottom: 15px;
+  text-indent: 10px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
 }
 /*-----------------------------------------------*/
 @font-face {

@@ -126,7 +126,7 @@ setInterval(() => {
               "' alt='sing up image' id='user-prof-image'></figure><div id='user-let-img'></div><p class='signup-image-link'>Escolher Foto de Perfil</p><img class='bin' src='/src/assets/images/trash-can-icon.png'>"
           );
           isSelImg = true;
-          $(".bin").fadeIn();
+          $(".bin").fadeIn(); 
           $(".ui-widget-overlay").css("display", "none");
           $("#pick-image-modal").css("display", "none");
           $(".error-modal").css("display", "none");
