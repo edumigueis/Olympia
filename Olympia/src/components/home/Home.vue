@@ -2073,7 +2073,7 @@ export default {
               '" class="prof-bio-det text-gray"> What would our lives be without art?</div></div>';
             conteudoDiv +=
               '<div class="insp-post-cont black-to-white">' +
-              item.texto +
+              item.texto.replace("+", " ") +
               '</div> <img src="' +
               item.foto +
               '" class="img-insp"/>';
@@ -2088,16 +2088,31 @@ export default {
               dataType: "json",
               contentType: "application/json",
               success: function(result) {
-                $("#prof-inner-prop-img-" + index).attr(
+                if (result.foto.length > 20) {
+                    $("#prof-inner-prop-img-" + index).attr(
                   "src",
                   result.foto + ""
                 );
+                  } else {
+                    $("#prof-inner-prop-img-" + index)
+                      .parent()
+                      .css("background-color", result.foto);
+                    $("#prof-inner-prop-img-" + index)
+                      .parent()
+                      .append(
+                        '<span class="letter-prof">' +
+                          result.nome.substring(0, 1) +
+                          "</span>"
+                      );
+                    $("#artist-profile-pic").attr("src", "");
+                  }
+                
                 $("#prof-name-link-" + index).attr(
                   "href",
                   "/#/perfil/" + result.idUsuario
                 );
-                $("#prof-name-link-" + index).text(result.nome + "");
-                $("#prof-bio-det-" + index).text(result.bio + "");
+                $("#prof-name-link-" + index).text(result.nome.replace("+", " ") + "");
+                $("#prof-bio-det-" + index).text(result.bio.replace("+", " ") + "");
                 $("#load-modal").fadeOut();
               }
             });
@@ -2230,7 +2245,7 @@ export default {
               '<figcaption><i class="fas fa-arrow-right"></i><div class="name-of-prof"><a href="/#/perfil/" id="name-of-prof-link-' +
               index +
               '" class="name-of-prof-link">Name</a></div><h2>' +
-              item.nome +
+              item.nome.replace("+", " ") +
               '</h2><div class="categories-cont-on-feed"><div class="cat-on-feed paint">' +
               item.categorias[0] +
               '</div><div class="cat-on-feed paint">' +
@@ -2272,7 +2287,7 @@ export default {
                     $("#artist-profile-pic").attr("src", "");
                   }
 
-                  $("#obra-prof-name-link-" + index).text(result.nome);
+                  $("#obra-prof-name-link-" + index).text(result.nome.replace("+", " "));
 
                   if (result.bio.length > 90) {
                     $("#obra-prof-bio-" + index).text(

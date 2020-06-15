@@ -728,12 +728,13 @@ export default {
       var finalDate = new Date().toISOString().slice(0, 19);
 
       var myObjectPubli = {
-        idUsuario: 1,
+        idUsuario: parseInt(localStorage.userId),
         texto: $("#msg").val(),
         tags: "{tag1}",
         foto: "" + valorFoto,
         dataPost: finalDate
       };
+      alert(localStorage.userId);
       var jsonInput = JSON.stringify(myObjectPubli);
 
       jaFoiPostCadUser = true;
@@ -742,14 +743,16 @@ export default {
         url: "https://localhost:5001/api/Publicacoes",
         data: jsonInput,
         contentType: "application/json",
-        success: function() {
-          alert("deu certo");
-          $(".success-msg").fadeIn();
-          setTimeout(function() {
-            $(".success-msg").animate({ left: -300 });
-            $(".success-msg").fadeOut();
-          }, 4000);
-          $(".success-msg").css("left", "40px");
+        complete: function(code) {
+          if (code.status === 200) {
+            alert("deu certo");
+            $(".success-msg").fadeIn();
+            setTimeout(function() {
+              $(".success-msg").animate({ left: -300 });
+              $(".success-msg").fadeOut();
+            }, 4000);
+            $(".success-msg").css("left", "40px");
+          }
         },
         fail: function(error) {
           console.log(error);
@@ -819,7 +822,7 @@ export default {
       var finalDate = new Date().toISOString().slice(0, 19);
 
       var myObjectPubli = {
-        idUsuario: 1,
+        idUsuario: parseInt(localStorage.userId),
         nome: $("#titulo").val(),
         descricao: $("#desc").val(),
         categorias: $("#search-select")
@@ -971,7 +974,7 @@ export default {
       var finalDate = new Date().toISOString().slice(0, 19);
 
       var myObjectPubli = {
-        idUsuario: 1,
+        idUsuario: parseInt(localStorage.userId),
         nome: $("#titulo-serv").val(),
         descricao: $("#desc-serv").val(),
         categorias: $("#search-select-serv")
