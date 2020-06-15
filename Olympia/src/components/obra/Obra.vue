@@ -174,8 +174,8 @@ export default {
         },
         success: function(field) {
           $("#load-modal").fadeOut();
-          $("#art-detail-p").text(field.dadosTecnicos);
-          $("#art-data-p").text(''+ field.descricao);
+          $("#art-detail-p").text(field.dadosTecnicos.replace('+', ' '));
+          $("#art-data-p").text(''+ field.descricao.replace('+', ' '));
           $("#art-name").text(field.nome);
           $("#page-det-name").text(field.nome);
           $.ajax({
