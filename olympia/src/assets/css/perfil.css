@@ -43,7 +43,37 @@
   flex-direction: column;
   justify-content: center;
 }
-
+#conf-modal{
+  background-color: rgba(0, 0, 0, 0.616);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+}
+.prop-conf-modal{
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  z-index: 5;
+  width: 40vw;
+  border-radius: 16px;
+  height: fit-content;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  padding: 16px;
+}
+.modal-img-conf{
+  width: 40%;
+}
+.modal-img-conf img{
+  width: 100%;
+}
+.conf-modal-part{
+  width: 60%;
+}
 .modal-form {
   display: none;
 }

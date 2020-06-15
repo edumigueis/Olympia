@@ -28,6 +28,16 @@
 
       <div class="container-profile">
         <div class="bg"></div>
+        <div id="conf-modal">
+          <div class="prop-conf-modal">
+            <div class="modal-img-conf"><img src="/src/assets/images/confirm-modal-img.png"></div>
+            <div class="conf-modal-part">
+              <img src="">
+              <p>Ahh não se vá! Você tem certeza que deseja deletar sua conta? Essa ação não pode ser desfeita.</p>
+              <div><button id="cancel-conf">Cancelar</button > <button id="confirm-prof-alt">Deletar</button></div>
+            </div>
+          </div>
+        </div>
         <div class="profile">
           <div class="title-content">
             <h1 class="title">Seu <br />Perfil</h1>
@@ -407,8 +417,8 @@
               </div>
             </section>
             <div class="btnsPerfil">
-              <button class="apagar btnPerfil">Apagar conta</button>
-              <button class="sair btnPerfil">Sair</button>
+              <button id="del-acc-btn" v-on:click="showConfModal('del')" class="apagar btnPerfil">Apagar conta</button>
+              <button id="leave-btn" v-on:click="showConfModal('leave')" class="sair btnPerfil">Sair</button>
             </div>
           </div>
           <div class="modal-form">
@@ -4001,6 +4011,14 @@ export default {
         dataType: "json"
       });
     },
+    showConfModal(which){
+      if(which == 'leave'){
+
+      }
+      if(which == 'del'){
+
+      }
+    },
     getPublicacoes(){
       var codigo = location.href.substring(30);
       $.ajax({
@@ -4049,7 +4067,7 @@ export default {
             $("#pub-prof-wrapper").append(conteudoDiv);
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/Usuario/" + item.idUsuario,
+                "https://localhost:5001/api/redirect/Usuario/" + codigo,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
