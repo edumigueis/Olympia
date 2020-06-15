@@ -10,7 +10,7 @@ using System;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute]
+    /*[CustomAuthorizeAttribute]*/
     [Route("api/[controller]")]
     [ApiController]
 

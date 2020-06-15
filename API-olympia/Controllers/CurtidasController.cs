@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute]
+   /* [CustomAuthorizeAttribute]*/
     [Route("api/[controller]")]
     [ApiController]
     public class CurtidasController : Controller

@@ -12,7 +12,7 @@ using API_olympia.Data;
 
 namespace API_olympia.Controllers
 {
-    [CustomAuthorizeAttribute]
+    /*[CustomAuthorizeAttribute]*/
     public class AdminController : Controller
     {
         private readonly ILogger<AdminController> _logger;
