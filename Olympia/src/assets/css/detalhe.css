@@ -443,6 +443,12 @@ ul li {
   text-align: justify;
   padding-left: 6px;
   padding-right: 6px;
+  max-width: 100%;
+  white-space: normal;
+  height: fit-content;
+}
+#text{
+  
 }
 #user-link {
   text-decoration: none;

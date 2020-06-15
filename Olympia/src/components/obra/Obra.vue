@@ -32,19 +32,8 @@
                 </div>
                 <div class="fine-line white-6"></div>
                 <div id="art-data" class="black-to-white">
-                  O Retrato de Adele Bloch-Bauer I é uma pintura de Gustav Klimt
-                  completada em 1907. Foi vendida em junho de 2006, a Ronald
-                  Lauder, proprietário da Neue Galerie em Nova Iorque, por 135
-                  milhões de dólares, tendo sido, na época, a segunda pintura
-                  mais cara do mundo. A obra encontra-se em exibição permanente
-                  na dita galeria, desde julho de 2006. Klimt empregou três anos
-                  em completar este retrato, medindo 138cm x 138 cm, executado
-                  em óleo e ouro sobre tela, com uma ornamentação elaborada e
-                  complexa, tal e qual se vê nos trabalhos do Jugendstil. Klimt
-                  foi membro da Secessão Vienense, um grupo de artistas que
-                  cortaram com a forma tradicional de pintar. A obra foi
-                  realizada em Viena, por encomenda de Ferdinand Bloch-Bauer,
-                  que fizera fortuna com a indústria açucareira.
+                  <p id="art-data-p">
+                  </p>
                 </div>
               </div>
             </li>
@@ -186,7 +175,7 @@ export default {
         success: function(field) {
           $("#load-modal").fadeOut();
           $("#art-detail-p").text(field.dadosTecnicos);
-          $("#art-data").text(field.descricao);
+          $("#art-data-p").text(''+ field.descricao);
           $("#art-name").text(field.nome);
           $("#page-det-name").text(field.nome);
           $.ajax({
@@ -197,7 +186,6 @@ export default {
             contentType: "application/json",
             success: function(resul) {
               $("#user-link").text("@" + resul.userName);
-              alert(resul.userName);
               $("#user-link").attr("href", "/#/perfil/" + resul.userName);
               $("#visit-profile-link").attr(
                 "href",
