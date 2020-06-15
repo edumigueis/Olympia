@@ -742,6 +742,7 @@ namespace API_olympia.Controllers
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 armazenador.StringValueRoute = listagem[5];
+                json = HttpUtility.UrlEncode(json);
                 return Redirect("/api/Usuarios/RedirectToPostBio/" + json);
             }
             catch
