@@ -179,9 +179,9 @@ export default {
         dataType: "json",
         contentType: "application/json",
         success: function(field) {
-          $("#art-data").text(field.descricao);
-          $("#art-name").text(field.nome);
-          $("#page-det-name").text(field.nome);
+          $("#art-data").text(field.descricao.replace('+', ' '));
+          $("#art-name").text(field.nome.replace('+', ' '));
+          $("#page-det-name").text(field.nome.replace('+', ' '));
           $.ajax({
             url: "https://localhost:5001/api/Redirect/Usuario/" + codigo,
             type: "GET",
@@ -192,10 +192,10 @@ export default {
               $("#user-link").attr("href", "/#/perfil/" + resul.userName);
               $("#visit-profile-link").attr(
                 "href",
-                "/#/perfil/" + resul.userName
+                "/#/perfil/" + resul.userName.replace('+', ' ')
               );
-              $("#bio").text(resul.bio);
-              $("#name").text(resul.nome);
+              $("#bio").text(resul.bio.replace('+', ' '));
+              $("#name").text(resul.nome.replace('+', ' '));
               if (resul.foto.length > 20) {
                 $("#artist-profile-pic").attr("src", resul.foto);
               } else {
