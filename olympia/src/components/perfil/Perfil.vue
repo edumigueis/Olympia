@@ -28,13 +28,27 @@
 
       <div class="container-profile">
         <div class="bg"></div>
-        <div id="conf-modal">
+        <div id="conf-modal" style="display: none;">
           <div class="prop-conf-modal">
-            <div class="modal-img-conf"><img src="/src/assets/images/confirm-modal-img.png"></div>
+            <div class="modal-img-conf">
+              <img src="/src/assets/images/confirm-modal-img.png" />
+            </div>
             <div class="conf-modal-part">
-              <img src="">
-              <p>Ahh não se vá! Você tem certeza que deseja deletar sua conta? Essa ação não pode ser desfeita.</p>
-              <div><button id="cancel-conf">Cancelar</button > <button id="confirm-prof-alt">Deletar</button></div>
+              <div class="confirm-del">
+                <div><a class="close-mod-conf"></a></div>
+              </div>
+              <p id="conf-message">
+                Ahh não se vá! Você tem certeza que deseja deletar sua conta?
+                Essa ação não pode ser desfeita.
+              </p>
+              <div class="btn-conf-wrapper">
+                <button id="cancel-conf" v-on:click="cancelAction()">
+                  Cancelar
+                </button>
+                <button id="confirm-prof-alt" v-on:click="apagarConta()">
+                  Deletar
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -417,8 +431,20 @@
               </div>
             </section>
             <div class="btnsPerfil">
-              <button id="del-acc-btn" v-on:click="showConfModal('del')" class="apagar btnPerfil">Apagar conta</button>
-              <button id="leave-btn" v-on:click="showConfModal('leave')" class="sair btnPerfil">Sair</button>
+              <button
+                id="del-acc-btn"
+                v-on:click="showConfModal('del')"
+                class="apagar btnPerfil"
+              >
+                Apagar conta
+              </button>
+              <button
+                id="leave-btn"
+                v-on:click="showConfModal('leave')"
+                class="sair btnPerfil"
+              >
+                Sair
+              </button>
             </div>
           </div>
           <div class="modal-form">
@@ -4011,18 +4037,45 @@ export default {
         dataType: "json"
       });
     },
-    showConfModal(which){
-      if(which == 'leave'){
-
+    showConfModal(which) {
+      if (which == "leave") {
+        $("#footer").css("display", "none");
+        $("#menu-bar").css("display", "none");
+        $("#conf-modal").css("display", "block");
+        $("#conf-message").text("Você deseja mesmo sair? Esperamos que volte logo.");
+        $(".confirm-del div").html('<img src="/src/assets/images/leave-session.png" style="width: 100%">');
+        $(".confirm-del div").css('border', 'none');
+        $("#confirm-prof-alt").text("Sair");
       }
-      if(which == 'del'){
-
+      if (which == "del") {
+        $("#footer").css("display", "none");
+        $("#menu-bar").css("display", "none");
+        $("#conf-modal").css("display", "block");
       }
     },
-    getPublicacoes(){
+    cancelAction() {
+      $("#footer").css("display", "block");
+      $("#menu-bar").css("display", "block");
+      $("#conf-modal").css("display", "none");
+      $(".confirm-del div").css('border', '2px solid rgb(206, 48, 82)');
+      $(".confirm-del div").html('<a class="close-mod-conf"></a>');
+      $("#conf-message").text("Ahh não se vá! Você tem certeza que deseja deletar sua conta? Essa ação não pode ser desfeita.");
+      $("#confirm-prof-alt").text("Deletar");
+    },
+    apagarConta() {
+      var codigoSecao  = 
+      $.ajax({
+        url: "https://localhost:5001/api/Usuarios/" + codigoSecao,
+        type: "DELETE",
+        success: function(data) {
+
+        }
+      });
+    },
+    getPublicacoes() {
       var codigo = location.href.substring(30);
       $.ajax({
-        url: "https://localhost:5001/api/redirect/AllObrasUser/"+ codigo,
+        url: "https://localhost:5001/api/redirect/AllObrasUser/" + codigo,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -4066,8 +4119,7 @@ export default {
               '<div class="interact-container"><div class="stage stage-btn"><button class="trigger">ver mais...</button></div><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div></div> </div></div>';
             $("#pub-prof-wrapper").append(conteudoDiv);
             $.ajax({
-              url:
-                "https://localhost:5001/api/redirect/Usuario/" + codigo,
+              url: "https://localhost:5001/api/redirect/Usuario/" + codigo,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -4117,16 +4169,14 @@ export default {
                     success: function(data) {
                       $("#obra-img-" + index).attr("src", data[0]);
                     },
-                    error: function(thrownError) {
-
-                    }
+                    error: function(thrownError) {}
                   });
                 }
               }
             });
           });
         }
-    });
+      });
     }
   },
   mounted() {
