@@ -4028,18 +4028,49 @@ export default {
         type: "GET",
         dataType: "json",
         contentType: "application/json",
-        url: "https://localhost:5001/api/Redirect/Biografia" + localStorage.userId,
+        url:
+          "https://localhost:5001/api/Redirect/Usuario" + localStorage.userId,
         complete: function(code, data) {
           if (code.status === "success") {
-            biografiaAtual = $.parseJSON(data.responseText);
+            var result = $.parseJSON(data.responseText);
+            $("#name").val(result.nome + "");
+            $("#user").val(result.userName + "");
+            $("#email").val(result.email + "");
+            if ((result.foto + "").length > 10) {
+              $("#user-prof-image").val(result.foto);
+              $("#user-prof-image").css("display", "block");
+              $("#user-let-img").css("display", "none");
+            } else {
+              $("#user-prof-image").css("background", result.foto);
+              $(".prof-user-letter").text((result.nome + "").substring(0,1));
+              $("#user-prof-image").css("display", "none");
+              $("#user-let-img").css("display", "block");
+            }
             $.ajax({
               type: "GET",
               dataType: "json",
               contentType: "application/json",
-              url: "https://localhost:5001/api/Redirect/Bio" + localStorage.userId,
+              url:
+                "https://localhost:5001/api/Redirect/Biografia" +
+                localStorage.userId,
               complete: function(code, data) {
                 if (code.status === "success") {
-                  bioAtual = $.parseJSON(data.responseText);
+                  biografiaAtual = $.parseJSON(data.responseText);
+                  $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json",
+                    url:
+                      "https://localhost:5001/api/Redirect/Bio" +
+                      localStorage.userId,
+                    complete: function(code, data) {
+                      if (code.status === "success") {
+                        bioAtual = $.parseJSON(data.responseText);
+                      } else {
+                        location.href = "/#/error";
+                      }
+                    }
+                  });
                 } else {
                   location.href = "/#/error";
                 }
