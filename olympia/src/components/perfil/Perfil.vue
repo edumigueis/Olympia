@@ -4225,17 +4225,20 @@ export default {
           if ((result.foto + "").length > 10) {
             $("#user-prof-image").val(result.foto);
             $("#user-prof-image").css("display", "block");
+            $(".prof-user-letter").css("display", "none");
             $("#user-let-img").css("display", "none");
+            $('.hexcolor').css('display','none');
           } 
           else {
             $("#user-prof-image").css("background", result.foto);
+            $(".prof-user-letter").css("display", "block");
             $(".prof-user-letter").text((result.nome + "").substring(0, 1));
             $("#user-prof-image").css("display", "none");
             $("#user-let-img").css("display", "block");
+            $('.hexcolor').css('display','block');
           }
-
-
-        } else {
+        } 
+        else {
           location.href = "/#/error";
         }
       }
