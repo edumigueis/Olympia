@@ -290,22 +290,6 @@ setInterval(() => {
           return;
         }
       });
-      /*$("#tel").on("focusout", function () {
-        var tele = $("#tel").val();
-        var regName = /(([+][(]?[0-9]{1,3}[)]?)|([(]?[0-9]{4}[)]?))\s*[)]?[-\s\.]?[(]?[0-9]{1,3}[)]?([-\s\.]?[0-9]{3})([-\s\.]?[0-9]{3,4})/g;
-        if (tele == "") {
-          return;
-        }
-        if (!regName.test(tele)) {
-          $(".error-modal").css("display", "block");
-          $(".error-modal").css("opacity", "1");
-          $(".ui-widget-overlay").css("display", "block");
-          $(".warn").html(
-            "Deve ser fornecido telefone nos padrões: +55 00 000000000 (BR), +591 00000000, +1 000 000 0000, +(591) 0000000, +(591) (0) 0000000, 0000 00000000, 0001 0000000000 ou (0001) 0000000."
-          );
-          $("#tel").val("");
-        }
-      });*/
 
       $(".signup-image-link").on("click", function() {
         $(".ui-widget-overlay").css("display", "block");
@@ -375,7 +359,7 @@ setInterval(() => {
             email: $("#email").val(),
             senha: $("#pass").val(),
             foto: "" + valorFoto,
-            biografia: "nossa que legal",
+            biografia: "Olá! Sou um amante de artes!",
             bio: sentence + "",
             configs: "{'menu':0,'deslig':0,'login':0,'capa':0,'dark':0}",
             seguindo: "{}",
@@ -385,7 +369,7 @@ setInterval(() => {
           var jsonInput = JSON.stringify(myObject);
 
           jaFoiPostCadUser = true;
-          console.log(jsonInput);
+
           $.ajax({
             type: "POST",
             data: jsonInput,
@@ -396,7 +380,8 @@ setInterval(() => {
               if (code.status === 200) {
                 window.$cookies.set("user_cadastro", "", Infinity);
                 document.location.href = "/#/categorias";
-              } else {
+              } 
+              else {
                 $(".error-modal").css("display", "block");
                 $(".error-modal").css("opacity", "1");
                 $(".ui-widget-overlay").css("display", "block");
@@ -404,13 +389,7 @@ setInterval(() => {
                   "Algúm dado foi fornecido incorretamente. Ou ocorreu um problema com o servidor. Tente novamente."
                 );
                 $("#name").val("");
-                /*setTimeout(function () {
-                  location.reload();
-                }, 2000)*/
               }
-            },
-            error: function(er) {
-              console.log(er);
             }
           });
         }

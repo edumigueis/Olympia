@@ -936,5 +936,45 @@ namespace API_olympia.Data
 
             return result;
         }
+
+        public string SpBiografiaByIdUser(int idUsuario)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_BiografiaByIdUser " + idUsuario;
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            string result = null;
+
+            while (leitor.Read())
+            {
+                result = leitor["biografia"].ToString();
+            }
+
+            conn.Close();
+
+            return result;
+        }
+
+        public string SpBioByIdUser(int idUsuario)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_BioByIdUser " + idUsuario;
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            string result = null;
+
+            while (leitor.Read())
+            {
+                result = leitor["bio"].ToString();
+            }
+
+            conn.Close();
+
+            return result;
+        }
     }
 }

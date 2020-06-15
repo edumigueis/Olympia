@@ -77,5 +77,7 @@ namespace API_olympia.Data
         string SpVerificarDadosByEmail(string email);
         List<object> SpUserByUsername(string email);
         List<object> SpUserByEmail(string email);
+        string SpBiografiaByIdUser(int idUsuario);
+        string SpBioByIdUser(int idUsuario);
     }
 }

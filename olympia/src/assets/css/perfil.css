@@ -8,6 +8,17 @@
   src: url("/src/assets/fonts/calibri-7.ttf"); 
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins-light.otf");
+}
+
+.complete-p-alt-perfil{
+  color:rgb(137, 230, 51);
+  display: none;
+  font-family: "Poppins";
+}
+
 @media only screen and (min-width: 0) and (max-width: 480px){
   .prof-bio-det{
     font-size: 0.6em!important;

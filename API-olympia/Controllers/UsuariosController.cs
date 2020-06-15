@@ -301,5 +301,34 @@ namespace API_olympia.Controllers
             }
         }
 
+        [HttpGet("Biografia/{idUsuario}")]
+        public async Task<IActionResult> GetBiografia(int idUsuario)
+        {
+            try
+            {
+                var result = this.Repo.SpBiografiaByIdUser(idUsuario);
+                return Ok(result);
+
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpGet("Bio/{idUsuario}")]
+        public async Task<IActionResult> GetBio(int idUsuario)
+        {
+            try
+            {
+                var result = this.Repo.SpBioByIdUser(idUsuario);
+                return Ok(result);
+
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
     }
 }
