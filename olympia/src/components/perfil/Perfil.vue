@@ -51,7 +51,7 @@
                 <button id="cancel-conf" class="btn-leave" style="display: none" v-on:click="cancelAction()">
                   Cancelar
                 </button>
-                <button id="confirm-prof-alt" class="btn-leave" style="display: none" v-on:click="apagarConta()">
+                <button id="confirm-prof-alt" class="btn-leave" style="display: none" v-on:click="sair()">
                   Sair
                 </button>
               </div>
@@ -4073,15 +4073,14 @@ export default {
       $("#confirm-prof-alt").text("Deletar");
     },
     apagarConta() {
-      /*var codigoSecao  = 
-      $.ajax({
-        url: "https://localhost:5001/api/Usuarios/" + codigoSecao,
-        type: "DELETE",
-        success: function(data) {
-
-        }
-      });*/
+      localStorage.clear();
+      window.$cookies.remove('user_session');
       location.href = "/#/"
+    },
+    sair() {
+      localStorage.clear();
+      window.$cookies.remove('user_session');
+      location.href = "/#/login"
     },
     getPublicacoes() {
       var codigo = location.href.substring(30);
@@ -4193,13 +4192,13 @@ export default {
   mounted() {
     this.verificarCampos();
     this.getPublicacoes();
-  } /*,
+  },
   beforeCreate(){
     if (window.$cookies.isKey("user_cadastro")) {
       document.location.href = "/#/categorias";
     } else if (!window.$cookies.isKey("user_session")) {
       document.location.href = "/#/login";
     }
-  }*/
+  }
 };
 </script>
