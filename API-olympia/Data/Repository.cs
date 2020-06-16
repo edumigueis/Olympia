@@ -405,7 +405,7 @@ namespace API_olympia.Data
                                    leitor["nome"],
                                    leitor["descricao"],
                                    leitor["idArte"],
-                                   leitor["categoria"],
+                                   leitor["categorias"],
                                    leitor["tags"],
                                    leitor["dataPost"]};
 
