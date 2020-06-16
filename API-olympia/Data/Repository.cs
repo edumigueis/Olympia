@@ -374,7 +374,8 @@ namespace API_olympia.Data
 
             while (leitor.Read())
             {
-                object[] dados = { leitor["idUsuario"],
+                object[] dados = { leitor["idPublicacao"],
+                                   leitor["idUsuario"],
                                    leitor["texto"],
                                    leitor["tags"],
                                    leitor["foto"],
@@ -399,7 +400,8 @@ namespace API_olympia.Data
 
             while (leitor.Read())
             {
-                object[] dados = {leitor["idUsuario"],
+                object[] dados = { leitor["idServico"],
+                                   leitor["idUsuario"],
                                    leitor["nome"],
                                    leitor["descricao"],
                                    leitor["idArte"],
