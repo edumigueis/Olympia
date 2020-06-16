@@ -208,11 +208,11 @@ Begin
     select * from Usuarios where userName = @userName
 End
 
-create proc sp_AllObrasUser /*retorna as obras que um usuario possui*/
+create proc sp_AllObrasUser/*retorna as obras que um usuario possui*/
 @idUsuario int
 as
 Begin
-    select o.idObra from Usuarios u, Obras o where 
+    select o.* from Usuarios u, Obras o where 
 	o.idUsuario = u.idUsuario and
 	u.idUsuario = @idUsuario
 End
@@ -221,8 +221,17 @@ create proc sp_AllServicosUser /*retorna os servicos que um usuario possui*/
 @idUsuario int
 as
 Begin
-    select s.idServico from Usuarios u, Servicos s where 
+    select s.* from Usuarios u, Servicos s where 
 	s.idUsuario = u.idUsuario and
+	u.idUsuario = @idUsuario
+End
+
+create proc sp_AllPublicacoesUser /*retorna os servicos que um usuario possui*/
+@idUsuario int
+as
+Begin
+    select p.* from Usuarios u, Publicacoes p where 
+	p.idUsuario = u.idUsuario and
 	u.idUsuario = @idUsuario
 End
 

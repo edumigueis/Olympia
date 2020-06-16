@@ -361,6 +361,31 @@ namespace API_olympia.Data
             return result;
         }
 
+        public List<object> SpAllPublicacoesUser(int idUsuario)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_AllPublicacoesUser '" + idUsuario + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = { leitor["idUsuario"],
+                                   leitor["texto"],
+                                   leitor["tags"],
+                                   leitor["foto"],
+                                   leitor["dataPost"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
         public List<object> SpAllServicosUser(int idUsuario)
         {
             SqlConnection conn = new SqlConnection(stringConnection);

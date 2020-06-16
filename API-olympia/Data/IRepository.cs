@@ -53,6 +53,7 @@ namespace API_olympia.Data
         int SpUserServico(int idServico);
         bool SpExisteUsername(string username);
         List<object> SpAllObrasUser(int idUsuario);
+        List<object> SpAllPublicacoesUser(int idUsuario);
         List<object> SpAllServicosUser(int idUsuario);
         List<object> SpAllEventosArte(int idArte);
         List<int> SpObrasCurtidas();
