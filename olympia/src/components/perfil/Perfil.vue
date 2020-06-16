@@ -4270,10 +4270,10 @@ export default {
             $("#user-let-img").css("margin-bottom", "60px");
           }
           $(".name-user").text(result.nome + "");
-          $(".user").text(result.userName + "");
-          $(".seguindo").text("Seguindo: "+ result.seguindo.length);
+          $(".user").text("@" + result.userName);
+          /*$(".seguindo").text("Seguindo: "+ result.seguindo.length);
           $(".seguidores").text("Seguidores: "+ result.seguidores.length);
-          $(".publicacoes").text("Publicações: "+ 10);
+          /*$(".publicacoes").text("Publicações: "+ 10);*/
           $(".bio").text(result.bio);
           $(".biografia").text(result.biografia);
         } 
