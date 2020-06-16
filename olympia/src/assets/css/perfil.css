@@ -12,7 +12,12 @@
   font-family: "Poppins";
   src: url("../fonts/poppins-light.otf");
 }
-
+.letter-prof{
+  color: #eee;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+}
 .complete-p-alt-perfil{
   color:rgb(137, 230, 51);
   display: none;
@@ -1744,6 +1749,7 @@ IMPLEMENTAÇÕES DE FEEDS-------------------------------------------------------
   height: 80px;
   align-items: center;
   justify-content: center;
+  background: #ffa3a3;
 }
 .prof-img-prop {
   height: 100%;

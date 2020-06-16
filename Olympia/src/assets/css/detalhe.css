@@ -440,15 +440,14 @@ ul li {
   margin-top: 20px;
   font-family: "Open Sans";
   text-indent: 40px;
-  text-align: start;
+  text-align: justify;
   padding-left: 6px;
   padding-right: 6px;
   max-width: 100%;
   white-space: normal;
   height: fit-content;
   list-style-type: none;
-  max-width: 470px;
-  word-wrap: break-word;
+  max-width: 100%;
 }
 #user-link {
   text-decoration: none;
