@@ -217,7 +217,13 @@
 .alterar-form {
   display: none;
 }
-
+.main-prof-ltr{
+  width: 100%;
+  text-align: center;
+  font-size: 7em;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
 .alterar {
   width: fit-content !important;
   margin-left: auto;

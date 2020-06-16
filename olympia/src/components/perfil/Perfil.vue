@@ -4230,12 +4230,14 @@ export default {
           $("#user").val(result.userName + "");
           $("#email").val(result.email + "");
 
+
           if ((result.foto + "").length > 10) {
             $("#user-prof-image").val(result.foto);
             $("#user-prof-image").css("display", "block");
             $(".prof-user-letter").css("display", "none");
             $("#user-let-img").css("display", "none");
             $('.hexcolor').css('display','none');
+            $('.img-profile').attr('src', result.foto);
             $('.color-holder').css('display','none');
             $(".bin").css("display", "block");
           } 
@@ -4255,6 +4257,9 @@ export default {
             firstLet = firstLet.toUpperCase();
             $(".bin").css("display", "none");
             $("#user-let-img").css("display", "block");
+            $('.user-pic').css('background-color', 'result.foto')
+            $('.user-pic').append('<span class="main-prof-ltr">'+result.nome.substring(0,1)+'</span>')
+            $('.img-profile').css('display', 'none');
             $(".hexcolor").css("display", "block");
             $(".color-holder").css("display", "block");
             $("#user-let-img").html(
@@ -4263,6 +4268,13 @@ export default {
             $(".signup-image").css("margin-top", 0);
             $("#user-let-img").css("margin-bottom", "60px");
           }
+          $(".name-user").text(result.nome + "");
+          $(".user").text(result.userName + "");
+          $(".seguindo").text("Seguindo: "+ result.seguindo.length);
+          $(".seguidores").text("Seguidores: "+ result.seguidores.length);
+          $(".publicacoes").text("Publicações: "+ 10);
+          $(".bio").text(result.bio);
+          $(".biografia").text(result.biografia);
         } 
         else {
           location.href = "/#/error";
