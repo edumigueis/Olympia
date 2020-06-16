@@ -1,14 +1,13 @@
 <template>
   <div id="not-found-container">
-    <div class="oops-fullpage-blur oops-bg"></div>
     <title>E R R O R</title>
     <link rel="stylesheet" href="/src/assets/css/notFound.css" />
     <header class="oops-header">
-      <h1 class="gradient-text" id="error-oops">Oops</h1>
+      <h1 class="gradient-text" id="error-oops">Oops :)</h1>
     </header>
     <div class="exp-wrapper">
       <p class="explanation">
-        Algo deu errado, se certifique que você está nos passando dados corretos e tenha conexão.
+        Algo deu errado... Certifique-se de que você está conectado à internet e tente novamente!
       </p>
     </div>
   </div>

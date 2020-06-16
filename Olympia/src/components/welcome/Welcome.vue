@@ -267,7 +267,7 @@ export default {
     }
   },
   created() {
-    if (this.$welcome === 0) {
+    if (this.$welcome == 0) {
       localStorage.clear();
       this.$cookies.keys().forEach(cookie => this.$cookies.remove(cookie));
     }
