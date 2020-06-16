@@ -4247,6 +4247,8 @@ export default {
           $(".seguindo").text("Seguindo: "+ result.seguindo.length);
           $(".seguidores").text("Seguidores: "+ result.seguidores.length);
           $(".publicacoes").text("Publicações: "+ 10);
+          $(".bio").text(result.bio);
+          $(".biografia").text(result.biografia);
         } 
         else {
           location.href = "/#/error";
