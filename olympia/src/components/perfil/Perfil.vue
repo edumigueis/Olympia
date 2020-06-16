@@ -4130,11 +4130,11 @@ export default {
               '<figcaption><i class="fas fa-arrow-right"></i><div class="name-of-prof"><a href="/#/perfil/" id="name-of-prof-link-' +
               index +
               '" class="name-of-prof-link">Name</a></div><h2>' +
-              item[1].split('+').join(' ') +
+              item[2].split('+').join(' ') +
               '</h2><div class="categories-cont-on-feed"><div class="cat-on-feed paint">' +
               "azul" +
               '</div><div class="cat-on-feed paint">' +
-              item[5].substring(1, item[5].indexOf(",")) +
+              item[6].substring(1, item[5].indexOf(",")) +
               '</div><div class="cat-on-feed pers">' +
               "Arte" +
               '</div><div class="cat-on-feed pers">Azul</div><div class="cat-on-feed paint">' +
@@ -4146,7 +4146,7 @@ export default {
               '<div class="interact-container"><div class="stage stage-btn"><button class="trigger">ver mais...</button></div><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div></div> </div></div>';
             $("#pub-container-prof").append(conteudoDiv);
             $.ajax({
-              url: "https://localhost:5001/api/redirect/Usuario/" + localStorage.userId,
+              url: "https://localhost:5001/api/redirect/Usuario/" + item[1],
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -4195,7 +4195,7 @@ export default {
                     },
                     success: function(data) {
                       console.log(data);
-                      $("#obra-img-" + index).attr("src", data[0]);
+                      $("#obra-img-" + index).attr("src", data[data.length - 1]);
                     },
                     error: function(thrownError) {}
                   });
