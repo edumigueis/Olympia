@@ -10,7 +10,7 @@ $(document).ready(function () {
     const style3 = 'color: #444; font-size:12px; font-family: "Montserrat", sans-serif; font-weight: 600;'
     console.log("%c Bem vindo ao Olympia!", style);
     console.log("%c   Feito com VueJS, CSS, TweenMax, SCSS, Stylus, jQuery e muito amor!", style2);
-    console.log("%c   Aviso: Não siga instruções de ninguém com relação ao uso de códigos nesse console. O uso deste console talvez permita que invasores falsifiquem sua identidade e roubem informações por meio de um ataque chamado Self-XSS. Nunca digite, cole ou tranfira códigos que você não conhece aqui ou em qualquer lugar." , style3);
+    console.log("%c   Aviso: Não siga instruções de ninguém com relação ao uso de códigos nesse console. O uso deste console talvez permita que invasores falsifiquem sua identidade e roubem informações por meio de um ataque chamado Self-XSS. Nunca digite, cole ou tranfira códigos que você não conhece aqui ou em qualquer lugar.", style3);
     var body = document.getElementsByTagName("body")[0];
 
     function detectarDirecaoRolagem(e) {
@@ -87,12 +87,53 @@ $(document).ready(function () {
         if ($(this).hasClass('config-link-hover')) {
             $(this).removeClass("config-link-hover");
             $(this).addClass("config-link-clicked");
+            if ($(this).hasClass('reaplicar')) {
+                var configAtual = JSON.parse(`"` + localStorage.config + `"`);
+                configAtual.login = 1;
+
+                if ($(".sumir").hasClass('config-link-clicked')) {
+                    configAtual.menu = 1;
+                }
+                else {
+                    configAtual.menu = 0;
+                }
+
+                if ($(".desligar").hasClass('config-link-clicked')) {
+                    configAtual.deslig = 1;
+                }
+                else {
+                    configAtual.deslig = 0;
+                }
+
+                $.ajax({
+                    url:
+                        "https://localhost:5001/api/Usuarios/RedirectToPostAlterarConfig/" + configAtual,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json"
+                });
+            }
         }
         else {
             $(this).addClass("config-link-hover");
             $(this).removeClass("config-link-clicked");
+
+            if ($(this).hasClass('reaplicar')) {
+                var configAtual = JSON.parse(`"` + localStorage.config + `"`);
+                configAtual.login = 0;
+
+                $.ajax({
+                    url:
+                        "https://localhost:5001/api/Usuarios/RedirectToPostAlterarConfig/" + configAtual,
+                    type: "GET",
+                    dataType: "json",
+                    contentType: "application/json"
+                });
+            }
+
         }
     })
+
 
     $(document.body).on('click', '.sumir', function () {
 

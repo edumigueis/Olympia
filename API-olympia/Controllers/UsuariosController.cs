@@ -3,9 +3,6 @@ using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using API_olympia.Models;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System;
@@ -324,6 +321,34 @@ namespace API_olympia.Controllers
                 var result = this.Repo.SpBioByIdUser(idUsuario);
                 return Ok(result);
 
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [HttpGet("RedirectToPostAlterarConfig/{json}")]
+        public async Task<IActionResult> RedirectToPostAlterarConfig(string json)
+        {
+            try
+            {
+                var dados = (IList<object>)JsonConvert.DeserializeObject<Configs>(json);
+                return await postAlterarConfig(dados);
+            }
+            catch (Exception e)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
+            }
+        }
+
+        [HttpPost("AlterarConfig")]
+        public async Task<IActionResult> postAlterarConfig(IList<object> dados)
+        {
+            try
+            {
+                this.Repo.SpAlterConfig(dados[0] + "",Convert.ToInt32(dados[1]));
+                return Ok();
             }
             catch
             {

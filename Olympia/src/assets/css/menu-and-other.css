@@ -1153,7 +1153,12 @@
 }
 
 svg.intro {
-  background: url("../images/watercolor.jpg");
+  background: linear-gradient(
+          90deg, 
+          rgba(240, 180, 76, 1) 0%,
+          rgba(240, 75, 191, 1) 50%,
+          rgba(75, 240, 180, 1) 100%
+        ) !important;
   background-repeat: no-repeat;
   image-orientation: from-image;
   background-size: cover;

@@ -217,7 +217,7 @@ Begin
 	u.idUsuario = @idUsuario
 End
 
-create proc sp_AllServicosUser /*retorna os servicos que um usuario possui*/
+create proc sp_AllServicosUser/*retorna os servicos que um usuario possui*/
 @idUsuario int
 as
 Begin
@@ -389,4 +389,12 @@ create proc sp_BioByIdUser
 as
 Begin
     select bio from Usuarios where idUsuario=@idUsuario
+End
+
+create proc sp_AlterConfig
+@configs char(49),
+@idUsuario int
+as
+Begin
+    update Usuarios set configs = @configs where idUsuario = @idUsuario
 End

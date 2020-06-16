@@ -80,5 +80,6 @@ namespace API_olympia.Data
         List<object> SpUserByEmail(string email);
         string SpBiografiaByIdUser(int idUsuario);
         string SpBioByIdUser(int idUsuario);
+        void SpAlterConfig(string config, int idUsuario);
     }
 }
