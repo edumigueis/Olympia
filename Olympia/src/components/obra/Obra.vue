@@ -174,10 +174,10 @@ export default {
         },
         success: function(field) {
           $("#load-modal").fadeOut();
-          $("#art-detail-p").text(field.dadosTecnicos.replace('/+/g', ' '));
-          $("#art-data-p").text(field.descricao.replace('+', ' '));
-          $("#art-name").text(field.nome);
-          $("#page-det-name").text(field.nome);
+          $("#art-detail-p").text(field.dadosTecnicos.split('+').join(' '));
+          $("#art-data-p").text(field.descricao.split('+').join(' '));
+          $("#art-name").text(field.nome.split('+').join(' '));
+          $("#page-det-name").text(field.nome.split('+').join(' '));
           $.ajax({
             url:
               "https://localhost:5001/api/Redirect/Usuario/" + field.idUsuario,
@@ -191,8 +191,8 @@ export default {
                 "href",
                 "/#/perfil/" + resul.userName
               );
-              $("#bio").text(resul.bio);
-              $("#name").text(resul.nome);
+              $("#bio").text(resul.bio.split('+').join(' '));
+              $("#name").text(resul.nome.split('+').join(' '));
               if (resul.foto.length > 20) {
                 $("#artist-profile-pic").attr("src", resul.foto);
               } else {
