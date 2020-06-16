@@ -4100,9 +4100,8 @@ export default {
       });
     },
     getPublicacoes() {
-      var codigo = location.href.substring(30);
       $.ajax({
-        url: "https://localhost:5001/api/redirect/AllObrasUser/" + codigo,
+        url: "https://localhost:5001/api/redirect/AllObrasUser/" + localStorage.userId,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
