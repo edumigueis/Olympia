@@ -445,7 +445,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("AllServicosUser/{idUsuario}")]
-        public async Task<IActionResult> GetAllServicosUser(int idServico)
+        public async Task<IActionResult> GetAllServicosUser(int idUsuario)
         {
             try
             {
@@ -453,7 +453,7 @@ namespace API_olympia.Controllers
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 armazenador.StringValueRoute = listagem[5];
-                return Redirect("/api/Servicos/Usuario/" + idServico);
+                return Redirect("/api/Servicos/Usuario/" + idUsuario);
             }
             catch
             {
@@ -751,7 +751,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpPost("MudarBio")]
-        public async Task<IActionResult> MudarBio(string json)
+        public async Task<IActionResult> MudarBio(Json json)
         {
             try
             {
@@ -759,7 +759,7 @@ namespace API_olympia.Controllers
                 lista = HttpContext.Request.Headers.Values;
                 IList<StringValues> listagem = lista as IList<StringValues>;
                 armazenador.StringValueRoute = listagem[5];
-                json = HttpUtility.UrlEncode(json);
+                json.JsonData = HttpUtility.UrlEncode(json.JsonData);
                 return Redirect("/api/Usuarios/RedirectToPostBio/" + json);
             }
             catch

@@ -110,7 +110,7 @@ namespace API_olympia.Controllers
         }
 
         [HttpGet("Usuario/{idUsuario}")]
-        public async Task<IActionResult> GetAllObrasByUser(int idUsuario)
+        public async Task<IActionResult> GetAllServicosByUser(int idUsuario)
         {
             try
             {

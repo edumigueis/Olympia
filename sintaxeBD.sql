@@ -217,7 +217,7 @@ Begin
 	u.idUsuario = @idUsuario
 End
 
-create proc sp_AllServicosUser /*retorna os servicos que um usuario possui*/
+create proc sp_AllServicosUser/*retorna os servicos que um usuario possui*/
 @idUsuario int
 as
 Begin
