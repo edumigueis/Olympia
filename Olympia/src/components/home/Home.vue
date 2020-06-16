@@ -914,7 +914,7 @@
             <div class="slide slide-1">
               <div class="slide__bg"></div>
               <div class="slide__content" id="content-2">
-                <div class="masonry-item">
+                <!--<div class="masonry-item">
                   <div class="masonry-content">
                     <a class="link-to-serv" href="/#/detalhes"
                       ><img
@@ -1888,13 +1888,13 @@
                       quod, quos!
                     </p>
                   </div>
-                </div>
+                </div>-->
               </div>
             </div>
             <div class="slide slide-2">
               <div class="slide__bg"></div>
               <div class="slide__content" id="content-3">
-                <div class="insp-item">
+                <!--<div class="insp-item">
                   <div class="inner-insp-item white-7">
                     <div class="prof-cont-feed white-7 prof-insp">
                       <div class="prof-img-cont">
@@ -1959,7 +1959,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>-->
               </div>
             </div>
           </div>
@@ -2110,13 +2110,13 @@ export default {
               '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
             conteudoDiv +=
               '<h3 class="masonry-title">' +
-              item.nome +
+              item.nome.split('+').join(' ') +
               '</h3><a href="#" id="name-prof-link-on-serv-' +
               index +
               '" class="name-of-prof-link on-2-link"></a>';
             conteudoDiv +=
               '<p class="masonry-description">' +
-              item.descricao.substring(0, 320) +
+              item.descricao.substring(0, 320).split('+').join(' ') +
               thereismore +
               "</p></div></div>";
             var idUser = item.idUsuario;
@@ -2129,7 +2129,7 @@ export default {
               contentType: "application/json",
               success: function(result) {
                 if (result.idUsuario != 0) {
-                  $("#name-prof-link-on-serv-" + index).text(result.nome);
+                  $("#name-prof-link-on-serv-" + index).text(result.nome.split('+').join(' '));
                   $("#name-prof-link-on-serv-" + index).attr(
                     "href",
                     "/#/perfil/" + result.userName
