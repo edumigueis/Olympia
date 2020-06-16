@@ -4209,8 +4209,16 @@ export default {
   mounted() {
     this.verificarCampos();
     this.getPublicacoes();
-
-    $.ajax({
+  },
+  beforeCreate() {
+    if (window.$cookies.isKey("user_cadastro")) {
+      document.location.href = "/#/categorias";
+    } else if (!window.$cookies.isKey("user_session")) {
+      document.location.href = "/#/login";
+    }
+  },
+  created() {
+     $.ajax({
       type: "GET",
       dataType: "json",
       contentType: "application/json",
@@ -4230,17 +4238,35 @@ export default {
             $("#user-let-img").css("display", "none");
             $('.hexcolor').css('display','none');
             $('.img-profile').attr('src', result.foto);
+            $('.color-holder').css('display','none');
+            $(".bin").css("display", "block");
           } 
           else {
             $("#user-prof-image").css("background", result.foto);
             $(".prof-user-letter").css("display", "block");
             $(".prof-user-letter").text((result.nome + "").substring(0, 1));
             $("#user-prof-image").css("display", "none");
+            $("#user-let-img").css("display", "block");           
+            $(".zmdi.zmdi-palette").fadeIn();
+            $("#hexcolor").fadeIn();
+            $(".default-prof-user").empty();
+            var firstLet = null;
+            firstLet = $("#name")
+              .val()
+              .charAt(0);
+            firstLet = firstLet.toUpperCase();
+            $(".bin").css("display", "none");
             $("#user-let-img").css("display", "block");
-            $('.hexcolor').css('display','block');
             $('.user-pic').css('background-color', 'result.foto')
             $('.user-pic').append('<span class="main-prof-ltr">'+result.nome.substring(0,1)+'</span>')
             $('.img-profile').css('display', 'none');
+            $(".hexcolor").css("display", "block");
+            $(".color-holder").css("display", "block");
+            $("#user-let-img").html(
+              "<p class='prof-user-letter'>" + firstLet + "</p>"
+            );
+            $(".signup-image").css("margin-top", 0);
+            $("#user-let-img").css("margin-bottom", "60px");
           }
           $(".name-user").text(result.nome + "");
           $(".user").text(result.userName + "");
@@ -4255,13 +4281,6 @@ export default {
         }
       }
     });
-  },
-  beforeCreate() {
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
   }
 };
 </script>
