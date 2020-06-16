@@ -390,3 +390,11 @@ as
 Begin
     select bio from Usuarios where idUsuario=@idUsuario
 End
+
+create proc sp_AlterConfig
+@configs char(49),
+@idUsuario int
+as
+Begin
+    update Usuarios set configs = @configs where idUsuario = @idUsuario
+End

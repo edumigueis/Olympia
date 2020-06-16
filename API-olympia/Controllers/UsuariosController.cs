@@ -327,5 +327,33 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
         }
+
+        [HttpGet("RedirectToPostAlterarConfig/{json}")]
+        public async Task<IActionResult> RedirectToPostAlterarConfig(string json)
+        {
+            try
+            {
+                var dados = (IList<object>)JsonConvert.DeserializeObject<Configs>(json);
+                return await postAlterarConfig(dados);
+            }
+            catch (Exception e)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
+            }
+        }
+
+        [HttpPost("AlterarConfig")]
+        public async Task<IActionResult> postAlterarConfig(IList<object> dados)
+        {
+            try
+            {
+                this.Repo.SpAlterConfig(dados[0] + "",Convert.ToInt32(dados[1]));
+                return Ok();
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
     }
 }
