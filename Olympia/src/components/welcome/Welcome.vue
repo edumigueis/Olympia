@@ -226,7 +226,7 @@
                   Conecte-se com seus amigos e veja o que eles estão produzindo.
                 </li>
                 <li>Mergulhe no mundo da arte e se inspire.</li>
-                <li>Divulgue seu trabalho e o seu amor pela arte.</li>
+                <li>Divulgue seu trabalho, suas obras e o seu amor pela arte.</li>
                 <li>Apoveite um ambiente para todas as artes.</li>
               </ul>
               <div class="bottom-link button2">
