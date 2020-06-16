@@ -4228,6 +4228,7 @@ export default {
             $(".prof-user-letter").css("display", "none");
             $("#user-let-img").css("display", "none");
             $('.hexcolor').css('display','none');
+            $('.color-holder').css('display','none');
           } 
           else {
             $("#user-prof-image").css("background", result.foto);
@@ -4236,6 +4237,7 @@ export default {
             $("#user-prof-image").css("display", "none");
             $("#user-let-img").css("display", "block");
             $('.hexcolor').css('display','block');
+            $('.color-holder').css('display','block');
           }
         } 
         else {
