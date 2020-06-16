@@ -101,14 +101,14 @@
               </div>
             </div>
           </div>
-          <main ontouchstart class="tab-bar" style="width: 23vw !important">
+          <main ontouchstart class="tab-bar" style="width: 40vw !important">
             <nav class="tab-link">
-              <a class="tab-link-a sobre-mim" style="width: 50%!important"
+              <a class="tab-link-a sobre-mim" style="width: 33%!important"
                 >Sobre mim</a
               >
-              <a class="tab-link-a curtidas" style="display: none">Curtidas</a>
+              <a class="tab-link-a curtidas">Aulas e Workshops</a>
               <a class="tab-link-a salvos" style="display: none">Salvos</a>
-              <a class="tab-link-a configuracoes" style="width: 50%!important"
+              <a class="tab-link-a configuracoes" style="width: 33%!important"
                 >Configurações</a
               >
               <hr />
@@ -189,69 +189,8 @@
               Confira as suas curtidas...
             </h1>
             <div class="div-scroll div-scroll-curtidas">
-              <div class="slide__content">
-                <div class="masonry-item">
-                  <div class="masonry-content">
-                    <div class="prof-cont-feed white-7">
-                      <div class="prof-img-cont">
-                        <img
-                          class="prof-img-prop"
-                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                        />
-                      </div>
-                      <a href="/#/perfil" class="prof-name-det black-to-white"
-                        >Luna Dias</a
-                      >
-                      <div class="prof-bio-det text-gray">
-                        What would our lives be without art?
-                      </div>
-                    </div>
-                    <div class="post-img-cont">
-                      <a href="/#/detalhes">
-                        <figure class="snip1321" id="0post-cur">
-                          <div class="after"></div>
-                          <img
-                            src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
-                            alt="sq-sample26"
-                          />
-                          <figcaption class="figcaption">
-                            <i class="fas fa-arrow-right"></i>
-                            <div class="name-of-prof">
-                              <a href="/#/perfil" class="name-of-prof-link"
-                                >Luna Dias</a
-                              >
-                            </div>
-                            <h2>Outter Seas</h2>
-                            <div class="categories-cont-on-feed">
-                              <div class="cat-on-feed paint">Pintura</div>
-                              <div class="cat-on-feed paint">Tinta Óleo</div>
-                              <div class="cat-on-feed paint">Arte Moderna</div>
-                              <div class="cat-on-feed pers">Oceano</div>
-                              <div class="cat-on-feed pers">Azul</div>
-                              <div class="cat-on-feed paint">Brushed</div>
-                              <div class="cat-on-feed pers">
-                                Fantasy Landscape
-                              </div>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <div class="interact-container">
-                        <div class="stage stage-btn">
-                          <button class="trigger">ver mais...</button>
-                        </div>
-                        <div class="stage star-stage">
-                          <a class="magic ">
-                            <i class="fas fa-star"></i>
-                          </a>
-                        </div>
-                        <div class="stage heart-stage">
-                          <div class="heart"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="slide__content" id="serv-container-prof">
+                
               </div>
             </div>
           </div>
@@ -3965,10 +3904,10 @@ export default {
       console.log(myObjectPubli);
       var jsonInput = JSON.stringify(myObjectPubli);
       console.log(jsonInput);
-      jaFoiPostCadUser = true;
+
       $.ajax({
-        type: "POST",
-        url: "https://localhost:5001/api/Redirect/MudarBio",
+        type: "GET",
+        url: "https://localhost:5001/api/Usuarios/RedirectToPostBio/"+ encodeURI(jsonInput),
         data: jsonInput,
         contentType: "application/json",
         success: function() {
@@ -4211,6 +4150,91 @@ export default {
           });
         }
       });
+    },
+    getServicos(idUser){
+      $.ajax({
+        url: "https://localhost:5001/api/Redirect/AllServicosUser/"+idUser,
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        success: function(data) {
+          jQuery.each(data, function(index, item) {
+            var thereismore;
+            if (item.descricao.length > 320) {
+              thereismore = "...";
+            } else {
+              thereismore = "";
+            }
+            var conteudoDiv =
+              '<div class="masonry-item"><div class="masonry-content">';
+            conteudoDiv +=
+              '<a class="link-to-serv" href="' +
+              "/#/servico/" +
+              item.idServico +
+              '"><img id="img-serv-' +
+              index +
+              '" src="a" class="img-serv"/></a>';
+            conteudoDiv +=
+              '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
+            conteudoDiv +=
+              '<h3 class="masonry-title">' +
+              item.nome.split('+').join(' ') +
+              '</h3><a href="#" id="name-prof-link-on-serv-' +
+              index +
+              '" class="name-of-prof-link on-2-link"></a>';
+            conteudoDiv +=
+              '<p class="masonry-description">' +
+              item.descricao.substring(0, 320).split('+').join(' ') +
+              thereismore +
+              "</p></div></div>";
+            var idUser = item.idUsuario;
+            $("#serv-container-prof").append(conteudoDiv);
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/Usuario/" + item.idUsuario,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(result) {
+                if (result.idUsuario != 0) {
+                  $("#name-prof-link-on-serv-" + index).text(result.nome.split('+').join(' '));
+                  $("#name-prof-link-on-serv-" + index).attr(
+                    "href",
+                    "/#/perfil/" + result.userName
+                  );
+                  $("body").removeClass("loading");
+                  $("#load-modal").fadeOut();
+                }
+              },
+              error: function() {
+                $("body").removeClass("loading");
+                $("#load-modal").fadeOut();
+                location.href = "/#/error";
+              }
+            });
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/FotosDoServico/" +
+                item.idServico,
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              beforeSend: function() {
+                $("#load-modal").addClass("loading");
+              },
+              success: function(fotos) {
+                $("#load-modal").fadeOut();
+                $("#img-serv-" + index).attr("src", fotos[0] + "");
+              }
+            });
+          });
+        },
+        error: function() {
+          $("body").removeClass("loading");
+          $("#load-modal").fadeOut();
+          
+        }
+      });
     }
   },
   mounted() {
@@ -4226,6 +4250,7 @@ export default {
   created() {
     if (document.URL.toString().length <= 31) {
       this.getPublicacoes(localStorage.userId);
+      this.getServicos(localStorage.userId);
       $.ajax({
         type: "GET",
         dataType: "json",
@@ -4305,6 +4330,7 @@ export default {
           document.URL.toString().split("/")[4] +
           "";
         this.getPublicacoes(localStorage.userId);
+        this.getServicos(localStorage.userId);
         $.ajax({
           type: "GET",
           dataType: "json",
@@ -4448,6 +4474,7 @@ export default {
                 }
               });       
               this.getPublicacoes(id);
+              this.getServicos(id);
               }
               else{
                 location.href = "/#/userNotFound";
