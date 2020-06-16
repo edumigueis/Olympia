@@ -25,6 +25,8 @@
             name="pesquisa"
             placeholder="Pesquisar..."
             id="search"
+            autocomplete="off"
+            v-on:keyup="pesquisar()"
           />
           <div class="search-button center-position dark-search-icon">
             <div class="search-icon"></div>
@@ -39,16 +41,32 @@
           >
             Principais
           </div>
-          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-1">
+          <div
+            class="paginate-tab text-gray border-bottom-wh"
+            id="to-slide-1"
+            v-on:click="searchObras()"
+          >
             Obras
           </div>
-          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-2">
+          <div
+            class="paginate-tab text-gray border-bottom-wh"
+            id="to-slide-2"
+            v-on:click="searchServ()"
+          >
             Aulas
           </div>
-          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-3">
+          <div
+            class="paginate-tab text-gray border-bottom-wh"
+            id="to-slide-3"
+            v-on:click="searchPosts()"
+          >
             Postagens
           </div>
-          <div class="paginate-tab text-gray border-bottom-wh" id="to-slide-4">
+          <div
+            class="paginate-tab text-gray border-bottom-wh"
+            id="to-slide-4"
+            v-on:click="searchUsers()"
+          >
             Users
           </div>
         </div>
@@ -193,55 +211,15 @@
                 <div class="arrow arrow-1"></div>
                 <div class="arrow arrow-2"></div>
               </h1>
-              <div class="routes">
-                <a href="/#/artes" class="link-route">
-                  <div class="1-route route">
-                    <h1 class="title-route">Artes</h1>
-                    <div class="img-wp">
-                      <div class="arrow"></div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/#/artes" class="link-route">
-                  <div class="2-route route">
-                    <h1 class="title-route">Arquitetura</h1>
-                    <div class="img-wp">
-                      <div class="arrow"></div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/#/artes" class="link-route">
-                  <div class="3-route route">
-                    <h1 class="title-route">Cinema</h1>
-                    <div class="img-wp">
-                      <div class="arrow"></div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/#/artes" class="link-route">
-                  <div class="4-route route">
-                    <h1 class="title-route">Home</h1>
-                    <div class="img-wp">
-                      <div class="arrow"></div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/#/artes" class="link-route">
-                  <div class="5-route route">
-                    <h1 class="title-route">Home</h1>
-                    <div class="img-wp">
-                      <div class="arrow"></div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/#/artes" class="link-route">
+              <div class="routes" id="routes-wrapper">
+                <!--<a href="/#/artes" class="link-route">
                   <div class="6-route route">
                     <h1 class="title-route">Home</h1>
                     <div class="img-wp">
                       <div class="arrow"></div>
                     </div>
                   </div>
-                </a>
+                </a>-->
               </div>
               <h1 class="title-routes title-destaques">
                 #Top12<img
@@ -428,13 +406,15 @@
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
-                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafesssss ssstán"</h1>
+                      <h1 class="title-obra-destaque title-obra-post-service">
+                        "El Cafesssss ssstán"
+                      </h1>
                     </div>
                     <div class="inline-div inline-div-obra-post-service">
                       <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
-                        por Célio Lima Barbosasdddd sdsdsdsdsdsd ddddddddddsd sdsdsdsdsds
+                        por Célio Lima Barbosasdddd sdsdsdsdsdsd ddddddddddsd
+                        sdsdsdsdsds
                       </h1>
-                    
                     </div>
                   </div>
                 </div>
@@ -449,13 +429,14 @@
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
-                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                      <h1 class="title-obra-destaque title-obra-post-service">
+                        "El Cafetán"
+                      </h1>
                     </div>
                     <div class="inline-div inline-div-obra-post-service">
                       <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
                         por Célio Lima Barbosa
                       </h1>
-            
                     </div>
                   </div>
                 </div>
@@ -470,13 +451,14 @@
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
-                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                      <h1 class="title-obra-destaque title-obra-post-service">
+                        "El Cafetán"
+                      </h1>
                     </div>
                     <div class="inline-div inline-div-obra-post-service">
                       <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
                         por Célio Lima Barbosa
                       </h1>
-              
                     </div>
                   </div>
                 </div>
@@ -491,7 +473,9 @@
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
-                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                      <h1 class="title-obra-destaque title-obra-post-service">
+                        "El Cafetán"
+                      </h1>
                     </div>
                     <div class="inline-div inline-div-obra-post-service">
                       <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
@@ -500,14 +484,14 @@
                     </div>
                   </div>
                 </div>
-              </a>     
+              </a>
               <div class="arrow load-arrow arrow-obras-search"></div>
             </div>
           </div>
           <div class="slider__slide" data-slide="3">
             <div class="bg"></div>
             <div class="container-aulas-search">
-            <a href="/#/detalhes" class="link-route">
+              <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
                     <img
@@ -517,13 +501,15 @@
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
-                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafesssss ssstán"</h1>
+                      <h1 class="title-obra-destaque title-obra-post-service">
+                        "El Cafesssss ssstán"
+                      </h1>
                     </div>
                     <div class="inline-div inline-div-obra-post-service">
                       <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
-                        por Célio Lima Barbosasdddd sdsdsdsdsdsd ddddddddddsd sdsdsdsdsds
+                        por Célio Lima Barbosasdddd sdsdsdsdsdsd ddddddddddsd
+                        sdsdsdsdsds
                       </h1>
-                    
                     </div>
                   </div>
                 </div>
@@ -538,13 +524,14 @@
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
-                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                      <h1 class="title-obra-destaque title-obra-post-service">
+                        "El Cafetán"
+                      </h1>
                     </div>
                     <div class="inline-div inline-div-obra-post-service">
                       <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
                         por Célio Lima Barbosa
                       </h1>
-            
                     </div>
                   </div>
                 </div>
@@ -559,13 +546,14 @@
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
-                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                      <h1 class="title-obra-destaque title-obra-post-service">
+                        "El Cafetán"
+                      </h1>
                     </div>
                     <div class="inline-div inline-div-obra-post-service">
                       <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
                         por Célio Lima Barbosa
                       </h1>
-              
                     </div>
                   </div>
                 </div>
@@ -580,7 +568,9 @@
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
-                      <h1 class="title-obra-destaque title-obra-post-service">"El Cafetán"</h1>
+                      <h1 class="title-obra-destaque title-obra-post-service">
+                        "El Cafetán"
+                      </h1>
                     </div>
                     <div class="inline-div inline-div-obra-post-service">
                       <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
@@ -589,9 +579,9 @@
                     </div>
                   </div>
                 </div>
-              </a>   
+              </a>
               <div class="arrow load-arrow arrow-aulas-search"></div>
-          </div>
+            </div>
           </div>
           <div class="slider__slide" data-slide="4">
             <div class="bg"></div>
@@ -625,7 +615,146 @@ export default {
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
   },
-  beforeCreate(){
+  data: function() {
+    return {
+      status: String
+    };
+  },
+  methods: {
+    searchRoutes(key) {
+      var routes = [
+        "Sobre",
+        "Ajuda",
+        "Perfil",
+        "Sugestoes",
+        "FeedBack",
+        "Eventos",
+        "Artes"
+      ];
+      $("#routes-wrapper").empty();
+      for (var i = 0; i < routes.length; i++) {
+        if (routes[i].toLowerCase().includes(key.toLowerCase())) {
+          var contDiv =
+            '<a href="/#/' +
+            routes[i] +
+            '" class="link-route"><div class="5-route route"><h1 class="title-route">' +
+            routes[i] +
+            '</h1><div class="img-wp"><div class="arrow"></div></div></div></a>';
+          $("#routes-wrapper").append(contDiv);
+        }
+      }
+    },
+    pesquisar() {
+      this.searchRoutes($("#search").val());
+      switch (this.status) {
+        case "obra":
+          this.searchObras();
+          break;
+        case "serv":
+          this.searchServ();
+          break;
+        case "user":
+          this.searchUsers();
+          break;
+        case "post":
+          this.searchPosts();
+          break;
+      }
+    },
+    searchObras() {
+      var key = $("#search").val();
+      this.status = "obra";
+      $.ajax({
+        type: "GET",
+        url: "https://localhost:5001/api/pesquisaPost/" + key,
+        data: jsonInput,
+        contentType: "application/json",
+        success: function(data) {
+          var contPost =
+            '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+            data.nome +
+            '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service">por Célio Lima Barbosa</h1></div></div></div></a>';
+        },
+        fail: function(error) {
+          console.log(error);
+          var erro =
+            '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+          $(".insp-post-cont").append(erro);
+        },
+        dataType: "json"
+      });
+    },
+    searchServ() {
+      var key = $("#search").val();
+      this.status = "serv";
+      $.ajax({
+        type: "GET",
+        url: "https://localhost:5001/api/pesquisaPost/" + key,
+        data: jsonInput,
+        contentType: "application/json",
+        success: function(data) {
+          var contPost =
+            '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+            data.nome +
+            '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service">por Célio Lima Barbosa</h1></div></div></div></a>';
+        },
+        fail: function(error) {
+          console.log(error);
+          var erro =
+            '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+          $(".insp-post-cont").append(erro);
+        },
+        dataType: "json"
+      });
+    },
+    searchUsers() {
+      var key = $("#search").val();
+      this.status = "user";
+      $.ajax({
+        type: "GET",
+        url: "https://localhost:5001/api/pesquisaPost/" + key,
+        data: jsonInput,
+        contentType: "application/json",
+        success: function(data) {
+          var contPost =
+            '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+            data.nome +
+            '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service">por Célio Lima Barbosa</h1></div></div></div></a>';
+        },
+        fail: function(error) {
+          console.log(error);
+          var erro =
+            '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+          $(".insp-post-cont").append(erro);
+        },
+        dataType: "json"
+      });
+    },
+    searchPosts() {
+      var key = $("#search").val();
+      this.status = "post";
+      $.ajax({
+        type: "GET",
+        url: "https://localhost:5001/api/pesquisaPost/" + key,
+        data: jsonInput,
+        contentType: "application/json",
+        success: function(data) {
+          var contPost =
+            '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+            data.nome +
+            '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service">por Célio Lima Barbosa</h1></div></div></div></a>';
+        },
+        fail: function(error) {
+          console.log(error);
+          var erro =
+            '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+          $(".insp-post-cont").append(erro);
+        },
+        dataType: "json"
+      });
+    }
+  },
+  beforeCreate() {
     if (window.$cookies.isKey("user_cadastro")) {
       document.location.href = "/#/categorias";
     } else if (!window.$cookies.isKey("user_session")) {
