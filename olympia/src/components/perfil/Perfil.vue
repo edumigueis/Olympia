@@ -4229,15 +4229,31 @@ export default {
             $("#user-let-img").css("display", "none");
             $('.hexcolor').css('display','none');
             $('.color-holder').css('display','none');
+            $(".bin").css("display", "block");
           } 
           else {
             $("#user-prof-image").css("background", result.foto);
             $(".prof-user-letter").css("display", "block");
             $(".prof-user-letter").text((result.nome + "").substring(0, 1));
             $("#user-prof-image").css("display", "none");
+            $("#user-let-img").css("display", "block");           
+            $(".zmdi.zmdi-palette").fadeIn();
+            $("#hexcolor").fadeIn();
+            $(".default-prof-user").empty();
+            var firstLet = null;
+            firstLet = $("#name")
+              .val()
+              .charAt(0);
+            firstLet = firstLet.toUpperCase();
+            $(".bin").css("display", "none");
             $("#user-let-img").css("display", "block");
-            $('.hexcolor').css('display','block');
-            $('.color-holder').css('display','block');
+            $(".hexcolor").css("display", "block");
+            $(".color-holder").css("display", "block");
+            $("#user-let-img").html(
+              "<p class='prof-user-letter'>" + firstLet + "</p>"
+            );
+            $(".signup-image").css("margin-top", 0);
+            $("#user-let-img").css("margin-bottom", "60px");
           }
         } 
         else {

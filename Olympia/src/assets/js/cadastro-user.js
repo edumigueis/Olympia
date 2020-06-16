@@ -87,7 +87,8 @@ setInterval(() => {
             $(".signup-image").css("margin-top", 0);
             $("#user-let-img").css("margin-bottom", "60px");
             firstLet = null;
-          } else {
+          } 
+          else {
             $("#user-let-img").css("display", "none");
             $(".hexcolor").css("display", "none");
             $(".color-holder").css("display", "none");
