@@ -2044,8 +2044,7 @@ export default {
                     "src",
                     result.foto + ""
                   );
-                } 
-                else {
+                } else {
                   $("#prof-inner-prop-img-" + index)
                     .parent()
                     .css("background-color", result.foto);
@@ -2210,10 +2209,10 @@ export default {
               item.categorias[1] +
               '</div><div class="cat-on-feed pers">' +
               item.categorias[2] +
-              '</div><div class="cat-on-feed pers">Azul</div><div class="cat-on-feed paint">' +
+              '</div><div class="cat-on-feed pers">' +
               item.categorias[3] +
               '</div><div class="cat-on-feed pers">' +
-              item.categorias[5] +
+              item.categorias[4] +
               "</div></div></figcaption></figure></a>";
             conteudoDiv +=
               '<div class="interact-container"><div class="stage stage-btn"><button class="trigger">ver mais...</button></div><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div></div> </div></div>';
@@ -2232,8 +2231,7 @@ export default {
                       "src",
                       result.foto + ""
                     );
-                  } 
-                  else {
+                  } else {
                     $("#prof-img-prop-obra-" + index)
                       .parent()
                       .css("background-color", result.foto);
@@ -2255,8 +2253,7 @@ export default {
                     $("#obra-prof-bio-" + index).text(
                       result.bio.substring(0, 90) + "..."
                     );
-                  } 
-                  else {
+                  } else {
                     $("#obra-prof-bio-" + index).text(result.bio);
                   }
 

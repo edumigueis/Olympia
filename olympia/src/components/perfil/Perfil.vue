@@ -178,7 +178,7 @@
             <h1 class="title-content-config black-to-white">
               Suas publicações...
             </h1>
-            <div class="div-scroll div-scroll-sobre"></div>
+            <div class="div-scroll div-scroll-sobre" id="pub-container-prof"></div>
           </div>
           <div class="curtidas-content content-perfil white-6 black-to-white">
             <hr class="color-verify curtidas-hr" />
@@ -4107,6 +4107,7 @@ export default {
         contentType: "application/json",
         success: function(data) {
           jQuery.each(data, function(index, item) {
+            console.log(item);
             var conteudoDiv =
               '<div class="masonry-item" id="' +
               index +
@@ -4119,7 +4120,7 @@ export default {
               '">Bio</div></div>';
             conteudoDiv +=
               '<div class="post-img-cont"><a href="/#/obra/' +
-              item.idObra +
+              item[0] +
               '"><figure class="snip1321" id="' +
               index +
               '-post"><div class="after"></div> <img id="obra-img-' +
@@ -4129,23 +4130,23 @@ export default {
               '<figcaption><i class="fas fa-arrow-right"></i><div class="name-of-prof"><a href="/#/perfil/" id="name-of-prof-link-' +
               index +
               '" class="name-of-prof-link">Name</a></div><h2>' +
-              item.nome +
+              item[1].split('+').join(' ') +
               '</h2><div class="categories-cont-on-feed"><div class="cat-on-feed paint">' +
-              item.categorias[0] +
+              "azul" +
               '</div><div class="cat-on-feed paint">' +
-              item.categorias[1] +
+              item[5].substring(1, item[5].indexOf(",")) +
               '</div><div class="cat-on-feed pers">' +
-              item.categorias[2] +
+              "Arte" +
               '</div><div class="cat-on-feed pers">Azul</div><div class="cat-on-feed paint">' +
-              item.categorias[3] +
+              "Vida" +
               '</div><div class="cat-on-feed pers">' +
-              item.categorias[5] +
+              "Muito Legal" +
               "</div></div></figcaption></figure></a>";
             conteudoDiv +=
               '<div class="interact-container"><div class="stage stage-btn"><button class="trigger">ver mais...</button></div><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div></div> </div></div>';
-            $("#pub-prof-wrapper").append(conteudoDiv);
+            $("#pub-container-prof").append(conteudoDiv);
             $.ajax({
-              url: "https://localhost:5001/api/redirect/Usuario/" + codigo,
+              url: "https://localhost:5001/api/redirect/Usuario/" + localStorage.userId,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -4160,6 +4161,7 @@ export default {
                     $("#prof-img-prop-obra-" + index)
                       .parent()
                       .css("background-color", result.foto);
+                      $("#prof-img-prop-obra-" + index).css('display', 'none')
                     $("#prof-img-prop-obra-" + index)
                       .parent()
                       .append(
@@ -4185,14 +4187,14 @@ export default {
                   $.ajax({
                     url:
                       "https://localhost:5001/api/redirect/FotosDaObra/" +
-                      item.idObra,
+                      item[0],
                     type: "GET",
                     dataType: "json",
                     contentType: "application/json",
                     beforeSend: function() {
-                      $("#load-modal").addClass("loading");
                     },
                     success: function(data) {
+                      console.log(data);
                       $("#obra-img-" + index).attr("src", data[0]);
                     },
                     error: function(thrownError) {}
