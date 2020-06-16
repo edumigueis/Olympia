@@ -131,11 +131,12 @@ export default {
                     split[11] +
                     split[12] +
                     "";
-
+                  var userName = split[2];
                   window.$cookies.set("user_session", "", "3m");
                   window.$cookies.remove("user_login");
                   localStorage.userId = id;
                   localStorage.config = config;
+                  localStorage.userName = userName;
                   document.location.href = "/#/home";
                 }
               }

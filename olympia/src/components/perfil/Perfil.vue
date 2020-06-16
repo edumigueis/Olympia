@@ -178,7 +178,10 @@
             <h1 class="title-content-config black-to-white">
               Suas publicações...
             </h1>
-            <div class="div-scroll div-scroll-sobre" id="pub-container-prof"></div>
+            <div
+              class="div-scroll div-scroll-sobre"
+              id="pub-container-prof"
+            ></div>
           </div>
           <div class="curtidas-content content-perfil white-6 black-to-white">
             <hr class="color-verify curtidas-hr" />
@@ -4099,9 +4102,9 @@ export default {
         }
       });
     },
-    getPublicacoes() {
+    getPublicacoes(idUser) {
       $.ajax({
-        url: "https://localhost:5001/api/redirect/AllObrasUser/" + localStorage.userId,
+        url: "https://localhost:5001/api/redirect/AllObrasUser/" + idUser,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -4130,7 +4133,7 @@ export default {
               '<figcaption><i class="fas fa-arrow-right"></i><div class="name-of-prof"><a href="/#/perfil/" id="name-of-prof-link-' +
               index +
               '" class="name-of-prof-link">Name</a></div><h2>' +
-              item[2].split('+').join(' ') +
+              item[2].split("+").join(" ") +
               '</h2><div class="categories-cont-on-feed"><div class="cat-on-feed paint">' +
               "azul" +
               '</div><div class="cat-on-feed paint">' +
@@ -4161,7 +4164,7 @@ export default {
                     $("#prof-img-prop-obra-" + index)
                       .parent()
                       .css("background-color", result.foto);
-                      $("#prof-img-prop-obra-" + index).css('display', 'none')
+                    $("#prof-img-prop-obra-" + index).css("display", "none");
                     $("#prof-img-prop-obra-" + index)
                       .parent()
                       .append(
@@ -4191,11 +4194,13 @@ export default {
                     type: "GET",
                     dataType: "json",
                     contentType: "application/json",
-                    beforeSend: function() {
-                    },
+                    beforeSend: function() {},
                     success: function(data) {
                       console.log(data);
-                      $("#obra-img-" + index).attr("src", data[data.length - 1]);
+                      $("#obra-img-" + index).attr(
+                        "src",
+                        data[data.length - 1]
+                      );
                     },
                     error: function(thrownError) {}
                   });
@@ -4209,7 +4214,6 @@ export default {
   },
   mounted() {
     this.verificarCampos();
-    this.getPublicacoes();
   },
   beforeCreate() {
     if (window.$cookies.isKey("user_cadastro")) {
@@ -4219,69 +4223,241 @@ export default {
     }
   },
   created() {
-     $.ajax({
-      type: "GET",
-      dataType: "json",
-      contentType: "application/json",
-      url: "https://localhost:5001/api/Usuarios/" + localStorage.userId,
-      complete: function(jqXHR, status) {
-        if (status == 'success') {
-          var result = $.parseJSON(jqXHR.responseText);
-          $("#name").val(result.nome + "");
-          $("#user").val(result.userName + "");
-          $("#email").val(result.email + "");
+    if (document.URL.toString().length <= 31) {
+      this.getPublicacoes(localStorage.userId);
+      $.ajax({
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        url: "https://localhost:5001/api/Usuarios/" + localStorage.userId,
+        complete: function(jqXHR, status) {
+          if (status == "success") {
+            var result = $.parseJSON(jqXHR.responseText);
+            $("#name").val(result.nome + "");
+            $("#user").val(result.userName + "");
+            $("#email").val(result.email + "");
 
-
-          if ((result.foto + "").length > 10) {
-            $("#user-prof-image").val(result.foto);
-            $("#user-prof-image").css("display", "block");
-            $(".prof-user-letter").css("display", "none");
-            $("#user-let-img").css("display", "none");
-            $('.hexcolor').css('display','none');
-            $('.img-profile').attr('src', result.foto);
-            $('.color-holder').css('display','none');
-            $(".bin").css("display", "block");
-          } 
-          else {
-            $("#user-prof-image").css("background", result.foto);
-            $(".prof-user-letter").css("display", "block");
-            $(".prof-user-letter").text((result.nome + "").substring(0, 1));
-            $("#user-prof-image").css("display", "none");
-            $("#user-let-img").css("display", "block");           
-            $(".zmdi.zmdi-palette").fadeIn();
-            $("#hexcolor").fadeIn();
-            $(".default-prof-user").empty();
-            var firstLet = null;
-            firstLet = $("#name")
-              .val()
-              .charAt(0);
-            firstLet = firstLet.toUpperCase();
-            $(".bin").css("display", "none");
-            $("#user-let-img").css("display", "block");
-            $('.user-pic').css('background-color', 'result.foto')
-            $('.user-pic').append('<span class="main-prof-ltr">'+result.nome.substring(0,1)+'</span>')
-            $('.img-profile').css('display', 'none');
-            $(".hexcolor").css("display", "block");
-            $(".color-holder").css("display", "block");
-            $("#user-let-img").html(
-              "<p class='prof-user-letter'>" + firstLet + "</p>"
-            );
-            $(".signup-image").css("margin-top", 0);
-            $("#user-let-img").css("margin-bottom", "60px");
-          }
-          $(".name-user").text(result.nome + "");
-          $(".user").text("@" + result.userName);
-          /*$(".seguindo").text("Seguindo: "+ result.seguindo.length);
+            if ((result.foto + "").length > 10) {
+              $("#user-prof-image").val(result.foto);
+              $("#user-prof-image").css("display", "block");
+              $(".prof-user-letter").css("display", "none");
+              $("#user-let-img").css("display", "none");
+              $(".hexcolor").css("display", "none");
+              $(".img-profile").attr("src", result.foto);
+              $(".color-holder").css("display", "none");
+              $(".bin").css("display", "block");
+            } else {
+              $("#user-prof-image").css("background", result.foto);
+              $(".prof-user-letter").css("display", "block");
+              $(".prof-user-letter").text((result.nome + "").substring(0, 1));
+              $("#user-prof-image").css("display", "none");
+              $("#user-let-img").css("display", "block");
+              $(".zmdi.zmdi-palette").fadeIn();
+              $("#hexcolor").fadeIn();
+              $(".default-prof-user").empty();
+              var firstLet = null;
+              firstLet = $("#name")
+                .val()
+                .charAt(0);
+              firstLet = firstLet.toUpperCase();
+              $(".bin").css("display", "none");
+              $("#user-let-img").css("display", "block");
+              $(".user-pic").css("background-color", "result.foto");
+              $(".user-pic").append(
+                '<span class="main-prof-ltr">' +
+                  result.nome.substring(0, 1) +
+                  "</span>"
+              );
+              $(".img-profile").css("display", "none");
+              $(".hexcolor").css("display", "block");
+              $(".color-holder").css("display", "block");
+              $("#user-let-img").html(
+                "<p class='prof-user-letter'>" + firstLet + "</p>"
+              );
+              $(".signup-image").css("margin-top", 0);
+              $("#user-let-img").css("margin-bottom", "60px");
+            }
+            $(".name-user").text(result.nome + "");
+            $(".user").text("@" + result.userName);
+            /*$(".seguindo").text("Seguindo: "+ result.seguindo.length);
           $(".seguidores").text("Seguidores: "+ result.seguidores.length);
           /*$(".publicacoes").text("Publicações: "+ 10);*/
-          $(".bio").text(result.bio);
-          $(".biografia").text(result.biografia);
-        } 
-        else {
-          location.href = "/#/error";
+            $(".bio").text(result.bio);
+            $(".biografia").text(result.biografia);
+          } else {
+            location.href = "/#/error";
+          }
         }
+      });
+    } else {
+      var user = document.URL.toString().split("/")[5];
+      if (localStorage.userName.toString() === user) {
+        document.location.href =
+          document.URL.toString().split("/")[0] +
+          "/" +
+          document.URL.toString().split("/")[1] +
+          "/" +
+          document.URL.toString().split("/")[2] +
+          "/" +
+          document.URL.toString().split("/")[3] +
+          "/" +
+          document.URL.toString().split("/")[4] +
+          "";
+        this.getPublicacoes(localStorage.userId);
+        $.ajax({
+          type: "GET",
+          dataType: "json",
+          contentType: "application/json",
+          url: "https://localhost:5001/api/Usuarios/" + localStorage.userId,
+          complete: function(jqXHR, status) {
+            if (status == "success") {
+              var result = $.parseJSON(jqXHR.responseText);
+              $("#name").val(result.nome + "");
+              $("#user").val(result.userName + "");
+              $("#email").val(result.email + "");
+
+              if ((result.foto + "").length > 10) {
+                $("#user-prof-image").val(result.foto);
+                $("#user-prof-image").css("display", "block");
+                $(".prof-user-letter").css("display", "none");
+                $("#user-let-img").css("display", "none");
+                $(".hexcolor").css("display", "none");
+                $(".img-profile").attr("src", result.foto);
+                $(".color-holder").css("display", "none");
+                $(".bin").css("display", "block");
+              } else {
+                $("#user-prof-image").css("background", result.foto);
+                $(".prof-user-letter").css("display", "block");
+                $(".prof-user-letter").text((result.nome + "").substring(0, 1));
+                $("#user-prof-image").css("display", "none");
+                $("#user-let-img").css("display", "block");
+                $(".zmdi.zmdi-palette").fadeIn();
+                $("#hexcolor").fadeIn();
+                $(".default-prof-user").empty();
+                var firstLet = null;
+                firstLet = $("#name")
+                  .val()
+                  .charAt(0);
+                firstLet = firstLet.toUpperCase();
+                $(".bin").css("display", "none");
+                $("#user-let-img").css("display", "block");
+                $(".user-pic").css("background-color", "result.foto");
+                $(".user-pic").append(
+                  '<span class="main-prof-ltr">' +
+                    result.nome.substring(0, 1) +
+                    "</span>"
+                );
+                $(".img-profile").css("display", "none");
+                $(".hexcolor").css("display", "block");
+                $(".color-holder").css("display", "block");
+                $("#user-let-img").html(
+                  "<p class='prof-user-letter'>" + firstLet + "</p>"
+                );
+                $(".signup-image").css("margin-top", 0);
+                $("#user-let-img").css("margin-bottom", "60px");
+              }
+              $(".name-user").text(result.nome + "");
+              $(".user").text("@" + result.userName);
+              /*$(".seguindo").text("Seguindo: "+ result.seguindo.length);
+          $(".seguidores").text("Seguidores: "+ result.seguidores.length);
+          /*$(".publicacoes").text("Publicações: "+ 10);*/
+              $(".bio").text(result.bio);
+              $(".biografia").text(result.biografia);
+            } else {
+              location.href = "/#/error";
+            }
+          }
+        });
+      } else {
+        var id;
+        $.ajax({
+          type: "GET",
+          dataType: "json",
+          contentType: "application/json",
+          url: "https://localhost:5001/api/Usuarios/IdByUserName/" + user,
+          complete: function(jqXHR, status) {
+            if (status == "success") {
+              var result = $.parseJSON(jqXHR.responseText);
+              id = jqXHR.responseText;
+              if(parseInt(id) != 0){
+              $.ajax({
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json",
+                url: "https://localhost:5001/api/Usuarios/" + id,
+                complete: function(jqXHR, status) {
+                  if (status == "success") {
+                    var result = $.parseJSON(jqXHR.responseText);
+                    $("#name").val(result.nome + "");
+                    $("#user").val(result.userName + "");
+                    $("#email").val(result.email + "");
+
+                    if ((result.foto + "").length > 10) {
+                      $("#user-prof-image").val(result.foto);
+                      $("#user-prof-image").css("display", "block");
+                      $(".prof-user-letter").css("display", "none");
+                      $("#user-let-img").css("display", "none");
+                      $(".hexcolor").css("display", "none");
+                      $(".img-profile").attr("src", result.foto);
+                      $(".color-holder").css("display", "none");
+                      $(".bin").css("display", "block");
+                    } else {
+                      $("#user-prof-image").css("background", result.foto);
+                      $(".prof-user-letter").css("display", "block");
+                      $(".prof-user-letter").text(
+                        (result.nome + "").substring(0, 1)
+                      );
+                      $("#user-prof-image").css("display", "none");
+                      $("#user-let-img").css("display", "block");
+                      $(".zmdi.zmdi-palette").fadeIn();
+                      $("#hexcolor").fadeIn();
+                      $(".default-prof-user").empty();
+                      var firstLet = null;
+                      firstLet = $("#name")
+                        .val()
+                        .charAt(0);
+                      firstLet = firstLet.toUpperCase();
+                      $(".bin").css("display", "none");
+                      $("#user-let-img").css("display", "block");
+                      $(".user-pic").css("background-color", "result.foto");
+                      $(".user-pic").append(
+                        '<span class="main-prof-ltr">' +
+                          result.nome.substring(0, 1) +
+                          "</span>"
+                      );
+                      $(".img-profile").css("display", "none");
+                      $(".hexcolor").css("display", "block");
+                      $(".color-holder").css("display", "block");
+                      $("#user-let-img").html(
+                        "<p class='prof-user-letter'>" + firstLet + "</p>"
+                      );
+                      $(".signup-image").css("margin-top", 0);
+                      $("#user-let-img").css("margin-bottom", "60px");
+                    }
+                    $(".name-user").text(result.nome + "");
+                    $(".user").text("@" + result.userName);
+                    /*$(".seguindo").text("Seguindo: "+ result.seguindo.length);
+                    $(".seguidores").text("Seguidores: "+ result.seguidores.length);
+                    /*$(".publicacoes").text("Publicações: "+ 10);*/
+                    $(".bio").text(result.bio);
+                    $(".biografia").text(result.biografia);
+                  } else {
+                    location.href = "/#/error";
+                  }
+                }
+              });       
+              this.getPublicacoes(id);
+              }
+              else{
+                location.href = "/#/userNotFound";
+              }
+            } else {
+              location.href = "/#/error";
+            }
+          }
+        });
       }
-    });
+    }
   }
 };
 </script>

@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Poppins Bold";
-  src: url("../fonts/Poppins-Bold.otf");
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.otf");
 }
 
 .gradient-text {
@@ -8,7 +8,7 @@
     background-color: red;
   
     /* Create the gradient. */
-    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-image: linear-gradient(45deg, rgb(240,142,118) 20%, rgb(210,105,189),rgb(75,240,180) );
   
     /* Set the background size and repeat properties. */
     background-size: 100%;
@@ -27,7 +27,7 @@
     background-color: #efefef;
     overflow: hidden !important;
     height: 100vh;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Poppins',sans-serif;
   }
   
   header {
@@ -108,14 +108,14 @@
     margin: 0 !important;
     width: 100% !important;
     text-align: center !important;
-    font-family: 'Poppins Bold' !important;
+    font-family: 'Poppins' !important;
   }
   .oops-header + .exp-wrapper{
     position: absolute !important;
     top: 50vh !important;
     margin: 0 !important;
     left: 0% !important;
-    font-family: 'Poppins Bold' !important;
+    font-family: 'Poppins' !important;
     color: #232323 !important;
     font-size: 1.5em !important;
   }

@@ -28,13 +28,15 @@ import Denuncia from './components/denuncia/Denuncia.vue';
 import IntServ from './components/intServ/IntServ.vue';
 import Servico from './components/servico/Servico.vue';
 import ErrorPage from './components/errorPage/ErrorPage.vue';
+import UserNotFound from './components/userNotFound/UserNotFound.vue';
 
 export const routes = [
 
     { path: '/', component: Welcome, titulo: ' W E L C O M E' },
     { path: '*', component: NotFound, titulo: '4 0 4' },
     { path: '/InternalServerError', component: IntServ, titulo: '5 0 0' },
-    { path: '/error', component: ErrorPage, titulo: 'Oops' },
+    { path: '/error', component: ErrorPage, titulo: 'O O P S' },
+    { path: '/userNotFound', component: UserNotFound, titulo: 'N Ã O  E X I S T O !' },
     { path: '/home', component: Home, titulo: 'H O M E', meta: { transition: 'zoom' }  },
     { path: '/artes', component: Artes, titulo: 'A R T E S' },
     { path: '/obra/:id', component: Obra, titulo: 'O B R A' },
@@ -44,6 +46,7 @@ export const routes = [
     { path: '/pesquisar', component: SearchResult, titulo: 'P E S Q U I S A', meta: { transition: 'zoom' } },
     { path: '/sobre', component: Sobre, titulo: 'S O B R E' },
     { path: '/perfil', component: Perfil, titulo: 'P E R F I L' },
+    { path: '/perfil/:username', component: Perfil, titulo: 'P E R F I L' },
     { path: '/cadastro', component: CadastroUser, titulo: 'C A D A S T R O' },
     { path: '/login', component: Login, titulo: 'L O G I N' },
     { path: '/categorias', component: Categorias, titulo: 'C A T E G O R I A S' },
