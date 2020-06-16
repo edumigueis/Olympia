@@ -4173,6 +4173,7 @@ export default {
                   }
 
                   $("#obra-prof-name-link-" + index).text(result.nome);
+                  $("#obra-prof-name-link-" + index).attr('href','/#/perfil/'+result.userName);
 
                   if (result.bio.length > 90) {
                     $("#obra-prof-bio-" + index).text(
