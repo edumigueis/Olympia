@@ -427,6 +427,23 @@ namespace API_olympia.Controllers
             }
         }
 
+        [HttpGet("AllPublicacoesUser/{idUsuario}")]
+        public async Task<IActionResult> GetAllPublicacoessUser(int idUsuario)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Publicacoes/Usuario/" + idUsuario);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
         [HttpGet("AllServicosUser/{idUsuario}")]
         public async Task<IActionResult> GetAllServicosUser(int idServico)
         {
