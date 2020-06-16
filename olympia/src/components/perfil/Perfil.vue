@@ -4209,8 +4209,16 @@ export default {
   mounted() {
     this.verificarCampos();
     this.getPublicacoes();
-
-    $.ajax({
+  },
+  beforeCreate() {
+    if (window.$cookies.isKey("user_cadastro")) {
+      document.location.href = "/#/categorias";
+    } else if (!window.$cookies.isKey("user_session")) {
+      document.location.href = "/#/login";
+    }
+  },
+  created() {
+     $.ajax({
       type: "GET",
       dataType: "json",
       contentType: "application/json",
@@ -4261,13 +4269,6 @@ export default {
         }
       }
     });
-  },
-  beforeCreate() {
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
   }
 };
 </script>
