@@ -398,3 +398,39 @@ as
 Begin
     update Usuarios set configs = @configs where idUsuario = @idUsuario
 End
+
+create proc sp_SearchUser
+@string varchar(300)
+as
+Begin
+    select u.* from Usuarios u where
+	u.nome like '%' + @string + '%' or
+	u.userName like '%' + @string + '%'
+End
+
+create proc sp_SearchObra
+@string varchar(300)
+as
+Begin
+    select o.* from Obras o where
+	o.nome like '%' + @string + '%' or
+	o.tags like '%' + @string + '%'
+End
+
+create proc sp_SearchServico
+@string varchar(300)
+as
+Begin
+    select s.* from Servicos s where
+	s.nome like '%' + @string + '%' or
+	s.tags like '%' + @string + '%'
+End
+
+create proc sp_SearchPublicacao
+@string varchar(300)
+as
+Begin
+    select p.* from Publicacoes p where
+	p.tags like '%' + @string + '%' or
+	p.texto like '%' + @string + '%'
+End

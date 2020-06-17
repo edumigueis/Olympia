@@ -1014,5 +1014,119 @@ namespace API_olympia.Data
             SqlDataReader leitor = cmd.ExecuteReader();
             conn.Close();
         }
+
+        public List<object> SpSearchUser(string key)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_SearchUser '" + key + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["userName"],
+                                   leitor["email"],
+                                   leitor["senha"],
+                                   leitor["foto"],
+                                   leitor["biografia"],
+                                   leitor["bio"],
+                                   leitor["configs"],
+                                   leitor["seguindo"],
+                                   leitor["seguidores"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpSearchObra(string key)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_SearchObra '" + key + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idObra"],
+                                   leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["categorias"],
+                                   leitor["tags"],
+                                   leitor["dataPost"],
+                                   leitor["dadosTecnicos"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpSearchServico(string key)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_SearchServico '" + key + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = { leitor["idServico"],
+                                   leitor["idUsuario"],
+                                   leitor["nome"],
+                                   leitor["descricao"],
+                                   leitor["idArte"],
+                                   leitor["categorias"],
+                                   leitor["tags"],
+                                   leitor["dataPost"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
+
+        public List<object> SpSearchPublicacao(string key)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_SearchPublicacao '" + key + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            var result = new List<object>();
+
+            while (leitor.Read())
+            {
+                object[] dados = {leitor["idPublicacao"],
+                                   leitor["idUsuario"],
+                                   leitor["texto"],
+                                   leitor["tags"],
+                                   leitor["foto"],
+                                   leitor["dataPost"]};
+
+                result.Add(dados);
+            }
+            conn.Close();
+
+            return result;
+        }
     }
 }

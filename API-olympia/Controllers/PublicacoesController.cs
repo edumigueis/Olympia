@@ -210,5 +210,20 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
         }
+
+        [HttpGet("Search/{key}")]
+        public async Task<IActionResult> Search(string key)
+        {
+            try
+            {
+                var result = this.Repo.SpSearchPublicacao(key);
+                return Ok(result);
+
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+            }
+        }
     }
 }

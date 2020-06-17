@@ -843,5 +843,73 @@ namespace API_olympia.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+
+        [HttpGet("SearchUser/{key}")]
+        public async Task<IActionResult> SearchUser(string key)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Usuarios/Search/" + key);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("SearchObra/{key}")]
+        public async Task<IActionResult> SearchObra(string key)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Obras/Search/" + key);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("SearchServico/{key}")]
+        public async Task<IActionResult> SearchServico(string key)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Servicos/Search/" + key);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("SearchPublicacao/{key}")]
+        public async Task<IActionResult> SearchPublicacao(string key)
+        {
+            try
+            {
+                ICollection<StringValues> lista;
+                lista = HttpContext.Request.Headers.Values;
+                IList<StringValues> listagem = lista as IList<StringValues>;
+                armazenador.StringValueRoute = listagem[5];
+                return Redirect("/api/Publicacoes/Search/" + key);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
     }
 }

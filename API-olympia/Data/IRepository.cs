@@ -81,5 +81,9 @@ namespace API_olympia.Data
         string SpBiografiaByIdUser(int idUsuario);
         string SpBioByIdUser(int idUsuario);
         void SpAlterConfig(string config, int idUsuario);
+        List<object> SpSearchUser(string key);
+        List<object> SpSearchObra(string key);
+        List<object> SpSearchServico(string key);
+        List<object> SpSearchPublicacao(string key);
     }
 }
