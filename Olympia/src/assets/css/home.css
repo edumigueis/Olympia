@@ -3853,6 +3853,15 @@ figure.snip1321:hover figcaption{
 .cat-on-feed.music {
   background: linear-gradient(90deg, #7b4397 0%, #dc2430 100%);
 }
+#content-1 .masonry-item:first-child{
+  display: none;
+}
+#content-2 .masonry-item:first-child{
+  display: none;
+}
+#content-3 .insp-item:first-child{
+  display: none;
+}
 .prof-img-cont {
   overflow: hidden;
   display: flex;

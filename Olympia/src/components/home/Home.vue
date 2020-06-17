@@ -2066,7 +2066,7 @@ export default {
                   result.nome.replace("+", " ") + ""
                 );
                 $("#prof-bio-det-" + index).text(
-                  result.bio.replace("+", " ") + ""
+                  result.bio.replace("+", " ").substring(0,60) + "..."
                 );
                 $("#load-modal").fadeOut();
               }
@@ -2251,10 +2251,10 @@ export default {
 
                   if (result.bio.length > 90) {
                     $("#obra-prof-bio-" + index).text(
-                      result.bio.substring(0, 90) + "..."
+                      result.bio.split('+').join(' ').substring(0, 25) + "..."
                     );
                   } else {
-                    $("#obra-prof-bio-" + index).text(result.bio);
+                    $("#obra-prof-bio-" + index).text(result.bio.substring(0,30) + "...");
                   }
 
                   $("#name-of-prof-link-" + index).text(result.nome);

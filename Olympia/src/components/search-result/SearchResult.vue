@@ -30,7 +30,10 @@
             v-on:keyup="pesquisar()"
             v-on:keyup.enter="btnSearch()"
           />
-          <div class="search-button center-position dark-search-icon" v-on:click="btnSearch()">
+          <div
+            class="search-button center-position dark-search-icon"
+            v-on:click="btnSearch()"
+          >
             <div class="search-icon"></div>
           </div>
         </div>
@@ -236,7 +239,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://images.squarespace-cdn.com/content/v1/57762ed29f7456e1b6e8febd/1580403012581-RD72EGBP08TA7V50Z5WU/ke17ZwdGBToddI8pDm48kFJo1x-0SDSXZIbvHdtV7zB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0p5uBJOnOmCWBN4JfYsIDyTk732yQxGFdJ5_SwaFk5-9rqZMSEJs3dyKz5eVslWaTA/2013+12+JIMI+Hendrix%2C+190x190cm%2C+Acrylic+on+Canvas.jpg?format=500w" class="img-destaque" />
+                        <img
+                          src="https://images.squarespace-cdn.com/content/v1/57762ed29f7456e1b6e8febd/1580403012581-RD72EGBP08TA7V50Z5WU/ke17ZwdGBToddI8pDm48kFJo1x-0SDSXZIbvHdtV7zB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0p5uBJOnOmCWBN4JfYsIDyTk732yQxGFdJ5_SwaFk5-9rqZMSEJs3dyKz5eVslWaTA/2013+12+JIMI+Hendrix%2C+190x190cm%2C+Acrylic+on+Canvas.jpg?format=500w"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -254,7 +260,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://images.squarespace-cdn.com/content/57b0ba972e69cf0f156abee2/1567426208977-TVWFZ3XGXKPPNNMYEZFK/Alea-Pinar-Du-Pre-celia-2-Ransom-Art-Gallery.jpg?format=1000w&content-type=image%2Fjpeg" class="img-destaque" />
+                        <img
+                          src="https://images.squarespace-cdn.com/content/57b0ba972e69cf0f156abee2/1567426208977-TVWFZ3XGXKPPNNMYEZFK/Alea-Pinar-Du-Pre-celia-2-Ransom-Art-Gallery.jpg?format=1000w&content-type=image%2Fjpeg"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -274,7 +283,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://i.ytimg.com/vi/cDotDayKH70/maxresdefault.jpg" class="img-destaque" />
+                        <img
+                          src="https://i.ytimg.com/vi/cDotDayKH70/maxresdefault.jpg"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -292,7 +304,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://st3.depositphotos.com/6367796/12918/v/950/depositphotos_129187834-stock-illustration-pop-art-woman-lips.jpg" class="img-destaque" />
+                        <img
+                          src="https://st3.depositphotos.com/6367796/12918/v/950/depositphotos_129187834-stock-illustration-pop-art-woman-lips.jpg"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -312,7 +327,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://theartivity.com/wp-content/uploads/2019/08/elements-of-art-6.jpg" class="img-destaque" />
+                        <img
+                          src="https://theartivity.com/wp-content/uploads/2019/08/elements-of-art-6.jpg"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -330,7 +348,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://www.petitplat.fr/cust/wp-content/uploads/2019/10/Collab_MilesJohnston_August-2@2x.jpg" class="img-destaque" />
+                        <img
+                          src="https://www.petitplat.fr/cust/wp-content/uploads/2019/10/Collab_MilesJohnston_August-2@2x.jpg"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -350,7 +371,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://2.bp.blogspot.com/-BWDCUbomGYM/W-7ZGyz8aDI/AAAAAAAAa20/iDxNOwpnDs0bJ1zAzmn5owZfD_1CjoVUgCLcBGAs/s1600/papel-de-parede-para-celular.jpg" class="img-destaque" />
+                        <img
+                          src="https://2.bp.blogspot.com/-BWDCUbomGYM/W-7ZGyz8aDI/AAAAAAAAa20/iDxNOwpnDs0bJ1zAzmn5owZfD_1CjoVUgCLcBGAs/s1600/papel-de-parede-para-celular.jpg"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -368,7 +392,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://i.pinimg.com/originals/41/cb/eb/41cbeb1f39398395118b243c8dc12470.png" class="img-destaque" />
+                        <img
+                          src="https://i.pinimg.com/originals/41/cb/eb/41cbeb1f39398395118b243c8dc12470.png"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -388,7 +415,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://images.squarespace-cdn.com/content/v1/57762ed29f7456e1b6e8febd/1580403012581-RD72EGBP08TA7V50Z5WU/ke17ZwdGBToddI8pDm48kFJo1x-0SDSXZIbvHdtV7zB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0p5uBJOnOmCWBN4JfYsIDyTk732yQxGFdJ5_SwaFk5-9rqZMSEJs3dyKz5eVslWaTA/2013+12+JIMI+Hendrix%2C+190x190cm%2C+Acrylic+on+Canvas.jpg?format=500w" class="img-destaque" />
+                        <img
+                          src="https://images.squarespace-cdn.com/content/v1/57762ed29f7456e1b6e8febd/1580403012581-RD72EGBP08TA7V50Z5WU/ke17ZwdGBToddI8pDm48kFJo1x-0SDSXZIbvHdtV7zB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0p5uBJOnOmCWBN4JfYsIDyTk732yQxGFdJ5_SwaFk5-9rqZMSEJs3dyKz5eVslWaTA/2013+12+JIMI+Hendrix%2C+190x190cm%2C+Acrylic+on+Canvas.jpg?format=500w"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -406,7 +436,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://imaginetheworld.co/wp-content/uploads/Fluid-Art-Clock-Ocean-Clock-30cm-1.jpg" class="img-destaque" />
+                        <img
+                          src="https://imaginetheworld.co/wp-content/uploads/Fluid-Art-Clock-Ocean-Clock-30cm-1.jpg"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -426,7 +459,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/08/fotos-tumblr.png" class="img-destaque" />
+                        <img
+                          src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/08/fotos-tumblr.png"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -444,7 +480,10 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg" class="img-destaque" />
+                        <img
+                          src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg"
+                          class="img-destaque"
+                        />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -723,7 +762,7 @@ export default {
 
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/pesquisaObra/" + key,
+        url: "https://localhost:5001/api/redirect/SearchObra/" + key,
         contentType: "application/json",
         success: function(data) {
           console.log(data);
@@ -732,17 +771,15 @@ export default {
               '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="" class="img-destaque" id="repr-img-obra-' +
               index +
               '" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-              data.nome +
+              item[2] +
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
               index +
               '">por space</h1></div></div></div></a>';
 
-              $("#obra-res-wrapper").append(contPost);
+            $("#obra-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
-              url:
-                "https://localhost:5001/api/redirect/usuario/" + data.idUsuario,
-              data: jsonInput,
+              url: "https://localhost:5001/api/redirect/usuario/" + item[1],
               contentType: "application/json",
               success: function(res) {
                 $("#by-person-identifier-" + index).text(
@@ -759,13 +796,10 @@ export default {
             });
             $.ajax({
               type: "GET",
-              url:
-                "https://localhost:5001/api/redirect/FotosDaObra/" +
-                data.idObra,
-              data: jsonInput,
+              url: "https://localhost:5001/api/redirect/FotosDaObra/" + item[0],
               contentType: "application/json",
               success: function(resFoto) {
-                $("repr-img-obra-" + index).attr("src", resFoto[0]);
+                $("#repr-img-obra-" + index).attr("src", resFoto[0]);
               },
               fail: function(error) {
                 console.log(error);
@@ -792,25 +826,24 @@ export default {
       if (key == "") return;
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/pesquisaServ/" + key,
+        url: "https://localhost:5001/api/redirect/SearchServico/" + key,
         contentType: "application/json",
         success: function(data) {
           jQuery.each(data, function(index, item) {
             var contPost =
-              '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="' +
-              data.foto +
+              '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="" id="repr-img-serv-' +
+              index +
               '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-              data.nome +
+              item[2] +
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
               index +
               '">por space</h1></div></div></div></a>';
 
-              $("#serv-res-wrapper").append(contPost);
+            $("#serv-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
               url:
-                "https://localhost:5001/api/redirect/usuario/" + data.idUsuario,
-              data: jsonInput,
+                "https://localhost:5001/api/redirect/usuario/" + item[1],
               contentType: "application/json",
               success: function(res) {
                 $("#by-person-identifier-" + index).text(
@@ -828,12 +861,10 @@ export default {
             $.ajax({
               type: "GET",
               url:
-                "https://localhost:5001/api/redirect/FotosDoServico" +
-                data.idServico,
-              data: jsonInput,
+                "https://localhost:5001/api/redirect/FotosDoServico" + item[0],
               contentType: "application/json",
               success: function(resFoto) {
-                $("repr-img-obra-" + index).attr("src", resFoto[0]);
+                $("#repr-img-serv-" + index).attr("src", resFoto[0]);
               },
               fail: function(error) {
                 console.log(error);
@@ -861,20 +892,20 @@ export default {
 
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/pesquisaUser/" + key,
+        url: "https://localhost:5001/api/Redirect/SearchUser/" + key,
         contentType: "application/json",
         success: function(data) {
           jQuery.each(data, function(index, item) {
             var contPost =
               '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="' +
-              data.foto +
+              item[5] +
               '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-              data.nome +
+              item[1] +
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-user">' +
-              data.bio +
+              item[7] +
               "</h1></div></div></div></a>";
 
-              $("#user-res-wrapper").append(contPost);
+            $("#user-res-wrapper").append(contPost);
           });
         },
         fail: function(error) {
@@ -892,26 +923,24 @@ export default {
       if (key == "") return;
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/redirect/pesquisaPost/" + key,
-        data: jsonInput,
+        url: "https://localhost:5001/api/redirect/searchPost/" + key,
         contentType: "application/json",
         success: function(data) {
           jQuery.each(data, function(index, item) {
             var contPost =
               '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="' +
-              data.foto +
+              item[4] +
               '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-              data.nome +
+              item[2].substring(0, 50)+ "..." +
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
               index +
               '">por space</h1></div></div></div></a>';
 
-              $("#post-res-wrapper").append(contPost);
+            $("#post-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
               url:
-                "https://localhost:5001/api/redirect/usuario/" + data.idUsuario,
-              data: jsonInput,
+                "https://localhost:5001/api/redirect/usuario/" + item[1],
               contentType: "application/json",
               success: function(res) {
                 $("#by-person-identifier-" + index).text(

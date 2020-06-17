@@ -4156,7 +4156,7 @@ export default {
                   result.nome.replace("+", " ") + ""
                 );
                 $("#prof-bio-det-" + index).text(
-                  result.bio.replace("+", " ") + ""
+                  result.bio.replace("+", " ").substring(0,20) + "..."
                 );
                 $("#load-modal").fadeOut();
               }
