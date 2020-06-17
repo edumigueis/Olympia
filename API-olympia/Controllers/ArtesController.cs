@@ -27,7 +27,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
         }
 
@@ -41,7 +41,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
         }
 
@@ -61,7 +61,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no put().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
             return BadRequest();
         }
@@ -83,7 +83,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no delete().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
             return BadRequest();
         }
@@ -102,7 +102,7 @@ namespace API_olympia.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no post().");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
             return BadRequest();
         }

@@ -30,7 +30,7 @@ namespace API_olympia.Controllers
             this.armazenador = armazenador;
         }
 
-        [CustomAuthorizeAttribute]
+        /*[CustomAuthorizeAttribute]*/
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
@@ -55,7 +55,6 @@ namespace API_olympia.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
-            return Redirect("/api/Armazenador/Access");
             try
             {
                 var resultSp = this.Repo.VerfificarSpAdmins(model);
