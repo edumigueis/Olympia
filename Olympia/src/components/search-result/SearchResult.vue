@@ -235,15 +235,15 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="a" class="img-destaque" />
+                        <img src="https://images.squarespace-cdn.com/content/v1/57762ed29f7456e1b6e8febd/1580403012581-RD72EGBP08TA7V50Z5WU/ke17ZwdGBToddI8pDm48kFJo1x-0SDSXZIbvHdtV7zB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0p5uBJOnOmCWBN4JfYsIDyTk732yQxGFdJ5_SwaFk5-9rqZMSEJs3dyKz5eVslWaTA/2013+12+JIMI+Hendrix%2C+190x190cm%2C+Acrylic+on+Canvas.jpg?format=500w" class="img-destaque" />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
-                          <h1 class="title-obra-destaque">"El Cafetán"</h1>
+                          <h1 class="title-obra-destaque">"El Hyomaro"</h1>
                         </div>
                         <div class="inline-div">
                           <h1 class="pessoa-obra-destaque">
-                            por Célio Lima Barbosa
+                            por Gúsman Aretor
                           </h1>
                           <h1 class="top-obra-destaque">#1</h1>
                         </div>
@@ -253,15 +253,15 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="a" class="img-destaque" />
+                        <img src="https://images.squarespace-cdn.com/content/57b0ba972e69cf0f156abee2/1567426208977-TVWFZ3XGXKPPNNMYEZFK/Alea-Pinar-Du-Pre-celia-2-Ransom-Art-Gallery.jpg?format=1000w&content-type=image%2Fjpeg" class="img-destaque" />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
-                          <h1 class="title-obra-destaque">"El Cafetán"</h1>
+                          <h1 class="title-obra-destaque">"Woman C"</h1>
                         </div>
                         <div class="inline-div">
                           <h1 class="pessoa-obra-destaque">
-                            por Célio Lima Barbosa
+                            por Dream
                           </h1>
                           <h1 class="top-obra-destaque">#2</h1>
                         </div>
@@ -269,19 +269,19 @@
                     </div>
                   </a>
                 </div>
-                <div class="2-container-destaque container-destaque">
+                <div class="3-container-destaque container-destaque">
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="a" class="img-destaque" />
+                        <img src="https://i.ytimg.com/vi/cDotDayKH70/maxresdefault.jpg" class="img-destaque" />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
-                          <h1 class="title-obra-destaque">"El Cafetán"</h1>
+                          <h1 class="title-obra-destaque">"ReReAdd"</h1>
                         </div>
                         <div class="inline-div">
                           <h1 class="pessoa-obra-destaque">
-                            por Célio Lima Barbosa
+                            por Myra Buli
                           </h1>
                           <h1 class="top-obra-destaque">#3</h1>
                         </div>
@@ -291,15 +291,15 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img src="a" class="img-destaque" />
+                        <img src="https://st3.depositphotos.com/6367796/12918/v/950/depositphotos_129187834-stock-illustration-pop-art-woman-lips.jpg" class="img-destaque" />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
-                          <h1 class="title-obra-destaque">"El Cafetán"</h1>
+                          <h1 class="title-obra-destaque">"persistance"</h1>
                         </div>
                         <div class="inline-div">
                           <h1 class="pessoa-obra-destaque">
-                            por Célio Lima Barbosa
+                            por Luna Dias
                           </h1>
                           <h1 class="top-obra-destaque">#4</h1>
                         </div>
@@ -307,85 +307,165 @@
                     </div>
                   </a>
                 </div>
-                <div class="3-container-destaque container-destaque">
-                  <div class="destaque-content">
-                    <div class="flex-image-destaque">
-                      <img
-                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
-                        class="img-destaque"
-                      />
+                <div class="2-container-destaque container-destaque">
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img src="https://theartivity.com/wp-content/uploads/2019/08/elements-of-art-6.jpg" class="img-destaque" />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">US</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Jennie Hotkins
+                          </h1>
+                          <h1 class="top-obra-destaque">#3</h1>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="destaque-content">
-                    <div class="flex-image-destaque">
-                      <img
-                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
-                        class="img-destaque"
-                      />
+                  </a>
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img src="https://www.petitplat.fr/cust/wp-content/uploads/2019/10/Collab_MilesJohnston_August-2@2x.jpg" class="img-destaque" />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">alter-Ego</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por John Amir
+                          </h1>
+                          <h1 class="top-obra-destaque">#4</h1>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="4-container-destaque container-destaque">
-                  <div class="destaque-content">
-                    <div class="flex-image-destaque">
-                      <img
-                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
-                        class="img-destaque"
-                      />
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img src="https://2.bp.blogspot.com/-BWDCUbomGYM/W-7ZGyz8aDI/AAAAAAAAa20/iDxNOwpnDs0bJ1zAzmn5owZfD_1CjoVUgCLcBGAs/s1600/papel-de-parede-para-celular.jpg" class="img-destaque" />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">Series 12</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Myra Buli
+                          </h1>
+                          <h1 class="top-obra-destaque">#3</h1>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="destaque-content">
-                    <div class="flex-image-destaque">
-                      <img
-                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
-                        class="img-destaque"
-                      />
+                  </a>
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img src="https://i.pinimg.com/originals/41/cb/eb/41cbeb1f39398395118b243c8dc12470.png" class="img-destaque" />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">Wallpaper X</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Luna Dias
+                          </h1>
+                          <h1 class="top-obra-destaque">#4</h1>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="5-container-destaque container-destaque">
-                  <div class="destaque-content">
-                    <div class="flex-image-destaque">
-                      <img
-                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
-                        class="img-destaque"
-                      />
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img src="https://images.squarespace-cdn.com/content/v1/57762ed29f7456e1b6e8febd/1580403012581-RD72EGBP08TA7V50Z5WU/ke17ZwdGBToddI8pDm48kFJo1x-0SDSXZIbvHdtV7zB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0p5uBJOnOmCWBN4JfYsIDyTk732yQxGFdJ5_SwaFk5-9rqZMSEJs3dyKz5eVslWaTA/2013+12+JIMI+Hendrix%2C+190x190cm%2C+Acrylic+on+Canvas.jpg?format=500w" class="img-destaque" />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">Hanur Watch</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Myra Buli
+                          </h1>
+                          <h1 class="top-obra-destaque">#3</h1>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="destaque-content">
-                    <div class="flex-image-destaque">
-                      <img
-                        src="https://i.pinimg.com/originals/73/b5/ce/73b5cec7a94cfdf5bcb62e27309d521b.jpg"
-                        class="img-destaque"
-                      />
+                  </a>
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img src="https://imaginetheworld.co/wp-content/uploads/Fluid-Art-Clock-Ocean-Clock-30cm-1.jpg" class="img-destaque" />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">"memory"</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Luna Dias
+                          </h1>
+                          <h1 class="top-obra-destaque">#4</h1>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="6-container-destaque container-destaque">
-                  <div class="destaque-content">
-                    <div class="flex-image-destaque">
-                      <img
-                        src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/08/fotos-tumblr.png"
-                        class="img-destaque"
-                      />
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img src="https://www.dicasdemulher.com.br/wp-content/uploads/2019/08/fotos-tumblr.png" class="img-destaque" />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">"ReReAdd"</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Myra Buli
+                          </h1>
+                          <h1 class="top-obra-destaque">#3</h1>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="destaque-content">
-                    <div class="flex-image-destaque">
-                      <img
-                        src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg"
-                        class="img-destaque"
-                      />
+                  </a>
+                  <a href="/#/detalhes" class="link-route">
+                    <div class="destaque-content">
+                      <div class="flex-image-destaque">
+                        <img src="https://i.pinimg.com/736x/b2/a1/ed/b2a1ed6d29acffafa9e398ab28d05d1f.jpg" class="img-destaque" />
+                      </div>
+                      <div class="info-obra-destaque">
+                        <div class="inline-div">
+                          <h1 class="title-obra-destaque">"persistance"</h1>
+                        </div>
+                        <div class="inline-div">
+                          <h1 class="pessoa-obra-destaque">
+                            por Luna Dias
+                          </h1>
+                          <h1 class="top-obra-destaque">#4</h1>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div class="slider__slide slide-2" data-slide="2">
             <div class="bg"></div>
-            <div class="container-obras-search">
-              <a href="/#/detalhes" class="link-route">
+            <div class="container-obras-search" id="obra-res-wrapper">
+              <!--<a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
                     <img src="a" class="img-destaque" />
@@ -461,14 +541,14 @@
                     </div>
                   </div>
                 </div>
-              </a>
+              </a>-->
               <div class="arrow load-arrow arrow-obras-search"></div>
             </div>
           </div>
           <div class="slider__slide" data-slide="3">
             <div class="bg"></div>
-            <div class="container-aulas-search">
-              <a href="/#/detalhes" class="link-route">
+            <div class="container-aulas-search" id="serv-res-wrapper">
+              <!--<a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
                     <img src="a" class="img-destaque" />
@@ -544,15 +624,21 @@
                     </div>
                   </div>
                 </div>
-              </a>
+              </a>-->
               <div class="arrow load-arrow arrow-aulas-search"></div>
             </div>
           </div>
           <div class="slider__slide" data-slide="4">
             <div class="bg"></div>
+            <div class="container-aulas-search" id="post-res-wrapper">
+              <div class="arrow load-arrow arrow-aulas-search"></div>
+            </div>
           </div>
           <div class="slider__slide" data-slide="5">
             <div class="bg"></div>
+            <div class="container-aulas-search" id="user-res-wrapper">
+              <div class="arrow load-arrow arrow-aulas-search"></div>
+            </div>
           </div>
           <div class="slider__indicators"></div>
         </div>
@@ -639,6 +725,7 @@ export default {
         url: "https://localhost:5001/api/pesquisaObra/" + key,
         contentType: "application/json",
         success: function(data) {
+          console.log(data);
           jQuery.each(data, function(index, item) {
             var contPost =
               '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="" class="img-destaque" id="repr-img-obra-' +
@@ -648,6 +735,8 @@ export default {
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
               index +
               '">por space</h1></div></div></div></a>';
+
+              $("#obra-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
               url:
@@ -714,6 +803,8 @@ export default {
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
               index +
               '">por space</h1></div></div></div></a>';
+
+              $("#serv-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
               url:
@@ -781,6 +872,8 @@ export default {
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-user">' +
               data.bio +
               "</h1></div></div></div></a>";
+
+              $("#user-res-wrapper").append(contPost);
           });
         },
         fail: function(error) {
@@ -811,6 +904,8 @@ export default {
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
               index +
               '">por space</h1></div></div></div></a>';
+
+              $("#post-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
               url:
