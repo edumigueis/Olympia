@@ -2607,12 +2607,19 @@ figure.snip1321 * {
   transition: all 0.2s ease-out;
 
 }
+figure.snip1321 img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+  min-height: 350px;
+  max-height: 700px !important;
+}
 figure.snip1321 a img {
   width: 100%;
   height: auto;
   vertical-align: top;
   min-height: 350px;
-  max-height: 600px;
+  max-height: 700px !important;
 }
 figure.snip1321 figcaption {
   top: 50%;

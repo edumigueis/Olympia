@@ -3,7 +3,7 @@
     <div id="container-home">
       <link rel="stylesheet" href="/src/assets/css/home.css" />
       <link rel="stylesheet" href="/src/assets/css/palaces.css" />
-      <link
+      <link 
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       />
@@ -468,7 +468,7 @@
             <div class="slide slide-0 active activo">
               <div class="slide__bg"></div>
               <div class="slide__content" id="content-1">
-                <!--<div class="masonry-item">
+                <div class="masonry-item">
                   <div class="masonry-content">
                     <div class="prof-cont-feed white-7">
                       <div class="prof-img-cont">
@@ -908,7 +908,7 @@
                       </div>
                     </div>
                   </div>
-                </div>-->
+                </div>
               </div>
             </div>
             <div class="slide slide-1">
