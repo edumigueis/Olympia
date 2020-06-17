@@ -29,7 +29,7 @@
             v-on:keyup="pesquisar()"
             v-on:keyup.enter="btnSearch()"
           />
-          <div class="search-button center-position dark-search-icon">
+          <div class="search-button center-position dark-search-icon" v-on:click="btnSearch()">
             <div class="search-icon"></div>
           </div>
         </div>
@@ -321,7 +321,7 @@
                           <h1 class="pessoa-obra-destaque">
                             por Jennie Hotkins
                           </h1>
-                          <h1 class="top-obra-destaque">#3</h1>
+                          <h1 class="top-obra-destaque">#5</h1>
                         </div>
                       </div>
                     </div>
@@ -339,7 +339,7 @@
                           <h1 class="pessoa-obra-destaque">
                             por John Amir
                           </h1>
-                          <h1 class="top-obra-destaque">#4</h1>
+                          <h1 class="top-obra-destaque">#6</h1>
                         </div>
                       </div>
                     </div>
@@ -359,7 +359,7 @@
                           <h1 class="pessoa-obra-destaque">
                             por Myra Buli
                           </h1>
-                          <h1 class="top-obra-destaque">#3</h1>
+                          <h1 class="top-obra-destaque">#7</h1>
                         </div>
                       </div>
                     </div>
@@ -377,7 +377,7 @@
                           <h1 class="pessoa-obra-destaque">
                             por Luna Dias
                           </h1>
-                          <h1 class="top-obra-destaque">#4</h1>
+                          <h1 class="top-obra-destaque">#8</h1>
                         </div>
                       </div>
                     </div>
@@ -397,7 +397,7 @@
                           <h1 class="pessoa-obra-destaque">
                             por Myra Buli
                           </h1>
-                          <h1 class="top-obra-destaque">#3</h1>
+                          <h1 class="top-obra-destaque">#9</h1>
                         </div>
                       </div>
                     </div>
@@ -409,13 +409,13 @@
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
-                          <h1 class="title-obra-destaque">"memory"</h1>
+                          <h1 class="title-obra-destaque">memory</h1>
                         </div>
                         <div class="inline-div">
                           <h1 class="pessoa-obra-destaque">
                             por Luna Dias
                           </h1>
-                          <h1 class="top-obra-destaque">#4</h1>
+                          <h1 class="top-obra-destaque">#10</h1>
                         </div>
                       </div>
                     </div>
@@ -429,13 +429,13 @@
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
-                          <h1 class="title-obra-destaque">"ReReAdd"</h1>
+                          <h1 class="title-obra-destaque">PhotoShoot</h1>
                         </div>
                         <div class="inline-div">
                           <h1 class="pessoa-obra-destaque">
-                            por Myra Buli
+                            por Gemini
                           </h1>
-                          <h1 class="top-obra-destaque">#3</h1>
+                          <h1 class="top-obra-destaque">#11</h1>
                         </div>
                       </div>
                     </div>
@@ -447,13 +447,13 @@
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
-                          <h1 class="title-obra-destaque">"persistance"</h1>
+                          <h1 class="title-obra-destaque">Flower Per</h1>
                         </div>
                         <div class="inline-div">
                           <h1 class="pessoa-obra-destaque">
-                            por Luna Dias
+                            por Claire Dingitz
                           </h1>
-                          <h1 class="top-obra-destaque">#4</h1>
+                          <h1 class="top-obra-destaque">#12</h1>
                         </div>
                       </div>
                     </div>
