@@ -21,6 +21,18 @@ namespace API_olympia.Controllers
         {
             return View();
         }
+        public IActionResult Feedbacks()
+        {
+            return View();
+        }
+        public IActionResult Sugestoes()
+        {
+            return View();
+        }
+        public IActionResult Denuncias()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

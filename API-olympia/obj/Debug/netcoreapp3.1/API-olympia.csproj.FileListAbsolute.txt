@@ -552,3 +552,6 @@ C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\staticweb
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.dll
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.pdb
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.genruntimeconfig.cache
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Denuncias.cshtml.g.cs
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Feedbacks.cshtml.g.cs
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Sugestoes.cshtml.g.cs
