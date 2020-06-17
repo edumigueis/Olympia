@@ -632,6 +632,7 @@ export default {
         "Artes"
       ];
       $("#routes-wrapper").empty();
+      $(".title-routes").css('display', 'flex');
       for (var i = 0; i < routes.length; i++) {
         if (routes[i].toLowerCase().includes(key.toLowerCase())) {
           var contDiv =
@@ -666,14 +667,14 @@ export default {
       this.status = "obra";
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/pesquisaPost/" + key,
+        url: "https://localhost:5001/api/pesquisaObra/" + key,
         data: jsonInput,
         contentType: "application/json",
         success: function(data) {
           var contPost =
-            '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+            '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="'+data.imagem+'" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
             data.nome +
-            '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service">por Célio Lima Barbosa</h1></div></div></div></a>';
+            '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service">por '+data.nomeUser+'</h1></div></div></div></a>';
         },
         fail: function(error) {
           console.log(error);
@@ -689,7 +690,7 @@ export default {
       this.status = "serv";
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/pesquisaPost/" + key,
+        url: "https://localhost:5001/api/pesquisaServ/" + key,
         data: jsonInput,
         contentType: "application/json",
         success: function(data) {
@@ -712,7 +713,7 @@ export default {
       this.status = "user";
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/pesquisaPost/" + key,
+        url: "https://localhost:5001/api/pesquisaUser/" + key,
         data: jsonInput,
         contentType: "application/json",
         success: function(data) {

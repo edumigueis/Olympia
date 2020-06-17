@@ -358,7 +358,6 @@ export default {
                   break;
                 }
               }
-              alert(final);
               for (var f = final + 1; f < 9; f++) {
                 $(".box-"+ f).css("display", "none");
               }
@@ -369,7 +368,6 @@ export default {
             error: function() {
               $("body").removeClass("loading");
               $("#load-modal").fadeOut();
-              alert("ops2");
             }
           });
         },

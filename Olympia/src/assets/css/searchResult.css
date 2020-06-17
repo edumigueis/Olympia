@@ -248,8 +248,11 @@
   margin-left: 40px;
   display: flex;
   transition: all 0.3s;
+  display: none;
 }
-
+.title-routes.title-destaques {
+  display: flex !important;
+}
 .arrow-1 {
   transform: rotate(180deg);
   filter: invert(100%) brightness(130%);

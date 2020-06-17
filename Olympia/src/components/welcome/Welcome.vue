@@ -16,6 +16,7 @@
       <link rel="preload" as="image" href="/src/assets/images/land-11.jpg">
       <link rel="preload" as="image" href="/src/assets/images/land-12.jpg">
       <link rel="preload" as="image" href="/src/assets/images/land-13.jpg">
+      <link rel="stylesheet" href="/src/assets/css/welcome.css">
       <link rel="preload" href="/src/assets/css/welcome.css" as="style">
       <link rel="stylesheet" href="/src/assets/css/welcome.css" />
       <section class="canvas-wrap">
@@ -245,8 +246,6 @@
     </div>
   </main>
 </template>
-<style src="../../assets/css/welcome.css" lang="css" scoped>
-</style>
 <script>
 export default {
   methods: {
