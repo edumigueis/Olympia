@@ -26,6 +26,7 @@
             placeholder="Pesquisar..."
             id="search"
             autocomplete="off"
+            maxlength="300"
             v-on:keyup="pesquisar()"
             v-on:keyup.enter="btnSearch()"
           />

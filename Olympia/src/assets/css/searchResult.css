@@ -403,6 +403,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   margin-top: 66px;
+  z-index: 10;
 }
 #page-name-on-tab {
   font-size: 2.5em;
