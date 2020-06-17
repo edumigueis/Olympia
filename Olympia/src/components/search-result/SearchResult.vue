@@ -581,8 +581,8 @@
                     </div>
                   </div>
                 </div>
-              </a>-->
-              <div class="arrow load-arrow arrow-obras-search"></div>
+              </a>
+              <div class="arrow load-arrow arrow-obras-search"></div>-->
             </div>
           </div>
           <div class="slider__slide" data-slide="3">
@@ -664,8 +664,8 @@
                     </div>
                   </div>
                 </div>
-              </a>-->
-              <div class="arrow load-arrow arrow-aulas-search"></div>
+              </a>
+              <div class="arrow load-arrow arrow-aulas-search"></div>-->
             </div>
           </div>
           <div class="slider__slide" data-slide="4">
@@ -677,7 +677,7 @@
           <div class="slider__slide" data-slide="5">
             <div class="bg"></div>
             <div class="container-aulas-search" id="user-res-wrapper">
-              <div class="arrow load-arrow arrow-aulas-search"></div>
+              <!--<div class="arrow load-arrow arrow-aulas-search"></div>-->
             </div>
           </div>
           <div class="slider__indicators"></div>
@@ -771,7 +771,7 @@ export default {
               '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="" class="img-destaque" id="repr-img-obra-' +
               index +
               '" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-              item[2] +
+              item[2].split("+").join(" ") +
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
               index +
               '">por space</h1></div></div></div></a>';
@@ -834,19 +834,18 @@ export default {
               '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="" id="repr-img-serv-' +
               index +
               '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-              item[2] +
-              '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
+              item[2].split("+").join(" ") +
+              '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-serv-identifier-' +
               index +
               '">por space</h1></div></div></div></a>';
 
             $("#serv-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
-              url:
-                "https://localhost:5001/api/redirect/usuario/" + item[1],
+              url: "https://localhost:5001/api/redirect/usuario/" + item[1],
               contentType: "application/json",
               success: function(res) {
-                $("#by-person-identifier-" + index).text(
+                $("#by-person-serv-identifier-" + index).text(
                   "por " + res.nome.split("+").join(" ")
                 );
               },
@@ -861,7 +860,7 @@ export default {
             $.ajax({
               type: "GET",
               url:
-                "https://localhost:5001/api/redirect/FotosDoServico" + item[0],
+                "https://localhost:5001/api/redirect/FotosDoServico/" + item[0],
               contentType: "application/json",
               success: function(resFoto) {
                 $("#repr-img-serv-" + index).attr("src", resFoto[0]);
@@ -896,14 +895,25 @@ export default {
         contentType: "application/json",
         success: function(data) {
           jQuery.each(data, function(index, item) {
-            var contPost =
-              '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="' +
-              item[5] +
-              '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-              item[1] +
-              '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-user">' +
-              item[7] +
-              "</h1></div></div></div></a>";
+            if (item[5].length > 20) {
+              var contPost =
+                '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="' +
+                item[5] +
+                '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+                item[1] +
+                '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-user">' +
+                item[7] +
+                "</h1></div></div></div></a>";
+            } else {
+              var contPost =
+                '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque" style="border-top-left-radius:16px; border-bottom-left-radius:16px; background-color: ' +
+                item[5] +
+                '"><img src="https://pngimg.com/uploads/letter_h/letter_h_PNG64.png" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+                item[1] +
+                '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-user">' +
+                item[7] +
+                "</h1></div></div></div></a>";
+            }
 
             $("#user-res-wrapper").append(contPost);
           });
@@ -931,7 +941,8 @@ export default {
               '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="' +
               item[4] +
               '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-              item[2].substring(0, 50)+ "..." +
+              item[2].substring(0, 50) +
+              "..." +
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
               index +
               '">por space</h1></div></div></div></a>';
@@ -939,8 +950,7 @@ export default {
             $("#post-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
-              url:
-                "https://localhost:5001/api/redirect/usuario/" + item[1],
+              url: "https://localhost:5001/api/redirect/usuario/" + item[1],
               contentType: "application/json",
               success: function(res) {
                 $("#by-person-identifier-" + index).text(
