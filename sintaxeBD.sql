@@ -153,6 +153,16 @@ senha varchar(500) not null,
 email varchar(255) not null
 )
 
+/* DELETEs (nessa ordem) */
+delete from Fotos
+delete from Curtidas
+delete from Obras where idObra != 0
+delete from Servicos where idServico != 0
+delete from Publicacoes where idPublicacao != 0
+delete from Eventos where idEvento != 0
+delete from Usuarios where idUsuario != 0
+/****************/
+
 alter proc sp_ValidateAdmin
 @Username varchar(100),
 @Password varchar(500)
