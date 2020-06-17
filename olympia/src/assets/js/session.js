@@ -79,32 +79,34 @@ $(document).ready(function () {
     }, 100);
 
     setInterval(() => {
+        if ($('.modal-form').length) {
+            if ($('#container-perfil').length) {
 
-        if ($('#container-perfil').length) {
+                $('#old_pass').on('keyup', function () {
+                    if ($('#old_pass').val() == senha != "") {
+                        $('.is-old-cont').css("background-color", "#2eb82e");
+                    }
+                    if ($('#old_pass').val() != senha != "") {
+                        $('.is-old-cont').css("background-color", "rgb(237, 41, 57)");
+                    }
+                    if ($('#old_pass').val() == "") {
+                        $('.is-old-cont').css("background-color", "transparent");
+                    }
+                });
 
-            $('#old_pass').on('keyup', function () {
-                if ($('#old_pass').val() == senha != "") {
-                    $('.is-old-cont').css("background-color", "#2eb82e");
+                if ($("#old_pass").val() != senha) {
+                    document.getElementById("signup").disabled = true;
+                    $("#signup").css('opacity', '0.7');
+                    $("#signup").css('cursor', 'unset');
                 }
-                if ($('#old_pass').val() != senha != "") {
-                    $('.is-old-cont').css("background-color", "rgb(237, 41, 57)");
+                else {
+                    document.getElementById("signup").disabled = false;
+                    $("#signup").css('opacity', '1');
+                    $("#signup").css('cursor', 'pointer');
                 }
-                if ($('#old_pass').val() == "") {
-                    $('.is-old-cont').css("background-color", "transparent");
-                }
-            });
-
-            if ($("#old_pass").val() != senha) {
-                document.getElementById("signup").disabled = true;
-                $("#signup").css('opacity', '0.7');
-                $("#signup").css('cursor', 'unset');
-            }
-            else{
-                document.getElementById("signup").disabled = false;
-                $("#signup").css('opacity', '1');
-                $("#signup").css('cursor', 'pointer');
             }
         }
+
     }, 100);
 
 })

@@ -168,7 +168,7 @@
           <div class="sobre-mim-content content-perfil white-6 black-to-white">
             <hr class="color-verify sobre-hr" />
             <h1 class="title-content-config black-to-white">
-              Mais sobre mim...
+              Um pouco sobre mim...
             </h1>
             <div class="div-info-perfil">
               <p class="bio black-to-white"></p>
@@ -176,7 +176,7 @@
               <button class="alterar btnPerfil">Alterar biografia</button>
             </div>
             <h1 class="title-content-config black-to-white">
-              Suas publicações...
+              Publicações...
             </h1>
             <div
               class="div-scroll div-scroll-sobre"
@@ -189,9 +189,7 @@
               Confira as suas curtidas...
             </h1>
             <div class="div-scroll div-scroll-curtidas">
-              <div class="slide__content" id="serv-container-prof">
-                
-              </div>
+              <div class="slide__content" id="serv-container-prof"></div>
             </div>
           </div>
           <div class="salvos-content content-perfil white-6 black-to-white">
@@ -3907,7 +3905,9 @@ export default {
 
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/Usuarios/RedirectToPostBio/"+ encodeURI(jsonInput),
+        url:
+          "https://localhost:5001/api/Usuarios/RedirectToPostBio/" +
+          encodeURI(jsonInput),
         data: jsonInput,
         contentType: "application/json",
         success: function() {
@@ -4115,7 +4115,10 @@ export default {
                   }
 
                   $("#obra-prof-name-link-" + index).text(result.nome);
-                  $("#obra-prof-name-link-" + index).attr('href','/#/perfil/'+result.userName);
+                  $("#obra-prof-name-link-" + index).attr(
+                    "href",
+                    "/#/perfil/" + result.userName
+                  );
 
                   if (result.bio.length > 90) {
                     $("#obra-prof-bio-" + index).text(
@@ -4151,9 +4154,9 @@ export default {
         }
       });
     },
-    getServicos(idUser){
+    getServicos(idUser) {
       $.ajax({
-        url: "https://localhost:5001/api/Redirect/AllServicosUser/"+idUser,
+        url: "https://localhost:5001/api/Redirect/AllServicosUser/" + idUser,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -4178,13 +4181,16 @@ export default {
               '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
             conteudoDiv +=
               '<h3 class="masonry-title">' +
-              item.nome.split('+').join(' ') +
+              item.nome.split("+").join(" ") +
               '</h3><a href="#" id="name-prof-link-on-serv-' +
               index +
               '" class="name-of-prof-link on-2-link"></a>';
             conteudoDiv +=
               '<p class="masonry-description">' +
-              item.descricao.substring(0, 320).split('+').join(' ') +
+              item.descricao
+                .substring(0, 320)
+                .split("+")
+                .join(" ") +
               thereismore +
               "</p></div></div>";
             var idUser = item.idUsuario;
@@ -4197,7 +4203,9 @@ export default {
               contentType: "application/json",
               success: function(result) {
                 if (result.idUsuario != 0) {
-                  $("#name-prof-link-on-serv-" + index).text(result.nome.split('+').join(' '));
+                  $("#name-prof-link-on-serv-" + index).text(
+                    result.nome.split("+").join(" ")
+                  );
                   $("#name-prof-link-on-serv-" + index).attr(
                     "href",
                     "/#/perfil/" + result.userName
@@ -4232,13 +4240,22 @@ export default {
         error: function() {
           $("body").removeClass("loading");
           $("#load-modal").fadeOut();
-          
         }
       });
     }
   },
   mounted() {
     this.verificarCampos();
+    var user = document.URL.toString().split("/")[5];
+    if (
+      localStorage.userName.toString() != user &&
+      typeof user != "undefined"
+    ) {
+      $(".configuracoes").remove();
+      $(".link-ico").remove();
+      $(".modal-form").remove();
+      $(".alterar").remove();
+    }
   },
   beforeCreate() {
     if (window.$cookies.isKey("user_cadastro")) {
@@ -4406,77 +4423,46 @@ export default {
             if (status == "success") {
               var result = $.parseJSON(jqXHR.responseText);
               id = jqXHR.responseText;
-              if(parseInt(id) != 0){
-              $.ajax({
-                type: "GET",
-                dataType: "json",
-                contentType: "application/json",
-                url: "https://localhost:5001/api/Usuarios/" + id,
-                complete: function(jqXHR, status) {
-                  if (status == "success") {
-                    var result = $.parseJSON(jqXHR.responseText);
-                    $("#name").val(result.nome + "");
-                    $("#user").val(result.userName + "");
-                    $("#email").val(result.email + "");
+              if (parseInt(id) != 0) {
+                $.ajax({
+                  type: "GET",
+                  dataType: "json",
+                  contentType: "application/json",
+                  url: "https://localhost:5001/api/Usuarios/" + id,
+                  complete: function(jqXHR, status) {
+                    if (status == "success") {
+                      var result = $.parseJSON(jqXHR.responseText);
+                      $("#name").val(result.nome + "");
+                      $("#user").val(result.userName + "");
+                      $("#email").val(result.email + "");
 
-                    if ((result.foto + "").length > 10) {
-                      $("#user-prof-image").val(result.foto);
-                      $("#user-prof-image").css("display", "block");
-                      $(".prof-user-letter").css("display", "none");
-                      $("#user-let-img").css("display", "none");
-                      $(".hexcolor").css("display", "none");
-                      $(".img-profile").attr("src", result.foto);
-                      $(".color-holder").css("display", "none");
-                      $(".bin").css("display", "block");
-                    } else {
-                      $("#user-prof-image").css("background", result.foto);
-                      $(".prof-user-letter").css("display", "block");
-                      $(".prof-user-letter").text(
-                        (result.nome + "").substring(0, 1)
-                      );
-                      $("#user-prof-image").css("display", "none");
-                      $("#user-let-img").css("display", "block");
-                      $(".zmdi.zmdi-palette").fadeIn();
-                      $("#hexcolor").fadeIn();
-                      $(".default-prof-user").empty();
-                      var firstLet = null;
-                      firstLet = $("#name")
-                        .val()
-                        .charAt(0);
-                      firstLet = firstLet.toUpperCase();
-                      $(".bin").css("display", "none");
-                      $("#user-let-img").css("display", "block");
-                      $(".user-pic").css("background-color", "result.foto");
-                      $(".user-pic").append(
-                        '<span class="main-prof-ltr">' +
-                          result.nome.substring(0, 1) +
-                          "</span>"
-                      );
-                      $(".img-profile").css("display", "none");
-                      $(".hexcolor").css("display", "block");
-                      $(".color-holder").css("display", "block");
-                      $("#user-let-img").html(
-                        "<p class='prof-user-letter'>" + firstLet + "</p>"
-                      );
-                      $(".signup-image").css("margin-top", 0);
-                      $("#user-let-img").css("margin-bottom", "60px");
-                    }
-                    $(".name-user").text(result.nome + "");
-                    $(".user").text("@" + result.userName);
-                    /*$(".seguindo").text("Seguindo: "+ result.seguindo.length);
+                      if ((result.foto + "").length > 10) {
+                        $(".img-profile").attr("src", result.foto);
+                      } else {
+                        $(".user-pic").css("background-color", "result.foto");
+                        $(".user-pic").append(
+                          '<span class="main-prof-ltr">' +
+                            result.nome.substring(0, 1) +
+                            "</span>"
+                        );
+                        $(".img-profile").css("display", "none");
+                      }
+                      $(".name-user").text(result.nome + "");
+                      $(".user").text("@" + result.userName);
+                      /*$(".seguindo").text("Seguindo: "+ result.seguindo.length);
                     $(".seguidores").text("Seguidores: "+ result.seguidores.length);
                     /*$(".publicacoes").text("Publicações: "+ 10);*/
-                    $(".bio").text(result.bio);
-                    $(".biografia").text(result.biografia);
-                  } else {
-                    location.href = "/#/error";
+                      $(".bio").text(result.bio);
+                      $(".biografia").text(result.biografia);
+                    } 
+                    else {
+                      location.href = "/#/error";
+                    }
                   }
-                }
-              });       
-              this.getPublicacoes(id);
-              this.getServicos(id);
-              }
-              else{
+                });
+                this.getPublicacoes(id);
+                this.getServicos(id);
+              } else {
                 location.href = "/#/userNotFound";
               }
             } else {
