@@ -340,12 +340,12 @@
                           id="myInput"
                           required
                         />
-                        <a class="sel-cat">About</a>
-                        <a class="sel-cat">Base</a>
-                        <a class="sel-cat">Blog</a>
-                        <a class="sel-cat">Contact</a>
-                        <a class="sel-cat">Custom</a>
-                        <a class="sel-cat">Support</a>
+                        <a class="sel-cat">Body Art</a>
+                        <a class="sel-cat">Concept Art</a>
+                        <a class="sel-cat">B&W</a>
+                        <a class="sel-cat">Editorial</a>
+                        <a class="sel-cat">Design</a>
+                        <a class="sel-cat">Product Design</a>
                         <a class="sel-cat">Tools</a>
                       </div>
                     </div>
@@ -529,12 +529,12 @@
                           placeholder="Search.."
                           id="myInput-serv"
                         />
-                        <a class="sel-cat">About</a>
-                        <a class="sel-cat">Base</a>
-                        <a class="sel-cat">Blog</a>
-                        <a class="sel-cat">Contact</a>
-                        <a class="sel-cat">Custom</a>
-                        <a class="sel-cat">Support</a>
+                        <a class="sel-cat">Body Art</a>
+                        <a class="sel-cat">Concept Art</a>
+                        <a class="sel-cat">B&W</a>
+                        <a class="sel-cat">Editorial</a>
+                        <a class="sel-cat">Design</a>
+                        <a class="sel-cat">Product Design</a>
                         <a class="sel-cat">Tools</a>
                       </div>
                     </div>
