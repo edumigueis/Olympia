@@ -16,7 +16,7 @@
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 30px;
-  min-height: 700px;
+  min-height: 300px;
 }
 
 .obra-user-service-post-content{
@@ -249,7 +249,6 @@
   margin-left: 40px;
   display: flex;
   transition: all 0.3s;
-  display: none;
 }
 .title-routes.title-destaques {
   display: flex !important;

@@ -588,27 +588,26 @@
           <div class="slider__slide" data-slide="3">
             <div class="bg"></div>
             <div class="container-aulas-search" id="serv-res-wrapper">
-              <!--<a href="/#/detalhes" class="link-route">
+              <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
-                    <img src="a" class="img-destaque" />
+                    <img src="https://www.mokaclube.com.br/wp-content/uploads/2019/09/latteart.png" class="img-destaque" />
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
                       <h1 class="title-obra-destaque title-obra-post-service">
-                        "El Cafesssss ssstán"
+                        "El Cafe Making"
                       </h1>
                     </div>
                     <div class="inline-div inline-div-obra-post-service">
                       <h1 class="pessoa-obra-destaque pessoa-obra-post-service">
-                        por Célio Lima Barbosasdddd sdsdsdsdsdsd ddddddddddsd
-                        sdsdsdsdsds
+                        por Luana Farias
                       </h1>
                     </div>
                   </div>
                 </div>
               </a>
-              <a href="/#/detalhes" class="link-route">
+              <!--<a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
                     <img src="a" class="img-destaque" />
@@ -736,6 +735,27 @@ export default {
         }
       }
     },
+    fillRoutes() {
+      var routes = [
+        "Sobre",
+        "Ajuda",
+        "Perfil",
+        "Sugestoes",
+        "FeedBack",
+        "Eventos",
+        "Artes"
+      ];
+      $(".title-routes").css("display", "flex");
+      for (var i = 0; i < routes.length; i++) {
+          var contDiv =
+            '<a href="/#/' +
+            routes[i] +
+            '" class="link-route"><div class="5-route route"><h1 class="title-route">' +
+            routes[i] +
+            '</h1><div class="img-wp"><div class="arrow"></div></div></div></a>';
+          $("#routes-wrapper").append(contDiv);
+      }
+    },
     pesquisar() {
       this.searchRoutes($("#search").val());
     },
@@ -759,7 +779,7 @@ export default {
       this.status = "obra";
       var key = $("#search").val();
       if (key == "") return;
-
+      $("#obra-res-wrapper").html("");
       $.ajax({
         type: "GET",
         url: "https://localhost:5001/api/redirect/SearchObra/" + key,
@@ -824,6 +844,8 @@ export default {
       this.status = "serv";
       var key = $("#search").val();
       if (key == "") return;
+
+      $("#serv-res-wrapper").html("");
       $.ajax({
         type: "GET",
         url: "https://localhost:5001/api/redirect/SearchServico/" + key,
@@ -888,7 +910,7 @@ export default {
       this.status = "user";
       var key = $("#search").val();
       if (key == "") return;
-
+      $("#user-res-wrapper").html("");
       $.ajax({
         type: "GET",
         url: "https://localhost:5001/api/Redirect/SearchUser/" + key,
@@ -933,7 +955,7 @@ export default {
       if (key == "") return;
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/redirect/searchPost/" + key,
+        url: "https://localhost:5001/api/redirect/searchPublicacao/" + key,
         contentType: "application/json",
         success: function(data) {
           jQuery.each(data, function(index, item) {
@@ -941,7 +963,7 @@ export default {
               '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="' +
               item[4] +
               '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-              item[2].substring(0, 50) +
+              item[2].substring(0, 20) +
               "..." +
               '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
               index +
@@ -976,6 +998,9 @@ export default {
         dataType: "json"
       });
     }
+  },
+  mounted(){
+    this.fillRoutes();
   },
   beforeCreate() {
     if (window.$cookies.isKey("user_cadastro")) {
