@@ -16,7 +16,7 @@
         <div class="img-header">
           <div class="img-wrap dark-img-wrap">
             <img
-              src="https://www.moma.org/d/assets/W1siZiIsIjIwMTkvMTAvMTAvaGxleXY0b2E4X2luMjQyN18wNzc5LmpwZyJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/in2427_0779.jpg?sha=2b029d673aa33a2e"
+              src="https://nozemaudio.com/static/172d1adc92e723ec28d7e88cf7ee26f4/14dee/_dsc0774.jpg"
               class="img-header-proper"
             />
           </div>

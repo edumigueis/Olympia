@@ -72,7 +72,7 @@ button:focus {
   margin-top: 20px;
   border-radius: 16px;
 }
-.event-card-container:nth-child(4){
+.event-card-container:nth-child(1){
   display: none !important;
 }
 .card-table {
@@ -99,6 +99,7 @@ ul li {
 .event-image {
   max-width: 400px;
   opacity: 0.8;
+  min-height: 100%;
 }
 .image-mask-event {
   background-color: #aaa;

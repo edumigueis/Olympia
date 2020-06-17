@@ -680,7 +680,7 @@
             <div class="bubble x20"></div>
           </div>
         </section>
-        <div class="success-msg">Post feio com sucesso ;)</div>
+        <div class="success-msg">Post feito com sucesso ;)</div>
         <meu-small-footer></meu-small-footer>
       </div>
     </div>
@@ -890,11 +890,11 @@ export default {
                 contentType: "application/json",
                 success: function() {
                   $(".success-msg").fadeIn();
-                  setTimeout(function() {
-                    $(".success-msg").animate({ left: -300 });
-                    $(".success-msg").fadeOut();
-                  }, 4000);
-                  $(".success-msg").css("left", "40px");
+            setTimeout(function() {
+              $(".success-msg").animate({ left: -300 });
+              $(".success-msg").fadeOut();
+            }, 4000);
+            $(".success-msg").css("left", "40px");
                 },
                 fail: function() {
                   $("#small-footer").css("margin-bottom", "-100px");
@@ -905,6 +905,12 @@ export default {
                 dataType: "json"
               });
             }
+            $(".success-msg").fadeIn();
+            setTimeout(function() {
+              $(".success-msg").animate({ left: -300 });
+              $(".success-msg").fadeOut();
+            }, 4000);
+            $(".success-msg").css("left", "40px");
           }
         },
         fail: function() {
@@ -1054,6 +1060,12 @@ export default {
                 dataType: "json"
               });
             }
+            $(".success-msg").fadeIn();
+            setTimeout(function() {
+              $(".success-msg").animate({ left: -300 });
+              $(".success-msg").fadeOut();
+            }, 4000);
+            $(".success-msg").css("left", "40px");
           }
         },
         fail: function() {

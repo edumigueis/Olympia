@@ -345,7 +345,7 @@
       </div>
 
       <div id="events-container" class="white-6">
-        <div
+        <!--<div
           class="event-card-container border-black"
           id="first-card-container"
         >
@@ -464,7 +464,7 @@
               </div>
             </li>
           </ul>
-        </div>
+        </div>-->
       </div>
       <meu-footer></meu-footer>
       <meu-loading></meu-loading>
@@ -517,7 +517,7 @@ export default {
               item.idEvento +
               '" src=""/></div></div></li>';
             conteudoDiv +=
-              '<div class="btn-wrap"><a href="#" class="know-more-btn"><span class="know-more-btn-inner">Saber Mais</span></a></div><li class="card-item-2 white"><div class="event-date-container"><p class="expo-name">' +
+              '<div class="btn-wrap"><a href="/#/evento/'+item.idEvento+'" class="know-more-btn" ><span class="know-more-btn-inner">Saber Mais</span></a></div><li class="card-item-2 white"><div class="event-date-container"><p class="expo-name">' +
               item.nome +
               '</p><p class="date">' +
               item.dataEvento.substring(0, 10) +

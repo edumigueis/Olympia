@@ -9,7 +9,7 @@ namespace API_olympia.Models
 
         [Required]
         [StringLength(40, ErrorMessage = "O Nome não deve ter menos do que 5 caracteres e mais do que 40 caracteres.", MinimumLength = 3)]
-        [RegularExpression("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$", ErrorMessage = "Nome deve ter ao menos um espaço e só pode conter caracteres do tipo letra.")]
+        /*[RegularExpression("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$", ErrorMessage = "Nome deve ter ao menos um espaço e só pode conter caracteres do tipo letra.")]*/
         public string Nome { get; set; }
 
         [Required]

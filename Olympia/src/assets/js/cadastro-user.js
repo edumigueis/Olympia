@@ -348,7 +348,7 @@ setInterval(() => {
           }
 
           if (isSelImg == true) {
-            valorFoto = LZString.compress(selectedImage);
+            valorFoto = selectedImage;
           } else {
             valorFoto = codeHex;
           }
@@ -371,12 +371,14 @@ setInterval(() => {
 
           jaFoiPostCadUser = true;
 
+          console.log(jsonInput);
+
           $.ajax({
             type: "POST",
             data: jsonInput,
             dataType: "json",
             contentType: "application/json",
-            url: "https://localhost:5001/api/Redirect/Cadastro",
+            url: "https://localhost:5001/api/Usuarios",
             complete: function(code) {
               if (code.status === 200) {
                 window.$cookies.set("user_cadastro", "", Infinity);
