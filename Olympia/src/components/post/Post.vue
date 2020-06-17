@@ -713,7 +713,6 @@ export default {
   methods: {
     postInsp() {
       event.preventDefault();
-      alert("uhu");
       var valorFoto;
 
       if ($("#msg").val() == "") {
@@ -734,7 +733,7 @@ export default {
         foto: "" + valorFoto,
         dataPost: finalDate
       };
-      alert(localStorage.userId);
+
       var jsonInput = JSON.stringify(myObjectPubli);
 
       jaFoiPostCadUser = true;
@@ -745,7 +744,6 @@ export default {
         contentType: "application/json",
         complete: function(code) {
           if (code.status === 200) {
-            alert("deu certo");
             $(".success-msg").fadeIn();
             setTimeout(function() {
               $(".success-msg").animate({ left: -300 });

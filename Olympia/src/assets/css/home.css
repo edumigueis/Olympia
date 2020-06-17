@@ -3884,7 +3884,7 @@ figure.snip1321:hover figcaption{
   z-index: 2500;
 }
 .prof-name-det {
-  font-size: 1.6em;
+  font-size: 1.33em;
   padding-top: 10px;
   margin-left: 20px;
   letter-spacing: 0.1em;
@@ -3896,14 +3896,17 @@ figure.snip1321:hover figcaption{
   cursor: pointer;
 }
 .prof-name-det:hover {
-  font-size: 1.65em;
+  font-size: 1.35em;
   opacity: 0.82;
   color: #000;
+}
+.img-serv{
+  max-height: 450px;
 }
 .prof-bio-det {
   font-size: 1em;
   position: absolute;
-  padding-top: 15px;
+  padding-top: 12px;
   margin-left: 102px;
   margin-top: 34px;
   letter-spacing: 0.1em;

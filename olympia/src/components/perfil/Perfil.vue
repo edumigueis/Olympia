@@ -101,14 +101,14 @@
               </div>
             </div>
           </div>
-          <main ontouchstart class="tab-bar" style="width: 40vw !important">
+          <main ontouchstart class="tab-bar" style="width: 50vw !important">
             <nav class="tab-link">
-              <a class="tab-link-a sobre-mim" style="width: 33%!important"
+              <a class="tab-link-a sobre-mim" style="width: 25%!important"
                 >Sobre mim</a
               >
               <a class="tab-link-a curtidas">Aulas e Workshops</a>
-              <a class="tab-link-a salvos" style="display: none">Salvos</a>
-              <a class="tab-link-a configuracoes" style="width: 33%!important"
+              <a class="tab-link-a salvos">Obras</a>
+              <a class="tab-link-a configuracoes" style="width: 25%!important"
                 >Configurações</a
               >
               <hr />
@@ -175,18 +175,18 @@
               <p class="biografia black-to-white"></p>
               <button class="alterar btnPerfil">Alterar biografia</button>
             </div>
-            <h1 class="title-content-config black-to-white">
+            <h1 class="title-content-config black-to-white" style="display: none !important">
               Publicações...
             </h1>
-            <div
+            <div style="display: none !important"
               class="div-scroll div-scroll-sobre"
-              id="pub-container-prof"
+              id="post-wrapper"
             ></div>
           </div>
           <div class="curtidas-content content-perfil white-6 black-to-white">
             <hr class="color-verify curtidas-hr" />
             <h1 class="title-content-config black-to-white">
-              Confira as suas curtidas...
+              Confira as suas aulas...
             </h1>
             <div class="div-scroll div-scroll-curtidas">
               <div class="slide__content" id="serv-container-prof"></div>
@@ -195,72 +195,12 @@
           <div class="salvos-content content-perfil white-6 black-to-white">
             <hr class="color-verify salvos-hr" />
             <h1 class="title-content-config black-to-white">
-              Publicações salvas... (só você pode ver isto)
+              Confira suas Obras...
             </h1>
             <div class="div-scroll div-scroll-salvos">
-              <div class="slide__content">
-                <div class="masonry-item">
-                  <div class="masonry-content">
-                    <div class="prof-cont-feed white-7">
-                      <div class="prof-img-cont">
-                        <img
-                          class="prof-img-prop"
-                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                        />
-                      </div>
-                      <a href="/#/perfil" class="prof-name-det black-to-white"
-                        >Luna Dias</a
-                      >
-                      <div class="prof-bio-det text-gray">
-                        What would our lives be without art?
-                      </div>
-                    </div>
-                    <div class="post-img-cont">
-                      <a href="/#/detalhes">
-                        <figure class="snip1321" id="0post-sal">
-                          <div class="after"></div>
-                          <img
-                            src="https://i.pinimg.com/originals/bd/1b/82/bd1b82378029dfc8c235015aba800cd5.jpg"
-                            alt="sq-sample26"
-                          />
-                          <figcaption class="figcaption">
-                            <i class="fas fa-arrow-right"></i>
-                            <div class="name-of-prof">
-                              <a href="/#/perfil" class="name-of-prof-link"
-                                >Luna Dias</a
-                              >
-                            </div>
-                            <h2>Outter Seas</h2>
-                            <div class="categories-cont-on-feed">
-                              <div class="cat-on-feed paint">Pintura</div>
-                              <div class="cat-on-feed paint">Tinta Óleo</div>
-                              <div class="cat-on-feed paint">Arte Moderna</div>
-                              <div class="cat-on-feed pers">Oceano</div>
-                              <div class="cat-on-feed pers">Azul</div>
-                              <div class="cat-on-feed paint">Brushed</div>
-                              <div class="cat-on-feed pers">
-                                Fantasy Landscape
-                              </div>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      </a>
-                      <div class="interact-container">
-                        <div class="stage stage-btn">
-                          <button class="trigger">ver mais...</button>
-                        </div>
-                        <div class="stage star-stage">
-                          <a class="magic">
-                            <i class="fas fa-star"></i>
-                          </a>
-                        </div>
-                        <div class="stage heart-stage">
-                          <div class="heart"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="slide__content" id="pub-container-prof">
+                
+                       
               </div>
             </div>
           </div>
@@ -3619,11 +3559,11 @@
                       </div>
                       <div class="form-group form-button">
                         <button
-                          type="submit"
                           name="signup"
                           class="form-submit"
                           id="submit-bio"
                           v-on:click="altBio()"
+                          style="outline: none"
                         >
                           Salvar
                         </button>
@@ -4154,6 +4094,81 @@ export default {
         }
       });
     },
+    getPosts(idUser) {
+      $.ajax({
+        url: "https://localhost:5001/api/redirect/AllPublicacoesUser/" + idUser,
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        success: function(data) {
+          jQuery.each(data, function(index, item) {
+            console.log(item);
+              jQuery.each(data, function(index, item) {
+            var conteudoDiv =
+              '<div class="insp-item"><div class="insp-content white-7"><div class="prof-cont-feed white-7 prof-insp"><div class="prof-img-cont"><img class="prof-img-prop" id="prof-inner-prop-img-' +
+              index +
+              '" src="" /></div><a id="prof-name-link-' +
+              index +
+              '" href="/#/perfil" class="prof-name-det black-to-white"></a><div id="prof-bio-det-' +
+              index +
+              '" class="prof-bio-det text-gray"></div></div>';
+            conteudoDiv +=
+              '<div class="insp-post-cont black-to-white">' +
+              item[2].replace("+", " ") +
+              '</div> <img src="' +
+              item[4] +
+              '" class="img-insp"/>';
+            conteudoDiv +=
+              '<div class="interact-container insp-inte"><div class="stage insp-stage"><div class="heart"></div></div> </div></div></div>';
+            $("#post-wrapper").append(conteudoDiv);
+
+            $.ajax({
+              url:
+                "https://localhost:5001/api/redirect/Usuario/" + item[1],
+              type: "GET",
+              dataType: "json",
+              contentType: "application/json",
+              success: function(result) {
+                if (result.foto.length > 20) {
+                  $("#prof-inner-prop-img-" + index).attr(
+                    "src",
+                    result.foto + ""
+                  );
+                } else {
+                  $("#prof-inner-prop-img-" + index)
+                    .parent()
+                    .css("background-color", result.foto);
+                  $("#prof-inner-prop-img-" + index)
+                    .parent()
+                    .append(
+                      '<span class="letter-prof">' +
+                        result.nome.substring(0, 1) +
+                        "</span>"
+                    );
+                  $("#artist-profile-pic").attr("src", "");
+                }
+
+                $("#prof-name-link-" + index).attr(
+                  "href",
+                  "/#/perfil/" + result.idUsuario
+                );
+                $("#prof-name-link-" + index).text(
+                  result.nome.replace("+", " ") + ""
+                );
+                $("#prof-bio-det-" + index).text(
+                  result.bio.replace("+", " ") + ""
+                );
+                $("#load-modal").fadeOut();
+              }
+            });
+          });
+          });
+        },
+        error: function() {
+          
+        }
+      });
+    },
     getServicos(idUser) {
       $.ajax({
         url: "https://localhost:5001/api/Redirect/AllServicosUser/" + idUser,
@@ -4163,7 +4178,7 @@ export default {
         success: function(data) {
           jQuery.each(data, function(index, item) {
             var thereismore;
-            if (item.descricao.length > 320) {
+            if (item[3].length > 320) {
               thereismore = "...";
             } else {
               thereismore = "";
@@ -4173,7 +4188,7 @@ export default {
             conteudoDiv +=
               '<a class="link-to-serv" href="' +
               "/#/servico/" +
-              item.idServico +
+              item[0] +
               '"><img id="img-serv-' +
               index +
               '" src="a" class="img-serv"/></a>';
@@ -4181,23 +4196,22 @@ export default {
               '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
             conteudoDiv +=
               '<h3 class="masonry-title">' +
-              item.nome.split("+").join(" ") +
+              item[2].split("+").join(" ") +
               '</h3><a href="#" id="name-prof-link-on-serv-' +
               index +
               '" class="name-of-prof-link on-2-link"></a>';
             conteudoDiv +=
               '<p class="masonry-description">' +
-              item.descricao
+              item[3]
                 .substring(0, 320)
                 .split("+")
                 .join(" ") +
               thereismore +
               "</p></div></div>";
-            var idUser = item.idUsuario;
             $("#serv-container-prof").append(conteudoDiv);
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/Usuario/" + item.idUsuario,
+                "https://localhost:5001/api/redirect/Usuario/" + item[1],
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -4215,15 +4229,12 @@ export default {
                 }
               },
               error: function() {
-                $("body").removeClass("loading");
-                $("#load-modal").fadeOut();
-                location.href = "/#/error";
               }
             });
             $.ajax({
               url:
                 "https://localhost:5001/api/redirect/FotosDoServico/" +
-                item.idServico,
+                item[0],
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -4268,6 +4279,7 @@ export default {
     if (document.URL.toString().length <= 31) {
       this.getPublicacoes(localStorage.userId);
       this.getServicos(localStorage.userId);
+      this.getPosts(localStorage.userId);
       $.ajax({
         type: "GET",
         dataType: "json",
@@ -4348,6 +4360,7 @@ export default {
           "";
         this.getPublicacoes(localStorage.userId);
         this.getServicos(localStorage.userId);
+        this.getPosts(localStorage.userId);
         $.ajax({
           type: "GET",
           dataType: "json",
@@ -4462,6 +4475,7 @@ export default {
                 });
                 this.getPublicacoes(id);
                 this.getServicos(id);
+                this.getPosts(id);
               } else {
                 location.href = "/#/userNotFound";
               }

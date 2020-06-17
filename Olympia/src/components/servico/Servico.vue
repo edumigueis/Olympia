@@ -172,7 +172,6 @@ export default {
     getMarkers() {
       var url = window.location.href;
       var codigo = url.substring(32);
-      alert(codigo);
       $.ajax({
         url: "https://localhost:5001/api/redirect/Servico/" + codigo,
         type: "GET",
@@ -183,7 +182,7 @@ export default {
           $("#art-name").text(field.nome.split('+').join(' '));
           $("#page-det-name").text(field.nome.split('+').join(' '));
           $.ajax({
-            url: "https://localhost:5001/api/Redirect/Usuario/" + codigo,
+            url: "https://localhost:5001/api/Redirect/Usuario/" + field.idUsuario,
             type: "GET",
             dataType: "json",
             contentType: "application/json",
@@ -242,7 +241,6 @@ export default {
           //Add these parameters to display the required response
           console.log(thrownError);
           $("#load-modal").fadeOut();
-          alert("oops");
         }
       });
     }

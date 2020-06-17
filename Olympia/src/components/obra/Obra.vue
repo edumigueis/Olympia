@@ -216,7 +216,6 @@ export default {
           //Add these parameters to display the required response
           console.log(thrownError);
           $("#load-modal").fadeOut();
-          alert("oops");
         }
       });
       $.ajax({
@@ -240,7 +239,6 @@ export default {
           //Add these parameters to display the required response
           console.log(thrownError);
           $("#load-modal").fadeOut();
-          alert("oops");
         }
       });
     }

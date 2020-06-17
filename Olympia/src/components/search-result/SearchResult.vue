@@ -27,6 +27,7 @@
             id="search"
             autocomplete="off"
             v-on:keyup="pesquisar()"
+            v-on:keyup.enter="btnSearch()"
           />
           <div class="search-button center-position dark-search-icon">
             <div class="search-icon"></div>
@@ -234,10 +235,7 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img
-                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                          class="img-destaque"
-                        />
+                        <img src="a" class="img-destaque" />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -255,10 +253,7 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img
-                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                          class="img-destaque"
-                        />
+                        <img src="a" class="img-destaque" />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -278,10 +273,7 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img
-                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                          class="img-destaque"
-                        />
+                        <img src="a" class="img-destaque" />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -299,10 +291,7 @@
                   <a href="/#/detalhes" class="link-route">
                     <div class="destaque-content">
                       <div class="flex-image-destaque">
-                        <img
-                          src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                          class="img-destaque"
-                        />
+                        <img src="a" class="img-destaque" />
                       </div>
                       <div class="info-obra-destaque">
                         <div class="inline-div">
@@ -399,10 +388,7 @@
               <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
-                    <img
-                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                      class="img-destaque"
-                    />
+                    <img src="a" class="img-destaque" />
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
@@ -422,10 +408,7 @@
               <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
-                    <img
-                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                      class="img-destaque"
-                    />
+                    <img src="a" class="img-destaque" />
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
@@ -444,10 +427,7 @@
               <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
-                    <img
-                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                      class="img-destaque"
-                    />
+                    <img src="a" class="img-destaque" />
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
@@ -466,10 +446,7 @@
               <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
-                    <img
-                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                      class="img-destaque"
-                    />
+                    <img src="a" class="img-destaque" />
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
@@ -494,10 +471,7 @@
               <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
-                    <img
-                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                      class="img-destaque"
-                    />
+                    <img src="a" class="img-destaque" />
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
@@ -517,10 +491,7 @@
               <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
-                    <img
-                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                      class="img-destaque"
-                    />
+                    <img src="a" class="img-destaque" />
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
@@ -539,10 +510,7 @@
               <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
-                    <img
-                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                      class="img-destaque"
-                    />
+                    <img src="a" class="img-destaque" />
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
@@ -561,10 +529,7 @@
               <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
-                    <img
-                      src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG"
-                      class="img-destaque"
-                    />
+                    <img src="a" class="img-destaque" />
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
@@ -632,7 +597,7 @@ export default {
         "Artes"
       ];
       $("#routes-wrapper").empty();
-      $(".title-routes").css('display', 'flex');
+      $(".title-routes").css("display", "flex");
       for (var i = 0; i < routes.length; i++) {
         if (routes[i].toLowerCase().includes(key.toLowerCase())) {
           var contDiv =
@@ -647,6 +612,8 @@ export default {
     },
     pesquisar() {
       this.searchRoutes($("#search").val());
+    },
+    btnSearch() {
       switch (this.status) {
         case "obra":
           this.searchObras();
@@ -663,18 +630,62 @@ export default {
       }
     },
     searchObras() {
-      var key = $("#search").val();
       this.status = "obra";
+      var key = $("#search").val();
+      if (key == "") return;
+
       $.ajax({
         type: "GET",
         url: "https://localhost:5001/api/pesquisaObra/" + key,
-        data: jsonInput,
         contentType: "application/json",
         success: function(data) {
-          var contPost =
-            '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="'+data.imagem+'" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-            data.nome +
-            '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service">por '+data.nomeUser+'</h1></div></div></div></a>';
+          jQuery.each(data, function(index, item) {
+            var contPost =
+              '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="" class="img-destaque" id="repr-img-obra-' +
+              index +
+              '" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+              data.nome +
+              '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
+              index +
+              '">por space</h1></div></div></div></a>';
+            $.ajax({
+              type: "GET",
+              url:
+                "https://localhost:5001/api/redirect/usuario/" + data.idUsuario,
+              data: jsonInput,
+              contentType: "application/json",
+              success: function(res) {
+                $("#by-person-identifier-" + index).text(
+                  "por " + res.nome.split("+").join(" ")
+                );
+              },
+              fail: function(error) {
+                console.log(error);
+                var erro =
+                  '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+                $(".insp-post-cont").append(erro);
+              },
+              dataType: "json"
+            });
+            $.ajax({
+              type: "GET",
+              url:
+                "https://localhost:5001/api/redirect/FotosDaObra/" +
+                data.idObra,
+              data: jsonInput,
+              contentType: "application/json",
+              success: function(resFoto) {
+                $("repr-img-obra-" + index).attr("src", resFoto[0]);
+              },
+              fail: function(error) {
+                console.log(error);
+                var erro =
+                  '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+                $(".insp-post-cont").append(erro);
+              },
+              dataType: "json"
+            });
+          });
         },
         fail: function(error) {
           console.log(error);
@@ -686,18 +697,61 @@ export default {
       });
     },
     searchServ() {
-      var key = $("#search").val();
       this.status = "serv";
+      var key = $("#search").val();
+      if (key == "") return;
       $.ajax({
         type: "GET",
         url: "https://localhost:5001/api/pesquisaServ/" + key,
-        data: jsonInput,
         contentType: "application/json",
         success: function(data) {
-          var contPost =
-            '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-            data.nome +
-            '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service">por Célio Lima Barbosa</h1></div></div></div></a>';
+          jQuery.each(data, function(index, item) {
+            var contPost =
+              '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="' +
+              data.foto +
+              '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+              data.nome +
+              '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
+              index +
+              '">por space</h1></div></div></div></a>';
+            $.ajax({
+              type: "GET",
+              url:
+                "https://localhost:5001/api/redirect/usuario/" + data.idUsuario,
+              data: jsonInput,
+              contentType: "application/json",
+              success: function(res) {
+                $("#by-person-identifier-" + index).text(
+                  "por " + res.nome.split("+").join(" ")
+                );
+              },
+              fail: function(error) {
+                console.log(error);
+                var erro =
+                  '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+                $(".insp-post-cont").append(erro);
+              },
+              dataType: "json"
+            });
+            $.ajax({
+              type: "GET",
+              url:
+                "https://localhost:5001/api/redirect/FotosDoServico" +
+                data.idServico,
+              data: jsonInput,
+              contentType: "application/json",
+              success: function(resFoto) {
+                $("repr-img-obra-" + index).attr("src", resFoto[0]);
+              },
+              fail: function(error) {
+                console.log(error);
+                var erro =
+                  '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+                $(".insp-post-cont").append(erro);
+              },
+              dataType: "json"
+            });
+          });
         },
         fail: function(error) {
           console.log(error);
@@ -709,18 +763,25 @@ export default {
       });
     },
     searchUsers() {
-      var key = $("#search").val();
       this.status = "user";
+      var key = $("#search").val();
+      if (key == "") return;
+
       $.ajax({
         type: "GET",
         url: "https://localhost:5001/api/pesquisaUser/" + key,
-        data: jsonInput,
         contentType: "application/json",
         success: function(data) {
-          var contPost =
-            '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-            data.nome +
-            '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service">por Célio Lima Barbosa</h1></div></div></div></a>';
+          jQuery.each(data, function(index, item) {
+            var contPost =
+              '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="' +
+              data.foto +
+              '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+              data.nome +
+              '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-user">' +
+              data.bio +
+              "</h1></div></div></div></a>";
+          });
         },
         fail: function(error) {
           console.log(error);
@@ -732,18 +793,44 @@ export default {
       });
     },
     searchPosts() {
-      var key = $("#search").val();
       this.status = "post";
+      var key = $("#search").val();
+      if (key == "") return;
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/pesquisaPost/" + key,
+        url: "https://localhost:5001/api/redirect/pesquisaPost/" + key,
         data: jsonInput,
         contentType: "application/json",
         success: function(data) {
-          var contPost =
-            '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="https://imgix.bustle.com/uploads/image/2019/5/13/7eb4f03e-92c1-43e6-99ca-19a59dcc5b49-2t4a9501.JPG" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
-            data.nome +
-            '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service">por Célio Lima Barbosa</h1></div></div></div></a>';
+          jQuery.each(data, function(index, item) {
+            var contPost =
+              '<a href="/#/detalhes" class="link-route"><div class="destaque-content obra-user-service-post-content"><div class="flex-image-destaque"><img src="' +
+              data.foto +
+              '" class="img-destaque" /></div><div class="info-obra-destaque info-obra-post-service"><div class="inline-div inline-div-obra-post-service"><h1 class="title-obra-destaque title-obra-post-service">' +
+              data.nome +
+              '</h1></div><div class="inline-div inline-div-obra-post-service"><h1 class="pessoa-obra-destaque pessoa-obra-post-service" id="by-person-identifier-' +
+              index +
+              '">por space</h1></div></div></div></a>';
+            $.ajax({
+              type: "GET",
+              url:
+                "https://localhost:5001/api/redirect/usuario/" + data.idUsuario,
+              data: jsonInput,
+              contentType: "application/json",
+              success: function(res) {
+                $("#by-person-identifier-" + index).text(
+                  "por " + res.nome.split("+").join(" ")
+                );
+              },
+              fail: function(error) {
+                console.log(error);
+                var erro =
+                  '<p class="error">Algo deu errado com sua postagem. Tente novamente mais tarde.</p>';
+                $(".insp-post-cont").append(erro);
+              },
+              dataType: "json"
+            });
+          });
         },
         fail: function(error) {
           console.log(error);

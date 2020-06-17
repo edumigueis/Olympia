@@ -585,7 +585,9 @@
 .img-profile {
   width: 100%;
 }
-
+.img-serv{
+  max-height: 450px;
+}
 .info-user {
   width: 80%;
   text-align: center;
@@ -1406,6 +1408,31 @@ IMPLEMENTAÇÕES DE FEEDS-------------------------------------------------------
 }
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
   #pub-container-prof {
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  }
+}
+#post-wrapper {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  overflow: visible;
+  margin-left: calc(3vw - 11px);
+  margin-right: calc(3vw - 11px);
+  padding-top: 30px;
+  padding-left: 11px;
+  padding-right: 11px;
+  box-sizing: content-box;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  grid-auto-rows: 20px;
+}
+@media only screen and (max-width: 768px) {
+  #post-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(99%, 1fr));
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+  #post-wrapper {
     grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
   }
 }
