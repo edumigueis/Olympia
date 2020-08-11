@@ -22,18 +22,24 @@ namespace API_olympia.Controllers
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly Armazenador armazenador;
         public IRepository Repo { get; }
+        private Authorize auth;
+
         public AccountController(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IRepository repo, Armazenador armazenador)
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
             Repo = repo;
             this.armazenador = armazenador;
+            auth = new Authorize(armazenador);
         }
 
-        /*[CustomAuthorizeAttribute]*/
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             if (armazenador.StringValueNome != null)
             {
                 await HttpContext.SignOutAsync();

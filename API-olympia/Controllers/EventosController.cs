@@ -10,21 +10,29 @@ using System;
 
 namespace API_olympia.Controllers
 {
-    /*[CustomAuthorizeAttribute]*/
     [Route("api/[controller]")]
     [ApiController]
 
     public class EventosController : Controller
     {
         public IRepository Repo { get; }
-        public EventosController(IRepository repo)
+        public Armazenador Armazenador { get; set; }
+        private Authorize auth;
+
+        public EventosController(IRepository repo, Armazenador armazenador)
         {
+            Armazenador = armazenador;
+            auth = new Authorize(Armazenador);
             this.Repo = repo;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllEventosAsync();
@@ -39,6 +47,10 @@ namespace API_olympia.Controllers
         [HttpGet("{idEvento}")]
         public async Task<IActionResult> Get(int idEvento)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllEventosAsyncById(idEvento);
@@ -53,12 +65,15 @@ namespace API_olympia.Controllers
         [HttpPut("{idEvento}")]
         public async Task<IActionResult> put(int idEvento, Eventos model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var Evento = await this.Repo.GetAllEventosAsyncById(idEvento);
-                if (Evento == null) return NotFound(); //método do EF
+                if (Evento == null) return NotFound(); 
                 this.Repo.Update(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -74,12 +89,15 @@ namespace API_olympia.Controllers
         [HttpDelete("{idEvento}")]
         public async Task<IActionResult> delete(int idEvento)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var Evento = await this.Repo.GetAllEventosAsyncById(idEvento);
                 if (Evento == null) return NotFound();
                 this.Repo.Delete(Evento);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -95,10 +113,13 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Eventos model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 this.Repo.Add(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -114,6 +135,10 @@ namespace API_olympia.Controllers
         [HttpGet("Arte/{idArte}")]
         public async Task<IActionResult> GetAllObrasByUser(int idArte)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpAllEventosArte(idArte);

@@ -10,15 +10,23 @@ namespace API_olympia.Controllers
     public class AdminsController : Controller
     {
         public IRepository Repo { get; }
+        public Armazenador Armazenador { get; set; }
+        private Authorize auth;
 
-        public AdminsController(IRepository repo)
+        public AdminsController(IRepository repo, Armazenador armazenador)
         {
             this.Repo = repo;
+            Armazenador = armazenador;
+            auth = new Authorize(Armazenador);
         }   
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllAdminsAsync();
@@ -33,6 +41,10 @@ namespace API_olympia.Controllers
         [HttpGet("{idAdmin}")]
         public async Task<IActionResult> Get(int AdminsId)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllAdminsAsyncById(AdminsId);

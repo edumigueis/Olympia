@@ -1,19 +1,18 @@
-using System;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
 using API_olympia.Controllers;
 
 namespace API_olympia.Data
 {
-    [AttributeUsage(AttributeTargets.All)]
-    public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
+    public class Authorize
     {
         public Armazenador Armazenador { get; set; }
 
-        public async void OnAuthorization(AuthorizationFilterContext filterContext)
+        public Authorize(Armazenador armazenador) 
         {
-            var controller = new ArmazenadorController();
-            await controller.RedirectToGet();
+            Armazenador = armazenador;
+        }
+
+        public bool OnAuthorization()
+        {
 
             if (Armazenador.StringValueRoute != null)
             {
@@ -21,7 +20,7 @@ namespace API_olympia.Data
                     Armazenador.StringValueRoute.Equals("http://localhost:8080/"))
                 {
                     Armazenador.StringValueRoute = null;
-                    return;
+                    return true;
                 }
 
                 Armazenador.StringValueRoute = null;
@@ -32,16 +31,16 @@ namespace API_olympia.Data
             {
                 if (Armazenador.StringValueRole.Equals("Admin"))
                 {
-                    return;
+                    return true;
                 }
                 else
                 {
-                    filterContext.Result = new RedirectResult("/Home/Login");
+                    return false;
                 }
             }
             else
             {
-                filterContext.Result = new RedirectResult("/Home/Login");
+                return false;
             }
         }
 

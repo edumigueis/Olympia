@@ -10,20 +10,28 @@ using System.Linq;
 
 namespace API_olympia.Controllers
 {
-   /* [CustomAuthorizeAttribute]*/
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : Controller
     {
         public IRepository Repo { get; }
-        public UsuariosController(IRepository repo)
+        public Armazenador Armazenador { get; set; }
+        private Authorize auth;
+
+        public UsuariosController(IRepository repo, Armazenador armazenador)
         {
             this.Repo = repo;
+            Armazenador = armazenador;
+            auth = new Authorize(Armazenador);
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllUsuariosAsync();
@@ -38,6 +46,10 @@ namespace API_olympia.Controllers
         [HttpGet("{idUsuario}")]
         public async Task<IActionResult> Get(int idUsuario)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllUsuariosAsyncById(idUsuario);
@@ -52,6 +64,10 @@ namespace API_olympia.Controllers
         [HttpGet("RedirectToPost/{json}")]
         public async Task<IActionResult> RedirectToPost(string json)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 Usuarios usuario = JsonConvert.DeserializeObject<Usuarios>(json);
@@ -67,12 +83,15 @@ namespace API_olympia.Controllers
         [HttpPut("{idUsuario}")]
         public async Task<IActionResult> put(int idUsuario, Usuarios model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var Usuario = await this.Repo.GetAllUsuariosAsyncById(idUsuario);
-                if (Usuario == null) return NotFound(); //método do EF
+                if (Usuario == null) return NotFound(); 
                 this.Repo.Update(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -89,12 +108,15 @@ namespace API_olympia.Controllers
         [HttpDelete("{idUsuario}")]
         public async Task<IActionResult> delete(int idUsuario)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var Usuario = await this.Repo.GetAllUsuariosAsyncById(idUsuario);
                 if (Usuario == null) return NotFound();
                 this.Repo.Delete(Usuario);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -110,6 +132,10 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Usuarios model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 model.Senha = PasswordHasher.Hash(model.Senha);
@@ -130,6 +156,10 @@ namespace API_olympia.Controllers
         [HttpGet("Obra/{idObra}")]
         public async Task<IActionResult> GetUsuariobyObra(int idObra)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpUserObra(idObra);
@@ -144,6 +174,10 @@ namespace API_olympia.Controllers
         [HttpGet("Servico/{idServico}")]
         public async Task<IActionResult> GetUsuariobyServico(int idServico)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpUserServico(idServico);
@@ -158,6 +192,10 @@ namespace API_olympia.Controllers
         [HttpGet("Username/{username}")]
         public async Task<IActionResult> IsUserNameUsed(string username)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpExisteUsername(username);
@@ -172,6 +210,10 @@ namespace API_olympia.Controllers
         [HttpGet("IdByUserName/{username}")]
         public async Task<IActionResult> GetIdByUsername(string username)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpUserNameId(username);
@@ -186,6 +228,10 @@ namespace API_olympia.Controllers
         [HttpGet("RedirectToPostBio/{json}")]
         public async Task<IActionResult> RedirectToPostBio(string json)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 List<string> bio = JsonConvert.DeserializeObject<List<string>>(json);
@@ -201,6 +247,10 @@ namespace API_olympia.Controllers
         [HttpPost("MudarBio")]
         public async Task<IActionResult> postBio(List<string> bio)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 this.Repo.SpMudarBio(bio[0].ToString(), bio[1].ToString(), Convert.ToInt32(bio[2]));
@@ -215,6 +265,10 @@ namespace API_olympia.Controllers
         [HttpGet("RedirectToPostVerificarDados/{json}")]
         public async Task<IActionResult> RedirectToPostVerificarDados(string json)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var dados = json.Split(',').Select(item => item).ToList();
@@ -230,6 +284,10 @@ namespace API_olympia.Controllers
         [HttpPost("VerificarDados")]
         public async Task<IActionResult> postVerificarDados(List<string> dados)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 if (dados[0].Substring(0, 1).Equals("@"))
@@ -278,6 +336,10 @@ namespace API_olympia.Controllers
         [HttpGet("UserByLoginData/{info}")]
         public async Task<IActionResult> GetUserByLoginData(string info)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 if (info.Substring(0, 1).Equals("@"))
@@ -301,6 +363,10 @@ namespace API_olympia.Controllers
         [HttpGet("Biografia/{idUsuario}")]
         public async Task<IActionResult> GetBiografia(int idUsuario)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpBiografiaByIdUser(idUsuario);
@@ -316,6 +382,10 @@ namespace API_olympia.Controllers
         [HttpGet("Bio/{idUsuario}")]
         public async Task<IActionResult> GetBio(int idUsuario)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpBioByIdUser(idUsuario);
@@ -331,6 +401,10 @@ namespace API_olympia.Controllers
         [HttpGet("RedirectToPostAlterarConfig/{json}")]
         public async Task<IActionResult> RedirectToPostAlterarConfig(string json)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var dados = (IList<object>)JsonConvert.DeserializeObject<Configs>(json);
@@ -345,6 +419,10 @@ namespace API_olympia.Controllers
         [HttpPost("AlterarConfig")]
         public async Task<IActionResult> postAlterarConfig(IList<object> dados)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 this.Repo.SpAlterConfig(dados[0] + "",Convert.ToInt32(dados[1]));
@@ -359,6 +437,10 @@ namespace API_olympia.Controllers
         [HttpGet("Search/{key}")]
         public async Task<IActionResult> Search(string key)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpSearchUser(key);

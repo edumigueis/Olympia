@@ -8,26 +8,34 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace API_olympia.Controllers
 {
-   /* [CustomAuthorizeAttribute]*/
     [Route("api/[controller]")]
     [ApiController]
     public class SugestoesController : Controller
     {
         public IRepository Repo { get; }
-        public SugestoesController(IRepository repo)
+        public Armazenador Armazenador { get; set; }
+        private Authorize auth;
+
+        public SugestoesController(IRepository repo, Armazenador armazenador)
         {
             this.Repo = repo;
+            Armazenador = armazenador;
+            auth = new Authorize(Armazenador);
         }
 
         [HttpPut("{idSugestao}")]
         public async Task<IActionResult> put(int idSugestao, Sugestoes model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var sugestao = await this.Repo.GetAllSugestoesAsyncById(idSugestao);
-                if (sugestao == null) return NotFound(); //método do EF
+                if (sugestao == null) 
+                    return NotFound(); 
                 this.Repo.Update(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -43,12 +51,17 @@ namespace API_olympia.Controllers
         [HttpDelete("{idSugestao}")]
         public async Task<IActionResult> delete(int idSugestao)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var sugestao = await this.Repo.GetAllSugestoesAsyncById(idSugestao);
-                if (sugestao == null) return NotFound();
+                if (sugestao == null) 
+                    return NotFound();
+
                 this.Repo.Delete(sugestao);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -64,10 +77,13 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Sugestoes model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 this.Repo.Add(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();

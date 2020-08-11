@@ -6,20 +6,28 @@ using System.Threading.Tasks;
 
 namespace API_olympia.Controllers
 {
-   /* [CustomAuthorizeAttribute]*/
     [Route("api/[controller]")]
     [ApiController]
     public class ArtesController : Controller
     {
         public IRepository Repo { get; }
-        public ArtesController(IRepository repo)
+        public Armazenador Armazenador { get; set; }
+        private Authorize auth;
+
+        public ArtesController(IRepository repo, Armazenador armazenador)
         {
-            this.Repo = repo;
+            Repo = repo;
+            Armazenador = armazenador;
+            auth = new Authorize(Armazenador);
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login","home");
+
             try
             {
                 var result = await this.Repo.GetAllArtesAsync();
@@ -34,6 +42,10 @@ namespace API_olympia.Controllers
         [HttpGet("{idArte}")]
         public async Task<IActionResult> Get(int ArtesId)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllArtesAsyncById(ArtesId);
@@ -48,12 +60,15 @@ namespace API_olympia.Controllers
         [HttpPut("{idArte}")]
         public async Task<IActionResult> put(int ArtesId, Artes model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
-                if (arte == null) return NotFound(); //método do EF
+                if (arte == null) return NotFound(); 
                 this.Repo.Update(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -69,11 +84,14 @@ namespace API_olympia.Controllers
         [HttpDelete("{idArte}")]
         public async Task<IActionResult> delete(int ArtesId)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
-                //verifica se existe aluno a ser excluído
                 var arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
-                if (arte == null) return NotFound(); //método do EF
+                if (arte == null) return NotFound();
                 this.Repo.Delete(arte);
                 //
                 if (await this.Repo.SaveChangesAsync())
@@ -91,10 +109,13 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Artes model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 this.Repo.Add(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();

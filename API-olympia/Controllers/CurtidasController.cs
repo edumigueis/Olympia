@@ -6,20 +6,28 @@ using System.Threading.Tasks;
 
 namespace API_olympia.Controllers
 {
-   /* [CustomAuthorizeAttribute]*/
     [Route("api/[controller]")]
     [ApiController]
     public class CurtidasController : Controller
     {
         public IRepository Repo { get; }
-        public CurtidasController(IRepository repo)
+        public Armazenador Armazenador { get; set; }
+        private Authorize auth;
+
+        public CurtidasController(IRepository repo, Armazenador armazenador)
         {
             this.Repo = repo;
+            Armazenador = armazenador;
+            auth = new Authorize(Armazenador);
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllCurtidasAsync();
@@ -34,6 +42,10 @@ namespace API_olympia.Controllers
         [HttpGet("{idCurtida}")]
         public async Task<IActionResult> Get(int idCurtida)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllCurtidasAsyncById(idCurtida);
@@ -48,6 +60,10 @@ namespace API_olympia.Controllers
         [HttpPut("{idCurtida}")]
         public async Task<IActionResult> put(int idCurtida, Curtidas model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var Curtida = await this.Repo.GetAllCurtidasAsyncById(idCurtida);
@@ -69,6 +85,10 @@ namespace API_olympia.Controllers
         [HttpDelete("{idCurtida}")]
         public async Task<IActionResult> delete(int idCurtida)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var Curtida = await this.Repo.GetAllCurtidasAsyncById(idCurtida);
@@ -90,6 +110,10 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Curtidas model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 this.Repo.Add(model);

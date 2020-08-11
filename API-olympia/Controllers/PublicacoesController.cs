@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using API_olympia.Models;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Newtonsoft.Json;
 
 namespace API_olympia.Controllers
@@ -15,15 +13,24 @@ namespace API_olympia.Controllers
     {
         public DataArmazenador dataArmazenador { get; set; }
         public IRepository Repo { get; }
-        public PublicacoesController(IRepository repo, DataArmazenador dataArmazenador)
+        public Armazenador Armazenador { get; set; }
+        private Authorize auth;
+
+        public PublicacoesController(IRepository repo, DataArmazenador dataArmazenador, Armazenador armazenador)
         {
             this.Repo = repo;
             this.dataArmazenador = dataArmazenador;
+            Armazenador = armazenador;
+            auth = new Authorize(Armazenador);
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllPublicacoesAsync();
@@ -38,6 +45,10 @@ namespace API_olympia.Controllers
         [HttpGet("{idPublicacao}")]
         public async Task<IActionResult> Get(int idPublicacao)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllPublicacoesAsyncById(idPublicacao);
@@ -52,12 +63,15 @@ namespace API_olympia.Controllers
         [HttpPut("{idPublicacao}")]
         public async Task<IActionResult> put(int idPublicacao, Publicacoes model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var Publicacao = await this.Repo.GetAllPublicacoesAsyncById(idPublicacao);
-                if (Publicacao == null) return NotFound(); //método do EF
+                if (Publicacao == null) return NotFound();
                 this.Repo.Update(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -73,12 +87,15 @@ namespace API_olympia.Controllers
         [HttpDelete("{idPublicacao}")]
         public async Task<IActionResult> delete(int idPublicacao)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var Publicacao = await this.Repo.GetAllPublicacoesAsyncById(idPublicacao);
                 if (Publicacao == null) return NotFound();
                 this.Repo.Delete(Publicacao);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -94,10 +111,13 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Publicacoes model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 this.Repo.Add(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -113,6 +133,10 @@ namespace API_olympia.Controllers
         [HttpGet("Curtidas")]
         public async Task<IActionResult> GetPublicacoesCurtidasOrderByCurtidas()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpPublicacoesCurtidas();
@@ -128,6 +152,10 @@ namespace API_olympia.Controllers
         [HttpGet("CurtidasDesc")]
         public async Task<IActionResult> GetPublicacoesCurtidasOrderByCurtidasDesc()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpPublicacoesCurtidasDesc();
@@ -142,6 +170,10 @@ namespace API_olympia.Controllers
         [HttpGet("NaoCurtidas")]
         public async Task<IActionResult> GetPublicacoesNaoCurtidas()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpPublicacoesNaoCurtidas();
@@ -156,6 +188,10 @@ namespace API_olympia.Controllers
         [HttpGet("MaisRecentes")]
         public async Task<IActionResult> GetPublicacoesOrderByData()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpPublicacoesOrderByData();
@@ -170,6 +206,10 @@ namespace API_olympia.Controllers
         [HttpGet("MenosRecentes")]
         public async Task<IActionResult> GetPublicacoesOrderByDataDesc()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpPublicacoesOrderByDataDesc();
@@ -184,6 +224,10 @@ namespace API_olympia.Controllers
         [HttpGet("RedirectToPost")]
         public async Task<IActionResult> RedirectToPost()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 string json = dataArmazenador.JsonPublicacao;
@@ -200,6 +244,10 @@ namespace API_olympia.Controllers
         [HttpGet("Usuario/{idUsuario}")]
         public async Task<IActionResult> GetAllPublicacoesByUser(int idUsuario)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpAllPublicacoesUser(idUsuario);
@@ -214,6 +262,10 @@ namespace API_olympia.Controllers
         [HttpGet("Search/{key}")]
         public async Task<IActionResult> Search(string key)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpSearchPublicacao(key);

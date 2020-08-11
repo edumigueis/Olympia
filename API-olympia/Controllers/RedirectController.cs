@@ -20,6 +20,7 @@ namespace API_olympia.Controllers
         public DataArmazenador dataArmazenador { get; set; }
         public Armazenador armazenador { get; set; }
         public IRepository Repo { get; }
+
         public RedirectController(IRepository repo, DataArmazenador dataArmazenador, Armazenador armazenador)
         {
             this.Repo = repo;

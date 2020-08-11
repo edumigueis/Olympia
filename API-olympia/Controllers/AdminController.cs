@@ -12,25 +12,47 @@ using API_olympia.Data;
 
 namespace API_olympia.Controllers
 {
-    /*[CustomAuthorizeAttribute]*/
     public class AdminController : Controller
     {
-        private readonly ILogger<AdminController> _logger;
+        public Armazenador Armazenador { get; set; }
+        private Authorize auth;
+
+        public AdminController(Armazenador armazenador)
+        {
+            Armazenador = armazenador;
+            auth = new Authorize(Armazenador);
+        }
 
         public IActionResult Admin()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             return View();
         }
         public IActionResult Feedbacks()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             return View();
         }
         public IActionResult Sugestoes()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             return View();
         }
         public IActionResult Denuncias()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             return View();
         }
 

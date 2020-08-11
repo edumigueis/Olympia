@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using API_olympia.Models;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System;
 using Newtonsoft.Json;
 
@@ -15,14 +13,23 @@ namespace API_olympia.Controllers
     public class ObrasController : Controller
     {
         public IRepository Repo { get; }
-        public ObrasController(IRepository repo)
+        public Armazenador Armazenador { get; set; }
+        private Authorize auth;
+
+        public ObrasController(IRepository repo, Armazenador armazenador)
         {
-            this.Repo = repo;
+            Repo = repo;
+            Armazenador = armazenador;
+            auth = new Authorize(Armazenador);
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllObrasAsync();
@@ -37,6 +44,10 @@ namespace API_olympia.Controllers
         [HttpGet("{idObra}")]
         public async Task<IActionResult> Get(int idObra)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = await this.Repo.GetAllObrasAsyncById(idObra);
@@ -51,12 +62,15 @@ namespace API_olympia.Controllers
         [HttpPut("{idObra}")]
         public async Task<IActionResult> put(int idObra, Obras model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var obra = await this.Repo.GetAllObrasAsyncById(idObra);
-                if (obra == null) return NotFound(); //método do EF
+                if (obra == null) return NotFound();
                 this.Repo.Update(model);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -72,12 +86,15 @@ namespace API_olympia.Controllers
         [HttpDelete("{idObra}")]
         public async Task<IActionResult> delete(int idObra)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var obra = await this.Repo.GetAllObrasAsyncById(idObra);
                 if (obra == null) return NotFound();
                 this.Repo.Delete(obra);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -93,23 +110,22 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Obras model)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
-            {            
-                var cod = GeradorDeCodigo.alfanumericoAleatorio(50);
-                if (Repo.SpExisteCodigoObra(cod))
+            {
+                string cod;
+
+                do
+                {
                     cod = GeradorDeCodigo.alfanumericoAleatorio(50);
-                if (Repo.SpExisteCodigoObra(cod))
-                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
-                if (Repo.SpExisteCodigoObra(cod))
-                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
-                if (Repo.SpExisteCodigoObra(cod))
-                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
-                if (Repo.SpExisteCodigoObra(cod))
-                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
+                }
+                while (Repo.SpExisteCodigoObra(cod));
 
                 model.CodObra = cod;
-
-                
+       
                 this.Repo.Add(model);
   
                 if (await this.Repo.SaveChangesAsync())
@@ -127,6 +143,10 @@ namespace API_olympia.Controllers
         [HttpGet("Usuario/{idUsuario}")]
         public async Task<IActionResult> GetAllObrasByUser(int idUsuario)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpAllObrasUser(idUsuario);
@@ -141,6 +161,10 @@ namespace API_olympia.Controllers
         [HttpGet("Curtidas")]
         public async Task<IActionResult> GetObrasCurtidasOrderByCurtidas()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpObrasCurtidas();
@@ -155,6 +179,10 @@ namespace API_olympia.Controllers
         [HttpGet("CurtidasDesc")]
         public async Task<IActionResult> GetObrasCurtidasOrderByCurtidasDesc()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpObrasCurtidasDesc();
@@ -169,6 +197,10 @@ namespace API_olympia.Controllers
         [HttpGet("NaoCurtidas")]
         public async Task<IActionResult> GetObrasNaoCurtidas()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpObrasNaoCurtidas();
@@ -183,6 +215,10 @@ namespace API_olympia.Controllers
         [HttpGet("MaisRecentes")]
         public async Task<IActionResult> GetObrasOrderByData()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpObrasOrderByData();
@@ -197,6 +233,10 @@ namespace API_olympia.Controllers
         [HttpGet("MenosRecentes")]
         public async Task<IActionResult> GetObrasOrderByDataDesc()
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpObrasOrderByDataDesc();
@@ -211,6 +251,10 @@ namespace API_olympia.Controllers
         [HttpGet("RedirectToPost/{json}")]
         public async Task<IActionResult> RedirectToPost(string json)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 Obras obras = JsonConvert.DeserializeObject<Obras>(json);
@@ -226,6 +270,10 @@ namespace API_olympia.Controllers
         [HttpGet("Search/{key}")]
         public async Task<IActionResult> Search(string key)
         {
+            var resultado = auth.OnAuthorization();
+            if (!resultado)
+                return RedirectToAction("login", "home");
+
             try
             {
                 var result = this.Repo.SpSearchObra(key);
