@@ -9,6 +9,7 @@ using API_olympia.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using API_olympia.Data;
+using System.Net;
 
 namespace API_olympia.Controllers
 {
@@ -16,11 +17,15 @@ namespace API_olympia.Controllers
     {
         private Authorize auth;
         public IRepository Repo { get; set; }
+        private readonly string ip;
 
         public AdminController(IRepository repo)
         {
-            repo = repo;
-            auth = new Authorize(Repo);
+            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
+            IPAddress[] addr = ipEntry.AddressList;
+            ip = addr[2].ToString();
+            Repo = repo;
+            auth = new Authorize(ip);
         }
 
         public IActionResult Admin()

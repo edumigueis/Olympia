@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using API_olympia.Data;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using System.Net;
 
 namespace API_olympia.Controllers
 {
@@ -15,7 +16,9 @@ namespace API_olympia.Controllers
         public AdminsController(IRepository repo)
         {
             this.Repo = repo;
-            auth = new Authorize(Repo);
+            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
+            IPAddress[] addr = ipEntry.AddressList;
+            auth = new Authorize(addr[2].ToString());
         }   
 
         [HttpGet]

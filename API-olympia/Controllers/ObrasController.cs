@@ -5,6 +5,7 @@ using API_olympia.Models;
 using System.Threading.Tasks;
 using System;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace API_olympia.Controllers
 {
@@ -18,7 +19,9 @@ namespace API_olympia.Controllers
         public ObrasController(IRepository repo)
         {
             Repo = repo;
-            auth = new Authorize(Repo);
+            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
+            IPAddress[] addr = ipEntry.AddressList;
+            auth = new Authorize(addr[2].ToString());
         }
 
         [HttpGet]

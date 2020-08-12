@@ -6,11 +6,6 @@ namespace API_olympia.Data
 {
     public interface IRepository
     {
-        public string StringValueRole { get; set; }
-        public int IntValue { get; set; }
-        public string StringValueNome { get; set; }
-        public string StringValueRoute { get; set; }
-
         void Add<T>(T entity) where T : class;
         void Update<T>(T entity) where T : class;
         void Delete<T>(T entity) where T : class;

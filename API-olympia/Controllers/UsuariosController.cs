@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
+using System.Net;
 
 namespace API_olympia.Controllers
 {
@@ -16,11 +17,13 @@ namespace API_olympia.Controllers
     {
         public IRepository Repo { get; }
         private Authorize auth;
-
+        
         public UsuariosController(IRepository repo)
         {
             this.Repo = repo;
-            auth = new Authorize(Repo);
+            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
+            IPAddress[] addr = ipEntry.AddressList;
+            auth = new Authorize(addr[2].ToString());
         }
 
         [HttpGet]

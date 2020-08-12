@@ -356,7 +356,6 @@ D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\De
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Admin.cshtml.g.cs
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API_olympia.Properties.Resources.resources
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.csproj.GenerateResource.cache
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
@@ -559,3 +558,4 @@ C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Vie
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Feedbacks.cshtml.g.cs
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Sugestoes.cshtml.g.cs
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.MvcApplicationPartsAssemblyInfo.cache

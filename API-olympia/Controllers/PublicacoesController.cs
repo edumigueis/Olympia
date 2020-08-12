@@ -4,6 +4,7 @@ using API_olympia.Data;
 using API_olympia.Models;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace API_olympia.Controllers
 {
@@ -19,7 +20,9 @@ namespace API_olympia.Controllers
         {
             this.Repo = repo;
             this.dataArmazenador = dataArmazenador;
-            auth = new Authorize(Repo);
+            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
+            IPAddress[] addr = ipEntry.AddressList;
+            auth = new Authorize(addr[2].ToString());
         }
 
         [HttpGet]

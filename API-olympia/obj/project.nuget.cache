@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WJy0rFSwo4ugmsSsxHCmYVoCHc9BXypxAQtVTua4p1k0CTyrBeqNjVmdwIKCA6WymPacmttaX9HritIsvuLOdQ==",
+  "dgSpecHash": "jZyZ/q1f2jz+OIyLJMyO1U7DjUCE2PQet38yWtEBhgnBVivnrZG5RjstxBzxCQM7HoPTU9ClFUCNC0NbS6iRYQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Olympia\\API-olympia\\API-olympia.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnetcore.httpoverrides\\2.2.0\\microsoft.aspnetcore.httpoverrides.2.2.0.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.4\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.4.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Rodrigo\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

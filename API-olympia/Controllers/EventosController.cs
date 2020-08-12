@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors;
 using System;
+using System.Net;
 
 namespace API_olympia.Controllers
 {
@@ -20,7 +21,9 @@ namespace API_olympia.Controllers
 
         public EventosController(IRepository repo)
         {
-            auth = new Authorize(Repo);
+            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
+            IPAddress[] addr = ipEntry.AddressList;
+            auth = new Authorize(addr[2].ToString());
             this.Repo = repo;
         }
 
