@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using API_olympia.Models;
@@ -14,14 +14,12 @@ namespace API_olympia.Controllers
     public class FotosController : Controller
     {
         public IRepository Repo { get; }
-        public Armazenador Armazenador { get; set; }
         private Authorize auth;
 
-        public FotosController(IRepository repo, Armazenador armazenador)
+        public FotosController(IRepository repo)
         {
             this.Repo = repo;
-            Armazenador = armazenador;
-            auth = new Authorize(Armazenador);
+            auth = new Authorize(Repo);
         }
 
         [HttpGet]

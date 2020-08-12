@@ -11,14 +11,12 @@ namespace API_olympia.Controllers
     public class ArtesController : Controller
     {
         public IRepository Repo { get; }
-        public Armazenador Armazenador { get; set; }
         private Authorize auth;
 
-        public ArtesController(IRepository repo, Armazenador armazenador)
+        public ArtesController(IRepository repo)
         {
             Repo = repo;
-            Armazenador = armazenador;
-            auth = new Authorize(Armazenador);
+            auth = new Authorize(Repo);
         }
 
         [HttpGet]

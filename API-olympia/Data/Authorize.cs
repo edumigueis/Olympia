@@ -1,12 +1,10 @@
-using API_olympia.Controllers;
-
 namespace API_olympia.Data
 {
     public class Authorize
     {
-        public Armazenador Armazenador { get; set; }
+        public IRepository Armazenador { get; set; }
 
-        public Authorize(Armazenador armazenador) 
+        public Authorize(IRepository armazenador) 
         {
             Armazenador = armazenador;
         }

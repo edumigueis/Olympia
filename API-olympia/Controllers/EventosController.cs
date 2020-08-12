@@ -16,13 +16,11 @@ namespace API_olympia.Controllers
     public class EventosController : Controller
     {
         public IRepository Repo { get; }
-        public Armazenador Armazenador { get; set; }
         private Authorize auth;
 
-        public EventosController(IRepository repo, Armazenador armazenador)
+        public EventosController(IRepository repo)
         {
-            Armazenador = armazenador;
-            auth = new Authorize(Armazenador);
+            auth = new Authorize(Repo);
             this.Repo = repo;
         }
 

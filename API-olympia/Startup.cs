@@ -14,7 +14,6 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace API_olympia
 {
@@ -28,7 +27,6 @@ namespace API_olympia
         public IConfiguration Configuration { get; }
         private async Task CreateRoles(IServiceProvider serviceProvider)
         {
-            //initializing custom roles 
             var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
             string[] roleNames = { "Admin" };
@@ -102,17 +100,6 @@ namespace API_olympia
 
             services.AddHttpClient();
 
-            /*services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = false,
-                        ValidateAudience = false,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["jwt:key"])),
-                        ClockSkew = TimeSpan.Zero
-                    });*/
-
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -151,8 +138,7 @@ namespace API_olympia
             services.TryAddScoped<UserManager<IdentityUser>>();
             services.TryAddScoped<SignInManager<IdentityUser>>();
             services.TryAddScoped<RoleManager<IdentityRole>>();
-            services.AddSingleton(new DataArmazenador());
-            services.AddSingleton(new Armazenador());
+            services.TryAddScoped<DataArmazenador>();
             services.AddHttpContextAccessor();
             services.AddMemoryCache();
             services.AddControllersWithViews();

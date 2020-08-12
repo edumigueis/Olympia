@@ -12,8 +12,12 @@ namespace API_olympia.Data
     public class Repository : IRepository
     {
         public OlympiaContext Context { get; }
-
+        public string StringValueRole { get; set; }
+        public int IntValue { get; set; }
+        public string StringValueNome { get; set; }
+        public string StringValueRoute { get; set; }
         private readonly string stringConnection;
+
         public Repository(OlympiaContext context)
         {
             this.Context = context;

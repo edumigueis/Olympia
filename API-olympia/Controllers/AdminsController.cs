@@ -10,14 +10,12 @@ namespace API_olympia.Controllers
     public class AdminsController : Controller
     {
         public IRepository Repo { get; }
-        public Armazenador Armazenador { get; set; }
         private Authorize auth;
 
-        public AdminsController(IRepository repo, Armazenador armazenador)
+        public AdminsController(IRepository repo)
         {
             this.Repo = repo;
-            Armazenador = armazenador;
-            auth = new Authorize(Armazenador);
+            auth = new Authorize(Repo);
         }   
 
         [HttpGet]

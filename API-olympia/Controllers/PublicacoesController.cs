@@ -13,15 +13,13 @@ namespace API_olympia.Controllers
     {
         public DataArmazenador dataArmazenador { get; set; }
         public IRepository Repo { get; }
-        public Armazenador Armazenador { get; set; }
         private Authorize auth;
 
-        public PublicacoesController(IRepository repo, DataArmazenador dataArmazenador, Armazenador armazenador)
+        public PublicacoesController(IRepository repo, DataArmazenador dataArmazenadora)
         {
             this.Repo = repo;
             this.dataArmazenador = dataArmazenador;
-            Armazenador = armazenador;
-            auth = new Authorize(Armazenador);
+            auth = new Authorize(Repo);
         }
 
         [HttpGet]

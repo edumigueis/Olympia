@@ -20,17 +20,17 @@ namespace API_olympia.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
-        private readonly Armazenador armazenador;
         public IRepository Repo { get; }
+        public IRepository armazenador { get; }
         private Authorize auth;
 
-        public AccountController(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IRepository repo, Armazenador armazenador)
+        public AccountController(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, IRepository repo)
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
             Repo = repo;
-            this.armazenador = armazenador;
-            auth = new Authorize(armazenador);
+            armazenador = repo;
+            auth = new Authorize(Repo);
         }
 
         [HttpPost("Logout")]

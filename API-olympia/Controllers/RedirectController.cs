@@ -18,14 +18,14 @@ namespace API_olympia.Controllers
     public class RedirectController : Controller
     {
         public DataArmazenador dataArmazenador { get; set; }
-        public Armazenador armazenador { get; set; }
+        public IRepository armazenador { get; set; }
         public IRepository Repo { get; }
 
-        public RedirectController(IRepository repo, DataArmazenador dataArmazenador, Armazenador armazenador)
+        public RedirectController(IRepository repo, DataArmazenador dataArmazenador)
         {
             this.Repo = repo;
             this.dataArmazenador = dataArmazenador;
-            this.armazenador = armazenador;
+            armazenador = repo;
         }
 
         [HttpPost("Cadastro")]

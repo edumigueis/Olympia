@@ -11,14 +11,12 @@ namespace API_olympia.Controllers
     public class CurtidasController : Controller
     {
         public IRepository Repo { get; }
-        public Armazenador Armazenador { get; set; }
         private Authorize auth;
 
-        public CurtidasController(IRepository repo, Armazenador armazenador)
+        public CurtidasController(IRepository repo)
         {
             this.Repo = repo;
-            Armazenador = armazenador;
-            auth = new Authorize(Armazenador);
+            auth = new Authorize(Repo);
         }
 
         [HttpGet]

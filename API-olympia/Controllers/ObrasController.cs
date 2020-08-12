@@ -13,14 +13,12 @@ namespace API_olympia.Controllers
     public class ObrasController : Controller
     {
         public IRepository Repo { get; }
-        public Armazenador Armazenador { get; set; }
         private Authorize auth;
 
-        public ObrasController(IRepository repo, Armazenador armazenador)
+        public ObrasController(IRepository repo)
         {
             Repo = repo;
-            Armazenador = armazenador;
-            auth = new Authorize(Armazenador);
+            auth = new Authorize(Repo);
         }
 
         [HttpGet]

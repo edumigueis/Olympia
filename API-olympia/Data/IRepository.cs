@@ -6,13 +6,16 @@ namespace API_olympia.Data
 {
     public interface IRepository
     {
-        // Métodos genéricos
+        public string StringValueRole { get; set; }
+        public int IntValue { get; set; }
+        public string StringValueNome { get; set; }
+        public string StringValueRoute { get; set; }
+
         void Add<T>(T entity) where T : class;
         void Update<T>(T entity) where T : class;
         void Delete<T>(T entity) where T : class;
         Task<bool> SaveChangesAsync();
 
-        // Métodos GET
         Task<Artes[]> GetAllArtesAsync();
         Task<Artes> GetAllArtesAsyncById(int ArtesId);
 
