@@ -22,13 +22,12 @@ namespace API_olympia.Data
 
         public void Add<T>(T entity) where T : class
         {
-            //throw new System.NotImplementedException();
             this.Context.Add(entity);
         }
 
         public void Delete<T>(T entity) where T : class
         {
-            //throw new System.NotImplementedException();
+
             this.Context.Remove(entity);
         }
 
@@ -39,7 +38,6 @@ namespace API_olympia.Data
 
         public void Update<T>(T entity) where T : class
         {
-            //throw new System.NotImplementedException();
             this.Context.Update(entity);
         }
 
@@ -315,7 +313,8 @@ namespace API_olympia.Data
                                    leitor["categorias"],
                                    leitor["tags"],
                                    leitor["dataPost"],
-                                   leitor["dadosTecnicos"]};
+                                   leitor["dadosTecnicos"],
+                                   leitor["codObra"]};
 
                 result.Add(dados);
             }
@@ -341,7 +340,8 @@ namespace API_olympia.Data
                                    leitor["texto"],
                                    leitor["tags"],
                                    leitor["foto"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codPublicacao"]};
 
                 result.Add(dados);
             }
@@ -369,7 +369,8 @@ namespace API_olympia.Data
                                    leitor["idArte"],
                                    leitor["categorias"],
                                    leitor["tags"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codServico"]};
 
                 result.Add(dados);
             }
@@ -399,7 +400,8 @@ namespace API_olympia.Data
                                    leitor["localizacaoCoord"],
                                    leitor["endereco"],
                                    leitor["horario"],
-                                   leitor["linkSite"]};
+                                   leitor["linkSite"],
+                                   leitor["codEvento"]};
 
                 result.Add(dados);
             }
@@ -547,7 +549,8 @@ namespace API_olympia.Data
                                    leitor["categorias"],
                                    leitor["tags"],
                                    leitor["dataPost"],
-                                   leitor["dadosTecnicos"]};
+                                   leitor["dadosTecnicos"],
+                                   leitor["codObra"]};
 
                 result.Add(dados);
             }
@@ -572,7 +575,8 @@ namespace API_olympia.Data
                                    leitor["texto"],
                                    leitor["tags"],
                                    leitor["foto"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codObra"]};
 
                 result.Add(dados);
             }
@@ -599,7 +603,8 @@ namespace API_olympia.Data
                                    leitor["idArte"],
                                    leitor["categorias"],
                                    leitor["tags"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codServico"]};
 
                 result.Add(dados);
             }
@@ -627,7 +632,8 @@ namespace API_olympia.Data
                                    leitor["categorias"],
                                    leitor["tags"],
                                    leitor["dataPost"],
-                                   leitor["dadosTecnicos"]};
+                                   leitor["dadosTecnicos"],
+                                   leitor["codObra"]};
 
                 result.Add(dados);
             }
@@ -652,7 +658,8 @@ namespace API_olympia.Data
                                    leitor["texto"],
                                    leitor["tags"],
                                    leitor["foto"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codPublicacao"]};
 
                 result.Add(dados);
             }
@@ -679,7 +686,8 @@ namespace API_olympia.Data
                                    leitor["idArte"],
                                    leitor["categorias"],
                                    leitor["tags"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codServico"]};
 
                 result.Add(dados);
             }
@@ -707,7 +715,8 @@ namespace API_olympia.Data
                                    leitor["categorias"],
                                    leitor["tags"],
                                    leitor["dataPost"],
-                                   leitor["dadosTecnicos"]};
+                                   leitor["dadosTecnicos"],
+                                   leitor["codObra"]};
 
                 result.Add(dados);
             }
@@ -734,7 +743,8 @@ namespace API_olympia.Data
                                    leitor["texto"],
                                    leitor["tags"],
                                    leitor["foto"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codPublicacao"]};
 
                 result.Add(dados);
             }
@@ -763,7 +773,8 @@ namespace API_olympia.Data
                                    leitor["idArte"],
                                    leitor["categorias"],
                                    leitor["tags"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codServico"]};
 
                 result.Add(dados);
             }
