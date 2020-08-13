@@ -815,6 +815,72 @@ namespace API_olympia.Data
                 return true;
         }
 
+        public bool SpExisteCodigoEvento(string codEvento)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ExisteCodigoEvento '" + codEvento + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            int count = 0;
+
+            while (leitor.Read())
+            {
+                count++;
+            }
+            conn.Close();
+
+            if (count == 0)
+                return false;
+            else
+                return true;
+        }
+
+        public bool SpExisteCodigoPublicacao(string codPublicacao)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ExisteCodigoPublicacao '" + codPublicacao + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            int count = 0;
+
+            while (leitor.Read())
+            {
+                count++;
+            }
+            conn.Close();
+
+            if (count == 0)
+                return false;
+            else
+                return true;
+        }
+
+        public bool SpExisteCodigoServico(string codServico)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ExisteCodigoServico '" + codServico + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            int count = 0;
+
+            while (leitor.Read())
+            {
+                count++;
+            }
+            conn.Close();
+
+            if (count == 0)
+                return false;
+            else
+                return true;
+        }
+
         public void SpMudarBio(string bio, string biografia, int idUsuario)
         {
             SqlConnection conn = new SqlConnection(stringConnection);

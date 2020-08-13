@@ -6,10 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using API_olympia.Data;
-using API_olympia.Controllers;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpOverrides;
 
 namespace API_olympia
 {
@@ -26,7 +23,7 @@ namespace API_olympia
         {
             services.AddCors(options =>
             {
-                options.AddPolicy(name: "myPolicy",
+                options.AddPolicy(name: "123FRSD123DFW32DWF435YASD345C3",
                                     builder =>
                                     {
                                         builder.WithOrigins("https://olympia.art.br", "http://localhost:8080")
@@ -42,20 +39,17 @@ namespace API_olympia
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddDbContext<OlympiaContext>(
-                x => x.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"))
+                x => x.UseSqlServer(Configuration.GetConnectionString("DFBQ3R5YHJFGS35476GFWS33466T3D"))
             );
 
             services.AddScoped<IServiceProvider, Service>();
-            services.TryAddScoped<DataArmazenador>();
-            services.AddHttpContextAccessor();
-            services.AddMemoryCache();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors("myPolicy");
+            app.UseCors("123FRSD123DFW32DWF435YASD345C3");
             app.UseMvc();
 
             if (env.IsDevelopment())
@@ -79,11 +73,6 @@ namespace API_olympia
             });
 
             app.UseDeveloperExceptionPage();
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor |
-                ForwardedHeaders.XForwardedProto
-            });
         }
     }
 }

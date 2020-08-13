@@ -98,7 +98,15 @@ namespace API_olympia.Controllers
 
             try
             {
+                string cod;
 
+                do
+                {
+                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
+                }
+                while (Repo.SpExisteCodigoServico(cod));
+
+                model.CodServico = cod;
                 this.Repo.Add(model);
 
                 if (await this.Repo.SaveChangesAsync())
@@ -200,22 +208,6 @@ namespace API_olympia.Controllers
             catch
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
-            }
-        }
-
-        [HttpGet("RedirectToPost/{json}")]
-        public async Task<IActionResult> RedirectToPost(string json)
-        {
-
-            try
-            {
-                Servicos servicos = JsonConvert.DeserializeObject<Servicos>(json);
-
-                return await post(servicos);
-            }
-            catch
-            {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no get(id).");
             }
         }
 
