@@ -12,23 +12,15 @@ namespace API_olympia.Controllers
     public class ArtesController : Controller
     {
         public IRepository Repo { get; }
-        private Authorize auth;
 
         public ArtesController(IRepository repo)
         {
             Repo = repo;
-            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress[] addr = ipEntry.AddressList;
-            auth = new Authorize(addr[2].ToString());
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login","home");
-
             try
             {
                 var result = await this.Repo.GetAllArtesAsync();
@@ -43,10 +35,6 @@ namespace API_olympia.Controllers
         [HttpGet("{idArte}")]
         public async Task<IActionResult> Get(int ArtesId)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 var result = await this.Repo.GetAllArtesAsyncById(ArtesId);
@@ -61,10 +49,6 @@ namespace API_olympia.Controllers
         [HttpPut("{idArte}")]
         public async Task<IActionResult> put(int ArtesId, Artes model)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 var arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
@@ -85,10 +69,6 @@ namespace API_olympia.Controllers
         [HttpDelete("{idArte}")]
         public async Task<IActionResult> delete(int ArtesId)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 var arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
@@ -110,10 +90,6 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Artes model)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 this.Repo.Add(model);

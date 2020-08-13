@@ -15,23 +15,15 @@ namespace API_olympia.Controllers
     public class FotosController : Controller
     {
         public IRepository Repo { get; }
-        private Authorize auth;
 
         public FotosController(IRepository repo)
         {
             this.Repo = repo;
-            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress[] addr = ipEntry.AddressList;
-            auth = new Authorize(addr[2].ToString());
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 var result = await this.Repo.GetAllFotosAsync();
@@ -46,10 +38,6 @@ namespace API_olympia.Controllers
         [HttpGet("{idFoto}")]
         public async Task<IActionResult> Get(int idFoto)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 var result = await this.Repo.GetAllFotosAsyncById(idFoto);
@@ -63,11 +51,7 @@ namespace API_olympia.Controllers
 
         [HttpPut("{idFoto}")]
         public async Task<IActionResult> put(int idFoto, Fotos model)
-        {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
+        { 
             try
             {
                 var foto = await this.Repo.GetAllFotosAsyncById(idFoto);
@@ -89,10 +73,6 @@ namespace API_olympia.Controllers
         [HttpDelete("{idFoto}")]
         public async Task<IActionResult> delete(int idFoto)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 var foto = await this.Repo.GetAllFotosAsyncById(idFoto);
@@ -114,10 +94,6 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Fotos model)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 this.Repo.Add(model);
@@ -136,10 +112,6 @@ namespace API_olympia.Controllers
         [HttpGet("Servico/{idServico}")]
         public async Task<IActionResult> GetFotosServico(int idServico)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 var result = this.Repo.SpFotosServico(idServico);
@@ -154,10 +126,6 @@ namespace API_olympia.Controllers
         [HttpGet("Obra/{idObra}")]
         public async Task<IActionResult> GetFotosObra(int idObra)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 var result = this.Repo.SpFotosObra(idObra);
@@ -172,10 +140,6 @@ namespace API_olympia.Controllers
         [HttpGet("Evento/{idEvento}")]
         public async Task<IActionResult> GetFotosEvento(int idEvento)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 var result = this.Repo.SpFotosEvento(idEvento);

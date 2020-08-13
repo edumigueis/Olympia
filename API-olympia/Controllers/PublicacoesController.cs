@@ -14,23 +14,16 @@ namespace API_olympia.Controllers
     {
         public DataArmazenador dataArmazenador { get; set; }
         public IRepository Repo { get; }
-        private Authorize auth;
 
         public PublicacoesController(IRepository repo, DataArmazenador dataArmazenadora)
         {
             this.Repo = repo;
             this.dataArmazenador = dataArmazenador;
-            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress[] addr = ipEntry.AddressList;
-            auth = new Authorize(addr[2].ToString());
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -46,9 +39,6 @@ namespace API_olympia.Controllers
         [HttpGet("{idPublicacao}")]
         public async Task<IActionResult> Get(int idPublicacao)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -64,9 +54,6 @@ namespace API_olympia.Controllers
         [HttpPut("{idPublicacao}")]
         public async Task<IActionResult> put(int idPublicacao, Publicacoes model)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -88,9 +75,6 @@ namespace API_olympia.Controllers
         [HttpDelete("{idPublicacao}")]
         public async Task<IActionResult> delete(int idPublicacao)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -112,9 +96,6 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Publicacoes model)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -134,9 +115,6 @@ namespace API_olympia.Controllers
         [HttpGet("Curtidas")]
         public async Task<IActionResult> GetPublicacoesCurtidasOrderByCurtidas()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -153,9 +131,6 @@ namespace API_olympia.Controllers
         [HttpGet("CurtidasDesc")]
         public async Task<IActionResult> GetPublicacoesCurtidasOrderByCurtidasDesc()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -171,9 +146,6 @@ namespace API_olympia.Controllers
         [HttpGet("NaoCurtidas")]
         public async Task<IActionResult> GetPublicacoesNaoCurtidas()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -189,9 +161,6 @@ namespace API_olympia.Controllers
         [HttpGet("MaisRecentes")]
         public async Task<IActionResult> GetPublicacoesOrderByData()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -207,9 +176,6 @@ namespace API_olympia.Controllers
         [HttpGet("MenosRecentes")]
         public async Task<IActionResult> GetPublicacoesOrderByDataDesc()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -225,9 +191,6 @@ namespace API_olympia.Controllers
         [HttpGet("RedirectToPost")]
         public async Task<IActionResult> RedirectToPost()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -245,9 +208,6 @@ namespace API_olympia.Controllers
         [HttpGet("Usuario/{idUsuario}")]
         public async Task<IActionResult> GetAllPublicacoesByUser(int idUsuario)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -263,9 +223,6 @@ namespace API_olympia.Controllers
         [HttpGet("Search/{key}")]
         public async Task<IActionResult> Search(string key)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {

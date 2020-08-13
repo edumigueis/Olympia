@@ -17,22 +17,15 @@ namespace API_olympia.Controllers
     public class EventosController : Controller
     {
         public IRepository Repo { get; }
-        private Authorize auth;
 
         public EventosController(IRepository repo)
         {
-            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress[] addr = ipEntry.AddressList;
-            auth = new Authorize(addr[2].ToString());
             this.Repo = repo;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -48,9 +41,6 @@ namespace API_olympia.Controllers
         [HttpGet("{idEvento}")]
         public async Task<IActionResult> Get(int idEvento)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -66,10 +56,6 @@ namespace API_olympia.Controllers
         [HttpPut("{idEvento}")]
         public async Task<IActionResult> put(int idEvento, Eventos model)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 var Evento = await this.Repo.GetAllEventosAsyncById(idEvento);
@@ -90,9 +76,6 @@ namespace API_olympia.Controllers
         [HttpDelete("{idEvento}")]
         public async Task<IActionResult> delete(int idEvento)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -114,10 +97,6 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Eventos model)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 this.Repo.Add(model);
@@ -136,10 +115,7 @@ namespace API_olympia.Controllers
         [HttpGet("Arte/{idArte}")]
         public async Task<IActionResult> GetAllObrasByUser(int idArte)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
+ 
             try
             {
                 var result = this.Repo.SpAllEventosArte(idArte);

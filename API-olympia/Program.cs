@@ -10,11 +10,11 @@ namespace API_olympia
         {
             CreateHostBuilder(args).Build().Run();
 
-             var host = new WebHostBuilder()
-            .UseKestrel()
-            .UseContentRoot(Directory.GetCurrentDirectory()) 
-            .UseIISIntegration()
-            .Build();
+            var host = new WebHostBuilder()
+           .UseKestrel()
+           .UseContentRoot(Directory.GetCurrentDirectory())
+           .UseIISIntegration()
+           .Build();
 
             host.Run();
         }

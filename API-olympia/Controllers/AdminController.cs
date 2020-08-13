@@ -15,49 +15,28 @@ namespace API_olympia.Controllers
 {
     public class AdminController : Controller
     {
-        private Authorize auth;
         public IRepository Repo { get; set; }
         private readonly string ip;
 
         public AdminController(IRepository repo)
         {
-            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress[] addr = ipEntry.AddressList;
-            ip = addr[2].ToString();
             Repo = repo;
-            auth = new Authorize(ip);
         }
 
         public IActionResult Admin()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             return View();
         }
         public IActionResult Feedbacks()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             return View();
         }
         public IActionResult Sugestoes()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             return View();
         }
         public IActionResult Denuncias()
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             return View();
         }
 

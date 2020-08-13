@@ -14,22 +14,15 @@ namespace API_olympia.Controllers
     public class SugestoesController : Controller
     {
         public IRepository Repo { get; }
-        private Authorize auth;
 
         public SugestoesController(IRepository repo)
         {
             this.Repo = repo;
-            IPHostEntry ipEntry = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress[] addr = ipEntry.AddressList;
-            auth = new Authorize(addr[2].ToString());
         }
 
         [HttpPut("{idSugestao}")]
         public async Task<IActionResult> put(int idSugestao, Sugestoes model)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -52,9 +45,6 @@ namespace API_olympia.Controllers
         [HttpDelete("{idSugestao}")]
         public async Task<IActionResult> delete(int idSugestao)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
 
             try
             {
@@ -78,10 +68,6 @@ namespace API_olympia.Controllers
         [HttpPost]
         public async Task<IActionResult> post(Sugestoes model)
         {
-            var resultado = auth.OnAuthorization();
-            if (!resultado)
-                return RedirectToAction("login", "home");
-
             try
             {
                 this.Repo.Add(model);

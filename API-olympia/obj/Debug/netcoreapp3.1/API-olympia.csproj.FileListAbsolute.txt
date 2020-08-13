@@ -187,7 +187,6 @@ D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\De
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Owin.Security.Cookies.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
@@ -345,7 +344,6 @@ C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\St
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\bin\Debug\netcoreapp3.1\Umbraco.Core.dll
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Admin.cshtml.g.cs
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.SqlServer.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 D:\Técnico\3º semestre\Prática Profissional II\Projeto-git\API-olympia\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
@@ -551,9 +549,6 @@ C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\staticweb
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.dll
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.pdb
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\API-olympia.genruntimeconfig.cache
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Denuncias.cshtml.g.cs
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Feedbacks.cshtml.g.cs
-C:\Users\Rodrigo\Documents\GitHub\Olympia\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Sugestoes.cshtml.g.cs
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Denuncias.cshtml.g.cs
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Feedbacks.cshtml.g.cs
 C:\Dudu\COTUCA\Olympia\Projeto-git\API-olympia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Sugestoes.cshtml.g.cs
