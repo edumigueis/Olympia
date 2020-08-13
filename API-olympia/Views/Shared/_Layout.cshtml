@@ -1,38 +1,34 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - API_olympia</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-</head>
-<body style="background: linear-gradient(141deg, rgba(240,170,86,1) 0%, rgba(210,105,189,1) 50%, rgba(75,240,180,1) 100%);">
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light mb-5">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">API_olympia</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="footer text-muted  bg-light ">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - API_olympia</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body style="background: linear-gradient(141deg, rgba(240,170,86,1) 0%, rgba(210,105,189,1) 50%, rgba(75,240,180,1) 100%);">
+        <header>
+            <nav class="navbar navbar-light bg-light mb-5">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">API_olympia</a>   
+                </div>
+            </nav>
+        </header>
         <div class="container">
-            &copy; 2020 - API_olympia - <a asp-area="" asp-controller="Home" asp-action="Privacy" style="color:#299ec7">Privacidade</a>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
-</body>
+
+        <footer class="footer text-muted  bg-light ">
+            <div class="container">
+                &copy; 2020 - API_olympia - <a asp-area="" asp-controller="Home" asp-action="Privacy" style="color:#299ec7">Privacidade</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+    </body>
 </html>

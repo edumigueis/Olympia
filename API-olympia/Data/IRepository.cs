@@ -38,12 +38,6 @@ namespace API_olympia.Data
         Task<Sugestoes[]> GetAllSugestoesAsync();
         Task<Sugestoes> GetAllSugestoesAsyncById(int idSugestao);
 
-        Task<Admins[]> GetAllAdminsAsync();
-        Task<Admins> GetAllAdminsAsyncById(int idAdmin);
-
-        /******************Storeds Procedures*****************/
-
-        bool VerfificarSpAdmins(LoginViewModel model);
         List<string> SpFotosServico(int idServico);
         List<string> SpFotosObra(int idObra);
         List<string> SpFotosEvento(int idEvento);

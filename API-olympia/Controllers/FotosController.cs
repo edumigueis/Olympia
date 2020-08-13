@@ -55,7 +55,7 @@ namespace API_olympia.Controllers
             try
             {
                 var foto = await this.Repo.GetAllFotosAsyncById(idFoto);
-                if (foto == null) return NotFound(); //método do EF
+                if (foto == null) return NotFound();
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())

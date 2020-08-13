@@ -3,11 +3,7 @@ using Microsoft.AspNetCore.Http;
 using API_olympia.Data;
 using API_olympia.Models;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using Newtonsoft.Json;
-using System;
-using System.Linq;
-using System.Net;
 
 namespace API_olympia.Controllers
 {
@@ -47,22 +43,6 @@ namespace API_olympia.Controllers
                 return Ok(result);
             }
             catch
-            {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
-            }
-        }
-
-        [HttpGet("RedirectToPost/{json}")]
-        public async Task<IActionResult> RedirectToPost(string json)
-        {
-
-            try
-            {
-                Usuarios usuario = JsonConvert.DeserializeObject<Usuarios>(json);
-
-                return await post(usuario);
-            }
-            catch(Exception e)
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
             }
@@ -192,29 +172,13 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("RedirectToPostBio/{json}")]
-        public async Task<IActionResult> RedirectToPostBio(string json)
-        {
-
-            try
-            {
-                List<string> bio = JsonConvert.DeserializeObject<List<string>>(json);
-
-                return await postBio(bio);
-            }
-            catch
-            {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
-            }
-        }
-
         [HttpPost("MudarBio")]
-        public async Task<IActionResult> postBio(List<string> bio)
+        public async Task<IActionResult> postBio(Biografias bio)
         {
 
             try
             {
-                this.Repo.SpMudarBio(bio[0].ToString(), bio[1].ToString(), Convert.ToInt32(bio[2]));
+                this.Repo.SpMudarBio(bio.Biografia, bio.Bio, bio.IdUsuario);
                 return Ok();
             }
             catch
@@ -223,35 +187,19 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("RedirectToPostVerificarDados/{json}")]
-        public async Task<IActionResult> RedirectToPostVerificarDados(string json)
-        {
-
-            try
-            {
-                var dados = json.Split(',').Select(item => item).ToList();
-
-                return await postVerificarDados(dados);
-            }
-            catch
-            {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
-            }
-        }
-
         [HttpPost("VerificarDados")]
-        public async Task<IActionResult> postVerificarDados(List<string> dados)
+        public async Task<IActionResult> postVerificarDados(DadosLogin dados)
         {
             try
             {
-                if (dados[0].Substring(0, 1).Equals("@"))
+                if (dados.User.Substring(0, 1).Equals("@"))
                 {
-                    var result = this.Repo.SpVerificarDadosByUser(dados[0].ToString());
+                    var result = this.Repo.SpVerificarDadosByUser(dados.User.ToString());
                     var senhaIgual = false;
 
                     if (result != null)
                     {
-                        senhaIgual = PasswordHasher.Verify(dados[1].ToString(), result);
+                        senhaIgual = PasswordHasher.Verify(dados.Senha.ToString(), result);
                     }
                     else
                         return this.StatusCode(StatusCodes.Status406NotAcceptable, "Não foram encontrados dados que atendam a sua requisição");
@@ -263,12 +211,12 @@ namespace API_olympia.Controllers
                 }
                 else
                 {
-                    var result = this.Repo.SpVerificarDadosByEmail(dados[0].ToString());
+                    var result = this.Repo.SpVerificarDadosByEmail(dados.User.ToString());
                     var senhaIgual = false;
 
                     if (result != null)
                     {
-                        senhaIgual = PasswordHasher.Verify(dados[1].ToString(), result);
+                        senhaIgual = PasswordHasher.Verify(dados.Senha.ToString(), result);
                     }
 
                     else
@@ -343,28 +291,13 @@ namespace API_olympia.Controllers
             }
         }
 
-        [HttpGet("RedirectToPostAlterarConfig/{json}")]
-        public async Task<IActionResult> RedirectToPostAlterarConfig(string json)
-        {
-
-            try
-            {
-                var dados = (IList<object>)JsonConvert.DeserializeObject<Configs>(json);
-                return await postAlterarConfig(dados);
-            }
-            catch (Exception e)
-            {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, e.ToString());
-            }
-        }
-
         [HttpPost("AlterarConfig")]
-        public async Task<IActionResult> postAlterarConfig(IList<object> dados)
+        public async Task<IActionResult> postAlterarConfig(Configs dados, int idUsuario)
         {
 
             try
             {
-                this.Repo.SpAlterConfig(dados[0] + "",Convert.ToInt32(dados[1]));
+                this.Repo.SpAlterConfig(JsonConvert.SerializeObject(dados), idUsuario);
                 return Ok();
             }
             catch

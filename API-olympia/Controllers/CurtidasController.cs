@@ -52,7 +52,7 @@ namespace API_olympia.Controllers
             try
             {
                 var Curtida = await this.Repo.GetAllCurtidasAsyncById(idCurtida);
-                if (Curtida == null) return NotFound(); //método do EF
+                if (Curtida == null) return NotFound();
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())

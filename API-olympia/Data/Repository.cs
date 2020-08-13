@@ -178,44 +178,6 @@ namespace API_olympia.Data
             return await consultaSugestoes.FirstOrDefaultAsync();
         }
 
-        public async Task<Admins[]> GetAllAdminsAsync()
-        {
-            IQueryable<Admins> consultaAdmins = this.Context.Admins;
-            consultaAdmins = consultaAdmins.OrderBy(p => p.IdAdmin);
-            return await consultaAdmins.ToArrayAsync();
-        }
-
-        public async Task<Admins> GetAllAdminsAsyncById(int id)
-        {
-            IQueryable<Admins> consultaAdmins = this.Context.Admins;
-            consultaAdmins = consultaAdmins.OrderBy(p => p.IdAdmin)
-            .Where(Admins => Admins.IdAdmin == id);
-            return await consultaAdmins.FirstOrDefaultAsync();
-        }
-
-        /**************************Storeds Procedures*****************/
-
-        public bool VerfificarSpAdmins(LoginViewModel model)
-        {
-            SqlConnection conn = new SqlConnection(stringConnection);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("comando", conn);
-            cmd.CommandText = "sp_ValidateAdmin '" + model.UserName + "','" + model.Senha + "'";
-            SqlDataReader leitor = cmd.ExecuteReader();
-
-            int count = 0;
-            while (leitor.Read())
-            {
-                count++;
-            }
-            conn.Close();
-
-            if (count == 0)
-                return false;
-            else
-                return true;
-        }
-
         public List<string> SpFotosServico(int idServico)
         {
             SqlConnection conn = new SqlConnection(stringConnection);
