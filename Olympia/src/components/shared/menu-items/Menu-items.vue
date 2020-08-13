@@ -1,5 +1,5 @@
 <template>
-   <div id="menu-items">
+   <!--<div id="menu-items">
         <div class="close-1 close">
             <img class="close-img close-image" src="/src/assets/images/x.png">
         </div>
@@ -29,5 +29,6 @@
                 <a class="menu-link perfil-link" href="/#/perfil">P E R F I L</a>
             </div>
         </div>        
-    </div>
+    </div>-->
+    <div></div>
 </template>

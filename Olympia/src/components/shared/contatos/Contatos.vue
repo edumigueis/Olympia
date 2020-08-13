@@ -1,5 +1,5 @@
 <template>
-  <div class="table-contato">
+  <!--<div class="table-contato">
     <div class="close-2 close">
       <img class="close-img close-image" src="/src/assets/images/x.png" />
     </div>
@@ -61,5 +61,6 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
+  <div></div>
 </template>

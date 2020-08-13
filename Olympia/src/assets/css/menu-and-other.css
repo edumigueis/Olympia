@@ -93,7 +93,7 @@
   animation-iteration-count: 1;
 }
 
-.menu-item {
+/*.menu-item {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -555,7 +555,7 @@
 #container-menu {
   transition: 0.4s all ease;
 }
-
+*/
 #footer {
   transition: 0.3s background, color;
   position: relative;

@@ -2290,16 +2290,16 @@ export default {
     }
   },
   mounted() {
-    this.getMarkers();
+    /*this.getMarkers();
     this.getServicos();
-    this.getObras();
+    this.getObras();*/
   },
   beforeCreate() {
-    if (window.$cookies.isKey("user_cadastro")) {
+    /*if (window.$cookies.isKey("user_cadastro")) {
       document.location.href = "/#/categorias";
     } else if (!window.$cookies.isKey("user_session")) {
       document.location.href = "/#/login";
-    }
+    }*/
   }
 };
 </script>
