@@ -99,13 +99,24 @@ namespace API_olympia.Controllers
         {
             try
             {
+                string cod;
+
+                do
+                {
+                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
+                }
+                while (Repo.SpExisteCodigoEvento(cod));
+
+                model.CodEvento = cod;
+
                 this.Repo.Add(model);
+
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados no post().");
             }

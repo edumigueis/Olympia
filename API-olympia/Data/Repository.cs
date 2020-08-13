@@ -22,13 +22,12 @@ namespace API_olympia.Data
 
         public void Add<T>(T entity) where T : class
         {
-            //throw new System.NotImplementedException();
             this.Context.Add(entity);
         }
 
         public void Delete<T>(T entity) where T : class
         {
-            //throw new System.NotImplementedException();
+
             this.Context.Remove(entity);
         }
 
@@ -39,7 +38,6 @@ namespace API_olympia.Data
 
         public void Update<T>(T entity) where T : class
         {
-            //throw new System.NotImplementedException();
             this.Context.Update(entity);
         }
 
@@ -176,44 +174,6 @@ namespace API_olympia.Data
             consultaSugestoes = consultaSugestoes.OrderBy(p => p.IdSugestao)
             .Where(sugestao => sugestao.IdSugestao == id);
             return await consultaSugestoes.FirstOrDefaultAsync();
-        }
-
-        public async Task<Admins[]> GetAllAdminsAsync()
-        {
-            IQueryable<Admins> consultaAdmins = this.Context.Admins;
-            consultaAdmins = consultaAdmins.OrderBy(p => p.IdAdmin);
-            return await consultaAdmins.ToArrayAsync();
-        }
-
-        public async Task<Admins> GetAllAdminsAsyncById(int id)
-        {
-            IQueryable<Admins> consultaAdmins = this.Context.Admins;
-            consultaAdmins = consultaAdmins.OrderBy(p => p.IdAdmin)
-            .Where(Admins => Admins.IdAdmin == id);
-            return await consultaAdmins.FirstOrDefaultAsync();
-        }
-
-        /**************************Storeds Procedures*****************/
-
-        public bool VerfificarSpAdmins(LoginViewModel model)
-        {
-            SqlConnection conn = new SqlConnection(stringConnection);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("comando", conn);
-            cmd.CommandText = "sp_ValidateAdmin '" + model.UserName + "','" + model.Senha + "'";
-            SqlDataReader leitor = cmd.ExecuteReader();
-
-            int count = 0;
-            while (leitor.Read())
-            {
-                count++;
-            }
-            conn.Close();
-
-            if (count == 0)
-                return false;
-            else
-                return true;
         }
 
         public List<string> SpFotosServico(int idServico)
@@ -353,7 +313,8 @@ namespace API_olympia.Data
                                    leitor["categorias"],
                                    leitor["tags"],
                                    leitor["dataPost"],
-                                   leitor["dadosTecnicos"]};
+                                   leitor["dadosTecnicos"],
+                                   leitor["codObra"]};
 
                 result.Add(dados);
             }
@@ -379,7 +340,8 @@ namespace API_olympia.Data
                                    leitor["texto"],
                                    leitor["tags"],
                                    leitor["foto"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codPublicacao"]};
 
                 result.Add(dados);
             }
@@ -407,7 +369,8 @@ namespace API_olympia.Data
                                    leitor["idArte"],
                                    leitor["categorias"],
                                    leitor["tags"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codServico"]};
 
                 result.Add(dados);
             }
@@ -437,7 +400,8 @@ namespace API_olympia.Data
                                    leitor["localizacaoCoord"],
                                    leitor["endereco"],
                                    leitor["horario"],
-                                   leitor["linkSite"]};
+                                   leitor["linkSite"],
+                                   leitor["codEvento"]};
 
                 result.Add(dados);
             }
@@ -585,7 +549,8 @@ namespace API_olympia.Data
                                    leitor["categorias"],
                                    leitor["tags"],
                                    leitor["dataPost"],
-                                   leitor["dadosTecnicos"]};
+                                   leitor["dadosTecnicos"],
+                                   leitor["codObra"]};
 
                 result.Add(dados);
             }
@@ -610,7 +575,8 @@ namespace API_olympia.Data
                                    leitor["texto"],
                                    leitor["tags"],
                                    leitor["foto"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codObra"]};
 
                 result.Add(dados);
             }
@@ -637,7 +603,8 @@ namespace API_olympia.Data
                                    leitor["idArte"],
                                    leitor["categorias"],
                                    leitor["tags"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codServico"]};
 
                 result.Add(dados);
             }
@@ -665,7 +632,8 @@ namespace API_olympia.Data
                                    leitor["categorias"],
                                    leitor["tags"],
                                    leitor["dataPost"],
-                                   leitor["dadosTecnicos"]};
+                                   leitor["dadosTecnicos"],
+                                   leitor["codObra"]};
 
                 result.Add(dados);
             }
@@ -690,7 +658,8 @@ namespace API_olympia.Data
                                    leitor["texto"],
                                    leitor["tags"],
                                    leitor["foto"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codPublicacao"]};
 
                 result.Add(dados);
             }
@@ -717,7 +686,8 @@ namespace API_olympia.Data
                                    leitor["idArte"],
                                    leitor["categorias"],
                                    leitor["tags"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codServico"]};
 
                 result.Add(dados);
             }
@@ -745,7 +715,8 @@ namespace API_olympia.Data
                                    leitor["categorias"],
                                    leitor["tags"],
                                    leitor["dataPost"],
-                                   leitor["dadosTecnicos"]};
+                                   leitor["dadosTecnicos"],
+                                   leitor["codObra"]};
 
                 result.Add(dados);
             }
@@ -772,7 +743,8 @@ namespace API_olympia.Data
                                    leitor["texto"],
                                    leitor["tags"],
                                    leitor["foto"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codPublicacao"]};
 
                 result.Add(dados);
             }
@@ -801,7 +773,8 @@ namespace API_olympia.Data
                                    leitor["idArte"],
                                    leitor["categorias"],
                                    leitor["tags"],
-                                   leitor["dataPost"]};
+                                   leitor["dataPost"],
+                                   leitor["codServico"]};
 
                 result.Add(dados);
             }
@@ -837,6 +810,72 @@ namespace API_olympia.Data
             conn.Open();
             SqlCommand cmd = new SqlCommand("comando", conn);
             cmd.CommandText = "sp_ExisteCodigoObra '" + codObra + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            int count = 0;
+
+            while (leitor.Read())
+            {
+                count++;
+            }
+            conn.Close();
+
+            if (count == 0)
+                return false;
+            else
+                return true;
+        }
+
+        public bool SpExisteCodigoEvento(string codEvento)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ExisteCodigoEvento '" + codEvento + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            int count = 0;
+
+            while (leitor.Read())
+            {
+                count++;
+            }
+            conn.Close();
+
+            if (count == 0)
+                return false;
+            else
+                return true;
+        }
+
+        public bool SpExisteCodigoPublicacao(string codPublicacao)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ExisteCodigoPublicacao '" + codPublicacao + "'";
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            int count = 0;
+
+            while (leitor.Read())
+            {
+                count++;
+            }
+            conn.Close();
+
+            if (count == 0)
+                return false;
+            else
+                return true;
+        }
+
+        public bool SpExisteCodigoServico(string codServico)
+        {
+            SqlConnection conn = new SqlConnection(stringConnection);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("comando", conn);
+            cmd.CommandText = "sp_ExisteCodigoServico '" + codServico + "'";
             SqlDataReader leitor = cmd.ExecuteReader();
 
             int count = 0;

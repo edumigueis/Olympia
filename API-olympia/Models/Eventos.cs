@@ -45,5 +45,8 @@ namespace API_olympia.Models
         [Required]
         [StringLength(300, ErrorMessage = "O link do site oficial não deve ter mais do que 300 caracteres.")]
         public string LinkSite { get; set; }
+
+        [StringLength(50)]
+        public string CodEvento { get; set; }
     }
 }

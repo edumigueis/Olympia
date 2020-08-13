@@ -34,5 +34,8 @@ namespace API_olympia.Models
         [Required]
         public DateTime DataPost { get; set; }
 
+
+        [StringLength(50)]
+        public string CodServico { get; set; }
     }
 }

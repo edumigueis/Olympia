@@ -12,13 +12,11 @@ namespace API_olympia.Controllers
     [ApiController]
     public class PublicacoesController : Controller
     {
-        public DataArmazenador dataArmazenador { get; set; }
         public IRepository Repo { get; }
 
-        public PublicacoesController(IRepository repo, DataArmazenador dataArmazenadora)
+        public PublicacoesController(IRepository repo)
         {
             this.Repo = repo;
-            this.dataArmazenador = dataArmazenador;
         }
 
         [HttpGet]
@@ -99,7 +97,17 @@ namespace API_olympia.Controllers
 
             try
             {
+                string cod;
+
+                do
+                {
+                    cod = GeradorDeCodigo.alfanumericoAleatorio(50);
+                }
+                while (Repo.SpExisteCodigoPublicacao(cod));
+
+                model.CodPublicacao = cod;
                 this.Repo.Add(model);
+
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -181,23 +189,6 @@ namespace API_olympia.Controllers
             {
                 var result = this.Repo.SpPublicacoesOrderByDataDesc();
                 return Ok(result);
-            }
-            catch
-            {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
-            }
-        }
-
-        [HttpGet("RedirectToPost")]
-        public async Task<IActionResult> RedirectToPost()
-        {
-
-            try
-            {
-                string json = dataArmazenador.JsonPublicacao;
-                Publicacoes publicacoes = JsonConvert.DeserializeObject<Publicacoes>(json);
-
-                return await post(publicacoes);
             }
             catch
             {

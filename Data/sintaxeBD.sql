@@ -1,5 +1,17 @@
 DBCC CHECKIDENT('Eventos', RESEED, -1) /*zerador de identity*/
 
+alter table Obras
+add codObra varchar(50)
+
+alter table Eventos
+add codEvento varchar(50)
+
+alter table Publicacoes
+add codPublicacao varchar(50)
+
+alter table Servicos
+add codServico varchar(50)
+
 create table Obras(
 idObra int identity primary key not null,
 idUsuario int not null,
@@ -348,6 +360,27 @@ create proc sp_ExisteCodigoObra /*as obras existentes com certo código*/
 as
 Begin
 	select codObra from Obras where codObra = @codObra
+End
+
+create proc sp_ExisteCodigoEvento /*as obras existentes com certo código*/
+@codEvento varchar(50)
+as
+Begin
+	select codEvento from Eventos where codEvento = @codEvento
+End
+
+create proc sp_ExisteCodigoPublicacao /*as obras existentes com certo código*/
+@codPublicacao varchar(50)
+as
+Begin
+	select codPublicacao from Publicacoes where codPublicacao = @codPublicacao
+End
+
+create proc sp_ExisteCodigoServico /*as obras existentes com certo código*/
+@codServico varchar(50)
+as
+Begin
+	select codServico from Servicos where codServico = @codServico
 End
 
 create proc sp_MudarBio

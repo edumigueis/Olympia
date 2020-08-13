@@ -11,6 +11,8 @@ namespace API_olympia.Data
         void Delete<T>(T entity) where T : class;
         Task<bool> SaveChangesAsync();
 
+        /********************** GETs *************************/
+
         Task<Artes[]> GetAllArtesAsync();
         Task<Artes> GetAllArtesAsyncById(int ArtesId);
 
@@ -38,12 +40,8 @@ namespace API_olympia.Data
         Task<Sugestoes[]> GetAllSugestoesAsync();
         Task<Sugestoes> GetAllSugestoesAsyncById(int idSugestao);
 
-        Task<Admins[]> GetAllAdminsAsync();
-        Task<Admins> GetAllAdminsAsyncById(int idAdmin);
+        /*************** STOREDs PROCEDURES ******************/
 
-        /******************Storeds Procedures*****************/
-
-        bool VerfificarSpAdmins(LoginViewModel model);
         List<string> SpFotosServico(int idServico);
         List<string> SpFotosObra(int idObra);
         List<string> SpFotosEvento(int idEvento);
@@ -71,6 +69,9 @@ namespace API_olympia.Data
         List<object> SpServicosOrderByDataDesc();
         int SpUserNameId(string username);
         bool SpExisteCodigoObra(string codObra);
+        bool SpExisteCodigoEvento(string codEvento);
+        bool SpExisteCodigoPublicacao(string codPublicacao);
+        bool SpExisteCodigoServico(string codServico);
         void SpMudarBio(string bio, string biografia, int idUsuario);
         string SpVerificarDadosByUser(string user);
         string SpVerificarDadosByEmail(string email);

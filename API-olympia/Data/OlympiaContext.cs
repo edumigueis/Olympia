@@ -22,6 +22,5 @@ namespace API_olympia.Data
         public DbSet<Feedbacks> FeedBacks { get; set; }
         public DbSet<Sugestoes> Sugestoes { get; set; }
         public DbSet<Denuncias> Denuncias { get; set; }
-        public DbSet<Admins> Admins { get; set; }
     }
 }

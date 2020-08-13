@@ -74,7 +74,6 @@ namespace API_olympia.Controllers
                 var arte = await this.Repo.GetAllArtesAsyncById(ArtesId);
                 if (arte == null) return NotFound();
                 this.Repo.Delete(arte);
-                //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();
@@ -93,6 +92,7 @@ namespace API_olympia.Controllers
             try
             {
                 this.Repo.Add(model);
+
                 if (await this.Repo.SaveChangesAsync())
                 {
                     return Ok();

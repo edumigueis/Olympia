@@ -25,5 +25,8 @@ namespace API_olympia.Models
         [DataType(DataType.Date)]
         [Required]
         public DateTime DataPost { get; set; }
+
+        [StringLength(50)]
+        public string CodPublicacao { get; set; }
     }
 }
