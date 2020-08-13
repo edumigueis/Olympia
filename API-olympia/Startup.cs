@@ -30,7 +30,9 @@ namespace API_olympia
                                     builder =>
                                     {
                                         builder.WithOrigins("https://olympia.art.br", "http://localhost:8080")
-                                               .WithMethods("PUT", "DELETE", "GET", "POST");
+                                               .WithMethods("PUT", "DELETE", "GET", "POST")
+                                               .AllowAnyHeader()
+                                               .AllowCredentials();
                                     });
             });
 
