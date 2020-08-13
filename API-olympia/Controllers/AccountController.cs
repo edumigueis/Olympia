@@ -48,23 +48,27 @@ namespace API_olympia.Controllers
             if (!resultado)
                 return RedirectToAction("login", "home");
 
-            for (int i = 0; i < Armazenadora.StringValueRoute.Count; i++)
+            for (int i = 0; i < Armazenadora.StringValueNome.Count; i++)
             {
                 var list = Armazenadora.StringValueNome[i];
-                if (list[0] == ip)
+                if (list != null)
                 {
-                    indiceNome = i;
-                    break;
+                    if (list[0].Equals(ip))
+                    {
+                        indiceNome = i;
+                    }
                 }
             }
 
-            for (int i = 0; i < Armazenadora.StringValueRoute.Count; i++)
+            for (int i = 0; i < Armazenadora.StringValueRole.Count; i++)
             {
                 var list = Armazenadora.StringValueRole[i];
-                if (list[0] == ip)
+                if (list != null)
                 {
-                    indiceRole = i;
-                    break;
+                    if (list[0].Equals(ip))
+                    {
+                        indiceRole = i;
+                    }
                 }
             }
 
@@ -72,7 +76,7 @@ namespace API_olympia.Controllers
             {
                 await HttpContext.SignOutAsync();
                 Armazenadora.StringValueNome[indiceNome] = null;
-                Armazenadora.StringValueNome[indiceNome] = null;
+                Armazenadora.StringValueRole[indiceRole] = null;
                 return RedirectToAction("index", "home");
             }
 

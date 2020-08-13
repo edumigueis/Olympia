@@ -13,20 +13,24 @@ namespace API_olympia.Data
             for (int i = 0; i < Armazenadora.StringValueRoute.Count; i++)
             {
                 var list = Armazenadora.StringValueRoute[i];
-                if (list[0] == codigoAcesso)
+                if (list != null)
                 {
-                    indiceRoute = i;
-                    break;
+                    if (list[0].Equals(codigoAcesso))
+                    {
+                        indiceRoute = i;
+                    }
                 }
             }
 
-            for (int i = 0; i < Armazenadora.StringValueRoute.Count; i++)
+            for (int i = 0; i < Armazenadora.StringValueRole.Count; i++)
             {
                 var list = Armazenadora.StringValueRole[i];
-                if (list[0] == codigoAcesso)
+                if (list != null)
                 {
-                    indiceRole = i;
-                    break;
+                    if (list[0].Equals(codigoAcesso))
+                    {
+                        indiceRole = i;
+                    }
                 }
             }
         }
@@ -38,16 +42,15 @@ namespace API_olympia.Data
             {
                 var list2 = Armazenadora.StringValueRoute[indiceRoute];
 
-                if (list2[1] != null)
+                if (list2 != null)
                 {
                     if (list2[1].Equals("olympia.art.br") ||
                         list2[1].Equals("http://localhost:8080/"))
                     {
-                        list2[1] = null;
                         return true;
                     }
 
-                    list2[1] = null;
+                    list2 = null;
                 }
             }
 
@@ -55,7 +58,7 @@ namespace API_olympia.Data
             {
                 var list = Armazenadora.StringValueRole[indiceRole];
 
-                if (list[1] != null)
+                if (list != null)
                 {
                     if (list[1].Equals("Admin"))
                     {
