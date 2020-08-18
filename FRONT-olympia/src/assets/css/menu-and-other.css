@@ -555,7 +555,7 @@
 #container-menu {
   transition: 0.4s all ease;
 }
-*/
+
 #footer {
   transition: 0.3s background, color;
   position: relative;
@@ -700,7 +700,7 @@
 .footer-link:hover {
   cursor: pointer;
   font-weight: bolder;
-}
+}*/
 
 @-webkit-keyframes swing {
   15% {
