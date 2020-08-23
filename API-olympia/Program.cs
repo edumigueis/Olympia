@@ -14,6 +14,7 @@ namespace API_olympia
            .UseKestrel()
            .UseContentRoot(Directory.GetCurrentDirectory())
            .UseIISIntegration()
+           .UseStartup<Startup>()
            .Build();
 
             host.Run();

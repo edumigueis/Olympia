@@ -16,7 +16,6 @@ namespace API_olympia.Controllers
     public class AdminController : Controller
     {
         public IRepository Repo { get; set; }
-        private readonly string ip;
 
         public AdminController(IRepository repo)
         {
