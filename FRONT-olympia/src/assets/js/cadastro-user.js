@@ -367,15 +367,11 @@ setInterval(() => {
             seguidores: "{}"
           };
 
-          var jsonInput = JSON.stringify(myObject);
-
           jaFoiPostCadUser = true;
-
-          console.log(jsonInput);
 
           $.ajax({
             type: "POST",
-            data: jsonInput,
+            data: myObject,
             dataType: "json",
             contentType: "application/json",
             url: "https://localhost:5001/api/Usuarios",

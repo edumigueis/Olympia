@@ -2005,7 +2005,7 @@ export default {
   methods: {
     getMarkers() {
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Publicacoes",
+        url: "https://localhost:5001/api/Publicacoes",
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -2034,7 +2034,7 @@ export default {
 
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/Usuario/" + item.idUsuario,
+                "https://localhost:5001/api/Usuarios/" + item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2082,7 +2082,7 @@ export default {
     },
     getServicos() {
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Servicos",
+        url: "https://localhost:5001/api/Servicos",
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -2123,7 +2123,7 @@ export default {
             $("#content-2").append(conteudoDiv);
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/Usuario/" + item.idUsuario,
+                "https://localhost:5001/api/Usuarios/" + item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2146,7 +2146,7 @@ export default {
             });
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/FotosDoServico/" +
+                "https://localhost:5001/api/fotos/servico/" +
                 item.idServico,
               type: "GET",
               dataType: "json",
@@ -2170,7 +2170,7 @@ export default {
     },
     getObras() {
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Obras",
+        url: "https://localhost:5001/api/Obras",
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -2220,7 +2220,7 @@ export default {
 
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/Usuario/" + item.idUsuario,
+                "https://localhost:5001/api/Usuarios/" + item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2261,7 +2261,7 @@ export default {
 
                   $.ajax({
                     url:
-                      "https://localhost:5001/api/redirect/FotosDaObra/" +
+                      "https://localhost:5001/api/fotos/obra/" +
                       item.idObra,
                     type: "GET",
                     dataType: "json",

@@ -367,16 +367,14 @@ setInterval(() => {
             seguidores: "{}"
           };
 
-          var jsonInput = JSON.stringify(myObject);
-
           jaFoiPostCadUser = true;
           console.log(jsonInput);
           $.ajax({
             type: "POST",
-            data: jsonInput,
+            data: myObject,
             dataType: "json",
             contentType: "application/json",
-            url: "https://localhost:5001/api/Redirect/Cadastro",
+            url: "https://localhost:5001/api/usuarios",
             complete: function(code) {
               if (code.status === 200) {
                 window.$cookies.set("user_cadastro", "", Infinity);
@@ -389,9 +387,6 @@ setInterval(() => {
                   "Algúm dado foi fornecido incorretamente. Ou ocorreu um problema com o servidor. Tente novamente."
                 );
                 $("#name").val("");
-                /*setTimeout(function () {
-                  location.reload();
-                }, 2000)*/
               }
             },
             error: function(er) {

@@ -3667,7 +3667,7 @@ export default {
       $.ajax({
         type: "GET",
         url:
-          "https://localhost:5001/api/Redirect/UserNameIsUsado/" +
+          "https://localhost:5001/api/usuarios/username/" +
           $("#user").val() +
           "",
         dataType: "json",
@@ -3837,19 +3837,13 @@ export default {
         biografia: $("#biografia").val(),
         idUsuario: parseInt(localStorage.userId)
       };
-      alert($("#bio").val());
-      alert($("#biografia").val());
-      console.log(myObjectPubli);
-      var jsonInput = JSON.stringify(myObjectPubli);
-      console.log(jsonInput);
 
       $.ajax({
-        type: "GET",
-        url:
-          "https://localhost:5001/api/Usuarios/RedirectToPostBio/" +
-          encodeURI(jsonInput),
-        data: jsonInput,
+        type: "POST",
+        url: "https://localhost:5001/api/Usuarios/mudarbio/",
+        data: myObjectPubli,
         contentType: "application/json",
+        dataType: "json",
         success: function() {
           $(".success-msg").fadeIn();
           setTimeout(function() {
@@ -3858,10 +3852,6 @@ export default {
           }, 4000);
           $(".success-msg").css("left", "40px");
         },
-        fail: function() {
-          alert("deu erro");
-        },
-        dataType: "json"
       });
     },
     showConfModal(which) {
@@ -3915,7 +3905,7 @@ export default {
         dataType: "json",
         contentType: "application/json",
         url:
-          "https://localhost:5001/api/Redirect/Biografia" + localStorage.userId,
+          "https://localhost:5001/api/usuarios/Biografia" + localStorage.userId,
         complete: function(jqXHR, status) {
           if (status == "success") {
             biografiaAtual = $.parseJSON(jqXHR.responseText);
@@ -3924,7 +3914,7 @@ export default {
               dataType: "json",
               contentType: "application/json",
               url:
-                "https://localhost:5001/api/Redirect/Bio" + localStorage.userId,
+                "https://localhost:5001/api/usuarios/Bio" + localStorage.userId,
               complete: function(jqXHR, status) {
                 if (status == "success") {
                   bioAtual = $.parseJSON(jqXHR.responseText);
@@ -3962,7 +3952,7 @@ export default {
         data: jsonInput,
         dataType: "json",
         contentType: "application/json",
-        url: "https://localhost:5001/api/Redirect/AlterarDados",
+        url: "https://localhost:5001/api/usuarios",
         complete: function(code) {
           if (code.status === 200) {
             $("complete-p-alt-perfil").fadeIn();
@@ -3983,7 +3973,7 @@ export default {
     },
     getPublicacoes(idUser) {
       $.ajax({
-        url: "https://localhost:5001/api/redirect/AllObrasUser/" + idUser,
+        url: "https://localhost:5001/api/obras/usuario/" + idUser,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -4028,7 +4018,7 @@ export default {
               '<div class="interact-container"><div class="stage stage-btn"><button class="trigger">ver mais...</button></div><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div></div> </div></div>';
             $("#pub-container-prof").append(conteudoDiv);
             $.ajax({
-              url: "https://localhost:5001/api/redirect/Usuario/" + item[1],
+              url: "https://localhost:5001/api/Usuarios/" + item[1],
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -4072,7 +4062,7 @@ export default {
 
                   $.ajax({
                     url:
-                      "https://localhost:5001/api/redirect/FotosDaObra/" +
+                      "https://localhost:5001/api/fotos/obra/" +
                       item[0],
                     type: "GET",
                     dataType: "json",
@@ -4096,7 +4086,7 @@ export default {
     },
     getPosts(idUser) {
       $.ajax({
-        url: "https://localhost:5001/api/redirect/AllPublicacoesUser/" + idUser,
+        url: "https://localhost:5001/api/publicacoes/usuario/" + idUser,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -4124,7 +4114,7 @@ export default {
 
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/Usuario/" + item[1],
+                "https://localhost:5001/api/Usuarios/" + item[1],
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -4171,7 +4161,7 @@ export default {
     },
     getServicos(idUser) {
       $.ajax({
-        url: "https://localhost:5001/api/Redirect/AllServicosUser/" + idUser,
+        url: "https://localhost:5001/api/servicos/usuario/" + idUser,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -4211,7 +4201,7 @@ export default {
             $("#serv-container-prof").append(conteudoDiv);
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/Usuario/" + item[1],
+                "https://localhost:5001/api/Usuarios/" + item[1],
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -4233,7 +4223,7 @@ export default {
             });
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/FotosDoServico/" +
+                "https://localhost:5001/api/fotos/servico/" +
                 item[0],
               type: "GET",
               dataType: "json",

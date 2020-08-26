@@ -3295,7 +3295,7 @@ export default {
       $.ajax({
         type: "GET",
         url:
-          "https://localhost:5001/api/Redirect/UserNameIsUsado/" +
+          "https://localhost:5001/api/usuarios/username/" +
           $("#user").val() +
           "",
         dataType: "json",

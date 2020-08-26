@@ -165,7 +165,7 @@ export default {
       var url = window.location.href;
       var codigo = url.substring(29);
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Obra/" + codigo,
+        url: "https://localhost:5001/api/Obras/" + codigo,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -180,7 +180,7 @@ export default {
           $("#page-det-name").text(field.nome.split('+').join(' '));
           $.ajax({
             url:
-              "https://localhost:5001/api/Redirect/Usuario/" + field.idUsuario,
+              "https://localhost:5001/api/Usuarios/" + field.idUsuario,
             type: "GET",
             dataType: "json",
             contentType: "application/json",
@@ -219,7 +219,7 @@ export default {
         }
       });
       $.ajax({
-        url: "https://localhost:5001/api/redirect/FotosDaObra/" + codigo,
+        url: "https://localhost:5001/api/fotos/obra/" + codigo,
         type: "GET",
         dataType: "json",
         contentType: "application/json",

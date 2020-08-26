@@ -99,7 +99,7 @@ export default {
       var jsonInput = JSON.stringify(myObject);
 
       $.ajax({
-        url: "https://localhost:5001/api/redirect/VerificarDados",
+        url: "https://localhost:5001/api/usuarios/VerificarDados",
         type: "POST",
         data: jsonInput,
         dataType: "json",
@@ -111,7 +111,7 @@ export default {
           if (code.status === 200) {
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/UserByLoginData/" +
+                "https://localhost:5001/api/usuarios/UserByLoginData/" +
                 $("#user").val(),
               type: "GET",
               dataType: "json",

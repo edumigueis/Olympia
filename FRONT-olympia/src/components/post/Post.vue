@@ -734,13 +734,11 @@ export default {
         dataPost: finalDate
       };
 
-      var jsonInput = JSON.stringify(myObjectPubli);
-
       jaFoiPostCadUser = true;
       $.ajax({
         type: "POST",
         url: "https://localhost:5001/api/Publicacoes",
-        data: jsonInput,
+        data: myObjectPubli,
         contentType: "application/json",
         complete: function(code) {
           if (code.status === 200) {
@@ -842,13 +840,11 @@ export default {
         dataPost: finalDate,
         dadosTecnicos: $("#dadosTec").val()
       };
-      var jsonInput = JSON.stringify(myObjectPubli);
-      console.log(jsonInput);
       jaFoiPostCadUser = true;
       $.ajax({
         type: "POST",
-        url: "https://localhost:5001/api/Redirect/Obra",
-        data: jsonInput,
+        url: "https://localhost:5001/api/Obras",
+        data: myObjectPubli,
         contentType: "application/json",
         complete: function(jqXHR, status) {
           if (status == "success" || status == "notmodified") {
@@ -881,12 +877,11 @@ export default {
                 idObra: asset.idObra,
                 idServico: 0
               };
-              var jsonInputFotosObra = JSON.stringify(jsonVetorFotos);
-              console.log(jsonInputFotosObra);
+
               $.ajax({
                 type: "POST",
                 url: "https://localhost:5001/api/Fotos",
-                data: jsonInputFotosObra,
+                data: jsonVetorFotos,
                 contentType: "application/json",
                 success: function() {
                   $(".success-msg").fadeIn();
@@ -999,13 +994,12 @@ export default {
         idArte: arteSel,
         dataPost: finalDate
       };
-      var jsonInput = JSON.stringify(myObjectPubli);
-      console.log(jsonInput);
+
       jaFoiPostCadUser = true;
       $.ajax({
         type: "POST",
-        url: "https://localhost:5001/api/Redirect/Servico",
-        data: jsonInput,
+        url: "https://localhost:5001/api/Servicos",
+        data: myObjectPubli,
         contentType: "application/json",
         complete: function(jqXHR, status) {
           if (status == "success" || status == "notmodified") {
@@ -1036,12 +1030,11 @@ export default {
                 idObra: 0,
                 idServico: asset.idServico
               };
-              var jsonInputFotosServ = JSON.stringify(jsonVetorFotos);
 
               $.ajax({
                 type: "POST",
                 url: "https://localhost:5001/api/Fotos",
-                data: jsonInputFotosServ,
+                data: jsonVetorFotos,
                 contentType: "application/json",
                 success: function() {
                   $(".success-msg").fadeIn();
