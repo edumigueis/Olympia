@@ -1,0 +1,57 @@
+{
+  "keys": {
+    "accessKey": "233E0A5991DEB9C80374AA012AFAE98834F7BAFA",
+    "secretKey": "352FA7A8ADF7195BB75EF9B9FF5D97F1080DE767"
+  },
+  "applicationId": "5f4828fcbd2f5e0016fcdd4a",
+  "filesSrc": [
+    "./index.html",
+    "./src/assets/js/*.js"
+  ],
+  "filesDest": "./",
+  "params": [
+    {
+      "options": {},
+      "name": "whitespaceRemoval"
+    },
+    {
+      "options": {
+        "mode": "SAFEST"
+      },
+      "name": "identifiersRenaming"
+    },
+    {
+      "options": {
+        "mode": [
+          "optimization"
+        ]
+      },
+      "name": "duplicateLiteralsRemoval"
+    },
+    {
+      "options": {},
+      "name": "constantFolding"
+    },
+    {
+      "options": {},
+      "name": "deadCodeElimination"
+    },
+    {
+      "options": {},
+      "name": "debugCodeElimination"
+    },
+    {
+      "options": {
+        "names": []
+      },
+      "name": "assertionsRemoval"
+    }
+  ],
+  "areSubscribersOrdered": false,
+  "useRecommendedOrder": true,
+  "jscramblerVersion": "6.3",
+  "tolerateMinification": true,
+  "profilingDataMode": "off",
+  "useAppClassification": true,
+  "browsers": {}
+}
