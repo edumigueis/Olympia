@@ -1,13 +1,13 @@
 <template>
   <div id="not-found-container">
-    <title>5 0 0</title>
+    <title>F O R A  D O  A R !</title>
     <link rel="stylesheet" href="/src/assets/css/notFound.css" />
-    <header>
-      <h1 class="gradient-text" id="error-500">500 - Internal Server Error</h1>
+    <header class="oops-header">
+      <h1 class="gradient-text" id="error-oops">Ah, não!</h1>
     </header>
     <div class="exp-wrapper">
       <p class="explanation">
-        Algo não está correto. Por favor, tente novamente mais tarde.
+        Desculpe... o site está fora do ar no momento. Volte mais tarde!
       </p>
     </div>
   </div>

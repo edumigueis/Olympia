@@ -3,7 +3,7 @@
     <div id="container-home">
       <link rel="stylesheet" href="/src/assets/css/home.css" />
       <link rel="stylesheet" href="/src/assets/css/palaces.css" />
-      <link 
+      <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       />
@@ -2033,8 +2033,7 @@ export default {
             $("#content-3").append(conteudoDiv);
 
             $.ajax({
-              url:
-                "https://localhost:5001/api/Usuarios/" + item.idUsuario,
+              url: "https://localhost:5001/api/Usuarios/" + item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2066,7 +2065,7 @@ export default {
                   result.nome.replace("+", " ") + ""
                 );
                 $("#prof-bio-det-" + index).text(
-                  result.bio.replace("+", " ").substring(0,60) + "..."
+                  result.bio.replace("+", " ").substring(0, 60) + "..."
                 );
                 $("#load-modal").fadeOut();
               }
@@ -2110,26 +2109,30 @@ export default {
               '<div class="interact-container on-serv"><div class="stage"><a class="magic"><i class="fas fa-star"></i></a></div><div class="stage"><div class="heart"></div></div></div>';
             conteudoDiv +=
               '<h3 class="masonry-title">' +
-              item.nome.split('+').join(' ') +
+              item.nome.split("+").join(" ") +
               '</h3><a href="#" id="name-prof-link-on-serv-' +
               index +
               '" class="name-of-prof-link on-2-link"></a>';
             conteudoDiv +=
               '<p class="masonry-description">' +
-              item.descricao.substring(0, 320).split('+').join(' ') +
+              item.descricao
+                .substring(0, 320)
+                .split("+")
+                .join(" ") +
               thereismore +
               "</p></div></div>";
             var idUser = item.idUsuario;
             $("#content-2").append(conteudoDiv);
             $.ajax({
-              url:
-                "https://localhost:5001/api/Usuarios/" + item.idUsuario,
+              url: "https://localhost:5001/api/Usuarios/" + item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
               success: function(result) {
                 if (result.idUsuario != 0) {
-                  $("#name-prof-link-on-serv-" + index).text(result.nome.split('+').join(' '));
+                  $("#name-prof-link-on-serv-" + index).text(
+                    result.nome.split("+").join(" ")
+                  );
                   $("#name-prof-link-on-serv-" + index).attr(
                     "href",
                     "/#/perfil/" + result.userName
@@ -2145,9 +2148,7 @@ export default {
               }
             });
             $.ajax({
-              url:
-                "https://localhost:5001/api/fotos/servico/" +
-                item.idServico,
+              url: "https://localhost:5001/api/fotos/servico/" + item.idServico,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2219,8 +2220,7 @@ export default {
             $("#content-1").append(conteudoDiv);
 
             $.ajax({
-              url:
-                "https://localhost:5001/api/Usuarios/" + item.idUsuario,
+              url: "https://localhost:5001/api/Usuarios/" + item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2251,18 +2251,21 @@ export default {
 
                   if (result.bio.length > 90) {
                     $("#obra-prof-bio-" + index).text(
-                      result.bio.split('+').join(' ').substring(0, 25) + "..."
+                      result.bio
+                        .split("+")
+                        .join(" ")
+                        .substring(0, 25) + "..."
                     );
                   } else {
-                    $("#obra-prof-bio-" + index).text(result.bio.substring(0,30) + "...");
+                    $("#obra-prof-bio-" + index).text(
+                      result.bio.substring(0, 30) + "..."
+                    );
                   }
 
                   $("#name-of-prof-link-" + index).text(result.nome);
 
                   $.ajax({
-                    url:
-                      "https://localhost:5001/api/fotos/obra/" +
-                      item.idObra,
+                    url: "https://localhost:5001/api/fotos/obra/" + item.idObra,
                     type: "GET",
                     dataType: "json",
                     contentType: "application/json",
@@ -2295,11 +2298,23 @@ export default {
     this.getObras();*/
   },
   beforeCreate() {
-    /*if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }*/
+    /*$.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });*/
   }
 };
 </script>

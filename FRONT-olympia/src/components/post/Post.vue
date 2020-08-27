@@ -885,11 +885,11 @@ export default {
                 contentType: "application/json",
                 success: function() {
                   $(".success-msg").fadeIn();
-            setTimeout(function() {
-              $(".success-msg").animate({ left: -300 });
-              $(".success-msg").fadeOut();
-            }, 4000);
-            $(".success-msg").css("left", "40px");
+                  setTimeout(function() {
+                    $(".success-msg").animate({ left: -300 });
+                    $(".success-msg").fadeOut();
+                  }, 4000);
+                  $(".success-msg").css("left", "40px");
                 },
                 fail: function() {
                   $("#small-footer").css("margin-bottom", "-100px");
@@ -1071,12 +1071,24 @@ export default {
       });
     }
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

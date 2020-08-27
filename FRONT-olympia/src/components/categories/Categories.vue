@@ -237,9 +237,21 @@ export default {
     "meu-dark-mode": DarkMode
   },
   beforeCreate() {
-    if (!window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/";
-    }
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (!window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/";
+          }
+        }
+      }
+    });
   },
   methods: {
     cookie: function() {

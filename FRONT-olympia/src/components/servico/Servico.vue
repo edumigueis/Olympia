@@ -178,9 +178,9 @@ export default {
         dataType: "json",
         contentType: "application/json",
         success: function(field) {
-          $("#art-data").text(field.descricao.split('+').join(' '));
-          $("#art-name").text(field.nome.split('+').join(' '));
-          $("#page-det-name").text(field.nome.split('+').join(' '));
+          $("#art-data").text(field.descricao.split("+").join(" "));
+          $("#art-name").text(field.nome.split("+").join(" "));
+          $("#page-det-name").text(field.nome.split("+").join(" "));
           $.ajax({
             url: "https://localhost:5001/api/Usuarios/" + field.idUsuario,
             type: "GET",
@@ -193,8 +193,8 @@ export default {
                 "href",
                 "/#/perfil/" + resul.userName
               );
-              $("#bio").text(resul.bio.split('+').join(' '));
-              $("#name").text(resul.nome.split('+').join(' '));
+              $("#bio").text(resul.bio.split("+").join(" "));
+              $("#name").text(resul.nome.split("+").join(" "));
               if (resul.foto.length > 20) {
                 $("#artist-profile-pic").attr("src", resul.foto);
               } else {
@@ -206,7 +206,6 @@ export default {
                 );
                 $("#artist-profile-pic").attr("src", "");
               }
-              
             },
             error: function(thrownError) {
               //Add these parameters to display the required response
@@ -249,12 +248,24 @@ export default {
   mounted() {
     this.getMarkers();
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

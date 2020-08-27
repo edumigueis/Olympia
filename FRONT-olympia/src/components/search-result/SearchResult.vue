@@ -591,7 +591,10 @@
               <a href="/#/detalhes" class="link-route">
                 <div class="destaque-content obra-user-service-post-content">
                   <div class="flex-image-destaque">
-                    <img src="https://www.mokaclube.com.br/wp-content/uploads/2019/09/latteart.png" class="img-destaque" />
+                    <img
+                      src="https://www.mokaclube.com.br/wp-content/uploads/2019/09/latteart.png"
+                      class="img-destaque"
+                    />
                   </div>
                   <div class="info-obra-destaque info-obra-post-service">
                     <div class="inline-div inline-div-obra-post-service">
@@ -747,13 +750,13 @@ export default {
       ];
       $(".title-routes").css("display", "flex");
       for (var i = 0; i < routes.length; i++) {
-          var contDiv =
-            '<a href="/#/' +
-            routes[i] +
-            '" class="link-route"><div class="5-route route"><h1 class="title-route">' +
-            routes[i] +
-            '</h1><div class="img-wp"><div class="arrow"></div></div></div></a>';
-          $("#routes-wrapper").append(contDiv);
+        var contDiv =
+          '<a href="/#/' +
+          routes[i] +
+          '" class="link-route"><div class="5-route route"><h1 class="title-route">' +
+          routes[i] +
+          '</h1><div class="img-wp"><div class="arrow"></div></div></div></a>';
+        $("#routes-wrapper").append(contDiv);
       }
     },
     pesquisar() {
@@ -881,8 +884,7 @@ export default {
             });
             $.ajax({
               type: "GET",
-              url:
-                "https://localhost:5001/api/fotos/Servico/" + item[0],
+              url: "https://localhost:5001/api/fotos/Servico/" + item[0],
               contentType: "application/json",
               success: function(resFoto) {
                 $("#repr-img-serv-" + index).attr("src", resFoto[0]);
@@ -999,15 +1001,27 @@ export default {
       });
     }
   },
-  mounted(){
+  mounted() {
     this.fillRoutes();
   },
   beforeCreate() {
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

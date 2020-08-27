@@ -10,7 +10,8 @@
       <meus-contatos></meus-contatos>
       <meu-dark-mode></meu-dark-mode>
       <!--ATENÇÂO-->
-              <div class="bg"></div> <!--BACKGROUND-->
+      <div class="bg"></div>
+      <!--BACKGROUND-->
       <div style="position:relative">
         <div class="image-container">
           <img
@@ -21,51 +22,63 @@
           />
         </div>
         <h1 class="art-title">Artes Digitais</h1>
-        <h2 class="art-subtitle">A arte que empodera o lado pintor de um fotógrafo e o lado fotógrafo de um pintor.</h2>
+        <h2 class="art-subtitle">
+          A arte que empodera o lado pintor de um fotógrafo e o lado fotógrafo
+          de um pintor.
+        </h2>
       </div>
 
       <div id="corpo">
         <div class="slideshow-container dark-slideshow">
+          <div class="mySlides">
+            <q>Design é função, não forma.</q>
+            <p class="author">- Steve Jobs</p>
+          </div>
 
-      <div class="mySlides">
-        <q>Design é função, não forma.</q>
-        <p class="author">- Steve Jobs</p>
-      </div>
+          <div class="mySlides">
+            <q
+              >No vocabulário da maioria das pessoas, design significa
+              aparência. É decoração de interiores. É o tecido de cortinas, do
+              sofá. Mas para mim, nada poderia estar tão longe do significado de
+              design. Design é a alma fundamental de uma criação humana, que
+              acaba se expressando em camadas externas sucessivas do produto ou
+              serviço.</q
+            >
+            <p class="author">- Steve Jobs</p>
+          </div>
 
-      <div class="mySlides">
-        <q>No vocabulário da maioria das pessoas, design significa aparência. É decoração de interiores. É o tecido de cortinas, do sofá. Mas para mim, nada poderia estar tão longe do significado de design. Design é a alma fundamental de uma criação humana, que acaba se expressando em camadas externas sucessivas do produto ou serviço.</q>
-        <p class="author">- Steve Jobs</p>
-      </div>
+          <div class="mySlides">
+            <q>Design dá ao mundo algo que ele não sabia que sentia falta</q>
+            <p class="author">- Paola Antonelli</p>
+          </div>
 
-      <div class="mySlides">
-        <q>Design dá ao mundo algo que ele não sabia que sentia falta</q>
-        <p class="author">- Paola Antonelli
-    </p>
-      </div>
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
 
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-
-      </div>
-
-<div class="dot-container">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
         <div class="container-left show-on-scroll black-to-white white-7">
-          <table> <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
+          <table>
+            <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-principal">
                 <h1 class="text-title-principal">Artes Digitais</h1>
-                Arte digital é aquela que se produz no ambiente gráfico computacional. 
-                Tem por objetivo criar obras de arte multimídia por intermédio de software e hardware, 
-                em um espaço virtual.Existem diversas categorias de arte digital, tais como: pintura digital, 
-                digigravura, modelagem digital, fotografia digital, animação digital, vídeo digital entre outras. 
-                Os resultados também podem ser apreciados depois de "impressos" em um suporte 2D ou em um objeto 3D, 
-                mas são melhor exibidos no próprio ambiente em que foram produzidos. Proliferam-se comunidades 
-                virtuais voltadas à divulgação desse tipo de expressão artística. A arte digital só pode ser 
-                entendida no âmbito da arte contemporânea.
+                Arte digital é aquela que se produz no ambiente gráfico
+                computacional. Tem por objetivo criar obras de arte multimídia
+                por intermédio de software e hardware, em um espaço
+                virtual.Existem diversas categorias de arte digital, tais como:
+                pintura digital, digigravura, modelagem digital, fotografia
+                digital, animação digital, vídeo digital entre outras. Os
+                resultados também podem ser apreciados depois de "impressos" em
+                um suporte 2D ou em um objeto 3D, mas são melhor exibidos no
+                próprio ambiente em que foram produzidos. Proliferam-se
+                comunidades virtuais voltadas à divulgação desse tipo de
+                expressão artística. A arte digital só pode ser entendida no
+                âmbito da arte contemporânea.
               </td>
             </tr>
           </table>
@@ -78,12 +91,19 @@
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">Pintura digital</h1>
-                Pintura digital é uma técnica de ilustração, ou pintura, que em vez de usar os meios tradicionais, 
-                utiliza um ambiente computacional. As ferramentas digitais estão disponíveis em um software, 
-                um programa gráfico que oferece uma tela virtual e caixas de pintura com grande quantidade de pincéis, 
-                cores e outros suprimentos. Essas "caixas" contém muitos instrumentos que não existem fora do computador, 
-                e que dão à arte-final características diferentes das obras feitas da maneira tradicional.
-                <p class="author">Pintura digital de estilo neoclássico: The Woman of Rock (detail), produzida no Adobe Photoshop.</p>
+                Pintura digital é uma técnica de ilustração, ou pintura, que em
+                vez de usar os meios tradicionais, utiliza um ambiente
+                computacional. As ferramentas digitais estão disponíveis em um
+                software, um programa gráfico que oferece uma tela virtual e
+                caixas de pintura com grande quantidade de pincéis, cores e
+                outros suprimentos. Essas "caixas" contém muitos instrumentos
+                que não existem fora do computador, e que dão à arte-final
+                características diferentes das obras feitas da maneira
+                tradicional.
+                <p class="author">
+                  Pintura digital de estilo neoclássico: The Woman of Rock
+                  (detail), produzida no Adobe Photoshop.
+                </p>
               </td>
               <td class="td-imagem">
                 <img
@@ -95,18 +115,23 @@
             </tr>
           </table>
         </div>
-    
-      <div class="container-left show-on-scroll black-to-white white-7">
-          <table> <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
+
+        <div class="container-left show-on-scroll black-to-white white-7">
+          <table>
+            <!--TABELA PERMETE UMA BOA RESPONSIVIDADE PELO VERTICAL-ALIGN NO CSS-->
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">Design de jogos</h1>
-                O design de jogos, ou desenho de jogos, ou Projetamento de jogos, é uma extensão da prática do design 
-                cujo foco é a criação de jogos.O profissional da área de design pode atuar em todas as etapas da 
-                produção dos jogos, desde o desenvolvimento da temática ou roteiro,[1] produção da arte conceitual 
-                (esboços e rascunhos da história e personagens ), modelagem 3D e chegando até a programação, no caso 
-                de jogos digitais.
-                <p class="author">Hollow night, um jogo "indie" com design digital</p>
+                O design de jogos, ou desenho de jogos, ou Projetamento de
+                jogos, é uma extensão da prática do design cujo foco é a criação
+                de jogos.O profissional da área de design pode atuar em todas as
+                etapas da produção dos jogos, desde o desenvolvimento da
+                temática ou roteiro,[1] produção da arte conceitual (esboços e
+                rascunhos da história e personagens ), modelagem 3D e chegando
+                até a programação, no caso de jogos digitais.
+                <p class="author">
+                  Hollow night, um jogo "indie" com design digital
+                </p>
               </td>
               <td class="td-imagem">
                 <img
@@ -118,22 +143,25 @@
             </tr>
           </table>
         </div>
-          <div class="container-right show-on-scroll black-to-white white-7">
+        <div class="container-right show-on-scroll black-to-white white-7">
           <table>
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">Edição de imagens(Photoshop)</h1>
-                A Edição é a alteração/manuseamento de determinado conteúdo tendo por seu documento 
-                pessoal objectivo um uso determinado.
-                Habitualmente o termo é mais relacionado com a edição de texto, ou a transformação 
-                de um manuscrito em formato comercializável e reprodutível, como um livro. 
-                O acto de editar determinado conteúdo chama-se editoração, e o sujeito é o editor.
-                A edição compreende também a alteração de conteúdos vídeo, 
-                como a edição de vídeo, num processo análogo à Montagem cinematográfica ou videográfica, 
-                assim como imagens não sequenciais, como a Edição de imagens como as fotografias, 
-                textos de vários outros formatos consoante o meio de comunicação, como a edição jornalística, 
-                ou a edição internet, ou sons, como a edição de música ou a edição radiofônica.
-              <p class="author">- Arte por Janaina Morena</p>
+                A Edição é a alteração/manuseamento de determinado conteúdo
+                tendo por seu documento pessoal objectivo um uso determinado.
+                Habitualmente o termo é mais relacionado com a edição de texto,
+                ou a transformação de um manuscrito em formato comercializável e
+                reprodutível, como um livro. O acto de editar determinado
+                conteúdo chama-se editoração, e o sujeito é o editor. A edição
+                compreende também a alteração de conteúdos vídeo, como a edição
+                de vídeo, num processo análogo à Montagem cinematográfica ou
+                videográfica, assim como imagens não sequenciais, como a Edição
+                de imagens como as fotografias, textos de vários outros formatos
+                consoante o meio de comunicação, como a edição jornalística, ou
+                a edição internet, ou sons, como a edição de música ou a edição
+                radiofônica.
+                <p class="author">- Arte por Janaina Morena</p>
               </td>
               <td class="td-imagem">
                 <img
@@ -144,15 +172,16 @@
               </td>
             </tr>
           </table>
-        </div>    
-      <div class="container-left show-on-scroll black-to-white white-7">
-          <table> 
+        </div>
+        <div class="container-left show-on-scroll black-to-white white-7">
+          <table>
             <tr>
               <td class="texto-linha">
                 <h1 class="text-title">UI- design de interface</h1>
-                Design de interface de utilizador ou engenharia de interface de utilizador é o 
-                desenvolvimento de computadores, aplicações, máquinas, dispositivos de comunicação móveis, 
-                softwares e sítios web com o foco na experiência do utilizadores e interação.
+                Design de interface de utilizador ou engenharia de interface de
+                utilizador é o desenvolvimento de computadores, aplicações,
+                máquinas, dispositivos de comunicação móveis, softwares e sítios
+                web com o foco na experiência do utilizadores e interação.
               </td>
               <td class="td-imagem">
                 <img
@@ -168,10 +197,12 @@
           <table>
             <tr>
               <td class="texto-linha">
-                <h1 class="text-title"> UX- Experiência do usuário</h1>
-                O User Experience Design – ou design da experiência do usuário – se preocupa com o ponto de 
-                contato de um produto/serviço, com as pessoas. Este produto/serviço pode ser um website, 
-                um aplicativo, uma máquina, um dispositivo móvel, ponto de venda, entre outras plataformas de interação.
+                <h1 class="text-title">UX- Experiência do usuário</h1>
+                O User Experience Design – ou design da experiência do usuário –
+                se preocupa com o ponto de contato de um produto/serviço, com as
+                pessoas. Este produto/serviço pode ser um website, um
+                aplicativo, uma máquina, um dispositivo móvel, ponto de venda,
+                entre outras plataformas de interação.
               </td>
               <td class="td-imagem">
                 <img
@@ -182,9 +213,8 @@
               </td>
             </tr>
           </table>
-        </div>  
+        </div>
         <!--  -->
-        
       </div>
       <!---->
 
@@ -210,12 +240,24 @@ export default {
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

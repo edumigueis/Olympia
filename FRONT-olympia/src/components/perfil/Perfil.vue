@@ -175,10 +175,14 @@
               <p class="biografia black-to-white"></p>
               <button class="alterar btnPerfil">Alterar biografia</button>
             </div>
-            <h1 class="title-content-config black-to-white" style="display: none !important">
+            <h1
+              class="title-content-config black-to-white"
+              style="display: none !important"
+            >
               Publicações...
             </h1>
-            <div style="display: none !important"
+            <div
+              style="display: none !important"
               class="div-scroll div-scroll-sobre"
               id="post-wrapper"
             ></div>
@@ -198,10 +202,7 @@
               Confira suas Obras...
             </h1>
             <div class="div-scroll div-scroll-salvos">
-              <div class="slide__content" id="pub-container-prof">
-                
-                       
-              </div>
+              <div class="slide__content" id="pub-container-prof"></div>
             </div>
           </div>
           <div
@@ -3851,7 +3852,7 @@ export default {
             $(".success-msg").fadeOut();
           }, 4000);
           $(".success-msg").css("left", "40px");
-        },
+        }
       });
     },
     showConfModal(which) {
@@ -4061,9 +4062,7 @@ export default {
                   $("#name-of-prof-link-" + index).text(result.nome);
 
                   $.ajax({
-                    url:
-                      "https://localhost:5001/api/fotos/obra/" +
-                      item[0],
+                    url: "https://localhost:5001/api/fotos/obra/" + item[0],
                     type: "GET",
                     dataType: "json",
                     contentType: "application/json",
@@ -4093,70 +4092,67 @@ export default {
         success: function(data) {
           jQuery.each(data, function(index, item) {
             console.log(item);
-              jQuery.each(data, function(index, item) {
-            var conteudoDiv =
-              '<div class="insp-item"><div class="insp-content white-7"><div class="prof-cont-feed white-7 prof-insp"><div class="prof-img-cont"><img class="prof-img-prop" id="prof-inner-prop-img-' +
-              index +
-              '" src="" /></div><a id="prof-name-link-' +
-              index +
-              '" href="/#/perfil" class="prof-name-det black-to-white"></a><div id="prof-bio-det-' +
-              index +
-              '" class="prof-bio-det text-gray"></div></div>';
-            conteudoDiv +=
-              '<div class="insp-post-cont black-to-white">' +
-              item[2].replace("+", " ") +
-              '</div> <img src="' +
-              item[4] +
-              '" class="img-insp"/>';
-            conteudoDiv +=
-              '<div class="interact-container insp-inte"><div class="stage insp-stage"><div class="heart"></div></div> </div></div></div>';
-            $("#post-wrapper").append(conteudoDiv);
+            jQuery.each(data, function(index, item) {
+              var conteudoDiv =
+                '<div class="insp-item"><div class="insp-content white-7"><div class="prof-cont-feed white-7 prof-insp"><div class="prof-img-cont"><img class="prof-img-prop" id="prof-inner-prop-img-' +
+                index +
+                '" src="" /></div><a id="prof-name-link-' +
+                index +
+                '" href="/#/perfil" class="prof-name-det black-to-white"></a><div id="prof-bio-det-' +
+                index +
+                '" class="prof-bio-det text-gray"></div></div>';
+              conteudoDiv +=
+                '<div class="insp-post-cont black-to-white">' +
+                item[2].replace("+", " ") +
+                '</div> <img src="' +
+                item[4] +
+                '" class="img-insp"/>';
+              conteudoDiv +=
+                '<div class="interact-container insp-inte"><div class="stage insp-stage"><div class="heart"></div></div> </div></div></div>';
+              $("#post-wrapper").append(conteudoDiv);
 
-            $.ajax({
-              url:
-                "https://localhost:5001/api/Usuarios/" + item[1],
-              type: "GET",
-              dataType: "json",
-              contentType: "application/json",
-              success: function(result) {
-                if (result.foto.length > 20) {
-                  $("#prof-inner-prop-img-" + index).attr(
-                    "src",
-                    result.foto + ""
-                  );
-                } else {
-                  $("#prof-inner-prop-img-" + index)
-                    .parent()
-                    .css("background-color", result.foto);
-                  $("#prof-inner-prop-img-" + index)
-                    .parent()
-                    .append(
-                      '<span class="letter-prof">' +
-                        result.nome.substring(0, 1) +
-                        "</span>"
+              $.ajax({
+                url: "https://localhost:5001/api/Usuarios/" + item[1],
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json",
+                success: function(result) {
+                  if (result.foto.length > 20) {
+                    $("#prof-inner-prop-img-" + index).attr(
+                      "src",
+                      result.foto + ""
                     );
-                  $("#artist-profile-pic").attr("src", "");
-                }
+                  } else {
+                    $("#prof-inner-prop-img-" + index)
+                      .parent()
+                      .css("background-color", result.foto);
+                    $("#prof-inner-prop-img-" + index)
+                      .parent()
+                      .append(
+                        '<span class="letter-prof">' +
+                          result.nome.substring(0, 1) +
+                          "</span>"
+                      );
+                    $("#artist-profile-pic").attr("src", "");
+                  }
 
-                $("#prof-name-link-" + index).attr(
-                  "href",
-                  "/#/perfil/" + result.idUsuario
-                );
-                $("#prof-name-link-" + index).text(
-                  result.nome.replace("+", " ") + ""
-                );
-                $("#prof-bio-det-" + index).text(
-                  result.bio.replace("+", " ").substring(0,20) + "..."
-                );
-                $("#load-modal").fadeOut();
-              }
+                  $("#prof-name-link-" + index).attr(
+                    "href",
+                    "/#/perfil/" + result.idUsuario
+                  );
+                  $("#prof-name-link-" + index).text(
+                    result.nome.replace("+", " ") + ""
+                  );
+                  $("#prof-bio-det-" + index).text(
+                    result.bio.replace("+", " ").substring(0, 20) + "..."
+                  );
+                  $("#load-modal").fadeOut();
+                }
+              });
             });
           });
-          });
         },
-        error: function() {
-          
-        }
+        error: function() {}
       });
     },
     getServicos(idUser) {
@@ -4200,8 +4196,7 @@ export default {
               "</p></div></div>";
             $("#serv-container-prof").append(conteudoDiv);
             $.ajax({
-              url:
-                "https://localhost:5001/api/Usuarios/" + item[1],
+              url: "https://localhost:5001/api/Usuarios/" + item[1],
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -4218,13 +4213,10 @@ export default {
                   $("#load-modal").fadeOut();
                 }
               },
-              error: function() {
-              }
+              error: function() {}
             });
             $.ajax({
-              url:
-                "https://localhost:5001/api/fotos/servico/" +
-                item[0],
+              url: "https://localhost:5001/api/fotos/servico/" + item[0],
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -4259,11 +4251,23 @@ export default {
     }
   },
   beforeCreate() {
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   },
   created() {
     if (document.URL.toString().length <= 31) {
@@ -4457,8 +4461,7 @@ export default {
                     /*$(".publicacoes").text("Publicações: "+ 10);*/
                       $(".bio").text(result.bio);
                       $(".biografia").text(result.biografia);
-                    } 
-                    else {
+                    } else {
                       location.href = "/#/error";
                     }
                   }

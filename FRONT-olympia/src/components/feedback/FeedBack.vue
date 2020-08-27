@@ -28,7 +28,9 @@
                 <img src="https://image.flaticon.com/icons/svg/25/25694.svg" />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title black-to-white">Feed</h2></div>
+            <div class="flex-part">
+              <h2 class="title black-to-white">Feed</h2>
+            </div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -39,7 +41,9 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title black-to-white">Daily Contents</h2></div>
+            <div class="flex-part">
+              <h2 class="title black-to-white">Daily Contents</h2>
+            </div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -50,7 +54,9 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title black-to-white">Perfil</h2></div>
+            <div class="flex-part">
+              <h2 class="title black-to-white">Perfil</h2>
+            </div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -61,7 +67,9 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title black-to-white">Login</h2></div>
+            <div class="flex-part">
+              <h2 class="title black-to-white">Login</h2>
+            </div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -72,7 +80,9 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title black-to-white">Conteúdos</h2></div>
+            <div class="flex-part">
+              <h2 class="title black-to-white">Conteúdos</h2>
+            </div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -81,7 +91,9 @@
                 <img src="https://img.icons8.com/all/500/settings.png" />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title black-to-white">Configurações</h2></div>
+            <div class="flex-part">
+              <h2 class="title black-to-white">Configurações</h2>
+            </div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -90,7 +102,9 @@
                 <img src="/src/assets/images/plus-sign.png" />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title black-to-white">Postar</h2></div>
+            <div class="flex-part">
+              <h2 class="title black-to-white">Postar</h2>
+            </div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -101,7 +115,9 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title black-to-white">Eventos</h2></div>
+            <div class="flex-part">
+              <h2 class="title black-to-white">Eventos</h2>
+            </div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
           <div class="module">
@@ -112,7 +128,9 @@
                 />
               </div>
             </div>
-            <div class="flex-part"><h2 class="title black-to-white">Outro</h2></div>
+            <div class="flex-part">
+              <h2 class="title black-to-white">Outro</h2>
+            </div>
             <div class="flex-part"><div class="arrow"></div></div>
           </div>
         </div>
@@ -130,22 +148,22 @@
           <div class="container white-7">
             <h2 class="title-form black-to-white">Detalhe o Problema:</h2>
             <form>
-              <textarea class="desc" placeholder="Detalhes..." id="det"/>
+              <textarea class="desc" placeholder="Detalhes..." id="det" />
               <br />
               <label class="file-lb" for="file-input"
                 ><i class="black-to-white fa fa-paperclip"></i>
               </label>
               <i class="black-to-white fa fa-close"></i>
-              <input
-                type="file"
-                id="file-input"
-                multiple
-                accept="image/*"
-              />
+              <input type="file" id="file-input" multiple accept="image/*" />
               <br />
-              <div class="img-mask"><img id="img-file" src=""></div>
+              <div class="img-mask"><img id="img-file" src="" /></div>
               <div class="btn-cont">
-                <input type="submit" class="register" value="Registrar" id="registrar" />
+                <input
+                  type="submit"
+                  class="register"
+                  value="Registrar"
+                  id="registrar"
+                />
               </div>
             </form>
           </div>
@@ -174,12 +192,24 @@ export default {
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

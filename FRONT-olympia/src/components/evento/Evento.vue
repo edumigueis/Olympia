@@ -268,7 +268,7 @@ export default {
           var dataFin = day + "/" + month + "/" + year;
           $("#event-info-datas").text("Data: " + dataFin);
           $("#event-info-horarios").text("Horários: " + field.horario);
-          $("#of-web-link-eve").attr('href', field.linkSite);
+          $("#of-web-link-eve").attr("href", field.linkSite);
           $(".day").text(field.dataEvento.toString().substring(8, 10));
           $(".month").text(
             monthNames[parseInt(field.dataEvento.substring(5, 7)) - 1]
@@ -293,9 +293,7 @@ export default {
           $("#event-map").attr("src", field.localizacaoCoord);
 
           $.ajax({
-            url:
-              "https://localhost:5001/api/fotos/Evento/" +
-              field.idEvento,
+            url: "https://localhost:5001/api/fotos/Evento/" + field.idEvento,
             type: "GET",
             dataType: "json",
             contentType: "application/json",
@@ -303,21 +301,23 @@ export default {
               $("#load-modal").addClass("loading");
             },
             success: function(data) {
-
               var current;
               var final;
 
               for (var i = 0; i < 9; i++) {
-                current = i+1
-                if(data[i] != undefined)
-                $(".box-"+ current).css("background-image", "url("+ data[i] +")");
-                else{
+                current = i + 1;
+                if (data[i] != undefined)
+                  $(".box-" + current).css(
+                    "background-image",
+                    "url(" + data[i] + ")"
+                  );
+                else {
                   final = i;
                   break;
                 }
               }
               for (var f = final + 1; f < 9; f++) {
-                $(".box-"+ f).css("display", "none");
+                $(".box-" + f).css("display", "none");
               }
 
               $("body").removeClass("loading");
@@ -340,12 +340,24 @@ export default {
   mounted() {
     this.getMarkers();
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

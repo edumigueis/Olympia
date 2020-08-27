@@ -32,8 +32,7 @@
                 </div>
                 <div class="fine-line white-6"></div>
                 <div id="art-data" class="black-to-white">
-                  <p id="art-data-p">
-                  </p>
+                  <p id="art-data-p"></p>
                 </div>
               </div>
             </li>
@@ -174,13 +173,12 @@ export default {
         },
         success: function(field) {
           $("#load-modal").fadeOut();
-          $("#art-detail-p").text(field.dadosTecnicos.split('+').join(' '));
-          $("#art-data-p").text(field.descricao.split('+').join(' '));
-          $("#art-name").text(field.nome.split('+').join(' '));
-          $("#page-det-name").text(field.nome.split('+').join(' '));
+          $("#art-detail-p").text(field.dadosTecnicos.split("+").join(" "));
+          $("#art-data-p").text(field.descricao.split("+").join(" "));
+          $("#art-name").text(field.nome.split("+").join(" "));
+          $("#page-det-name").text(field.nome.split("+").join(" "));
           $.ajax({
-            url:
-              "https://localhost:5001/api/Usuarios/" + field.idUsuario,
+            url: "https://localhost:5001/api/Usuarios/" + field.idUsuario,
             type: "GET",
             dataType: "json",
             contentType: "application/json",
@@ -191,8 +189,8 @@ export default {
                 "href",
                 "/#/perfil/" + resul.userName
               );
-              $("#bio").text(resul.bio.split('+').join(' '));
-              $("#name").text(resul.nome.split('+').join(' '));
+              $("#bio").text(resul.bio.split("+").join(" "));
+              $("#name").text(resul.nome.split("+").join(" "));
               if (resul.foto.length > 20) {
                 $("#artist-profile-pic").attr("src", resul.foto);
               } else {
@@ -246,12 +244,24 @@ export default {
   mounted() {
     this.getMarkers();
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

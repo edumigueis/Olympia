@@ -68,15 +68,16 @@
                 colori-la, atribuindo-lhe matizes, tons e texturas. Em um
                 sentido mais específico, é a arte de pintar uma superfície, tais
                 como papel, tela, ou uma parede (pintura mural ou afrescos).
-                Devido ao fato de grandes obras de arte, tais como a "Mona Lisa" e
-                "A Última Ceia", do renascentista Leonardo Da Vinci, serem
+                Devido ao fato de grandes obras de arte, tais como a "Mona Lisa"
+                e "A Última Ceia", do renascentista Leonardo Da Vinci, serem
                 pinturas a óleo, a técnica é historicamente considerada uma das
                 mais tradicionais das artes plásticas. Com o desenvolvimento
                 tecnológico dos materiais, outras técnicas tornaram-se
                 igualmente importantes como, por exemplo, a tinta acrílica.
                 Diferencia-se do desenho pelo uso dos pigmentos líquidos e do
                 uso constante da cor, enquanto aquele apropria-se principalmente
-                de materiais secos. A seguir mostraremos algumas das principais obras.
+                de materiais secos. A seguir mostraremos algumas das principais
+                obras.
               </td>
             </tr>
           </table>
@@ -332,12 +333,24 @@ export default {
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

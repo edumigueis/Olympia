@@ -247,14 +247,14 @@
                 Maman (1999) é uma escultura em bronze, aço inoxidável e mármore
                 da artista Louise Bourgeois. A escultura, que representa uma
                 aranha, está entre as maiores do mundo, medindo mais de 30 pés
-                de altura e 33 pés de largura (927 x 891 x 1024 cm). Inclui
-                um saco contendo 32 ovos de mármore e seu abdômen e tórax são
+                de altura e 33 pés de largura (927 x 891 x 1024 cm). Inclui um
+                saco contendo 32 ovos de mármore e seu abdômen e tórax são
                 feitos de bronze com nervuras. O título é a familiar palavra
                 francesa para Mãe (semelhante a Mamãe). A escultura foi criada
                 em 1999 por Bourgeois como parte de sua comissão inaugural da
                 The Unilever Series (2000), no Turbine Hall da Tate Modern em
-                Londres. Este original foi criado em aço, com uma edição de
-                seis peças fundidas subsequentes em bronze.
+                Londres. Este original foi criado em aço, com uma edição de seis
+                peças fundidas subsequentes em bronze.
               </td>
               <td class="td-imagem">
                 <img
@@ -291,12 +291,24 @@ export default {
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

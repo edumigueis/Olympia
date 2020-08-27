@@ -2,22 +2,25 @@
   <main>
     <div id="container-welcome">
       <title>W E L C O M E</title>
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
-      <link rel="preload" as="image" href="/src/assets/images/land-1.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-2.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-3.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-4.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-5.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-6.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-7.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-8.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-9.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-10.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-11.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-12.jpg">
-      <link rel="preload" as="image" href="/src/assets/images/land-13.jpg">
-      <link rel="stylesheet" href="/src/assets/css/welcome.css">
-      <link rel="preload" href="/src/assets/css/welcome.css" as="style">
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      />
+      <link rel="preload" as="image" href="/src/assets/images/land-1.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-2.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-3.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-4.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-5.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-6.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-7.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-8.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-9.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-10.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-11.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-12.jpg" />
+      <link rel="preload" as="image" href="/src/assets/images/land-13.jpg" />
+      <link rel="stylesheet" href="/src/assets/css/welcome.css" />
+      <link rel="preload" href="/src/assets/css/welcome.css" as="style" />
       <link rel="stylesheet" href="/src/assets/css/welcome.css" />
       <section class="canvas-wrap">
         <div id="container">
@@ -227,7 +230,9 @@
                   Conecte-se com seus amigos e veja o que eles estão produzindo.
                 </li>
                 <li>Mergulhe no mundo da arte e se inspire.</li>
-                <li>Divulgue seu trabalho, suas obras e o seu amor pela arte.</li>
+                <li>
+                  Divulgue seu trabalho, suas obras e o seu amor pela arte.
+                </li>
                 <li>Apoveite um ambiente para todas as artes.</li>
               </ul>
               <div class="bottom-link button2">
@@ -257,13 +262,25 @@ export default {
     }
   },
   beforeCreate() {
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-      this.$welcome = 1;
-    } else if (window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/home";
-      this.$welcome = 1;
-    }
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+            this.$welcome = 1;
+          } else if (window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/home";
+            this.$welcome = 1;
+          }
+        }
+      }
+    });
   },
   created() {
     if (this.$welcome == 0) {

@@ -3242,41 +3242,41 @@ export default {
   },
   methods: {
     verificarCampos() {
-      setInterval(function(){
-          if ($("#name").val() == "") {
-        document.getElementById("signup").disabled = true;
-        $("#signup").css("opacity", "0.7");
-        $("#signup").css("cursor", "unset");
-      } else if ($("#user").val() == "") {
-        document.getElementById("signup").disabled = true;
-        $("#signup").css("opacity", "0.7");
-        $("#signup").css("cursor", "unset");
-      } else if ($("#email").val() == "") {
-        document.getElementById("signup").disabled = true;
-        $("#signup").css("opacity", "0.7");
-        $("#signup").css("cursor", "unset");
-      } else if ($("#pass").val() == "") {
-        document.getElementById("signup").disabled = true;
-        $("#signup").css("opacity", "0.7");
-        $("#signup").css("cursor", "unset");
-      } else if ($("#re_pass").val() == "") {
-        document.getElementById("signup").disabled = true;
-        $("#signup").css("opacity", "0.7");
-        $("#signup").css("cursor", "unset");
-      } else if ($("#pass").val() != $("#re_pass").val()) {
-        document.getElementById("signup").disabled = true;
-        $("#signup").css("opacity", "0.7");
-        $("#signup").css("cursor", "unset");
-      } else if ($("#agree-term").is(":checked") == false) {
-        document.getElementById("signup").disabled = true;
-        $("#signup").css("opacity", "0.7");
-        $("#signup").css("cursor", "unset");
-      } else {
-        document.getElementById("signup").disabled = false;
-        $("#signup").css("opacity", "1");
-        $("#signup").css("cursor", "pointer");
-      }
-      }, 1000)
+      setInterval(function() {
+        if ($("#name").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css("opacity", "0.7");
+          $("#signup").css("cursor", "unset");
+        } else if ($("#user").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css("opacity", "0.7");
+          $("#signup").css("cursor", "unset");
+        } else if ($("#email").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css("opacity", "0.7");
+          $("#signup").css("cursor", "unset");
+        } else if ($("#pass").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css("opacity", "0.7");
+          $("#signup").css("cursor", "unset");
+        } else if ($("#re_pass").val() == "") {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css("opacity", "0.7");
+          $("#signup").css("cursor", "unset");
+        } else if ($("#pass").val() != $("#re_pass").val()) {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css("opacity", "0.7");
+          $("#signup").css("cursor", "unset");
+        } else if ($("#agree-term").is(":checked") == false) {
+          document.getElementById("signup").disabled = true;
+          $("#signup").css("opacity", "0.7");
+          $("#signup").css("cursor", "unset");
+        } else {
+          document.getElementById("signup").disabled = false;
+          $("#signup").css("opacity", "1");
+          $("#signup").css("cursor", "pointer");
+        }
+      }, 1000);
     },
     verificarUser() {
       var user = $("#user").val();
@@ -3381,17 +3381,16 @@ export default {
     },
     verificarRePassLeave() {
       if ($("#pass").val() == "") {
-        this.remError('#repass-err-msg');
+        this.remError("#repass-err-msg");
       }
       if ($("#pass").val() != $("#re_pass").val()) {
-        this.error('#repass-err-msg');
+        this.error("#repass-err-msg");
       }
       if ($("#pass").val() == $("#re_pass").val() && $("#pass").val() != "") {
-        this.remError('#repass-err-msg');
+        this.remError("#repass-err-msg");
       }
       if ($("#pass").val() != $("#re_pass").val() && $("#pass").val() != "")
-         this.error('#repass-err-msg');
-      
+        this.error("#repass-err-msg");
     },
     forcaSenha(senha) {
       var forca = 0;
@@ -3461,11 +3460,23 @@ export default {
     }
   },
   beforeCreate() {
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/home";
-    }
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/home";
+          }
+        }
+      }
+    });
   },
   mounted() {
     localStorage.clear();

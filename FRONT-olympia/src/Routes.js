@@ -6,6 +6,7 @@ import Evento from './components/evento/Evento.vue';
 import Eventos from './components/eventos/Eventos.vue';
 import Sobre from './components/sobre/Sobre.vue';
 import CadastroUser from './components/cadastro-user/CadastroUser.vue';
+import ForaDoAr from './components/fora-do-ar/ForaDoAr.vue';
 import Login from './components/login/Login.vue';
 import Categorias from './components/categories/Categories.vue';
 import Literatura from './components/literatura/Literatura.vue';
@@ -35,6 +36,7 @@ export const routes = [
     { path: '*', component: NotFound, titulo: '4 0 4' },
     { path: '/InternalServerError', component: IntServ, titulo: '5 0 0' },
     { path: '/error', component: ErrorPage, titulo: 'O O P S' },
+    { path: '/siteoff', component: ForaDoAr, titulo: 'F O R A  D O  A R !'},
     { path: '/userNotFound', component: UserNotFound, titulo: 'N Ã O  E X I S T O !' },
     { path: '/home', component: Home, titulo: 'H O M E', meta: { transition: 'zoom' }  },
     { path: '/artes', component: Artes, titulo: 'A R T E S' },

@@ -65,25 +65,25 @@
                 Arquitetura refere-se a toda construção e modelagem artificial
                 do ambiente físico, incluindo seu processo de projeto e o
                 produto deste, sendo a palavra também usada para definir os
-                estilos e métodos de projeto das construções de uma época. 
-                O interior do Panteão, obra icônica da arquitetura
-                romana que inovou nas técnicas construtivas e resistiu ao
-                tempo.O prédio da Fundação Iberê Camargo, projetado por Álvaro
-                Siza, é um exemplo de arquitetura contemporânea.A principal
-                aplicação da palavra se refere ao projeto de edifícios pela
-                humanidade, uma área de atuação multidisciplinar que trabalha
-                entre arte e ciência e também engloba o projeto de paisagens,
-                cidades, interiores, móveis e objetos individuais - áreas como
-                paisagismo, urbanismo, design industrial e planejamento regional
-                estão, assim, diretamente relacionados com a arquitetura, sendo
-                muitas vezes ensinados junto com esta em escolas. Desde o
-                Renascimento, a arquitetura é considerada uma das artes
-                plásticas. Sociologia e filosofia também estão presentes, com
-                tendências como racionalismo, construtivismo e fenomenologia
-                sendo parte importante da história e das teorias da arquitetura.
-                O trabalho do profissional, chamado arquiteto ou arquiteta,
-                envolve, portanto, toda a escala da vida humana, desde a manual
-                até a urbana.
+                estilos e métodos de projeto das construções de uma época. O
+                interior do Panteão, obra icônica da arquitetura romana que
+                inovou nas técnicas construtivas e resistiu ao tempo.O prédio da
+                Fundação Iberê Camargo, projetado por Álvaro Siza, é um exemplo
+                de arquitetura contemporânea.A principal aplicação da palavra se
+                refere ao projeto de edifícios pela humanidade, uma área de
+                atuação multidisciplinar que trabalha entre arte e ciência e
+                também engloba o projeto de paisagens, cidades, interiores,
+                móveis e objetos individuais - áreas como paisagismo, urbanismo,
+                design industrial e planejamento regional estão, assim,
+                diretamente relacionados com a arquitetura, sendo muitas vezes
+                ensinados junto com esta em escolas. Desde o Renascimento, a
+                arquitetura é considerada uma das artes plásticas. Sociologia e
+                filosofia também estão presentes, com tendências como
+                racionalismo, construtivismo e fenomenologia sendo parte
+                importante da história e das teorias da arquitetura. O trabalho
+                do profissional, chamado arquiteto ou arquiteta, envolve,
+                portanto, toda a escala da vida humana, desde a manual até a
+                urbana.
               </td>
             </tr>
           </table>
@@ -295,19 +295,18 @@
                 <h1 class="text-title">
                   Panteão
                 </h1>
-                Panteão é um edifício em Roma,
-                Itália, encomendado por Marco Vipsânio Agripa durante o reinado
-                do imperador Augusto (r. 27 a.C.–14 d.C.) e reconstruído por
-                Adriano (r. 117–138) por volta de 126. Sua planta é circular
-                com um pórtico de grandes colunas coríntias de granito (oito na
-                primeira fila e dois grupos de quatro na segunda) suportando um
-                frontão. Um vestíbulo retangular liga o pórtico à rotunda, que
-                está coberta por uma enorme cúpula de caixotões de concreto
-                encimada por uma abertura central (óculo) descoberta. Quase dois
-                mil anos depois de ter sido construído, esta cúpula é ainda hoje
-                a maior cúpula de concreto não reforçado do mundo. A altura
-                até o óculo e o diâmetro da circunferência interior são
-                idênticos, 43.3 metros.
+                Panteão é um edifício em Roma, Itália, encomendado por Marco
+                Vipsânio Agripa durante o reinado do imperador Augusto (r. 27
+                a.C.–14 d.C.) e reconstruído por Adriano (r. 117–138) por volta
+                de 126. Sua planta é circular com um pórtico de grandes colunas
+                coríntias de granito (oito na primeira fila e dois grupos de
+                quatro na segunda) suportando um frontão. Um vestíbulo
+                retangular liga o pórtico à rotunda, que está coberta por uma
+                enorme cúpula de caixotões de concreto encimada por uma abertura
+                central (óculo) descoberta. Quase dois mil anos depois de ter
+                sido construído, esta cúpula é ainda hoje a maior cúpula de
+                concreto não reforçado do mundo. A altura até o óculo e o
+                diâmetro da circunferência interior são idênticos, 43.3 metros.
               </td>
               <td class="td-imagem">
                 <img
@@ -346,11 +345,24 @@ export default {
     "meu-dark-mode": DarkMode
   },
   beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+     $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } 
+        else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

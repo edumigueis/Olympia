@@ -517,7 +517,9 @@ export default {
               item.idEvento +
               '" src=""/></div></div></li>';
             conteudoDiv +=
-              '<div class="btn-wrap"><a href="/#/evento/'+item.idEvento+'" class="know-more-btn" ><span class="know-more-btn-inner">Saber Mais</span></a></div><li class="card-item-2 white"><div class="event-date-container"><p class="expo-name">' +
+              '<div class="btn-wrap"><a href="/#/evento/' +
+              item.idEvento +
+              '" class="know-more-btn" ><span class="know-more-btn-inner">Saber Mais</span></a></div><li class="card-item-2 white"><div class="event-date-container"><p class="expo-name">' +
               item.nome +
               '</p><p class="date">' +
               item.dataEvento.substring(0, 10) +
@@ -607,12 +609,24 @@ export default {
   mounted() {
     this.getMarkers();
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

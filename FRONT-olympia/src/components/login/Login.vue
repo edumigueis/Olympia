@@ -50,7 +50,9 @@
                     required
                   />
                 </div>
-                <p class="err-msg-p">Seu nome de usuário, email ou senha estão incorretos.</p>
+                <p class="err-msg-p">
+                  Seu nome de usuário, email ou senha estão incorretos.
+                </p>
                 <div class="form-group form-button">
                   <input
                     type="button"
@@ -142,18 +144,30 @@ export default {
               }
             });
           } else {
-            $('.err-msg-p').fadeIn();
+            $(".err-msg-p").fadeIn();
           }
         }
       });
     }
   },
   beforeCreate() {
-    if (window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/home";
-    } else if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    }
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/home";
+          } else if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          }
+        }
+      }
+    });
   }
 };
 </script>

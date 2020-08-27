@@ -295,10 +295,10 @@
               <td class="texto-linha">
                 <h1 class="text-title">Dalí Atomicus (1948)</h1>
                 O fotógrafo Philippe Halsman e o artista Salvador Dalí 28 vezes
-                tentaram alcançar a leveza de Dalí Atomicus. Halsman
-                conheceu Dalí e outros artistas do círculo surrealista enquanto
-                ele morava em Paris na década de 1930. No final da década de
-                1940, os dois homens começaram a colaborar em uma variedade de
+                tentaram alcançar a leveza de Dalí Atomicus. Halsman conheceu
+                Dalí e outros artistas do círculo surrealista enquanto ele
+                morava em Paris na década de 1930. No final da década de 1940,
+                os dois homens começaram a colaborar em uma variedade de
                 projetos fotográficos. Dalí Atomicus, talvez a imagem mais
                 icônica a surgir dessa colaboração, é um retrato do artista
                 inspirado em sua pintura, Leda Atomica (1949), que aparece no
@@ -341,12 +341,24 @@ export default {
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>

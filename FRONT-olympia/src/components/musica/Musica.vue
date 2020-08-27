@@ -22,7 +22,9 @@
           />
         </div>
         <h1 class="art-title">Música</h1>
-        <h2 class="art-subtitle">Música e ritmo chegam a um lugar secreto na alma das pessoas</h2>
+        <h2 class="art-subtitle">
+          Música e ritmo chegam a um lugar secreto na alma das pessoas
+        </h2>
       </div>
 
       <div id="corpo">
@@ -37,8 +39,8 @@
 
           <div class="mySlides">
             <q
-              >A música exprime a mais alta filosofia numa linguagem que a
-              razão não compreende.</q
+              >A música exprime a mais alta filosofia numa linguagem que a razão
+              não compreende.</q
             >
             <p class="author">- Arthur Schopenhauer</p>
           </div>
@@ -263,12 +265,24 @@ export default {
     "meu-footer": Footer,
     "meu-dark-mode": DarkMode
   },
-  beforeCreate(){
-    if (window.$cookies.isKey("user_cadastro")) {
-      document.location.href = "/#/categorias";
-    } else if (!window.$cookies.isKey("user_session")) {
-      document.location.href = "/#/login";
-    }
+  beforeCreate() {
+    $.ajax({
+      url: "https://localhost:5001/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        } else {
+          if (window.$cookies.isKey("user_cadastro")) {
+            document.location.href = "/#/categorias";
+          } else if (!window.$cookies.isKey("user_session")) {
+            document.location.href = "/#/login";
+          }
+        }
+      }
+    });
   }
 };
 </script>
