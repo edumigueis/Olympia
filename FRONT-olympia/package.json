@@ -19,6 +19,7 @@
     "modules": "^0.4.0",
     "node": "^14.4.0",
     "save": "^2.4.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^2.6.11",
     "vue-cookies": "^1.7.0",
     "vue-page-transition": "^0.2.2",
