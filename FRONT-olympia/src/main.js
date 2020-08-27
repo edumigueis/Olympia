@@ -7,7 +7,7 @@ import VuePageTransition from 'vue-page-transition'
 import { routes } from './routes';
 
 Vue.use(VueCookies)
-
+Vue.config.devtools = false
 Vue.prototype.$welcome = 0
 
 Vue.use(VueResource);
