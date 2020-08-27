@@ -6,7 +6,6 @@ import Evento from './components/evento/Evento.vue';
 import Eventos from './components/eventos/Eventos.vue';
 import Sobre from './components/sobre/Sobre.vue';
 import CadastroUser from './components/cadastro-user/CadastroUser.vue';
-import CadastroArtist from './components/cadastro-artist/CadastroArtist.vue';
 import Login from './components/login/Login.vue';
 import Categorias from './components/categories/Categories.vue';
 import Literatura from './components/literatura/Literatura.vue';
