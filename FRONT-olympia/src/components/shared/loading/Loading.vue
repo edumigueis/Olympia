@@ -18,7 +18,7 @@
   transition: 0.5s all ease;
 }
 #load-modal.loading {
-  display: block;
+  display: block!important;
 }
 #preloader {
   position: fixed;
