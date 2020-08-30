@@ -103,7 +103,7 @@
             <ul>
               <li><a href="/#/" class="active">Início</a></li>
               <li><a href="/#/sobre">Sobre</a></li>
-              <li><a href="/#/news">News</a></li>
+              <!--<li><a href="/#/news">News</a></li>
               <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn"
                   >Aprender<span class="arrow"><span></span><span></span></span
@@ -127,7 +127,7 @@
                   <a href="#">O-Artists</a>
                   <a href="#">Destaques</a>
                 </div>
-              </li>
+              </li>-->
             </ul>
           </div>
         </div>

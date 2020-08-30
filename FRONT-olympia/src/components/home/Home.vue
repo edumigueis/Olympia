@@ -2298,7 +2298,7 @@ export default {
     this.getObras();*/
   },
   beforeCreate() {
-    $.ajax({
+    /*$.ajax({
       url: "https://localhost:5001/",
       type: "GET",
       dataType: "json",
@@ -2314,7 +2314,7 @@ export default {
           }
         }
       }
-    });
+    });*/
   }
 };
 </script>
