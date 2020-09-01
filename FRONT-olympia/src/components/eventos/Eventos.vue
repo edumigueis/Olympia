@@ -499,7 +499,7 @@ export default {
   methods: {
     getMarkers() {
       $.ajax({
-        url: "https://localhost:5001/api/redirect/Eventos",
+        url: "https://olympiaserver.ddns.net/api/redirect/Eventos",
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -532,7 +532,7 @@ export default {
 
             $.ajax({
               url:
-                "https://localhost:5001/api/redirect/FotosDoEvento/" +
+                "https://olympiaserver.ddns.net/api/redirect/FotosDoEvento/" +
                 item.idEvento,
               type: "GET",
               dataType: "json",
@@ -611,7 +611,7 @@ export default {
   },
   beforeCreate() {
     $.ajax({
-      url: "https://localhost:5001/",
+      url: "https://olympiaserver.ddns.net/",
       type: "GET",
       dataType: "json",
       contentType: "application/json",

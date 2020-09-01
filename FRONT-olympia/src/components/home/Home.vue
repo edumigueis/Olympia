@@ -2005,7 +2005,7 @@ export default {
   methods: {
     getMarkers() {
       $.ajax({
-        url: "https://localhost:5001/api/Publicacoes",
+        url: "https://olympiaserver.ddns.net/api/Publicacoes",
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -2033,7 +2033,7 @@ export default {
             $("#content-3").append(conteudoDiv);
 
             $.ajax({
-              url: "https://localhost:5001/api/Usuarios/" + item.idUsuario,
+              url: "https://olympiaserver.ddns.net/api/Usuarios/" + item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2081,7 +2081,7 @@ export default {
     },
     getServicos() {
       $.ajax({
-        url: "https://localhost:5001/api/Servicos",
+        url: "https://olympiaserver.ddns.net/api/Servicos",
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -2124,7 +2124,7 @@ export default {
             var idUser = item.idUsuario;
             $("#content-2").append(conteudoDiv);
             $.ajax({
-              url: "https://localhost:5001/api/Usuarios/" + item.idUsuario,
+              url: "https://olympiaserver.ddns.net/api/Usuarios/" + item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2148,7 +2148,7 @@ export default {
               }
             });
             $.ajax({
-              url: "https://localhost:5001/api/fotos/servico/" + item.idServico,
+              url: "https://olympiaserver.ddns.net/api/fotos/servico/" + item.idServico,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2171,7 +2171,7 @@ export default {
     },
     getObras() {
       $.ajax({
-        url: "https://localhost:5001/api/Obras",
+        url: "https://olympiaserver.ddns.net/api/Obras",
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -2220,7 +2220,7 @@ export default {
             $("#content-1").append(conteudoDiv);
 
             $.ajax({
-              url: "https://localhost:5001/api/Usuarios/" + item.idUsuario,
+              url: "https://olympiaserver.ddns.net/api/Usuarios/" + item.idUsuario,
               type: "GET",
               dataType: "json",
               contentType: "application/json",
@@ -2265,7 +2265,7 @@ export default {
                   $("#name-of-prof-link-" + index).text(result.nome);
 
                   $.ajax({
-                    url: "https://localhost:5001/api/fotos/obra/" + item.idObra,
+                    url: "https://olympiaserver.ddns.net/api/fotos/obra/" + item.idObra,
                     type: "GET",
                     dataType: "json",
                     contentType: "application/json",
@@ -2299,7 +2299,7 @@ export default {
   },
   beforeCreate() {
     /*$.ajax({
-      url: "https://localhost:5001/",
+      url: "https://olympiaserver.ddns.net/",
       type: "GET",
       dataType: "json",
       contentType: "application/json",

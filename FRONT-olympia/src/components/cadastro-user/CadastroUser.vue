@@ -3295,7 +3295,7 @@ export default {
       $.ajax({
         type: "GET",
         url:
-          "https://localhost:5001/api/usuarios/username/" +
+          "https://olympiaserver.ddns.net/api/usuarios/username/" +
           $("#user").val() +
           "",
         dataType: "json",
@@ -3461,7 +3461,7 @@ export default {
   },
   beforeCreate() {
     $.ajax({
-      url: "https://localhost:5001/",
+      url: "https://olympiaserver.ddns.net/",
       type: "GET",
       dataType: "json",
       contentType: "application/json",

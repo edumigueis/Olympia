@@ -374,7 +374,7 @@ setInterval(() => {
             data: myObject,
             dataType: "json",
             contentType: "application/json",
-            url: "https://localhost:5001/api/Usuarios",
+            url: "https://olympiaserver.ddns.net/api/Usuarios",
             complete: function(code) {
               if (code.status === 200) {
                 window.$cookies.set("user_cadastro", "", Infinity);

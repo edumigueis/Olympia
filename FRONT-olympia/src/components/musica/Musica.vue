@@ -267,7 +267,7 @@ export default {
   },
   beforeCreate() {
     $.ajax({
-      url: "https://localhost:5001/",
+      url: "https://olympiaserver.ddns.net/",
       type: "GET",
       dataType: "json",
       contentType: "application/json",

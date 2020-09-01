@@ -25,194 +25,528 @@ import NotFound from './components/not-found/NotFound.vue';
 import FeedBack from './components/feedback/FeedBack.vue';
 import Sugestoes from './components/sugestoes/Sugestoes.vue';
 import Denuncia from './components/denuncia/Denuncia.vue';
-import IntServ from './components/intServ/IntServ.vue';
 import Servico from './components/servico/Servico.vue';
 import ErrorPage from './components/errorPage/ErrorPage.vue';
 import UserNotFound from './components/userNotFound/UserNotFound.vue';
 
 export const routes = [
-
-    { path: '/', component: Welcome, titulo: ' W E L C O M E'},
-    { path: '*', component: NotFound, titulo: '4 0 4' },
-    { path: '/InternalServerError', component: IntServ, titulo: '5 0 0' },
-    { path: '/error', component: ErrorPage, titulo: 'O O P S' },
-    { path: '/siteoff', component: ForaDoAr, titulo: 'F O R A  D O  A R !'},
-    { path: '/userNotFound', component: UserNotFound, titulo: 'N Ã O  E X I S T O !' },
-    { path: '/home', component: Home, titulo: 'H O M E', meta: { transition: 'zoom' }/*, beforeEnter: (to, from, next) => {
+  {
+    path: '/', component: Welcome, titulo: ' W E L C O M E', beforeEnter: (to, from, next) => {
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
+          }
+        }
+      });
+    }
+  },
+  { path: '*', component: NotFound, titulo: '4 0 4' },
+  { path: '/error', component: ErrorPage, titulo: 'O O P S' },
+  { path: '/siteoff', component: ForaDoAr, titulo: 'F O R A  D O  A R !' },
+  { path: '/userNotFound', component: UserNotFound, titulo: 'N Ã O  E X I S T O !' },
+  {
+    path: '/home', component: Home, titulo: 'H O M E', meta: { transition: 'zoom' }/*, beforeEnter: (to, from, next) => {
         if (window.$cookies.isKey("user_cadastro")) {
             document.location.href = "/#/categorias";
           } else if (!window.$cookies.isKey("user_session")) {
             document.location.href = "/#/login";
           }
+          $.ajax({
+      url: "https://olympiaserver.ddns.net/",
+      type: "GET",
+      dataType: "json",
+      contentType: "application/json",
+      complete: function(jqXHR, status) {
+        if (status != "parsererror") {
+          document.location.href = "/#/siteoff";
+        }
+      }
+    });
     }  */ },
-    { path: '/artes', component: Artes, titulo: 'A R T E S' , beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+  {
+    path: '/artes', component: Artes, titulo: 'A R T E S', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/obra/:id', component: Obra, titulo: 'O B R A', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/obra/:id', component: Obra, titulo: 'O B R A', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }  },
-    { path: '/servico/:id', component: Servico, titulo: 'S E R V I Ç O', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/servico/:id', component: Servico, titulo: 'S E R V I Ç O', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    } },
-    { path: '/evento/:id', component: Evento, titulo: 'E V E N T O', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/evento/:id', component: Evento, titulo: 'E V E N T O', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    } },
-    { path: '/eventos', component: Eventos, titulo: 'E V E N T O S', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/eventos', component: Eventos, titulo: 'E V E N T O S', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    } },
-    { path: '/pesquisar', component: SearchResult, titulo: 'P E S Q U I S A', meta: { transition: 'zoom' } , beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/pesquisar', component: SearchResult, titulo: 'P E S Q U I S A', meta: { transition: 'zoom' }, beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/sobre', component: Sobre, titulo: 'S O B R E' },
-    { path: '/perfil', component: Perfil, titulo: 'P E R F I L' , beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  { path: '/sobre', component: Sobre, titulo: 'S O B R E' },
+  {
+    path: '/perfil', component: Perfil, titulo: 'P E R F I L', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/perfil/:username', component: Perfil, titulo: 'P E R F I L' , beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/perfil/:username', component: Perfil, titulo: 'P E R F I L', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/cadastro', component: CadastroUser, titulo: 'C A D A S T R O' , beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/home";
+        }
+      });
+    }
+  },
+  {
+    path: '/cadastro', component: CadastroUser, titulo: 'C A D A S T R O', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/home";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/login', component: Login, titulo: 'L O G I N', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/home";
-          } else if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
+        }
+      });
+    }
+  },
+  {
+    path: '/login', component: Login, titulo: 'L O G I N', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/home";
+      } else if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    } },
-    { path: '/categorias', component: Categorias, titulo: 'C A T E G O R I A S', beforeEnter: (to, from, next) => {
-        if (!window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/";
+        }
+      });
+    }
+  },
+  {
+    path: '/categorias', component: Categorias, titulo: 'C A T E G O R I A S', beforeEnter: (to, from, next) => {
+      if (!window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    } },
-    { path: '/literatura', component: Literatura, titulo: 'L I T E R A T U R A', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/literatura', component: Literatura, titulo: 'L I T E R A T U R A', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/post', component: Post, titulo: 'P O S T', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/post', component: Post, titulo: 'P O S T', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/cinema', component: Cinema, titulo: 'C I N E M A', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/cinema', component: Cinema, titulo: 'C I N E M A', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/escultura', component: Escultura, titulo: 'E S C U L T U R A', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/escultura', component: Escultura, titulo: 'E S C U L T U R A', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/arquitetura', component: Arquitetura, titulo: 'A R Q U I T E T U R A', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/arquitetura', component: Arquitetura, titulo: 'A R Q U I T E T U R A', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/artes-cenicas', component: ArtesCenicas, titulo: 'A R T E S C E N I C A S', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/artes-cenicas', component: ArtesCenicas, titulo: 'A R T E S C E N I C A S', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/pintura', component: Pintura, titulo: 'P I N T U R A', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/pintura', component: Pintura, titulo: 'P I N T U R A', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/fotografia', component: Fotografia, titulo: 'F O T O G R A F I A', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/fotografia', component: Fotografia, titulo: 'F O T O G R A F I A', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/sugestoes', component: Sugestoes, titulo: 'S U G E R I R', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/sugestoes', component: Sugestoes, titulo: 'S U G E R I R', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/feedback', component: FeedBack, titulo: 'F E E D B A C K', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/feedback', component: FeedBack, titulo: 'F E E D B A C K', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/denuncia', component: Denuncia, titulo: 'D E N U N C I A R', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/denuncia', component: Denuncia, titulo: 'D E N U N C I A R', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/artes-digitais', component: ArtesDigitais, titulo: 'A R T E S D I G I T A I S', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/artes-digitais', component: ArtesDigitais, titulo: 'A R T E S D I G I T A I S', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }},
-    { path: '/musica', component: Musica, titulo: 'M U S I C A', beforeEnter: (to, from, next) => {
-        if (window.$cookies.isKey("user_cadastro")) {
-            document.location.href = "/#/categorias";
-          } else if (!window.$cookies.isKey("user_session")) {
-            document.location.href = "/#/login";
+        }
+      });
+    }
+  },
+  {
+    path: '/musica', component: Musica, titulo: 'M U S I C A', beforeEnter: (to, from, next) => {
+      if (window.$cookies.isKey("user_cadastro")) {
+        document.location.href = "/#/categorias";
+      } else if (!window.$cookies.isKey("user_session")) {
+        document.location.href = "/#/login";
+      }
+      $.ajax({
+        url: "https://olympiaserver.ddns.net/",
+        type: "GET",
+        dataType: "json",
+        contentType: "application/json",
+        complete: function (jqXHR, status) {
+          if (status != "parsererror") {
+            document.location.href = "/#/siteoff";
           }
-    }}
-
+        }
+      });
+    }
+  }
 ]
 
 

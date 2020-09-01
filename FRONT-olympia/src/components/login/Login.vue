@@ -101,7 +101,7 @@ export default {
       var jsonInput = JSON.stringify(myObject);
 
       $.ajax({
-        url: "https://localhost:5001/api/usuarios/VerificarDados",
+        url: "https://olympiaserver.ddns.net/api/usuarios/VerificarDados",
         type: "POST",
         data: jsonInput,
         dataType: "json",
@@ -113,7 +113,7 @@ export default {
           if (code.status === 200) {
             $.ajax({
               url:
-                "https://localhost:5001/api/usuarios/UserByLoginData/" +
+                "https://olympiaserver.ddns.net/usuarios/UserByLoginData/" +
                 $("#user").val(),
               type: "GET",
               dataType: "json",
@@ -152,7 +152,7 @@ export default {
   },
   beforeCreate() {
     $.ajax({
-      url: "https://localhost:5001/",
+      url: "https://olympiaserver.ddns.net/",
       type: "GET",
       dataType: "json",
       contentType: "application/json",

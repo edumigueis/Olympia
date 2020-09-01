@@ -245,7 +245,7 @@ export default {
     getMarkers() {
       var codigoEvento = window.location.href.substring(31);
       $.ajax({
-        url: "https://localhost:5001/api/Eventos/" + codigoEvento,
+        url: "https://olympiaserver.ddns.net/api/Eventos/" + codigoEvento,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -293,7 +293,7 @@ export default {
           $("#event-map").attr("src", field.localizacaoCoord);
 
           $.ajax({
-            url: "https://localhost:5001/api/fotos/Evento/" + field.idEvento,
+            url: "https://olympiaserver.ddns.net/api/fotos/Evento/" + field.idEvento,
             type: "GET",
             dataType: "json",
             contentType: "application/json",
@@ -342,7 +342,7 @@ export default {
   },
   beforeCreate() {
     $.ajax({
-      url: "https://localhost:5001/",
+      url: "https://olympiaserver.ddns.net/",
       type: "GET",
       dataType: "json",
       contentType: "application/json",

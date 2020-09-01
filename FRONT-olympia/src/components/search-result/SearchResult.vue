@@ -785,7 +785,7 @@ export default {
       $("#obra-res-wrapper").html("");
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/obras/Search/" + key,
+        url: "https://olympiaserver.ddns.net/api/obras/Search/" + key,
         contentType: "application/json",
         success: function(data) {
           console.log(data);
@@ -802,7 +802,7 @@ export default {
             $("#obra-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
-              url: "https://localhost:5001/api/usuarios/" + item[1],
+              url: "https://olympiaserver.ddns.net/api/usuarios/" + item[1],
               contentType: "application/json",
               success: function(res) {
                 $("#by-person-identifier-" + index).text(
@@ -819,7 +819,7 @@ export default {
             });
             $.ajax({
               type: "GET",
-              url: "https://localhost:5001/api/fotos/obra/" + item[0],
+              url: "https://olympiaserver.ddns.net/api/fotos/obra/" + item[0],
               contentType: "application/json",
               success: function(resFoto) {
                 $("#repr-img-obra-" + index).attr("src", resFoto[0]);
@@ -851,7 +851,7 @@ export default {
       $("#serv-res-wrapper").html("");
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/servico/Search/" + key,
+        url: "https://olympiaserver.ddns.net/api/servico/Search/" + key,
         contentType: "application/json",
         success: function(data) {
           jQuery.each(data, function(index, item) {
@@ -867,7 +867,7 @@ export default {
             $("#serv-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
-              url: "https://localhost:5001/api/usuarios" + item[1],
+              url: "https://olympiaserver.ddns.net/api/usuarios" + item[1],
               contentType: "application/json",
               success: function(res) {
                 $("#by-person-serv-identifier-" + index).text(
@@ -884,7 +884,7 @@ export default {
             });
             $.ajax({
               type: "GET",
-              url: "https://localhost:5001/api/fotos/Servico/" + item[0],
+              url: "https://olympiaserver.ddns.net/api/fotos/Servico/" + item[0],
               contentType: "application/json",
               success: function(resFoto) {
                 $("#repr-img-serv-" + index).attr("src", resFoto[0]);
@@ -915,7 +915,7 @@ export default {
       $("#user-res-wrapper").html("");
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/usuarios/Search/" + key,
+        url: "https://olympiaserver.ddns.net/api/usuarios/Search/" + key,
         contentType: "application/json",
         success: function(data) {
           jQuery.each(data, function(index, item) {
@@ -957,7 +957,7 @@ export default {
       if (key == "") return;
       $.ajax({
         type: "GET",
-        url: "https://localhost:5001/api/publicacoes/search/" + key,
+        url: "https://olympiaserver.ddns.net/api/publicacoes/search/" + key,
         contentType: "application/json",
         success: function(data) {
           jQuery.each(data, function(index, item) {
@@ -974,7 +974,7 @@ export default {
             $("#post-res-wrapper").append(contPost);
             $.ajax({
               type: "GET",
-              url: "https://localhost:5001/api/usuarios/" + item[1],
+              url: "https://olympiaserver.ddns.net/api/usuarios/" + item[1],
               contentType: "application/json",
               success: function(res) {
                 $("#by-person-identifier-" + index).text(
@@ -1006,7 +1006,7 @@ export default {
   },
   beforeCreate() {
     $.ajax({
-      url: "https://localhost:5001/",
+      url: "https://olympiaserver.ddns.net/",
       type: "GET",
       dataType: "json",
       contentType: "application/json",

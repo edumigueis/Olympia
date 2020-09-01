@@ -737,7 +737,7 @@ export default {
       jaFoiPostCadUser = true;
       $.ajax({
         type: "POST",
-        url: "https://localhost:5001/api/Publicacoes",
+        url: "https://olympiaserver.ddns.net/api/Publicacoes",
         data: myObjectPubli,
         contentType: "application/json",
         complete: function(code) {
@@ -843,7 +843,7 @@ export default {
       jaFoiPostCadUser = true;
       $.ajax({
         type: "POST",
-        url: "https://localhost:5001/api/Obras",
+        url: "https://olympiaserver.ddns.net/api/Obras",
         data: myObjectPubli,
         contentType: "application/json",
         complete: function(jqXHR, status) {
@@ -880,7 +880,7 @@ export default {
 
               $.ajax({
                 type: "POST",
-                url: "https://localhost:5001/api/Fotos",
+                url: "https://olympiaserver.ddns.net/api/Fotos",
                 data: jsonVetorFotos,
                 contentType: "application/json",
                 success: function() {
@@ -998,7 +998,7 @@ export default {
       jaFoiPostCadUser = true;
       $.ajax({
         type: "POST",
-        url: "https://localhost:5001/api/Servicos",
+        url: "https://olympiaserver.ddns.net/api/Servicos",
         data: myObjectPubli,
         contentType: "application/json",
         complete: function(jqXHR, status) {
@@ -1033,7 +1033,7 @@ export default {
 
               $.ajax({
                 type: "POST",
-                url: "https://localhost:5001/api/Fotos",
+                url: "https://olympiaserver.ddns.net/api/Fotos",
                 data: jsonVetorFotos,
                 contentType: "application/json",
                 success: function() {
@@ -1073,7 +1073,7 @@ export default {
   },
   beforeCreate() {
     $.ajax({
-      url: "https://localhost:5001/",
+      url: "https://olympiaserver.ddns.net/",
       type: "GET",
       dataType: "json",
       contentType: "application/json",

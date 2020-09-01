@@ -173,7 +173,7 @@ export default {
       var url = window.location.href;
       var codigo = url.substring(32);
       $.ajax({
-        url: "https://localhost:5001/api/Servicos/" + codigo,
+        url: "https://olympiaserver.ddns.net/api/Servicos/" + codigo,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -182,7 +182,7 @@ export default {
           $("#art-name").text(field.nome.split("+").join(" "));
           $("#page-det-name").text(field.nome.split("+").join(" "));
           $.ajax({
-            url: "https://localhost:5001/api/Usuarios/" + field.idUsuario,
+            url: "https://olympiaserver.ddns.net/api/Usuarios/" + field.idUsuario,
             type: "GET",
             dataType: "json",
             contentType: "application/json",
@@ -220,7 +220,7 @@ export default {
       });
 
       $.ajax({
-        url: "https://localhost:5001/api/fotos/Servico/" + codigo,
+        url: "https://olympiaserver.ddns.net/api/fotos/Servico/" + codigo,
         type: "GET",
         dataType: "json",
         contentType: "application/json",
@@ -250,7 +250,7 @@ export default {
   },
   beforeCreate() {
     $.ajax({
-      url: "https://localhost:5001/",
+      url: "https://olympiaserver.ddns.net/",
       type: "GET",
       dataType: "json",
       contentType: "application/json",

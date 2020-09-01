@@ -7,6 +7,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using API_olympia.Data;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace API_olympia
 {
@@ -21,6 +23,7 @@ namespace API_olympia
 
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddCors(options =>
             {
                 options.AddPolicy(name: "123FRSD123DFW32DWF435YASD345C3",
@@ -49,6 +52,7 @@ namespace API_olympia
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             app.UseCors("123FRSD123DFW32DWF435YASD345C3");
             app.UseMvc();
 
