@@ -144,11 +144,11 @@
         <div class="top-menu">
           <ul class="menu-itens-ld">
             <li><a href="/#/">Início</a></li>
-            <li><a href="/#/">Sobre</a></li>
-            <li><a href="/#/">News</a></li>
+            <li><a href="/#/sobre">Sobre</a></li>
+            <!--<li><a href="/#/">News</a></li>
             <li><a href="/#/">Blog</a></li>
             <li><a href="/#/">Get to Know</a></li>
-            <li><a href="/#/">Ajuda</a></li>
+            <li><a href="/#/">Ajuda</a></li>-->
           </ul>
         </div>
         <div class="bottom-menu">
@@ -162,6 +162,7 @@
           </div>
           <div class="bottom-down-menu">
             <a href="/#/login">Entrar</a>
+            <br />
             <br />
             <a href="/#/cadastro">Registrar-se</a>
           </div>

@@ -41,6 +41,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -50,7 +52,7 @@ export const routes = [
   { path: '/siteoff', component: ForaDoAr, titulo: 'F O R A  D O  A R !' },
   { path: '/userNotFound', component: UserNotFound, titulo: 'N Ã O  E X I S T O !' },
   {
-    path: '/home', component: Home, titulo: 'H O M E', meta: { transition: 'zoom' }/*, beforeEnter: (to, from, next) => {
+    path: '/home', component: Home, titulo: 'H O M E', meta: { transition: 'zoom' }, beforeEnter: (to, from, next) => {
         if (window.$cookies.isKey("user_cadastro")) {
             document.location.href = "/#/categorias";
           } else if (!window.$cookies.isKey("user_session")) {
@@ -65,9 +67,11 @@ export const routes = [
         if (status != "parsererror") {
           document.location.href = "/#/siteoff";
         }
+        else
+            next();
       }
     });
-    }  */ },
+    }  },
   {
     path: '/artes', component: Artes, titulo: 'A R T E S', beforeEnter: (to, from, next) => {
       if (window.$cookies.isKey("user_cadastro")) {
@@ -84,6 +88,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -104,6 +110,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -124,6 +132,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -144,6 +154,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -164,6 +176,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -184,6 +198,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -205,6 +221,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -225,6 +243,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -245,6 +265,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -265,6 +287,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -283,6 +307,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -303,6 +329,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -323,6 +351,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -343,6 +373,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -363,6 +395,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -383,6 +417,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -403,6 +439,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -423,6 +461,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -443,6 +483,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -463,6 +505,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -483,6 +527,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -503,6 +549,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -523,6 +571,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }
@@ -543,6 +593,8 @@ export const routes = [
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
           }
+          else
+            next();
         }
       });
     }

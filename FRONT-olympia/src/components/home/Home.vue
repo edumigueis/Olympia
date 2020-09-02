@@ -2293,12 +2293,12 @@ export default {
     }
   },
   mounted() {
-    /*this.getMarkers();
+    this.getMarkers();
     this.getServicos();
-    this.getObras();*/
+    this.getObras();
   },
   beforeCreate() {
-    /*$.ajax({
+    $.ajax({
       url: "https://olympiaserver.ddns.net/",
       type: "GET",
       dataType: "json",
@@ -2314,7 +2314,7 @@ export default {
           }
         }
       }
-    });*/
+    });
   }
 };
 </script>

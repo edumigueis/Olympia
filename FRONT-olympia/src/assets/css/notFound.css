@@ -59,36 +59,30 @@
   .menu-bar {
     position: fixed !important;
   }
-  @media only screen and (min-width: 400px) and (max-width: 700px) {
-    h1 {
-      font-size: 6em;
-      max-width: 80%;
-    }
-    #error-500 {
-      font-size: 4em !important;
-    }
-  }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (min-width: 400px) and (max-width: 1100px) {
     h1 {
       font-size: 4em;
       max-width: 80%;
     }
     .explanation {
       width: 70%;
-      font-size: 1.1em;
+      font-size: 1.2em;
     }
-    #error-500 {
-      font-size: 3.5em !important;
+  }
+  @media only screen and (max-width: 400px) {
+    h1 {
+      font-size: 3.2em;
+      max-width: 80%;
+    }
+    .explanation {
+      width: 70%;
+      font-size: 0.9em;
     }
   }
   @media only screen and (max-width: 970px) {
     header {
       margin-top: calc(20vh - 3em);
     }
-  }
-
-  #error-500 {
-    font-size: 6em;
   }
 
   #error-oops{
