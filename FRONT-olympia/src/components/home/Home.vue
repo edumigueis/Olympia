@@ -2291,7 +2291,7 @@ export default {
         }
       });
     }
-  }/*,
+  },
   mounted() {
    this.getMarkers();
     this.getServicos();
@@ -2315,6 +2315,6 @@ export default {
         }
       }
     });
-  }*/
+  }
 };
 </script>

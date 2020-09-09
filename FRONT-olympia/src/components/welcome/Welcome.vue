@@ -182,7 +182,7 @@
               <div class="top-bar"></div>
               <div class="iphone-screen">
                 <img
-                  src="https://www.instagram.com/static/images/homepage/screenshot5-2x.jpg/5e04169b9308.jpg"
+                  src="/src/assets/images/print-0.jpeg"
                 />
               </div>
               <div class="buttons">
@@ -215,7 +215,7 @@
                 <div class="inner-shadow"></div>
                 <div class="screen">
                   <img
-                    src="https://www.instagram.com/static/images/homepage/screenshot1-2x.jpg/9144d6673849.jpg"
+                    src="/src/assets/images/print-1.jpeg"
                   />
                 </div>
               </div>
