@@ -2291,9 +2291,9 @@ export default {
         }
       });
     }
-  },
+  }/*,
   mounted() {
-    this.getMarkers();
+   this.getMarkers();
     this.getServicos();
     this.getObras();
   },
@@ -2315,6 +2315,6 @@ export default {
         }
       }
     });
-  }
+  }*/
 };
 </script>

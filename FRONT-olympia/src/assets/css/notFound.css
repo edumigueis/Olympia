@@ -54,66 +54,35 @@
   .explanation {
     width: 60%;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
   .menu-bar {
     position: fixed !important;
   }
   @media only screen and (min-width: 400px) and (max-width: 1100px) {
     h1 {
-      font-size: 4em;
-      max-width: 80%;
+      font-size: 4em!important;
+      max-width: 80%!important;
     }
     .explanation {
-      width: 70%;
-      font-size: 1.2em;
+      width: 70%!important;
+      font-size: 1.2em!important;
     }
   }
   @media only screen and (max-width: 400px) {
     h1 {
-      font-size: 3.2em;
-      max-width: 80%;
+      font-size: 3.2em!important;
+      max-width: 80%!important;
     }
     .explanation {
-      width: 70%;
-      font-size: 0.9em;
+      width: 70%!important;
+      font-size: 0.9em!important;
     }
   }
   @media only screen and (max-width: 970px) {
     header {
-      margin-top: calc(20vh - 3em);
+      margin-top: calc(20vh - 3em) !important;
     }
   }
 
-  #error-oops{
-    font-size: 7em;
-  }
-  .oops-bg{
-    height: 100vh !important;
-    width: 100vw !important;
-    background-image: url('../images/error-page-bg.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .oops-header{
-    position: absolute !important;
-    top: 20vh !important;
-    margin: 0 !important;
-    width: 100% !important;
-    text-align: center !important;
-    font-family: 'Poppins' !important;
-  }
-  .oops-header + .exp-wrapper{
-    position: absolute !important;
-    top: 50vh !important;
-    margin: 0 !important;
-    left: 0% !important;
-    font-family: 'Poppins' !important;
-    color: #232323 !important;
-    font-size: 1.5em !important;
-  }
-  .oops-fullpage-blur{
-    filter: blur(4px);
-  }
   

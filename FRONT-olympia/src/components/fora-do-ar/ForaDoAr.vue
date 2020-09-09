@@ -2,7 +2,7 @@
   <div id="not-found-container">
     <title>F O R A  D O  A R !</title>
     <link rel="stylesheet" href="/src/assets/css/notFound.css" />
-    <header class="oops-header">
+    <header>
       <h1 class="gradient-text" id="error-oops">Ah, não!</h1>
     </header>
     <div class="exp-wrapper">

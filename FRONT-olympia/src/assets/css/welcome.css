@@ -1146,7 +1146,7 @@
       display: none;
     }
   }
-  @media only screen and (max-width: 636px) {
+  @media only screen and (max-width: 980px) {
     .landing-nav {
       display: none;
       position: absolute;

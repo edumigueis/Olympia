@@ -608,7 +608,7 @@ export default {
   },
   mounted() {
     this.getMarkers();
-  },
+  }/*,
   beforeCreate() {
     $.ajax({
       url: "https://olympiaserver.ddns.net/",
@@ -627,6 +627,6 @@ export default {
         }
       }
     });
-  }
+  }*/
 };
 </script>
