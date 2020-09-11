@@ -3,7 +3,6 @@
     <div id="container-search-result">
       <title>P E S Q U I S A</title>
       <link rel="shortcut icon" href="/src/assets/images/page-ico.png" />
-      <link rel="stylesheet" href="/src/assets/css/searchResult.css" />
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -1026,7 +1025,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @font-face {
   font-family: "Calibre-Regular";
   src: url("/src/assets/fonts/calibri-7.ttf");
