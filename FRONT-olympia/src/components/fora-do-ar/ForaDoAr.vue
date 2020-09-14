@@ -12,3 +12,11 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    location.reload();
+  }
+};
+</script>
