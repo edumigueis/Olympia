@@ -37,6 +37,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -63,6 +64,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -85,6 +87,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -107,6 +110,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -129,6 +133,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -151,6 +156,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -173,6 +179,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -195,6 +202,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -218,6 +226,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -240,6 +249,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -262,6 +272,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -284,6 +295,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -304,6 +316,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -326,6 +339,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -348,6 +362,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -370,6 +385,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -392,6 +408,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -414,6 +431,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -436,6 +454,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -458,6 +477,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -480,6 +500,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -502,6 +523,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -524,6 +546,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -546,6 +569,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -568,6 +592,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
@@ -590,6 +615,7 @@ export const routes = [
         type: "GET",
         dataType: "json",
         contentType: "application/json",
+        timeout: 2000,
         complete: function (jqXHR, status) {
           if (status != "parsererror") {
             document.location.href = "/#/siteoff";
