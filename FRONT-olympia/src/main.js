@@ -31,12 +31,12 @@ new Vue({
   }
 });
 
-const router = new VueRouter({
+let router = new VueRouter({
+  mode: 'hash',
   routes: routes
 });
 
 new Vue({
-  el: '#app',
   router,
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app')
